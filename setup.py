@@ -5,7 +5,8 @@ with open("README.md", "r") as fh:
 
 requires = ['PyQt5',
             'numpy',
-            'pyqtgraph'
+            'pyqtgraph',
+            'pyserial'
             ]
 setuptools.setup(
     name="mGesf",  # Replace with your own username
