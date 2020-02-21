@@ -15,7 +15,7 @@ setuptools.setup(
     description="This package is a micro-gesture application that took on a sensor fusion approach/",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # url="https://github.com/ApocalyVec/Genex",
+    url="https://github.com/ApocalyVec/mGesf",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
