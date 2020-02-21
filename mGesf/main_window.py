@@ -38,12 +38,13 @@ class Worker(QObject):
         if self._mmw_interface:
             try:
                 pts_array, range_profile, rd_heatmap = self._mmw_interface.process_frame()
+                rd_heatmap = rd_heatmap[:, :32]  # TODO don't hard code this value!
             except DataPortNotOpenError:  # happens when the emitted signal accumulates
                 return
             if range_profile is None:  # replace with simulated data if not enabled
                 range_profile = sim_imp()
             if rd_heatmap is None:
-                rd_heatmap = sim_heatmap((16, 256))
+                rd_heatmap = sim_heatmap((16, 32))
 
             rdh_qim = array_to_colormap_qim(rd_heatmap)
             self.result_signal.emit({'spec': rdh_qim,
@@ -52,7 +53,7 @@ class Worker(QObject):
         else:  # this is in simulation mode
             pts_array = sim_detected_points()
             range_profile = sim_imp()
-            rd_heatmap = sim_heatmap((16, 256))
+            rd_heatmap = sim_heatmap((16, 32))
             rdh_qim = array_to_colormap_qim(rd_heatmap)
             self.result_signal.emit({'spec': rdh_qim,
                                      'pts': pts_array,
@@ -77,7 +78,7 @@ class Worker(QObject):
 class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
-        self.resize(1920, 1080)
+        self.resize(1280, 720)
         pg.setConfigOption('background', 'w')
 
         w = QWidget()
@@ -85,11 +86,11 @@ class MainWindow(QMainWindow):
         self.lay = QGridLayout(self)
         # add spectrogram graphic view
         self.spec_pixmap_item = QGraphicsPixmapItem()
-        self.init_spec_view()
+        self.init_spec_view(pos=(0, 2))
         # add detected points plots
         self.scatterXY = self.init_pts_view(pos=(0, 3), x_lim=(-0.5, 0.5), y_lim=(0, 1.))
-        self.scatterZD = self.init_pts_view(pos=(0, 4), x_lim=(-0.5, 0.5), y_lim=(-1., 1.))
-        self.curveImp = self.init_curve_view(pos=(0, 5), x_lim=(-10, 260), y_lim=(2000, 3800))
+        self.scatterZD = self.init_pts_view(pos=(1, 2), x_lim=(-0.5, 0.5), y_lim=(-1., 1.))
+        self.curveImp = self.init_curve_view(pos=(1, 3), x_lim=(-10, 260), y_lim=(1500, 3800))
 
         # add the interrupt button
         self.interruptBtn = QtWidgets.QPushButton(text='Stop')
@@ -129,9 +130,9 @@ class MainWindow(QMainWindow):
 
         self.timer.start()
 
-    def init_spec_view(self):
+    def init_spec_view(self, pos):
         spc_gv = QGraphicsView()
-        self.lay.addWidget(spc_gv, *(0, 2))
+        self.lay.addWidget(spc_gv, *pos)
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
         scene.addItem(self.spec_pixmap_item)
@@ -155,7 +156,7 @@ class MainWindow(QMainWindow):
         curve_plt.setXRange(* x_lim)
         curve_plt.setYRange(* y_lim)
         self.lay.addWidget(curve_plt, *pos)
-        curve = curve_plt.plot([], [])
+        curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
         return curve
 
     def interruptBtnAction(self):

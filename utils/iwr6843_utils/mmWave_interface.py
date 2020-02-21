@@ -39,5 +39,6 @@ class MmWaveSensorInterface:
     def stop_sensor(self):
         print('mmw Interface: Stopping sensor ...')
         serial_iwr6843.sensor_stop(self.uport)
+        time.sleep(1)
         serial_iwr6843.close_connection(self.uport, self.dport)
         print('mmw Interface: stopped!')
