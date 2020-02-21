@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
-from main_window import MainWindow
+from mGesf.main_window import MainWindow
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 
@@ -10,7 +10,7 @@ if __name__ == '__main__':
     '''
     User defined variables
     '''
-    configFileName = 'profiles/20fps_04RR_14VR_12CT_8DT.cfg'  # use your config file
+    configFileName = 'profiles/profile.cfg'  # use your config file
     dataPortName = 'COM8'  # set this to your standard port
     userPortName = 'COM9'  # set this to your enhanced port
 

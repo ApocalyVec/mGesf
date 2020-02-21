@@ -2,7 +2,7 @@ import time
 
 import serial
 
-from exceptions import DataPortNotOpenError
+from mGesf.exceptions import DataPortNotOpenError
 from utils.iwr6843_utils.parse_tlv import tlvHeader
 
 data_timeout = 0.000015  # timeout for 921600 baud; 0.00000868055 for a byte
@@ -87,5 +87,5 @@ def parse_stream(data_port):
             return detected_points
         else:
             return None
-    except (serial.serialutil.SerialException, AttributeError) as ssse:
+    except (serial.serialutil.SerialException, AttributeError, TypeError):
         raise DataPortNotOpenError

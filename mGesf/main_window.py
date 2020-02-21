@@ -1,13 +1,13 @@
 import time
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import pyqtSignal, pyqtSlot, QObject, QRunnable, QThreadPool, QTimer
+from PyQt5.QtCore import pyqtSignal, QObject, QTimer
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QGraphicsPixmapItem, QGraphicsScene, QGraphicsView, QWidget, \
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QGraphicsScene, QGraphicsView, QWidget, \
     QGridLayout, QMainWindow, QLabel
 import pyqtgraph as pg
 
-from exceptions import DataPortNotOpenError
+from mGesf.exceptions import DataPortNotOpenError
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 from utils.simulation import sim_heatmap, sim_detected_points
 from utils.img_utils import array_to_colormap_qim
@@ -23,6 +23,7 @@ import numpy as np
 class Worker(QObject):
     result_signal = pyqtSignal(dict)
     tick_signal = pyqtSignal()
+    timing_list = []  # TODO refactor timing calculation
 
     def __init__(self, *args, **kwargs):
         super(Worker, self).__init__()
@@ -31,6 +32,7 @@ class Worker(QObject):
 
     @pg.QtCore.pyqtSlot()
     def mmw_process_on_tick(self):
+        start = time.time()
         if self._mmw_interface:
             try:
                 pts_array = self._mmw_interface.process_frame()
@@ -40,9 +42,8 @@ class Worker(QObject):
             # TODO, we are not simulating this
             spec_array = sim_heatmap((100, 100))
             spec_qim = array_to_colormap_qim(spec_array)
-            if pts_array is not None:
-                self.result_signal.emit({'spec': spec_qim,
-                                         'pts': pts_array})
+            self.result_signal.emit({'spec': spec_qim,
+                                     'pts': pts_array})
         else:
             pts_array = sim_detected_points()
             spec_array = sim_heatmap((128, 128))
@@ -50,6 +51,7 @@ class Worker(QObject):
 
             self.result_signal.emit({'spec': spec_qim,
                                      'pts': pts_array})
+        self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
 
     def enable_mmw(self, mmw_interface):
         self._mmw_interface = mmw_interface
@@ -57,12 +59,14 @@ class Worker(QObject):
 
     def stop_sensors(self):
         self.stop_mmw()  # stop the mmWave sensor
+        print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
 
     def stop_mmw(self):
         if self._mmw_interface:
             self._mmw_interface.stop_sensor()
 
 
+# TODO add resume function to the stop button
 class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
@@ -70,7 +74,7 @@ class MainWindow(QMainWindow):
         pg.setConfigOption('background', 'w')
 
         w = QWidget()
-        # create main layout
+        # create mGesf layout
         self.lay = QGridLayout(self)
         # add spectrogram graphic view
         self.spec_pixmap_item = QGraphicsPixmapItem()
@@ -89,7 +93,7 @@ class MainWindow(QMainWindow):
         self.dialogueLabel.setText("Running")
         self.lay.addWidget(self.dialogueLabel, *(0, 0))
 
-        # set the main layout
+        # set the mGesf layout
         w.setLayout(self.lay)
         self.setCentralWidget(w)
         self.show()
@@ -139,11 +143,11 @@ class MainWindow(QMainWindow):
         # scene.addItem(self.pts_pixmap_item)
 
     def interruptBtnAction(self):
+        self.interruptBtn.setDisabled(True)
         self.timer.stop()
         self.worker.stop_sensors()
         self.worker_thread.quit()
         self.dialogueLabel.setText('Stopped. Close the application to return to the console.')
-        self.close()
 
     def update_image(self, data_dict):
         # update spectrogram
@@ -159,5 +163,4 @@ class MainWindow(QMainWindow):
         """
         ticks every 'refresh' milliseconds
         """
-        print('ticking')
         self.worker.tick_signal.emit()  # signals the worker to run process_on_tick
