@@ -62,7 +62,7 @@ def clear_serial_buffer(user_port, data_port):
 
 data_buffer = b''
 data_chunk_size = 32  # this MUST be 32 for TLV to work without magic number
-data_buffer_max_size = 3200
+data_buffer_max_size = 32000
 
 def parse_stream(data_port):
     """
@@ -76,9 +76,8 @@ def parse_stream(data_port):
         data_buffer += data_port.read(data_chunk_size)
 
         if len(data_buffer) > data_buffer_max_size:
-            print('Buffer Overflows')
             print(data_buffer)
-            raise KeyboardInterrupt
+            raise Exception('Buffer Overflows')
 
         is_packet_complete, leftover_data, detected_points = tlvHeader(data_buffer)
 
