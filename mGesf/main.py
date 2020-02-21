@@ -10,7 +10,7 @@ if __name__ == '__main__':
     '''
     User defined variables
     '''
-    configFileName = 'profiles/profile.cfg'  # use your config file
+    configFileName = 'profiles/profile_rdh_basic.cfg'  # use your config file
     dataPortName = 'COM8'  # set this to your standard port
     userPortName = 'COM9'  # set this to your enhanced port
 

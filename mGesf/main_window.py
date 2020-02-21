@@ -37,22 +37,24 @@ class Worker(QObject):
         start = time.time()
         if self._mmw_interface:
             try:
-                pts_array, range_profile = self._mmw_interface.process_frame()
+                pts_array, range_profile, rd_heatmap = self._mmw_interface.process_frame()
             except DataPortNotOpenError:  # happens when the emitted signal accumulates
                 return
+            if range_profile is None:  # replace with simulated data if not enabled
+                range_profile = sim_imp()
+            if rd_heatmap is None:
+                rd_heatmap = sim_heatmap((16, 256))
 
-            # TODO, we are not simulating this
-            spec_array = sim_heatmap((100, 100))
-            spec_qim = array_to_colormap_qim(spec_array)
-            self.result_signal.emit({'spec': spec_qim,
+            rdh_qim = array_to_colormap_qim(rd_heatmap)
+            self.result_signal.emit({'spec': rdh_qim,
                                      'pts': pts_array,
                                      'imp': range_profile})
         else:  # this is in simulation mode
             pts_array = sim_detected_points()
             range_profile = sim_imp()
-            spec_array = sim_heatmap((128, 128))
-            spec_qim = array_to_colormap_qim(spec_array)
-            self.result_signal.emit({'spec': spec_qim,
+            rd_heatmap = sim_heatmap((16, 256))
+            rdh_qim = array_to_colormap_qim(rd_heatmap)
+            self.result_signal.emit({'spec': rdh_qim,
                                      'pts': pts_array,
                                      'imp': range_profile})
 
@@ -166,7 +168,8 @@ class MainWindow(QMainWindow):
     def update_image(self, data_dict):
         # update spectrogram
         spec_qpixmap = QPixmap(data_dict['spec'])
-        spec_qpixmap = spec_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        spec_qpixmap = spec_qpixmap.scaled(256, 512)  # resize spectrogram
+        # spec_qpixmap = spec_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.spec_pixmap_item.setPixmap(spec_qpixmap)
         # update the scatter
         self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])

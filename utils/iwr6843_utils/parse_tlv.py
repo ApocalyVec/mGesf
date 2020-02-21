@@ -4,7 +4,6 @@ import math
 
 import numpy as np
 
-
 #
 # TODO 1: (NOW FIXED) Find the first occurrence of magic and start from there
 # TODO 2: Warn if we cannot parse a specific section and try to recover
@@ -13,23 +12,21 @@ import numpy as np
 
 range_bins = 256  # the number of ADC samples per chirp
 
+
 def tlvHeaderDecode(data):
     tlvType, tlvLength = struct.unpack('2I', data)
     return tlvType, tlvLength
 
 
 def parseDetectedObjects(data, numObj, tlvLength):
-    detectedPoints = struct.unpack(str(numObj * 4) + 'f', data[:tlvLength])
-    detectedPoints = np.asarray(detectedPoints).reshape(numObj, 4)
-    # print(detectedPoints)
-    return detectedPoints
+    detected_points = struct.unpack(str(numObj * 4) + 'f', data[:tlvLength])
+    detected_points = np.asarray(detected_points).reshape(numObj, 4)
+    return detected_points
 
 
 def parseRangeProfile(data, tlvLength):
-    rangeProfile = struct.unpack(str(range_bins) + 'H', data[:tlvLength])
-    return rangeProfile
-    #     print("\tRangeProf[%d]:\t%07.3f " % (i, rangeProfile[0] * 1.0 * 6 / 8 / (1 << 8)))
-    # print("\tTLVType:\t%d " % (2))
+    range_profile = struct.unpack(str(range_bins) + 'H', data[:tlvLength])
+    return range_profile
 
 
 def parseRDheatmap(data, tlvLength):
@@ -40,10 +37,16 @@ def parseRDheatmap(data, tlvLength):
     :param tlvLength:
     :return:
     """
-    for i in range(256):
-        RDheatmap = struct.unpack('H', data[2 * i:2 * i + 2]) #need to change this part
-    return 0
+    doppler_bins = int((tlvLength / 2) / range_bins)
+    rd_heatmap = struct.unpack(str(range_bins * doppler_bins) + 'H', data[:tlvLength])
+    return replace_left_right(np.reshape(rd_heatmap, (range_bins, doppler_bins)))  # mirror flip left and right after reshaping
 
+
+def replace_left_right(a):
+    rtn = np.empty(shape=a.shape)
+    rtn[:, :int(rtn.shape[1]/2)] = a[:, int(rtn.shape[1]/2):]
+    rtn[:, int(rtn.shape[1]/2):] = a[:, :int(rtn.shape[1]/2)]
+    return rtn
 
 def parseStats(data, tlvLength):
     interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad = struct.unpack('6I', data[:24])
@@ -55,7 +58,9 @@ def parseStats(data, tlvLength):
     # print("\t\tTransmitOut:\t%d " % (transmitOut))
     # print("\t\tInterprocess:\t%d " % (interProcess))
 
-negative_rtn = False, None, None, None
+
+negative_rtn = False, None, None, None, None
+
 
 def tlvHeader(in_data):
     """
@@ -91,6 +96,9 @@ def tlvHeader(in_data):
             pendingBytes = length - headerLength
             data = data[headerLength:]
 
+            detected_points = None
+            range_profile = None
+            rd_heatmap = None
             for i in range(numTLVs):
                 tlvType, tlvLength = tlvHeaderDecode(data[:8])
                 data = data[8:]
@@ -100,8 +108,8 @@ def tlvHeader(in_data):
                                                            tlvLength)  # if no detected points, tlvType won't have 1
                 elif tlvType == 2:
                     range_profile = parseRangeProfile(data, tlvLength)
-                # elif tlvType == 5:
-                #     parseRDheatmap(data, tlvLength)
+                elif tlvType == 5:
+                    rd_heatmap = parseRDheatmap(data, tlvLength)
                 elif tlvType == 6:
                     parseStats(data, tlvLength)
                 else:
@@ -110,7 +118,7 @@ def tlvHeader(in_data):
                 data = data[tlvLength:]
                 pendingBytes -= (8 + tlvLength)
             data = data[pendingBytes:]  # data that are left
-            return True, data, detected_points, range_profile
+            return True, data, detected_points, range_profile, rd_heatmap
         except struct.error:
             # print('Packet is not complete yet')
             pass

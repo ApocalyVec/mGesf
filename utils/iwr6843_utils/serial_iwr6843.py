@@ -80,12 +80,12 @@ def parse_stream(data_port):
             print(data_buffer)
             raise Exception('Buffer Overflows')
 
-        is_packet_complete, leftover_data, detected_points, range_profile = tlvHeader(data_buffer)
+        is_packet_complete, leftover_data, detected_points, range_profile, rd_heatmap = tlvHeader(data_buffer)
 
         if is_packet_complete:
             data_buffer = b'' + leftover_data
-            return detected_points, range_profile
+            return detected_points, range_profile, rd_heatmap
         else:
-            return None, None
+            return None, None, None
     except (serial.serialutil.SerialException, AttributeError, TypeError):
         raise DataPortNotOpenError

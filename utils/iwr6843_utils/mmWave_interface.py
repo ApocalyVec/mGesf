@@ -33,8 +33,8 @@ class MmWaveSensorInterface:
     def process_frame(self):
         detected_points = None
         while detected_points is None:
-            detected_points, range_profile = serial_iwr6843.parse_stream(self.dport)
-        return detected_points, range_profile
+            detected_points, range_profile, rd_heatmap = serial_iwr6843.parse_stream(self.dport)
+        return detected_points, range_profile, rd_heatmap
 
     def stop_sensor(self):
         print('mmw Interface: Stopping sensor ...')
