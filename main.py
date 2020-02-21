@@ -22,7 +22,7 @@ if __name__ == '__main__':
     # __mmw_interface = None
 
     # setup system constants
-    refresh = 10  # refresh_interval every x ms
+    refresh = 1  # refresh_interval every x ms
     app = QApplication(sys.argv)
     window = MainWindow(mmw_interface=_mmw_interface, refresh_interval=refresh)
     app.exec_()
