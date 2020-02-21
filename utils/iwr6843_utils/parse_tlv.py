@@ -11,6 +11,8 @@ import numpy as np
 # TODO 3: Remove error at end of file if we have only fragment of TLV
 #
 
+range_bins = 256  # the number of ADC samples per chirp
+
 def tlvHeaderDecode(data):
     tlvType, tlvLength = struct.unpack('2I', data)
     return tlvType, tlvLength
@@ -24,10 +26,23 @@ def parseDetectedObjects(data, numObj, tlvLength):
 
 
 def parseRangeProfile(data, tlvLength):
-    for i in range(256):
-        rangeProfile = struct.unpack('H', data[2 * i:2 * i + 2])
+    rangeProfile = struct.unpack(str(range_bins) + 'H', data[:tlvLength])
+    return rangeProfile
     #     print("\tRangeProf[%d]:\t%07.3f " % (i, rangeProfile[0] * 1.0 * 6 / 8 / (1 << 8)))
     # print("\tTLVType:\t%d " % (2))
+
+
+def parseRDheatmap(data, tlvLength):
+    """
+    range bins times doppler bins times 2, doppler bins = chirps/ frame divided by num of antennas TX (3)
+    #default chirps per frame is (128/3) = 42 * 2 * 256
+    :param data:
+    :param tlvLength:
+    :return:
+    """
+    for i in range(256):
+        RDheatmap = struct.unpack('H', data[2 * i:2 * i + 2]) #need to change this part
+    return 0
 
 
 def parseStats(data, tlvLength):
@@ -40,8 +55,7 @@ def parseStats(data, tlvLength):
     # print("\t\tTransmitOut:\t%d " % (transmitOut))
     # print("\t\tInterprocess:\t%d " % (interProcess))
 
-
-
+negative_rtn = False, None, None, None
 
 def tlvHeader(in_data):
     """
@@ -56,13 +70,13 @@ def tlvHeader(in_data):
     offset = in_data.find(magic)
     data = in_data[offset:]
     if len(data) < headerLength:
-        return False, None, None
+        return negative_rtn
     try:
         magic, version, length, platform, frameNum, cpuCycles, numObj, numTLVs = struct.unpack('Q7I',
                                                                                                data[:headerLength])
     except struct.error:
         # print ("Improper TLV structure found: ", (data,))
-        return False, None, None
+        return negative_rtn
     # print("Packet ID:\t%d "%(frameNum))
     # print("Version:\t%x "%(version))
     # print("Data Len:\t\t%d", length)
@@ -85,7 +99,9 @@ def tlvHeader(in_data):
                     detected_points = parseDetectedObjects(data, numObj,
                                                            tlvLength)  # if no detected points, tlvType won't have 1
                 elif tlvType == 2:
-                    parseRangeProfile(data, tlvLength)
+                    range_profile = parseRangeProfile(data, tlvLength)
+                # elif tlvType == 5:
+                #     parseRDheatmap(data, tlvLength)
                 elif tlvType == 6:
                     parseStats(data, tlvLength)
                 else:
@@ -94,12 +110,12 @@ def tlvHeader(in_data):
                 data = data[tlvLength:]
                 pendingBytes -= (8 + tlvLength)
             data = data[pendingBytes:]  # data that are left
-            return True, data, detected_points
+            return True, data, detected_points, range_profile
         except struct.error:
             # print('Packet is not complete yet')
             pass
 
-    return False, None, None
+    return negative_rtn
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ import random
 import time
 import numpy as np
 
+range_bins = 256
 
 def simulateData():
     detObj = dict()
@@ -27,3 +28,6 @@ def sim_detected_points():
                                     np.random.uniform(low=0.0, high=1.0, size=(num_points,)),
                                     np.random.uniform(low=0.0, high=1.0, size=(num_points,)),
                                     np.random.uniform(low=0.0, high=1.0, size=(num_points,))]))
+
+def sim_imp():
+    return np.random.uniform(low=0.0, high=1.0, size=(range_bins,))

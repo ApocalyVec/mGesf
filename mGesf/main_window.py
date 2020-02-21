@@ -9,7 +9,7 @@ import pyqtgraph as pg
 
 from mGesf.exceptions import DataPortNotOpenError
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
-from utils.simulation import sim_heatmap, sim_detected_points
+from utils.simulation import sim_heatmap, sim_detected_points, sim_imp
 from utils.img_utils import array_to_colormap_qim
 
 import numpy as np
@@ -18,6 +18,8 @@ import numpy as np
 #     error = pyqtSignal(tuple)
 #     result = pyqtSignal(object)
 #     progress = pyqtSignal(int)
+range_bins = 256
+range_bin_space = np.asarray(range(range_bins))
 
 
 class Worker(QObject):
@@ -35,7 +37,7 @@ class Worker(QObject):
         start = time.time()
         if self._mmw_interface:
             try:
-                pts_array = self._mmw_interface.process_frame()
+                pts_array, range_profile = self._mmw_interface.process_frame()
             except DataPortNotOpenError:  # happens when the emitted signal accumulates
                 return
 
@@ -43,14 +45,17 @@ class Worker(QObject):
             spec_array = sim_heatmap((100, 100))
             spec_qim = array_to_colormap_qim(spec_array)
             self.result_signal.emit({'spec': spec_qim,
-                                     'pts': pts_array})
-        else:
+                                     'pts': pts_array,
+                                     'imp': range_profile})
+        else:  # this is in simulation mode
             pts_array = sim_detected_points()
+            range_profile = sim_imp()
             spec_array = sim_heatmap((128, 128))
             spec_qim = array_to_colormap_qim(spec_array)
-
             self.result_signal.emit({'spec': spec_qim,
-                                     'pts': pts_array})
+                                     'pts': pts_array,
+                                     'imp': range_profile})
+
         self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
 
     def enable_mmw(self, mmw_interface):
@@ -80,8 +85,9 @@ class MainWindow(QMainWindow):
         self.spec_pixmap_item = QGraphicsPixmapItem()
         self.init_spec_view()
         # add detected points plots
-        self.scatterXY = self.init_pts_view(pos=(0, 3))
-        self.scatterZD = self.init_pts_view(pos=(0, 4))
+        self.scatterXY = self.init_pts_view(pos=(0, 3), x_lim=(-0.5, 0.5), y_lim=(0, 1.))
+        self.scatterZD = self.init_pts_view(pos=(0, 4), x_lim=(-0.5, 0.5), y_lim=(-1., 1.))
+        self.curveImp = self.init_curve_view(pos=(0, 5), x_lim=(-10, 260), y_lim=(2000, 3800))
 
         # add the interrupt button
         self.interruptBtn = QtWidgets.QPushButton(text='Stop')
@@ -128,10 +134,10 @@ class MainWindow(QMainWindow):
         spc_gv.setScene(scene)
         scene.addItem(self.spec_pixmap_item)
 
-    def init_pts_view(self, pos):
+    def init_pts_view(self, pos, x_lim, y_lim):
         pts_plt = pg.PlotWidget()
-        pts_plt.setXRange(0., 1.)
-        pts_plt.setYRange(0., 1.)
+        pts_plt.setXRange(* x_lim)
+        pts_plt.setYRange(* y_lim)
         self.lay.addWidget(pts_plt, *pos)
         scatter = pg.ScatterPlotItem(pen=None, symbol='o')
         pts_plt.addItem(scatter)
@@ -141,6 +147,14 @@ class MainWindow(QMainWindow):
         # scene = QGraphicsScene(self)
         # pts_gv.setScene(scene)
         # scene.addItem(self.pts_pixmap_item)
+
+    def init_curve_view(self, pos, x_lim, y_lim):
+        curve_plt = pg.PlotWidget()
+        curve_plt.setXRange(* x_lim)
+        curve_plt.setYRange(* y_lim)
+        self.lay.addWidget(curve_plt, *pos)
+        curve = curve_plt.plot([], [])
+        return curve
 
     def interruptBtnAction(self):
         self.interruptBtn.setDisabled(True)
@@ -157,6 +171,7 @@ class MainWindow(QMainWindow):
         # update the scatter
         self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
         self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
+        self.curveImp.setData(range_bin_space, np.asarray(data_dict['imp']))
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
