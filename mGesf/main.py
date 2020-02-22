@@ -10,7 +10,7 @@ if __name__ == '__main__':
     '''
     User defined variables
     '''
-    configFileName = 'profiles/profile_rdh_clutterRemoved.cfg'  # use your config file
+    configFileName = 'profiles/profile_rp_basic.cfg'  # use your config file
     dataPortName = 'COM14'  # set this to your standard port
     userPortName = 'COM3'  # set this to your enhanced port
 

@@ -38,7 +38,8 @@ class Worker(QObject):
         if self._mmw_interface:
             try:
                 pts_array, range_profile, rd_heatmap = self._mmw_interface.process_frame()
-                rd_heatmap = rd_heatmap[:, :32]  # TODO don't hard code this value!
+                if rd_heatmap is not None:
+                    rd_heatmap = rd_heatmap[:, :32]  # TODO don't hard code this value!
             except DataPortNotOpenError:  # happens when the emitted signal accumulates
                 return
             if range_profile is None:  # replace with simulated data if not enabled
