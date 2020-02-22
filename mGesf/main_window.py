@@ -54,7 +54,7 @@ class Worker(QObject):
         else:  # this is in simulation mode
             pts_array = sim_detected_points()
             range_profile = sim_imp()
-            rd_heatmap = sim_heatmap((16, 32))
+            rd_heatm2ap = sim_heatmap((16, 32))
             rdh_qim = array_to_colormap_qim(rd_heatmap)
             self.result_signal.emit({'spec': rdh_qim,
                                      'pts': pts_array,
