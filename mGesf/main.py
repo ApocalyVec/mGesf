@@ -10,9 +10,19 @@ if __name__ == '__main__':
     '''
     User defined variables
     '''
-    configFileName = 'profiles/profile_rp_basic.cfg'  # use your config file
-    dataPortName = 'COM14'  # set this to your standard port
-    userPortName = 'COM3'  # set this to your enhanced port
+    # configFileName = 'profiles/profile_rp_basic.cfg'  # use your config file
+    # configFileName = 'profiles/profile_rdh_clutterRemoved.cfg'  # use your config file
+    configFileName = 'profiles/isk/3fps_rd_heatmap.cfg'
+
+    '''
+    # ports for AoP
+    dataPortName = 'COM14'  # set this to your standard port (data)
+    userPortName = 'COM3'  # set this to your enhanced port (user)
+    '''
+
+    # ports for ISK
+    dataPortName = 'COM9'  # set this to your data port
+    userPortName = 'COM8'  # set this to your user port
 
     '''
     Start of the application script (do not change this part unless you know what you're doing)

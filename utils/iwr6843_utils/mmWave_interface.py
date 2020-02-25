@@ -1,5 +1,6 @@
 import time
 
+from mGesf.exceptions import BufferOverFlowError
 from utils.iwr6843_utils import serial_iwr6843
 
 
@@ -33,7 +34,14 @@ class MmWaveSensorInterface:
     def process_frame(self):
         detected_points = None
         while detected_points is None:
-            detected_points, range_profile, rd_heatmap = serial_iwr6843.parse_stream(self.dport)
+            try:
+                detected_points, range_profile, rd_heatmap = serial_iwr6843.parse_stream(self.dport)
+            except BufferOverFlowError as bofe:
+                print('Python buffer overflows, closing sensor connection')
+                self.stop_sensor()
+                time.time(1)
+                print('Sensor stopped, raising keyboardInterrupt')
+                raise KeyboardInterrupt
         return detected_points, range_profile, rd_heatmap
 
     def stop_sensor(self):

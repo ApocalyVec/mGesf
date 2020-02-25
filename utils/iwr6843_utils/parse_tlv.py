@@ -10,7 +10,7 @@ import numpy as np
 # TODO 3: Remove error at end of file if we have only fragment of TLV
 #
 
-range_bins = 256  # the number of ADC samples per chirp
+range_bins = 128  # the number of ADC samples per chirp
 
 
 def tlvHeaderDecode(data):

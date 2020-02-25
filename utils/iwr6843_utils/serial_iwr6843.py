@@ -2,7 +2,7 @@ import time
 
 import serial
 
-from mGesf.exceptions import DataPortNotOpenError
+from mGesf.exceptions import DataPortNotOpenError, BufferOverFlowError
 from utils.iwr6843_utils.parse_tlv import tlvHeader
 
 data_timeout = 0.000015  # timeout for 921600 baud; 0.00000868055 for a byte
@@ -78,7 +78,7 @@ def parse_stream(data_port):
 
         if len(data_buffer) > data_buffer_max_size:
             print(data_buffer)
-            raise Exception('Buffer Overflows')
+            raise BufferOverFlowError
 
         is_packet_complete, leftover_data, detected_points, range_profile, rd_heatmap = tlvHeader(data_buffer)
 

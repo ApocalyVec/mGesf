@@ -6,3 +6,8 @@ class MGesFError(Exception):
 class DataPortNotOpenError(MGesFError):
     """Raised when attempting to read from unopen data port"""
     pass
+
+
+class BufferOverFlowError(MGesFError):
+    """Raised when data buffer overflows """
+    pass
