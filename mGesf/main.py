@@ -10,9 +10,18 @@ if __name__ == '__main__':
     '''
     User defined variables
     '''
-    # configFileName = 'profiles/profile_rp_basic.cfg'  # use your config file
-    # configFileName = 'profiles/profile_rdh_clutterRemoved.cfg'  # use your config file
-    configFileName = 'profiles/isk/3fps_rd_heatmap.cfg'
+    # AoP configs
+    # configFileName = 'profiles/aop/profile_rp_basic.cfg'  # use your config file
+    # configFileName = 'profiles/aop/profile_rdh_clutterRemoved.cfg'  # use your config file
+
+    # ISK configs
+    # configFileName = 'profiles/isk/2D/3fps_rd_heatmap.cfg'
+    # configFileName = 'profiles/isk/2D/5fps_rd_heatmap.cfg'
+    # configFileName = 'profiles/isk/2D/15fps_rd_heatmap.cfg'
+    # configFileName = 'profiles/isk/2D/30fps_rd_heatmap_clutterRemoved.cfg'
+    configFileName = 'profiles/isk/2D/30fps_rd_heatmap.cfg'
+
+    # configFileName = 'profiles/isk/3D/5fps_rd.cfg'
 
     '''
     # ports for AoP

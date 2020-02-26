@@ -10,8 +10,6 @@ import numpy as np
 # TODO 3: Remove error at end of file if we have only fragment of TLV
 #
 
-range_bins = 128  # the number of ADC samples per chirp
-
 
 def tlvHeaderDecode(data):
     tlvType, tlvLength = struct.unpack('2I', data)
@@ -25,21 +23,34 @@ def parseDetectedObjects(data, numObj, tlvLength):
 
 
 def parseRangeProfile(data, tlvLength):
-    range_profile = struct.unpack(str(range_bins) + 'H', data[:tlvLength])
-    return range_profile
+    # an integer is 2 byte long
+    range_bins = tlvLength / 2
+    range_profile = struct.unpack(str(int(range_bins)) + 'H', data[:tlvLength])
+    return range_profile, range_bins
 
 
-def parseRDheatmap(data, tlvLength):
+def parseRDheatmap(data, tlvLength, range_bins):
     """
     range bins times doppler bins times 2, doppler bins = chirps/ frame divided by num of antennas TX (3)
     #default chirps per frame is (128/3) = 42 * 2 * 256
-    :param data:
+
+    the call to replace_left_right mirror-flips left and right after reshaping.
+    replace_left_right is equivalent to this line from mmWave.js in the visualizer code
+    # rangeDoppler = rangeDoppler.slice((rangeDoppler.length + 1) / 2).concat(
+    #     rangeDoppler.slice(0, (rangeDoppler.length + 1) / 2));
+
+    :param range_bins:
+    :param data: the incoming byte stream to be interpreted as range-doppler heatmap/profile
     :param tlvLength:
     :return:
     """
-    doppler_bins = int((tlvLength / 2) / range_bins)
-    rd_heatmap = struct.unpack(str(range_bins * doppler_bins) + 'H', data[:tlvLength])
-    return replace_left_right(np.reshape(rd_heatmap, (range_bins, doppler_bins)))  # mirror flip left and right after reshaping
+    rd_denom = 16
+    rb = range_bins / rd_denom
+    doppler_bins = (tlvLength / 2) / rb
+
+    rd_heatmap = struct.unpack(str(int(rb * doppler_bins)) + 'H', data[:tlvLength])
+
+    return replace_left_right(np.reshape(rd_heatmap, (int(rb), int(doppler_bins))))
 
 
 def replace_left_right(a):
@@ -99,6 +110,8 @@ def tlvHeader(in_data):
             detected_points = None
             range_profile = None
             rd_heatmap = None
+            range_bins = None
+
             for i in range(numTLVs):
                 tlvType, tlvLength = tlvHeaderDecode(data[:8])
                 data = data[8:]
@@ -107,9 +120,14 @@ def tlvHeader(in_data):
                     detected_points = parseDetectedObjects(data, numObj,
                                                            tlvLength)  # if no detected points, tlvType won't have 1
                 elif tlvType == 2:
-                    range_profile = parseRangeProfile(data, tlvLength)
+                    range_profile, range_bins = parseRangeProfile(data, tlvLength)
                 elif tlvType == 5:
-                    rd_heatmap = parseRDheatmap(data, tlvLength)
+                    try:
+                        assert range_bins
+                    except AssertionError:
+                        raise Exception('Must enable range-profile while enabling range-doppler-profile, in order to'
+                                        'interpret the number of range bins')
+                    rd_heatmap = parseRDheatmap(data, tlvLength, range_bins)
                 elif tlvType == 6:
                     parseStats(data, tlvLength)
                 else:
@@ -120,6 +138,7 @@ def tlvHeader(in_data):
             data = data[pendingBytes:]  # data that are left
             return True, data, detected_points, range_profile, rd_heatmap
         except struct.error:
+            print('Failed to parse tlv message, type = ' + str(tlvType))
             # print('Packet is not complete yet')
             pass
 

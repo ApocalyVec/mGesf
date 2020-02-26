@@ -18,9 +18,6 @@ import numpy as np
 #     error = pyqtSignal(tuple)
 #     result = pyqtSignal(object)
 #     progress = pyqtSignal(int)
-range_bins = 256
-range_bin_space = np.asarray(range(range_bins))
-
 
 class Worker(QObject):
     result_signal = pyqtSignal(dict)
@@ -38,14 +35,12 @@ class Worker(QObject):
         if self._mmw_interface:
             try:
                 pts_array, range_profile, rd_heatmap = self._mmw_interface.process_frame()
-                if rd_heatmap is not None:
-                    rd_heatmap = rd_heatmap[:, :32]  # TODO don't hard code this value!
             except DataPortNotOpenError:  # happens when the emitted signal accumulates
                 return
             if range_profile is None:  # replace with simulated data if not enabled
                 range_profile = sim_imp()
             if rd_heatmap is None:
-                rd_heatmap = sim_heatmap((16, 32))
+                rd_heatmap = sim_heatmap((16, 16))
 
             rdh_qim = array_to_colormap_qim(rd_heatmap)
             self.result_signal.emit({'spec': rdh_qim,
@@ -54,7 +49,7 @@ class Worker(QObject):
         else:  # this is in simulation mode
             pts_array = sim_detected_points()
             range_profile = sim_imp()
-            rd_heatmap = sim_heatmap((16, 32))
+            rd_heatmap = sim_heatmap((16, 16))
             rdh_qim = array_to_colormap_qim(rd_heatmap)
             self.result_signal.emit({'spec': rdh_qim,
                                      'pts': pts_array,
@@ -170,13 +165,17 @@ class MainWindow(QMainWindow):
     def update_image(self, data_dict):
         # update spectrogram
         spec_qpixmap = QPixmap(data_dict['spec'])
-        spec_qpixmap = spec_qpixmap.scaled(256, 512)  # resize spectrogram
-        # spec_qpixmap = spec_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        # spec_qpixmap = spec_qpixmap.scaled(256, 512)  # resize spectrogram
+        spec_qpixmap = spec_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.spec_pixmap_item.setPixmap(spec_qpixmap)
         # update the scatter
         self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
         self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
-        self.curveImp.setData(range_bin_space, np.asarray(data_dict['imp']))
+
+        # update range noise profile
+        rp = np.asarray(data_dict['imp'])
+        range_bin_space = np.asarray(range(len(rp)))
+        self.curveImp.setData(range_bin_space, rp)
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):

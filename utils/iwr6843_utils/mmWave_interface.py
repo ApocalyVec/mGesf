@@ -36,10 +36,10 @@ class MmWaveSensorInterface:
         while detected_points is None:
             try:
                 detected_points, range_profile, rd_heatmap = serial_iwr6843.parse_stream(self.dport)
-            except BufferOverFlowError as bofe:
+            except BufferOverFlowError:
                 print('Python buffer overflows, closing sensor connection')
                 self.stop_sensor()
-                time.time(1)
+                time.sleep(1)
                 print('Sensor stopped, raising keyboardInterrupt')
                 raise KeyboardInterrupt
         return detected_points, range_profile, rd_heatmap
