@@ -19,7 +19,8 @@ if __name__ == '__main__':
     # configFileName = 'profiles/isk/2D/5fps_rd_heatmap.cfg'
     # configFileName = 'profiles/isk/2D/15fps_rd_heatmap.cfg'
     # configFileName = 'profiles/isk/2D/30fps_rd_heatmap_clutterRemoved.cfg'
-    configFileName = 'profiles/isk/2D/30fps_rd_heatmap.cfg'
+    # configFileName = 'profiles/isk/2D/30fps_rd_heatmap.cfg'
+    configFileName = 'profiles/isk/2D/25fps_rd_heatmap.cfg'
 
     # configFileName = 'profiles/isk/3D/5fps_rd.cfg'
 
