@@ -26,7 +26,7 @@ def parseRangeProfile(data, tlvLength):
     # an integer is 2 byte long
     range_bins = tlvLength / 2
     range_profile = struct.unpack(str(int(range_bins)) + 'H', data[:tlvLength])
-    return range_profile
+    return range_profile, range_bins
 
 
 def parseRDheatmap(data, tlvLength, range_bins):
@@ -118,7 +118,8 @@ def tlvHeader(in_data):
                     detected_points = parseDetectedObjects(data, numObj,
                                                            tlvLength)  # if no detected points, tlvType won't have 1
                 elif tlvType == 2:
-                    range_profile, = parseRangeProfile(data, tlvLength)
+                    # the range bins is modified in the range profile is enabled
+                    range_profile, range_bins = parseRangeProfile(data, tlvLength)
                 elif tlvType == 5:
                     # try:
                     #     assert range_bins

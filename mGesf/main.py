@@ -12,7 +12,10 @@ if __name__ == '__main__':
     '''
     # AoP configs
     # configFileName = 'profiles/aop/profile_rp_basic.cfg'  # use your config file
-    # configFileName = 'profiles/aop/profile_rdh_clutterRemoved.cfg'  # use your config file
+    # configFileName = 'profiles/aop/2fps_rdHeatmap.cfg'
+    # configFileName = 'profiles/aop/3fps_rd_heatmap.cfg'
+    # configFileName = 'profiles/aop/25fps_rdHeatmap.cfg'
+    configFileName = 'profiles/aop/30fps_rdHeatmap.cfg'
 
     # ISK configs
     # configFileName = 'profiles/isk/2D/3fps_rd_heatmap.cfg'
@@ -20,19 +23,19 @@ if __name__ == '__main__':
     # configFileName = 'profiles/isk/2D/15fps_rd_heatmap.cfg'
     # configFileName = 'profiles/isk/2D/30fps_rd_heatmap_clutterRemoved.cfg'
     # configFileName = 'profiles/isk/2D/30fps_rd_heatmap.cfg'
-    configFileName = 'profiles/isk/2D/25fps_rd_heatmap.cfg'
+    # configFileName = 'profiles/isk/2D/25fps_rd_heatmap.cfg'
 
     # configFileName = 'profiles/isk/3D/5fps_rd.cfg'
 
-    '''
     # ports for AoP
     dataPortName = 'COM14'  # set this to your standard port (data)
     userPortName = 'COM3'  # set this to your enhanced port (user)
-    '''
 
+    '''
     # ports for ISK
     dataPortName = 'COM9'  # set this to your data port
     userPortName = 'COM8'  # set this to your user port
+    '''
 
     '''
     Start of the application script (do not change this part unless you know what you're doing)
