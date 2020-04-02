@@ -89,14 +89,20 @@ class MainWindow(QMainWindow):
         self.curveImp = self.init_curve_view(pos=(1, 3), x_lim=(-10, 260), y_lim=(1500, 3800))
 
         # add the interrupt button
-        self.interruptBtn = QtWidgets.QPushButton(text='Stop')
+        self.interruptBtn = QtWidgets.QPushButton(text='Stop Sensor')
         self.interruptBtn.clicked.connect(self.interruptBtnAction)
-        self.lay.addWidget(self.interruptBtn, *(0, 1))
+        self.lay.addWidget(self.interruptBtn, *(0, 0))
+
+        # add the start record button button
+        self.is_record = False
+        self.recordBtn = QtWidgets.QPushButton(text='Start Recording')
+        self.recordBtn.clicked.connect(self.recordBtnAction)
+        self.lay.addWidget(self.recordBtn, *(1, 0))
 
         # add dialogue label
         self.dialogueLabel = QLabel()
         self.dialogueLabel.setText("Running")
-        self.lay.addWidget(self.dialogueLabel, *(0, 0))
+        self.lay.addWidget(self.dialogueLabel, *(2, 0))
 
         # set the mGesf layout
         w.setLayout(self.lay)
@@ -114,7 +120,7 @@ class MainWindow(QMainWindow):
 
         self.worker = Worker()
         self.worker.moveToThread(self.worker_thread)
-        self.worker.result_signal.connect(self.update_image)
+        self.worker.result_signal.connect(self.process_mmw_data)
 
         # prepare the sensor interface
         if mmw_interface:
@@ -162,7 +168,25 @@ class MainWindow(QMainWindow):
         self.worker_thread.quit()
         self.dialogueLabel.setText('Stopped. Close the application to return to the console.')
 
-    def update_image(self, data_dict):
+    def recordBtnAction(self):
+        if not self.is_record:
+            self.is_record = True
+            self.recordBtn.setText("Stop Recording")
+        else:
+            # print('data save to ' + )
+            self.is_record = False
+            self.recordBtn.setText("Start Recording")
+        # self.recordBtn.setDisabled(True)
+        # self.timer.stop()
+        # self.worker.stop_sensors()
+        # self.worker_thread.quit()
+        # self.dialogueLabel.setText('Stopped. Close the application to return to the console.')
+
+    def process_mmw_data(self, data_dict):
+        """
+        process the emitted mmWave data and update the figures in the GUI
+        :param data_dict:
+        """
         # update spectrogram
         spec_qpixmap = QPixmap(data_dict['spec'])
         # spec_qpixmap = spec_qpixmap.scaled(256, 512)  # resize spectrogram

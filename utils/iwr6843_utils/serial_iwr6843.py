@@ -36,11 +36,13 @@ def sensor_start(cli_port):
 
     print(result)
 
+
 def sensor_stop(cli_port):
     cli_port.write(('sensorStop\n').encode())
     result = cli_port.read(cli_port.in_waiting).decode()
 
     print(result)
+
 
 def close_connection(user_port, data_port):
     user_port.reset_input_buffer()
@@ -64,6 +66,7 @@ def clear_serial_buffer(user_port, data_port):
 data_buffer = b''
 data_chunk_size = 32  # this MUST be 32 for TLV to work without magic number
 data_buffer_max_size = 32000
+
 
 def parse_stream(data_port):
     """
