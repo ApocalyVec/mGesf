@@ -10,6 +10,8 @@ if __name__ == '__main__':
     '''
     User defined variables
     '''
+    # path to which you wish to save the recorded data
+    data_path = 'D:/data/mGesF'
     # AoP configs
     # configFileName = 'profiles/aop/profile_rp_basic.cfg'  # use your config file
     # configFileName = 'profiles/aop/2fps_rdHeatmap.cfg'
@@ -41,12 +43,12 @@ if __name__ == '__main__':
     Start of the application script (do not change this part unless you know what you're doing)
     '''
     # setup connection to IWR6843
-    _mmw_interface = MmWaveSensorInterface(configFileName, data_port=dataPortName, user_port=userPortName)
-    # _mmw_interface = None
+    # _mmw_interface = MmWaveSensorInterface(configFileName, data_port=dataPortName, user_port=userPortName)
+    _mmw_interface = None
 
     # setup system constants
     refresh = 1  # refresh_interval every x ms
     app = QApplication(sys.argv)
-    window = MainWindow(mmw_interface=_mmw_interface, refresh_interval=refresh)
+    window = MainWindow(mmw_interface=_mmw_interface, refresh_interval=refresh, data_path=data_path)
     app.exec_()
     print('Resuming Console Interaction.')
