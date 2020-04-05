@@ -73,10 +73,22 @@ class mmw_worker(QObject):
         else:
             print('frame rate calculation is not enabled in simulation mode')
 
-    def close_mmw(self):
+    def is_connected(self):
+        return self._mmw_interface.is_connected()
+
+    def connect_mmw(self, uport_name, dport_name):
+        if self._mmw_interface:
+            self._mmw_interface.connect(uport_name, dport_name)
+
+    def disconnect_mmw(self):
         self.stop_mmw()
         if self._mmw_interface:
             self._mmw_interface.close_connection()
+
+    def send_config(self, config_path):
+        if self._mmw_interface:
+            self._mmw_interface.send_config(config_path)
+            self.start_mmw()
 
     def is_mmw_running(self):
         return self._is_running
@@ -111,15 +123,35 @@ class MainWindow(QMainWindow):
         self.record_btn.clicked.connect(self.record_btn_action)
         self.mmw_lay.addWidget(self.record_btn, *(1, 0))
 
-        # add close connection button
-        self.connection_btn = QtWidgets.QPushButton(text='Close Connection')
-        self.connection_btn.clicked.connect(self.connection_btn_action)
-        self.mmw_lay.addWidget(self.connection_btn, *(2, 0))
+        # com port entries
+        # Create textbox
+        self.uport_textbox = QtWidgets.QLineEdit()
+        self.uport_textbox.setPlaceholderText('User Port')
+        self.mmw_lay.addWidget(self.uport_textbox, *(2, 0))
 
-        # add dialogue label
+        # Create textbox
+        self.dport_textbox = QtWidgets.QLineEdit()
+        self.dport_textbox.setPlaceholderText('Data Port')
+        self.mmw_lay.addWidget(self.dport_textbox, *(3, 0))
+
+        # add close connection button
+        self.connection_btn = QtWidgets.QPushButton(text='Connect')
+        self.connection_btn.clicked.connect(self.connection_btn_action)
+        self.mmw_lay.addWidget(self.connection_btn, *(4, 0))
+
+        # Create textbox
+        self.config_textbox = QtWidgets.QLineEdit()
+        self.config_textbox.setPlaceholderText('Config File Path')
+        self.mmw_lay.addWidget(self.config_textbox, *(5, 0))
+
+        # add send config button
+        self.config_btn = QtWidgets.QPushButton(text='Send Config')
+        self.config_btn.clicked.connect(self.config_btn_action)
+        self.mmw_lay.addWidget(self.config_btn, *(6, 0))
+
         self.dialogueLabel = QLabel()
         self.dialogueLabel.setText("Running")
-        self.mmw_lay.addWidget(self.dialogueLabel, *(3, 0))
+        self.mmw_lay.addWidget(self.dialogueLabel, *(7, 0))
 
         # set the mGesf layout
         w.setLayout(self.mmw_lay)
@@ -145,12 +177,12 @@ class MainWindow(QMainWindow):
         self.mmw_worker.signal_mmw_frame_ready.connect(self.process_mmw_data)
 
         # prepare the sensor interface
-        if mmw_interface:
-            print('App: using IWR6843AoP; starting sensor')
-            self.mmw_worker.start_mmw()
-            print('App: done!')
-        else:
-            print('App: not using IWR6843AoP')
+        # if mmw_interface:
+        #     print('App: using IWR6843AoP; starting sensor')
+        #     self.mmw_worker.start_mmw()
+        #     print('App: done!')
+        # else:
+        #     print('App: not using IWR6843AoP')
 
         self.timer.start()
 
@@ -178,6 +210,10 @@ class MainWindow(QMainWindow):
         curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
         return curve
 
+    def config_btn_action(self):
+        # TODO add check if file exits
+        self.mmw_worker.send_config(self.config_textbox.text())
+
     def start_stop_btn_action(self):
         if self.mmw_worker.is_mmw_running():
             self.start_stop_btn.setText('Start Sensor')
@@ -202,7 +238,15 @@ class MainWindow(QMainWindow):
             print('data save to ' + self.data_path)
 
     def connection_btn_action(self):
-        self.mmw_worker.close_mmw()
+        if self.mmw_worker.is_connected():
+            self.mmw_worker.disconnect_mmw()
+            self.connection_btn.setText('Connect')
+        else:
+            self.mmw_worker.connect_mmw(uport_name=self.uport_textbox.text(), dport_name=self.dport_textbox.text())
+            self.connection_btn.setText('Disconnect')
+
+    def config_btn_action(self):
+        self.mmw_worker.send_config(config_path=self.config_textbox.text())
 
     def process_mmw_data(self, data_dict):
         """

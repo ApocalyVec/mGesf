@@ -32,8 +32,8 @@ if __name__ == '__main__':
     num_range_bin = 8
 
     # ports for AoP
-    dataPortName = 'COM8'  # set this to your standard port (data)
-    userPortName = 'COM9'  # set this to your enhanced port (user)
+    # dataPortName = 'COM8'  # set this to your standard port (data)
+    # userPortName = 'COM9'  # set this to your enhanced port (user)
 
     '''
     # ports for ISK
@@ -45,8 +45,7 @@ if __name__ == '__main__':
     Start of the application script (do not change this part unless you know what you're doing)
     '''
     # setup connection to IWR6843
-    _mmw_interface = MmWaveSensorInterface(configFileName, data_port=dataPortName, user_port=userPortName,
-                                           num_range_bin=num_range_bin)
+    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     # _mmw_interface = None
 
     # setup system constants

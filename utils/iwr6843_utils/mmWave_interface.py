@@ -9,20 +9,22 @@ from utils.iwr6843_utils.parse_tlv import decode_iwr_tlv
 
 class MmWaveSensorInterface:
 
-    def __init__(self, config, data_port, user_port, num_range_bin, buffer_size=3200, *args, **kwargs):
-        self.uport, self.dport = serial_iwr6843.serialConfig(config, dataPortName=data_port,
-                                                             userPortName=user_port)
-        serial_iwr6843.clear_serial_buffer(self.uport, self.dport)
-        print('mmw Interface: Booting up sensor ...')
-        time.sleep(2)
-        print('mmw Interface: Done!')
-
+    def __init__(self, num_range_bin, buffer_size=3200, *args, **kwargs):
+        self.uport = None
+        self.dport = None
         # constants
         self.data_chunk_size = 32  # this MUST be 32 for TLV to work without magic number
         self.buffer_size = buffer_size
         self.num_range_bin = num_range_bin
         # data fields
         self.data_buffer = b''
+
+    def send_config(self, config_path):
+        serial_iwr6843.serial_config(config_path, cli_port=self.uport)
+        serial_iwr6843.clear_serial_buffer(self.uport, self.dport)
+        print('mmw Interface: sending config and booting up sensor')
+        time.sleep(2)
+        print('mmw Interface: Done!')
 
     def start_sensor(self):
         """
@@ -54,6 +56,15 @@ class MmWaveSensorInterface:
         serial_iwr6843.sensor_stop(self.uport)
         print('mmw Interface: stopped!')
 
+    def connect(self, uport_ame, dport_name):
+        data_timeout = 0.000015  # timeout for 921600 baud; 0.00000868055 for a byte
+        try:
+            self.uport = serial.Serial(uport_ame,
+                                       115200)  # CLI port cannot have timeout because the stream is user-programmed
+            self.dport = serial.Serial(dport_name, 921600, timeout=data_timeout)
+        except serial.SerialException as se:
+            raise Exception('serial_iwr6843.serialConfig: Serial Port Occupied, error = ' + str(se))
+
     def close_connection(self):
         print('mmw Interface: Stopping sensor ...')
         serial_iwr6843.sensor_stop(self.uport)  # stop the sensor before closing the connection
@@ -61,6 +72,11 @@ class MmWaveSensorInterface:
         time.sleep(1)
         serial_iwr6843.close_connection(self.uport, self.dport)
         print('mmw Interface: sensor connection closed')
+        self.uport = None
+        self.dport = None
+
+    def is_connected(self):
+        return self.uport is not None and self.dport is not None
 
     def parse_stream(self):
         """
