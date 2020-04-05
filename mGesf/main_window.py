@@ -29,45 +29,57 @@ class mmw_worker(QObject):
     tick_signal = pyqtSignal()
     timing_list = []  # TODO refactor timing calculation
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, mmw_interface=None, *args, **kwargs):
         super(mmw_worker, self).__init__()
         self.tick_signal.connect(self.mmw_process_on_tick)
-        self._mmw_interface = None
+        self._mmw_interface = mmw_interface
+        self._is_running = False
 
     @pg.QtCore.pyqtSlot()
     def mmw_process_on_tick(self):
-        start = time.time()
-        if self._mmw_interface:
-            try:
-                pts_array, range_amplitude, rd_heatmap = self._mmw_interface.process_frame()
-            except DataPortNotOpenError:  # happens when the emitted signal accumulates
-                return
-            if range_amplitude is None:  # replace with simulated data if not enabled
+        if self._is_running:
+            if self._mmw_interface:
+                try:
+                    start = time.time()
+                    pts_array, range_amplitude, rd_heatmap = self._mmw_interface.process_frame()
+                except DataPortNotOpenError:  # happens when the emitted signal accumulates
+                    return
+                if range_amplitude is None:  # replace with simulated data if not enabled
+                    range_amplitude = sim_imp()
+                if rd_heatmap is None:
+                    rd_heatmap = sim_heatmap((16, 16))
+                self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
+
+            else:  # this is in simulation mode
+                pts_array = sim_detected_points()
                 range_amplitude = sim_imp()
-            if rd_heatmap is None:
                 rd_heatmap = sim_heatmap((16, 16))
-        else:  # this is in simulation mode
-            pts_array = sim_detected_points()
-            range_amplitude = sim_imp()
-            rd_heatmap = sim_heatmap((16, 16))
-        # notify the mmw data frame is ready
-        self.signal_mmw_frame_ready.emit({'range_doppler': rd_heatmap,
-                                          'pts': pts_array,
-                                          'range_amplitude': range_amplitude})
+            # notify the mmw data frame is ready
+            self.signal_mmw_frame_ready.emit({'range_doppler': rd_heatmap,
+                                              'pts': pts_array,
+                                              'range_amplitude': range_amplitude})
 
-        self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
-
-    def enable_mmw(self, mmw_interface):
-        self._mmw_interface = mmw_interface
+    def start_mmw(self):
         self._mmw_interface.start_sensor()
-
-    def stop_sensors(self):
-        self.stop_mmw()  # stop the mmWave sensor
-        print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
+        self._is_running = True
 
     def stop_mmw(self):
+        self._is_running = False
+        time.sleep(0.1)  # wait 100ms for the previous frames to finish process
         if self._mmw_interface:
             self._mmw_interface.stop_sensor()
+        if self._mmw_interface:
+            print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
+        else:
+            print('frame rate calculation is not enabled in simulation mode')
+
+    def close_mmw(self):
+        self.stop_mmw()
+        if self._mmw_interface:
+            self._mmw_interface.close_connection()
+
+    def is_mmw_running(self):
+        return self._is_running
 
 
 # TODO add resume function to the stop button
@@ -89,20 +101,25 @@ class MainWindow(QMainWindow):
         self.ra_view = self.init_curve_view(pos=(1, 3), x_lim=(-10, 260), y_lim=(1500, 3800))
 
         # add the interrupt button
-        self.interruptBtn = QtWidgets.QPushButton(text='Stop Sensor')
-        self.interruptBtn.clicked.connect(self.interruptBtnAction)
-        self.mmw_lay.addWidget(self.interruptBtn, *(0, 0))
+        self.start_stop_btn = QtWidgets.QPushButton(text='Stop Sensor')
+        self.start_stop_btn.clicked.connect(self.start_stop_btn_action)
+        self.mmw_lay.addWidget(self.start_stop_btn, *(0, 0))
 
-        # add the start record button button
+        # add the start record button
         self.is_record = False
-        self.recordBtn = QtWidgets.QPushButton(text='Start Recording')
-        self.recordBtn.clicked.connect(self.recordBtnAction)
-        self.mmw_lay.addWidget(self.recordBtn, *(1, 0))
+        self.record_btn = QtWidgets.QPushButton(text='Start Recording')
+        self.record_btn.clicked.connect(self.record_btn_action)
+        self.mmw_lay.addWidget(self.record_btn, *(1, 0))
+
+        # add close connection button
+        self.connection_btn = QtWidgets.QPushButton(text='Close Connection')
+        self.connection_btn.clicked.connect(self.connection_btn_action)
+        self.mmw_lay.addWidget(self.connection_btn, *(2, 0))
 
         # add dialogue label
         self.dialogueLabel = QLabel()
         self.dialogueLabel.setText("Running")
-        self.mmw_lay.addWidget(self.dialogueLabel, *(2, 0))
+        self.mmw_lay.addWidget(self.dialogueLabel, *(3, 0))
 
         # set the mGesf layout
         w.setLayout(self.mmw_lay)
@@ -122,15 +139,15 @@ class MainWindow(QMainWindow):
         self.timer.setInterval(refresh_interval)
         self.timer.timeout.connect(self.ticks)
 
-        self.worker = mmw_worker()
-        self.worker.moveToThread(self.worker_thread)
+        self.mmw_worker = mmw_worker(mmw_interface)
+        self.mmw_worker.moveToThread(self.worker_thread)
         # connect the mmWave frame signal to the function that processes the data
-        self.worker.signal_mmw_frame_ready.connect(self.process_mmw_data)
+        self.mmw_worker.signal_mmw_frame_ready.connect(self.process_mmw_data)
 
         # prepare the sensor interface
         if mmw_interface:
             print('App: using IWR6843AoP; starting sensor')
-            self.worker.enable_mmw(mmw_interface)
+            self.mmw_worker.start_mmw()
             print('App: done!')
         else:
             print('App: not using IWR6843AoP')
@@ -152,11 +169,6 @@ class MainWindow(QMainWindow):
         scatter = pg.ScatterPlotItem(pen=None, symbol='o')
         pts_plt.addItem(scatter)
         return scatter
-        # pts_gv = QGraphicsView()
-        # self.lay.addWidget(pts_gv, *(0, 3))
-        # scene = QGraphicsScene(self)
-        # pts_gv.setScene(scene)
-        # scene.addItem(self.pts_pixmap_item)
 
     def init_curve_view(self, pos, x_lim, y_lim):
         curve_plt = pg.PlotWidget()
@@ -166,31 +178,31 @@ class MainWindow(QMainWindow):
         curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
         return curve
 
-    def interruptBtnAction(self):
-        self.interruptBtn.setDisabled(True)
-        self.timer.stop()
-        self.worker.stop_sensors()
-        self.worker_thread.quit()
-        self.dialogueLabel.setText('Stopped. Close the application to return to the console.')
+    def start_stop_btn_action(self):
+        if self.mmw_worker.is_mmw_running():
+            self.start_stop_btn.setText('Start Sensor')
+            self.mmw_worker.stop_mmw()
+            self.dialogueLabel.setText('Stopped.')
+        else:
+            self.start_stop_btn.setText('Stop Sensor')
+            self.mmw_worker.start_mmw()
+            self.dialogueLabel.setText('Running.')
 
-    def recordBtnAction(self):
+    def record_btn_action(self):
         if not self.is_record:
             self.is_record = True
-            self.recordBtn.setText("Stop Recording")
+            self.record_btn.setText("Stop Recording")
         else:
             self.is_record = False
-            self.recordBtn.setText("Start Recording")
+            self.record_btn.setText("Start Recording")
 
             today = datetime.now()
             pickle.dump(self.buffer, open(os.path.join(self.data_path,
                                                        today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
             print('data save to ' + self.data_path)
 
-        # self.recordBtn.setDisabled(True)
-        # self.timer.stop()
-        # self.worker.stop_sensors()
-        # self.worker_thread.quit()
-        # self.dialogueLabel.setText('Stopped. Close the application to return to the console.')
+    def connection_btn_action(self):
+        self.mmw_worker.close_mmw()
 
     def process_mmw_data(self, data_dict):
         """
@@ -225,10 +237,9 @@ class MainWindow(QMainWindow):
             self.buffer['mmw']['rd_heatmap'].append(ra)
             self.buffer['mmw']['detected_points'].append(data_dict['pts'])
 
-
     @pg.QtCore.pyqtSlot()
     def ticks(self):
         """
         ticks every 'refresh' milliseconds
         """
-        self.worker.tick_signal.emit()  # signals the worker to run process_on_tick
+        self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick

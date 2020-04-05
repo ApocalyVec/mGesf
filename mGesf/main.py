@@ -28,6 +28,8 @@ if __name__ == '__main__':
     # configFileName = 'profiles/isk/2D/25fps_rd_heatmap.cfg'
 
     # configFileName = 'profiles/isk/3D/5fps_rd.cfg'
+    # number of range bins for mmWave sensor
+    num_range_bin = 8
 
     # ports for AoP
     dataPortName = 'COM8'  # set this to your standard port (data)
@@ -43,8 +45,9 @@ if __name__ == '__main__':
     Start of the application script (do not change this part unless you know what you're doing)
     '''
     # setup connection to IWR6843
-    # _mmw_interface = MmWaveSensorInterface(configFileName, data_port=dataPortName, user_port=userPortName)
-    _mmw_interface = None
+    _mmw_interface = MmWaveSensorInterface(configFileName, data_port=dataPortName, user_port=userPortName,
+                                           num_range_bin=num_range_bin)
+    # _mmw_interface = None
 
     # setup system constants
     refresh = 1  # refresh_interval every x ms

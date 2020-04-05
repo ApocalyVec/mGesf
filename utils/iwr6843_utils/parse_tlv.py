@@ -45,7 +45,6 @@ def parseRDheatmap(data, tlvLength, range_bins):
     :return:
     """
     doppler_bins = (tlvLength / 2) / range_bins
-
     rd_heatmap = struct.unpack(str(int(range_bins * doppler_bins)) + 'H', data[:tlvLength])
 
     return replace_left_right(np.reshape(rd_heatmap, (int(range_bins), int(doppler_bins))))
@@ -58,7 +57,9 @@ def replace_left_right(a):
     return rtn
 
 def parseStats(data, tlvLength):
-    interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad = struct.unpack('6I', data[:24])
+    pass
+    # interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad = struct.unpack('6I', data[:24])
+
     # print("\tOutputMsgStats:\t%d " % (6))
     # print("\t\tChirpMargin:\t%d " % (chirpMargin))
     # print("\t\tFrameMargin:\t%d " % (frameMargin))
@@ -71,23 +72,27 @@ def parseStats(data, tlvLength):
 negative_rtn = False, None, None, None, None
 
 
-def tlvHeader(in_data):
+class tlv_header_decoder():
+    def __init__(self):
+        pass
+
+def decode_iwr_tlv(in_data):
     """
 
     :param in_data:
     :return: if no detected point at this frame, the detected point will be an empty a
     """
     magic = b'\x02\x01\x04\x03\x06\x05\x08\x07'
-    headerLength = 36
+    header_length = 36
 
     # print('Current data len is: ' + str(len(in_data)))
     offset = in_data.find(magic)
     data = in_data[offset:]
-    if len(data) < headerLength:
+    if len(data) < header_length:
         return negative_rtn
     try:
         magic, version, length, platform, frameNum, cpuCycles, numObj, numTLVs = struct.unpack('Q7I',
-                                                                                               data[:headerLength])
+                                                                                               data[:header_length])
     except struct.error:
         # print ("Improper TLV structure found: ", (data,))
         return negative_rtn
@@ -99,16 +104,17 @@ def tlvHeader(in_data):
     # print("Platform:\t%X "%(platform))
     if version > 0x01000005 and len(data) >= length:
         try:
-            subFrameNum = struct.unpack('I', data[36:40])[0]
-            headerLength = 40
+            sub_frame_num = struct.unpack('I', data[36:40])[0]
+            header_length = 40
             # print("Subframe:\t%d "%(subFrameNum))
-            pendingBytes = length - headerLength
-            data = data[headerLength:]
+            pending_bytes = length - header_length
+            data = data[header_length:]
 
             detected_points = None
             range_profile = None
             rd_heatmap = None
             range_bins = 8
+            statistics = None
 
             for i in range(numTLVs):
                 tlvType, tlvLength = tlvHeaderDecode(data[:8])
@@ -135,8 +141,8 @@ def tlvHeader(in_data):
                     print("Unidentified tlv type %d" % tlvType, '. Its len is ' + str(tlvLength))
                     pass
                 data = data[tlvLength:]
-                pendingBytes -= (8 + tlvLength)
-            data = data[pendingBytes:]  # data that are left
+                pending_bytes -= (8 + tlvLength)
+            data = data[pending_bytes:]  # data that are left
 
             # infer range profile from heatmap is the former is not enabled
             if range_profile is None and rd_heatmap is not None:

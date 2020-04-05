@@ -3,7 +3,7 @@ import time
 import serial
 
 from mGesf.exceptions import DataPortNotOpenError, BufferOverFlowError
-from utils.iwr6843_utils.parse_tlv import tlvHeader
+from utils.iwr6843_utils.parse_tlv import decode_iwr_tlv
 
 data_timeout = 0.000015  # timeout for 921600 baud; 0.00000868055 for a byte
 
@@ -31,7 +31,7 @@ def serialConfig(configFileName, dataPortName, userPortName):
 
 
 def sensor_start(cli_port):
-    cli_port.write(('sensorStart\n').encode())
+    cli_port.write(('sensorStart 0\n').encode())
     result = cli_port.read(cli_port.in_waiting).decode()
 
     print(result)
@@ -62,33 +62,3 @@ def clear_serial_buffer(user_port, data_port):
     data_port.reset_input_buffer()
     data_port.reset_output_buffer()
 
-
-data_buffer = b''
-data_chunk_size = 32  # this MUST be 32 for TLV to work without magic number
-data_buffer_max_size = 32000
-
-
-def parse_stream(data_port):
-    """
-
-    :param data_port:
-    :return: will be None if the data packet is not complete yet
-    """
-    global data_buffer
-
-    try:
-        data_buffer += data_port.read(data_chunk_size)
-
-        if len(data_buffer) > data_buffer_max_size:
-            print(data_buffer)
-            raise BufferOverFlowError
-
-        is_packet_complete, leftover_data, detected_points, range_profile, rd_heatmap = tlvHeader(data_buffer)
-
-        if is_packet_complete:
-            data_buffer = b'' + leftover_data
-            return detected_points, range_profile, rd_heatmap
-        else:
-            return None, None, None
-    except (serial.serialutil.SerialException, AttributeError, TypeError):
-        raise DataPortNotOpenError
