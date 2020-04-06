@@ -101,61 +101,95 @@ class MainWindow(QMainWindow):
         self.resize(1280, 720)
         pg.setConfigOption('background', 'w')
 
-        w = QWidget()
-        # create mGesf layout
-        self.mmw_lay = QGridLayout(self)
-        # add spectrogram graphic view
-        self.spec_pixmap_item = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(0, 2))
-        # add detected points plots
-        self.scatterXY = self.init_pts_view(pos=(0, 3), x_lim=(-0.5, 0.5), y_lim=(0, 1.))
-        self.scatterZD = self.init_pts_view(pos=(1, 2), x_lim=(-0.5, 0.5), y_lim=(-1., 1.))
-        self.ra_view = self.init_curve_view(pos=(1, 3), x_lim=(-10, 260), y_lim=(1500, 3800))
+        # create mGesf layout ##########################################################################################
+        window = QWidget()
 
+        # create mmWave layout #####################################################
+        main_hl = QtWidgets.QHBoxLayout(self)
+
+        self.control_vl = QtWidgets.QVBoxLayout()  # create vbox for controls
+        self.figure_gl = QtWidgets.QGridLayout()  # create grid layout for the figures
+
+        main_hl.addLayout(self.control_vl)
+        main_hl.addLayout(self.figure_gl)
+
+        # add the figures ##################################
+        # add statistics
+        statistics_vl = QtWidgets.QVBoxLayout()
+        self.statistics_ui = {'pid': QLabel(),
+                              'ver': QLabel(),
+                              'dlen': QLabel(),
+                              'numTLVs': QLabel(),
+                              'numObj': QLabel(),
+                              'pf': QLabel()}
+        [v.setText(k) for k, v in self.statistics_ui.items()]
+        [statistics_vl.addWidget(v) for v in self.statistics_ui.values()]
+        self.figure_gl.addLayout(statistics_vl, *(0, 0))  # why does not this show up
+
+        # print("Packet ID:\t%d "%(frameNum))
+        # print("Version:\t%x "%(version))
+        # print("Data Len:\t\t%d", length)
+        # print("TLV:\t\t%d "%(numTLVs))
+        # print("Detect Obj:\t%d "%(numObj))
+        # print("Platform:\t%X "%(platform))
+        # add range doppler
+        self.rd_pixmap_item = QGraphicsPixmapItem()
+        self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
+
+        # add range angle
+        self.angle_pixmap_item = QGraphicsPixmapItem()
+        self.init_spec_view(pos=(1, 2), label='Range Angle Profile')
+
+        # add detected points plots
+        self.scatterXY = self.init_pts_view(pos=(0, 1), label='Detected Points XY', x_lim=(-0.5, 0.5), y_lim=(0, 1.))
+        self.scatterZD = self.init_pts_view(pos=(0, 2), label='Detected Points ZD',  x_lim=(-0.5, 0.5), y_lim=(-1., 1.))
+        self.ra_view = self.init_curve_view(pos=(1, 0), label='Range Profile',  x_lim=(-10, 260), y_lim=(1500, 3800))
+
+        # add the controls ##################################
         # add the interrupt button
         self.start_stop_btn = QtWidgets.QPushButton(text='Stop Sensor')
         self.start_stop_btn.clicked.connect(self.start_stop_btn_action)
-        self.mmw_lay.addWidget(self.start_stop_btn, *(0, 0))
+        self.control_vl.addWidget(self.start_stop_btn)
 
         # add the start record button
         self.is_record = False
         self.record_btn = QtWidgets.QPushButton(text='Start Recording')
         self.record_btn.clicked.connect(self.record_btn_action)
-        self.mmw_lay.addWidget(self.record_btn, *(1, 0))
+        self.control_vl.addWidget(self.record_btn)
 
         # com port entries
         # Create textbox
         self.uport_textbox = QtWidgets.QLineEdit()
         self.uport_textbox.setPlaceholderText('User Port')
-        self.mmw_lay.addWidget(self.uport_textbox, *(2, 0))
+        self.control_vl.addWidget(self.uport_textbox)
 
         # Create textbox
         self.dport_textbox = QtWidgets.QLineEdit()
         self.dport_textbox.setPlaceholderText('Data Port')
-        self.mmw_lay.addWidget(self.dport_textbox, *(3, 0))
+        self.control_vl.addWidget(self.dport_textbox)
 
         # add close connection button
         self.connection_btn = QtWidgets.QPushButton(text='Connect')
         self.connection_btn.clicked.connect(self.connection_btn_action)
-        self.mmw_lay.addWidget(self.connection_btn, *(4, 0))
+        self.control_vl.addWidget(self.connection_btn)
 
         # Create textbox
         self.config_textbox = QtWidgets.QLineEdit()
         self.config_textbox.setPlaceholderText('Config File Path')
-        self.mmw_lay.addWidget(self.config_textbox, *(5, 0))
+        self.control_vl.addWidget(self.config_textbox)
 
         # add send config button
         self.config_btn = QtWidgets.QPushButton(text='Send Config')
         self.config_btn.clicked.connect(self.config_btn_action)
-        self.mmw_lay.addWidget(self.config_btn, *(6, 0))
+        self.control_vl.addWidget(self.config_btn)
 
         self.dialogueLabel = QLabel()
         self.dialogueLabel.setText("Running")
-        self.mmw_lay.addWidget(self.dialogueLabel, *(7, 0))
+        self.control_vl.addWidget(self.dialogueLabel)
 
         # set the mGesf layout
-        w.setLayout(self.mmw_lay)
-        self.setCentralWidget(w)
+        window.setLayout(main_hl)
+        self.setCentralWidget(window)
         self.show()
 
         # create the data buffers
@@ -186,27 +220,51 @@ class MainWindow(QMainWindow):
 
         self.timer.start()
 
-    def init_spec_view(self, pos):
+    def init_spec_view(self, pos, label):
+        vl = QtWidgets.QVBoxLayout()
+
+        ql = QLabel()
+        ql.setText(label)
+        vl.addWidget(ql)
+
         spc_gv = QGraphicsView()
-        self.mmw_lay.addWidget(spc_gv, *pos)
+        vl.addWidget(spc_gv)
+
+        self.figure_gl.addLayout(vl, *pos)
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
-        scene.addItem(self.spec_pixmap_item)
+        scene.addItem(self.rd_pixmap_item)
 
-    def init_pts_view(self, pos, x_lim, y_lim):
+    def init_pts_view(self, pos, label, x_lim, y_lim):
+        vl = QtWidgets.QVBoxLayout()
+
+        ql = QLabel()
+        ql.setText(label)
+        vl.addWidget(ql)
+
         pts_plt = pg.PlotWidget()
+        vl.addWidget(pts_plt)
+        self.figure_gl.addLayout(vl, *pos)
+
         pts_plt.setXRange(*x_lim)
         pts_plt.setYRange(*y_lim)
-        self.mmw_lay.addWidget(pts_plt, *pos)
         scatter = pg.ScatterPlotItem(pen=None, symbol='o')
         pts_plt.addItem(scatter)
         return scatter
 
-    def init_curve_view(self, pos, x_lim, y_lim):
+    def init_curve_view(self, pos, label, x_lim, y_lim):
+        vl = QtWidgets.QVBoxLayout()
+
+        ql = QLabel()
+        ql.setText(label)
+        vl.addWidget(ql)
+
         curve_plt = pg.PlotWidget()
+        vl.addWidget(curve_plt)
+        self.figure_gl.addLayout(vl, *pos)
+
         curve_plt.setXRange(*x_lim)
         curve_plt.setYRange(*y_lim)
-        self.mmw_lay.addWidget(curve_plt, *pos)
         curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
         return curve
 
@@ -263,7 +321,7 @@ class MainWindow(QMainWindow):
         spec_qpixmap = QPixmap(rdh_qim)
         # spec_qpixmap = spec_qpixmap.scaled(256, 512)  # resize spectrogram
         spec_qpixmap = spec_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        self.spec_pixmap_item.setPixmap(spec_qpixmap)
+        self.rd_pixmap_item.setPixmap(spec_qpixmap)
         # update the 2d scatter plot for the detected points
         self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
         self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
