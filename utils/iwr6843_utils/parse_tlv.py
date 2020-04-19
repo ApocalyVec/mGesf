@@ -50,6 +50,19 @@ def parseRDheatmap(data, tlvLength, range_bins):
     return replace_left_right(np.reshape(rd_heatmap, (int(range_bins), int(doppler_bins))))
 
 
+def parseAziheatmap(data, tlvLength, range_bins):
+    """
+    :param range_bins:
+    :param data: the incoming byte stream to be interpreted as range-doppler heatmap/profile
+    :param tlvLength:
+    :return:
+    """
+    range_bins = 256  # TODO refactor this
+    azi_bins = (tlvLength / 2) / range_bins
+    azi_heatmap = struct.unpack(str(int(range_bins * azi_bins)) + 'H', data[:tlvLength])
+
+    return replace_left_right(np.reshape(np.array(azi_heatmap), (int(range_bins), int(azi_bins))))
+
 def replace_left_right(a):
     rtn = np.empty(shape=a.shape)
     rtn[:, :int(rtn.shape[1]/2)] = a[:, int(rtn.shape[1]/2):]
@@ -78,23 +91,23 @@ class tlv_header_decoder():
 
 def decode_iwr_tlv(in_data):
     """
-
+    Must disable range profile for the quick RD heatmap to work, this way the number of range bins will be be calculated
+    from the absent range profile. You can still get the range profile by inferring it from the RD heatmap
     :param in_data:
     :return: if no detected point at this frame, the detected point will be an empty a
     """
     magic = b'\x02\x01\x04\x03\x06\x05\x08\x07'
     header_length = 36
 
-    # print('Current data len is: ' + str(len(in_data)))
     offset = in_data.find(magic)
     data = in_data[offset:]
     if len(data) < header_length:
         return negative_rtn
     try:
-        magic, version, length, platform, frameNum, cpuCycles, numObj, numTLVs = struct.unpack('Q7I',
+        data_magic, version, length, platform, frameNum, cpuCycles, numObj, numTLVs = struct.unpack('Q7I',
                                                                                                data[:header_length])
     except struct.error:
-        # print ("Improper TLV structure found: ", (data,))
+        print ("Improper TLV structure found: ", (data,))
         return negative_rtn
     # print("Packet ID:\t%d "%(frameNum))
     # print("Version:\t%x "%(version))
@@ -102,7 +115,8 @@ def decode_iwr_tlv(in_data):
     # print("TLV:\t\t%d "%(numTLVs))
     # print("Detect Obj:\t%d "%(numObj))
     # print("Platform:\t%X "%(platform))
-    if version > 0x01000005 and len(data) >= length:
+    if version >= 50462726 and len(data) >= length:
+    # if version > 0x01000005 and len(data) >= length:
         try:
             sub_frame_num = struct.unpack('I', data[36:40])[0]
             header_length = 40
@@ -126,6 +140,10 @@ def decode_iwr_tlv(in_data):
                 elif tlvType == 2:
                     # the range bins is modified in the range profile is enabled
                     range_profile, range_bins = parseRangeProfile(data, tlvLength)
+
+                elif tlvType == 4:
+                    # resolving static azimuth heatmap
+                    pass
                 elif tlvType == 5:
                     # try:
                     #     assert range_bins
@@ -137,9 +155,17 @@ def decode_iwr_tlv(in_data):
                     parseStats(data, tlvLength)
                 elif tlvType == 7:
                     pass
+                elif tlvType == 8:
+                    # resolving static azimuth-elevation heatmap
+                    azi_heatmap = parseAziheatmap(data, tlvLength, range_bins)
+                    pass
                 else:
                     print("Unidentified tlv type %d" % tlvType, '. Its len is ' + str(tlvLength))
-                    pass
+                    n_offset = data.find(magic)
+                    if n_offset != offset and n_offset != -1:
+                        print('New magic found, discarding previous frame with unknown tlv')
+                        data = data[n_offset:]
+                        return True, data, detected_points, range_profile, rd_heatmap
                 data = data[tlvLength:]
                 pending_bytes -= (8 + tlvLength)
             data = data[pending_bytes:]  # data that are left
@@ -148,9 +174,9 @@ def decode_iwr_tlv(in_data):
             if range_profile is None and rd_heatmap is not None:
                 range_profile = rd_heatmap[:, 0]
             return True, data, detected_points, range_profile, rd_heatmap
-        except struct.error:
-            print('Failed to parse tlv message, type = ' + str(tlvType))
-            # print('Packet is not complete yet')
+        except struct.error as se:
+            print('Failed to parse tlv message, type = ' + str(tlvType) + ', error: ')
+            print(se)
             pass
 
     return negative_rtn

@@ -2,20 +2,20 @@ import time
 
 import serial
 
-from mGesf.exceptions import BufferOverFlowError, DataPortNotOpenError
+from mGesf.exceptions import BufferOverFlowError, DataPortNotOpenError, GeneralMmWError
 from utils.iwr6843_utils import serial_iwr6843
 from utils.iwr6843_utils.parse_tlv import decode_iwr_tlv
 
 
 class MmWaveSensorInterface:
 
-    def __init__(self, num_range_bin, buffer_size=3200, *args, **kwargs):
+    def __init__(self, num_range_bin, buffer_size=16000, *args, **kwargs):
         self.uport = None
         self.dport = None
         # constants
         self.data_chunk_size = 32  # this MUST be 32 for TLV to work without magic number
         self.buffer_size = buffer_size
-        self.num_range_bin = num_range_bin
+        self.num_range_bin = num_range_bin  # TODO parse this value down to the tlv decoder
         # data fields
         self.data_buffer = b''
 
@@ -42,12 +42,14 @@ class MmWaveSensorInterface:
         while detected_points is None:
             try:
                 detected_points, range_profile, rd_heatmap = self.parse_stream()
-            except (BufferOverFlowError, DataPortNotOpenError) as e:
+            except (BufferOverFlowError, DataPortNotOpenError, GeneralMmWError) as e:
                 print(str(e))
                 print('An error occured, closing sensor connection')
                 self.stop_sensor()
                 time.sleep(1)
-                print('Sensor stopped, raising keyboardInterrupt')
+                print('Sensor stopped, raising keyboardInterrupt, printing TLV buffer for debug')
+                print(self.data_buffer)
+
                 raise KeyboardInterrupt
         return detected_points, range_profile, rd_heatmap
 
@@ -89,7 +91,6 @@ class MmWaveSensorInterface:
             self.data_buffer += self.dport.read(self.data_chunk_size)
 
             if len(self.data_buffer) > self.buffer_size:
-                print(self.data_buffer)
                 raise BufferOverFlowError
 
             is_packet_complete, leftover_data, detected_points, range_profile, rd_heatmap = \
@@ -100,5 +101,8 @@ class MmWaveSensorInterface:
                 return detected_points, range_profile, rd_heatmap
             else:
                 return None, None, None
-        except (serial.serialutil.SerialException, AttributeError, TypeError):
-            raise DataPortNotOpenError
+        except (serial.serialutil.SerialException, AttributeError, TypeError, ValueError) as e:
+            if type(e) == serial.serialutil.SerialException:
+                raise DataPortNotOpenError
+            else:
+                raise GeneralMmWError

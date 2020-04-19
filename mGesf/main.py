@@ -17,7 +17,10 @@ if __name__ == '__main__':
     # configFileName = 'profiles/aop/2fps_rdHeatmap.cfg'
     # configFileName = 'profiles/aop/3fps_rd_heatmap.cfg'
     # configFileName = 'profiles/aop/25fps_rdHeatmap.cfg'
-    configFileName = 'profiles/aop/30fps_rdHeatmap.cfg'
+    # configFileName = 'profiles/aop/30fps_rdHeatmap.cfg'
+    configFileName = 'profiles/aop/aop_azitest_withRD.cfg'
+    configFileName = 'profiles/aop/aop_azitest_withoutRD.cfg'
+
 
     # ISK configs
     # configFileName = 'profiles/isk/2D/3fps_rd_heatmap.cfg'
