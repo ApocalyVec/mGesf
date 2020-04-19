@@ -41,7 +41,7 @@ class MmWaveSensorInterface:
         detected_points = None
         while detected_points is None:
             try:
-                detected_points, range_profile, rd_heatmap = self.parse_stream()
+                detected_points, range_profile, rd_heatmap, azi_heatmap = self.parse_stream()
             except (BufferOverFlowError, DataPortNotOpenError, GeneralMmWError) as e:
                 print(str(e))
                 print('An error occured, closing sensor connection')
@@ -51,7 +51,7 @@ class MmWaveSensorInterface:
                 print(self.data_buffer)
 
                 raise KeyboardInterrupt
-        return detected_points, range_profile, rd_heatmap
+        return detected_points, range_profile, rd_heatmap, azi_heatmap
 
     def stop_sensor(self):
         print('mmw Interface: Stopping sensor ...')
@@ -93,14 +93,14 @@ class MmWaveSensorInterface:
             if len(self.data_buffer) > self.buffer_size:
                 raise BufferOverFlowError
 
-            is_packet_complete, leftover_data, detected_points, range_profile, rd_heatmap = \
+            is_packet_complete, leftover_data, detected_points, range_profile, rd_heatmap, azi_heatmap = \
                 decode_iwr_tlv(self.data_buffer)
 
             if is_packet_complete:
                 self.data_buffer = b'' + leftover_data
-                return detected_points, range_profile, rd_heatmap
+                return detected_points, range_profile, rd_heatmap, azi_heatmap
             else:
-                return None, None, None
+                return None, None, None, None
         except (serial.serialutil.SerialException, AttributeError, TypeError, ValueError) as e:
             if type(e) == serial.serialutil.SerialException:
                 raise DataPortNotOpenError

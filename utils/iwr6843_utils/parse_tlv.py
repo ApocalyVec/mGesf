@@ -57,7 +57,6 @@ def parseAziheatmap(data, tlvLength, range_bins):
     :param tlvLength:
     :return:
     """
-    range_bins = 256  # TODO refactor this
     azi_bins = (tlvLength / 2) / range_bins
     azi_heatmap = struct.unpack(str(int(range_bins * azi_bins)) + 'H', data[:tlvLength])
 
@@ -82,7 +81,7 @@ def parseStats(data, tlvLength):
     # print("\t\tInterprocess:\t%d " % (interProcess))
 
 
-negative_rtn = False, None, None, None, None
+negative_rtn = False, None, None, None, None, None
 
 
 class tlv_header_decoder():
@@ -127,6 +126,7 @@ def decode_iwr_tlv(in_data):
             detected_points = None
             range_profile = None
             rd_heatmap = None
+            azi_heatmap = None
             range_bins = 8
             statistics = None
 
@@ -165,7 +165,7 @@ def decode_iwr_tlv(in_data):
                     if n_offset != offset and n_offset != -1:
                         print('New magic found, discarding previous frame with unknown tlv')
                         data = data[n_offset:]
-                        return True, data, detected_points, range_profile, rd_heatmap
+                        return True, data, detected_points, range_profile, rd_heatmap, azi_heatmap
                 data = data[tlvLength:]
                 pending_bytes -= (8 + tlvLength)
             data = data[pending_bytes:]  # data that are left
@@ -173,7 +173,7 @@ def decode_iwr_tlv(in_data):
             # infer range profile from heatmap is the former is not enabled
             if range_profile is None and rd_heatmap is not None:
                 range_profile = rd_heatmap[:, 0]
-            return True, data, detected_points, range_profile, rd_heatmap
+            return True, data, detected_points, range_profile, rd_heatmap, azi_heatmap
         except struct.error as se:
             print('Failed to parse tlv message, type = ' + str(tlvType) + ', error: ')
             print(se)
