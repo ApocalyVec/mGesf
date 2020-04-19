@@ -4,6 +4,7 @@ import math
 
 import numpy as np
 
+
 #
 # TODO 1: (NOW FIXED) Find the first occurrence of magic and start from there
 # TODO 2: Warn if we cannot parse a specific section and try to recover
@@ -50,6 +51,10 @@ def parseRDheatmap(data, tlvLength, range_bins):
     return replace_left_right(np.reshape(rd_heatmap, (int(range_bins), int(doppler_bins))))
 
 
+def chg_val(val):
+    return val - 65536 if val > 32767 else val
+
+
 def parseAziheatmap(data, tlvLength, range_bins):
     """
     :param range_bins:
@@ -57,16 +62,20 @@ def parseAziheatmap(data, tlvLength, range_bins):
     :param tlvLength:
     :return:
     """
+    range_bins = 256
     azi_bins = (tlvLength / 2) / range_bins
     azi_heatmap = struct.unpack(str(int(range_bins * azi_bins)) + 'H', data[:tlvLength])
+    azi_heatmap = [chg_val(x) for x in azi_heatmap]
 
-    return replace_left_right(np.reshape(np.array(azi_heatmap), (int(range_bins), int(azi_bins))))
+    return np.reshape(azi_heatmap, (int(range_bins), int(azi_bins)))
+
 
 def replace_left_right(a):
     rtn = np.empty(shape=a.shape)
-    rtn[:, :int(rtn.shape[1]/2)] = a[:, int(rtn.shape[1]/2):]
-    rtn[:, int(rtn.shape[1]/2):] = a[:, :int(rtn.shape[1]/2)]
+    rtn[:, :int(rtn.shape[1] / 2)] = a[:, int(rtn.shape[1] / 2):]
+    rtn[:, int(rtn.shape[1] / 2):] = a[:, :int(rtn.shape[1] / 2)]
     return rtn
+
 
 def parseStats(data, tlvLength):
     pass
@@ -88,6 +97,7 @@ class tlv_header_decoder():
     def __init__(self):
         pass
 
+
 def decode_iwr_tlv(in_data):
     """
     Must disable range profile for the quick RD heatmap to work, this way the number of range bins will be be calculated
@@ -104,9 +114,10 @@ def decode_iwr_tlv(in_data):
         return negative_rtn
     try:
         data_magic, version, length, platform, frameNum, cpuCycles, numObj, numTLVs = struct.unpack('Q7I',
-                                                                                               data[:header_length])
+                                                                                                    data[
+                                                                                                    :header_length])
     except struct.error:
-        print ("Improper TLV structure found: ", (data,))
+        print("Improper TLV structure found: ", (data,))
         return negative_rtn
     # print("Packet ID:\t%d "%(frameNum))
     # print("Version:\t%x "%(version))
@@ -115,7 +126,7 @@ def decode_iwr_tlv(in_data):
     # print("Detect Obj:\t%d "%(numObj))
     # print("Platform:\t%X "%(platform))
     if version >= 50462726 and len(data) >= length:
-    # if version > 0x01000005 and len(data) >= length:
+        # if version > 0x01000005 and len(data) >= length:
         try:
             sub_frame_num = struct.unpack('I', data[36:40])[0]
             header_length = 40

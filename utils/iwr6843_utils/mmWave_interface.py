@@ -20,8 +20,12 @@ class MmWaveSensorInterface:
         self.data_buffer = b''
 
     def send_config(self, config_path):
-        serial_iwr6843.serial_config(config_path, cli_port=self.uport)
-        serial_iwr6843.clear_serial_buffer(self.uport, self.dport)
+        try:
+            serial_iwr6843.serial_config(config_path, cli_port=self.uport)
+            serial_iwr6843.clear_serial_buffer(self.uport, self.dport)
+        except serial.serialutil.SerialException:
+            print('mmw Interface: connect the sensor before sending configuration file')
+            return
         print('mmw Interface: sending config and booting up sensor')
         time.sleep(2)
         print('mmw Interface: Done!')
