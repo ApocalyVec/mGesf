@@ -9,9 +9,9 @@ from utils.iwr6843_utils.parse_tlv import decode_iwr_tlv
 
 class MmWaveSensorInterface:
 
-    def __init__(self, num_range_bin, buffer_size=16000, *args, **kwargs):
-        self.uport = None
-        self.dport = None
+    def __init__(self, num_range_bin, buffer_size=16000, uport=None, dport=None, *args, **kwargs):
+        self.uport = uport
+        self.dport = dport
         # constants
         self.data_chunk_size = 32  # this MUST be 32 for TLV to work without magic number
         self.buffer_size = buffer_size

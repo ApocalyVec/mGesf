@@ -49,14 +49,14 @@ class mmw_worker(QObject):
                 if rd_heatmap is None:
                     rd_heatmap = sim_heatmap((8, 16))
                 if azi_heatmap is None:
-                    azi_heatmap = sim_heatmap(8, 24)
+                    azi_heatmap = sim_heatmap((8, 24))
                 self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
 
             else:  # this is in simulation mode
                 pts_array = sim_detected_points()
                 range_amplitude = sim_imp()
                 rd_heatmap = sim_heatmap((8, 16))
-                azi_heatmap = sim_heatmap(8, 24)
+                azi_heatmap = np.zeros((8, 24))
 
             # notify the mmw data frame is ready
             self.signal_mmw_frame_ready.emit({'range_doppler': rd_heatmap,
@@ -139,11 +139,11 @@ class MainWindow(QMainWindow):
         # print("Platform:\t%X "%(platform))
         # add range doppler
         self.doppler_display = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
+        self.init_spec_view(pos=(1, 1), label='Range Doppler Profile', display=self.doppler_display)
 
         # add range azi
         self.azi_display = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(1, 2), label='Range Azimuth Profile')
+        self.init_spec_view(pos=(1, 2), label='Range Azimuth Profile', display=self.azi_display)
 
         # add detected points plots
         self.scatterXY = self.init_pts_view(pos=(0, 1), label='Detected Points XY', x_lim=(-0.5, 0.5), y_lim=(0, 1.))
@@ -225,7 +225,7 @@ class MainWindow(QMainWindow):
 
         self.timer.start()
 
-    def init_spec_view(self, pos, label):
+    def init_spec_view(self, pos, label, display):
         vl = QtWidgets.QVBoxLayout()
 
         ql = QLabel()
@@ -238,7 +238,7 @@ class MainWindow(QMainWindow):
         self.figure_gl.addLayout(vl, *pos)
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
-        scene.addItem(self.doppler_display)
+        scene.addItem(display)
 
     def init_pts_view(self, pos, label, x_lim, y_lim):
         vl = QtWidgets.QVBoxLayout()
@@ -328,7 +328,7 @@ class MainWindow(QMainWindow):
         self.doppler_display.setPixmap(doppler_qpixmap)
 
         # update range azimuth spectrogram
-        azi_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
+        azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
         azi_qpixmap = QPixmap(azi_heatmap_qim)
         azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.azi_display.setPixmap(azi_qpixmap)

@@ -10,7 +10,10 @@ def serial_config(config_fn, cli_port):
     # Open the serial ports for the configuration and the data ports
 
     # Read the configuration file and send it to the board
-    config = [line.rstrip('\r\n') for line in open(config_fn)]
+    try:
+        config = [line.rstrip('\r\n') for line in open(config_fn)]
+    except FileNotFoundError:
+        print('Config file not found')
     for line in config:
         cli_port.write((line + '\r').encode())
         time.sleep(0.01)

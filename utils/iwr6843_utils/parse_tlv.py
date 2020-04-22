@@ -30,7 +30,7 @@ def parseRangeProfile(data, tlvLength):
     return range_profile, range_bins
 
 
-def parseRDheatmap(data, tlvLength, range_bins):
+def parseRDheatmap(data, tlvLength, range_bins, rm_clutter=True):
     """
     range bins times doppler bins times 2, doppler bins = chirps/ frame divided by num of antennas TX (3)
     #default chirps per frame is (128/3) = 42 * 2 * 256
@@ -47,8 +47,13 @@ def parseRDheatmap(data, tlvLength, range_bins):
     """
     doppler_bins = (tlvLength / 2) / range_bins
     rd_heatmap = struct.unpack(str(int(range_bins * doppler_bins)) + 'H', data[:tlvLength])
+    rd_heatmap = np.reshape(rd_heatmap, (int(range_bins), int(doppler_bins)))
 
-    return replace_left_right(np.reshape(rd_heatmap, (int(range_bins), int(doppler_bins))))
+    overall_mean = np.mean(rd_heatmap)
+    if rm_clutter:
+        rd_heatmap = np.array([row - np.mean(row) for row in rd_heatmap])
+
+    return replace_left_right(rd_heatmap)
 
 
 def chg_val(val):
