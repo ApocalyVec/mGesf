@@ -49,14 +49,14 @@ class mmw_worker(QObject):
                 if rd_heatmap is None:
                     rd_heatmap = sim_heatmap((8, 16))
                 if azi_heatmap is None:
-                    azi_heatmap = sim_heatmap(8, 24)
+                    azi_heatmap = sim_heatmap((8, 24))
                 self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
 
             else:  # this is in simulation mode
                 pts_array = sim_detected_points()
                 range_amplitude = sim_imp()
                 rd_heatmap = sim_heatmap((8, 16))
-                azi_heatmap = sim_heatmap(8, 24)
+                azi_heatmap = sim_heatmap((8, 24))
 
             # notify the mmw data frame is ready
             self.signal_mmw_frame_ready.emit({'range_doppler': rd_heatmap,
@@ -65,7 +65,8 @@ class mmw_worker(QObject):
                                               'range_amplitude': range_amplitude})
 
     def start_mmw(self):
-        self._mmw_interface.start_sensor()
+        if self._mmw_interface:  # if the sensor interface is established
+            self._mmw_interface.start_sensor()
         self._is_running = True
 
     def stop_mmw(self):
@@ -73,7 +74,6 @@ class mmw_worker(QObject):
         time.sleep(0.1)  # wait 100ms for the previous frames to finish process
         if self._mmw_interface:
             self._mmw_interface.stop_sensor()
-        if self._mmw_interface:
             print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
         else:
             print('frame rate calculation is not enabled in simulation mode')
@@ -152,7 +152,7 @@ class MainWindow(QMainWindow):
 
         # add the controls ##################################
         # add the interrupt button
-        self.start_stop_btn = QtWidgets.QPushButton(text='Stop Sensor')
+        self.start_stop_btn = QtWidgets.QPushButton(text='Start Sensor')
         self.start_stop_btn.clicked.connect(self.start_stop_btn_action)
         self.control_vl.addWidget(self.start_stop_btn)
 
@@ -328,7 +328,7 @@ class MainWindow(QMainWindow):
         self.doppler_display.setPixmap(doppler_qpixmap)
 
         # update range azimuth spectrogram
-        azi_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
+        azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
         azi_qpixmap = QPixmap(azi_heatmap_qim)
         azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.azi_display.setPixmap(azi_qpixmap)

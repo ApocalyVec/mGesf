@@ -48,8 +48,8 @@ if __name__ == '__main__':
     Start of the application script (do not change this part unless you know what you're doing)
     '''
     # setup connection to IWR6843
-    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    # _mmw_interface = None
+    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
+    _mmw_interface = None
 
     # setup system constants
     refresh = 1  # refresh_interval every x ms
