@@ -21,7 +21,9 @@ if __name__ == '__main__':
     'profiles/aop/25fps_rdheatmap_highRangeRes.cfg'
     configFileName = 'profiles/aop/aop_azitest_withRD.cfg'
     configFileName = 'profiles/aop/aop_azitest_withoutRD.cfg'
-
+    configFileName = 'profiles/aop/20fps_azi_rd.cfg'
+    configFileName = 'profiles/aop/25fps_azi_rd.cfg'
+    configFileName = 'profiles/aop/30fps_azi_rd.cfg'
 
     # ISK configs
     # configFileName = 'profiles/isk/2D/3fps_rd_heatmap.cfg'
@@ -49,8 +51,8 @@ if __name__ == '__main__':
     Start of the application script (do not change this part unless you know what you're doing)
     '''
     # setup connection to IWR6843
-    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    _mmw_interface = None
+    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
+    # _mmw_interface = None
 
     # setup system constants
     refresh = 1  # refresh_interval every x ms

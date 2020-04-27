@@ -67,12 +67,39 @@ def parseAziheatmap(data, tlvLength, range_bins):
     :param tlvLength:
     :return:
     """
-    range_bins = 256
+    # range_bins = 256
     azi_bins = (tlvLength / 2) / range_bins
     azi_heatmap = struct.unpack(str(int(range_bins * azi_bins)) + 'H', data[:tlvLength])
-    azi_heatmap = [chg_val(x) for x in azi_heatmap]
+    # azi_heatmap = [chg_val(x) for x in azi_heatmap]
+    azi_heatmap = np.reshape(azi_heatmap, (int(range_bins), int(azi_bins)))
 
-    return np.reshape(azi_heatmap, (int(range_bins), int(azi_bins)))
+    # use the default order of 3 Tx's and ordering is TX0, TX1, TX2
+    row_indices = [7, 5, 11, 9]
+    qrows = 4
+    qcols = range_bins
+    rowSizeBytes = 48
+    q = data[:tlvLength]
+    qq = []
+    for col in range(qcols):
+        real = []
+        img = []
+        for row in range(qrows):
+            index = col * rowSizeBytes + 4 * row_indices[row]
+            real.append(q[index + 1] * 256 + q[index])
+            img.append(q[index + 3] * 256 + q[index + 2])
+        real = [chg_val(x) for x in real]
+        img = [chg_val(x) for x in img]
+        # convert to complex numbers
+        data = np.array([real, img]).transpose()
+        data = np.pad(data, ((0, 60), (0, 0)), 'constant', constant_values=0)
+        data = data[..., 0] + 1j * data[..., 1]
+        transformed = np.fft.fft(data)
+
+        # take the magnitude
+        transformed = np.absolute(transformed)
+        qq.append(np.concatenate((transformed[int(len(transformed) / 2):], transformed[:int(len(transformed) / 2)])))
+    qq = np.array(qq)
+    return qq
 
 
 def replace_left_right(a):
@@ -82,10 +109,9 @@ def replace_left_right(a):
     return rtn
 
 
-def parseStats(data, tlvLength):
-    pass
-    # interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad = struct.unpack('6I', data[:24])
-
+def parseStats(data):
+    interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad = struct.unpack('6I', data[:24])
+    return interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad
     # print("\tOutputMsgStats:\t%d " % (6))
     # print("\t\tChirpMargin:\t%d " % (chirpMargin))
     # print("\t\tFrameMargin:\t%d " % (frameMargin))
@@ -168,12 +194,18 @@ def decode_iwr_tlv(in_data):
                     #                     'interpret the number of range bins')
                     rd_heatmap = parseRDheatmap(data, tlvLength, range_bins)
                 elif tlvType == 6:
-                    parseStats(data, tlvLength)
+                    # TODO why is the states' TLV not present?
+                    interProcess, transmitOut, frameMargin, chirpMargin, activeCPULoad, interCPULoad = parseStats(data)
+                    pass
                 elif tlvType == 7:
                     pass
                 elif tlvType == 8:
                     # resolving static azimuth-elevation heatmap
-                    azi_heatmap = parseAziheatmap(data, tlvLength, range_bins)
+                    try:
+                        azi_heatmap = parseAziheatmap(data, tlvLength, range_bins)
+                    except:
+                        print('bad azimuth')
+                        azi_heatmap = None
                     pass
                 else:
                     print("Unidentified tlv type %d" % tlvType, '. Its len is ' + str(tlvLength))
