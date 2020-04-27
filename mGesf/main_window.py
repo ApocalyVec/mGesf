@@ -56,7 +56,7 @@ class mmw_worker(QObject):
                 pts_array = sim_detected_points()
                 range_amplitude = sim_imp()
                 rd_heatmap = sim_heatmap((8, 16))
-                azi_heatmap = np.zeros((8, 24))
+                azi_heatmap = sim_heatmap((8, 24))
 
             # notify the mmw data frame is ready
             self.signal_mmw_frame_ready.emit({'range_doppler': rd_heatmap,
@@ -65,7 +65,8 @@ class mmw_worker(QObject):
                                               'range_amplitude': range_amplitude})
 
     def start_mmw(self):
-        self._mmw_interface.start_sensor()
+        if self._mmw_interface:  # if the sensor interface is established
+            self._mmw_interface.start_sensor()
         self._is_running = True
 
     def stop_mmw(self):
@@ -73,7 +74,6 @@ class mmw_worker(QObject):
         time.sleep(0.1)  # wait 100ms for the previous frames to finish process
         if self._mmw_interface:
             self._mmw_interface.stop_sensor()
-        if self._mmw_interface:
             print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
         else:
             print('frame rate calculation is not enabled in simulation mode')
@@ -152,7 +152,7 @@ class MainWindow(QMainWindow):
 
         # add the controls ##################################
         # add the interrupt button
-        self.start_stop_btn = QtWidgets.QPushButton(text='Stop Sensor')
+        self.start_stop_btn = QtWidgets.QPushButton(text='Start Sensor')
         self.start_stop_btn.clicked.connect(self.start_stop_btn_action)
         self.control_vl.addWidget(self.start_stop_btn)
 
