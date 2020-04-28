@@ -5,25 +5,20 @@ from PyQt5.QtWidgets import QApplication
 from mGesf.main_window import MainWindow
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
-
 if __name__ == '__main__':
     '''
     User defined variables
     '''
     # path to which you wish to save the recorded data
-    data_path = 'D:/data/mGesF'
+    data_path = '/Users/neneko/desktop/testData'
     # AoP configs
     # configFileName = 'profiles/aop/profile_rp_basic.cfg'  # use your config file
     # configFileName = 'profiles/aop/2fps_rdHeatmap.cfg'
     # configFileName = 'profiles/aop/3fps_rd_heatmap.cfg'
     # configFileName = 'profiles/aop/25fps_rdHeatmap.cfg'
     # configFileName = 'profiles/aop/30fps_rdHeatmap.cfg'
-    'profiles/aop/25fps_rdheatmap_highRangeRes.cfg'
     configFileName = 'profiles/aop/aop_azitest_withRD.cfg'
     configFileName = 'profiles/aop/aop_azitest_withoutRD.cfg'
-    configFileName = 'profiles/aop/20fps_azi_rd.cfg'
-    configFileName = 'profiles/aop/25fps_azi_rd.cfg'
-    configFileName = 'profiles/aop/30fps_azi_rd.cfg'
 
     # ISK configs
     # configFileName = 'profiles/isk/2D/3fps_rd_heatmap.cfg'
@@ -50,9 +45,8 @@ if __name__ == '__main__':
     '''
     Start of the application script (do not change this part unless you know what you're doing)
     '''
-    # setup connection to IWR6843
-    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    # _mmw_interface = None
+    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
+    _mmw_interface = None
 
     # setup system constants
     refresh = 1  # refresh_interval every x ms

@@ -9,7 +9,7 @@ This application supports a variety of sensors, including:
 
 To run this application, first run this command to install the prerequisites.
 ```bash
-python setup.py
+python setup.py install
 ```
 Now run this app with this command
 ```bash
