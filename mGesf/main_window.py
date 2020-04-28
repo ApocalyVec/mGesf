@@ -13,7 +13,6 @@ from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 from utils.img_utils import array_to_colormap_qim
 
 import numpy as np
-import mGesf.view as view
 import mGesf.MMW_worker as MMW_worker
 
 # tabs ======================================

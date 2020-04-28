@@ -5,16 +5,27 @@ from datetime import datetime
 
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QTimer, pyqtSlot
+from PyQt5 import QtCore
+
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget, \
+    QGraphicsScene, QGraphicsView
 import pyqtgraph as pg
 
 from utils.img_utils import array_to_colormap_qim
 
 import numpy as np
-import mGesf.view as view
 import mGesf.MMW_worker as MMW_worker
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
+
+
+def init_view(label):
+    vl = QtWidgets.QVBoxLayout()
+    ql = QLabel()
+    ql.setAlignment(QtCore.Qt.AlignCenter)
+    ql.setText(label)
+    vl.addWidget(ql)
+    return vl, ql
 
 
 class Control_tab(QWidget):
@@ -50,7 +61,7 @@ class Control_tab(QWidget):
 
         # add the figures ##################################
         # add statistics
-        self.statistics_ui, self.statistics_vl = view.init_statistics(self.figure_gl)
+        self.statistics_ui, self.statistics_vl = self.init_statistics()
 
         # print("Packet ID:\t%d "%(frameNum))
         # print("Version:\t%x "%(version))
@@ -61,19 +72,19 @@ class Control_tab(QWidget):
 
         # add range doppler
         self.doppler_display = QGraphicsPixmapItem()
-        view.init_spec(self, pos=(1, 1), label='Range Doppler Profile')
+        self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
 
         # add range azi
         self.azi_display = QGraphicsPixmapItem()
-        view.init_spec(self, pos=(1, 2), label='Range Azimuth Profile')
+        self.init_spec_view(pos=(1, 2), label='Range Azimuth Profile')
 
         # add detected points plots
-        self.scatterXY = view.init_pts_view(self, pos=(0, 1), label='Detected Points XY', x_lim=(-0.5, 0.5),
+        self.scatterXY = self.init_pts_view(pos=(0, 1), label='Detected Points XY', x_lim=(-0.5, 0.5),
                                             y_lim=(0, 1.))
-        self.scatterZD = view.init_pts_view(self, pos=(0, 2), label='Detected Points ZD', x_lim=(-0.5, 0.5),
+        self.scatterZD = self.init_pts_view(pos=(0, 2), label='Detected Points ZD', x_lim=(-0.5, 0.5),
                                             y_lim=(-1., 1.))
-        self.ra_view = view.init_curve(self, pos=(1, 0), label='Range Profile', x_lim=(-10, 260),
-                                       y_lim=(1500, 3800))
+        self.ra_view = self.init_curve_view(pos=(1, 0), label='Range Profile', x_lim=(-10, 260),
+                                            y_lim=(1500, 3800))
 
         # add the controls ##################################
 
@@ -134,6 +145,57 @@ class Control_tab(QWidget):
 
         self.timer.start()
         self.show()
+
+    def init_statistics(self):
+        statistics_vl = QtWidgets.QVBoxLayout()
+        statistics_ui = {'pid': QLabel(),
+                         'ver': QLabel(),
+                         'dlen': QLabel(),
+                         'numTLVs': QLabel(),
+                         'numObj': QLabel(),
+                         'pf': QLabel()}
+        [v.setText(k) for k, v in statistics_ui.items()]
+        [statistics_vl.addWidget(v) for v in statistics_ui.values()]
+        self.figure_gl.addLayout(statistics_vl, *(0, 0))  # why does not this show up
+
+        return statistics_ui, statistics_vl
+
+    def init_spec_view(self, pos, label):
+        vl, ql = init_view(label)
+
+        spc_gv = QGraphicsView()
+        vl.addWidget(spc_gv)
+
+        self.figure_gl.addLayout(vl, *pos)
+        scene = QGraphicsScene(self)
+        spc_gv.setScene(scene)
+        scene.addItem(self.doppler_display)
+        return scene
+
+    def init_pts_view(self, pos, label, x_lim, y_lim):
+        vl, ql = init_view(label)
+
+        pts_plt = pg.PlotWidget()
+        vl.addWidget(pts_plt)
+
+        self.figure_gl.addLayout(vl, *pos)
+        pts_plt.setXRange(*x_lim)
+        pts_plt.setYRange(*y_lim)
+        scatter = pg.ScatterPlotItem(pen=None, symbol='o')
+        pts_plt.addItem(scatter)
+        return scatter
+
+    def init_curve_view(self, pos, label, x_lim, y_lim):
+        vl, ql = init_view(label)
+
+        curve_plt = pg.PlotWidget()
+        vl.addWidget(curve_plt)
+        self.figure_gl.addLayout(vl, *pos)
+
+        curve_plt.setXRange(*x_lim)
+        curve_plt.setYRange(*y_lim)
+        curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
+        return curve
 
     def config_btn_action(self):
         # TODO add check if file exits
