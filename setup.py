@@ -6,8 +6,11 @@ with open("README.md", "r") as fh:
 requires = ['PyQt5',
             'numpy',
             'pyqtgraph',
-            'pyserial'
+            'pyserial',
+            'matplotlib',
+            'qimage2ndarray'
             ]
+
 setuptools.setup(
     name="mGesf",  # Replace with your own username
     version="0.0.1",
