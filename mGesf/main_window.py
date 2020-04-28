@@ -33,7 +33,7 @@ WINDOW_LENGTH = 1280
 
 
 # TODO add resume function to the stop button
-class MainWindow(QWidget):
+class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         self.resize(WINDOW_LENGTH, WINDOW_HEIGHT)
@@ -41,7 +41,7 @@ class MainWindow(QWidget):
 
         # create the tabs
         self.table_widget = Tabs(self, mmw_interface, refresh_interval, data_path)
-        # self.setCentralWidget(self.table_widget)
+        self.setCentralWidget(self.table_widget)
         self.show()
 
 
@@ -54,7 +54,7 @@ class Tabs(QWidget):
 
         # Initialize tab screen
         self.tabs = QTabWidget()
-        self.tab1 = control_tab.Control_tab()
+        self.tab1 = control_tab.Control_tab(MmWaveSensorInterface, refresh_interval, data_path)
         self.tab2 = radar_tab.Radar_tab()
         self.tab3 = leap_tab.Leap_tab()
         self.tab4 = UWB_tab.UWB_tab()
@@ -67,7 +67,6 @@ class Tabs(QWidget):
         # Add tabs to widget
         self.layout.addWidget(self.tabs)
         self.setLayout(self.layout)
-        self.setMinimumSize(WINDOW_LENGTH, int(WINDOW_HEIGHT / 14))
-        self.setMaximumSize(WINDOW_LENGTH, int(WINDOW_HEIGHT / 12))
+        # self.setMinimumSize(WINDOW_LENGTH, int(WINDOW_HEIGHT / 14))
+        # self.setMaximumSize(WINDOW_LENGTH, int(WINDOW_HEIGHT / 12))
 
-        self.tab1.setFixedSize(int(WINDOW_LENGTH / 4), int(WINDOW_HEIGHT / 12))

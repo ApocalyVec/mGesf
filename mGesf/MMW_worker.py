@@ -55,6 +55,8 @@ class MmwWorker(QObject):
     def start_mmw(self):
         if self._mmw_interface:  # if the sensor interface is established
             self._mmw_interface.start_sensor()
+        else:
+            raise exceptions.InterfaceNotExistError
         self._is_running = True
 
     def stop_mmw(self):
