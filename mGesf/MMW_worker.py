@@ -56,7 +56,9 @@ class MmwWorker(QObject):
         if self._mmw_interface:  # if the sensor interface is established
             self._mmw_interface.start_sensor()
         else:
-            raise exceptions.InterfaceNotExistError
+            print('Start Simulating mmW data')
+            pass
+            # raise exceptions.InterfaceNotExistError
         self._is_running = True
 
     def stop_mmw(self):
@@ -66,6 +68,7 @@ class MmwWorker(QObject):
             self._mmw_interface.stop_sensor()
             print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
         else:
+            print('Stop Simulating mmW data')
             print('frame rate calculation is not enabled in simulation mode')
 
     def is_mmw_running(self):

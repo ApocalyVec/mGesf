@@ -53,7 +53,7 @@ class Tabs(QWidget):
 
         # Initialize tab screen
         self.tabs = QTabWidget()
-        self.tab1 = control_tab.Control_tab(MmWaveSensorInterface, refresh_interval, data_path)
+        self.tab1 = control_tab.Control_tab(mmw_interface, refresh_interval, data_path)
         self.tab2 = radar_tab.Radar_tab()
         self.tab3 = leap_tab.Leap_tab()
         self.tab4 = UWB_tab.UWB_tab()
