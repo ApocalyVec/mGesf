@@ -21,10 +21,11 @@ from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 import mGesf.exceptions as exceptions
 
 
-def init_view(label):
+def init_view(label, center=True):
     vl = QtWidgets.QVBoxLayout()
     ql = QLabel()
-    ql.setAlignment(QtCore.Qt.AlignCenter)
+    if center:
+        ql.setAlignment(QtCore.Qt.AlignCenter)
     ql.setText(label)
     vl.addWidget(ql)
     return vl
@@ -63,22 +64,25 @@ class Control_tab(QWidget):
 
         #  ######################### add sections in radar  ################################
 
-        self.radar_thumbnail_vl = self.init_container(parent=self.radar_thumbnail, label="radar")
-        self.radar_connection_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="connection")
-        self.radar_sensor_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="sensor")
-        self.radar_runtime_graph = self.init_spec_view(parent=self.radar_thumbnail_vl, label="runtime")
+        self.radar_thumbnail_vl = self.init_container(parent=self.radar_thumbnail, label="Radar")
+        self.radar_connection_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="Connection")
+        self.radar_connection_panel.setContentsMargins(10,10,10,10)
+        self.radar_sensor_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="Sensor")
+        self.radar_runtime_graph = self.init_spec_view(parent=self.radar_thumbnail_vl, label="Runtime")
 
         self.leap_uwb_record_thumbnail_vl = self.init_container(parent=self.leap_uwb_record, label="????Test")
         self.leap_runtime_graph = self.init_spec_view(parent=self.leap_uwb_record_thumbnail_vl, label="runtime")
 
         # ############################# Connection panel ##################################
         # com port entries
+        self.d_port_vl = self.init_container(parent=self.radar_connection_panel, label='Data Port (Standard)', center_label=False)
         self.dport_textbox = QtWidgets.QLineEdit()
-        self.dport_textbox.setPlaceholderText('Data Port')
+        self.dport_textbox.setPlaceholderText('default: COM3')
         self.radar_connection_panel.addWidget(self.dport_textbox)
 
+        self.d_port_vl = self.init_container(parent=self.radar_connection_panel, label='User Port (Enhanced)', center_label=False)
         self.uport_textbox = QtWidgets.QLineEdit()
-        self.uport_textbox.setPlaceholderText('User Port')
+        self.uport_textbox.setPlaceholderText('default: COM14')
         self.radar_connection_panel.addWidget(self.uport_textbox)
 
         # add close connection button
@@ -134,8 +138,8 @@ class Control_tab(QWidget):
 
         self.show()
 
-    def init_container(self, parent, label):
-        vl = init_view(label)
+    def init_container(self, parent, label, center_label=True):
+        vl = init_view(label,center_label)
         parent.addLayout(vl)
         return vl
 
