@@ -20,95 +20,109 @@ from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 import mGesf.exceptions as exceptions
 
+
 def init_view(label):
     vl = QtWidgets.QVBoxLayout()
     ql = QLabel()
     ql.setAlignment(QtCore.Qt.AlignCenter)
     ql.setText(label)
     vl.addWidget(ql)
-    return vl, ql
+    return vl
 
 
 class Control_tab(QWidget):
+
     def __init__(self, mmw_worker: MMW_worker, refresh_interval, data_path, *args, **kwargs):
         super().__init__()
 
+        # mmW worker #####################################################
         self.mmw_worker = mmw_worker
-        # create mmWave layout #####################################################
-        main_hl = QtWidgets.QHBoxLayout(self)
-        # set the mGesf layout
-        self.setLayout(main_hl)
-
-        self.control_vl = QtWidgets.QVBoxLayout()  # create vbox for controls
-        self.figure_gl = QtWidgets.QGridLayout()  # create grid layout for the figures
-
-        main_hl.addLayout(self.control_vl)
-        main_hl.addLayout(self.figure_gl)
-
         # connect the mmWave frame signal to the function that processes the data
         self.mmw_worker.signal_mmw_control_tab.connect(self.control_process_mmw_data)
-
-        # add the figures ##################################
-
-        # print("Packet ID:\t%d "%(frameNum))
-        # print("Version:\t%x "%(version))
-        # print("Data Len:\t\t%d", length)
-        # print("TLV:\t\t%d "%(numTLVs))
-        # print("Detect Obj:\t%d "%(numObj))
-        # print("Platform:\t%X "%(platform))
-
-        # add range doppler
-        self.doppler_display = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
-
-        # add the controls ##################################
-
-        # add the interrupt button
-        self.start_stop_btn = QtWidgets.QPushButton(text='Start Sensor')
-        self.start_stop_btn.clicked.connect(self.start_stop_btn_action)
-        self.control_vl.addWidget(self.start_stop_btn)
-
-        # add the start record button
-        self.is_record = False
-        self.record_btn = QtWidgets.QPushButton(text='Start Recording')
-        self.record_btn.clicked.connect(self.record_btn_action)
-        self.control_vl.addWidget(self.record_btn)
-
-        # com port entries
-        # Create textbox
-        self.uport_textbox = QtWidgets.QLineEdit()
-        self.uport_textbox.setPlaceholderText('User Port')
-        self.control_vl.addWidget(self.uport_textbox)
-
-        # Create textbox
-        self.dport_textbox = QtWidgets.QLineEdit()
-        self.dport_textbox.setPlaceholderText('Data Port')
-        self.control_vl.addWidget(self.dport_textbox)
-
-        # add close connection button
-        self.connection_btn = QtWidgets.QPushButton(text='Connect')
-        self.connection_btn.clicked.connect(self.connection_btn_action)
-        self.control_vl.addWidget(self.connection_btn)
-
-        # Create textbox
-        self.config_textbox = QtWidgets.QLineEdit()
-        self.config_textbox.setPlaceholderText('Config File Path')
-        self.control_vl.addWidget(self.config_textbox)
-
-        # add send config button
-        self.config_btn = QtWidgets.QPushButton(text='Send Config')
-        self.config_btn.clicked.connect(self.config_btn_action)
-        self.config_btn.clicked.connect(self.config_btn_action)
-        self.control_vl.addWidget(self.config_btn)
-
-        # add label (running or stopped.)
-        self.dialogueLabel = QLabel()
-        self.dialogueLabel.setText("Running")
-        self.control_vl.addWidget(self.dialogueLabel)
 
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'ra_profile': []}}
         self.data_path = data_path
+
+        self.is_record = False
+
+        # create mmWave layout #####################################################
+        main_page = QtWidgets.QHBoxLayout(self)
+        # set the mGesf layout
+        self.setLayout(main_page)
+
+        self.radar_thumbnail = QtWidgets.QVBoxLayout()  # create vbox for controls
+        self.leap_uwb_record = QtWidgets.QVBoxLayout()  # create vbox for controls
+        # self.figure_gl = QtWidgets.QGridLayout()  # create grid layout for the figures
+
+        main_page.addLayout(self.radar_thumbnail)
+        main_page.addLayout(self.leap_uwb_record)
+
+        # add range doppler
+        self.doppler_display = QGraphicsPixmapItem()
+
+        #  ######################### add sections in radar  ################################
+
+        self.radar_thumbnail_vl = self.init_container(parent=self.radar_thumbnail, label="radar")
+        self.radar_connection_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="connection")
+        self.radar_sensor_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="sensor")
+        self.radar_runtime_graph = self.init_spec_view(parent=self.radar_thumbnail_vl, label="runtime")
+
+        self.leap_uwb_record_thumbnail_vl = self.init_container(parent=self.leap_uwb_record, label="????Test")
+        self.leap_runtime_graph = self.init_spec_view(parent=self.leap_uwb_record_thumbnail_vl, label="runtime")
+
+        # ############################# Connection panel ##################################
+        # com port entries
+        self.dport_textbox = QtWidgets.QLineEdit()
+        self.dport_textbox.setPlaceholderText('Data Port')
+        self.radar_connection_panel.addWidget(self.dport_textbox)
+
+        self.uport_textbox = QtWidgets.QLineEdit()
+        self.uport_textbox.setPlaceholderText('User Port')
+        self.radar_connection_panel.addWidget(self.uport_textbox)
+
+        # add close connection button
+        self.radar_connection_btn = QtWidgets.QPushButton(text='Connect')
+        self.radar_connection_btn.clicked.connect(self.radar_connection_btn_action)
+        self.radar_connection_panel.addWidget(self.radar_connection_btn)
+
+        # add U/D port feedback (Connected/invalid U/Dport)
+        self.UD_connection_feedback = QLabel()
+        self.UD_connection_feedback.setText("Disconnected")
+        self.radar_connection_panel.addWidget(self.UD_connection_feedback)
+
+        # ############################# Sensor panel ##################################
+
+        self.is_valid_config_path = False
+
+        # Config path
+        self.config_textbox = QtWidgets.QLineEdit()
+        self.config_textbox.setPlaceholderText('Config File Path')
+        self.radar_thumbnail.addWidget(self.config_textbox)
+
+        # add send config button
+        self.config_connection_btn = QtWidgets.QPushButton(text='Send Config')
+        self.config_connection_btn.clicked.connect(self.radar_config_btn_action)
+        self.config_connection_btn.clicked.connect(self.radar_config_btn_action)
+        self.radar_thumbnail.addWidget(self.config_connection_btn)
+
+        # add config connection feedback (invalid path/setting done.)
+        self.config_connection_feedback = QLabel()
+        self.config_connection_feedback.setText("Invalid config path")
+        self.radar_connection_panel.addWidget(self.config_connection_feedback)
+
+        # add the interrupt button
+        self.sensor_start_stop_btn = QtWidgets.QPushButton(text='Start Sensor')
+        self.sensor_start_stop_btn.clicked.connect(self.start_stop_sensor_action)
+        self.radar_sensor_panel.addWidget(self.sensor_start_stop_btn)
+
+        '''
+        self.is_record = False
+        # add the start record button
+        self.record_btn = QtWidgets.QPushButton(text='Start Recording')
+        self.record_btn.clicked.connect(self.record_btn_action)
+        self.radar_thumbnail.addWidget(self.record_btn)
+        '''
 
         # prepare the sensor interface
         # if mmw_interface:
@@ -120,28 +134,24 @@ class Control_tab(QWidget):
 
         self.show()
 
-    def init_spec_view(self, pos, label):
-        vl, ql = init_view(label)
+    def init_container(self, parent, label):
+        vl = init_view(label)
+        parent.addLayout(vl)
+        return vl
+
+    def init_spec_view(self, parent, label):
+        vl = init_view(label)
 
         spc_gv = QGraphicsView()
         vl.addWidget(spc_gv)
 
-        self.figure_gl.addLayout(vl, *pos)
+        parent.addLayout(vl)
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
         scene.addItem(self.doppler_display)
         return scene
 
-    def start_stop_btn_action(self):
-        if self.mmw_worker.is_mmw_running():
-            self.start_stop_btn.setText('Start Sensor')
-            self.mmw_worker.stop_mmw()
-            self.dialogueLabel.setText('Stopped.')
-        else:
-            self.start_stop_btn.setText('Stop Sensor')
-            self.mmw_worker.start_mmw()
-            self.dialogueLabel.setText('Running.')
-
+    '''
     def record_btn_action(self):
         if not self.is_record:
             self.is_record = True
@@ -156,21 +166,41 @@ class Control_tab(QWidget):
             pickle.dump(self.buffer, open(os.path.join(self.data_path,
                                                        today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
             print('data save to ' + self.data_path)
+    '''
 
-    def connection_btn_action(self):
+    def radar_connection_btn_action(self):
         if self.mmw_worker.is_connected():
             self.mmw_worker.disconnect_mmw()
-            self.connection_btn.setText('Connect')
+            self.dport_textbox.setPlaceholderText('Data Port')
+            self.dport_textbox.setPlaceholderText('User Port')
+            self.UD_connection_feedback.setText("Disconnected")
+            self.radar_connection_btn.setText('Connect')
         else:
+            # TODO: CHECK VALID PORTS
             self.mmw_worker.connect_mmw(uport_name=self.uport_textbox.text(), dport_name=self.dport_textbox.text())
-            self.connection_btn.setText('Disconnect')
+            self.UD_connection_feedback.setText("Connected")
+            self.radar_connection_btn.setText('Disconnect')
 
-    def config_btn_action(self):
+    def radar_config_btn_action(self):
         usr_path = self.config_textbox.text()
         if os.path.exists(usr_path):
+            self.is_valid_config_path = True
+            self.config_connection_feedback.setText("Setting done")
             self.mmw_worker.send_config(config_path=usr_path)
         else:
-            raise exceptions.StoragePathInvalidError
+            self.is_valid_config_path = False
+            self.config_connection_feedback.setText("Invalid path")
+
+    def start_stop_sensor_action(self):
+        # TODO: CONNECT WHEN CONFIG PATH VALID
+        if self.mmw_worker.is_mmw_running():
+            self.sensor_start_stop_btn.setText('Start Sensor')
+            self.mmw_worker.stop_mmw()
+            self.config_connection_feedback.setText('Stopped.')
+        else:
+            self.sensor_start_stop_btn.setText('Stop Sensor')
+            self.mmw_worker.start_mmw()
+            self.config_connection_feedback.setText('Running.')
 
     def control_process_mmw_data(self, data_dict):
         """
@@ -193,7 +223,6 @@ class Control_tab(QWidget):
         if self.is_record:
             self.buffer['mmw']['timestamps'].append(time.time())
             self.buffer['mmw']['ra_profile'].append(data_dict['range_doppler'])
-
 
     @pyqtSlot()
     def on_click(self):
