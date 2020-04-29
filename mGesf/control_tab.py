@@ -19,6 +19,7 @@ import mGesf.MMW_worker as MMW_worker
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 import mGesf.exceptions as exceptions
+import mGesf.config as config
 
 
 def init_view(label, center=True):
@@ -66,7 +67,7 @@ class Control_tab(QWidget):
 
         self.radar_thumbnail_vl = self.init_container(parent=self.radar_thumbnail, label="Radar")
         self.radar_connection_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="Connection")
-        self.radar_connection_panel.setContentsMargins(10,10,10,10)
+        #self.radar_connection_panel.setContentsMargins(10,10,10,10)
         self.radar_sensor_panel = self.init_container(parent=self.radar_thumbnail_vl,  label="Sensor")
         self.radar_runtime_graph = self.init_spec_view(parent=self.radar_thumbnail_vl, label="Runtime")
 
@@ -77,12 +78,12 @@ class Control_tab(QWidget):
         # com port entries
         self.d_port_vl = self.init_container(parent=self.radar_connection_panel, label='Data Port (Standard)', center_label=False)
         self.dport_textbox = QtWidgets.QLineEdit()
-        self.dport_textbox.setPlaceholderText('default: COM3')
+        self.dport_textbox.setPlaceholderText("default: "+config.d_port_default)
         self.radar_connection_panel.addWidget(self.dport_textbox)
 
         self.d_port_vl = self.init_container(parent=self.radar_connection_panel, label='User Port (Enhanced)', center_label=False)
         self.uport_textbox = QtWidgets.QLineEdit()
-        self.uport_textbox.setPlaceholderText('default: COM14')
+        self.uport_textbox.setPlaceholderText("default: "+config.u_port_default)
         self.radar_connection_panel.addWidget(self.uport_textbox)
 
         # add close connection button
@@ -101,7 +102,7 @@ class Control_tab(QWidget):
 
         # Config path
         self.config_textbox = QtWidgets.QLineEdit()
-        self.config_textbox.setPlaceholderText('Config File Path')
+        self.config_textbox.setPlaceholderText('default '+config.config_file_path_default)
         self.radar_thumbnail.addWidget(self.config_textbox)
 
         # add send config button
@@ -112,7 +113,7 @@ class Control_tab(QWidget):
 
         # add config connection feedback (invalid path/setting done.)
         self.config_connection_feedback = QLabel()
-        self.config_connection_feedback.setText("Invalid config path")
+        self.config_connection_feedback.setText(config.invalid_config_message)
         self.radar_connection_panel.addWidget(self.config_connection_feedback)
 
         # add the interrupt button
@@ -175,36 +176,36 @@ class Control_tab(QWidget):
     def radar_connection_btn_action(self):
         if self.mmw_worker.is_connected():
             self.mmw_worker.disconnect_mmw()
-            self.dport_textbox.setPlaceholderText('Data Port')
-            self.dport_textbox.setPlaceholderText('User Port')
-            self.UD_connection_feedback.setText("Disconnected")
+            self.dport_textbox.setPlaceholderText('default '+config.d_port_default)
+            self.dport_textbox.setPlaceholderText('default '+config.u_port_default)
+            self.UD_connection_feedback.setText(config.UDport_disconnected_message)
             self.radar_connection_btn.setText('Connect')
         else:
             # TODO: CHECK VALID PORTS
             self.mmw_worker.connect_mmw(uport_name=self.uport_textbox.text(), dport_name=self.dport_textbox.text())
-            self.UD_connection_feedback.setText("Connected")
+            self.UD_connection_feedback.setText(config.UDport_connected_message)
             self.radar_connection_btn.setText('Disconnect')
 
     def radar_config_btn_action(self):
         usr_path = self.config_textbox.text()
         if os.path.exists(usr_path):
             self.is_valid_config_path = True
-            self.config_connection_feedback.setText("Setting done")
+            self.config_connection_feedback.setText(config.config_set_message)
             self.mmw_worker.send_config(config_path=usr_path)
         else:
             self.is_valid_config_path = False
-            self.config_connection_feedback.setText("Invalid path")
+            self.config_connection_feedback.setText(config.invalid_config_message)
 
     def start_stop_sensor_action(self):
         # TODO: CONNECT WHEN CONFIG PATH VALID
         if self.mmw_worker.is_mmw_running():
             self.sensor_start_stop_btn.setText('Start Sensor')
             self.mmw_worker.stop_mmw()
-            self.config_connection_feedback.setText('Stopped.')
+            self.config_connection_feedback.setText(config.stop_sensor_message)
         else:
             self.sensor_start_stop_btn.setText('Stop Sensor')
             self.mmw_worker.start_mmw()
-            self.config_connection_feedback.setText('Running.')
+            self.config_connection_feedback.setText(config.start_sensor_message)
 
     def control_process_mmw_data(self, data_dict):
         """
