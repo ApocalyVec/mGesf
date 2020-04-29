@@ -10,7 +10,11 @@ import mGesf.exceptions as exceptions
 
 
 class MmwWorker(QObject):
-    signal_mmw_frame_ready = pyqtSignal(dict)
+    # for passing data to radar tab
+    signal_mmw_radar_tab = pyqtSignal(dict)
+    # for passing data to control tab
+    signal_mmw_control_tab = pyqtSignal(dict)
+
     tick_signal = pyqtSignal()
     timing_list = []  # TODO refactor timing calculation
 
@@ -22,6 +26,7 @@ class MmwWorker(QObject):
 
         self._mmw_interface = mmw_interface
         self._is_running = False
+        self._is_recording = False
 
     @pg.QtCore.pyqtSlot()
     def mmw_process_on_tick(self):
@@ -46,11 +51,14 @@ class MmwWorker(QObject):
                 rd_heatmap = sim_heatmap((8, 16))
                 azi_heatmap = sim_heatmap((8, 24))
 
-            # notify the mmw data frame is ready
-            self.signal_mmw_frame_ready.emit({'range_doppler': rd_heatmap,
-                                              'range_azi': azi_heatmap,
-                                              'pts': pts_array,
-                                              'range_amplitude': range_amplitude})
+            # notify the mmw data for the radar tab
+            self.signal_mmw_radar_tab.emit({'range_doppler': rd_heatmap,
+                                            'range_azi': azi_heatmap,
+                                            'pts': pts_array,
+                                            'range_amplitude': range_amplitude})
+
+            # notify the mmw data for the control tab
+            self.signal_mmw_control_tab.emit({'range_doppler': rd_heatmap})
 
     def start_mmw(self):
         if self._mmw_interface:  # if the sensor interface is established
@@ -108,3 +116,12 @@ class MmwWorker(QObject):
             self.start_mmw()
         else:
             raise exceptions.InterfaceNotExistError
+
+    def record_mmw(self):
+        self._is_recording = True
+
+    def end_record_mmw(self):
+        self._is_recording = False
+
+    def is_recording(self):
+        return self._is_recording
