@@ -28,7 +28,7 @@ def init_view(label):
 
 
 class Radar_tab(QWidget):
-    def __init__(self, mmw_worker: MMW_worker, refresh_interval, data_path, *args, **kwargs):
+    def __init__(self, mmw_worker: MMW_worker, refresh_interval, *args, **kwargs):
         super().__init__()
 
         self.mmw_worker = mmw_worker
@@ -67,7 +67,6 @@ class Radar_tab(QWidget):
 
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}}
-        self.data_path = data_path
 
         # prepare the sensor interface
         # if mmw_interface:
