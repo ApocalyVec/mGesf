@@ -3,239 +3,292 @@ import pickle
 import time
 from datetime import datetime
 
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import QTimer, pyqtSlot
+from PyQt5 import QtWidgets, QtGui
 from PyQt5 import QtCore
 
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget, \
-    QGraphicsScene, QGraphicsView
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QLabel, QGraphicsScene, QGraphicsView
 import pyqtgraph as pg
 
+from mGesf.drawer import init_container, setup_radar_connection_button, setup_user_port, setup_data_port, \
+    setup_datapath_block, setup_information_block, setup_record_button, setup_config_path_block, setup_config_btn, \
+    setup_sensor_btn
 from utils.img_utils import array_to_colormap_qim
 
-import numpy as np
 import mGesf.MMW_worker as MMW_worker
-from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
-
-
-def init_view(label):
-    vl = QtWidgets.QVBoxLayout()
-    ql = QLabel()
-    ql.setAlignment(QtCore.Qt.AlignCenter)
-    ql.setText(label)
-    vl.addWidget(ql)
-    return vl, ql
+from mGesf.drawer import *
+import mGesf.config as config
 
 
 class Control_tab(QWidget):
-    def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
+    """
+        main page
+            1. control block
+                1-1. RLU block
+                    1-1-1. Radar block
+                        1-1-1-0. Radar frame # todo add frames
+                        1-1-1-1. Connection block
+                            1-1-1-1-1. Data port block
+                            1-1-1-1-2. User port block
+                            1-1-1-1-3. Connect button
+                        1-1-1-2. Sensor block
+                            1-1-1-2-1. Config path block
+                            1-1-1-2-2. senor buttons block
+                                1-1-1-2-2-1. Send_config Button
+                                1-1-1-2-2-2. Start/Stop sensor button
+                        1-1-1-3. Runtime view
+                        1-1-1-4. Radar record check box
+                    1-1-2. Leap block
+                        1-1-2-1. Leap connect button block
+                        1-1-2-2. Leap runtime view
+                        1-1-2-3. Leap record check box
+                    1-1-3. UWB block
+                        1-1-2-1. UWB connect Button
+                        1-1-2-2. UWB runtime view
+                        1-1-2-3. UWB record check box
+                1-2. Record block
+                    1-2-1. Output path text box
+                    1-2-2. Record button
+
+            2. information block
+                2-1. message
+    """
+
+    def __init__(self, mmw_worker: MMW_worker, refresh_interval, *args, **kwargs):
         super().__init__()
 
-        # create mmWave layout #####################################################
-        main_hl = QtWidgets.QHBoxLayout(self)
-        # set the mGesf layout
-        self.setLayout(main_hl)
-
-        self.control_vl = QtWidgets.QVBoxLayout()  # create vbox for controls
-        self.figure_gl = QtWidgets.QGridLayout()  # create grid layout for the figures
-
-        main_hl.addLayout(self.control_vl)
-        main_hl.addLayout(self.figure_gl)
-
-        # create threading
-        # create a QThread and start the thread that handles
-        self.worker_thread = pg.QtCore.QThread(self)
-        self.worker_thread.start()
-
-        # timer
-        self.timer = QTimer()
-        self.timer.setInterval(refresh_interval)
-        self.timer.timeout.connect(self.ticks)
-
-        # worker
-        self.mmw_worker = MMW_worker.MmwWorker(mmw_interface)
-        self.mmw_worker.moveToThread(self.worker_thread)
+        # mmW worker
+        self.mmw_worker = mmw_worker
         # connect the mmWave frame signal to the function that processes the data
-        self.mmw_worker.signal_mmw_frame_ready.connect(self.process_mmw_data)
-
-        # add the figures ##################################
-        # add statistics
-        self.statistics_ui, self.statistics_vl = self.init_statistics()
-
-        # print("Packet ID:\t%d "%(frameNum))
-        # print("Version:\t%x "%(version))
-        # print("Data Len:\t\t%d", length)
-        # print("TLV:\t\t%d "%(numTLVs))
-        # print("Detect Obj:\t%d "%(numObj))
-        # print("Platform:\t%X "%(platform))
-
+        self.mmw_worker.signal_mmw_control_tab.connect(self.control_process_mmw_data)
+        # create the data buffers
+        self.buffer = {'mmw': {'timestamps': [], 'ra_profile': []}}
         # add range doppler
         self.doppler_display = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
 
-        # add range azi
-        self.azi_display = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(1, 2), label='Range Azimuth Profile')
+        self.will_recording_radar = False
+        self.will_recording_leap = False
+        self.will_recording_UWB = False
 
-        # add detected points plots
-        self.scatterXY = self.init_pts_view(pos=(0, 1), label='Detected Points XY', x_lim=(-0.5, 0.5),
-                                            y_lim=(0, 1.))
-        self.scatterZD = self.init_pts_view(pos=(0, 2), label='Detected Points ZD', x_lim=(-0.5, 0.5),
-                                            y_lim=(-1., 1.))
-        self.ra_view = self.init_curve_view(pos=(1, 0), label='Range Profile', x_lim=(-10, 260),
-                                            y_lim=(1500, 3800))
+        self.is_recording_radar = False
+        self.is_recording_leap = False
+        self.is_recording_UWB = False
 
-        # add the controls ##################################
+        # #################### create mmWave layout #################################
 
-        # add the interrupt button
-        self.start_stop_btn = QtWidgets.QPushButton(text='Start Sensor')
-        self.start_stop_btn.clicked.connect(self.start_stop_btn_action)
-        self.control_vl.addWidget(self.start_stop_btn)
+        # -------------------- First class --------------------
+        # main page
+        self.main_page = QtWidgets.QHBoxLayout(self)
+        self.setLayout(self.main_page)
 
-        # add the start record button
-        self.is_record = False
-        self.record_btn = QtWidgets.QPushButton(text='Start Recording')
-        self.record_btn.clicked.connect(self.record_btn_action)
-        self.control_vl.addWidget(self.record_btn)
+        # -------------------- Second class --------------------
+        #   1. control block
+        #   2. information block
 
-        # com port entries
-        # Create textbox
-        self.uport_textbox = QtWidgets.QLineEdit()
-        self.uport_textbox.setPlaceholderText('User Port')
-        self.control_vl.addWidget(self.uport_textbox)
+        self.control_block = init_container(parent=self.main_page)
+        # ***** information block *****
+        self.information_block, self.message = setup_information_block(parent=self.main_page)
 
-        # Create textbox
-        self.dport_textbox = QtWidgets.QLineEdit()
-        self.dport_textbox.setPlaceholderText('Data Port')
-        self.control_vl.addWidget(self.dport_textbox)
+        # -------------------- third class --------------------
+        #   1. Control block
+        #       1-1. RLU block
+        #       1-2. Record block
 
-        # add close connection button
-        self.connection_btn = QtWidgets.QPushButton(text='Connect')
-        self.connection_btn.clicked.connect(self.connection_btn_action)
-        self.control_vl.addWidget(self.connection_btn)
+        self.RLU_block = init_container(parent=self.control_block, vertical=False,
+                                        style="background-color:" + config.container_color + ";")
+        self.record_block = init_container(parent=self.control_block, label_position="rightbottom",
+                                           label="Record",
+                                           style="background-color:" + config.container_color + ";")
 
-        # Create textbox
-        self.config_textbox = QtWidgets.QLineEdit()
-        self.config_textbox.setPlaceholderText('Config File Path')
-        self.control_vl.addWidget(self.config_textbox)
+        # -------------------- fourth class -------------------
+        #       1-1. RLU block
+        #           1-1-1. Radar block
+        #           1-1-2. Leap block
+        #           1-1-3. UWB block
+        self.radar_block = init_container(parent=self.RLU_block, label="Radar", label_position="center",
+                                          style="background-color: " + config.subcontainer_color + ";")
+        self.leap_block = init_container(parent=self.RLU_block, label="LeapMotion", label_position="center",
+                                         style="background-color: " + config.subcontainer_color + ";")
+        self.UWB_block = init_container(parent=self.RLU_block, label="Ultra-Wide-Band",
+                                        label_position="center",
+                                        style="background-color: " + config.subcontainer_color + ";")
 
-        # add send config button
-        self.config_btn = QtWidgets.QPushButton(text='Send Config')
-        self.config_btn.clicked.connect(self.config_btn_action)
-        self.config_btn.clicked.connect(self.config_btn_action)
-        self.control_vl.addWidget(self.config_btn)
+        # -------------------- fourth class --------------------
+        #       1-2. Record block
+        #           1-2-1. Output path text box
+        #           1-2-2. Record button
+        # ***** data_path block *****
+        self.sub_record_block = init_container(parent=self.record_block,
+                                                style="background-color: " + config.subcontainer_color + ";")
 
-        # add label (running or stopped.)
-        self.dialogueLabel = QLabel()
-        self.dialogueLabel.setText("Running")
-        self.control_vl.addWidget(self.dialogueLabel)
+        self.data_path_block, self.data_path_textbox = setup_datapath_block(parent=self.sub_record_block)
+        # ***** record button *****
+        self.record_btn = setup_record_button(parent=self.sub_record_block, function=self.record_btn_action)
+        # -------------------- fifth class --------------------
+        #           1-1-1. Radar block
+        #               1-1-1-0. Radar frame
+        #               1-1-1-1. Connection block
+        #               1-1-1-2. Sensor block
+        #               1-1-1-3. Runtime block
+        #               1-1-1-4. Radar record check box
+        # self.radar_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
+        #                                       config.WINDOW_HEIGHT * 4 / 5)
+        self.radar_connection_block = init_container(parent=self.radar_block, label="Connection",
+                                                     style="background-color: " + config.container_color + ";")
+        self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor",
+                                                 style="background-color: " + config.container_color + ";")
+        self.radar_runtime_view = self.init_spec_view(parent=self.radar_block, label="Runtime",
+                                                      graph=self.doppler_display)
+        self.radar_record_checkbox = setup_check_box(parent=self.radar_block, function=self.radar_clickBox)
 
-        # create the data buffers
-        self.buffer = {'mmw': {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}}
-        self.data_path = data_path
+        # -------------------- fifth class --------------------
+        #           1-1-2. Leap block
+        #               1-1-2-1. Leap connection button
+        #               1-1-2-2. Leap runtime view
+        #               1-1-2-3. Leap record check box
+        self.leap_connection_btn = setup_sensor_btn(parent=self.leap_block, function=self.leap_connection_btn_action)
+        self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
+        self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
 
-        # prepare the sensor interface
-        # if mmw_interface:
-        #     print('App: using IWR6843AoP; starting sensor')
-        #     self.mmw_worker.start_mmw()
-        #     print('App: done!')
-        # else:
-        #     print('App: not using IWR6843AoP')
+        # -------------------- fifth class --------------------
+        #           1-1-3. UWB block
+        #               1-1-3-1. UWB connection button
+        #               1-1-3-2. UWB runtime view
+        self.UWB_connection_btn = setup_sensor_btn(parent=self.UWB_block, function=self.UWB_connection_btn_action)
+        self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
+        self.UWB_record_checkbox = setup_check_box(parent=self.UWB_block, function=self.UWB_clickBox)
 
-        self.timer.start()
+        # -------------------- sixth class --------------------
+
+        # ***** ports *****
+        self.data_port_block, self.dport_textbox = setup_data_port(parent=self.radar_connection_block)
+        self.user_port_block, self.uport_textbox = setup_user_port(parent=self.radar_connection_block)
+        # ***** connect button *****
+        self.radar_connection_btn = setup_radar_connection_button(parent=self.radar_connection_block,
+                                                                  function=self.radar_connection_btn_action)
+
+        # -------------------- sixth class --------------------
+        #               1-1-1-2. Sensor block
+        #                   1-1-1-2-1. Config path block
+        #                   1-1-1-2-2. senor buttons block
+        #                       1. Send_config Button
+        #                       2. Start/Stop sensor button
+        self.is_valid_config_path, self.config_textbox = setup_config_path_block(parent=self.radar_sensor_block)
+        self.sensor_buttons_block = init_container(self.radar_sensor_block, vertical=False)
+
+        # -------------------- seventh class --------------------
+        #                   1-1-1-2-2. sensor buttons block
+        #                       1-1-1-2-2-1. Send_config Button
+        #                       1-1-1-2-2-2. Start/Stop sensor button
+        self.config_connection_btn = setup_config_btn(parent=self.sensor_buttons_block,
+                                                      function=self.send_config_btn_action)
+        self.sensor_start_stop_btn = setup_sensor_btn(parent=self.sensor_buttons_block,
+                                                      function=self.start_stop_sensor_action)
+
         self.show()
 
-    def init_statistics(self):
-        statistics_vl = QtWidgets.QVBoxLayout()
-        statistics_ui = {'pid': QLabel(),
-                         'ver': QLabel(),
-                         'dlen': QLabel(),
-                         'numTLVs': QLabel(),
-                         'numObj': QLabel(),
-                         'pf': QLabel()}
-        [v.setText(k) for k, v in statistics_ui.items()]
-        [statistics_vl.addWidget(v) for v in statistics_ui.values()]
-        self.figure_gl.addLayout(statistics_vl, *(0, 0))  # why does not this show up
-
-        return statistics_ui, statistics_vl
-
-    def init_spec_view(self, pos, label):
-        vl, ql = init_view(label)
+    def init_spec_view(self, parent, label, graph=None):
+        if label:
+            ql = QLabel()
+            ql.setAlignment(QtCore.Qt.AlignTop)
+            ql.setAlignment(QtCore.Qt.AlignCenter)
+            ql.setText(label)
+            parent.addWidget(ql)
 
         spc_gv = QGraphicsView()
-        vl.addWidget(spc_gv)
+        parent.addWidget(spc_gv)
 
-        self.figure_gl.addLayout(vl, *pos)
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
-        scene.addItem(self.doppler_display)
+        spc_gv.setAlignment(QtCore.Qt.AlignCenter)
+        if graph:
+            scene.addItem(graph)
+        #spc_gv.setFixedSize(config.WINDOW_WIDTH/4, config.WINDOW_HEIGHT/4)
         return scene
 
-    def init_pts_view(self, pos, label, x_lim, y_lim):
-        vl, ql = init_view(label)
-
-        pts_plt = pg.PlotWidget()
-        vl.addWidget(pts_plt)
-
-        self.figure_gl.addLayout(vl, *pos)
-        pts_plt.setXRange(*x_lim)
-        pts_plt.setYRange(*y_lim)
-        scatter = pg.ScatterPlotItem(pen=None, symbol='o')
-        pts_plt.addItem(scatter)
-        return scatter
-
-    def init_curve_view(self, pos, label, x_lim, y_lim):
-        vl, ql = init_view(label)
-
-        curve_plt = pg.PlotWidget()
-        vl.addWidget(curve_plt)
-        self.figure_gl.addLayout(vl, *pos)
-
-        curve_plt.setXRange(*x_lim)
-        curve_plt.setYRange(*y_lim)
-        curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
-        return curve
-
-    def config_btn_action(self):
-        # TODO add check if file exits
-        self.mmw_worker.send_config(self.config_textbox.text())
-
-    def start_stop_btn_action(self):
-        if self.mmw_worker.is_mmw_running():
-            self.start_stop_btn.setText('Start Sensor')
-            self.mmw_worker.stop_mmw()
-            self.dialogueLabel.setText('Stopped.')
-        else:
-            self.start_stop_btn.setText('Stop Sensor')
-            self.mmw_worker.start_mmw()
-            self.dialogueLabel.setText('Running.')
-
     def record_btn_action(self):
-        if not self.is_record:
-            self.is_record = True
-            self.record_btn.setText("Stop Recording")
-        else:
-            self.is_record = False
-            self.record_btn.setText("Start Recording")
+        """ 1. Checks user input data path
+            2. use default path in no input
+            3. record if path valid
+        """
+        data_path = self.data_path_textbox.text()
+        if not data_path:
+            data_path = config.data_path
 
-            today = datetime.now()
-            pickle.dump(self.buffer, open(os.path.join(self.data_path,
-                                                       today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
-            print('data save to ' + self.data_path)
+        if self.will_recording_radar:
+            if os.path.exists(data_path):
+                self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
+                if not self.is_recording_radar:
+                    self.is_recording_radar = True
+                    self.mmw_worker.record_mmw()
+                    self.record_btn.setText("Stop Recording")
+                else:
+                    self.is_recording_radar = False
+                    self.mmw_worker.end_record_mmw()
+                    self.record_btn.setText("Start Recording")
 
-    def connection_btn_action(self):
+                    today = datetime.now()
+                    pickle.dump(self.buffer, open(os.path.join(config.data_path,
+                                                               today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
+                    print('Data save to ' + config.data_path)
+            else:
+                self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
+        elif not (self.will_recording_radar and self.will_recording_leap and self.will_recording_UWB):
+            self.message.setText("No sensor selected. Select at least one to record.")
+
+    def radar_connection_btn_action(self):
+        """ 1. Get user entered ports
+            2. use default ports in no input
+            3. Connect if ports valid
+        """
         if self.mmw_worker.is_connected():
             self.mmw_worker.disconnect_mmw()
-            self.connection_btn.setText('Connect')
+            self.dport_textbox.setPlaceholderText('default ' + config.d_port_default)
+            self.dport_textbox.setPlaceholderText('default ' + config.u_port_default)
+            self.message.setText(config.UDport_disconnected_message)
+            self.radar_connection_btn.setText('Connect')
         else:
+            # TODO: CHECK VALID PORTS
             self.mmw_worker.connect_mmw(uport_name=self.uport_textbox.text(), dport_name=self.dport_textbox.text())
-            self.connection_btn.setText('Disconnect')
+            self.message.setText(config.UDport_connected_message)
+            self.radar_connection_btn.setText('Disconnect')
 
-    def config_btn_action(self):
-        self.mmw_worker.send_config(config_path=self.config_textbox.text())
+    def leap_connection_btn_action(self):
+        self.message.setText("Leap Connection working...")
 
-    def process_mmw_data(self, data_dict):
+    def UWB_connection_btn_action(self):
+        self.message.setText("UWB Connection working...")
+
+    def send_config_btn_action(self):
+        """ 1. Get user entered config path
+            2. use default config path in no input
+            3. Send config if valid
+        """
+
+        config_path = self.config_textbox.text()
+        if not config_path:
+            config_path = config.config_file_path_default
+
+        if os.path.exists(config_path):
+            self.is_valid_config_path = True
+            self.message.setText(config.config_set_message + "\nCurrent path: " + config_path)
+            self.mmw_worker.send_config(config_path=config_path)
+        else:
+            self.is_valid_config_path = False
+            self.message.setText(config.config_invalid_message + "\nCurrent path: " + config_path)
+
+    def start_stop_sensor_action(self):
+        # TODO: CONNECT WHEN CONFIG PATH VALID
+        if self.mmw_worker.is_mmw_running():
+            self.sensor_start_stop_btn.setText('Start Sensor')
+            self.mmw_worker.stop_mmw()
+            self.message.setText(config.stop_sensor_message)
+        else:
+            self.sensor_start_stop_btn.setText('Stop Sensor')
+            self.mmw_worker.start_mmw()
+            self.message.setText(config.start_sensor_message)
+
+    def control_process_mmw_data(self, data_dict):
         """
         Process the emitted mmWave data
         This function is evoked when signaled by self.mmw_data_ready which is emitted by the mmw_worker thread.
@@ -248,41 +301,38 @@ class Control_tab(QWidget):
         # update range doppler spectrogram
         doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
         doppler_qpixmap = QPixmap(doppler_heatmap_qim)
-        doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        doppler_qpixmap = doppler_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.doppler_display.setPixmap(doppler_qpixmap)
-
-        # update range azimuth spectrogram
-        azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
-        azi_qpixmap = QPixmap(azi_heatmap_qim)
-        azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        self.azi_display.setPixmap(azi_qpixmap)
-
-        # update the 2d scatter plot for the detected points
-        self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
-        self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
-
-        # update range amplitude profile
-        ra = np.asarray(data_dict['range_amplitude'])
-        range_bin_space = np.asarray(range(len(ra)))
-        self.ra_view.setData(range_bin_space, ra)
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
-        if self.is_record:
+        if self.is_recording_radar:
             self.buffer['mmw']['timestamps'].append(time.time())
             self.buffer['mmw']['ra_profile'].append(data_dict['range_doppler'])
-            self.buffer['mmw']['rd_heatmap'].append(ra)
-            self.buffer['mmw']['detected_points'].append(data_dict['pts'])
 
-    @pg.QtCore.pyqtSlot()
-    def ticks(self):
-        """
-        ticks every 'refresh' milliseconds
-        """
-        self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
+    def radar_clickBox(self, state):
 
-    @pyqtSlot()
-    def on_click(self):
-        print("\n")
-        for currentQTableWidgetItem in self.tableWidget.selectedItems():
-            print(currentQTableWidgetItem.row(), currentQTableWidgetItem.column(), currentQTableWidgetItem.text())
+        if state == QtCore.Qt.Checked:
+            self.will_recording_radar = True
+            self.message.setText(config.radar_box_checked)
+        else:
+            self.will_recording_radar = False
+            self.message.setText(config.radar_box_unchecked)
+
+    def leap_clickBox(self, state):
+
+        if state == QtCore.Qt.Checked:
+            self.will_recording_leap = True
+            self.message.setText(config.leap_box_checked)
+        else:
+            self.will_recording_leap = False
+            self.message.setText(config.leap_box_unchecked)
+
+    def UWB_clickBox(self, state):
+
+        if state == QtCore.Qt.Checked:
+            self.will_recording_UWB = True
+            self.message.setText(config.UWB_box_checked)
+        else:
+            self.will_recording_UWB = False
+            self.message.setText(config.UWB_box_unchecked)
