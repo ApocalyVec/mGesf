@@ -88,7 +88,6 @@ class Control_tab(QWidget):
         self.control_block = init_container(parent=self.main_page)
         # ***** information block *****
         self.information_block, self.message = setup_information_block(parent=self.main_page)
-        # self.information_block_frame = draw_boarder(self.main_page, config.WINDOW_WIDTH / 5, config.WINDOW_HEIGHT)
 
         # -------------------- third class --------------------
         #   1. Control block
@@ -96,9 +95,10 @@ class Control_tab(QWidget):
         #       1-2. Record block
 
         self.RLU_block = init_container(parent=self.control_block, vertical=False,
-                                        style="background-color:" + config.color_light + ";")
+                                        style="background-color:" + config.container_color + ";")
         self.record_block = init_container(parent=self.control_block, label_position="rightbottom",
-                                           label="Record")
+                                           label="Record",
+                                           style="background-color:" + config.container_color + ";")
 
         # -------------------- fourth class -------------------
         #       1-1. RLU block
@@ -106,21 +106,24 @@ class Control_tab(QWidget):
         #           1-1-2. Leap block
         #           1-1-3. UWB block
         self.radar_block = init_container(parent=self.RLU_block, label="Radar", label_position="center",
-                                          style="background-color:" + config.color_white + ";")
+                                          style="background-color: " + config.subcontainer_color + ";")
         self.leap_block = init_container(parent=self.RLU_block, label="LeapMotion", label_position="center",
-                                         style="background-color:" + config.color_white + ";")
+                                         style="background-color: " + config.subcontainer_color + ";")
         self.UWB_block = init_container(parent=self.RLU_block, label="Ultra-Wide-Band",
-                                        label_position="center", style="background-color:" + config.color_white + ";")
+                                        label_position="center",
+                                        style="background-color: " + config.subcontainer_color + ";")
 
         # -------------------- fourth class --------------------
         #       1-2. Record block
         #           1-2-1. Output path text box
         #           1-2-2. Record button
         # ***** data_path block *****
-        self.data_path_block, self.data_path_textbox = setup_datapath_block(parent=self.record_block)
-        # ***** record button *****
-        self.record_btn = setup_record_button(parent=self.record_block, function=self.record_btn_action)
+        self.sub_record_block = init_container(parent=self.record_block,
+                                                style="background-color: " + config.subcontainer_color + ";")
 
+        self.data_path_block, self.data_path_textbox = setup_datapath_block(parent=self.sub_record_block)
+        # ***** record button *****
+        self.record_btn = setup_record_button(parent=self.sub_record_block, function=self.record_btn_action)
         # -------------------- fifth class --------------------
         #           1-1-1. Radar block
         #               1-1-1-0. Radar frame
@@ -130,14 +133,13 @@ class Control_tab(QWidget):
         #               1-1-1-4. Radar record check box
         # self.radar_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
         #                                       config.WINDOW_HEIGHT * 4 / 5)
-        self.radar_connection_block = init_container(parent=self.radar_block, label="Connection")
-        self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor")
-        self.radar_runtime_block = init_container(parent=self.radar_block, label="Runtime")
+        self.radar_connection_block = init_container(parent=self.radar_block, label="Connection",
+                                                     style="background-color: " + config.container_color + ";")
+        self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor",
+                                                 style="background-color: " + config.container_color + ";")
+        self.radar_runtime_view = self.init_spec_view(parent=self.radar_block, label="Runtime",
+                                                      graph=self.doppler_display)
         self.radar_record_checkbox = setup_check_box(parent=self.radar_block, function=self.radar_clickBox)
-        # -------------------- fifth class --------------------
-        #               1-1-1-3. Runtime view
-        # self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Runtime",
-        #                                               graph=self.doppler_display)
 
         # -------------------- fifth class --------------------
         #           1-1-2. Leap block
@@ -148,7 +150,6 @@ class Control_tab(QWidget):
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
         self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
 
-        # self.leap_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5), config.WINDOW_HEIGHT * 4 / 5)
         # -------------------- fifth class --------------------
         #           1-1-3. UWB block
         #               1-1-3-1. UWB connection button
@@ -156,8 +157,6 @@ class Control_tab(QWidget):
         self.UWB_connection_btn = setup_sensor_btn(parent=self.UWB_block, function=self.UWB_connection_btn_action)
         self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
         self.UWB_record_checkbox = setup_check_box(parent=self.UWB_block, function=self.UWB_clickBox)
-
-        # self.UWB_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5), config.WINDOW_HEIGHT * 4 / 5)
 
         # -------------------- sixth class --------------------
 
@@ -201,8 +200,10 @@ class Control_tab(QWidget):
 
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
+        spc_gv.setAlignment(QtCore.Qt.AlignCenter)
         if graph:
             scene.addItem(graph)
+        #spc_gv.setFixedSize(config.WINDOW_WIDTH/4, config.WINDOW_HEIGHT/4)
         return scene
 
     def record_btn_action(self):
@@ -232,6 +233,8 @@ class Control_tab(QWidget):
                     print('Data save to ' + config.data_path)
             else:
                 self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
+        elif not (self.will_recording_radar and self.will_recording_leap and self.will_recording_UWB):
+            self.message.setText("No sensor selected. Select at least one to record.")
 
     def radar_connection_btn_action(self):
         """ 1. Get user entered ports
