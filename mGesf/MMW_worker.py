@@ -65,7 +65,6 @@ class MmwWorker(QObject):
             self._mmw_interface.start_sensor()
         else:
             print('Start Simulating mmW data')
-            pass
             # raise exceptions.InterfaceNotExistError
         self._is_running = True
 
@@ -86,7 +85,8 @@ class MmwWorker(QObject):
         if self._mmw_interface:
             return self._mmw_interface.is_connected()
         else:
-            raise exceptions.InterfaceNotExistError
+            print('No Radar Interface Connected, ignored.')
+            # raise exceptions.InterfaceNotExistError
 
     def connect_mmw(self, uport_name, dport_name):
         """
@@ -95,7 +95,8 @@ class MmwWorker(QObject):
         if self._mmw_interface:
             self._mmw_interface.connect(uport_name, dport_name)
         else:
-            raise exceptions.InterfaceNotExistError
+            print('No Radar Interface Connected, ignored.')
+            # raise exceptions.InterfaceNotExistError
 
     def disconnect_mmw(self):
         """
@@ -105,7 +106,8 @@ class MmwWorker(QObject):
         if self._mmw_interface:
             self._mmw_interface.close_connection()
         else:
-            raise exceptions.InterfaceNotExistError
+            print('No Radar Interface Connected, ignored.')
+            # raise exceptions.InterfaceNotExistError
 
     def send_config(self, config_path):
         """
@@ -115,7 +117,8 @@ class MmwWorker(QObject):
             self._mmw_interface.send_config(config_path)
             self.start_mmw()
         else:
-            raise exceptions.InterfaceNotExistError
+            print('No Radar Interface Connected, ignored.')
+            # raise exceptions.InterfaceNotExistError
 
     def record_mmw(self):
         self._is_recording = True
