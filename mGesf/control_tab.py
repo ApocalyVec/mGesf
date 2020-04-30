@@ -9,7 +9,7 @@ from PyQt5 import QtCore
 
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget, \
-    QGraphicsScene, QGraphicsView
+    QGraphicsScene, QGraphicsView, QFrame
 import pyqtgraph as pg
 
 from utils.img_utils import array_to_colormap_qim
@@ -127,7 +127,49 @@ def setup_sensor_btn(parent, function):
     return sensor_start_stop_btn
 
 
+def draw_frame(parent, width, height):
+    frame = QFrame()
+    frame.setFixedSize(int(width), int(height))
+    frame.setFrameShape(QFrame.StyledPanel)
+    frame.setLineWidth(2)
+    frame.setContentsMargins(5, 5, 5, 5)
+    parent.addWidget(frame)
+
+    return frame
+
+
 class Control_tab(QWidget):
+    """
+        main page
+            1. control block
+                1-1. RLU block
+                    1-1-1. Radar block
+                        1-1-1-0. Radar frame # todo add frames
+                        1-1-1-1. Connection block
+                            1-1-1-1-1. Data port block
+                            1-1-1-1-2. User port block
+                            1-1-1-1-3. Connect button
+                        1-1-1-2. Sensor block
+                            1-1-1-2-1. Config path block
+                            1-1-1-2-2. senor buttons block
+                                1-1-1-2-2-1. Send_config Button
+                                1-1-1-2-2-2. Start/Stop sensor button
+                        1-1-1-3. Runtime view
+                        1-1-1-4. Radar record checkmark
+                    1-1-2. Leap block
+                        1-1-2-1. Leap connect button block
+                        1-1-2-2. Leap runtime view
+                        1-1-2-3. Leap record checkmark
+                    1-1-3. UWB block
+                        1-1-2-1. UWB connect Button
+                        1-1-2-2. UWB runtime view
+                        1-1-2-3. UWB record checkmark
+                1-2. Record block
+                    1-2-1. Output path text box + record button
+
+            2. information block
+                2-1. message
+    """
 
     def __init__(self, mmw_worker: MMW_worker, refresh_interval, *args, **kwargs):
         super().__init__()
@@ -144,7 +186,7 @@ class Control_tab(QWidget):
         # #################### create mmWave layout #################################
 
         # -------------------- First class --------------------
-        # The whole window
+        # main page
         self.main_page = QtWidgets.QHBoxLayout(self)
         self.setLayout(self.main_page)
 
@@ -155,6 +197,7 @@ class Control_tab(QWidget):
         self.control_block = init_container(parent=self.main_page)
         # ***** information block *****
         self.information_block, self.message = setup_information_block(parent=self.main_page)
+        # self.information_block_frame = draw_frame(self.main_page, config.WINDOW_WIDTH / 5, config.WINDOW_HEIGHT)
 
         # -------------------- third class --------------------
         #   1. Control block
@@ -188,18 +231,49 @@ class Control_tab(QWidget):
 
         # -------------------- fifth class --------------------
         #           1-1-1. Radar block
+        #               1-1-1-0. Radar frame
         #               1-1-1-1. Connection block
         #               1-1-1-2. Sensor block
         #               1-1-1-3. Runtime block
+        #               1-1-1-4. Radar runtime checkmark
+        # self.radar_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
+        #                                    config.WINDOW_HEIGHT * 4 / 5)
         self.radar_connection_block = init_container(parent=self.radar_block, label="Connection")
         self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor")
-        self.radar_runtime_block = self.init_spec_view(parent=self.radar_block, label="Runtime")
+        self.radar_runtime_block = init_container(parent=self.radar_block, label="Runtime")
+        
+        # -------------------- fifth class --------------------
+        #               1-1-1-3. Runtime view
+        self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Runtime",
+                                                      graph=self.doppler_display)
+
+        # -------------------- fifth class --------------------
+        #           1-1-2. Leap block
+        #               1-1-2-1. Leap connection button
+        #               1-1-2-2. Leap runtime view
+        self.leap_connection_btn = setup_sensor_btn(parent=self.leap_block, function=self.leap_connection_btn_action)
+        self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime",
+                                                     graph=self.leap_doppler_display)
+        # self.leap_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3*(4/5), config.WINDOW_HEIGHT * 4 / 5)
+        # -------------------- fifth class --------------------
+        #           1-1-3. UWB block
+        #               1-1-3-1. UWB connection button
+        #               1-1-3-2. UWB runtime view
+        self.uwb_connection_btn = setup_sensor_btn(parent=self.uwb_block, function=self.UWB_connection_btn_action)
+        self.uwb_runtime_view = self.init_spec_view(parent=self.uwb_block, label="Runtime",
+                                                    graph=self.uwb_doppler_display)
+        # self.uwb_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3*(4/5), config.WINDOW_HEIGHT * 4 / 5)
+
+        # -------------------- fifth class --------------------
+        #           1-1-3. UWB block
+        #               1-1-3-1. UWB connection button
+        #               1-1-3-2. UWB runtime view
 
         # -------------------- sixth class --------------------
-        #               1-1-1-1. Connection block
-        #                   1-1-1-1-1. Data port block
-        #                   1-1-1-1-2. User port block
-        #                   1-1-1-1-3. Connect button
+        #           1-2-1. Checkmarks
+        #           1-2-1-1. Radar check
+        #           1-2-1-2. Leap check
+        #           1-2-1-3. UWB check
         # ***** ports *****
         self.data_port_block, self.dport_textbox = setup_data_port(parent=self.radar_connection_block)
         self.user_port_block, self.uport_textbox = setup_user_port(parent=self.radar_connection_block)
@@ -216,12 +290,8 @@ class Control_tab(QWidget):
         self.is_valid_config_path, self.config_textbox = setup_config_path_block(parent=self.radar_sensor_block)
         self.sensor_buttons_block = init_container(self.radar_sensor_block, vertical=False)
 
-        # -------------------- sixth class --------------------
-        #               1-1-1-3. Runtime block
-        self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Runtime")
-
         # -------------------- seventh class --------------------
-        #                   1-1-1-2-2. senor buttons block
+        #                   1-1-1-2-2. sensor buttons block
         #                       1-1-1-2-2-1. Send_config Button
         #                       1-1-1-2-2-2. Start/Stop sensor button
         self.config_connection_btn = setup_config_btn(parent=self.sensor_buttons_block,
@@ -229,16 +299,23 @@ class Control_tab(QWidget):
         self.sensor_start_stop_btn = setup_sensor_btn(parent=self.sensor_buttons_block,
                                                       function=self.start_stop_sensor_action)
 
-
-
         self.show()
 
-    def init_spec_view(self, parent, label):
+    def init_spec_view(self, parent, label, graph):
+        if label:
+            ql = QLabel()
+            ql.setAlignment(QtCore.Qt.AlignTop)
+            ql.setAlignment(QtCore.Qt.AlignCenter)
+            ql.setText(label)
+
         spc_gv = QGraphicsView()
+
+        parent.addWidget(ql)
         parent.addWidget(spc_gv)
+
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
-        scene.addItem(self.doppler_display)
+        scene.addItem(graph)
         return scene
 
     def record_btn_action(self):
@@ -284,6 +361,12 @@ class Control_tab(QWidget):
             self.mmw_worker.connect_mmw(uport_name=self.uport_textbox.text(), dport_name=self.dport_textbox.text())
             self.message.setText(config.UDport_connected_message)
             self.radar_connection_btn.setText('Disconnect')
+
+    def leap_connection_btn_action(self):
+        self.message.setText("Leap Connection working...")
+
+    def UWB_connection_btn_action(self):
+        self.message.setText("UWB Connection working...")
 
     def send_config_btn_action(self):
         """ 1. Get user entered config path

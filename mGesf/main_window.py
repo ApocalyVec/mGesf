@@ -32,7 +32,7 @@ import mGesf.config as config
 class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
-        self.resize(config.WINDOW_LENGTH, config.WINDOW_HEIGHT)
+        self.resize(config.WINDOW_WIDTH, config.WINDOW_HEIGHT)
         pg.setConfigOption('background', 'w')
 
         # create the tabs

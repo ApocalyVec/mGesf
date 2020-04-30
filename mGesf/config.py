@@ -1,5 +1,5 @@
 WINDOW_HEIGHT = 720
-WINDOW_LENGTH = 1280
+WINDOW_WIDTH = 1280
 
 tab1_label = "CONTROL"
 tab2_label = "RADAR"
