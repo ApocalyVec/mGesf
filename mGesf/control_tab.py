@@ -301,7 +301,7 @@ class Control_tab(QWidget):
         # update range doppler spectrogram
         doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
         doppler_qpixmap = QPixmap(doppler_heatmap_qim)
-        doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        doppler_qpixmap = doppler_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.doppler_display.setPixmap(doppler_qpixmap)
 
         # save the data is record is enabled
