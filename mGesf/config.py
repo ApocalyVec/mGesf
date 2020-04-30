@@ -18,6 +18,12 @@ config_invalid_message = "Invalid config path"
 datapath_set_message = "data path set"
 datapath_invalid_message = "Invalid data path"
 
-
 config_file_path_default = 'profiles/aop/30fps_azi_rd.cfg'
 data_path = 'data/'
+
+radar_box_checked = "Checked: Radar recording box"
+radar_box_unchecked = "Unchecked: Radar recording box"
+leap_box_checked = "Checked: Leap recording box"
+leap_box_unchecked = "Checked: Leap recording box"
+UWB_box_checked = "Checked: UWB recording box"
+UWB_box_unchecked = "Checked: UWB recording box"

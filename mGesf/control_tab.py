@@ -4,138 +4,20 @@ import time
 from datetime import datetime
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import QTimer, pyqtSlot
 from PyQt5 import QtCore
 
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget, \
-    QGraphicsScene, QGraphicsView, QFrame
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QLabel, QGraphicsScene, QGraphicsView
 import pyqtgraph as pg
 
+from mGesf.drawer import init_container, setup_radar_connection_button, setup_user_port, setup_data_port, \
+    setup_datapath_block, setup_information_block, setup_record_button, setup_config_path_block, setup_config_btn, \
+    setup_sensor_btn
 from utils.img_utils import array_to_colormap_qim
 
-import numpy as np
 import mGesf.MMW_worker as MMW_worker
-from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
-
-import mGesf.exceptions as exceptions
+from mGesf.drawer import *
 import mGesf.config as config
-
-
-def init_view(label, position="center", vertical=True):
-    if vertical:
-        vl = QtWidgets.QVBoxLayout()
-    else:
-        vl = QtWidgets.QHBoxLayout()
-    if label:
-        ql = QLabel()
-        if position == "center":
-            ql.setAlignment(QtCore.Qt.AlignTop)
-            ql.setAlignment(QtCore.Qt.AlignCenter)
-        elif position == "rightbottom":
-            ql.setAlignment(QtCore.Qt.AlignRight)
-            ql.setAlignment(QtCore.Qt.AlignBottom)
-
-        ql.setText(label)
-        vl.addWidget(ql)
-    return vl
-
-
-def init_container(parent, label=None, label_position=None, vertical=True):
-    vl = init_view(label, label_position, vertical)
-    parent.addLayout(vl)
-    return vl
-
-
-def setup_radar_connection_button(parent, function):
-    btn = QtWidgets.QPushButton(text='Connect')
-    btn.clicked.connect(function)
-    parent.addWidget(btn)
-    return btn
-
-
-def setup_user_port(parent):
-    user_port_block = init_container(parent=parent, label='User Port (Enhanced)',
-                                     vertical=False)
-    uport_textbox = QtWidgets.QLineEdit()
-    uport_textbox.setContentsMargins(5, 0, 0, 0)
-    uport_textbox.setPlaceholderText("default: " + config.u_port_default)
-    user_port_block.addWidget(uport_textbox)
-    return user_port_block, uport_textbox
-
-
-def setup_data_port(parent):
-    data_port_block = init_container(parent=parent, label='Data Port (Standard)',
-                                     vertical=False)
-    dport_textbox = QtWidgets.QLineEdit()
-    dport_textbox.setContentsMargins(10, 0, 0, 0)
-    dport_textbox.setPlaceholderText("default: " + config.d_port_default)
-    data_port_block.addWidget(dport_textbox)
-    return data_port_block, dport_textbox
-
-
-def setup_datapath_block(parent):
-    data_path_block = init_container(parent=parent, label='Output path: ', vertical=False)
-    data_path_textbox = QtWidgets.QLineEdit()
-    data_path_textbox.setContentsMargins(10, 0, 0, 0)
-    data_path_textbox.setPlaceholderText("default: " + config.data_path)
-    data_path_block.addWidget(data_path_textbox)
-
-    return data_path_block, data_path_textbox
-
-
-def setup_information_block(parent):
-    information_block = init_container(parent=parent, label="Information")
-    message = QLabel()
-    message.setText("Hi there")
-    information_block.addWidget(message)
-
-    return information_block, message
-
-
-def setup_record_button(parent, function):
-    is_recording = False
-    record_btn = QtWidgets.QPushButton(text='Start Recording')
-    record_btn.clicked.connect(function)
-    parent.addWidget(record_btn)
-
-    return record_btn, is_recording
-
-
-def setup_config_path_block(parent):
-    is_valid_config_path = False
-    config_textbox = QtWidgets.QLineEdit()
-    config_textbox.setPlaceholderText('default ' + config.config_file_path_default)
-    parent.addWidget(config_textbox)
-
-    return is_valid_config_path, config_textbox
-
-
-def setup_config_btn(parent, function):
-    config_connection_btn = QtWidgets.QPushButton(text='Send Config')
-    config_connection_btn.clicked.connect(function)
-    parent.addWidget(config_connection_btn)
-
-    return config_connection_btn
-
-
-def setup_sensor_btn(parent, function):
-    sensor_start_stop_btn = QtWidgets.QPushButton(text='Start Sensor')
-    sensor_start_stop_btn.clicked.connect(function)
-    parent.addWidget(sensor_start_stop_btn)
-
-    return sensor_start_stop_btn
-
-
-def draw_frame(parent, width, height):
-    frame = QFrame()
-    frame.setFixedSize(int(width), int(height))
-    frame.setFrameShape(QFrame.StyledPanel)
-    frame.setLineWidth(2)
-    frame.setContentsMargins(5, 5, 5, 5)
-    parent.addWidget(frame)
-
-    return frame
 
 
 class Control_tab(QWidget):
@@ -155,17 +37,18 @@ class Control_tab(QWidget):
                                 1-1-1-2-2-1. Send_config Button
                                 1-1-1-2-2-2. Start/Stop sensor button
                         1-1-1-3. Runtime view
-                        1-1-1-4. Radar record checkmark
+                        1-1-1-4. Radar record check box
                     1-1-2. Leap block
                         1-1-2-1. Leap connect button block
                         1-1-2-2. Leap runtime view
-                        1-1-2-3. Leap record checkmark
+                        1-1-2-3. Leap record check box
                     1-1-3. UWB block
                         1-1-2-1. UWB connect Button
                         1-1-2-2. UWB runtime view
-                        1-1-2-3. UWB record checkmark
+                        1-1-2-3. UWB record check box
                 1-2. Record block
-                    1-2-1. Output path text box + record button
+                    1-2-1. Output path text box
+                    1-2-2. Record button
 
             2. information block
                 2-1. message
@@ -182,6 +65,14 @@ class Control_tab(QWidget):
         self.buffer = {'mmw': {'timestamps': [], 'ra_profile': []}}
         # add range doppler
         self.doppler_display = QGraphicsPixmapItem()
+
+        self.will_recording_radar = False
+        self.will_recording_leap = False
+        self.will_recording_UWB = False
+
+        self.is_recording_radar = False
+        self.is_recording_leap = False
+        self.is_recording_UWB = False
 
         # #################### create mmWave layout #################################
 
@@ -215,19 +106,17 @@ class Control_tab(QWidget):
         #           1-1-3. UWB block
         self.radar_block = init_container(parent=self.RLU_block, label="Radar", label_position="center")
         self.leap_block = init_container(parent=self.RLU_block, label="LeapMotion", label_position="center")
-        self.uwb_block = init_container(parent=self.RLU_block, label="Ultra-Wide-Band",
+        self.UWB_block = init_container(parent=self.RLU_block, label="Ultra-Wide-Band",
                                         label_position="center")
 
         # -------------------- fourth class --------------------
         #       1-2. Record block
-        #           1-2-1. Checkmarks
-        #           1-2-2. Output path text box & record button
-        checkmark_block = init_container(parent=self.record_block)
+        #           1-2-1. Output path text box
+        #           1-2-2. Record button
         # ***** data_path block *****
         self.data_path_block, self.data_path_textbox = setup_datapath_block(parent=self.record_block)
         # ***** record button *****
-        self.record_btn, self.is_recording = setup_record_button(parent=self.record_block,
-                                                                 function=self.record_btn_action)
+        self.record_btn = setup_record_button(parent=self.record_block, function=self.record_btn_action)
 
         # -------------------- fifth class --------------------
         #           1-1-1. Radar block
@@ -235,13 +124,13 @@ class Control_tab(QWidget):
         #               1-1-1-1. Connection block
         #               1-1-1-2. Sensor block
         #               1-1-1-3. Runtime block
-        #               1-1-1-4. Radar runtime checkmark
+        #               1-1-1-4. Radar record check box
         # self.radar_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
         #                                    config.WINDOW_HEIGHT * 4 / 5)
         self.radar_connection_block = init_container(parent=self.radar_block, label="Connection")
         self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor")
         self.radar_runtime_block = init_container(parent=self.radar_block, label="Runtime")
-        
+        # self.radar_record_checkbox = setup_check_box(parent=self.radar_block, function=self.radar_clickBox)
         # -------------------- fifth class --------------------
         #               1-1-1-3. Runtime view
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Runtime",
@@ -251,29 +140,24 @@ class Control_tab(QWidget):
         #           1-1-2. Leap block
         #               1-1-2-1. Leap connection button
         #               1-1-2-2. Leap runtime view
+        #               1-1-2-3. Leap record check box
         self.leap_connection_btn = setup_sensor_btn(parent=self.leap_block, function=self.leap_connection_btn_action)
-        self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime",
-                                                     graph=self.leap_doppler_display)
+        self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
+        #self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
+
         # self.leap_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3*(4/5), config.WINDOW_HEIGHT * 4 / 5)
         # -------------------- fifth class --------------------
         #           1-1-3. UWB block
         #               1-1-3-1. UWB connection button
         #               1-1-3-2. UWB runtime view
-        self.uwb_connection_btn = setup_sensor_btn(parent=self.uwb_block, function=self.UWB_connection_btn_action)
-        self.uwb_runtime_view = self.init_spec_view(parent=self.uwb_block, label="Runtime",
-                                                    graph=self.uwb_doppler_display)
-        # self.uwb_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3*(4/5), config.WINDOW_HEIGHT * 4 / 5)
+        self.UWB_connection_btn = setup_sensor_btn(parent=self.UWB_block, function=self.UWB_connection_btn_action)
+        self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
+        self.UWB_record_checkbox = setup_check_box(parent=self.UWB_box_container, function=self.UWB_clickBox)
 
-        # -------------------- fifth class --------------------
-        #           1-1-3. UWB block
-        #               1-1-3-1. UWB connection button
-        #               1-1-3-2. UWB runtime view
+        # self.UWB_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3*(4/5), config.WINDOW_HEIGHT * 4 / 5)
 
         # -------------------- sixth class --------------------
-        #           1-2-1. Checkmarks
-        #           1-2-1-1. Radar check
-        #           1-2-1-2. Leap check
-        #           1-2-1-3. UWB check
+
         # ***** ports *****
         self.data_port_block, self.dport_textbox = setup_data_port(parent=self.radar_connection_block)
         self.user_port_block, self.uport_textbox = setup_user_port(parent=self.radar_connection_block)
@@ -301,21 +185,21 @@ class Control_tab(QWidget):
 
         self.show()
 
-    def init_spec_view(self, parent, label, graph):
+    def init_spec_view(self, parent, label, graph=None):
         if label:
             ql = QLabel()
             ql.setAlignment(QtCore.Qt.AlignTop)
             ql.setAlignment(QtCore.Qt.AlignCenter)
             ql.setText(label)
+            parent.addWidget(ql)
 
         spc_gv = QGraphicsView()
-
-        parent.addWidget(ql)
         parent.addWidget(spc_gv)
 
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
-        scene.addItem(graph)
+        if graph:
+            scene.addItem(graph)
         return scene
 
     def record_btn_action(self):
@@ -327,23 +211,24 @@ class Control_tab(QWidget):
         if not data_path:
             data_path = config.data_path
 
-        if os.path.exists(data_path):
-            self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
-            if not self.is_recording:
-                self.is_recording = True
-                self.mmw_worker.record_mmw()
-                self.record_btn.setText("Stop Recording")
-            else:
-                self.is_recording = False
-                self.mmw_worker.end_record_mmw()
-                self.record_btn.setText("Start Recording")
+        if self.will_recording_radar:
+            if os.path.exists(data_path):
+                self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
+                if not self.is_recording_radar:
+                    self.is_recording_radar = True
+                    self.mmw_worker.record_mmw()
+                    self.record_btn.setText("Stop Recording")
+                else:
+                    self.is_recording_radar = False
+                    self.mmw_worker.end_record_mmw()
+                    self.record_btn.setText("Start Recording")
 
-                today = datetime.now()
-                pickle.dump(self.buffer, open(os.path.join(config.data_path,
-                                                           today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
-                print('Data save to ' + config.data_path)
-        else:
-            self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
+                    today = datetime.now()
+                    pickle.dump(self.buffer, open(os.path.join(config.data_path,
+                                                               today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
+                    print('Data save to ' + config.data_path)
+            else:
+                self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
 
     def radar_connection_btn_action(self):
         """ 1. Get user entered ports
@@ -415,6 +300,33 @@ class Control_tab(QWidget):
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
-        if self.is_recording:
+        if self.is_recording_radar:
             self.buffer['mmw']['timestamps'].append(time.time())
             self.buffer['mmw']['ra_profile'].append(data_dict['range_doppler'])
+
+    def radar_clickBox(self, state):
+
+        if state == QtCore.Qt.Checked:
+            self.will_recording_radar = True
+            self.message.setText(config.radar_box_checked)
+        else:
+            self.will_recording_radar = False
+            self.message.setText(config.radar_box_unchecked)
+
+    def leap_clickBox(self, state):
+
+        if state == QtCore.Qt.Checked:
+            self.will_recording_leap = True
+            self.message.setText(config.leap_box_checked)
+        else:
+            self.will_recording_leap = False
+            self.message.setText(config.leap_box_unchecked)
+
+    def UWB_clickBox(self, state):
+
+        if state == QtCore.Qt.Checked:
+            self.will_recording_UWB = True
+            self.message.setText(config.UWB_box_checked)
+        else:
+            self.will_recording_UWB = False
+            self.message.setText(config.UWB_box_unchecked)
