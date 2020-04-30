@@ -27,3 +27,10 @@ leap_box_checked = "Checked: Leap recording box"
 leap_box_unchecked = "Checked: Leap recording box"
 UWB_box_checked = "Checked: UWB recording box"
 UWB_box_unchecked = "Checked: UWB recording box"
+
+
+color_primary = '#263238'
+color_light = '#4f5b62'
+color_dark = '#000a12'
+color_white = '#f0f0f0'
+

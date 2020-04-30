@@ -3,7 +3,7 @@ import pickle
 import time
 from datetime import datetime
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from PyQt5 import QtCore
 
 from PyQt5.QtGui import QPixmap
@@ -88,14 +88,15 @@ class Control_tab(QWidget):
         self.control_block = init_container(parent=self.main_page)
         # ***** information block *****
         self.information_block, self.message = setup_information_block(parent=self.main_page)
-        # self.information_block_frame = draw_frame(self.main_page, config.WINDOW_WIDTH / 5, config.WINDOW_HEIGHT)
+        # self.information_block_frame = draw_boarder(self.main_page, config.WINDOW_WIDTH / 5, config.WINDOW_HEIGHT)
 
         # -------------------- third class --------------------
         #   1. Control block
         #       1-1. RLU block
         #       1-2. Record block
 
-        self.RLU_block = init_container(parent=self.control_block, vertical=False)
+        self.RLU_block = init_container(parent=self.control_block, vertical=False,
+                                        style="background-color:" + config.color_light + ";")
         self.record_block = init_container(parent=self.control_block, label_position="rightbottom",
                                            label="Record")
 
@@ -104,10 +105,12 @@ class Control_tab(QWidget):
         #           1-1-1. Radar block
         #           1-1-2. Leap block
         #           1-1-3. UWB block
-        self.radar_block = init_container(parent=self.RLU_block, label="Radar", label_position="center")
-        self.leap_block = init_container(parent=self.RLU_block, label="LeapMotion", label_position="center")
+        self.radar_block = init_container(parent=self.RLU_block, label="Radar", label_position="center",
+                                          style="background-color:" + config.color_white + ";")
+        self.leap_block = init_container(parent=self.RLU_block, label="LeapMotion", label_position="center",
+                                         style="background-color:" + config.color_white + ";")
         self.UWB_block = init_container(parent=self.RLU_block, label="Ultra-Wide-Band",
-                                        label_position="center")
+                                        label_position="center", style="background-color:" + config.color_white + ";")
 
         # -------------------- fourth class --------------------
         #       1-2. Record block
@@ -125,16 +128,16 @@ class Control_tab(QWidget):
         #               1-1-1-2. Sensor block
         #               1-1-1-3. Runtime block
         #               1-1-1-4. Radar record check box
-        # self.radar_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
-        #                                    config.WINDOW_HEIGHT * 4 / 5)
+        # self.radar_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
+        #                                       config.WINDOW_HEIGHT * 4 / 5)
         self.radar_connection_block = init_container(parent=self.radar_block, label="Connection")
         self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor")
         self.radar_runtime_block = init_container(parent=self.radar_block, label="Runtime")
-        # self.radar_record_checkbox = setup_check_box(parent=self.radar_block, function=self.radar_clickBox)
+        self.radar_record_checkbox = setup_check_box(parent=self.radar_block, function=self.radar_clickBox)
         # -------------------- fifth class --------------------
         #               1-1-1-3. Runtime view
-        self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Runtime",
-                                                      graph=self.doppler_display)
+        # self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Runtime",
+        #                                               graph=self.doppler_display)
 
         # -------------------- fifth class --------------------
         #           1-1-2. Leap block
@@ -143,18 +146,18 @@ class Control_tab(QWidget):
         #               1-1-2-3. Leap record check box
         self.leap_connection_btn = setup_sensor_btn(parent=self.leap_block, function=self.leap_connection_btn_action)
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
-        #self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
+        self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
 
-        # self.leap_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3*(4/5), config.WINDOW_HEIGHT * 4 / 5)
+        # self.leap_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5), config.WINDOW_HEIGHT * 4 / 5)
         # -------------------- fifth class --------------------
         #           1-1-3. UWB block
         #               1-1-3-1. UWB connection button
         #               1-1-3-2. UWB runtime view
         self.UWB_connection_btn = setup_sensor_btn(parent=self.UWB_block, function=self.UWB_connection_btn_action)
         self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
-        self.UWB_record_checkbox = setup_check_box(parent=self.UWB_box_container, function=self.UWB_clickBox)
+        self.UWB_record_checkbox = setup_check_box(parent=self.UWB_block, function=self.UWB_clickBox)
 
-        # self.UWB_block_frame = draw_frame(self.RLU_block, config.WINDOW_WIDTH / 3*(4/5), config.WINDOW_HEIGHT * 4 / 5)
+        # self.UWB_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5), config.WINDOW_HEIGHT * 4 / 5)
 
         # -------------------- sixth class --------------------
 

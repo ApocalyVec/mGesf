@@ -1,14 +1,14 @@
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame
 
 from mGesf import config as config
 
 
-def init_view(label, position="center", vertical=True):
+def init_view(label, container, position="center", vertical=True):
     if vertical:
-        vl = QtWidgets.QVBoxLayout()
+        vl = QtGui.QVBoxLayout(container)
     else:
-        vl = QtWidgets.QHBoxLayout()
+        vl = QtGui.QHBoxLayout(container)
     if label:
         ql = QLabel()
         if position == "center":
@@ -20,12 +20,20 @@ def init_view(label, position="center", vertical=True):
 
         ql.setText(label)
         vl.addWidget(ql)
+
     return vl
 
 
-def init_container(parent, label=None, label_position=None, vertical=True):
-    vl = init_view(label, label_position, vertical)
-    parent.addLayout(vl)
+def init_container(parent, label=None, label_position=None, vertical=True, style=None):
+    container = QtGui.QWidget()
+    if style:  # set the style of the container, which takes over the invisible layout
+        container.setStyleSheet(style)
+
+    parent.addWidget(container)
+    vl = init_view(label, container, label_position, vertical)
+
+    # widget_contrainer.addLayout(vl)
+
     return vl
 
 
@@ -109,13 +117,14 @@ def setup_sensor_btn(parent, function):
 
 
 def setup_check_box(parent, function):
-    box = QCheckBox("checkbox", parent)
+    box = QCheckBox("checkbox")
+    parent.addWidget(box)
     box.stateChanged.connect(function)
 
     return box
 
 
-def draw_frame(parent, width, height):
+def draw_boarder(parent, width, height):
     frame = QFrame()
     frame.setFixedSize(int(width), int(height))
     frame.setFrameShape(QFrame.StyledPanel)
