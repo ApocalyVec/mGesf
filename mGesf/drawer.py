@@ -54,7 +54,7 @@ def setup_user_port(parent):
                                      vertical=False)
     uport_textbox = QtWidgets.QLineEdit()
     uport_textbox.setContentsMargins(5, 0, 0, 0)
-    uport_textbox.setPlaceholderText("default: " + config.u_port_default)
+    uport_textbox.setText(config.u_port_default)
     user_port_block.addWidget(uport_textbox)
     uport_textbox.setStyleSheet("background-color:white;")
 
@@ -66,7 +66,7 @@ def setup_data_port(parent):
                                      vertical=False)
     dport_textbox = QtWidgets.QLineEdit()
     dport_textbox.setContentsMargins(10, 0, 0, 0)
-    dport_textbox.setPlaceholderText("default: " + config.d_port_default)
+    dport_textbox.setText(config.d_port_default)
     data_port_block.addWidget(dport_textbox)
     dport_textbox.setStyleSheet("background-color:white;")
 
@@ -107,7 +107,7 @@ def setup_record_button(parent, function):
 def setup_config_path_block(parent):
     is_valid_config_path = False
     config_textbox = QtWidgets.QLineEdit()
-    config_textbox.setPlaceholderText('default ' + config.config_file_path_default)
+    config_textbox.setText(config.config_file_path_default)
     parent.addWidget(config_textbox)
     config_textbox.setStyleSheet("background-color:white;")
     return is_valid_config_path, config_textbox

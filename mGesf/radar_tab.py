@@ -66,7 +66,7 @@ class Radar_tab(QWidget):
         self.mmw_worker.signal_mmw_radar_tab.connect(self.radar_process_mmw_data)
 
         # create the data buffers
-        self.buffer = {'mmw': {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}}
+        self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
 
         # prepare the sensor interface
         # if mmw_interface:
@@ -167,6 +167,6 @@ class Radar_tab(QWidget):
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
         if self.mmw_worker.is_recording:
             self.buffer['mmw']['timestamps'].append(time.time())
-            self.buffer['mmw']['ra_profile'].append(data_dict['range_doppler'])
-            self.buffer['mmw']['rd_heatmap'].append(ra)
+            self.buffer['mmw']['range_doppler'].append(data_dict['range_doppler'])
+            self.buffer['mmw']['range_azi'].append(data_dict['range_azi'])
             self.buffer['mmw']['detected_points'].append(data_dict['pts'])

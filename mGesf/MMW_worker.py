@@ -40,16 +40,16 @@ class MmwWorker(QObject):
                 if range_amplitude is None:  # replace with simulated data if not enabled
                     range_amplitude = sim_imp()
                 if rd_heatmap is None:
-                    rd_heatmap = sim_heatmap((8, 16))
+                    rd_heatmap = sim_heatmap((8, 8))
                 if azi_heatmap is None:
-                    azi_heatmap = sim_heatmap((8, 24))
+                    azi_heatmap = sim_heatmap((8, 8))
                 self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
 
             else:  # this is in simulation mode
                 pts_array = sim_detected_points()
                 range_amplitude = sim_imp()
-                rd_heatmap = sim_heatmap((8, 16))
-                azi_heatmap = sim_heatmap((8, 24))
+                rd_heatmap = sim_heatmap((8, 8))
+                azi_heatmap = sim_heatmap((8, 8))
 
             # notify the mmw data for the radar tab
             self.signal_mmw_radar_tab.emit({'range_doppler': rd_heatmap,
