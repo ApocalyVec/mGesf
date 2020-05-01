@@ -39,3 +39,6 @@ container_color = color_bright
 
 button_style = "background-color: " + button_color + "; border-style: outset; border-width: 2px; border-radius: 10px; " \
                                                      "border-color: gray; font: 12px; min-width: 10em; padding: 6px; "
+
+rd_shape = (8, 16)
+ra_shape = (8, 64)

@@ -4,6 +4,7 @@ import numpy as np
 from PyQt5.QtCore import pyqtSignal, QObject
 import pyqtgraph as pg
 
+from mGesf import config
 from utils.simulation import sim_heatmap, sim_detected_points, sim_imp
 
 import mGesf.exceptions as exceptions
@@ -40,16 +41,16 @@ class MmwWorker(QObject):
                 if range_amplitude is None:  # replace with simulated data if not enabled
                     range_amplitude = sim_imp()
                 if rd_heatmap is None:
-                    rd_heatmap = sim_heatmap((8, 8))
+                    rd_heatmap = sim_heatmap(config.rd_shape)
                 if azi_heatmap is None:
-                    azi_heatmap = sim_heatmap((8, 8))
+                    azi_heatmap = sim_heatmap(config.ra_shape)
                 self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
 
             else:  # this is in simulation mode
                 pts_array = sim_detected_points()
                 range_amplitude = sim_imp()
-                rd_heatmap = sim_heatmap((8, 8))
-                azi_heatmap = sim_heatmap((8, 8))
+                rd_heatmap = sim_heatmap(config.rd_shape)
+                azi_heatmap = sim_heatmap(config.ra_shape)
 
             # notify the mmw data for the radar tab
             data_dict = {'range_doppler': rd_heatmap,

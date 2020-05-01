@@ -2,6 +2,7 @@ import os
 import pickle
 import time
 from datetime import datetime
+import numpy as np
 
 from PyQt5 import QtWidgets, QtGui
 from PyQt5 import QtCore
@@ -307,10 +308,19 @@ class Control_tab(QWidget):
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
         if self.mmw_worker.is_recording:
-            self.buffer['mmw']['timestamps'].append(time.time())
-            self.buffer['mmw']['range_doppler'].append(data_dict['range_doppler'])
-            self.buffer['mmw']['range_azi'].append(data_dict['range_azi'])
-            self.buffer['mmw']['detected_points'].append(data_dict['pts'])
+            ts = time.time()
+            try:
+                assert data_dict['range_doppler'].shape == config.rd_shape
+                assert data_dict['range_azi'].shape == config.ra_shape
+            except AssertionError:
+                print('Invalid data shape at ' + str(ts) + ', discarding frame.')
+                return
+            finally:
+                self.buffer['mmw']['timestamps'].append(ts)
+                # expand spectrogram dimension for channel_first
+                self.buffer['mmw']['range_doppler'].append(np.expand_dims(data_dict['range_doppler'], axis=0))
+                self.buffer['mmw']['range_azi'].append(np.expand_dims(data_dict['range_azi'], axis=0))
+                self.buffer['mmw']['detected_points'].append(data_dict['pts'])
 
     def radar_clickBox(self, state):
 
