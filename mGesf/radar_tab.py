@@ -51,11 +51,9 @@ class Radar_tab(QWidget):
         self.ra_view = self.init_curve_view(pos=(1, 0), label='Range Profile', x_lim=(-10, 260),
                                             y_lim=(1500, 3800))
         # add range doppler
-        self.doppler_display = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
+        self.doppler_display = self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
         # add range azi
-        self.azi_display = QGraphicsPixmapItem()
-        self.init_spec_view(pos=(1, 2), label='Range Azimuth Profile')
+        self.azi_display = self.init_spec_view(pos=(1, 2), label='Range Azimuth Profile')
 
         # ====================== Add info to info_vl =======================================
         self.info_label = QLabel()
@@ -96,6 +94,7 @@ class Radar_tab(QWidget):
         return vl
 
     def init_spec_view(self, pos, label):
+        display = QGraphicsPixmapItem()
         vl = init_view(label)
 
         spc_gv = QGraphicsView()
@@ -104,8 +103,8 @@ class Radar_tab(QWidget):
         self.figure_gl.addLayout(vl, *pos)
         scene = QGraphicsScene(self)
         spc_gv.setScene(scene)
-        scene.addItem(self.doppler_display)
-        return scene
+        scene.addItem(display)
+        return display
 
     def init_pts_view(self, pos, label, x_lim, y_lim):
         vl= init_view(label)
