@@ -62,7 +62,10 @@ class MmwWorker(QObject):
 
     def start_mmw(self):
         if self._mmw_interface:  # if the sensor interface is established
-            self._mmw_interface.start_sensor()
+            try:
+                self._mmw_interface.start_sensor()
+            except exceptions.PortsNotSetUpError:
+                print('Radar COM ports are not set up, connect to the sensor prior to start the sensor')
         else:
             print('Start Simulating mmW data')
             # raise exceptions.InterfaceNotExistError

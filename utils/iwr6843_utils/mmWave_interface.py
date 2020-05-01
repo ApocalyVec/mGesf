@@ -2,7 +2,7 @@ import time
 
 import serial
 
-from mGesf.exceptions import BufferOverFlowError, DataPortNotOpenError, GeneralMmWError
+from mGesf.exceptions import BufferOverFlowError, DataPortNotOpenError, GeneralMmWError, PortsNotSetUpError
 from utils.iwr6843_utils import serial_iwr6843
 from utils.iwr6843_utils.parse_tlv import decode_iwr_tlv
 
@@ -37,7 +37,11 @@ class MmWaveSensorInterface:
         the data_buffer will overflow and result in an error. The maximum buffer size is 3200 bytes.
         """
         print('mmw Interface: Starting sensor ...')
-        serial_iwr6843.sensor_start(self.uport)
+        try:
+            serial_iwr6843.sensor_start(self.uport)
+        except AttributeError as e:
+            if type(e) == AttributeError:
+                raise PortsNotSetUpError
         time.sleep(1)
         print('mmw Interface: started!')
 
@@ -48,18 +52,29 @@ class MmWaveSensorInterface:
                 detected_points, range_profile, rd_heatmap, azi_heatmap = self.parse_stream()
             except (BufferOverFlowError, DataPortNotOpenError, GeneralMmWError) as e:
                 print(str(e))
-                print('An error occured, closing sensor connection')
+                if type(e) == DataPortNotOpenError:
+                    print('Sensor is disconnected during reading of data, killing.')
+                    raise KeyboardInterrupt
+                if type(e) == BufferOverFlowError:
+                    print('This is not supposed to happen in the current implementation, please report the issue')
+                elif type(e) == GeneralMmWError:
+                    print('An unknown error occurred, closing sensor connection, , please report the issue')
+
+                print('closing sensor connection because of an error')
                 self.stop_sensor()
                 time.sleep(1)
                 print('Sensor stopped, raising keyboardInterrupt, printing TLV buffer for debug')
                 print(self.data_buffer)
 
-                raise KeyboardInterrupt
         return detected_points, range_profile, rd_heatmap, azi_heatmap
 
     def stop_sensor(self):
         print('mmw Interface: Stopping sensor ...')
-        serial_iwr6843.sensor_stop(self.uport)
+        try:
+            serial_iwr6843.sensor_stop(self.uport)
+        except AttributeError as e:
+            if type(e) == AttributeError:
+                raise PortsNotSetUpError
         print('mmw Interface: stopped!')
 
     def connect(self, uport_ame, dport_name):

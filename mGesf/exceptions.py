@@ -11,6 +11,14 @@ class DataPortNotOpenError(MGesFError):
     pass
 
 
+class PortsNotSetUpError(MGesFError):
+    def __str__(self):
+        return 'CLI Ports are not set up'
+
+    """Raised when to cli port is not set up while trying to talk to the sensor"""
+    pass
+
+
 class GeneralMmWError(MGesFError):
     def __str__(self):
         return 'general mmWave error occurred, please debug the tlv buffer and decoder'
@@ -38,6 +46,7 @@ class InterfaceNotExistError(MGesFError):
 
 class StoragePathInvalidError(MGesFError):
     """Raised when the path given is invalid"""
+
     def __str__(self):
         return 'Invalid path...'
 
