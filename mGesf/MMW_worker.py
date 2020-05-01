@@ -27,7 +27,6 @@ class MmwWorker(QObject):
 
         self._mmw_interface = mmw_interface
         self._is_running = False
-        self._is_recording = False
 
     @pg.QtCore.pyqtSlot()
     def mmw_process_on_tick(self):
@@ -125,11 +124,7 @@ class MmwWorker(QObject):
             print('No Radar Interface Connected, ignored.')
             # raise exceptions.InterfaceNotExistError
 
-    def record_mmw(self):
-        self._is_recording = True
 
-    def end_record_mmw(self):
-        self._is_recording = False
 
-    def is_recording(self):
-        return self._is_recording
+
+

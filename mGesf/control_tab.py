@@ -221,11 +221,9 @@ class Control_tab(QWidget):
                 self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
                 if not self.is_recording_radar:
                     self.is_recording_radar = True
-                    self.mmw_worker.record_mmw()
                     self.record_btn.setText("Stop Recording")
                 else:
                     self.is_recording_radar = False
-                    self.mmw_worker.end_record_mmw()
                     self.record_btn.setText("Start Recording")
 
                     today = datetime.now()
@@ -307,7 +305,7 @@ class Control_tab(QWidget):
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
-        if self.mmw_worker.is_recording:
+        if self.is_recording_radar:
             ts = time.time()
             try:
                 assert data_dict['range_doppler'].shape == config.rd_shape
