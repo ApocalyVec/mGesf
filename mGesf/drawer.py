@@ -77,7 +77,7 @@ def setup_datapath_block(parent):
     data_path_block = init_container(parent=parent, label='Output path: ', vertical=False)
     data_path_textbox = QtWidgets.QLineEdit()
     data_path_textbox.setContentsMargins(10, 0, 0, 0)
-    data_path_textbox.setPlaceholderText("default: " + config.data_path)
+    data_path_textbox.setText(config.data_path)
     data_path_block.addWidget(data_path_textbox)
     data_path_textbox.setStyleSheet("background-color:white;")
 

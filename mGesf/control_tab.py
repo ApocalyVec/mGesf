@@ -62,7 +62,7 @@ class Control_tab(QWidget):
         # connect the mmWave frame signal to the function that processes the data
         self.mmw_worker.signal_mmw_control_tab.connect(self.control_process_mmw_data)
         # create the data buffers
-        self.buffer = {'mmw': {'timestamps': [], 'ra_profile': []}}
+        self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
         # add range doppler
         self.doppler_display = QGraphicsPixmapItem()
 
@@ -306,9 +306,11 @@ class Control_tab(QWidget):
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
-        if self.is_recording_radar:
+        if self.mmw_worker.is_recording:
             self.buffer['mmw']['timestamps'].append(time.time())
-            self.buffer['mmw']['ra_profile'].append(data_dict['range_doppler'])
+            self.buffer['mmw']['range_doppler'].append(data_dict['range_doppler'])
+            self.buffer['mmw']['range_azi'].append(data_dict['range_azi'])
+            self.buffer['mmw']['detected_points'].append(data_dict['pts'])
 
     def radar_clickBox(self, state):
 

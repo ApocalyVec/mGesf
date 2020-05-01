@@ -52,13 +52,14 @@ class MmwWorker(QObject):
                 azi_heatmap = sim_heatmap((8, 8))
 
             # notify the mmw data for the radar tab
-            self.signal_mmw_radar_tab.emit({'range_doppler': rd_heatmap,
-                                            'range_azi': azi_heatmap,
-                                            'pts': pts_array,
-                                            'range_amplitude': range_amplitude})
+            data_dict = {'range_doppler': rd_heatmap,
+                         'range_azi': azi_heatmap,
+                         'pts': pts_array,
+                         'range_amplitude': range_amplitude}
+            self.signal_mmw_radar_tab.emit(data_dict)
 
             # notify the mmw data for the control tab
-            self.signal_mmw_control_tab.emit({'range_doppler': rd_heatmap})
+            self.signal_mmw_control_tab.emit(data_dict)
 
     def start_mmw(self):
         if self._mmw_interface:  # if the sensor interface is established
