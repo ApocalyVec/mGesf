@@ -1,14 +1,13 @@
-from keras import Sequential
+from keras import Sequential, Model
 
 import datetime
 import pickle
 
 from keras import Sequential, optimizers
 from keras.callbacks import EarlyStopping, ModelCheckpoint
-from keras.layers import Conv3D, MaxPooling3D, Flatten, TimeDistributed, LSTM, Dropout, Dense, BatchNormalization, \
-    LeakyReLU, Conv2D
-from keras.layers import Conv3D, MaxPooling3D, Flatten, TimeDistributed, LSTM, Dropout, Dense, BatchNormalization, \
-    LeakyReLU
+from keras.layers import Conv3D, MaxPooling2D, Flatten, TimeDistributed, LSTM, Dropout, Dense, BatchNormalization, \
+    LeakyReLU, Conv2D, Reshape, concatenate
+
 from keras.regularizers import l2
 from keras.engine.saving import load_model
 
@@ -18,7 +17,7 @@ import os
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from Learn.data_in import idp_preprocess
-from mGesf.config import rd_shape
+from mGesf.config import rd_shape, ra_shape
 
 idp_data_dir = '../data/idp'
 
@@ -26,31 +25,80 @@ interval_duration = 4.0  # how long does one writing take
 classes = ['A', 'B', 'C', 'D', 'E']
 num_repeat = 10
 
-labeled_sample_dict, label_list, points_per_sample = idp_preprocess(idp_data_dir, interval_duration, classes,
-                                                                    num_repeat)
-
+# labeled_sample_dict, label_list, points_per_sample = idp_preprocess(idp_data_dir, interval_duration, classes,
+#                                                                     num_repeat)
+points_per_sample = 121
 '''
 This implementation accepts two branches of input: range doppler and range azimuth. Each are put
 through feature extractors on their branch respectively.
 The flattened output from the two branch meets and are concatenated together then put in LSTM, 
 the network is concluded by FC layers. 
 '''
-a = (points_per_sample,) + rd_shape
-# model.add(keras.layers.TimeDistributed(keras.layers.Conv2D(16, kernel_size=(3,3), data_format="channels_last"),input_shape=(129,80,564,3)))
 
-classifier = Sequential()
-classifier.add(
+# creates the Time Distributed CNN for range Doppler heatmap ##########################
+mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
+mmw_rdpl_TDCNN = Sequential()
+mmw_rdpl_TDCNN.add(
     TimeDistributed(
-        Conv2D(filters=16, kernel_size=(3, 3), data_format='channels_first',
+        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
                # kernel_regularizer=l2(0.0005),
                kernel_initializer='random_uniform'),
-        input_shape=(points_per_sample,) + rd_shape))
-# classifier.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-classifier.add(TimeDistributed(BatchNormalization()))
+        input_shape=mmw_rdpl_input))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_rdpl_TDCNN.add(TimeDistributed(
+    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
 
-# pre_trained_path = 'D:/code/DoubleMU/models/palmPad_model.h5'
-# epochs = 50000
-# is_use_pre_train = False
+# creates the Time Distributed CNN for range Azimuth heatmap ###########################
+mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
+mmw_razi_TDCNN = Sequential()
+mmw_razi_TDCNN.add(
+    TimeDistributed(
+        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
+               # kernel_regularizer=l2(0.0005),
+               kernel_initializer='random_uniform'),
+        input_shape=mmw_razi_input))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_razi_TDCNN.add(TimeDistributed(
+    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
+
+merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
+regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
+regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(regressive_tensor)
+regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+
+regressive_tensor = Dense(units=128)(regressive_tensor)
+regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
+
+model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
+
+# model.add(LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform'))
+# model.add(Dropout(rate=0.2))
+#
+# mmw_rdpl_TDCNN.add(LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform'))
+# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
+#
+# mmw_rdpl_TDCNN.add(Dense(units=128))
+# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
+#
+# mmw_rdpl_TDCNN.add(Dense(len(classes), activation='softmax', kernel_initializer='random_uniform'))
+#
+# adam = optimizers.adam(lr=1e-5, decay=1e-7)
+# # sgd = optimizers.SGD(lr=5e-6, momentum=0.9, decay=1e-6, nesterov=True)
+#
+# mmw_rdpl_TDCNN.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
+# print('Using Pre-trained Model: ' + pre_trained_path)
 
 # classifying_labels = [1, 2, 3, 4, 5]
 # num_classes = len(classifying_labels)
@@ -85,45 +133,45 @@ classifier.add(TimeDistributed(BatchNormalization()))
 
 # Build the RNN ###############################################
 # if not is_use_pre_train:
-# classifier = Sequential()
-# classifier.add(
+# mmw_rdpl_TDCNN = Sequential()
+# mmw_rdpl_TDCNN.add(
 #     TimeDistributed(
 #         Conv3D(filters=16, kernel_size=(3, 3, 3), data_format='channels_first', input_shape=(1, 25, 25, 25),
 #                kernel_regularizer=l2(0.0005),
 #                kernel_initializer='random_uniform'),
 #         input_shape=(timesteps, 1, 25, 25, 25)))
-# # classifier.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# classifier.add(TimeDistributed(BatchNormalization()))
+# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
 #
-# classifier.add(TimeDistributed(
+# mmw_rdpl_TDCNN.add(TimeDistributed(
 #     Conv3D(filters=16, kernel_size=(3, 3, 3), data_format='channels_first')))
-# # classifier.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# classifier.add(TimeDistributed(BatchNormalization()))
+# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
 #
-# classifier.add(TimeDistributed(MaxPooling3D(pool_size=(2, 2, 2))))
+# mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling3D(pool_size=(2, 2, 2))))
 #
-# classifier.add(TimeDistributed(Flatten()))
+# mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))
 #
-# classifier.add(LSTM(units=64, return_sequences=True, kernel_initializer='random_uniform'))
-# classifier.add(Dropout(rate=0.2))
+# mmw_rdpl_TDCNN.add(LSTM(units=64, return_sequences=True, kernel_initializer='random_uniform'))
+# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
 #
-# classifier.add(LSTM(units=64, return_sequences=True, kernel_initializer='random_uniform'))
-# classifier.add(Dropout(rate=0.2))
+# mmw_rdpl_TDCNN.add(LSTM(units=64, return_sequences=True, kernel_initializer='random_uniform'))
+# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
 #
-# classifier.add(LSTM(units=64, return_sequences=False, kernel_initializer='random_uniform'))
-# classifier.add(Dropout(rate=0.2))
+# mmw_rdpl_TDCNN.add(LSTM(units=64, return_sequences=False, kernel_initializer='random_uniform'))
+# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
 #
-# classifier.add(Dense(units=128))
-# classifier.add(Dropout(rate=0.2))
+# mmw_rdpl_TDCNN.add(Dense(units=128))
+# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
 #
-# classifier.add(Dense(num_classes, activation='softmax', kernel_initializer='random_uniform'))
+# mmw_rdpl_TDCNN.add(Dense(num_classes, activation='softmax', kernel_initializer='random_uniform'))
 #
 # adam = optimizers.adam(lr=1e-5, decay=1e-7)
 # # sgd = optimizers.SGD(lr=5e-6, momentum=0.9, decay=1e-6, nesterov=True)
 #
-# classifier.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
+# mmw_rdpl_TDCNN.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
 # # print('Using Pre-trained Model: ' + pre_trained_path)
-# # classifier = load_model(pre_trained_path)
+# # mmw_rdpl_TDCNN = load_model(pre_trained_path)
 #
 # # add early stopping
 # es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
@@ -132,7 +180,7 @@ classifier.add(TimeDistributed(BatchNormalization()))
 #                                                                                                          '_') + '.h5',
 #     monitor='val_acc', mode='max', verbose=1, save_best_only=True)
 #
-# history = classifier.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=epochs,
+# history = mmw_rdpl_TDCNN.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=epochs,
 #                          batch_size=8, callbacks=[es, mc], verbose=1, )
 #
 # import matplotlib.pyplot as plt
