@@ -16,17 +16,19 @@ import os
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-from Learn.data_in import idp_preprocess
+from Learn.data_in import idp_preprocess, resolve_points_per_sample
 from mGesf.config import rd_shape, ra_shape
 
-idp_data_dir = '../data/idp'
+idp_data_dir = ['../data/idp-ABCDE-rpt10', '../data/idp-ABCDE-rpt2']
+num_repeats = [10, 2]
 
 interval_duration = 4.0  # how long does one writing take
 classes = ['A', 'B', 'C', 'D', 'E']
-num_repeat = 10
+period = 33  # ms
 
-labeled_sample_dict, label_list, points_per_sample = \
-    idp_preprocess(idp_data_dir, interval_duration, classes, num_repeat)
+ls_dicts = \
+    [idp_preprocess(dr, interval_duration, classes, nr, period=period) for dr, nr in zip(idp_data_dir, num_repeats)]
+points_per_sample = int(resolve_points_per_sample(period, interval_duration))
 '''
 This implementation accepts two branches of input: range doppler and range azimuth. Each are put
 through feature extractors on their branch respectively.
@@ -91,11 +93,12 @@ Y = []
 X_mmw_rD = []
 X_mmw_rA = []
 
-for key, value in labeled_sample_dict.items():
-    X_mmw_rD += [d for d in value['mmw']['range_doppler']]
-    X_mmw_rA += [a for a in value['mmw']['range_azi']]
-    Y += [key for i in range(value['mmw']['range_doppler'].shape[0])]
-    pass
+for lsd in ls_dicts:
+    for key, value in lsd.items():
+        X_mmw_rD += [d for d in value['mmw']['range_doppler']]
+        X_mmw_rA += [a for a in value['mmw']['range_azi']]
+        Y += [key for i in range(value['mmw']['range_doppler'].shape[0])]
+        pass
 
 X_mmw_rD = np.asarray(X_mmw_rD)
 X_mmw_rA = np.asarray(X_mmw_rA)
@@ -110,7 +113,7 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 # add early stopping
-es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=100)
 mc = ModelCheckpoint(
     '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
                                                                           '_') + '.h5',
@@ -118,7 +121,7 @@ mc = ModelCheckpoint(
 
 history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
                     validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
-                    epochs=5000,
+                    epochs=1000,
                     batch_size=32, callbacks=[es, mc], verbose=1, )
 #
 # model.fit(

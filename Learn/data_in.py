@@ -18,6 +18,10 @@ def resolve_sample_feature(ls_dict, lb, f_dict, s_slice, sensor):
                                 np.expand_dims(f_array[s_slice], axis=0)])
 
 
+def resolve_points_per_sample(period, input_interval):
+    return (1 / period) * input_interval * 1000
+
+
 def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
     """
     In this implementation, the tail of the data that does not make up an input_interval is automatically ignored.
@@ -38,7 +42,7 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
     sample_frame_durations = []
 
     sample_num_expected = len(classes) * num_repeat  # expected number of samples per data block
-    points_per_sample = (1 / period) * input_interval * 1000
+    points_per_sample = resolve_points_per_sample(period, input_interval)
 
     mmw_features = ['range_doppler', 'range_azi']
 
@@ -65,8 +69,11 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
                 if ts - input_interval * sample_index >= 0.:  # end of a sample
                     if ts_index - ts_index_last != int(points_per_sample):
                         print('Too many samples: ' + str(ts_index - ts_index_last))
-                        print('Using Slice: ' + str(slice(ts_index_last, ts_index_last + int(points_per_sample))) + ' instead of ' + str(slice(ts_index_last, ts_index)))
-                    sample_slice = slice(ts_index_last, ts_index if ts_index - ts_index_last == int(points_per_sample) else ts_index_last + int(points_per_sample))
+                        print('Using Slice: ' + str(
+                            slice(ts_index_last, ts_index_last + int(points_per_sample))) + ' instead of ' + str(
+                            slice(ts_index_last, ts_index)))
+                    sample_slice = slice(ts_index_last, ts_index if ts_index - ts_index_last == int(
+                        points_per_sample) else ts_index_last + int(points_per_sample))
                     sample_ts = ts_array[sample_slice]
                     lb = label_list[sample_index - 1]
                     # lb = classes[(sample_index - 1) % len(classes)]  # sample_index decrement for class index offset
@@ -80,12 +87,13 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
                     ts_index_last = ts_index
                     break  # break to the next sample
         if len(sample_ts_list) != sample_num_expected:
-            warnings.warn('Sample number mismatch, got ' + str(len(sample_ts_list)) + ', expected: ' + str(sample_num_expected))
+            warnings.warn(
+                'Sample number mismatch, got ' + str(len(sample_ts_list)) + ', expected: ' + str(sample_num_expected))
 
-    return labeled_sample_dict, label_list, int(points_per_sample)
+    return labeled_sample_dict
 
-        # retrieve the timestamp making sure the data is synced
-        # print('Processing ' + str(i + 1) + ' of ' + str(len(radar_points)) + ', interval = ' + str(interval_index))
+    # retrieve the timestamp making sure the data is synced
+    # print('Processing ' + str(i + 1) + ' of ' + str(len(radar_points)) + ', interval = ' + str(interval_index))
 
     #     if is_plot:
     #         figure_intervaled_path = os.path.join(figure_path, str(interval_index))
