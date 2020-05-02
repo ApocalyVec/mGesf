@@ -1,5 +1,8 @@
 import pickle
 import time
+import warnings
+from collections import OrderedDict
+
 import numpy as np
 import os
 
@@ -31,12 +34,8 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
 
     # self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
 
-    interval_index = 0
-
-    labeled_sample_dict = dict([(label, {'mmw': {}}) for label in classes])
-    label_list = []
+    labeled_sample_dict = OrderedDict([(label, {'mmw': {}}) for label in classes])
     sample_frame_durations = []
-    sample_ts_list = []
 
     sample_num_expected = len(classes) * num_repeat  # expected number of samples per data block
     points_per_sample = (1 / period) * input_interval * 1000
@@ -44,7 +43,11 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
     mmw_features = ['range_doppler', 'range_azi']
 
     for d in mgesf_data_list:
+        sample_ts_list = []
+
         mmw_list = d['mmw']
+        label_list = [[x for i in range(num_repeat)] for x in classes]
+        label_list = [item for sublist in label_list for item in sublist]  # flattten
 
         ts_array = np.array(mmw_list['timestamps'])
 
@@ -59,13 +62,14 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
         ts_index_last = 0
         for sample_index in range(1, sample_num_expected + 1):
             for ts_index, ts in enumerate(ts_array):
-                if ts_index - points_per_sample * sample_index >= 0. and ts_index != 0:  # end of a sample
+                if ts - input_interval * sample_index >= 0.:  # end of a sample
                     if ts_index - ts_index_last != int(points_per_sample):
                         print('Too many samples: ' + str(ts_index - ts_index_last))
                         print('Using Slice: ' + str(slice(ts_index_last, ts_index_last + int(points_per_sample))) + ' instead of ' + str(slice(ts_index_last, ts_index)))
                     sample_slice = slice(ts_index_last, ts_index if ts_index - ts_index_last == int(points_per_sample) else ts_index_last + int(points_per_sample))
                     sample_ts = ts_array[sample_slice]
-                    lb = classes[(sample_index - 1) % len(classes)]  # sample_index decrement for class index offset
+                    lb = label_list[sample_index - 1]
+                    # lb = classes[(sample_index - 1) % len(classes)]  # sample_index decrement for class index offset
                     sample_frame_durations.append(max(sample_ts) - min(sample_ts))
                     sample_ts_list.append(sample_ts)
 
@@ -75,6 +79,8 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
                     label_list.append(lb)  # labels
                     ts_index_last = ts_index
                     break  # break to the next sample
+        if len(sample_ts_list) != sample_num_expected:
+            warnings.warn('Sample number mismatch, got ' + str(len(sample_ts_list)) + ', expected: ' + str(sample_num_expected))
 
     return labeled_sample_dict, label_list, int(points_per_sample)
 

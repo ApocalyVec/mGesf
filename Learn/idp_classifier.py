@@ -25,9 +25,8 @@ interval_duration = 4.0  # how long does one writing take
 classes = ['A', 'B', 'C', 'D', 'E']
 num_repeat = 10
 
-# labeled_sample_dict, label_list, points_per_sample = idp_preprocess(idp_data_dir, interval_duration, classes,
-#                                                                     num_repeat)
-points_per_sample = 121
+labeled_sample_dict, label_list, points_per_sample = \
+    idp_preprocess(idp_data_dir, interval_duration, classes, num_repeat)
 '''
 This implementation accepts two branches of input: range doppler and range azimuth. Each are put
 through feature extractors on their branch respectively.
@@ -74,7 +73,7 @@ mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers me
 merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
 regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
 regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(regressive_tensor)
+regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
 regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
 
 regressive_tensor = Dense(units=128)(regressive_tensor)
@@ -82,7 +81,51 @@ regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
 regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
 
 model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
+adam = optimizers.adam(lr=1e-3, decay=1e-7)
 
+model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
+
+# create input features
+# create labels array
+Y = []
+X_mmw_rD = []
+X_mmw_rA = []
+
+for key, value in labeled_sample_dict.items():
+    X_mmw_rD += [d for d in value['mmw']['range_doppler']]
+    X_mmw_rA += [a for a in value['mmw']['range_azi']]
+    Y += [key for i in range(value['mmw']['range_doppler'].shape[0])]
+    pass
+
+X_mmw_rD = np.asarray(X_mmw_rD)
+X_mmw_rA = np.asarray(X_mmw_rA)
+Y = np.asarray(Y)
+
+encoder = OneHotEncoder(categories='auto')
+Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
+
+X_mmw_rD_train, X_mmw_rD_test, Y_train, Y_test = train_test_split(X_mmw_rD, Y, test_size=0.20, random_state=3,
+                                                                  shuffle=True)
+X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, test_size=0.20, random_state=3,
+                                                                  shuffle=True)
+
+# add early stopping
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
+mc = ModelCheckpoint(
+    '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
+                                                                          '_') + '.h5',
+    monitor='val_acc', mode='max', verbose=1, save_best_only=True)
+
+history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
+                    validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
+                    epochs=5000,
+                    batch_size=32, callbacks=[es, mc], verbose=1, )
+#
+# model.fit(
+#     [trainAttrX, trainImagesX], trainY,
+#     validation_data=([testAttrX, testImagesX], testY),
+#     epochs=200, batch_size=8)
+pass
 # model.add(LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform'))
 # model.add(Dropout(rate=0.2))
 #

@@ -221,6 +221,7 @@ class Control_tab(QWidget):
                 self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
                 if not self.is_recording_radar:
                     self.is_recording_radar = True
+                    print('Recording started!')
                     self.record_btn.setText("Stop Recording")
                 else:
                     self.is_recording_radar = False
@@ -230,6 +231,7 @@ class Control_tab(QWidget):
                     pickle.dump(self.buffer, open(os.path.join(config.data_path,
                                                                today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
                     print('Data save to ' + config.data_path)
+                    self.reset_buffer()
             else:
                 self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
         elif not (self.will_recording_radar and self.will_recording_leap and self.will_recording_UWB):
@@ -346,3 +348,6 @@ class Control_tab(QWidget):
         else:
             self.will_recording_UWB = False
             self.message.setText(config.UWB_box_unchecked)
+
+    def reset_buffer(self):
+        self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
