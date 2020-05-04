@@ -18,16 +18,73 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from Learn.data_in import idp_preprocess, resolve_points_per_sample
 from mGesf.config import rd_shape, ra_shape
+from utils.data_utils import plot_confusion_matrix
 
-idp_data_dir = ['../data/idp-ABCDE-rpt10', '../data/idp-ABCDE-rpt2']
-num_repeats = [10, 2]
+########################################################################################################################
+# idp_data_dir = ['../data/idp-ABCDE-rpt10', '../data/idp-ABCDE-rpt2']
+# num_repeats = [10, 2]
+# classes = ['A', 'B', 'C', 'D', 'E']
+########################################################################################################################
+
+# idp_data_dir = ['../data/idp-FGHIJ-rpt10']
+# num_repeats = [10]
+# classes = ['F', 'G', 'H', 'I', 'L']
+########################################################################################################################
+# idp_data_dir = ['../data/idp-KLMNO-rpt10']
+# num_repeats = [10]
+# sample_classes = [['K', 'L', 'M', 'N', 'O']]
+# classes = ['K', 'L', 'M', 'N', 'O']
+########################################################################################################################
+# idp_data_dir = ['../data/idp-PQRST-rpt10']
+# num_repeats = [10]
+# sample_classes = [['P', 'Q', 'R', 'S', 'T']]
+# classes = ['P', 'Q', 'R', 'S', 'T']
+########################################################################################################################
+# idp_data_dir = ['../data/idp-UVWXY-rpt10']
+# num_repeats = [10]
+# sample_classes = [['U', 'V', 'W', 'X', 'Y']]
+# classes = ['U', 'V', 'W', 'X', 'Y']
+########################################################################################################################
+# idp_data_dir = ['../data/idp-ZSpcBspcEnt-rpt10']
+# num_repeats = [10]
+# sample_classes = [['Z', 'Spc', 'Bspc', 'Ent']]
+# classes = ['Z', 'Spc', 'Bspc', 'Ent']
+########################################################################################################################
+
+
+idp_data_dir = ['../data/idp-ABCDE-rpt10',
+                '../data/idp-ABCDE-rpt2',
+                '../data/idp-FGHIJ-rpt10',
+                '../data/idp-KLMNO-rpt10',
+                '../data/idp-PQRST-rpt10',
+                '../data/idp-UVWXY-rpt10',
+                '../data/idp-ZSpcBspcEnt-rpt10']
+num_repeats = [10, 2, 10, 10, 10, 10, 10]
+sample_classes = [['A', 'B', 'C', 'D', 'E'],
+                  ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice
+                  ['F', 'G', 'H', 'I', 'J'],
+                  ['K', 'L', 'M', 'N', 'O'],
+                  ['P', 'Q', 'R', 'S', 'T'],
+                  ['U', 'V', 'W', 'X', 'Y'],
+                  ['Z', 'Spc', 'Bspc', 'Ent']]
+classes = ['A', 'B', 'C', 'D', 'E',
+           'F', 'G', 'H', 'I', 'J',
+           'K', 'L', 'M', 'N', 'O',
+           'P', 'Q', 'R', 'S', 'T',
+           'U', 'V', 'W', 'X', 'Y',
+           'Z', 'Spc', 'Bspc', 'Ent']
+
+assert len(idp_data_dir) == len(num_repeats) == len(sample_classes)  # check the consistency of zip variables
+assert set(classes) == set([item for sublist in sample_classes for item in sublist])  # check categorical consistency
+########################################################################################################################
 
 interval_duration = 4.0  # how long does one writing take
-classes = ['A', 'B', 'C', 'D', 'E']
 period = 33  # ms
 
+# classes = set([item for sublist in sample_classes for item in sublist])  # reduce to categorical classes
 ls_dicts = \
-    [idp_preprocess(dr, interval_duration, classes, nr, period=period) for dr, nr in zip(idp_data_dir, num_repeats)]
+    [idp_preprocess(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
+     for dr, nr, cs in zip(idp_data_dir, num_repeats, sample_classes)]
 points_per_sample = int(resolve_points_per_sample(period, interval_duration))
 '''
 This implementation accepts two branches of input: range doppler and range azimuth. Each are put
@@ -83,7 +140,7 @@ regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
 regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
 
 model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
-adam = optimizers.adam(lr=1e-3, decay=1e-7)
+adam = optimizers.adam(lr=1e-4, decay=1e-7)
 
 model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
 
@@ -113,7 +170,7 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 # add early stopping
-es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=100)
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
 mc = ModelCheckpoint(
     '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
                                                                           '_') + '.h5',
@@ -121,25 +178,14 @@ mc = ModelCheckpoint(
 
 history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
                     validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
-                    epochs=1000,
+                    epochs=50000,
                     batch_size=32, callbacks=[es, mc], verbose=1, )
-#
+
 # model.fit(
 #     [trainAttrX, trainImagesX], trainY,
 #     validation_data=([testAttrX, testImagesX], testY),
 #     epochs=200, batch_size=8)
 pass
-# model.add(LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform'))
-# model.add(Dropout(rate=0.2))
-#
-# mmw_rdpl_TDCNN.add(LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform'))
-# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
-#
-# mmw_rdpl_TDCNN.add(Dense(units=128))
-# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
-#
-# mmw_rdpl_TDCNN.add(Dense(len(classes), activation='softmax', kernel_initializer='random_uniform'))
-#
 # adam = optimizers.adam(lr=1e-5, decay=1e-7)
 # # sgd = optimizers.SGD(lr=5e-6, momentum=0.9, decay=1e-6, nesterov=True)
 #
@@ -229,21 +275,35 @@ pass
 # history = mmw_rdpl_TDCNN.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=epochs,
 #                          batch_size=8, callbacks=[es, mc], verbose=1, )
 #
-# import matplotlib.pyplot as plt
-#
-# plt.plot(history.history['acc'])
-# plt.plot(history.history['val_acc'])
-# plt.title('model accuracy')
-# plt.ylabel('accuracy')
-# plt.xlabel('epoch')
-# plt.legend(['train', 'test'], loc='upper left')
-# plt.show()
-#
-# # summarize history for loss
-# plt.plot(history.history['loss'])
-# plt.plot(history.history['val_loss'])
-# plt.title('model loss')
-# plt.ylabel('loss')
-# plt.xlabel('epoch')
-# plt.legend(['train', 'test'], loc='upper left')
-# plt.show()
+
+if False:
+    import matplotlib.pyplot as plt
+
+    plt.plot(history.history['acc'])
+    plt.plot(history.history['val_acc'])
+    plt.title('model accuracy')
+    plt.ylabel('accuracy')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'test'], loc='upper left')
+    plt.show()
+
+    # summarize history for loss
+    plt.plot(history.history['loss'])
+    plt.plot(history.history['val_loss'])
+    plt.title('model loss')
+    plt.ylabel('loss')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'test'], loc='upper left')
+    plt.show()
+
+    # load the best model
+    model_name = 'idp_10A-J_0995 2020-05-02_19-17-11.765320'
+    idp_model = load_model('../models/idp/' + model_name + '.h5')
+    # save the history
+    pickle.dump(history, open('../models/idp/' + model_name + '.hist', 'wb'))
+    # plot the confusion matrix
+    y_pred = idp_model.predict([X_mmw_rD_test, X_mmw_rA_test], batch_size=8)
+
+    plot_confusion_matrix(Y_test.argmax(axis=1), y_pred.argmax(axis=1), classes=np.array(classes),
+                          normalize=True, title='IndexPen Confusion Matrix')
+    plt.show()

@@ -46,7 +46,7 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
 
     mmw_features = ['range_doppler', 'range_azi']
 
-    for d in mgesf_data_list:
+    for d, p in zip(mgesf_data_list, os.listdir(path)):
         sample_ts_list = []
 
         mmw_list = d['mmw']
@@ -87,8 +87,9 @@ def idp_preprocess(path, input_interval, classes, num_repeat, period=33):
                     ts_index_last = ts_index
                     break  # break to the next sample
         if len(sample_ts_list) != sample_num_expected:
-            warnings.warn(
-                'Sample number mismatch, got ' + str(len(sample_ts_list)) + ', expected: ' + str(sample_num_expected))
+            raise Exception(
+                'Sample number mismatch, got ' + str(len(sample_ts_list)) + ', expected: ' + str(sample_num_expected) +
+                '\n for ' + p)
 
     return labeled_sample_dict
 
