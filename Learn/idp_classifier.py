@@ -94,55 +94,55 @@ the network is concluded by FC layers.
 '''
 
 # creates the Time Distributed CNN for range Doppler heatmap ##########################
-mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
-mmw_rdpl_TDCNN = Sequential()
-mmw_rdpl_TDCNN.add(
-    TimeDistributed(
-        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-               # kernel_regularizer=l2(0.0005),
-               kernel_initializer='random_uniform'),
-        input_shape=mmw_rdpl_input))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_rdpl_TDCNN.add(TimeDistributed(
-    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
-
-# creates the Time Distributed CNN for range Azimuth heatmap ###########################
-mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
-mmw_razi_TDCNN = Sequential()
-mmw_razi_TDCNN.add(
-    TimeDistributed(
-        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-               # kernel_regularizer=l2(0.0005),
-               kernel_initializer='random_uniform'),
-        input_shape=mmw_razi_input))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_razi_TDCNN.add(TimeDistributed(
-    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
-
-merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
-regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
-regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
-regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-
-regressive_tensor = Dense(units=128)(regressive_tensor)
-regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
-
-model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
-adam = optimizers.adam(lr=1e-4, decay=1e-7)
-
-model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
+# mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
+# mmw_rdpl_TDCNN = Sequential()
+# mmw_rdpl_TDCNN.add(
+#     TimeDistributed(
+#         Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
+#                # kernel_regularizer=l2(0.0005),
+#                kernel_initializer='random_uniform'),
+#         input_shape=mmw_rdpl_input))
+# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+# mmw_rdpl_TDCNN.add(TimeDistributed(
+#     Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+# mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+# mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
+#
+# # creates the Time Distributed CNN for range Azimuth heatmap ###########################
+# mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
+# mmw_razi_TDCNN = Sequential()
+# mmw_razi_TDCNN.add(
+#     TimeDistributed(
+#         Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
+#                # kernel_regularizer=l2(0.0005),
+#                kernel_initializer='random_uniform'),
+#         input_shape=mmw_razi_input))
+# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+# mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+# mmw_razi_TDCNN.add(TimeDistributed(
+#     Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+# mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+# mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+# mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
+#
+# merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
+# regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
+# regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+# regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
+# regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+#
+# regressive_tensor = Dense(units=128)(regressive_tensor)
+# regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+# regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
+#
+# model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
+# adam = optimizers.adam(lr=1e-4, decay=1e-7)
+#
+# model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
 
 # create input features
 # create labels array
@@ -170,16 +170,16 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 # add early stopping
-es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
-mc = ModelCheckpoint(
-    '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
-                                                                          '_') + '.h5',
-    monitor='val_acc', mode='max', verbose=1, save_best_only=True)
-
-history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
-                    validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
-                    epochs=50000,
-                    batch_size=32, callbacks=[es, mc], verbose=1, )
+# es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
+# mc = ModelCheckpoint(
+#     '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
+#                                                                           '_') + '.h5',
+#     monitor='val_acc', mode='max', verbose=1, save_best_only=True)
+#
+# history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
+#                     validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
+#                     epochs=50000,
+#                     batch_size=32, callbacks=[es, mc], verbose=1, )
 
 # model.fit(
 #     [trainAttrX, trainImagesX], trainY,
@@ -297,12 +297,12 @@ if False:
     plt.show()
 
     # load the best model
-    model_name = 'idp_10A-J_0995 2020-05-02_19-17-11.765320'
+    model_name = 'idp_29_2020-05-04_03-24-10.425555'
     idp_model = load_model('../models/idp/' + model_name + '.h5')
     # save the history
     pickle.dump(history, open('../models/idp/' + model_name + '.hist', 'wb'))
     # plot the confusion matrix
-    y_pred = idp_model.predict([X_mmw_rD_test, X_mmw_rA_test], batch_size=8)
+    y_pred = idp_model.predict([X_mmw_rD_test, X_mmw_rA_test], batch_size=32)
 
     plot_confusion_matrix(Y_test.argmax(axis=1), y_pred.argmax(axis=1), classes=np.array(classes),
                           normalize=True, title='IndexPen Confusion Matrix')
