@@ -311,14 +311,14 @@ if False:
 # make temporal probability evolution graph
 temporal_evol_all_classes = {}
 
-for rD_sample, rA_sample, true_label in zip( X_mmw_rD_test, X_mmw_rA_test, encoder.inverse_transform(Y_test)):
+for rD_sample, rA_sample, true_label in zip(X_mmw_rD_test, X_mmw_rA_test, encoder.inverse_transform(Y_test)):
     temporal_samples_rD = []
     temporal_samples_rA = []
     # create sliced samples
     for i in range(len(rD_sample)):
         # create padding
-        rD_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rD_sample.shape[1:]), rD_sample[:i]])
-        rA_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rA_sample.shape[1:]), rA_sample[:i]])
+        rD_sample_padded = np.concatenate([np.zeros((points_per_sample - i,) + rD_sample.shape[1:]), rD_sample[:i]])
+        rA_sample_padded = np.concatenate([np.zeros((points_per_sample - i,) + rA_sample.shape[1:]), rA_sample[:i]])
         temporal_samples_rD.append(rD_sample_padded)
         temporal_samples_rA.append(rA_sample_padded)
 
@@ -327,16 +327,21 @@ for rD_sample, rA_sample, true_label in zip( X_mmw_rD_test, X_mmw_rA_test, encod
     temporal_pred = idp_model.predict([temporal_samples_rD, temporal_samples_rA], batch_size=32)
     temporal_pred = np.max(temporal_pred, axis=1)
 
-    temporal_evol_all_classes[true_label[0]] = temporal_pred
+    if true_label[0] not in temporal_evol_all_classes.keys():
+        temporal_evol_all_classes[true_label[0]] = np.expand_dims(temporal_pred, axis=0)
+    else:
+        temporal_evol_all_classes[true_label[0]] = np.concatenate([temporal_pred, temporal_evol_all_classes[true_label[0]]], axis=0)
 
 # plot the temporal evolution of each class
 for i, c in enumerate(classes):
-    temporal_pred = np.array([v for k, v in temporal_evol_all_classes if k == c])
+    temporal_pred = np.array([v for k, v in temporal_evol_all_classes.items() if k == c])
     temporal_pred_avg = np.mean(temporal_pred, axis=0)
 
-    plt.plot(temporal_pred_avg, np.linspace(0, 4, 121), label=true_label)
-    plt.title()
-    plt.xlabel('Radar Frames ')
-    if not i%5:  # plot the figure for every 5 classes
+    np.linspace(0, 4, 121)
+    plt.plot(temporal_pred_avg,  label=true_label)
+    plt.title('Temporal Probability Evaluation for IndexPen Writing Gestures')
+    plt.xlabel('Time since gesture onset (sec)')
+    plt.ylabel('P')
+    if not i % 5:  # plot the figure for every 5 classes
         plt.show()
     break
