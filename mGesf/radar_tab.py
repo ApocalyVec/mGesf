@@ -53,7 +53,7 @@ class Radar_tab(QWidget):
         # add range doppler
         self.doppler_display = self.init_spec_view(pos=(1, 1), label='Range Doppler Profile')
         # add range azi
-        self.azi_display = self.init_spec_view(pos=(1, 2), label='Range Azimuth Profile')
+        self.azi_display = self.init_spec_view(pos=(1, 2), label='Range Azimuth Elevation Profile')
 
         # ====================== Add info to info_vl =======================================
         self.info_label = QLabel()
