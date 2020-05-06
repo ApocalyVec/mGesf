@@ -308,35 +308,37 @@ if False:
                           normalize=True, title='IndexPen Confusion Matrix')
     plt.show()
 
-# make temporal probability evolution graph
-temporal_evol_all_classes = {}
+    # make temporal probability evolution graph
+    temporal_evol_all_classes = {}
 
-for rD_sample, rA_sample, true_label in zip( X_mmw_rD_test, X_mmw_rA_test, encoder.inverse_transform(Y_test)):
-    temporal_samples_rD = []
-    temporal_samples_rA = []
-    # create sliced samples
-    for i in range(len(rD_sample)):
-        # create padding
-        rD_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rD_sample.shape[1:]), rD_sample[:i]])
-        rA_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rA_sample.shape[1:]), rA_sample[:i]])
-        temporal_samples_rD.append(rD_sample_padded)
-        temporal_samples_rA.append(rA_sample_padded)
+    for j, pack in enumerate(zip(X_mmw_rD_test, X_mmw_rA_test, encoder.inverse_transform(Y_test))):
+        rD_sample, rA_sample, true_label = pack
+        temporal_samples_rD = []
+        temporal_samples_rA = []
+        # create sliced samples
+        for i in range(len(rD_sample)):
+            print('Working on ' + str(i) + 'th step of ' + j + 'th sample')
+            # create padding
+            rD_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rD_sample.shape[1:]), rD_sample[:i]])
+            rA_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rA_sample.shape[1:]), rA_sample[:i]])
+            temporal_samples_rD.append(rD_sample_padded)
+            temporal_samples_rA.append(rA_sample_padded)
 
-    temporal_samples_rD = np.array(temporal_samples_rD)
-    temporal_samples_rA = np.array(temporal_samples_rA)
-    temporal_pred = idp_model.predict([temporal_samples_rD, temporal_samples_rA], batch_size=32)
-    temporal_pred = np.max(temporal_pred, axis=1)
+        temporal_samples_rD = np.array(temporal_samples_rD)
+        temporal_samples_rA = np.array(temporal_samples_rA)
+        temporal_pred = idp_model.predict([temporal_samples_rD, temporal_samples_rA], batch_size=32)
+        temporal_pred = np.max(temporal_pred, axis=1)
 
-    temporal_evol_all_classes[true_label[0]] = temporal_pred
+        temporal_evol_all_classes[true_label[0]] = temporal_pred
 
-# plot the temporal evolution of each class
-for i, c in enumerate(classes):
-    temporal_pred = np.array([v for k, v in temporal_evol_all_classes if k == c])
-    temporal_pred_avg = np.mean(temporal_pred, axis=0)
+    # plot the temporal evolution of each class
+    for i, c in enumerate(classes):
+        temporal_pred = np.array([v for k, v in temporal_evol_all_classes if k == c])
+        temporal_pred_avg = np.mean(temporal_pred, axis=0)
 
-    plt.plot(temporal_pred_avg, np.linspace(0, 4, 121), label=true_label)
-    plt.title()
-    plt.xlabel('Radar Frames ')
-    if not i%5:  # plot the figure for every 5 classes
-        plt.show()
-    break
+        plt.plot(temporal_pred_avg, np.linspace(0, 4, 121), label=true_label)
+        plt.title()
+        plt.xlabel('Radar Frames ')
+        if not i%5:  # plot the figure for every 5 classes
+            plt.show()
+        break
