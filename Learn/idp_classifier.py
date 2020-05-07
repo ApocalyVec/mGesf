@@ -13,6 +13,7 @@ from keras.engine.saving import load_model
 
 import numpy as np
 import os
+import matplotlib
 
 import matplotlib.pyplot as plt
 
@@ -52,7 +53,6 @@ from utils.data_utils import plot_confusion_matrix
 # sample_classes = [['Z', 'Spc', 'Bspc', 'Ent']]
 # classes = ['Z', 'Spc', 'Bspc', 'Ent']
 ########################################################################################################################
-
 
 idp_data_dir = ['../data/idp-ABCDE-rpt10',
                 '../data/idp-ABCDE-rpt2',
@@ -96,58 +96,57 @@ the network is concluded by FC layers.
 '''
 
 # creates the Time Distributed CNN for range Doppler heatmap ##########################
-# mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
-# mmw_rdpl_TDCNN = Sequential()
-# mmw_rdpl_TDCNN.add(
-#     TimeDistributed(
-#         Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-#                # kernel_regularizer=l2(0.0005),
-#                kernel_initializer='random_uniform'),
-#         input_shape=mmw_rdpl_input))
-# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-# mmw_rdpl_TDCNN.add(TimeDistributed(
-#     Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-# mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-# mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
-#
-# # creates the Time Distributed CNN for range Azimuth heatmap ###########################
-# mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
-# mmw_razi_TDCNN = Sequential()
-# mmw_razi_TDCNN.add(
-#     TimeDistributed(
-#         Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-#                # kernel_regularizer=l2(0.0005),
-#                kernel_initializer='random_uniform'),
-#         input_shape=mmw_razi_input))
-# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-# mmw_razi_TDCNN.add(TimeDistributed(
-#     Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-# mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-# mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
-#
-# merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
-# regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
-# regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-# regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
-# regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-#
-# regressive_tensor = Dense(units=128)(regressive_tensor)
-# regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-# regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
-#
-# model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
-# adam = optimizers.adam(lr=1e-4, decay=1e-7)
-#
-# model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
+mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
+mmw_rdpl_TDCNN = Sequential()
+mmw_rdpl_TDCNN.add(
+    TimeDistributed(
+        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
+               # kernel_regularizer=l2(0.0005),
+               kernel_initializer='random_uniform'),
+        input_shape=mmw_rdpl_input))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_rdpl_TDCNN.add(TimeDistributed(
+    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
+
+# creates the Time Distributed CNN for range Azimuth heatmap ###########################
+mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
+mmw_razi_TDCNN = Sequential()
+mmw_razi_TDCNN.add(
+    TimeDistributed(
+        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
+               # kernel_regularizer=l2(0.0005),
+               kernel_initializer='random_uniform'),
+        input_shape=mmw_razi_input))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_razi_TDCNN.add(TimeDistributed(
+    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
+
+merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
+regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
+regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
+regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+
+regressive_tensor = Dense(units=128)(regressive_tensor)
+regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
+
+model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
+adam = optimizers.adam(lr=1e-4, decay=1e-7)
+
+model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
 
 # create input features
-# create labels array
 Y = []
 X_mmw_rD = []
 X_mmw_rA = []
@@ -172,178 +171,99 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 # add early stopping
-# es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
-# mc = ModelCheckpoint(
-#     '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
-#                                                                           '_') + '.h5',
-#     monitor='val_acc', mode='max', verbose=1, save_best_only=True)
-#
-# history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
-#                     validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
-#                     epochs=50000,
-#                     batch_size=32, callbacks=[es, mc], verbose=1, )
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
+mc = ModelCheckpoint(
+    '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
+                                                                          '_') + '.h5',
+    monitor='val_acc', mode='max', verbose=1, save_best_only=True)
 
-# model.fit(
-#     [trainAttrX, trainImagesX], trainY,
-#     validation_data=([testAttrX, testImagesX], testY),
-#     epochs=200, batch_size=8)
-pass
-# adam = optimizers.adam(lr=1e-5, decay=1e-7)
-# # sgd = optimizers.SGD(lr=5e-6, momentum=0.9, decay=1e-6, nesterov=True)
-#
-# mmw_rdpl_TDCNN.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
-# print('Using Pre-trained Model: ' + pre_trained_path)
+history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
+                    validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
+                    epochs=50000,
+                    batch_size=32, callbacks=[es, mc], verbose=1, )
 
-# classifying_labels = [1, 2, 3, 4, 5]
-# num_classes = len(classifying_labels)
 
-# interval_duration = 4
-# sample_per_sec = 20
+'''
 
-# timesteps = interval_duration * sample_per_sec
-#
-# if __name__ == '__main__':
-#     dataset_path = 'F:/alldataset/idp_dataset'
-#     label_dict_path = 'F:/alldataset/idp_label_dict.p'
-#     labels = pickle.load(open(label_dict_path, 'rb'))
+'''
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
 
-# ## Generators
-# X = []
-# Y = []
-# # for i, data in enumerate(sorted(os.listdir(dataset_path), key=lambda x: int(x.strip('.npy').split('_')[2]))):
-# for i, data in enumerate(os.listdir(dataset_path)):
-#     lb = labels[os.path.splitext(data)[0]]
-#     if lb in classifying_labels: # this is not an 'O'
-#         print('Loading ' + str(i) + ' of ' + str(len(os.listdir(dataset_path))))
-#         X.append(np.load(os.path.join(dataset_path, data)))
-#         Y.append(labels[os.path.splitext(data)[0]])
-# X = np.asarray(X)
-# Y = np.asarray(Y)
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
 
-# encoder = OneHotEncoder(categories='auto')
-# Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
+# load the best model
+model_name = 'idp_29_2020-05-04_03-24-10.425555'
+idp_model = load_model('../models/idp/' + model_name + '.h5')
+# save the history
+# pickle.dump(history, open('../models/idp/' + model_name + '.hist', 'wb'))
+# plot the confusion matrix
+y_pred = idp_model.predict([X_mmw_rD_test, X_mmw_rA_test], batch_size=32)
 
-# X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=3, shuffle=True)
+plot_confusion_matrix(Y_test.argmax(axis=1), y_pred.argmax(axis=1), classes=np.array(classes),
+                      normalize=True, title='IndexPen Confusion Matrix')
+plt.show()
 
-# Build the RNN ###############################################
-# if not is_use_pre_train:
-# mmw_rdpl_TDCNN = Sequential()
-# mmw_rdpl_TDCNN.add(
-#     TimeDistributed(
-#         Conv3D(filters=16, kernel_size=(3, 3, 3), data_format='channels_first', input_shape=(1, 25, 25, 25),
-#                kernel_regularizer=l2(0.0005),
-#                kernel_initializer='random_uniform'),
-#         input_shape=(timesteps, 1, 25, 25, 25)))
-# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-#
-# mmw_rdpl_TDCNN.add(TimeDistributed(
-#     Conv3D(filters=16, kernel_size=(3, 3, 3), data_format='channels_first')))
-# # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-# mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-#
-# mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling3D(pool_size=(2, 2, 2))))
-#
-# mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))
-#
-# mmw_rdpl_TDCNN.add(LSTM(units=64, return_sequences=True, kernel_initializer='random_uniform'))
-# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
-#
-# mmw_rdpl_TDCNN.add(LSTM(units=64, return_sequences=True, kernel_initializer='random_uniform'))
-# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
-#
-# mmw_rdpl_TDCNN.add(LSTM(units=64, return_sequences=False, kernel_initializer='random_uniform'))
-# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
-#
-# mmw_rdpl_TDCNN.add(Dense(units=128))
-# mmw_rdpl_TDCNN.add(Dropout(rate=0.2))
-#
-# mmw_rdpl_TDCNN.add(Dense(num_classes, activation='softmax', kernel_initializer='random_uniform'))
-#
-# adam = optimizers.adam(lr=1e-5, decay=1e-7)
-# # sgd = optimizers.SGD(lr=5e-6, momentum=0.9, decay=1e-6, nesterov=True)
-#
-# mmw_rdpl_TDCNN.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
-# # print('Using Pre-trained Model: ' + pre_trained_path)
-# # mmw_rdpl_TDCNN = load_model(pre_trained_path)
-#
-# # add early stopping
-# es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
-# mc = ModelCheckpoint(
-#     'D:/trained_models/bestSoFar_indexPen_CRNN' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
-#                                                                                                          '_') + '.h5',
-#     monitor='val_acc', mode='max', verbose=1, save_best_only=True)
-#
-# history = mmw_rdpl_TDCNN.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=epochs,
-#                          batch_size=8, callbacks=[es, mc], verbose=1, )
-#
+# make temporal probability evolution graph
+matching_label_prob_dict = {}
+temporal_prep_dict = {}
 
-if False:
-    plt.plot(history.history['acc'])
-    plt.plot(history.history['val_acc'])
-    plt.title('model accuracy')
-    plt.ylabel('accuracy')
-    plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
-    plt.show()
+for j, pack in enumerate(zip(X_mmw_rD_test, X_mmw_rA_test, encoder.inverse_transform(Y_test), Y_test)):
+    rD_sample, rA_sample, true_label, encoded_label = pack
+    temporal_samples_rD = []
+    temporal_samples_rA = []
+    # create sliced samples
+    print('Working on ' + str(j) + 'th sample')
+    for i in range(len(rD_sample)):
+        # create padding
+        rD_padding = X_mmw_rD_test[j-1][:points_per_sample - i]
+        rA_padding = X_mmw_rA_test[j-1][:points_per_sample - i]
 
-    # summarize history for loss
-    plt.plot(history.history['loss'])
-    plt.plot(history.history['val_loss'])
-    plt.title('model loss')
-    plt.ylabel('loss')
-    plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
-    plt.show()
+        rD_sample_padded = np.concatenate([rD_padding, rD_sample[:i]])
+        rA_sample_padded = np.concatenate([rA_padding, rA_sample[:i]])
+        # rD_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rD_sample.shape[1:]), rD_sample[:i]])
+        # rA_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rA_sample.shape[1:]), rA_sample[:i]])
+        temporal_samples_rD.append(rD_sample_padded)
+        temporal_samples_rA.append(rA_sample_padded)
 
-    # load the best model
-    model_name = 'idp_29_2020-05-04_03-24-10.425555'
-    idp_model = load_model('../models/idp/' + model_name + '.h5')
-    # save the history
-    # pickle.dump(history, open('../models/idp/' + model_name + '.hist', 'wb'))
-    # plot the confusion matrix
-    y_pred = idp_model.predict([X_mmw_rD_test, X_mmw_rA_test], batch_size=32)
+    temporal_samples_rD = np.array(temporal_samples_rD)
+    temporal_samples_rA = np.array(temporal_samples_rA)
+    temporal_pred = idp_model.predict([temporal_samples_rD, temporal_samples_rA], batch_size=121)
 
-    plot_confusion_matrix(Y_test.argmax(axis=1), y_pred.argmax(axis=1), classes=np.array(classes),
-                          normalize=True, title='IndexPen Confusion Matrix')
-    plt.show()
+    # get the correct label column
+    l_col = np.argmax(encoded_label)
+    matching_label_prob = temporal_pred[:, l_col]
 
-    # make temporal probability evolution graph
-    temporal_evol_all_classes = {}
-
-    for j, pack in enumerate(zip(X_mmw_rD_test, X_mmw_rA_test, encoder.inverse_transform(Y_test))):
-        rD_sample, rA_sample, true_label = pack
-        temporal_samples_rD = []
-        temporal_samples_rA = []
-        # create sliced samples
-        for i in range(len(rD_sample)):
-            print('Working on ' + str(i) + 'th step of ' + j + 'th sample')
-            # create padding
-            rD_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rD_sample.shape[1:]), rD_sample[:i]])
-            rA_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rA_sample.shape[1:]), rA_sample[:i]])
-            temporal_samples_rD.append(rD_sample_padded)
-            temporal_samples_rA.append(rA_sample_padded)
-
-        temporal_samples_rD = np.array(temporal_samples_rD)
-        temporal_samples_rA = np.array(temporal_samples_rA)
-        temporal_pred = idp_model.predict([temporal_samples_rD, temporal_samples_rA], batch_size=32)
-        temporal_pred = np.max(temporal_pred, axis=1)
-
-    if true_label[0] not in temporal_evol_all_classes.keys():
-        temporal_evol_all_classes[true_label[0]] = np.expand_dims(temporal_pred, axis=0)
+    if true_label[0] not in matching_label_prob_dict.keys():
+        matching_label_prob_dict[true_label[0]] = np.expand_dims(matching_label_prob, axis=0)
+        temporal_prep_dict[true_label[0]] = np.expand_dims(temporal_pred, axis=0)
     else:
-        temporal_evol_all_classes[true_label[0]] = np.concatenate([temporal_pred, temporal_evol_all_classes[true_label[0]]], axis=0)
+        matching_label_prob_dict[true_label[0]] = np.concatenate([np.expand_dims(matching_label_prob, axis=0), matching_label_prob_dict[true_label[0]]], axis=0)
+        temporal_prep_dict[true_label[0]] = np.concatenate([np.expand_dims(temporal_pred, axis=0), temporal_prep_dict[true_label[0]]], axis=0)
 
-    # plot the temporal evolution of each class
-    for i, c in enumerate(classes):
-        temporal_pred = np.array([v for k, v in temporal_evol_all_classes if k == c])
-        temporal_pred_avg = np.mean(temporal_pred, axis=0)
-
-        np.linspace(0, 4, 121)
-        plt.plot(temporal_pred_avg,  label=true_label)
-        plt.title('Temporal Probability Evaluation for IndexPen Writing Gestures')
-        plt.xlabel('Time since gesture onset (sec)')
-        plt.ylabel('P')
-        if not i % 5:  # plot the figure for every 5 classes
-            plt.show()
-        break
+# plot the temporal evolution of each class
+font = {'family': 'DejaVu Sans',
+        'weight': 'bold',
+        'size': 14}
+matplotlib.rc('font', **font)
+for i, c in enumerate(classes):
+    matching_label_prob_temporal = np.array([v for k, v in matching_label_prob_dict.items() if k == c])[0]
+    matching_label_prob_temporal = np.mean(matching_label_prob_temporal, axis=0)
+    plt.plot(np.linspace(0, 4, 121), matching_label_prob_temporal,  label=c)
+    plt.xlabel('Time since gesture onset (sec)')
+    plt.ylabel('P')
+    plt.legend()
+    plt.ylim((0.0, 1.0))
+    if not i % 5:  # plot the figure for every 5 classes
+        plt.show()
