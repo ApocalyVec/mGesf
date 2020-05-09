@@ -83,37 +83,15 @@ def setup_datapath_block(parent):
 
 
 def setup_information_block(parent):
-    # a layout block
     information_block1 = init_container(parent=parent, label="Information", label_position="center",
                                         style="background-color: " + config.container_color + ";")
+    information_block = init_container(parent=information_block1,
+                                       style="background-color: " + config.subcontainer_color + ";")
+    message = QLabel()
+    message.setText("Hi there")
+    information_block.addWidget(message)
 
-    # widget for the scroll area
-    scroll_widget = QtGui.QWidget()
-    information_block1.addWidget(scroll_widget)
-
-    # Scroll area
-    scrollArea = QtWidgets.QScrollArea(scroll_widget)
-    scrollArea.setWidgetResizable(True)
-    scrollArea.setFocusPolicy(QtCore.Qt.NoFocus)
-
-    # Scroll Area Content widget
-    content = QtWidgets.QWidget(scrollArea)
-    scrollArea.setWidget(scroll_widget)
-    scrollArea.ensureWidgetVisible(scroll_widget)
-    content.setFocusPolicy(QtCore.Qt.NoFocus)
-
-    # add a layout to put in message
-    scroll_layout = QVBoxLayout(content)
-    scroll_layout.setSpacing(20.0)
-
-    message = QLabel(scroll_layout)
-    text = "# Scroll Area Content\nscrollArea_content = QtWidgets.QWidget(scrollArea)" \
-           "\nscrollArea.ensureWidgetVisible(scrollArea_content)\n" \
-           " scrollArea_content.setFocusPolicy(QtCore.Qt.NoFocus)"
-
-    message.setText(text)
-
-    return scrollArea, message
+    return information_block, message
 
 
 def setup_record_button(parent, function):

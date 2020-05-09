@@ -84,7 +84,7 @@ class Control_tab(QWidget):
 
         self.control_block = init_container(parent=self.main_page)
         # ***** information block *****
-        self.scrollArea, self.message = setup_information_block(parent=self.main_page)
+        self.information_block, self.message = setup_information_block(parent=self.main_page)
 
         # -------------------- third class --------------------
         #   1. Control block
