@@ -5,6 +5,15 @@ tab1_label = "CONTROL"
 tab2_label = "RADAR"
 tab3_label = "LEAP"
 tab4_label = "UWB"
+tab5_label = "Gesture"
+
+gesture_label1 = "Index Pen"
+gesture_label2 = "ThuMouth"
+gesture_label3 = "Desktop at Fingertip"
+
+operation_label1 = "Recording"
+operation_label2 = "Training"
+operation_label3 = "Detection"
 
 d_port_default = "COM14"
 u_port_default = "COM3"
