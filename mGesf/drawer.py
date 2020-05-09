@@ -88,32 +88,34 @@ def setup_information_block(parent):
                                         style="background-color: " + config.container_color + ";")
 
     # widget for the scroll area
-    scroll_widget = QtGui.QWidget()
-    information_block1.addWidget(scroll_widget)
+    info_widget = QtGui.QWidget()
+    information_block1.addWidget(info_widget)
+    info_layout = QVBoxLayout()
+    info_widget.setLayout(info_layout)
 
     # Scroll area
-    scrollArea = QtWidgets.QScrollArea(scroll_widget)
-    scrollArea.setWidgetResizable(True)
-    scrollArea.setFocusPolicy(QtCore.Qt.NoFocus)
+    scroll_area = QtWidgets.QScrollArea()
+    scroll_area.setWidgetResizable(True)
+    scroll_area.setWidget(info_widget)
+    scroll_area.setFocusPolicy(QtCore.Qt.NoFocus)
 
     # Scroll Area Content widget
-    content = QtWidgets.QWidget(scrollArea)
-    scrollArea.setWidget(scroll_widget)
-    scrollArea.ensureWidgetVisible(scroll_widget)
+    content = QtWidgets.QWidget(scroll_area)
+    scroll_area.ensureWidgetVisible(info_widget)
     content.setFocusPolicy(QtCore.Qt.NoFocus)
 
     # add a layout to put in message
     scroll_layout = QVBoxLayout(content)
     scroll_layout.setSpacing(20.0)
 
-    message = QLabel(scroll_layout)
+    message = QLabel()
     text = "# Scroll Area Content\nscrollArea_content = QtWidgets.QWidget(scrollArea)" \
            "\nscrollArea.ensureWidgetVisible(scrollArea_content)\n" \
            " scrollArea_content.setFocusPolicy(QtCore.Qt.NoFocus)"
 
     message.setText(text)
-
-    return scrollArea, message
+    message.setLayout(scroll_layout)
+    return scroll_area, message
 
 
 def setup_record_button(parent, function):
