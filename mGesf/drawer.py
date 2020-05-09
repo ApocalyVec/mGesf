@@ -91,8 +91,36 @@ def setup_information_block(parent):
     message.setText("Hi there")
     information_block.addWidget(message)
 
-    return information_block, message
+    # widget for the scroll area
+    info_widget = QtGui.QWidget()
+    information_block1.addWidget(info_widget)
+    info_layout = QVBoxLayout()
+    info_widget.setLayout(info_layout)
 
+    # Scroll area
+    scroll_area = QtWidgets.QScrollArea()
+    scroll_area.setWidgetResizable(True)
+    scroll_area.setWidget(info_widget)
+    scroll_area.setFocusPolicy(QtCore.Qt.NoFocus)
+
+    # Scroll Area Content widget
+    content = QtWidgets.QWidget(scroll_area)
+    scroll_area.ensureWidgetVisible(info_widget)
+    content.setFocusPolicy(QtCore.Qt.NoFocus)
+
+    # add a layout to put in message
+    scroll_layout = QVBoxLayout(content)
+    scroll_layout.setSpacing(20.0)
+
+    message = QLabel()
+    text = "# Scroll Area Content\nscrollArea_content = QtWidgets.QWidget(scrollArea)" \
+           "\nscrollArea.ensureWidgetVisible(scrollArea_content)\n" \
+           " scrollArea_content.setFocusPolicy(QtCore.Qt.NoFocus)"
+
+    message.setText(text)
+    message.setLayout(scroll_layout)
+    return scroll_area, message
+  
 
 def setup_record_button(parent, function):
     record_btn = QtWidgets.QPushButton(text='Start Recording')

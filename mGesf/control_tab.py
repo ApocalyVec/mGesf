@@ -83,8 +83,6 @@ class Control_tab(QWidget):
         #   2. information block
 
         self.control_block = init_container(parent=self.main_page)
-        # ***** information block *****
-        self.information_block, self.message = setup_information_block(parent=self.main_page)
 
         # -------------------- third class --------------------
         #   1. Control block
