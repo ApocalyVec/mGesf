@@ -11,9 +11,6 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QLabel, QGraphicsScene, QGraphicsView
 import pyqtgraph as pg
 
-from mGesf.drawer import init_container, setup_radar_connection_button, setup_user_port, setup_data_port, \
-    setup_datapath_block, setup_information_block, setup_record_button, setup_config_path_block, setup_config_btn, \
-    setup_sensor_btn
 from utils.img_utils import array_to_colormap_qim
 
 import mGesf.MMW_worker as MMW_worker
@@ -27,7 +24,6 @@ class Control_tab(QWidget):
             1. control block
                 1-1. RLU block
                     1-1-1. Radar block
-                        1-1-1-0. Radar frame # todo add frames
                         1-1-1-1. Connection block
                             1-1-1-1-1. Data port block
                             1-1-1-1-2. User port block
@@ -88,7 +84,7 @@ class Control_tab(QWidget):
 
         self.control_block = init_container(parent=self.main_page)
         # ***** information block *****
-        self.information_block, self.message = setup_information_block(parent=self.main_page)
+        self.scrollArea, self.message = setup_information_block(parent=self.main_page)
 
         # -------------------- third class --------------------
         #   1. Control block
