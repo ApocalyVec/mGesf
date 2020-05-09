@@ -6,9 +6,11 @@ from datetime import datetime
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QTimer, pyqtSlot
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget, \
+    QHBoxLayout
 import pyqtgraph as pg
 
+from mGesf.drawer import setup_information_block
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 from utils.img_utils import array_to_colormap_qim
 
@@ -36,10 +38,14 @@ class MainWindow(QMainWindow):
         self.resize(config.WINDOW_WIDTH, config.WINDOW_HEIGHT)
         pg.setConfigOption('background', 'w')
 
-        # create the tabs
+        layout = QVBoxLayout()
+
+        # create the tabs and information black
         self.table_widget = Tabs(self, mmw_interface, refresh_interval, data_path)
         self.setCentralWidget(self.table_widget)
+
         self.show()
+
 
 
 class Tabs(QWidget):
@@ -47,7 +53,7 @@ class Tabs(QWidget):
 
     def __init__(self, parent, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(QWidget, self).__init__(parent)
-        self.layout = QVBoxLayout(self)
+        self.layout = QHBoxLayout(self)
 
         # create threading
         # create a QThread and start the thread that handles
@@ -79,6 +85,9 @@ class Tabs(QWidget):
         # Add tabs to widget
         self.layout.addWidget(self.tabs)
         self.setLayout(self.layout)
+
+        # ***** information block *****
+        self.scrollArea, self.message = setup_information_block(parent=self.layout)
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
