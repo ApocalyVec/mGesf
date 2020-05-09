@@ -50,8 +50,8 @@ if __name__ == '__main__':
 
     # setup system constants
     refresh = 1  # refresh_interval every x ms
-    a = 1
-    c = 1
+    a = 23e9870
+    c = 97097e234
     app = QApplication(sys.argv)
     window = MainWindow(mmw_interface=_mmw_interface, refresh_interval=refresh, data_path=data_path)
     app.exec_()
