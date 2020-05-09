@@ -20,7 +20,9 @@ import mGesf.control_tab as control_tab
 import mGesf.radar_tab as radar_tab
 import mGesf.leap_tab as leap_tab
 import mGesf.UWB_tab as UWB_tab
+import mGesf.gesture_tab as gesture_tab
 import mGesf.config as config
+
 
 
 # class WorkerSignals(QObject):
@@ -70,11 +72,13 @@ class Tabs(QWidget):
         self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
         self.tab3 = leap_tab.Leap_tab()
         self.tab4 = UWB_tab.UWB_tab()
+        self.tab5 = gesture_tab.Gesture_tab()
 
         self.tabs.addTab(self.tab1, config.tab1_label)
         self.tabs.addTab(self.tab2, config.tab2_label)
         self.tabs.addTab(self.tab3, config.tab3_label)
         self.tabs.addTab(self.tab4, config.tab4_label)
+        self.tabs.addTab(self.tab5, config.tab5_label)
 
         # Add tabs to widget
         self.layout.addWidget(self.tabs)
