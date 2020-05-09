@@ -83,9 +83,13 @@ def setup_datapath_block(parent):
 
 
 def setup_information_block(parent):
-    # a layout block
     information_block1 = init_container(parent=parent, label="Information", label_position="center",
                                         style="background-color: " + config.container_color + ";")
+    information_block = init_container(parent=information_block1,
+                                       style="background-color: " + config.subcontainer_color + ";")
+    message = QLabel()
+    message.setText("Hi there")
+    information_block.addWidget(message)
 
     # widget for the scroll area
     info_widget = QtGui.QWidget()
@@ -116,7 +120,7 @@ def setup_information_block(parent):
     message.setText(text)
     message.setLayout(scroll_layout)
     return scroll_area, message
-
+  
 
 def setup_record_button(parent, function):
     record_btn = QtWidgets.QPushButton(text='Start Recording')
