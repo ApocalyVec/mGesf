@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView, QTabWidget
 
-from utils.main_window_GUI_util import *
+from utils.GUI_main_window import *
 import config as config
 from mGesf.main_page_tabs.gesture_tabs.DesktopFinger_tab import DesktopFinger_tab
 from mGesf.main_page_tabs.gesture_tabs.IndexPen_tab import IndexPen_tab
@@ -86,9 +86,9 @@ class Gesture_tab(QWidget):
         self.tab2 = ThuMouth_tab()
         self.tab3 = DesktopFinger_tab()
 
-        self.tabs.addTab(self.tab1, config.gesture_label1)
-        self.tabs.addTab(self.tab2, config.gesture_label2)
-        self.tabs.addTab(self.tab3, config.gesture_label3)
+        self.tabs.addTab(self.tab1, config.gesture_index_pen_label)
+        self.tabs.addTab(self.tab2, config.gesture_thuMouth_label)
+        self.tabs.addTab(self.tab3, config.gesture_desktop_fingertip_label)
 
         # Add tabs to widget
         self.ITD_block.addWidget(self.tabs)

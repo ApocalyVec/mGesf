@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout
 
-from utils.gesture_tabs_GUI_utils import setup_operation_tabs
-from utils.main_window_GUI_util import init_container
+from utils.GUI_gesture_tab import setup_operation_tabs
+from utils.GUI_main_window import init_container
 
 
 class IndexPen_tab(QWidget):
@@ -14,4 +14,5 @@ class IndexPen_tab(QWidget):
 
         self.setLayout(self.main_page)
         self.show()
+
 

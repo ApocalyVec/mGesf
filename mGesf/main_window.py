@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
     QHBoxLayout
 import pyqtgraph as pg
 
-from utils.main_window_GUI_util import setup_information_block
+from utils.GUI_main_window import init_information_block
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 import mGesf.MMW_worker as MMW_worker
@@ -72,18 +72,18 @@ class Tabs(QWidget):
         self.tab4 = UWB_tab.UWB_tab()
         self.tab5 = gesture_tab.Gesture_tab()
 
-        self.tabs.addTab(self.tab1, config.tab1_label)
-        self.tabs.addTab(self.tab2, config.tab2_label)
-        self.tabs.addTab(self.tab3, config.tab3_label)
-        self.tabs.addTab(self.tab4, config.tab4_label)
-        self.tabs.addTab(self.tab5, config.tab5_label)
+        self.tabs.addTab(self.tab1, config.main_window_control_tab_label)
+        self.tabs.addTab(self.tab2, config.main_window_radar_tab_label)
+        self.tabs.addTab(self.tab3, config.main_window_leap_tab_label)
+        self.tabs.addTab(self.tab4, config.main_window_uwb_tab_label)
+        self.tabs.addTab(self.tab5, config.main_window_gesture_tab_label)
 
         # Add tabs to widget
         self.layout.addWidget(self.tabs)
         self.setLayout(self.layout)
 
         # ***** information block *****
-        self.scrollArea, self.message = setup_information_block(parent=self.layout)
+        self.scrollArea, self.message = init_information_block(parent=self.layout)
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
