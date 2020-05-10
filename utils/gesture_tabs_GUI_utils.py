@@ -1,22 +1,21 @@
 from PyQt5.QtWidgets import QTabWidget
 
-from mGesf.gesture_tabs.Operation_tabs import Detection_tab, Recording_tab, Train_tab
+from mGesf.main_page_tabs.gesture_tabs.Operation_tabs import Recording_tab, Detection_tab, Train_tab
 import config as config
 
 
-def operation_tabs(parent):
+def setup_operation_tabs(parent):
     # Initialize tab screen
-    parent.tabs = QTabWidget()
-    parent.tab1 = Detection_tab.Detection_tab()
-    parent.tab2 = Recording_tab.Recording_tab()
-    parent.tab3 = Train_tab.Train_tab()
+    tabs = QTabWidget()
+    tab1 = Detection_tab.Detection_tab()
+    tab2 = Recording_tab.Recording_tab()
+    tab3 = Train_tab.Train_tab()
 
-    parent.tabs.addTab(parent.tab1, config.gesture_label1)
-    parent.tabs.addTab(parent.tab2, config.gesture_label2)
-    parent.tabs.addTab(parent.tab3, config.gesture_label3)
+    tabs.addTab(tab1, config.operation_label1)
+    tabs.addTab(tab2, config.operation_label2)
+    tabs.addTab(tab3, config.operation_label3)
 
     # Add tabs to widget
-    parent.ITD_block.addWidget(parent.tabs)
-    parent.setLayout(parent.ITD_block)
+    parent.addWidget(tabs)
 
-    parent.show()
+    return  tabs

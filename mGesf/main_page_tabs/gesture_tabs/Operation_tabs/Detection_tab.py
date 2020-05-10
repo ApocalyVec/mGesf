@@ -1,7 +1,8 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout
 
 
-class IndexPen_tab(QWidget):
+class Detection_tab(QWidget):
     def __init__(self):
         super().__init__()
-        self.layout = QHBoxLayout(self)
+        self.main_page = QHBoxLayout(self)
+
