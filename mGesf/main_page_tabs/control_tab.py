@@ -11,7 +11,7 @@ import pyqtgraph as pg
 from utils.img_utils import array_to_colormap_qim
 
 import mGesf.MMW_worker as MMW_worker
-from utils.main_window_GUI_util import *
+from utils.GUI_main_window import *
 import config as config
 
 
@@ -76,9 +76,7 @@ class Control_tab(QWidget):
         self.setLayout(self.main_page)
 
         # -------------------- Second class --------------------
-        #   1. control block
-        #   2. information block
-
+        # control block
         self.control_block = init_container(parent=self.main_page)
 
         # -------------------- third class --------------------
@@ -113,9 +111,14 @@ class Control_tab(QWidget):
         self.sub_record_block = init_container(parent=self.record_block,
                                                style="background-color: " + config.subcontainer_color + ";")
 
-        self.data_path_block, self.data_path_textbox = setup_datapath_block(parent=self.sub_record_block)
+        self.data_path_block, self.data_path_textbox = init_input_box(parent=self.sub_record_block,
+                                                                      label=config.control_tab_output_path_label,
+                                                                      label_bold=True,
+                                                                      default_input=config.data_path_default)
         # ***** record button *****
-        self.record_btn = setup_record_button(parent=self.sub_record_block, function=self.record_btn_action)
+        self.record_btn = init_button(parent=self.sub_record_block,
+                                      label=config.control_tab_record_btn_label,
+                                      function=self.record_btn_action)
         # -------------------- fifth class --------------------
         #           1-1-1. Radar block
         #               1-1-1-0. Radar frame
@@ -138,7 +141,9 @@ class Control_tab(QWidget):
         #               1-1-2-1. Leap connection button
         #               1-1-2-2. Leap runtime view
         #               1-1-2-3. Leap record check box
-        self.leap_connection_btn = setup_sensor_btn(parent=self.leap_block, function=self.leap_connection_btn_action)
+        self.leap_connection_btn = init_button(parent=self.leap_block,
+                                               label=config.control_tab_sensor_btn_label,
+                                               function=self.leap_connection_btn_action)
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
         self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
 
@@ -146,18 +151,27 @@ class Control_tab(QWidget):
         #           1-1-3. UWB block
         #               1-1-3-1. UWB connection button
         #               1-1-3-2. UWB runtime view
-        self.UWB_connection_btn = setup_sensor_btn(parent=self.UWB_block, function=self.UWB_connection_btn_action)
+        self.UWB_connection_btn = init_button(parent=self.UWB_block,
+                                              label=config.control_tab_sensor_btn_label,
+                                              function=self.UWB_connection_btn_action)
         self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
         self.UWB_record_checkbox = setup_check_box(parent=self.UWB_block, function=self.UWB_clickBox)
 
         # -------------------- sixth class --------------------
 
         # ***** ports *****
-        self.data_port_block, self.dport_textbox = setup_data_port(parent=self.radar_connection_block)
-        self.user_port_block, self.uport_textbox = setup_user_port(parent=self.radar_connection_block)
+        self.data_port_block, self.dport_textbox = init_input_box(parent=self.radar_connection_block,
+                                                                  label=config.control_tab_data_port_label,
+                                                                  label_bold=True,
+                                                                  default_input=config.control_tab_d_port_default)
+        self.user_port_block, self.uport_textbox = init_input_box(parent=self.radar_connection_block,
+                                                                  label=config.control_tab_user_port_label,
+                                                                  label_bold=True,
+                                                                  default_input=config.control_tab_u_port_default)
         # ***** connect button *****
-        self.radar_connection_btn = setup_radar_connection_button(parent=self.radar_connection_block,
-                                                                  function=self.radar_connection_btn_action)
+        self.radar_connection_btn = init_button(parent=self.radar_connection_block,
+                                                label=config.control_tab_radar_connection_btn_label,
+                                                function=self.radar_connection_btn_action)
 
         # -------------------- sixth class --------------------
         #               1-1-1-2. Sensor block
@@ -172,9 +186,12 @@ class Control_tab(QWidget):
         #                   1-1-1-2-2. sensor buttons block
         #                       1-1-1-2-2-1. Send_config Button
         #                       1-1-1-2-2-2. Start/Stop sensor button
-        self.config_connection_btn = setup_config_btn(parent=self.sensor_buttons_block,
-                                                      function=self.send_config_btn_action)
-        self.sensor_start_stop_btn = setup_sensor_btn(parent=self.sensor_buttons_block,
+        self.config_connection_btn = init_button(parent=self.sensor_buttons_block,
+                                                 label=config.control_tab_config_btn_label,
+                                                 function=self.send_config_btn_action)
+
+        self.sensor_start_stop_btn = init_button(parent=self.sensor_buttons_block,
+                                                      label=config.control_tab_sensor_btn_label,
                                                       function=self.start_stop_sensor_action)
 
         self.show()
@@ -195,7 +212,7 @@ class Control_tab(QWidget):
         spc_gv.setAlignment(QtCore.Qt.AlignCenter)
         if graph:
             scene.addItem(graph)
-        #spc_gv.setFixedSize(config.WINDOW_WIDTH/4, config.WINDOW_HEIGHT/4)
+        # spc_gv.setFixedSize(config.WINDOW_WIDTH/4, config.WINDOW_HEIGHT/4)
         return scene
 
     def record_btn_action(self):
@@ -205,11 +222,11 @@ class Control_tab(QWidget):
         """
         data_path = self.data_path_textbox.text()
         if not data_path:
-            data_path = config.data_path
+            data_path = config.data_path_default
 
         if self.will_recording_radar:
             if os.path.exists(data_path):
-                self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
+                self.message.setText(config.control_tab_datapath_set_message + "\nCurrent data path: " + data_path)
                 if not self.is_recording_radar:
                     self.is_recording_radar = True
                     print('Recording started!')
@@ -219,12 +236,12 @@ class Control_tab(QWidget):
                     self.record_btn.setText("Start Recording")
 
                     today = datetime.now()
-                    pickle.dump(self.buffer, open(os.path.join(config.data_path,
+                    pickle.dump(self.buffer, open(os.path.join(config.data_path_default,
                                                                today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
-                    print('Data save to ' + config.data_path)
+                    print('Data save to ' + config.data_path_default)
                     self.reset_buffer()
             else:
-                self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
+                self.message.setText(config.control_tab_datapath_invalid_message + "\nCurrent data path: " + data_path)
         elif not (self.will_recording_radar and self.will_recording_leap and self.will_recording_UWB):
             self.message.setText("No sensor selected. Select at least one to record.")
 
@@ -235,14 +252,14 @@ class Control_tab(QWidget):
         """
         if self.mmw_worker.is_connected():
             self.mmw_worker.disconnect_mmw()
-            self.dport_textbox.setPlaceholderText('default ' + config.d_port_default)
-            self.dport_textbox.setPlaceholderText('default ' + config.u_port_default)
-            self.message.setText(config.UDport_disconnected_message)
+            self.dport_textbox.setPlaceholderText('default ' + config.control_tab_d_port_default)
+            self.dport_textbox.setPlaceholderText('default ' + config.control_tab_u_port_default)
+            self.message.setText(config.control_tab_UDport_disconnected_message)
             self.radar_connection_btn.setText('Connect')
         else:
             # TODO: CHECK VALID PORTS
             self.mmw_worker.connect_mmw(uport_name=self.uport_textbox.text(), dport_name=self.dport_textbox.text())
-            self.message.setText(config.UDport_connected_message)
+            self.message.setText(config.control_tab_UDport_connected_message)
             self.radar_connection_btn.setText('Disconnect')
 
     def leap_connection_btn_action(self):
@@ -259,26 +276,26 @@ class Control_tab(QWidget):
 
         config_path = self.config_textbox.text()
         if not config_path:
-            config_path = config.config_file_path_default
+            config_path = config.control_tab_config_file_path_default
 
         if os.path.exists(config_path):
             self.is_valid_config_path = True
-            self.message.setText(config.config_set_message + "\nCurrent path: " + config_path)
+            self.message.setText(config.control_tab_config_set_message + "\nCurrent path: " + config_path)
             self.mmw_worker.send_config(config_path=config_path)
         else:
             self.is_valid_config_path = False
-            self.message.setText(config.config_invalid_message + "\nCurrent path: " + config_path)
+            self.message.setText(config.control_tab_config_invalid_message + "\nCurrent path: " + config_path)
 
     def start_stop_sensor_action(self):
         # TODO: CONNECT WHEN CONFIG PATH VALID
         if self.mmw_worker.is_mmw_running():
             self.sensor_start_stop_btn.setText('Start Sensor')
             self.mmw_worker.stop_mmw()
-            self.message.setText(config.stop_sensor_message)
+            self.message.setText(config.control_tab_stop_sensor_message)
         else:
             self.sensor_start_stop_btn.setText('Stop Sensor')
             self.mmw_worker.start_mmw()
-            self.message.setText(config.start_sensor_message)
+            self.message.setText(config.control_tab_start_sensor_message)
 
     def control_process_mmw_data(self, data_dict):
         """
