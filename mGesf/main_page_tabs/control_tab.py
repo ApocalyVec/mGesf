@@ -4,18 +4,15 @@ import time
 from datetime import datetime
 import numpy as np
 
-from PyQt5 import QtWidgets, QtGui
-from PyQt5 import QtCore
-
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QLabel, QGraphicsScene, QGraphicsView
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView
 import pyqtgraph as pg
 
 from utils.img_utils import array_to_colormap_qim
 
 import mGesf.MMW_worker as MMW_worker
-from mGesf.drawer import *
-import mGesf.config as config
+from utils.main_window_GUI_util import *
+import config as config
 
 
 class Control_tab(QWidget):
@@ -114,7 +111,7 @@ class Control_tab(QWidget):
         #           1-2-2. Record button
         # ***** data_path block *****
         self.sub_record_block = init_container(parent=self.record_block,
-                                                style="background-color: " + config.subcontainer_color + ";")
+                                               style="background-color: " + config.subcontainer_color + ";")
 
         self.data_path_block, self.data_path_textbox = setup_datapath_block(parent=self.sub_record_block)
         # ***** record button *****

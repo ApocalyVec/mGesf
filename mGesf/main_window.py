@@ -1,29 +1,21 @@
-import os
-import pickle
-import time
-from datetime import datetime
-
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import QTimer, pyqtSlot
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget, \
+from PyQt5.QtCore import QTimer
+from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
     QHBoxLayout
 import pyqtgraph as pg
 
-from mGesf.drawer import setup_information_block
+from utils.main_window_GUI_util import setup_information_block
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
-from utils.img_utils import array_to_colormap_qim
 
-import numpy as np
 import mGesf.MMW_worker as MMW_worker
 
 # tabs ======================================
-import mGesf.control_tab as control_tab
-import mGesf.radar_tab as radar_tab
-import mGesf.leap_tab as leap_tab
-import mGesf.UWB_tab as UWB_tab
-import mGesf.gesture_tab as gesture_tab
-import mGesf.config as config
+import mGesf.main_page_tabs.control_tab as control_tab
+import mGesf.main_page_tabs.radar_tab as radar_tab
+import mGesf.main_page_tabs.leap_tab as leap_tab
+import mGesf.main_page_tabs.UWB_tab as UWB_tab
+import mGesf.main_page_tabs.gesture_tab as gesture_tab
+import config as config
+
 
 
 

@@ -1,22 +1,11 @@
-import os
-import pickle
-import time
-from datetime import datetime
-import numpy as np
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView, QTabWidget
 
-from PyQt5 import QtWidgets, QtGui
-from PyQt5 import QtCore
+from utils.main_window_GUI_util import *
+import config as config
+from mGesf.gesture_tabs.DesktopFinger_tab import DesktopFinger_tab
+from mGesf.gesture_tabs.IndexPen_tab import IndexPen_tab
+from mGesf.gesture_tabs.ThuMouth_tab import ThuMouth_tab
 
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QLabel, QGraphicsScene, QGraphicsView, QTabWidget
-import pyqtgraph as pg
-
-from utils.img_utils import array_to_colormap_qim
-
-import mGesf.MMW_worker as MMW_worker
-from mGesf.drawer import *
-import mGesf.config as config
-from mGesf.gesture_tabs import DesktopFinger_tab, IndexPen_tab, ThuMouth_tab
 
 class Gesture_tab(QWidget):
     """
@@ -94,9 +83,9 @@ class Gesture_tab(QWidget):
 
         # Initialize tab screen
         self.tabs = QTabWidget()
-        self.tab1 = IndexPen_tab.IndexPen_tab()
-        self.tab2 = ThuMouth_tab.ThuMouth_tab()
-        self.tab3 = DesktopFinger_tab.DesktopFinger_tab()
+        self.tab1 = IndexPen_tab()
+        self.tab2 = ThuMouth_tab()
+        self.tab3 = DesktopFinger_tab()
 
         self.tabs.addTab(self.tab1, config.gesture_label1)
         self.tabs.addTab(self.tab2, config.gesture_label2)

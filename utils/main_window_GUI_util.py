@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout
 
-from mGesf import config as config
+import config as config
 
 
 def init_view(label, container, label_bold=True, position="center", vertical=True):

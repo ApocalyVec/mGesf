@@ -4,7 +4,7 @@ import numpy as np
 from PyQt5.QtCore import pyqtSignal, QObject
 import pyqtgraph as pg
 
-from mGesf import config
+import config
 from utils.simulation import sim_heatmap, sim_detected_points, sim_imp
 
 import mGesf.exceptions as exceptions
