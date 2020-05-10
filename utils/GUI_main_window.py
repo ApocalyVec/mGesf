@@ -39,51 +39,33 @@ def init_container(parent, label=None, label_position=None, label_bold=True, ver
     return vl
 
 
-def setup_radar_connection_button(parent, function):
-    btn = QtWidgets.QPushButton(text='Connect')
+def init_button(parent, label=None, function=None, style=config.button_style_classic):
+    btn = QtWidgets.QPushButton(text=label)
     btn.clicked.connect(function)
     parent.addWidget(btn)
-    btn.setStyleSheet(config.button_style)
+    btn.setStyleSheet(config.button_style_classic)
+
     return btn
 
 
-def setup_user_port(parent):
-    user_port_block = init_container(parent=parent, label='User Port (Enhanced): ', label_bold=False,
-                                     vertical=False)
-    uport_textbox = QtWidgets.QLineEdit()
-    uport_textbox.setContentsMargins(5, 0, 0, 0)
-    uport_textbox.setText(config.u_port_default)
-    user_port_block.addWidget(uport_textbox)
-    uport_textbox.setStyleSheet("background-color:white;")
+def init_input_box(parent, label=None, label_bold=False, default_input=None):
+    block = init_container(parent=parent,
+                           label=label,
+                           label_bold=label_bold,
+                           vertical=False)
+    textbox = QtWidgets.QLineEdit()
+    textbox.setContentsMargins(5, 0, 0, 0)
+    textbox.setText(default_input)
+    block.addWidget(textbox)
+    textbox.setStyleSheet("background-color:white;")
 
-    return user_port_block, uport_textbox
-
-
-def setup_data_port(parent):
-    data_port_block = init_container(parent=parent, label='Data Port (Standard): ', label_bold=False,
-                                     vertical=False)
-    dport_textbox = QtWidgets.QLineEdit()
-    dport_textbox.setContentsMargins(10, 0, 0, 0)
-    dport_textbox.setText(config.d_port_default)
-    data_port_block.addWidget(dport_textbox)
-    dport_textbox.setStyleSheet("background-color:white;")
-
-    return data_port_block, dport_textbox
+    return block, textbox
 
 
-def setup_datapath_block(parent):
-    data_path_block = init_container(parent=parent, label='Output path: ', vertical=False)
-    data_path_textbox = QtWidgets.QLineEdit()
-    data_path_textbox.setContentsMargins(10, 0, 0, 0)
-    data_path_textbox.setText(config.data_path)
-    data_path_block.addWidget(data_path_textbox)
-    data_path_textbox.setStyleSheet("background-color:white;")
-
-    return data_path_block, data_path_textbox
-
-
-def setup_information_block(parent):
-    information_block1 = init_container(parent=parent, label="Information", label_position="center",
+def init_information_block(parent):
+    information_block1 = init_container(parent=parent,
+                                        label="Information",
+                                        label_position="center",
                                         style="background-color: " + config.container_color + ";")
     information_block = init_container(parent=information_block1,
                                        style="background-color: " + config.subcontainer_color + ";")
@@ -120,40 +102,15 @@ def setup_information_block(parent):
     message.setText(text)
     message.setLayout(scroll_layout)
     return scroll_area, message
-  
-
-def setup_record_button(parent, function):
-    record_btn = QtWidgets.QPushButton(text='Start Recording')
-    record_btn.clicked.connect(function)
-    parent.addWidget(record_btn)
-    record_btn.setStyleSheet(config.button_style)
-    return record_btn
 
 
 def setup_config_path_block(parent):
     is_valid_config_path = False
-    config_textbox = QtWidgets.QLineEdit()
-    config_textbox.setText(config.config_file_path_default)
-    parent.addWidget(config_textbox)
-    config_textbox.setStyleSheet("background-color:white;")
+    config_textbox = init_input_box(parent=parent,
+                                    label=config.control_tab_config_path_label,
+                                    label_bold=True,
+                                    default_input=config.control_tab_config_file_path_default)
     return is_valid_config_path, config_textbox
-
-
-def setup_config_btn(parent, function):
-    config_connection_btn = QtWidgets.QPushButton(text='Send Config')
-    config_connection_btn.clicked.connect(function)
-    parent.addWidget(config_connection_btn)
-    config_connection_btn.setStyleSheet(config.button_style)
-
-    return config_connection_btn
-
-
-def setup_sensor_btn(parent, function):
-    sensor_start_stop_btn = QtWidgets.QPushButton(text='Start Sensor')
-    sensor_start_stop_btn.clicked.connect(function)
-    parent.addWidget(sensor_start_stop_btn)
-    sensor_start_stop_btn.setStyleSheet(config.button_style)
-    return sensor_start_stop_btn
 
 
 def setup_check_box(parent, function):
