@@ -55,7 +55,6 @@ class Gesture_tab(QWidget):
         #       1-1. radar runtime block
         #       1-2. leap runtime block
         #       1-3. UWB runtime block
-
         self.radar_runtime_block = init_container(parent=self.runtime_block, vertical=True)
         self.leap_runtime_block = init_container(parent=self.runtime_block, vertical=True)
         self.uwb_runtime_block = init_container(parent=self.runtime_block, vertical=True)
@@ -74,9 +73,9 @@ class Gesture_tab(QWidget):
         #           1-1-1. leap runtime graph
         #           1-1-2. leap checkbox
 
-        self.leap_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Leap",
+        self.leap_runtime_view = self.init_spec_view(parent=self.leap_runtime_block, label="Leap",
                                                      graph=None)
-        self.leap_record_checkbox = setup_check_box(parent=self.radar_runtime_block, function=self.radar_clickBox)
+        self.leap_record_checkbox = setup_check_box(parent=self.leap_runtime_block, function=self.radar_clickBox)
 
         # -------------------- fourth class -------------------
         #       1-1. UWB runtime block
@@ -104,7 +103,7 @@ class Gesture_tab(QWidget):
 
         # Add tabs to widget
         self.ITD_block.addWidget(self.tabs)
-        self.setLayout(self.ITD_block)
+        # self.setLayout(self.ITD_block)
 
         self.show()
 
