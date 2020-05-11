@@ -117,7 +117,7 @@ class Control_tab(QWidget):
                                                                       default_input=config.data_path_default)
         # ***** record button *****
         self.record_btn = init_button(parent=self.sub_record_block,
-                                      label=config.control_tab_record_btn_label,
+                                      label=config.record_btn_label,
                                       function=self.record_btn_action)
         # -------------------- fifth class --------------------
         #           1-1-1. Radar block
@@ -142,7 +142,7 @@ class Control_tab(QWidget):
         #               1-1-2-2. Leap runtime view
         #               1-1-2-3. Leap record check box
         self.leap_connection_btn = init_button(parent=self.leap_block,
-                                               label=config.control_tab_sensor_btn_label,
+                                               label=config.sensor_btn_label,
                                                function=self.leap_connection_btn_action)
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
         self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
@@ -152,7 +152,7 @@ class Control_tab(QWidget):
         #               1-1-3-1. UWB connection button
         #               1-1-3-2. UWB runtime view
         self.UWB_connection_btn = init_button(parent=self.UWB_block,
-                                              label=config.control_tab_sensor_btn_label,
+                                              label=config.sensor_btn_label,
                                               function=self.UWB_connection_btn_action)
         self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
         self.UWB_record_checkbox = setup_check_box(parent=self.UWB_block, function=self.UWB_clickBox)
@@ -170,7 +170,7 @@ class Control_tab(QWidget):
                                                                   default_input=config.control_tab_u_port_default)
         # ***** connect button *****
         self.radar_connection_btn = init_button(parent=self.radar_connection_block,
-                                                label=config.control_tab_radar_connection_btn_label,
+                                                label=config.radar_connection_btn_label,
                                                 function=self.radar_connection_btn_action)
 
         # -------------------- sixth class --------------------
@@ -187,12 +187,12 @@ class Control_tab(QWidget):
         #                       1-1-1-2-2-1. Send_config Button
         #                       1-1-1-2-2-2. Start/Stop sensor button
         self.config_connection_btn = init_button(parent=self.sensor_buttons_block,
-                                                 label=config.control_tab_config_btn_label,
+                                                 label=config.send_config_btn_label,
                                                  function=self.send_config_btn_action)
 
         self.sensor_start_stop_btn = init_button(parent=self.sensor_buttons_block,
-                                                      label=config.control_tab_sensor_btn_label,
-                                                      function=self.start_stop_sensor_action)
+                                                 label=config.sensor_btn_label,
+                                                 function=self.start_stop_sensor_action)
 
         self.show()
 
