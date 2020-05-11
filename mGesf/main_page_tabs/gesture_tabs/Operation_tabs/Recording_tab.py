@@ -3,14 +3,10 @@ import webbrowser
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QSlider, QLabel
 from PyQt5.QtCore import Qt
 
+from mGesf.main_page_tabs.gesture_tabs.Operation_tabs import help_btn_action
 from utils.GUI_main_window import *
 from utils.GUI_operation_tab import *
 import config
-
-
-def help_btn_label():
-    webbrowser.open(config.help_link)
-    return
 
 
 class Recording_tab(QWidget):
@@ -36,23 +32,23 @@ class Recording_tab(QWidget):
         #       1-6. Buttons + help
 
         self.interval_last_block = init_slider_bar_box(self.input_block,
-                                                       label=config.operation_recording_interval_label,
+                                                       label=config.operation_interval_label,
                                                        interval=config.recording_interval_range)
-        self.repeats_block = init_slider_bar_box(self.input_block, label=config.operation_recording_repeats_label,
+        self.repeats_block = init_slider_bar_box(self.input_block, label=config.operation_repeats_label,
                                                  interval=config.recording_repeat_range)
 
         self.classes_block = init_input_box(self.input_block,
-                                            label=config.operation_recording_classes_label,
+                                            label=config.operation_classes_label,
                                             label_bold=False,
-                                            default_input=config.operation_recording_classes_default)
+                                            default_input=config.operation_classes_default)
         self.subject_name_block = init_input_box(self.input_block,
-                                                 label=config.operation_recording_subject_name_label,
+                                                 label=config.operation_subject_name_label,
                                                  label_bold=False,
-                                                 default_input=config.operation_recording_subject_name_default)
+                                                 default_input=config.operation_subject_name_default)
         self.training_dir_block = init_input_box(self.input_block,
-                                                 label=config.operation_recording_training_data_dir_label,
+                                                 label=config.operation_training_data_path_label,
                                                  label_bold=False,
-                                                 default_input=config.operation_recording_training_data_dir_default)
+                                                 default_input=config.operation_training_data_dir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons + help (horizontally distributed)
@@ -69,17 +65,20 @@ class Recording_tab(QWidget):
         #           1-6-1-3. Start Recording
 
         self.interrupt_btn = init_button(parent=self.buttons_block,
-                                         label=config.operation_recording_interrupt_btn_label,
+                                         label=config.interrupt_btn_label,
                                          function=self.interrupt_btn_action)
+
         self.test_btn = init_button(parent=self.buttons_block,
-                                    label=config.operation_recording_test_btn_label,
+                                    label=config.test_btn_label,
                                     function=self.test_btn_action)
+
         self.recording_btn = init_button(parent=self.buttons_block,
-                                         label=config.operation_recording_record_btn_label,
+                                         label=config.record_btn_label,
                                          function=self.recording_btn_action)
+
         self.help_btn = init_button(parent=self.buttons_block,
-                                    label=config.operation_recording_help_btn_label,
-                                    function=help_btn_label)
+                                    label=config.help_btn_label,
+                                    function=help_btn_action)
 
         self.show()
 
