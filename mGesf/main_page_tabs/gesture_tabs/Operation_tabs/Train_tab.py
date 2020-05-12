@@ -37,16 +37,16 @@ class Train_tab(QWidget):
         self.training_dir_block = init_input_box(self.text_box_block,
                                                  label=config.operation_training_data_path_label,
                                                  label_bold=False,
-                                                 default_input=config.operation_training_data_dir_default)
+                                                 default_input='default: ' + config.operation_training_data_dir_default)
 
         self.constructor_path_block = init_input_box(self.text_box_block,
                                                      label=config.operation_training_constructor_path_label,
-                                                     default_input=config.operation_constructor_path_default)
+                                                     default_input='default: ' + config.operation_constructor_path_default)
 
         self.model_dir_block = init_input_box(self.text_box_block,
                                               label=config.operation_model_dir_label,
                                               label_bold=False,
-                                              default_input=config.operation_constructor_path_default)
+                                              default_input='default: ' + config.operation_constructor_path_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons

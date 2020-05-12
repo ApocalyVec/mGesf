@@ -22,4 +22,4 @@ def init_slider_bar_box(parent, label=None, interval=5):
 
     line_container.addWidget(slider)
 
-    return line_container
+    return line_container, slider

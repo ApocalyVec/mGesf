@@ -226,7 +226,7 @@ class Control_tab(QWidget):
 
         if self.will_recording_radar:
             if os.path.exists(data_path):
-                self.message.setText(config.control_tab_datapath_set_message + "\nCurrent data path: " + data_path)
+                self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
                 if not self.is_recording_radar:
                     self.is_recording_radar = True
                     print('Recording started!')
@@ -241,7 +241,7 @@ class Control_tab(QWidget):
                     print('Data save to ' + config.data_path_default)
                     self.reset_buffer()
             else:
-                self.message.setText(config.control_tab_datapath_invalid_message + "\nCurrent data path: " + data_path)
+                self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
         elif not (self.will_recording_radar and self.will_recording_leap and self.will_recording_UWB):
             self.message.setText("No sensor selected. Select at least one to record.")
 
@@ -252,8 +252,8 @@ class Control_tab(QWidget):
         """
         if self.mmw_worker.is_connected():
             self.mmw_worker.disconnect_mmw()
-            self.dport_textbox.setPlaceholderText('default ' + config.control_tab_d_port_default)
-            self.dport_textbox.setPlaceholderText('default ' + config.control_tab_u_port_default)
+            self.dport_textbox.setPlaceholderText('default: ' + config.control_tab_d_port_default)
+            self.dport_textbox.setPlaceholderText('default: ' + config.control_tab_u_port_default)
             self.message.setText(config.control_tab_UDport_disconnected_message)
             self.radar_connection_btn.setText('Connect')
         else:
@@ -280,11 +280,11 @@ class Control_tab(QWidget):
 
         if os.path.exists(config_path):
             self.is_valid_config_path = True
-            self.message.setText(config.control_tab_config_set_message + "\nCurrent path: " + config_path)
+            self.message.setText(config.config_set_message + "\nCurrent path: " + config_path)
             self.mmw_worker.send_config(config_path=config_path)
         else:
             self.is_valid_config_path = False
-            self.message.setText(config.control_tab_config_invalid_message + "\nCurrent path: " + config_path)
+            self.message.setText(config.config_invalid_message + "\nCurrent path: " + config_path)
 
     def start_stop_sensor_action(self):
         # TODO: CONNECT WHEN CONFIG PATH VALID
