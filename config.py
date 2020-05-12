@@ -52,26 +52,27 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "default: COM14"
-control_tab_u_port_default = "default: COM3"
+control_tab_d_port_default = "COM14"
+control_tab_u_port_default = "COM3"
 
 # operation tab
-operation_classes_default = "default: A B C D E"
-operation_subject_name_default = "default: god"
+operation_classes_default = "A B C D E"
+operation_subject_name_default = "god"
 operation_training_data_dir_default = "../data"
-operation_model_path_default = "default: ../model/idp_model.h5"
-operation_model_dir_default = "default: ../model/"
-operation_constructor_path_default = "default: ../learn/idp_classifier.py"
+operation_model_path_default = "../model/idp_model.h5"
+operation_model_dir_default = "../model/"
+operation_constructor_path_default = "../learn/idp_classifier.py"
 
 # ============== messages ==============
+config_set_message = "Config file set"
+config_invalid_message = "Invalid config path"
+datapath_set_message = "data path set"
+datapath_invalid_message = "Invalid data path"
+
 control_tab_start_sensor_message = "Sensor running"
 control_tab_stop_sensor_message = "Sensor stopped"
 control_tab_UDport_disconnected_message = "Disconnected to ports"
 control_tab_UDport_connected_message = "Connected to ports"
-control_tab_config_set_message = "Config file set"
-control_tab_config_invalid_message = "Invalid config path"
-control_tab_datapath_set_message = "data path set"
-control_tab_datapath_invalid_message = "Invalid data path"
 
 control_tab_config_file_path_default = 'default: mGesf/profiles/aop/30fps_azi_rd.cfg'
 data_path_default = 'default: ../data'
