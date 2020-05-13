@@ -8,10 +8,20 @@ This application supports a variety of sensors, including:
 * LeapMotion (coming soon)
 * DecaWave UWB sensors (coming soon)
 
-To run this application, first run this command to install the prerequisites.
+To run this application, first make sure you have the GUI backend PyQT5 installed. Depending on your O.S., use the following commands:
+
+ubuntu: `sudo apt-get install python3-pyqt5`
+MacOs: `brew install pyqt`
+
+Then install the package in your python interpreter: 
+`pip install pyqt5`
+
+first run this command to install the prerequisites.
 ```bash
 python setup.py install
 ```
+
+
 Now run this app with this command
 ```bash
 python main.py
