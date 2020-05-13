@@ -2,6 +2,20 @@ WINDOW_HEIGHT = 720
 WINDOW_WIDTH = 1280
 
 # ============== labels ==============
+# button labels
+
+interrupt_btn_label = "Interrupt"
+test_btn_label = "Start/end test"
+count_sample_btn_label = "Count Samples"
+train_btn_label = "Train"
+radar_connection_btn_label = "Connect"
+record_btn_label = 'Start Recording'
+help_btn_label = "Help"
+send_config_btn_label = 'Send Config'
+sensor_btn_label = 'Start Sensor'
+detection_load_btn_label = 'Load Data&Model'
+detection_start_Stop_btn_label = 'Start/Stop Detection'
+
 # main window
 main_window_control_tab_label = "CONTROL"
 main_window_radar_tab_label = "RADAR"
@@ -15,11 +29,6 @@ control_tab_data_port_label = 'Data Port (Standard): '
 control_tab_output_path_label = 'Output path:'
 control_tab_config_path_label = 'Config path:'
 
-control_tab_radar_connection_btn_label = "Connect"
-control_tab_record_btn_label = 'Start Recording'
-control_tab_config_btn_label = 'Send Config'
-control_tab_sensor_btn_label = 'Start Sensor'
-
 # gesture tab
 gesture_index_pen_label = "Index Pen"
 gesture_thuMouth_label = "ThuMouth"
@@ -30,35 +39,40 @@ operation_recording_label = "Recording"
 operation_training_label = "Training"
 operation_detection_label = "Detection"
 
-operation_recording_interval_label = "Interval lasts (sec)"
-operation_recording_repeats_label = "Repeats (times)"
-operation_recording_classes_label = "Classes"
-operation_recording_subject_name_label = "Subject Name"
-operation_recording_training_data_dir_label = "Training Data Directory"
-operation_recording_interrupt_btn_label = "Interrupt"
-operation_recording_test_btn_label = "Start/end test"
-operation_recording_record_btn_label = "Start Recording"
-operation_recording_help_btn_label = "Help"
+operation_training_data_path_label = "Training Data Path"
+operation_model_path_label = "Model Path"
+
+operation_interval_label = "Interval lasts (sec)"
+operation_repeats_label = "Repeats (times)"
+operation_classes_label = "Classes"
+operation_subject_name_label = "Subject Name"
+operation_model_dir_label = "Model Directory"
+operation_training_constructor_path_label = "Constructor Path"
+
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "default: COM14"
-control_tab_u_port_default = "default: COM3"
+control_tab_d_port_default = "COM14"
+control_tab_u_port_default = "COM3"
 
 # operation tab
-operation_recording_classes_default = "default: A B C D E"
-operation_recording_subject_name_default = "default: god"
-operation_recording_training_data_dir_default = "../data"
+operation_classes_default = "A B C D E"
+operation_subject_name_default = "god"
+operation_training_data_dir_default = "../data"
+operation_model_path_default = "../model/idp_model.h5"
+operation_model_dir_default = "../model/"
+operation_constructor_path_default = "../learn/idp_classifier.py"
 
 # ============== messages ==============
+config_set_message = "Config file set"
+config_invalid_message = "Invalid config path"
+datapath_set_message = "data path set"
+datapath_invalid_message = "Invalid data path"
+
 control_tab_start_sensor_message = "Sensor running"
 control_tab_stop_sensor_message = "Sensor stopped"
 control_tab_UDport_disconnected_message = "Disconnected to ports"
 control_tab_UDport_connected_message = "Connected to ports"
-control_tab_config_set_message = "Config file set"
-control_tab_config_invalid_message = "Invalid config path"
-control_tab_datapath_set_message = "data path set"
-control_tab_datapath_invalid_message = "Invalid data path"
 
 control_tab_config_file_path_default = 'default: mGesf/profiles/aop/30fps_azi_rd.cfg'
 data_path_default = 'default: ../data'

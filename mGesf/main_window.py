@@ -1,9 +1,11 @@
+import sys
+
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
     QHBoxLayout
 import pyqtgraph as pg
-
-from utils.GUI_main_window import init_information_block
+import time
+from utils.InformationPane import InformationPane
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 import mGesf.MMW_worker as MMW_worker
@@ -13,7 +15,7 @@ import mGesf.main_page_tabs.control_tab as control_tab
 import mGesf.main_page_tabs.radar_tab as radar_tab
 import mGesf.main_page_tabs.leap_tab as leap_tab
 import mGesf.main_page_tabs.UWB_tab as UWB_tab
-import mGesf.main_page_tabs.gesture_tab as gesture_tab
+import mGesf.main_page_tabs.gesture_tab.gesture_tab as gesture_tab
 import config as config
 
 
@@ -26,6 +28,9 @@ import config as config
 #     progress = pyqtSignal(int)
 
 # TODO add resume function to the stop button
+from utils.std_utils import Stream
+
+
 class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
@@ -83,7 +88,11 @@ class Tabs(QWidget):
         self.setLayout(self.layout)
 
         # ***** information block *****
-        self.scrollArea, self.message = init_information_block(parent=self.layout)
+        self.info_pane = InformationPane(parent=self.layout)
+        sys.stdout = Stream(newText=self.on_print)
+
+    def __del__(self):
+        sys.stdout = sys.__stdout__  # return control to regular stdout
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
@@ -91,3 +100,6 @@ class Tabs(QWidget):
         ticks every 'refresh' milliseconds
         """
         self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
+
+    def on_print(self, msg):
+        self.info_pane.push(msg)
