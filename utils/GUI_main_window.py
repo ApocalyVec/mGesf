@@ -9,9 +9,7 @@ def init_view(label, container, label_bold=True, position="center", vertical=Tru
         vl = QtGui.QVBoxLayout(container)
     else:
         vl = QtGui.QHBoxLayout(container)
-
     if label:
-        
         ql = QLabel()
         if label_bold:
             ql.setStyleSheet("font: bold 14px;")

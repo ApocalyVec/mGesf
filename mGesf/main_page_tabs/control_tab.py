@@ -226,7 +226,7 @@ class Control_tab(QWidget):
 
         if self.will_recording_radar:
             if os.path.exists(data_path):
-                self.message.setText(config.datapath_set_message + "\nCurrent data path: " + data_path)
+                print(config.datapath_set_message + "\nCurrent data path: " + data_path)
                 if not self.is_recording_radar:
                     self.is_recording_radar = True
                     print('Recording started!')
@@ -241,9 +241,9 @@ class Control_tab(QWidget):
                     print('Data save to ' + config.data_path_default)
                     self.reset_buffer()
             else:
-                self.message.setText(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
+                print(config.datapath_invalid_message + "\nCurrent data path: " + data_path)
         elif not (self.will_recording_radar and self.will_recording_leap and self.will_recording_UWB):
-            self.message.setText("No sensor selected. Select at least one to record.")
+            print("No sensor selected. Select at least one to record.")
 
     def radar_connection_btn_action(self):
         """ 1. Get user entered ports
@@ -254,19 +254,19 @@ class Control_tab(QWidget):
             self.mmw_worker.disconnect_mmw()
             self.dport_textbox.setPlaceholderText('default: ' + config.control_tab_d_port_default)
             self.dport_textbox.setPlaceholderText('default: ' + config.control_tab_u_port_default)
-            self.message.setText(config.control_tab_UDport_disconnected_message)
+            print(config.control_tab_UDport_disconnected_message)
             self.radar_connection_btn.setText('Connect')
         else:
             # TODO: CHECK VALID PORTS
             self.mmw_worker.connect_mmw(uport_name=self.uport_textbox.text(), dport_name=self.dport_textbox.text())
-            self.message.setText(config.control_tab_UDport_connected_message)
+            print(config.control_tab_UDport_connected_message)
             self.radar_connection_btn.setText('Disconnect')
 
     def leap_connection_btn_action(self):
-        self.message.setText("Leap Connection working...")
+        print("Leap Connection working...")
 
     def UWB_connection_btn_action(self):
-        self.message.setText("UWB Connection working...")
+        print("UWB Connection working...")
 
     def send_config_btn_action(self):
         """ 1. Get user entered config path
@@ -280,22 +280,22 @@ class Control_tab(QWidget):
 
         if os.path.exists(config_path):
             self.is_valid_config_path = True
-            self.message.setText(config.config_set_message + "\nCurrent path: " + config_path)
+            print(config.config_set_message + "\nCurrent path: " + config_path)
             self.mmw_worker.send_config(config_path=config_path)
         else:
             self.is_valid_config_path = False
-            self.message.setText(config.config_invalid_message + "\nCurrent path: " + config_path)
+            print(config.config_invalid_message + "\nCurrent path: " + config_path)
 
     def start_stop_sensor_action(self):
         # TODO: CONNECT WHEN CONFIG PATH VALID
         if self.mmw_worker.is_mmw_running():
             self.sensor_start_stop_btn.setText('Start Sensor')
             self.mmw_worker.stop_mmw()
-            self.message.setText(config.control_tab_stop_sensor_message)
+            print(config.control_tab_stop_sensor_message)
         else:
             self.sensor_start_stop_btn.setText('Stop Sensor')
             self.mmw_worker.start_mmw()
-            self.message.setText(config.control_tab_start_sensor_message)
+            print(config.control_tab_start_sensor_message)
 
     def control_process_mmw_data(self, data_dict):
         """
@@ -334,28 +334,28 @@ class Control_tab(QWidget):
 
         if state == QtCore.Qt.Checked:
             self.will_recording_radar = True
-            self.message.setText(config.radar_box_checked)
+            print(config.radar_box_checked)
         else:
             self.will_recording_radar = False
-            self.message.setText(config.radar_box_unchecked)
+            print(config.radar_box_unchecked)
 
     def leap_clickBox(self, state):
 
         if state == QtCore.Qt.Checked:
             self.will_recording_leap = True
-            self.message.setText(config.leap_box_checked)
+            print(config.leap_box_checked)
         else:
             self.will_recording_leap = False
-            self.message.setText(config.leap_box_unchecked)
+            print(config.leap_box_unchecked)
 
     def UWB_clickBox(self, state):
 
         if state == QtCore.Qt.Checked:
             self.will_recording_UWB = True
-            self.message.setText(config.UWB_box_checked)
+            print(config.UWB_box_checked)
         else:
             self.will_recording_UWB = False
-            self.message.setText(config.UWB_box_unchecked)
+            print(config.UWB_box_unchecked)
 
     def reset_buffer(self):
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
