@@ -37,12 +37,12 @@ class Recording_tab(QWidget):
         #       1-5. Training data directory
         #       1-6. Buttons + help
 
-        self.interval_last_block, self.interval_slider = init_slider_bar_box(self.input_block,
-                                                                             label=config.operation_interval_label,
-                                                                             interval=config.recording_interval_range)
-        self.repeats_block, self.repeat_slider = init_slider_bar_box(self.input_block,
-                                                                     label=config.operation_repeats_label,
-                                                                     interval=config.recording_repeat_range)
+        self.interval_last_block, self.interval_slider_view = init_slider_bar_box(self.input_block,
+                                                                                  label=config.operation_interval_label,
+                                                                                  interval=config.recording_interval_range)
+        self.repeats_block, self.repeat_slider_view = init_slider_bar_box(self.input_block,
+                                                                          label=config.operation_repeats_label,
+                                                                          interval=config.recording_repeat_range)
 
         self.classes_block, self.classes_textbox = init_input_box(self.input_block,
                                                                   label=config.operation_classes_label,
@@ -97,12 +97,14 @@ class Recording_tab(QWidget):
         self.circle_view = QGraphicsView(self.circle_scene)
         self.x1, self.x2, self.x3, self.x4, self.y1, self.y2, self.y3, self.y4, self.circle_scene_width, \
         self.circle_scene_height = self.setup_canvas()
-        self.message_block = init_container(parent=self.recording_block, )
+        self.paint(first_circle_colored=False)
+
+        self.message_block = init_container(parent=self.recording_block, vertical=True)
 
         self.show()
 
-        self.interval = self.interval_slider.value()
-        self.repeats = self.repeat_slider.value()
+        self.interval = self.interval_slider_view.sl.value()
+        self.repeats = self.repeat_slider_view.sl.value()
         self.classes = self.get_classes()
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
@@ -121,7 +123,7 @@ class Recording_tab(QWidget):
         ticks every 'refresh' milliseconds
         """
         if self.counter == 1:
-            #dah()
+            # dah()
             dih()
         else:
             dih()
@@ -210,8 +212,8 @@ class Recording_tab(QWidget):
                                      pen, brush)
 
     def update_inputs(self):
-        self.interval = self.interval_slider.value()
-        self.repeats = self.repeat_slider.value()
+        self.interval = self.interval_slider_view.value()
+        self.repeats = self.repeat_slider_view.value()
         self.classes = self.get_classes()
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
