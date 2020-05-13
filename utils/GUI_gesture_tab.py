@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QTabWidget
 
-from mGesf.main_page_tabs.gesture_tabs.Operation_tabs import Recording_tab, Detection_tab, Train_tab
+from mGesf.main_page_tabs.gesture_tab.indexPen.operation_tabs import Detection_tab, Recording_tab, Train_tab
 import config as config
 
 

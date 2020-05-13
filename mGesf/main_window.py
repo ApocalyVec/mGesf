@@ -13,7 +13,7 @@ import mGesf.main_page_tabs.control_tab as control_tab
 import mGesf.main_page_tabs.radar_tab as radar_tab
 import mGesf.main_page_tabs.leap_tab as leap_tab
 import mGesf.main_page_tabs.UWB_tab as UWB_tab
-import mGesf.main_page_tabs.gesture_tab as gesture_tab
+import mGesf.main_page_tabs.gesture_tab.gesture_tab as gesture_tab
 import config as config
 
 
