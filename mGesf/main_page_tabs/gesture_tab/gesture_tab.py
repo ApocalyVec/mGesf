@@ -2,9 +2,9 @@ from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraph
 
 from utils.GUI_main_window import *
 import config as config
-from mGesf.main_page_tabs.gesture_tab.desktopFingertip import DesktopFinger_tab
-from mGesf.main_page_tabs.gesture_tab.indexPen.IndexPen_tab import IndexPen_tab
-from mGesf.main_page_tabs.gesture_tab.thuMouth.ThuMouse_tab import ThuMouth_tab
+from mGesf.main_page_tabs.gesture_tab.desktopFingertip.DesktopFingertip import DesktopFingertip
+from mGesf.main_page_tabs.gesture_tab.indexPen.IndexPen import IndexPen
+from mGesf.main_page_tabs.gesture_tab.thuMouth.ThuMouse import ThuMouth
 
 
 class Gesture_tab(QWidget):
@@ -82,9 +82,9 @@ class Gesture_tab(QWidget):
 
         # Initialize tab screen
         self.tabs = QTabWidget()
-        self.tab1 = IndexPen_tab()
-        self.tab2 = ThuMouth_tab()
-        self.tab3 = DesktopFinger_tab()
+        self.tab1 = IndexPen()
+        self.tab2 = ThuMouth()
+        self.tab3 = DesktopFingertip()
 
         self.tabs.addTab(self.tab1, config.gesture_index_pen_label)
         self.tabs.addTab(self.tab2, config.gesture_thuMouth_label)

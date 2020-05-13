@@ -4,8 +4,8 @@ from utils.GUI_gesture_tab import setup_operation_tabs
 from utils.GUI_main_window import init_container
 
 
-class IndexPen_tab(QWidget):
-    def __init__(self, *args, **kwargs):
+class ThuMouth(QWidget):
+    def __init__(self):
         super().__init__()
         self.main_page = QHBoxLayout(self)
 
@@ -14,5 +14,3 @@ class IndexPen_tab(QWidget):
 
         self.setLayout(self.main_page)
         self.show()
-
-

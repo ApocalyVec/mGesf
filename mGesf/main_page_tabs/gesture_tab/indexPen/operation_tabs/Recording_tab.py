@@ -7,7 +7,7 @@ from PyQt5.QtGui import QPainter, QBrush, QPen, QTransform
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 import sys
-from mGesf.main_page_tabs.gesture_tab.Operation_tabs import help_btn_action
+from mGesf.main_page_tabs.gesture_tab import help_btn_action
 from utils.GUI_main_window import *
 from utils.GUI_operation_tab import *
 from utils.sound import *
