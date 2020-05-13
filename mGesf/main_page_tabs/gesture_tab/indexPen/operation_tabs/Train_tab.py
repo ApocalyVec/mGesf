@@ -18,7 +18,7 @@ class Train_tab(QWidget):
         # 1. input block
         # 2. information block
         self.input_block = init_container(parent=self.main_page, vertical=True)
-        self.scrollArea, self.message = init_information_block(parent=self.main_page)
+        # self.scrollArea, self.message = init_information_block(parent=self.main_page)
 
         # -------------------- third class --------------------
         #   1. Input block

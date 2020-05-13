@@ -103,8 +103,8 @@ class Recording_tab(QWidget):
 
         self.show()
 
-        self.interval = self.interval_slider_view.sl.value()
-        self.repeats = self.repeat_slider_view.sl.value()
+        self.interval = self.interval_slider_view.slider.value()
+        self.repeats = self.repeat_slider_view.slider.value()
         self.classes = self.get_classes()
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
@@ -212,8 +212,8 @@ class Recording_tab(QWidget):
                                      pen, brush)
 
     def update_inputs(self):
-        self.interval = self.interval_slider_view.sl.value()
-        self.repeats = self.repeat_slider_view.sl.value()
+        self.interval = self.interval_slider_view.slider.value()
+        self.repeats = self.repeat_slider_view.slider.value()
         self.classes = self.get_classes()
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()

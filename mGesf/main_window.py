@@ -2,8 +2,8 @@ from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
     QHBoxLayout
 import pyqtgraph as pg
-
-from utils.GUI_main_window import init_information_block
+import time
+from utils.InformationPane import InformationPane
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 import mGesf.MMW_worker as MMW_worker
@@ -83,11 +83,13 @@ class Tabs(QWidget):
         self.setLayout(self.layout)
 
         # ***** information block *****
-        self.scrollArea, self.message = init_information_block(parent=self.layout)
+        self.info_pane = InformationPane(parent=self.layout)
+        # self.scrollArea, self.message = init_information_block(parent=self.layout)
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
         """
         ticks every 'refresh' milliseconds
         """
+        self.info_pane.push(str(time.time()))  # TODO get rid of this
         self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick

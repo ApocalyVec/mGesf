@@ -9,7 +9,9 @@ def init_view(label, container, label_bold=True, position="center", vertical=Tru
         vl = QtGui.QVBoxLayout(container)
     else:
         vl = QtGui.QHBoxLayout(container)
+
     if label:
+        
         ql = QLabel()
         if label_bold:
             ql.setStyleSheet("font: bold 14px;")
@@ -60,48 +62,6 @@ def init_input_box(parent, label=None, label_bold=False, default_input=None):
     textbox.setStyleSheet("background-color:white;")
 
     return block, textbox
-
-
-def init_information_block(parent):
-    information_block1 = init_container(parent=parent,
-                                        label="Information",
-                                        label_position="center",
-                                        style="background-color: " + config.container_color + ";")
-    information_block = init_container(parent=information_block1,
-                                       style="background-color: " + config.subcontainer_color + ";")
-    message = QLabel()
-    message.setText("Hi there")
-    information_block.addWidget(message)
-
-    # widget for the scroll area
-    info_widget = QtGui.QWidget()
-    information_block1.addWidget(info_widget)
-    info_layout = QVBoxLayout()
-    info_widget.setLayout(info_layout)
-
-    # Scroll area
-    scroll_area = QtWidgets.QScrollArea()
-    scroll_area.setWidgetResizable(True)
-    scroll_area.setWidget(info_widget)
-    scroll_area.setFocusPolicy(QtCore.Qt.NoFocus)
-
-    # Scroll Area Content widget
-    content = QtWidgets.QWidget(scroll_area)
-    scroll_area.ensureWidgetVisible(info_widget)
-    content.setFocusPolicy(QtCore.Qt.NoFocus)
-
-    # add a layout to put in message
-    scroll_layout = QVBoxLayout(content)
-    scroll_layout.setSpacing(20.0)
-
-    message = QLabel()
-    text = "# Scroll Area Content\nscrollArea_content = QtWidgets.QWidget(scrollArea)" \
-           "\nscrollArea.ensureWidgetVisible(scrollArea_content)\n" \
-           " scrollArea_content.setFocusPolicy(QtCore.Qt.NoFocus)"
-
-    message.setText(text)
-    message.setLayout(scroll_layout)
-    return scroll_area, message
 
 
 def setup_config_path_block(parent):
