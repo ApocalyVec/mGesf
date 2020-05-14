@@ -8,7 +8,9 @@ requires = ['PyQt5',
             'pyqtgraph',
             'pyserial',
             'matplotlib',
-            'qimage2ndarray'
+            'qimage2ndarray',
+            'pydub',
+            'ffmpeg'
             ]
 
 setuptools.setup(

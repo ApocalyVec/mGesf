@@ -16,3 +16,14 @@ Now run this app with this command
 ```bash
 python main.py
 ```
+Make sure you have the audio library installed:
+Mac:
+```bash
+brew install ffmpeg
+```
+Ubuntu:
+```bash
+sudo apt-get install ffmpeg
+```
+For Windows, it's a bit more involved as the downloaded library needs to be added to the environment variables.
+This is a good [tuorial](http://blog.gregzaal.com/how-to-install-ffmpeg-on-windows/).
