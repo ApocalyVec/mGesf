@@ -1,23 +1,41 @@
 from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout
+from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout, QHBoxLayout
 
 import config as config
 
 
-def init_view(label, container, label_bold=True, position="center", vertical=True):
+def init_view(label, container, label_bold=True, position="centertop", vertical=True):
     if vertical:
-        vl = QtGui.QVBoxLayout(container)
+        vl = QVBoxLayout(container)
     else:
-        vl = QtGui.QHBoxLayout(container)
+        vl = QHBoxLayout(container)
     if label:
         ql = QLabel()
         if label_bold:
             ql.setStyleSheet("font: bold 14px;")
-        if position == "center":
+
+        # positions
+        if position == "centertop":
             ql.setAlignment(QtCore.Qt.AlignTop)
             ql.setAlignment(QtCore.Qt.AlignCenter)
+
+        elif position == "center":
+            ql.setAlignment(QtCore.Qt.AlignCenter)
+
         elif position == "rightbottom":
             ql.setAlignment(QtCore.Qt.AlignRight)
+            ql.setAlignment(QtCore.Qt.AlignBottom)
+
+        elif position == "righttop":
+            ql.setAlignment(QtCore.Qt.AlignRight)
+            ql.setAlignment(QtCore.Qt.AlignTop)
+
+        elif position == "lefttop":
+            ql.setAlignment(QtCore.Qt.AlignLeft)
+            ql.setAlignment(QtCore.Qt.AlignTop)
+
+        elif position == "leftbottom":
+            ql.setAlignment(QtCore.Qt.AlignLeft)
             ql.setAlignment(QtCore.Qt.AlignBottom)
 
         ql.setText(label)

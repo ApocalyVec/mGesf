@@ -1,10 +1,12 @@
 from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox
+from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox, QWidget
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
 
-from utils.GUI_main_window import init_container
+from utils.GUI_main_window import init_container, init_view
 from utils.labeled_Slider import LabeledSlider
+from PyQt5.QtGui import QIcon, QPixmap
+
 
 def init_slider_bar_box(parent, label=None, interval=5):
     line_container = init_container(parent=parent, vertical=False)
@@ -40,7 +42,7 @@ def init_forecast_block(parent, label=None, bold=False, font=14):
         ql.setText(label)
         vl.addWidget(ql)
 
-    return vl
+    return vl, ql
 
 
 def init_preparation_block(parent, text):
@@ -103,3 +105,42 @@ def show_finished_box():
     msg.setText("Finished")
     msg.exec()
 
+
+def init_locate_unit_block(parent, number=None, label_position="centertop", image_source=None):
+    # contains a label(image) and another label(number)
+
+    container = QWidget()
+    parent.addWidget(container)
+    layout = QHBoxLayout(container)
+
+    image = QLabel()
+    image.setAlignment(QtCore.Qt.AlignCenter)
+
+    # if no image_source, use a place holder
+    if not image_source:
+        pixmap = QPixmap("resource/figures")
+    else:
+        pixmap = QPixmap(image_source)
+
+    image.setPixmap(pixmap)
+    container.resize(pixmap.width(), pixmap.height())
+
+    # add the label
+    label = QLabel()
+    if not number:
+        label.setText("0")
+    else:
+        label.setText(number)
+
+    if label_position == "righttop":
+        label.setAlignment(QtCore.Qt.AlignRight)
+        label.setAlignment(QtCore.Qt.AlignTop)
+
+    elif label_position == "lefttop":
+        label.setAlignment(QtCore.Qt.AlignLeft)
+        label.setAlignment(QtCore.Qt.AlignTop)
+
+    layout.addWidget(label)
+
+
+    return image

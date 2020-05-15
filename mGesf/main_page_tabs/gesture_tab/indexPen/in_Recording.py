@@ -378,7 +378,10 @@ class Recording(QWidget):
             if self.is_return_pressed:
                 # destroy the preparation text block
                 # create the forecast block
-                self.forecast_block = init_forecast_block(self.text_block, label="   ", font=36, bold=True)
+                self.forecast_block, self.forecast_label = init_forecast_block(self.text_block,
+                                                                               label="   ",
+                                                                               font=36,
+                                                                               bold=True)
 
                 # start the timer
                 self.forecast_timer.start()
@@ -393,6 +396,7 @@ class Recording(QWidget):
         # if not recording yet
         elif not self.is_recording:
 
+            self.update_inputs()
             # try starting recording
             # check the data path first
             self.is_dir_valid = self.check_dir_valid()
@@ -402,6 +406,7 @@ class Recording(QWidget):
 
                 # start recording
                 self.is_recording = True
+                self.prepare()
                 self.recording_btn.setText(config.record_btn_end_label)
                 self.forecast_timer.start()
 
@@ -414,6 +419,7 @@ class Recording(QWidget):
         return
 
     def check_dir_valid(self):
+        print(self.training_dir)
         if os.path.exists(self.training_dir):
             return True
         else:

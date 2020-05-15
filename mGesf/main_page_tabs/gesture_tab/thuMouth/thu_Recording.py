@@ -5,7 +5,6 @@ from utils.GUI_operation_tab import *
 import config
 import os
 
-
 class Recording(QWidget):
     def __init__(self):
         super().__init__()
@@ -17,6 +16,9 @@ class Recording(QWidget):
         self.is_testing = False
         self.is_recording = False
         self.is_dir_valid = False
+
+        # for checking only one box
+        self._toggle = None
 
         # the timer
         self.timer = QtCore.QTimer()
@@ -32,7 +34,7 @@ class Recording(QWidget):
         # 1. input block (vertical)
         # 2. recording block
         self.input_block = init_container(parent=self.main_page, vertical=True)
-        self.recording = init_container(parent=self.main_page, vertical=False)
+        self.recording_block = init_container(parent=self.main_page, vertical=False)
 
         # -------------------- third class --------------------
         #   1. Input block
@@ -86,17 +88,41 @@ class Recording(QWidget):
                                          label=config.record_btn_start_label,
                                          function=self.recording_btn_action)
 
-        # ======================  inputs  ========================
+
+        # -------------------- third class --------------------
+        #   1. recording block
+        #       1-1. Follow canvas
+        #       -------------------
+        #       1-1. locate canvas (vertical)
+        #           1-1-1. circle1 + circle3 (vertical)
+        #           1-1-2. circle2 + circle4 (vertical)
+
+        # locate canvas
+        self.locate_canvas = init_container(parent=self.recording_block,
+                                            vertical=False)
+
+        self.locate_canvas1_3 = init_container(parent=self.locate_canvas,
+                                               vertical=True)
+
+        self.locate_canvas2_4 = init_container(parent=self.locate_canvas,
+                                               vertical=True)
+
+        # initialized when the locate box is selected and start testing/recording
+        self.locate_1 = None
+        self.locate_2 = None
+        self.locate_3 = None
+        self.locate_4 = None
 
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
+
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
         """
         ticks every 'refresh' milliseconds
         """
-        print("running")
+        print("tick")
 
     def reset(self):
         self.isFollowing = False
@@ -123,9 +149,31 @@ class Recording(QWidget):
 
         elif not self.is_testing:
             # start recording
+            print("Testing")
+
             self.is_testing = True
             self.timer.start()
             self.test_btn.setText(config.test_btn_end_label)
+            if self.willLocate:
+                self.locate_1 = init_locate_unit_block(parent=self.locate_canvas1_3,
+                                                       number="1",
+                                                       label_position="righttop",
+                                                       image_source="resource/figures/circle_off")
+
+                self.locate_3 = init_locate_unit_block(parent=self.locate_canvas1_3,
+                                                       number="3",
+                                                       label_position="righttop",
+                                                       image_source="resource/figures/circle_off")
+
+                self.locate_2 = init_locate_unit_block(parent=self.locate_canvas2_4,
+                                                       number="1",
+                                                       label_position="lefttop",
+                                                       image_source="resource/figures/circle_off")
+
+                self.locate_4 = init_locate_unit_block(parent=self.locate_canvas2_4,
+                                                       number="3",
+                                                       label_position="lefttop",
+                                                       image_source="resource/figures/circle_off")
 
         return
 
@@ -137,6 +185,7 @@ class Recording(QWidget):
         # if not recording yet
         elif not self.is_recording:
 
+            self.update_inputs()
             # try starting recording
             # check the data path first
             self.is_dir_valid = self.check_dir_valid()
@@ -144,6 +193,7 @@ class Recording(QWidget):
             if self.is_dir_valid:
                 # if valid data path, show preparation page
 
+                print("Recording")
                 # start recording
                 self.is_recording = True
                 self.recording_btn.setText(config.record_btn_end_label)
@@ -157,11 +207,38 @@ class Recording(QWidget):
         return
 
     def follow_checkBox_action(self):
-        self.willFollow = True
+        if self.follow_checkbox.isChecked():
+            self.willFollow = True
+            self._toggle = True
+            self.locate_checkbox.setChecked(not self._toggle)
+        else:
+            self.willFollow = False
+            self._toggle = not self._toggle
+
+        '''
+        print("follow?")
+        print(self.willFollow)
+        print("locate?")
+        print(self.willLocate)
+        '''
         return
 
     def locate_checkBox_action(self):
-        self.willLocate = True
+        if self.locate_checkbox.isChecked():
+            self.willLocate = True
+            self._toggle = True
+            self.follow_checkbox.setChecked(not self._toggle)
+
+        else:
+            self.willLocate = False
+            self._toggle = not self._toggle
+
+        '''
+        print("follow?")
+        print(self.willFollow)
+        print("locate?")
+        print(self.willLocate)
+        '''
         return
 
     def get_training_data_dir(self):
