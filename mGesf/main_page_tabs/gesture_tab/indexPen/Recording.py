@@ -15,7 +15,7 @@ from utils.sound import *
 import config
 import pyqtgraph as pg
 
-class Recording_tab(QWidget):
+class Recording(QWidget):
     def __init__(self):
         super().__init__()
         # -------------------- First class --------------------
@@ -48,18 +48,18 @@ class Recording_tab(QWidget):
                                                                           label=config.operation_repeats_label,
                                                                           interval=config.recording_repeat_range)
 
-        self.classes_block, self.classes_textbox = init_input_box(self.input_block,
-                                                                  label=config.operation_classes_label,
-                                                                  label_bold=False,
-                                                                  default_input='default: ' + config.operation_classes_default)
-        self.subject_name_block, self.subject_names_textbox = init_input_box(self.input_block,
-                                                                             label=config.operation_subject_name_label,
-                                                                             label_bold=False,
-                                                                             default_input='default: ' + config.operation_subject_name_default)
-        self.training_dir_block, self.training_dir_textbox = init_input_box(self.input_block,
-                                                                            label=config.operation_training_data_path_label,
+        self.classes_block, self.classes_textbox = init_inputBox(self.input_block,
+                                                                 label=config.operation_classes_label,
+                                                                 label_bold=False,
+                                                                 default_input='default: ' + config.indexPen_classes_default)
+        self.subject_name_block, self.subject_names_textbox = init_inputBox(self.input_block,
+                                                                            label=config.operation_subject_name_label,
                                                                             label_bold=False,
-                                                                            default_input='default: ' + config.operation_training_data_dir_default)
+                                                                            default_input='default: ' + config.indexPen_subjectName_default)
+        self.training_dir_block, self.training_dir_textbox = init_inputBox(self.input_block,
+                                                                           label=config.operation_training_data_path_label,
+                                                                           label_bold=False,
+                                                                           default_input='default: ' + config.indexPen_trainingDataDir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons + help (horizontally distributed)
@@ -148,7 +148,6 @@ class Recording_tab(QWidget):
         self.training_dir = self.get_training_data_dir()
         self.character_set = calc_set(self.classes, self.repeat_times)
 
-
         # =========================== timers =============================
         # timer 1
         self.timer = QtCore.QTimer()
@@ -160,7 +159,6 @@ class Recording_tab(QWidget):
         self.forecast_timer = QtCore.QTimer()
         self.forecast_timer.setInterval(config.forecast_interval * 1000)
         self.forecast_timer.timeout.connect(self.show_forecast_animation)
-
 
         # ======================= indicators, counters ==========================
         # tracking if the user pressed the return key to start recording
@@ -177,7 +175,6 @@ class Recording_tab(QWidget):
         self.tempo_counter = 1
         # count indices of current and next character to take in
         self.character_counter = 0
-
 
     @pg.QtCore.pyqtSlot()
     def show_forecast_animation(self):
@@ -230,9 +227,9 @@ class Recording_tab(QWidget):
 
             # draw a new one
             current_character = self.character_set[self.character_counter]
-            next_character = self.character_set[self.character_counter+1]
-            self.instruction_text_block =init_instruction_text_block(label_current=current_character,
-                                                                     label_next=next_character)
+            next_character = self.character_set[self.character_counter + 1]
+            self.instruction_text_block = init_instruction_text_block(label_current=current_character,
+                                                                      label_next=next_character)
         # finish a recording loop
         else:
             self.reset()
@@ -329,20 +326,20 @@ class Recording_tab(QWidget):
     def get_training_data_dir(self):
         _user_input = self.training_dir_textbox.text()
         if not _user_input:
-            _user_input = config.operation_training_data_dir_default
+            _user_input = config.indexPen_trainingDataDir_default
 
         return _user_input
 
     def get_subject_name(self):
         _user_input = self.subject_names_textbox.text()
         if not _user_input:
-            _user_input = config.operation_subject_name_default
+            _user_input = config.indexPen_subjectName_default
         return _user_input
 
     def get_classes(self):
         _user_input = self.classes_textbox.text()
         if not _user_input:
-            _user_input = config.operation_classes_default
+            _user_input = config.indexPen_classes_default
 
         # change to a list
         classes = _user_input.split(" ")
@@ -362,7 +359,6 @@ class Recording_tab(QWidget):
 
     def test_btn_action(self):
 
-
         if self.is_testing:
             # end testing
             self.reset()
@@ -371,7 +367,7 @@ class Recording_tab(QWidget):
         elif not self.is_testing:
             # start recording
             self.is_testing = True
-            self.test_btn.setText(config.test_btn_start_label)
+            self.test_btn.setText(config.test_btn_end_label)
 
             self.update_inputs()
             self.prepare()
@@ -423,14 +419,13 @@ class Recording_tab(QWidget):
             msg.exec()
             return False
 
-
     def prepare(self):
         print("here")
 
         # print preparation direction to textbox
         self.preparation_block = init_preparation_block(parent=self.text_block, text=self.character_set)
 
-        #create a return key detection widget to the instruction box
+        # create a return key detection widget to the instruction box
         key_detector = ReturnKeyDetectionWidget()
         self.text_block.addWidget(key_detector)
         key_detector.keyPressed.connect(self.on_key)
@@ -483,5 +478,3 @@ class Recording_tab(QWidget):
 
         self.test_btn.setText(config.test_btn_start_label)
         self.recording_btn.setText(config.record_btn_start_label)
-
-
