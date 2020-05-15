@@ -6,7 +6,7 @@ from utils.GUI_operation_tab import *
 import config
 
 
-class Detection_tab(QWidget):
+class Detection(QWidget):
     def __init__(self):
         super().__init__()
 
@@ -32,15 +32,15 @@ class Detection_tab(QWidget):
         #       1-1-1. model path
         #       1-1-2. training data dir
 
-        self.model_path_block = init_input_box(self.text_box_block,
-                                               label=config.operation_model_path_label,
-                                               label_bold=False,
-                                               default_input='default: ' + config.indexPen_modelPath_default)
+        self.model_path_block = init_inputBox(self.text_box_block,
+                                              label=config.operation_model_path_label,
+                                              label_bold=False,
+                                              default_input='default: ' + config.indexPen_modelPath_default)
 
-        self.training_dir_block = init_input_box(self.text_box_block,
-                                                 label=config.operation_training_data_path_label,
-                                                 label_bold=False,
-                                                 default_input='default: ' + config.indexPen_trainingDataDir_default)
+        self.training_dir_block = init_inputBox(self.text_box_block,
+                                                label=config.operation_training_data_path_label,
+                                                label_bold=False,
+                                                default_input='default: ' + config.indexPen_trainingDataDir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons
@@ -52,7 +52,7 @@ class Detection_tab(QWidget):
                                     label=config.detection_load_btn_label,
                                     function=self.load_btn_action)
         self.start_stop_detection_btn = init_button(parent=self.buttons_block,
-                                                    label=config.detection_start_Stop_btn_label,
+                                                    label=config.detection_start_btn_label,
                                                     function=self.start_stop_btn_action)
 
         self.help_btn = init_button(parent=self.buttons_block,

@@ -1,3 +1,8 @@
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTabWidget
+from mGesf.main_page_tabs.gesture_tab.desktopFingertip.Recording import Recording
+from mGesf.main_page_tabs.gesture_tab.desktopFingertip.Train import Train
+from mGesf.main_page_tabs.gesture_tab.desktopFingertip.Detection import Detection
+import config
 from PyQt5.QtWidgets import QWidget, QHBoxLayout
 
 from utils.GUI_gesture_tab import setup_operation_tabs

@@ -111,13 +111,14 @@ class Control_tab(QWidget):
         self.sub_record_block = init_container(parent=self.record_block,
                                                style="background-color: " + config.subcontainer_color + ";")
 
+
         self.data_path_block, self.data_path_textbox = init_input_box(parent=self.sub_record_block,
                                                                       label=config.control_tab_output_path_label,
                                                                       label_bold=True,
                                                                       default_input=config.data_path_default)
         # ***** record button *****
         self.record_btn = init_button(parent=self.sub_record_block,
-                                      label=config.record_btn_label,
+                                      label=config.record_btn_start_label,
                                       function=self.record_btn_action)
         # -------------------- fifth class --------------------
         #           1-1-1. Radar block
@@ -128,6 +129,7 @@ class Control_tab(QWidget):
         #               1-1-1-4. Radar record check box
         # self.radar_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
         #                                       config.WINDOW_HEIGHT * 4 / 5)
+
         self.radar_connection_block = init_container(parent=self.radar_block, label="Connection",
                                                      style="background-color: " + config.container_color + ";")
         self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor",
@@ -144,6 +146,7 @@ class Control_tab(QWidget):
         self.leap_connection_btn = init_button(parent=self.leap_block,
                                                label=config.sensor_btn_label,
                                                function=self.leap_connection_btn_action)
+
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
         self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
 
@@ -154,12 +157,14 @@ class Control_tab(QWidget):
         self.UWB_connection_btn = init_button(parent=self.UWB_block,
                                               label=config.sensor_btn_label,
                                               function=self.UWB_connection_btn_action)
+
         self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
         self.UWB_record_checkbox = setup_check_box(parent=self.UWB_block, function=self.UWB_clickBox)
 
         # -------------------- sixth class --------------------
 
         # ***** ports *****
+
         self.data_port_block, self.dport_textbox = init_input_box(parent=self.radar_connection_block,
                                                                   label=config.control_tab_data_port_label,
                                                                   label_bold=True,
@@ -179,6 +184,7 @@ class Control_tab(QWidget):
         #                   1-1-1-2-2. senor buttons block
         #                       1. Send_config Button
         #                       2. Start/Stop sensor button
+
         self.is_valid_config_path, self.config_textbox = setup_config_path_block(parent=self.radar_sensor_block)
         self.sensor_buttons_block = init_container(self.radar_sensor_block, vertical=False)
 
@@ -230,6 +236,7 @@ class Control_tab(QWidget):
                 if not self.is_recording_radar:
                     self.is_recording_radar = True
                     print('Recording started!')
+
                     self.record_btn.setText("Stop Recording")
                 else:
                     self.is_recording_radar = False

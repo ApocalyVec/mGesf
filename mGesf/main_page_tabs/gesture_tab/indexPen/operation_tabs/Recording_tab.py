@@ -49,15 +49,15 @@ class Recording_tab(QWidget):
         self.classes_block, self.classes_textbox = init_input_box(self.input_block,
                                                                   label=config.operation_classes_label,
                                                                   label_bold=False,
-                                                                  default_input=config.operation_classes_default)
+                                                                  default_input=config.indexPen_classes_default)
         self.subject_name_block, self.subject_names_textbox = init_input_box(self.input_block,
                                                                              label=config.operation_subject_name_label,
                                                                              label_bold=False,
-                                                                             default_input=config.operation_subject_name_default)
+                                                                             default_input=config.indexPen_subjectName_default)
         self.training_dir_block, self.training_dir_textbox = init_input_box(self.input_block,
                                                                             label=config.operation_training_data_path_label,
                                                                             label_bold=False,
-                                                                            default_input=config.operation_training_data_dir_default)
+                                                                            default_input=config.indexPen_trainingDataDir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons + help (horizontally distributed)
@@ -78,11 +78,11 @@ class Recording_tab(QWidget):
                                          function=self.interrupt_btn_action)
 
         self.test_btn = init_button(parent=self.buttons_block,
-                                    label=config.test_btn_label,
+                                    label=config.test_btn_start_label,
                                     function=self.test_btn_action)
 
         self.recording_btn = init_button(parent=self.buttons_block,
-                                         label=config.record_btn_label,
+                                         label=config.record_btn_start_label,
                                          function=self.recording_btn_action)
 
         self.help_btn = init_button(parent=self.buttons_block,

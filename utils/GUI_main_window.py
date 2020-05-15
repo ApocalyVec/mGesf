@@ -48,6 +48,7 @@ def init_button(parent, label=None, function=None, style=config.button_style_cla
     return btn
 
 
+
 def init_input_box(parent, label=None, label_bold=False, default_input=None):
     block = init_container(parent=parent,
                            label=label,
@@ -60,6 +61,7 @@ def init_input_box(parent, label=None, label_bold=False, default_input=None):
     textbox.setStyleSheet("background-color:white;")
 
     return block, textbox
+
 
 
 def setup_config_path_block(parent):

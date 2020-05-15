@@ -5,15 +5,20 @@ WINDOW_WIDTH = 1280
 # button labels
 
 interrupt_btn_label = "Interrupt"
-test_btn_label = "Start/end test"
+test_btn_start_label = "Start testing"
+test_btn_end_label = "End testing"
 count_sample_btn_label = "Count Samples"
 train_btn_label = "Train"
 radar_connection_btn_label = "Connect"
-record_btn_label = 'Start Recording'
+record_btn_start_label = 'Start Recording'
+record_btn_end_label = 'End Recording'
+
 help_btn_label = "Help"
 send_config_btn_label = 'Send Config'
 sensor_btn_label = 'Start Sensor'
 detection_load_btn_label = 'Load Data&Model'
+detection_start_btn_label = 'Start Detection'
+detection_end_btn_label = 'Stop Detection'
 detection_start_Stop_btn_label = 'Start/Stop Detection'
 
 # main window
@@ -56,12 +61,21 @@ control_tab_d_port_default = "COM14"
 control_tab_u_port_default = "COM3"
 
 # operation tab
-operation_classes_default = "A B C D E"
-operation_subject_name_default = "god"
-operation_training_data_dir_default = "data/"
-operation_model_path_default = "../model/idp_model.h5"
-operation_model_dir_default = "../model/"
-operation_constructor_path_default = "../learn/idp_classifier.py"
+indexPen_classes_default = "A B C D E"
+indexPen_subjectName_default = "god"
+indexPen_repeatTime_default = 10
+indexPen_trainingDataDir_default = "../data"
+indexPen_modelPath_default = "../model/idp_model.h5"
+indexPen_modelDir_default = "../model/"
+indexPen_constructorPath_default = "../learn/idp_classifier.py"
+
+# thumouse
+thuMouse_subjectName_default = "someone"
+thuMouse_TrainingDataDir_default = "../data"
+thuMouse_constructorPath_default = "default: ../learn/Thu_classifier.py"
+thuMouse_modelDir_default = "default: ../model/"
+thuMouse_modelPath_default = "default: ../model/idp_model.h5"
+
 
 # ============== messages ==============
 config_set_message = "Config file set"
@@ -73,6 +87,10 @@ control_tab_start_sensor_message = "Sensor running"
 control_tab_stop_sensor_message = "Sensor stopped"
 control_tab_UDport_disconnected_message = "Disconnected to ports"
 control_tab_UDport_connected_message = "Connected to ports"
+
+# indexPen instruction area text
+forecast_animation_text = ["Steady...", "..Ready,", "GO!"]
+input_end_prompt = "NO NEXT"
 
 control_tab_config_file_path_default = 'default: mGesf/profiles/aop/30fps_azi_rd.cfg'
 data_path_default = 'default: ../data'
@@ -105,8 +123,11 @@ ra_shape = (8, 64)
 
 # operation tab
 # # recording tab
-recording_interval_range = 30
+recording_interval_range = 4
 recording_repeat_range = 10
+
+# forecast animation interval
+forecast_interval = 0.8
 
 # ============== links ==============
 # recording tab

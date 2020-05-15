@@ -10,6 +10,7 @@ class ThuMouth(QWidget):
         self.main_page = QHBoxLayout(self)
 
         self.operation_block = init_container(parent=self.main_page, vertical=False)
+
         setup_operation_tabs(self.operation_block)
 
         self.setLayout(self.main_page)

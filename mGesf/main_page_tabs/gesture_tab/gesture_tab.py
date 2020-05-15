@@ -55,6 +55,7 @@ class Gesture_tab(QWidget):
 
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Radar",
                                                       graph=self.doppler_display)
+
         self.radar_record_checkbox = setup_check_box(parent=self.radar_runtime_block, function=self.radar_clickBox)
 
         # -------------------- fourth class -------------------
@@ -64,6 +65,7 @@ class Gesture_tab(QWidget):
 
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_runtime_block, label="Leap",
                                                      graph=None)
+
         self.leap_record_checkbox = setup_check_box(parent=self.leap_runtime_block, function=self.radar_clickBox)
 
         # -------------------- fourth class -------------------
