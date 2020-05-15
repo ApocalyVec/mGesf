@@ -9,4 +9,5 @@ def smooth_heat_scatter(x, y, s, bins=1000):
     heatmap = gaussian_filter(heatmap, sigma=s)
 
     extent = [xedges[0], xedges[-1], yedges[0], yedges[-1]]
+
     return heatmap.T, extent

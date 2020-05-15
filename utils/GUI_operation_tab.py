@@ -1,11 +1,10 @@
 from PyQt5 import QtGui, QtCore
-from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
 
-import config
 from utils.GUI_main_window import init_container
 from utils.labeled_Slider import LabeledSlider
-
 
 def init_slider_bar_box(parent, label=None, interval=5):
     line_container = init_container(parent=parent, vertical=False)
@@ -103,3 +102,4 @@ def show_finished_box():
     msg.setIcon(QMessageBox.Information)
     msg.setText("Finished")
     msg.exec()
+

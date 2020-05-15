@@ -12,12 +12,14 @@ train_btn_label = "Train"
 radar_connection_btn_label = "Connect"
 record_btn_start_label = 'Start Recording'
 record_btn_end_label = 'End Recording'
+
 help_btn_label = "Help"
 send_config_btn_label = 'Send Config'
 sensor_btn_label = 'Start Sensor'
 detection_load_btn_label = 'Load Data&Model'
 detection_start_btn_label = 'Start Detection'
 detection_end_btn_label = 'Stop Detection'
+detection_start_Stop_btn_label = 'Start/Stop Detection'
 
 # main window
 main_window_control_tab_label = "CONTROL"
@@ -89,7 +91,6 @@ control_tab_UDport_connected_message = "Connected to ports"
 # indexPen instruction area text
 forecast_animation_text = ["Steady...", "..Ready,", "GO!"]
 input_end_prompt = "NO NEXT"
-
 
 control_tab_config_file_path_default = 'default: mGesf/profiles/aop/30fps_azi_rd.cfg'
 data_path_default = 'default: ../data'

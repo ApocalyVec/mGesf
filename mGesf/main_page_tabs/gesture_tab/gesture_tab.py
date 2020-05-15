@@ -55,7 +55,8 @@ class Gesture_tab(QWidget):
 
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Radar",
                                                       graph=self.doppler_display)
-        self.radar_record_checkbox = init_checkBox(parent=self.radar_runtime_block, function=self.radar_clickBox)
+
+        self.radar_record_checkbox = setup_check_box(parent=self.radar_runtime_block, function=self.radar_clickBox)
 
         # -------------------- fourth class -------------------
         #       1-1. leap runtime block
@@ -64,7 +65,8 @@ class Gesture_tab(QWidget):
 
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_runtime_block, label="Leap",
                                                      graph=None)
-        self.leap_record_checkbox = init_checkBox(parent=self.leap_runtime_block, function=self.radar_clickBox)
+
+        self.leap_record_checkbox = setup_check_box(parent=self.leap_runtime_block, function=self.radar_clickBox)
 
         # -------------------- fourth class -------------------
         #       1-1. UWB runtime block
@@ -72,7 +74,7 @@ class Gesture_tab(QWidget):
         #           1-1-2. UWB checkbox
         self.UWB_runtime_view = self.init_spec_view(parent=self.uwb_runtime_block, label="UWB",
                                                     graph=None)
-        self.UWB_record_checkbox = init_checkBox(parent=self.uwb_runtime_block, function=self.UWB_clickBox)
+        self.UWB_record_checkbox = setup_check_box(parent=self.uwb_runtime_block, function=self.UWB_clickBox)
 
         # -------------------- third class --------------------
         #   1. ITD block
