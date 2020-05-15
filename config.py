@@ -44,7 +44,7 @@ operation_recording_label = "Recording"
 operation_training_label = "Training"
 operation_detection_label = "Detection"
 
-operation_training_data_path_label = "Training Data Path"
+trainingDataPath_label = "Training Data Path"
 operation_model_path_label = "Model Path"
 
 operation_interval_label = "Interval lasts (sec)"
@@ -123,8 +123,8 @@ ra_shape = (8, 64)
 
 # operation tab
 # # recording tab
-recording_interval_range = 4
-recording_repeat_range = 10
+recording_interval = 4
+repeat_times = 10
 
 # forecast animation interval
 forecast_interval = 0.8

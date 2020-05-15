@@ -43,21 +43,24 @@ class Recording(QWidget):
 
         self.interval_last_block, self.interval_slider_view = init_slider_bar_box(self.input_block,
                                                                                   label=config.operation_interval_label,
-                                                                                  interval=config.recording_interval_range)
+                                                                                  interval=config.recording_interval)
+
         self.repeats_block, self.repeat_slider_view = init_slider_bar_box(self.input_block,
                                                                           label=config.operation_repeats_label,
-                                                                          interval=config.recording_repeat_range)
+                                                                          interval=config.repeat_times)
 
         self.classes_block, self.classes_textbox = init_inputBox(self.input_block,
                                                                  label=config.operation_classes_label,
                                                                  label_bold=False,
                                                                  default_input='default: ' + config.indexPen_classes_default)
+
         self.subject_name_block, self.subject_names_textbox = init_inputBox(self.input_block,
                                                                             label=config.operation_subject_name_label,
                                                                             label_bold=False,
                                                                             default_input='default: ' + config.indexPen_subjectName_default)
+
         self.training_dir_block, self.training_dir_textbox = init_inputBox(self.input_block,
-                                                                           label=config.operation_training_data_path_label,
+                                                                           label=config.trainingDataPath_label,
                                                                            label_bold=False,
                                                                            default_input='default: ' + config.indexPen_trainingDataDir_default)
 

@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTabWidget
 from utils.GUI_main_window import init_container
-from mGesf.main_page_tabs.gesture_tab.desktopFingertip.Recording import Recording
-from mGesf.main_page_tabs.gesture_tab.desktopFingertip.Train import Train
-from mGesf.main_page_tabs.gesture_tab.desktopFingertip.Detection import Detection
+from mGesf.main_page_tabs.gesture_tab.desktopFingertip.df_Recording import Recording
+from mGesf.main_page_tabs.gesture_tab.desktopFingertip.df_Train import Train
+from mGesf.main_page_tabs.gesture_tab.desktopFingertip.df_Detection import Detection
 import config
 
 class DesktopFingertip(QWidget):

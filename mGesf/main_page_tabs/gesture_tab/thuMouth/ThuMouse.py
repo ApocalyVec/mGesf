@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTabWidget
 from utils.GUI_main_window import init_container
-from mGesf.main_page_tabs.gesture_tab.thuMouth.Recording import Recording
-from mGesf.main_page_tabs.gesture_tab.thuMouth.Train import Train
-from mGesf.main_page_tabs.gesture_tab.thuMouth.Detection import Detection
+from mGesf.main_page_tabs.gesture_tab.thuMouth.thu_Recording import Recording
+from mGesf.main_page_tabs.gesture_tab.thuMouth.thu_Train import Train
+from mGesf.main_page_tabs.gesture_tab.thuMouth.thu_Detection import Detection
 import config
 
 
