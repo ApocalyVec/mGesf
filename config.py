@@ -58,7 +58,7 @@ control_tab_u_port_default = "COM3"
 # operation tab
 operation_classes_default = "A B C D E"
 operation_subject_name_default = "god"
-operation_training_data_dir_default = "../data"
+operation_training_data_dir_default = "data/"
 operation_model_path_default = "../model/idp_model.h5"
 operation_model_dir_default = "../model/"
 operation_constructor_path_default = "../learn/idp_classifier.py"

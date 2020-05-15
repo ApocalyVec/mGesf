@@ -1,4 +1,6 @@
 import os
+import time
+
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QSlider, QLabel, QMessageBox, QGraphicsScene, \
     QGraphicsView
 from PyQt5 import QtCore
@@ -47,15 +49,15 @@ class Recording_tab(QWidget):
         self.classes_block, self.classes_textbox = init_input_box(self.input_block,
                                                                   label=config.operation_classes_label,
                                                                   label_bold=False,
-                                                                  default_input='default: ' + config.operation_classes_default)
+                                                                  default_input=config.operation_classes_default)
         self.subject_name_block, self.subject_names_textbox = init_input_box(self.input_block,
                                                                              label=config.operation_subject_name_label,
                                                                              label_bold=False,
-                                                                             default_input='default: ' + config.operation_subject_name_default)
+                                                                             default_input=config.operation_subject_name_default)
         self.training_dir_block, self.training_dir_textbox = init_input_box(self.input_block,
                                                                             label=config.operation_training_data_path_label,
                                                                             label_bold=False,
-                                                                            default_input='default: ' + config.operation_training_data_dir_default)
+                                                                            default_input=config.operation_training_data_dir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons + help (horizontally distributed)
@@ -112,27 +114,35 @@ class Recording_tab(QWidget):
 
         # timer
         # indicator for circle colors
+        self.start_time = time.time()
+        self.tick_count = 0
         self.counter = 1
+        self.reset_recording()
         self.timer = QtCore.QTimer()
-        self.timer.setInterval(self.interval * 1000)
+        self.timer.setInterval(1000)
         self.timer.timeout.connect(self.ticks)
+
+        # init sound device with playing some test sound
+        dah()
+
+    def reset_recording(self):
+        self.start_time = time.time()
+        self.tick_count = 0
+        self.counter = 1
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
         """
         ticks every 'refresh' milliseconds
         """
+        self.tick_count += 1
         if self.counter == 1:
-            # dah()
-            dih()
+            dah()
         else:
             dih()
 
         self.repaint(circle=self.counter)
-
-        self.counter += 1
-        if self.counter > 4:
-            self.counter = 1
+        self.counter = self.counter + 1 if self.counter < 4 else 1  # TODO use 'interval lasts' instead of hard coded 4
 
     def setup_canvas(self):
 
@@ -241,6 +251,9 @@ class Recording_tab(QWidget):
         return classes
 
     def interrupt_btn_action(self):
+        self.timer.stop()
+        record_duration = time.time() - self.start_time
+        print('Recording interrupted. Time wasted: ' + str(record_duration) + ' sec')
         return
 
     def test_btn_action(self):
@@ -254,11 +267,7 @@ class Recording_tab(QWidget):
         self.update_inputs()
         self.is_dir_valid = self.check_dir_valid()
         if self.is_dir_valid:
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Information)
-            msg.setText("Recording")
-            msg.exec()
-
+            self.reset_recording()
             self.timer.start()
 
         return
