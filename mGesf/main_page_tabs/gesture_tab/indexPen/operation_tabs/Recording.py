@@ -117,16 +117,16 @@ class Recording_tab(QWidget):
         #       1-2. text block (vertical)
         #           ------- preparation -------
         #           1-1-1. "You will be writing:  "
-        #           1-1-2. A sequence of text the user will write
-        #           1-1-3. "Press Enter To Continue"
+        #                  character_set ::= A sequence of text the user will write
+        #                  "Press Enter To Continue"
         #
         #           ------- forecast ------
         #           1-1-1. Label1: Forecast
         #
         #           ------- record ------
         #           1-1-1. Label1: "Write"
-        #           1-1-2. character to write
-        #           1-1-3. "...next" + next character to write
+        #                  character to write
+        #                  "...next" + next character to write
 
         # will be initialized when the test button or the recording button is pressed
         self.preparation_block = None
@@ -149,7 +149,7 @@ class Recording_tab(QWidget):
         self.character_set = calc_set(self.classes, self.repeat_times)
 
 
-        # ============================= timers ==========================
+        # =========================== timers =============================
         # timer 1
         self.timer = QtCore.QTimer()
         self.timer.setInterval(self.interval * 1000)
@@ -161,6 +161,8 @@ class Recording_tab(QWidget):
         self.forecast_timer.setInterval(config.forecast_interval * 1000)
         self.forecast_timer.timeout.connect(self.show_forecast_animation)
 
+
+        # ======================= indicators, counters ==========================
         # tracking if the user pressed the return key to start recording
         self.is_prepared = False
         self.is_return_pressed = False
@@ -214,7 +216,7 @@ class Recording_tab(QWidget):
         else:
             dih()
 
-        # circles
+        # repaint circles
         self.repaint(circle=self.tempo_counter)
 
         self.tempo_counter += 1
@@ -466,12 +468,17 @@ class Recording_tab(QWidget):
         if self.instruction_text_block:
             self.instruction_text_block = None
 
+        # reset circles
+        for item in self.circle_scene.items():
+            self.circle_scene.removeItem(item)
+        self.paint()
+
         print("here")
 
         # reset indicators
         self.is_testing = False
         self.is_recording = False
-        self.tempo_counter = 0
+        self.tempo_counter = 1
         self.character_counter = 0
 
         self.test_btn.setText(config.test_btn_start_label)
