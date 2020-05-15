@@ -34,19 +34,19 @@ class Train_tab(QWidget):
         #       1-1-2. constructor path
         #       1-1-3. model dir
 
-        self.training_dir_block = init_input_box(self.text_box_block,
-                                                 label=config.operation_training_data_path_label,
-                                                 label_bold=False,
-                                                 default_input='default: ' + config.indexPen_trainingDataDir_default)
+        self.training_dir_block = init_inputBox(self.text_box_block,
+                                                label=config.operation_training_data_path_label,
+                                                label_bold=False,
+                                                default_input='default: ' + config.indexPen_trainingDataDir_default)
 
-        self.constructor_path_block = init_input_box(self.text_box_block,
-                                                     label=config.operation_training_constructor_path_label,
-                                                     default_input='default: ' + config.indexPen_constructorPath_default)
+        self.constructor_path_block = init_inputBox(self.text_box_block,
+                                                    label=config.operation_training_constructor_path_label,
+                                                    default_input='default: ' + config.indexPen_constructorPath_default)
 
-        self.model_dir_block = init_input_box(self.text_box_block,
-                                              label=config.operation_model_dir_label,
-                                              label_bold=False,
-                                              default_input='default: ' + config.indexPen_modelPath_default)
+        self.model_dir_block = init_inputBox(self.text_box_block,
+                                             label=config.operation_model_dir_label,
+                                             label_bold=False,
+                                             default_input='default: ' + config.indexPen_modelPath_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons

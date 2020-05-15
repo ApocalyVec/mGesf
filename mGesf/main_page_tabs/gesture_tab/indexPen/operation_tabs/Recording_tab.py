@@ -46,18 +46,18 @@ class Recording_tab(QWidget):
                                                                           label=config.operation_repeats_label,
                                                                           interval=config.recording_repeat_range)
 
-        self.classes_block, self.classes_textbox = init_input_box(self.input_block,
-                                                                  label=config.operation_classes_label,
-                                                                  label_bold=False,
-                                                                  default_input=config.indexPen_classes_default)
-        self.subject_name_block, self.subject_names_textbox = init_input_box(self.input_block,
-                                                                             label=config.operation_subject_name_label,
-                                                                             label_bold=False,
-                                                                             default_input=config.indexPen_subjectName_default)
-        self.training_dir_block, self.training_dir_textbox = init_input_box(self.input_block,
-                                                                            label=config.operation_training_data_path_label,
+        self.classes_block, self.classes_textbox = init_inputBox(self.input_block,
+                                                                 label=config.operation_classes_label,
+                                                                 label_bold=False,
+                                                                 default_input=config.indexPen_classes_default)
+        self.subject_name_block, self.subject_names_textbox = init_inputBox(self.input_block,
+                                                                            label=config.operation_subject_name_label,
                                                                             label_bold=False,
-                                                                            default_input=config.indexPen_trainingDataDir_default)
+                                                                            default_input=config.indexPen_subjectName_default)
+        self.training_dir_block, self.training_dir_textbox = init_inputBox(self.input_block,
+                                                                           label=config.operation_training_data_path_label,
+                                                                           label_bold=False,
+                                                                           default_input=config.indexPen_trainingDataDir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons + help (horizontally distributed)

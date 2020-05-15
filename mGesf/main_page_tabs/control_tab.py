@@ -112,10 +112,10 @@ class Control_tab(QWidget):
                                                style="background-color: " + config.subcontainer_color + ";")
 
 
-        self.data_path_block, self.data_path_textbox = init_input_box(parent=self.sub_record_block,
-                                                                      label=config.control_tab_output_path_label,
-                                                                      label_bold=True,
-                                                                      default_input=config.data_path_default)
+        self.data_path_block, self.data_path_textbox = init_inputBox(parent=self.sub_record_block,
+                                                                     label=config.control_tab_output_path_label,
+                                                                     label_bold=True,
+                                                                     default_input=config.data_path_default)
         # ***** record button *****
         self.record_btn = init_button(parent=self.sub_record_block,
                                       label=config.record_btn_start_label,
@@ -136,7 +136,7 @@ class Control_tab(QWidget):
                                                  style="background-color: " + config.container_color + ";")
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_block, label="Runtime",
                                                       graph=self.doppler_display)
-        self.radar_record_checkbox = setup_check_box(parent=self.radar_block, function=self.radar_clickBox)
+        self.radar_record_checkbox = init_checkBox(parent=self.radar_block, function=self.radar_clickBox)
 
         # -------------------- fifth class --------------------
         #           1-1-2. Leap block
@@ -148,7 +148,7 @@ class Control_tab(QWidget):
                                                function=self.leap_connection_btn_action)
 
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
-        self.leap_record_checkbox = setup_check_box(parent=self.leap_block, function=self.leap_clickBox)
+        self.leap_record_checkbox = init_checkBox(parent=self.leap_block, function=self.leap_clickBox)
 
         # -------------------- fifth class --------------------
         #           1-1-3. UWB block
@@ -159,20 +159,20 @@ class Control_tab(QWidget):
                                               function=self.UWB_connection_btn_action)
 
         self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
-        self.UWB_record_checkbox = setup_check_box(parent=self.UWB_block, function=self.UWB_clickBox)
+        self.UWB_record_checkbox = init_checkBox(parent=self.UWB_block, function=self.UWB_clickBox)
 
         # -------------------- sixth class --------------------
 
         # ***** ports *****
 
-        self.data_port_block, self.dport_textbox = init_input_box(parent=self.radar_connection_block,
-                                                                  label=config.control_tab_data_port_label,
-                                                                  label_bold=True,
-                                                                  default_input=config.control_tab_d_port_default)
-        self.user_port_block, self.uport_textbox = init_input_box(parent=self.radar_connection_block,
-                                                                  label=config.control_tab_user_port_label,
-                                                                  label_bold=True,
-                                                                  default_input=config.control_tab_u_port_default)
+        self.data_port_block, self.dport_textbox = init_inputBox(parent=self.radar_connection_block,
+                                                                 label=config.control_tab_data_port_label,
+                                                                 label_bold=True,
+                                                                 default_input=config.control_tab_d_port_default)
+        self.user_port_block, self.uport_textbox = init_inputBox(parent=self.radar_connection_block,
+                                                                 label=config.control_tab_user_port_label,
+                                                                 label_bold=True,
+                                                                 default_input=config.control_tab_u_port_default)
         # ***** connect button *****
         self.radar_connection_btn = init_button(parent=self.radar_connection_block,
                                                 label=config.radar_connection_btn_label,
@@ -185,7 +185,7 @@ class Control_tab(QWidget):
         #                       1. Send_config Button
         #                       2. Start/Stop sensor button
 
-        self.is_valid_config_path, self.config_textbox = setup_config_path_block(parent=self.radar_sensor_block)
+        self.is_valid_config_path, self.config_textbox = setup_configPath_block(parent=self.radar_sensor_block)
         self.sensor_buttons_block = init_container(self.radar_sensor_block, vertical=False)
 
         # -------------------- seventh class --------------------

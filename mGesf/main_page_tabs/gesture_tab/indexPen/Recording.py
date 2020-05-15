@@ -228,6 +228,7 @@ class Recording(QWidget):
             # draw a new one
             current_character = self.character_set[self.character_counter]
             next_character = self.character_set[self.character_counter + 1]
+            next_character = self.character_set[self.character_counter + 1]
             self.instruction_text_block = init_instruction_text_block(label_current=current_character,
                                                                       label_next=next_character)
         # finish a recording loop

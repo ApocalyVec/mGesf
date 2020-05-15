@@ -32,15 +32,15 @@ class Detection_tab(QWidget):
         #       1-1-1. model path
         #       1-1-2. training data dir
 
-        self.model_path_block = init_input_box(self.text_box_block,
-                                               label=config.operation_model_path_label,
-                                               label_bold=False,
-                                               default_input='default: ' + config.indexPen_modelPath_default)
+        self.model_path_block = init_inputBox(self.text_box_block,
+                                              label=config.operation_model_path_label,
+                                              label_bold=False,
+                                              default_input='default: ' + config.indexPen_modelPath_default)
 
-        self.training_dir_block = init_input_box(self.text_box_block,
-                                                 label=config.operation_training_data_path_label,
-                                                 label_bold=False,
-                                                 default_input='default: ' + config.indexPen_trainingDataDir_default)
+        self.training_dir_block = init_inputBox(self.text_box_block,
+                                                label=config.operation_training_data_path_label,
+                                                label_bold=False,
+                                                default_input='default: ' + config.indexPen_trainingDataDir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons
