@@ -59,13 +59,21 @@ control_tab_d_port_default = "COM14"
 control_tab_u_port_default = "COM3"
 
 # operation tab
-operation_classes_default = "A B C D E"
-operation_subject_name_default = "god"
-operation_repeat_time_default = 10
-operation_training_data_dir_default = "../data"
-operation_model_path_default = "../model/idp_model.h5"
-operation_model_dir_default = "../model/"
-operation_constructor_path_default = "../learn/idp_classifier.py"
+indexPen_classes_default = "A B C D E"
+indexPen_subjectName_default = "god"
+indexPen_repeatTime_default = 10
+indexPen_trainingDataDir_default = "../data"
+indexPen_modelPath_default = "../model/idp_model.h5"
+indexPen_modelDir_default = "../model/"
+indexPen_constructorPath_default = "../learn/idp_classifier.py"
+
+# thumouse
+thuMouse_subjectName_default = "someone"
+thuMouse_TrainingDataDir_default = "../data"
+thuMouse_constructorPath_default = "default: ../learn/Thu_classifier.py"
+thuMouse_modelDir_default = "default: ../model/"
+thuMouse_modelPath_default = "default: ../model/idp_model.h5"
+
 
 # ============== messages ==============
 config_set_message = "Config file set"
