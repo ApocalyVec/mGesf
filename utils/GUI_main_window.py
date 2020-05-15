@@ -48,7 +48,7 @@ def init_button(parent, label=None, function=None, style=config.button_style_cla
     return btn
 
 
-def init_input_box(parent, label=None, label_bold=False, default_input=None):
+def init_inputBox(parent, label=None, label_bold=False, default_input=None):
     block = init_container(parent=parent,
                            label=label,
                            label_bold=label_bold,
@@ -62,17 +62,17 @@ def init_input_box(parent, label=None, label_bold=False, default_input=None):
     return block, textbox
 
 
-def setup_config_path_block(parent):
+def setup_configPath_block(parent):
     is_valid_config_path = False
-    config_textbox = init_input_box(parent=parent,
-                                    label=config.control_tab_config_path_label,
-                                    label_bold=True,
-                                    default_input=config.control_tab_config_file_path_default)
+    config_textbox = init_inputBox(parent=parent,
+                                   label=config.control_tab_config_path_label,
+                                   label_bold=True,
+                                   default_input=config.control_tab_config_file_path_default)
     return is_valid_config_path, config_textbox
 
 
-def setup_check_box(parent, function):
-    box = QCheckBox("Record")
+def init_checkBox(parent, label=None, function=None):
+    box = QCheckBox(label)
     parent.addWidget(box)
     box.stateChanged.connect(function)
 

@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 class InformationPane():
-    def __init__(self, parent, max_msg_num=1000):
+    def __init__(self, parent, max_msg_num=1000, label='Console output'):
         information_container = init_container(parent=parent,
                                                label_position="center",
                                                style="background-color: " + config.container_color + ";")
@@ -15,7 +15,7 @@ class InformationPane():
         #                                    style="background-color: " + config.subcontainer_color + ";")
 
         self.formLayout = QFormLayout()
-        groupBox = QGroupBox('Console output')
+        groupBox = QGroupBox(label)
         groupBox.setLayout(self.formLayout)
         self.timestamp_list = []
         self.comboList = []
