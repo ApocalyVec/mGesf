@@ -72,9 +72,9 @@ indexPen_constructorPath_default = "../learn/idp_classifier.py"
 # thumouse
 thuMouse_subjectName_default = "someone"
 thuMouse_TrainingDataDir_default = "../data"
-thuMouse_constructorPath_default = "default: ../learn/Thu_classifier.py"
-thuMouse_modelDir_default = "default: ../model/"
-thuMouse_modelPath_default = "default: ../model/idp_model.h5"
+thuMouse_constructorPath_default = "../learn/Thu_classifier.py"
+thuMouse_modelDir_default = "../model/"
+thuMouse_modelPath_default = "../model/idp_model.h5"
 
 
 # ============== messages ==============
@@ -92,8 +92,8 @@ control_tab_UDport_connected_message = "Connected to ports"
 forecast_animation_text = ["Steady...", "..Ready,", "GO!"]
 input_end_prompt = "NO NEXT"
 
-control_tab_config_file_path_default = 'default: mGesf/profiles/aop/30fps_azi_rd.cfg'
-data_path_default = 'default: ../data'
+control_tab_config_file_path_default = 'mGesf/profiles/aop/30fps_azi_rd.cfg'
+data_path_default = '../data'
 
 radar_box_checked = "Checked: Radar recording box"
 radar_box_unchecked = "Unchecked: Radar recording box"

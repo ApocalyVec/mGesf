@@ -15,6 +15,7 @@ from utils.sound import *
 import config
 import pyqtgraph as pg
 
+
 class Recording(QWidget):
     def __init__(self):
         super().__init__()
@@ -27,11 +28,13 @@ class Recording(QWidget):
         # 2. instruction block (horizontal)
         self.input_block = init_container(parent=self.main_page,
                                           vertical=True,
-                                          style=None)
+                                          style=None,
+                                          size=(300, 300))
 
         self.instruction_block = init_container(parent=self.main_page,
                                                 vertical=False,
-                                                style="background-color: white;")
+                                                style="background-color: white;",
+                                                size=(300, 300))
         # -------------------- third class --------------------
         #   1. Input block
         #       1-1. Interval last
@@ -52,17 +55,19 @@ class Recording(QWidget):
         self.classes_block, self.classes_textbox = init_inputBox(self.input_block,
                                                                  label=config.operation_classes_label,
                                                                  label_bold=False,
-                                                                 default_input='default: ' + config.indexPen_classes_default)
+                                                                 default_input=config.indexPen_classes_default)
 
         self.subject_name_block, self.subject_names_textbox = init_inputBox(self.input_block,
                                                                             label=config.operation_subject_name_label,
                                                                             label_bold=False,
-                                                                            default_input='default: ' + config.indexPen_subjectName_default)
+                                                                            default_input=
+                                                                            config.indexPen_subjectName_default)
 
         self.training_dir_block, self.training_dir_textbox = init_inputBox(self.input_block,
                                                                            label=config.trainingDataPath_label,
                                                                            label_bold=False,
-                                                                           default_input='default: ' + config.indexPen_trainingDataDir_default)
+                                                                           default_input=
+                                                                           config.indexPen_trainingDataDir_default)
 
         # -------------------- fourth class --------------------
         #   1-6. Buttons + help (horizontally distributed)
@@ -363,13 +368,11 @@ class Recording(QWidget):
 
     def test_btn_action(self):
 
-        if self.is_testing:
-            # end testing
+        if self.is_testing:  # end testing
             self.reset()
 
+        else:  # start testing
 
-        elif not self.is_testing:
-            # start recording
             self.is_testing = True
             self.test_btn.setText(config.test_btn_end_label)
 
@@ -385,8 +388,6 @@ class Recording(QWidget):
 
                 # start the timer
                 self.forecast_timer.start()
-
-        return
 
     def recording_btn_action(self):
 
@@ -477,8 +478,6 @@ class Recording(QWidget):
         for item in self.circle_scene.items():
             self.circle_scene.removeItem(item)
         self.paint()
-
-        print("here")
 
         # reset indicators
         self.is_testing = False

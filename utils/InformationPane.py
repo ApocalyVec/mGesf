@@ -8,10 +8,11 @@ from datetime import datetime
 
 class InformationPane():
     def __init__(self, parent, max_msg_num=1000, label='Console output'):
-
+        infor_pane_size = (int(config.WINDOW_WIDTH / 3), config.WINDOW_HEIGHT)
         information_container = init_container(parent=parent,
                                                label_position="center",
-                                               style="background-color: " + config.container_color + ";")
+                                               style="background-color: " + config.container_color + ";",
+                                               size=infor_pane_size)
         # information_block = init_container(parent=information_container,
         #                                    style="background-color: " + config.subcontainer_color + ";")
 
@@ -28,7 +29,6 @@ class InformationPane():
         scroll.setFocusPolicy(QtCore.Qt.NoFocus)
         scroll.ensureWidgetVisible(groupBox)
         scroll.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        scroll.setFixedWidth(300)
 
         information_container.addWidget(scroll)
 

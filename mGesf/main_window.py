@@ -70,6 +70,10 @@ class Tabs(QWidget):
         self.timer.start()
 
         # Initialize tab screen
+
+
+
+
         self.tabs = QTabWidget()
         self.tab1 = control_tab.Control_tab(self.mmw_worker, refresh_interval, data_path)
         self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
