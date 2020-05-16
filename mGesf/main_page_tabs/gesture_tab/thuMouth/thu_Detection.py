@@ -38,7 +38,7 @@ class Detection(QWidget):
                                               default_input='default: ' + config.indexPen_modelPath_default)
 
         self.training_dir_block = init_inputBox(self.text_box_block,
-                                                label=config.operation_training_data_path_label,
+                                                label=config.trainingDataPath_label,
                                                 label_bold=False,
                                                 default_input='default: ' + config.indexPen_trainingDataDir_default)
 

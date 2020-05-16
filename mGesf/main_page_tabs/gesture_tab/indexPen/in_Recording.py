@@ -43,21 +43,24 @@ class Recording(QWidget):
 
         self.interval_last_block, self.interval_slider_view = init_slider_bar_box(self.input_block,
                                                                                   label=config.operation_interval_label,
-                                                                                  interval=config.recording_interval_range)
+                                                                                  interval=config.recording_interval)
+
         self.repeats_block, self.repeat_slider_view = init_slider_bar_box(self.input_block,
                                                                           label=config.operation_repeats_label,
-                                                                          interval=config.recording_repeat_range)
+                                                                          interval=config.repeat_times)
 
         self.classes_block, self.classes_textbox = init_inputBox(self.input_block,
                                                                  label=config.operation_classes_label,
                                                                  label_bold=False,
                                                                  default_input='default: ' + config.indexPen_classes_default)
+
         self.subject_name_block, self.subject_names_textbox = init_inputBox(self.input_block,
                                                                             label=config.operation_subject_name_label,
                                                                             label_bold=False,
                                                                             default_input='default: ' + config.indexPen_subjectName_default)
+
         self.training_dir_block, self.training_dir_textbox = init_inputBox(self.input_block,
-                                                                           label=config.operation_training_data_path_label,
+                                                                           label=config.trainingDataPath_label,
                                                                            label_bold=False,
                                                                            default_input='default: ' + config.indexPen_trainingDataDir_default)
 
@@ -228,6 +231,7 @@ class Recording(QWidget):
             # draw a new one
             current_character = self.character_set[self.character_counter]
             next_character = self.character_set[self.character_counter + 1]
+            next_character = self.character_set[self.character_counter + 1]
             self.instruction_text_block = init_instruction_text_block(label_current=current_character,
                                                                       label_next=next_character)
         # finish a recording loop
@@ -374,7 +378,10 @@ class Recording(QWidget):
             if self.is_return_pressed:
                 # destroy the preparation text block
                 # create the forecast block
-                self.forecast_block = init_forecast_block(self.text_block, label="   ", font=36, bold=True)
+                self.forecast_block, self.forecast_label = init_forecast_block(self.text_block,
+                                                                               label="   ",
+                                                                               font=36,
+                                                                               bold=True)
 
                 # start the timer
                 self.forecast_timer.start()
@@ -389,6 +396,7 @@ class Recording(QWidget):
         # if not recording yet
         elif not self.is_recording:
 
+            self.update_inputs()
             # try starting recording
             # check the data path first
             self.is_dir_valid = self.check_dir_valid()
@@ -398,6 +406,7 @@ class Recording(QWidget):
 
                 # start recording
                 self.is_recording = True
+                self.prepare()
                 self.recording_btn.setText(config.record_btn_end_label)
                 self.forecast_timer.start()
 
@@ -410,6 +419,7 @@ class Recording(QWidget):
         return
 
     def check_dir_valid(self):
+        print(self.training_dir)
         if os.path.exists(self.training_dir):
             return True
         else:
