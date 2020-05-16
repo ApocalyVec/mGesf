@@ -27,7 +27,7 @@ class Train(QWidget):
         # 1. input block (vertical)
         # 2. information
         self.input_block = init_container(parent=self.main_page, vertical=True)
-        self.info_pane = InformationPane(parent=self.main_page, label=None)
+        # self.info_pane = InformationPane(parent=self.main_page, label=None)
         sys.stdout = Stream(newText=self.on_print)
 
         # -------------------- third class --------------------

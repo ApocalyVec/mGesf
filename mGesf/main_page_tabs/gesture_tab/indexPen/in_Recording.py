@@ -1,17 +1,13 @@
 import os
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QSlider, QLabel, QMessageBox, QGraphicsScene, \
+from PyQt5.QtWidgets import QGraphicsScene, \
     QGraphicsView
-from PyQt5 import QtCore
-from PyQt5 import QtGui
-from PyQt5.QtGui import QPainter, QBrush, QPen, QTransform
-from PyQt5.QtWidgets import QApplication, QMainWindow
-import sys
+from PyQt5.QtGui import QBrush, QPen, QTransform
 from mGesf.main_page_tabs.gesture_tab import help_btn_action, calc_set
 from mGesf.main_page_tabs import ReturnKeyDetectionWidget
 
 from utils.GUI_main_window import *
 from utils.GUI_operation_tab import *
-from utils.sound import *
+from mGesf.sound import *
 import config
 import pyqtgraph as pg
 

@@ -1,8 +1,9 @@
 import sys
 
+from PyQt5 import uic
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
-    QHBoxLayout
+    QHBoxLayout, QFormLayout, QScrollArea
 import pyqtgraph as pg
 import time
 from utils.InformationPane import InformationPane
@@ -34,16 +35,23 @@ from utils.std_utils import Stream
 class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
-        self.resize(config.WINDOW_WIDTH, config.WINDOW_HEIGHT)
+        uic.loadUi('mGesf/resource/ui/MainWindow.ui', self)
+
         pg.setConfigOption('background', 'w')
 
-        layout = QVBoxLayout()
-
-        # create the tabs and information black
-        self.table_widget = Tabs(self, mmw_interface, refresh_interval, data_path)
+        main_layout = self.findChild(QHBoxLayout, 'mainLayout')
+        # create the tabs: Control, Radar, Leap, UWB, and Gesture
+        self.main_widget = self.findChild(QWidget, 'mainWidget')
+        self.table_widget = Tabs(self.main_widget, mmw_interface, refresh_interval, data_path)
         self.setCentralWidget(self.table_widget)
+        # create the information black
+        self.info_pane = InformationPane(parent=main_layout)
+        sys.stdout = Stream(newText=self.on_print)
 
         self.show()
+
+    def on_print(self, msg):
+        self.info_pane.push(msg)
 
 
 
@@ -52,6 +60,7 @@ class Tabs(QWidget):
 
     def __init__(self, parent, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(QWidget, self).__init__(parent)
+
         self.layout = QHBoxLayout(self)
 
         # create threading
@@ -71,9 +80,6 @@ class Tabs(QWidget):
 
         # Initialize tab screen
 
-
-
-
         self.tabs = QTabWidget()
         self.tab1 = control_tab.Control_tab(self.mmw_worker, refresh_interval, data_path)
         self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
@@ -91,9 +97,7 @@ class Tabs(QWidget):
         self.layout.addWidget(self.tabs)
         self.setLayout(self.layout)
 
-        # ***** information block *****
-        self.info_pane = InformationPane(parent=self.layout)
-        sys.stdout = Stream(newText=self.on_print)
+
 
     def __del__(self):
         sys.stdout = sys.__stdout__  # return control to regular stdout
@@ -105,5 +109,3 @@ class Tabs(QWidget):
         """
         self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
 
-    def on_print(self, msg):
-        self.info_pane.push(msg)
