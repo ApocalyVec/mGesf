@@ -1,17 +1,18 @@
 import config
 from utils.GUI_main_window import init_container
 from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout, QFormLayout, QGroupBox
+from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout, QFormLayout, QGroupBox, QWidget
 from PyQt5.QtCore import Qt, QSize
 from datetime import datetime
 
 
 class InformationPane():
-    def __init__(self, parent, max_msg_num=1000, label='Console output'):
-
+    def __init__(self, parent: QtWidgets.QScrollArea, max_msg_num=1000, label='Console output'):
+        infor_pane_size = (int(config.WINDOW_WIDTH / 3), config.WINDOW_HEIGHT)
         information_container = init_container(parent=parent,
                                                label_position="center",
-                                               style="background-color: " + config.container_color + ";")
+                                               style="background-color: " + config.container_color + ";",
+                                               size=infor_pane_size)
         # information_block = init_container(parent=information_container,
         #                                    style="background-color: " + config.subcontainer_color + ";")
 
@@ -28,7 +29,6 @@ class InformationPane():
         scroll.setFocusPolicy(QtCore.Qt.NoFocus)
         scroll.ensureWidgetVisible(groupBox)
         scroll.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        scroll.setFixedWidth(300)
 
         information_container.addWidget(scroll)
 
