@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTabWidget
 from utils.GUI_main_window import init_container
-from mGesf.main_page_tabs.gesture_tab.indexPen.idp_recording import Recording
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_recording import IdpRecording
 from mGesf.main_page_tabs.gesture_tab.indexPen.idp_train import Train
 from mGesf.main_page_tabs.gesture_tab.indexPen.idp_detection import Detection
 
@@ -16,7 +16,7 @@ class IndexPen(QWidget):
 
         # Initialize tab screen
         tabs = QTabWidget()
-        tab1 = Recording()
+        tab1 = IdpRecording()
         tab2 = Train()
         tab3 = Detection()
 

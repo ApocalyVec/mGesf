@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox, QWidget
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
 
+import config
 from utils.GUI_main_window import init_container, init_view
 from utils.labeled_Slider import LabeledSlider
 from PyQt5.QtGui import QIcon, QPixmap
@@ -26,7 +27,7 @@ def init_slider_bar_box(parent, label=None, interval=5):
     return line_container, slider_view
 
 
-def init_forecast_block(parent, label=None, bold=False, font=14):
+def init_countdown_block(parent, label=None, bold=False, font=14):
     vl = init_container(parent, style="background-color: white;")
     # a vertical layout
     ql = QLabel()
@@ -71,31 +72,28 @@ def init_preparation_block(parent, text):
     return vl
 
 
-def init_instruction_text_block(parent, label_current=None, label_next=None, bold=False, font=14):
+def init_instruction_text_block(parent, bold=False, font=14):
     vl = init_container(parent, style="background-color: white;")
     # a vertical layout
-    ql1 = QLabel()
-    ql1.setAlignment(QtCore.Qt.AlignCenter)
-    ql1.setStyleSheet("font: 36px;")
-    ql1.setText("Write")
+    lb_write = QLabel()
+    lb_write.setAlignment(QtCore.Qt.AlignCenter)
+    lb_write.setStyleSheet("font: 32px;")
+    lb_write.setText("Write")
+    vl.addWidget(lb_write)
 
-    ql2 = QLabel()
-    ql2.setAlignment(QtCore.Qt.AlignCenter)
-    ql2.setStyleSheet("font: bold 32px;")
-    ql2.setText(label_current)
+    lb_char_to_write = QLabel()
+    lb_char_to_write.setAlignment(QtCore.Qt.AlignCenter)
+    lb_char_to_write.setStyleSheet("font: bold 56px;")
+    lb_char_to_write.setText('...')
+    vl.addWidget(lb_char_to_write)
 
-    text3 = "... next"
-    if label_next:
-        text3 += " " + label_next
-    elif not label_next:
-        text3 += " NO NEXT"
+    lb_char_next = QLabel()
+    lb_char_next.setAlignment(QtCore.Qt.AlignCenter)
+    lb_char_next.setStyleSheet("font: italic 24px;")
+    lb_char_next.setText(config.instruction_next_text + '...')
+    vl.addWidget(lb_char_next)
 
-    ql3 = QLabel()
-    ql3.setAlignment(QtCore.Qt.AlignCenter)
-    ql3.setStyleSheet("font: bold 32px;")
-    ql3.setText(text3)
-
-    return vl
+    return lb_char_to_write, lb_char_next
 
 
 def show_finished_box():
@@ -141,6 +139,5 @@ def init_locate_unit_block(parent, number=None, label_position="centertop", imag
         label.setAlignment(QtCore.Qt.AlignTop)
 
     layout.addWidget(label)
-
 
     return image

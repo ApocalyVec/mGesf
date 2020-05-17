@@ -7,13 +7,6 @@ def help_btn_action():
     return
 
 
-def calc_set(classes=['A', 'B', 'C', 'D', 'E'], repeat_times=10):
+def generate_char_set(classes, repeat_times):
     """returns a full list of characters for the user to input"""
-    set_str = ""
-
-    for character in classes:
-        for time in range(repeat_times):
-            set_str += character + " "
-        set_str += "\n"
-
-    return set_str
+    return ''.join([c for c in classes for i in range(repeat_times)])

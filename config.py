@@ -1,5 +1,5 @@
 WINDOW_HEIGHT = 720
-WINDOW_WIDTH = 1280
+WINDOW_WIDTH = 720
 
 # ============== labels ==============
 # button labels
@@ -40,6 +40,16 @@ gesture_thuMouth_label = "ThuMouth"
 gesture_desktop_fingertip_label = "Desktop at Fingertip"
 
 # operation tab
+unit_size = WINDOW_WIDTH / 6
+counter_size_factor = 1.5
+ist_text_size_factor = 3
+
+instruction_block_size = (unit_size * (counter_size_factor + ist_text_size_factor), 512)
+counter_block_size = (unit_size * counter_size_factor, 512)  # a quarter of the instruction block's width
+ist_text_block_size = (unit_size * ist_text_size_factor, 512)
+
+
+
 operation_recording_label = "Recording"
 operation_training_label = "Training"
 operation_detection_label = "Detection"
@@ -89,8 +99,9 @@ control_tab_UDport_disconnected_message = "Disconnected to ports"
 control_tab_UDport_connected_message = "Connected to ports"
 
 # indexPen instruction area text
-forecast_animation_text = ["Steady...", "..Ready,", "GO!"]
-input_end_prompt = "NO NEXT"
+countdown_animation_text = ["Steady...", "..Ready,", "GO!"]
+instruction_next_text = "... next: "
+instruction_end_text = "NO NEXT"
 
 control_tab_config_file_path_default = 'mGesf/profiles/aop/30fps_azi_rd.cfg'
 data_path_default = '../data'
@@ -125,9 +136,6 @@ ra_shape = (8, 64)
 # # recording tab
 recording_interval = 4
 repeat_times = 10
-
-# forecast animation interval
-forecast_interval = 0.8
 
 # ============== links ==============
 # recording tab
