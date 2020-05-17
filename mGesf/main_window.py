@@ -16,11 +16,8 @@ import mGesf.main_page_tabs.control_tab as control_tab
 import mGesf.main_page_tabs.radar_tab as radar_tab
 import mGesf.main_page_tabs.leap_tab as leap_tab
 import mGesf.main_page_tabs.UWB_tab as UWB_tab
-import mGesf.main_page_tabs.gesture_tab.gesture_tab as gesture_tab
+import mGesf.main_page_tabs.gesture_tab.gesturetab as gesture_tab
 import config as config
-
-
-
 
 # class WorkerSignals(QObject):
 #     finished = pyqtSignal()
@@ -48,8 +45,6 @@ class MainWindow(QMainWindow):
         # create the information black
         # self.info_scroll = self.findChild(QScrollArea, 'infoScroll')
         self.show()
-
-
 
 
 class Tabs(QWidget):
@@ -82,7 +77,7 @@ class Tabs(QWidget):
         self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
         self.tab3 = leap_tab.Leap_tab()
         self.tab4 = UWB_tab.UWB_tab()
-        self.tab5 = gesture_tab.Gesture_tab()
+        self.tab5 = gesture_tab.GestureTab(self.mmw_worker)
 
         self.tabs.addTab(self.tab1, config.main_window_control_tab_label)
         self.tabs.addTab(self.tab2, config.main_window_radar_tab_label)
@@ -100,8 +95,6 @@ class Tabs(QWidget):
     def on_print(self, msg):
         self.info_pane.push(msg)
 
-
-
     def __del__(self):
         sys.stdout = sys.__stdout__  # return control to regular stdout
 
@@ -111,4 +104,3 @@ class Tabs(QWidget):
         ticks every 'refresh' milliseconds
         """
         self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
-
