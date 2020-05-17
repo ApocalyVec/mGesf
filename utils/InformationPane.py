@@ -1,13 +1,13 @@
 import config
 from utils.GUI_main_window import init_container
 from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout, QFormLayout, QGroupBox
+from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout, QFormLayout, QGroupBox, QWidget
 from PyQt5.QtCore import Qt, QSize
 from datetime import datetime
 
 
 class InformationPane():
-    def __init__(self, parent, max_msg_num=1000, label='Console output'):
+    def __init__(self, parent: QtWidgets.QScrollArea, max_msg_num=1000, label='Console output'):
         infor_pane_size = (int(config.WINDOW_WIDTH / 3), config.WINDOW_HEIGHT)
         information_container = init_container(parent=parent,
                                                label_position="center",

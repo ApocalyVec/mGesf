@@ -40,18 +40,15 @@ class MainWindow(QMainWindow):
         pg.setConfigOption('background', 'w')
 
         main_layout = self.findChild(QHBoxLayout, 'mainLayout')
+
         # create the tabs: Control, Radar, Leap, UWB, and Gesture
         self.main_widget = self.findChild(QWidget, 'mainWidget')
         self.table_widget = Tabs(self.main_widget, mmw_interface, refresh_interval, data_path)
         self.setCentralWidget(self.table_widget)
         # create the information black
-        self.info_pane = InformationPane(parent=main_layout)
-        sys.stdout = Stream(newText=self.on_print)
-
+        # self.info_scroll = self.findChild(QScrollArea, 'infoScroll')
         self.show()
 
-    def on_print(self, msg):
-        self.info_pane.push(msg)
 
 
 
@@ -96,6 +93,12 @@ class Tabs(QWidget):
         # Add tabs to widget
         self.layout.addWidget(self.tabs)
         self.setLayout(self.layout)
+
+        self.info_pane = InformationPane(parent=self.layout)
+        sys.stdout = Stream(newText=self.on_print)
+
+    def on_print(self, msg):
+        self.info_pane.push(msg)
 
 
 
