@@ -19,9 +19,6 @@ import mGesf.main_page_tabs.UWB_tab as UWB_tab
 import mGesf.main_page_tabs.gesture_tab.gesture_tab as gesture_tab
 import config as config
 
-
-
-
 # class WorkerSignals(QObject):
 #     finished = pyqtSignal()
 #     error = pyqtSignal(tuple)
@@ -48,8 +45,6 @@ class MainWindow(QMainWindow):
         # create the information black
         # self.info_scroll = self.findChild(QScrollArea, 'infoScroll')
         self.show()
-
-
 
 
 class Tabs(QWidget):
@@ -100,8 +95,6 @@ class Tabs(QWidget):
     def on_print(self, msg):
         self.info_pane.push(msg)
 
-
-
     def __del__(self):
         sys.stdout = sys.__stdout__  # return control to regular stdout
 
@@ -111,4 +104,3 @@ class Tabs(QWidget):
         ticks every 'refresh' milliseconds
         """
         self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
-

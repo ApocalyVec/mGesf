@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTabWidget
 from utils.GUI_main_window import init_container
-from mGesf.main_page_tabs.gesture_tab.indexPen.in_Recording import Recording
-from mGesf.main_page_tabs.gesture_tab.indexPen.Train import Train
-from mGesf.main_page_tabs.gesture_tab.indexPen.in_Detection import Detection
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_recording import Recording
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_train import Train
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_detection import Detection
 
 import config
 

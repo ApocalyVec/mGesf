@@ -3,8 +3,8 @@ from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraph
 from utils.GUI_main_window import *
 import config as config
 from mGesf.main_page_tabs.gesture_tab.desktopFingertip.DesktopFingertip import DesktopFingertip
-from mGesf.main_page_tabs.gesture_tab.indexPen.in_IndexPen import IndexPen
-from mGesf.main_page_tabs.gesture_tab.thuMouth.ThuMouse import ThuMouth
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_main import IndexPen
+from mGesf.main_page_tabs.gesture_tab.thuMouse.thm_main import ThuMouth
 
 
 class Gesture_tab(QWidget):

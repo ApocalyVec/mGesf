@@ -1,17 +1,19 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTabWidget
 from utils.GUI_main_window import init_container
-from mGesf.main_page_tabs.gesture_tab.thuMouth.thu_Recording import Recording
-from mGesf.main_page_tabs.gesture_tab.thuMouth.thu_Train import Train
-from mGesf.main_page_tabs.gesture_tab.thuMouth.thu_Detection import Detection
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_recording import Recording
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_train import Train
+from mGesf.main_page_tabs.gesture_tab.indexPen.idp_detection import Detection
+
 import config
 
 
-class ThuMouth(QWidget):
-    def __init__(self):
+class IndexPen(QWidget):
+    def __init__(self, *args, **kwargs):
         super().__init__()
         self.main_page = QHBoxLayout(self)
 
         self.operation_block = init_container(parent=self.main_page, vertical=False)
+
         # Initialize tab screen
         tabs = QTabWidget()
         tab1 = Recording()
@@ -24,6 +26,6 @@ class ThuMouth(QWidget):
 
         # Add tabs to widget
         self.operation_block.addWidget(tabs)
-        self.setLayout(self.main_page)
 
+        self.setLayout(self.main_page)
         self.show()
