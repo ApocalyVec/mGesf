@@ -12,6 +12,9 @@ import config
 import pyqtgraph as pg
 
 
+# TODO ISSUE: there's a perceptible glitch in the runtime graphs when the metronome refreshes, will this go away if
+#  the frame rate is lower when the sensors are connected (at 30FPS)?
+
 class IdpRecording(QWidget):
     def __init__(self):
         super().__init__()
@@ -99,8 +102,10 @@ class IdpRecording(QWidget):
         #       1-1. circles block (vertical)
         #       1-2. text block (vertical)
 
-        self.counter_block = init_container(parent=self.instruction_block, vertical=True, size=config.counter_block_size)
-        self.ist_text_block = init_container(parent=self.instruction_block, vertical=True, size=config.ist_text_block_size)
+        self.counter_block = init_container(parent=self.instruction_block, vertical=True,
+                                            size=config.counter_block_size)
+        self.ist_text_block = init_container(parent=self.instruction_block, vertical=True,
+                                             size=config.ist_text_block_size)
         # -------------------- fourth class --------------------
         #       1-1. circles block (vertical)
         #           1-1-1. circles_view
@@ -131,8 +136,6 @@ class IdpRecording(QWidget):
         #                  character to write
         #                  "...next" + next character to write
 
-        # will be initialized when the test button or the recording button is pressed
-        self.preparation_block = None
         # will be initialized when the user presses enter/return after preparation
         self.countdown_block, self.countdown_label = None, None
         # will be initialized when the forecast animation is over
@@ -152,28 +155,19 @@ class IdpRecording(QWidget):
         self.char_set = generate_char_set(self.classes, self.repeat_times)
 
         # =========================== timers =============================
-        # timer 1
         self.timer = QtCore.QTimer()
         self.timer.setInterval(self.interval * 1000)
         self.timer.timeout.connect(self.ticks)
         self.timer.start()
 
-        # timer 2
-        # an indicator for the recording forecast, the ready go part
-        # self.countdown_timer = QtCore.QTimer()
-        # self.countdown_timer.setInterval(self.interval  * 1000)
-        # self.countdown_timer.timeout.connect(self.countdown_tick)
-
         # ======================= indicators, counters ==========================
         self.state = ['idle']  # see the docstring of self.update_state for details
 
         # tracking if the user pressed the return key to start recording
-
         self.is_dir_valid = False
         self.cur_countdown, self.tempo_counter = 0, 0
 
         self.reset_instruction()
-
 
     def update_state(self, action):
         """
@@ -187,7 +181,6 @@ class IdpRecording(QWidget):
         @note: you will see that there's a slight pause at the start of writing and the instruction says writing '...',
                 this is an expected behavior as we are not updating the states in a clock, but rather posting to the
                 state changes in function class. It's not a bug, it's a feature!
-
         """
         if action == 'test_pressed':
             if 'idle' in self.state:  # start the test mode
@@ -229,10 +222,9 @@ class IdpRecording(QWidget):
             self.test_btn.setText(config.test_btn_start_label)
             self.recording_btn.setDisabled(False)
 
-
     def idle_to_pending(self):
         self.get_experiment_config()
-        self.preparation_block = init_preparation_block(parent=self.ist_text_block, text=self.char_set)
+        init_preparation_block(parent=self.ist_text_block, text=self.char_set)
 
     def working_to_idle(self):
         self.reset_instruction()
@@ -249,8 +241,7 @@ class IdpRecording(QWidget):
     def countdown_to_writing(self):
         self.clear_layout(self.ist_text_block)
         self.reset_instruction()
-        self.lb_char_to_write,  self.lb_char_next = init_instruction_text_block(self.ist_text_block)
-
+        self.lb_char_to_write, self.lb_char_next = init_instruction_text_block(self.ist_text_block)
 
     def keyPressEvent(self, key_event):
         print(key_event)
@@ -271,7 +262,6 @@ class IdpRecording(QWidget):
         elif 'writing' in self.state:
             self.metronome_tick()
 
-
     @pg.QtCore.pyqtSlot()
     def countdown_tick(self):
         # after the text block shows all countdown texts, stop updating, do nothing and return
@@ -284,7 +274,6 @@ class IdpRecording(QWidget):
         else:
             self.countdown_label.setText(config.countdown_animation_text[self.cur_countdown])
             self.cur_countdown += 1
-
 
     def metronome_tick(self):
         # tempo: dah, dih, dih,dih
@@ -308,15 +297,14 @@ class IdpRecording(QWidget):
 
         self.tempo_counter += 1
 
-
-
     def setup_canvas(self):
 
         self.counter_block.addWidget(self.metronome_view)
         self.metronome_view.resize(config.unit_size, config.WINDOW_HEIGHT / 3)
         position = self.metronome_view.pos()
 
-        self.metronome_scene.setSceneRect(position.x(), position.y(), self.metronome_view.width(), self.metronome_view.height())
+        self.metronome_scene.setSceneRect(position.x(), position.y(), self.metronome_view.width(),
+                                          self.metronome_view.height())
 
         # size of the scene
         width = self.metronome_scene.width()
@@ -423,11 +411,9 @@ class IdpRecording(QWidget):
     def test_btn_action(self):
         self.update_state('test_pressed')
 
-
     def clear_layout(self, layout):
         for i in reversed(range(layout.count())):
             self.ist_text_block.itemAt(i).widget().setParent(None)
-
 
     def recording_btn_action(self):
         # TODO implement this action
@@ -455,7 +441,6 @@ class IdpRecording(QWidget):
         #         msg.setIcon(QMessageBox.Information)
         #         msg.setText("Recording")
         #         msg.exec()
-
 
     def check_dir_valid(self):
         print(self.training_dir)

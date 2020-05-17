@@ -11,9 +11,11 @@ import mGesf.exceptions as exceptions
 
 
 class MmwWorker(QObject):
-    # for passing data to radar tab
+    # for passing data to the gesture tab
+    signal_mmw_gesture_tab = pyqtSignal(dict)
+    # for passing data to the radar tab
     signal_mmw_radar_tab = pyqtSignal(dict)
-    # for passing data to control tab
+    # for passing data to the control tab
     signal_mmw_control_tab = pyqtSignal(dict)
 
     tick_signal = pyqtSignal()
@@ -57,9 +59,8 @@ class MmwWorker(QObject):
                          'pts': pts_array,
                          'range_amplitude': range_amplitude}
             self.signal_mmw_radar_tab.emit(data_dict)
-
-            # notify the mmw data for the control tab
-            self.signal_mmw_control_tab.emit(data_dict)
+            self.signal_mmw_control_tab.emit(data_dict)  # notify the mmw data for the control tab
+            self.signal_mmw_gesture_tab.emit(data_dict)  # notify the mmw data for the gesture tab
 
     def start_mmw(self):
         if self._mmw_interface:  # if the sensor interface is established
@@ -123,8 +124,3 @@ class MmwWorker(QObject):
         else:
             print('No Radar Interface Connected, ignored.')
             # raise exceptions.InterfaceNotExistError
-
-
-
-
-

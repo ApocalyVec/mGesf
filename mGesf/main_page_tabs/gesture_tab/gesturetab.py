@@ -1,21 +1,24 @@
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView, QTabWidget
+import time
 
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView, QTabWidget
+import pyqtgraph as pg
+
+from mGesf import MMW_worker
 from utils.GUI_main_window import *
 import config as config
 from mGesf.main_page_tabs.gesture_tab.desktopFingertip.DesktopFingertip import DesktopFingertip
 from mGesf.main_page_tabs.gesture_tab.indexPen.idp_main import IndexPen
 from mGesf.main_page_tabs.gesture_tab.thuMouse.thm_main import ThuMouth
+from utils.img_utils import array_to_colormap_qim
 
 
-class Gesture_tab(QWidget):
+class GestureTab(QWidget):
     """
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, mmw_worker: MMW_worker, *args, **kwargs):
         super().__init__()
-
-        self.doppler_display = QGraphicsPixmapItem()
-
         # #################### create layout #################################
 
         self.will_recording_radar = False
@@ -52,11 +55,12 @@ class Gesture_tab(QWidget):
         #       1-1. radar runtime block
         #           1-1-1. radar runtime graph
         #           1-1-2. radar checkbox
-
+        self.doppler_display = QGraphicsPixmapItem()
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Radar",
                                                       graph=self.doppler_display)
-
         self.radar_record_checkbox = init_checkBox(parent=self.radar_runtime_block, function=self.radar_clickBox)
+        mmw_worker.signal_mmw_gesture_tab.connect(self.gesture_process_mmw_data)
+
 
         # -------------------- fourth class -------------------
         #       1-1. leap runtime block
@@ -65,7 +69,6 @@ class Gesture_tab(QWidget):
 
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_runtime_block, label="Leap",
                                                      graph=None)
-
         self.leap_record_checkbox = init_checkBox(parent=self.leap_runtime_block, function=self.radar_clickBox)
 
         # -------------------- fourth class -------------------
@@ -144,3 +147,36 @@ class Gesture_tab(QWidget):
         else:
             self.will_recording_UWB = False
             # self.message.setText(config.UWB_box_unchecked)
+
+    def gesture_process_mmw_data(self, data_dict):
+        """
+        Process the emitted mmWave data
+        This function is evoked when signaled by self.mmw_data_ready which is emitted by the mmw_worker thread.
+        The function handles the following actions
+            update the mmw figures in the GUI
+            record the mmw data if record is enabled. In the current implementation, the data is provisionally saved in
+            the memory and evicted when the user click 'stop_record'
+        :param data_dict:
+        """
+        # update range doppler spectrogram
+        doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
+        doppler_qpixmap = QPixmap(doppler_heatmap_qim)
+        doppler_qpixmap = doppler_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        self.doppler_display.setPixmap(doppler_qpixmap)
+
+        # save the data is record is enabled
+        # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
+        # if self.is_recording_radar:
+        #     ts = time.time()
+        #     try:
+        #         assert data_dict['range_doppler'].shape == config.rd_shape
+        #         assert data_dict['range_azi'].shape == config.ra_shape
+        #     except AssertionError:
+        #         print('Invalid data shape at ' + str(ts) + ', discarding frame.')
+        #         return
+        #     finally:
+        #         self.buffer['mmw']['timestamps'].append(ts)
+        #         # expand spectrogram dimension for channel_first
+        #         self.buffer['mmw']['range_doppler'].append(np.expand_dims(data_dict['range_doppler'], axis=0))
+        #         self.buffer['mmw']['range_azi'].append(np.expand_dims(data_dict['range_azi'], axis=0))
+        #         self.buffer['mmw']['detected_points'].append(data_dict['pts'])
