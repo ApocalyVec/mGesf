@@ -200,3 +200,9 @@ def retrieve_idp_encoder(train_dir: str):
 def clear_layout(layout):
     for i in reversed(range(layout.count())):
         layout.itemAt(i).widget().setParent(None)
+
+
+def circular_sampling(sample, point, timestep):
+    rtn = sample[-(timestep-1):]
+    rtn.append([point]) # expand the channel dimension
+    return rtn

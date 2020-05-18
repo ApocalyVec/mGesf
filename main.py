@@ -51,7 +51,7 @@ if __name__ == '__main__':
     _mmw_interface = None
 
     # setup system constants
-    refresh = 1  # refresh_interval every x ms
+    refresh = 33  # refresh_interval every x ms, use 33 when in simulation mode, use 1 when connected to sensors
 
     app = QApplication(sys.argv)
     window = MainWindow(mmw_interface=_mmw_interface, refresh_interval=refresh, data_path=data_path)

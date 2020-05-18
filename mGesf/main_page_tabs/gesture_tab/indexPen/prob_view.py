@@ -17,7 +17,7 @@ class ProbViewWindow(QMainWindow):
         for i in range(10):
             prob_form.addRow(QLabel(str(i)), QLabel('This'))
 
-    def setup(self, ):  # TODO implement setup
+    def setup(self, encoder):  # TODO implement setup
         clear_layout(self.layout())
 
 

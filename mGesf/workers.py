@@ -9,6 +9,8 @@ from utils.simulation import sim_heatmap, sim_detected_points, sim_imp
 
 import mGesf.exceptions as exceptions
 
+import numpy as np
+
 
 class MmwWorker(QObject):
     """
@@ -137,30 +139,25 @@ class IdpDetectionWorker(QObject):
     """
     detection result package (dict):
         'pred': ndarray, decoded argmax of the output
-        'output': ndarray, output vector of the prediction model
+        'output': ndarray, output vector of the prediction model, shape = n * number of classes
     """
-    tick_signal = pyqtSignal()
+    tick_signal = pyqtSignal(dict)
     signal_detection = pyqtSignal(dict)
 
     def __init__(self, *args, **kwargs):
         super(IdpDetectionWorker, self).__init__()
         self.tick_signal.connect(self.detect_on_tick)
-        self._is_running = False
         self.encoder = None
         self.model = None
 
-    @pg.QtCore.pyqtSlot()
-    def detect_on_tick(self):
-        if self._is_running:
-            output = ''
-            pred = ''
-            self.signal_detection.emit({'pred': pred,
-                                        'output': output})  # notify the mmw data for the gesture tab
+    def detect_on_tick(self, samples):
+        output = self.model.predict([np.array(samples['rd']),
+                            np.array(samples['ra'])])
+        pred = self.encoder.inverse_transform(output)
+        self.signal_detection.emit({'pred': pred,
+                                    'output': output})  # notify the mmw data for the gesture tab
 
-    def start(self, encoder, model):
+    def setup(self, encoder, model):
         self.encoder = encoder
         self.model = model
-        self._is_running = True
 
-    def stop(self):
-        self._is_running = False

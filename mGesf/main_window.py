@@ -33,8 +33,8 @@ class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         uic.loadUi('mGesf/resource/ui/MainWindow.ui', self)
-
         pg.setConfigOption('background', 'w')
+        self.title = 'Micro-gesture Sensor-fusion'
 
         main_layout = self.findChild(QHBoxLayout, 'mainLayout')
 

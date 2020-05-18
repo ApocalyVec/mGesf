@@ -61,13 +61,13 @@ from utils.data_utils import plot_confusion_matrix
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-PQRST-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-UVWXY-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-ZSpcBspcEnt-rpt10']
-idp_data_dir = ['../data/idp-ABCDE-rpt10',
-                '../data/idp-ABCDE-rpt2',
-                '/../data/idp-FGHIJ-rpt10',
-                '../data/idp-KLMNO-rpt10',
-                '../data/idp-PQRST-rpt10',
-                '../data/idp-UVWXY-rpt10',
-                '../data/idp-ZSpcBspcEnt-rpt10']
+idp_data_dir = ['data/idp-ABCDE-rpt10',
+                'data/idp-ABCDE-rpt2',
+                'data/idp-FGHIJ-rpt10',
+                'data/idp-KLMNO-rpt10',
+                'data/idp-PQRST-rpt10',
+                'data/idp-UVWXY-rpt10',
+                'data/idp-ZSpcBspcEnt-rpt10']
 num_repeats = [10, 2, 10, 10, 10, 10, 10]
 sample_classes = [['A', 'B', 'C', 'D', 'E'],
                   ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice

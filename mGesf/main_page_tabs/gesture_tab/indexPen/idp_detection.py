@@ -8,9 +8,10 @@ from utils.GUI_operation_tab import *
 import config
 import pyqtgraph as pg
 
+import tensorflow as tf
 
 class IdpDetection(QWidget):
-    def __init__(self, mmw_signal):
+    def __init__(self, mmw_signal):  # TODO add a slider for setting the detection interval
         super().__init__()
 
         # -------------------- First class --------------------
@@ -77,7 +78,7 @@ class IdpDetection(QWidget):
         # init signal processing
         mmw_signal.connect(self.detection_process_mmw)
         self.encoder = None  # idp classification categories
-
+        self.timestep = None
         # create threading
         # create a QThread and start the thread that handles
         self.worker_thread = pg.QtCore.QThread(self)
@@ -86,22 +87,82 @@ class IdpDetection(QWidget):
         # worker
         self.dtc_worker = IdpDetectionWorker()
         self.dtc_worker.moveToThread(self.worker_thread)
+        self.dtc_worker.signal_detection.connect(self.process_detection)
 
+        # state variable
+        self.prob_view_btn.setEnabled(False)
+        self.is_detecting = False
+
+        # temporal samples
+        self.sample = {'rd': [],
+                       'ra': [],
+                       'foo': []}
+        self.sample_acc = {'rd': [],  # accumulative samples,
+                           'ra': [],
+                           'foo': []}
+        self.sample_count = 0
+        self.interval_counter = 0
+        self.dtc_interval = 11
+
+        # allow dynamic allocation of GPU memory
+        tf_config = tf.ConfigProto()
+        tf_config.gpu_options.allow_growth = True
+        session = tf.Session(config=tf_config)
 
     def load_btn_action(self):
+        print('IndexPen Detection: Loading...')
         try:
+            from keras.engine.saving import load_model
             self.encoder = retrieve_idp_encoder(self.training_dir_text.text())
+            model = load_model(self.model_path_text.text())
+            self.timestep = int(model.input[0].shape[1])
+            self.dtc_worker.setup(self.encoder, model)
         except FileNotFoundError as e:
-            print('IndexPen Detection: ' + self.training_dir_text + ' does not exist.')
+            print('IndexPen Detection: train data and/or model path not exist')
+        print('IndexPen Detection: Load Complete')
 
     def start_stop_btn_action(self):
-        self.load_btn_action()
+        if not self.is_detecting:
+            self.load_btn_action()  # load the model before starting
+            self.start_stop_detection_btn.setText(config.detection_end_btn_label)
+            self.prob_view_btn.setEnabled(True)
+            self.interval_counter = 0
+            self.sample_count = 0
+        else:
+            self.start_stop_detection_btn.setText(config.detection_start_btn_label)
+            self.prob_view_win.close()
+            self.prob_view_btn.setEnabled(False)
+
+        self.is_detecting = not self.is_detecting
 
     def prob_view_btn_action(self):
+        self.ProbViewWindow.setup(self.encoder)
         self.prob_view_win.show()
-        print('hey')
 
     def detection_process_mmw(self, data_dict):
-        self.dtc_worker.tick_signal.emit()  # signal the detection thread to make a prediction
+        if self.is_detecting:
+            self.interval_counter += 1
+            self.sample_count += 1
+            self.sample['foo'] = circular_sampling(self.sample['foo'], point=self.sample_count, timestep=self.timestep)
+            self.sample['rd'] = circular_sampling(sample=self.sample['rd'], point=data_dict['range_doppler'],
+                                                  timestep=self.timestep)
+            self.sample['ra'] = circular_sampling(sample=self.sample['ra'], point=data_dict['range_azi'],
+                                                  timestep=self.timestep)
 
+            if len(self.sample['rd']) >= self.timestep:  # if there are enough points to make a complete sample
+                self.sample_acc['rd'].append(self.sample['rd'])
+                self.sample_acc['ra'].append(self.sample['ra'])
+                self.sample_acc['foo'].append(self.sample['foo'])
+                if self.interval_counter >= self.dtc_interval:
+                    self.interval_counter = 0
+                    self.dtc_worker.tick_signal.emit(
+                        self.sample_acc)  # signal the detection thread to make a prediction
+                    self.clear_accumulative_samples()
 
+    def clear_accumulative_samples(self):
+        self.sample_acc = {'rd': [],  # accumulative samples,
+                           'ra': [],
+                           'foo': []}
+
+    def process_detection(self, dtc_dict):
+        print(str(dtc_dict['pred']) + str(dtc_dict['output']))
