@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from Learn.data_in import idp_preprocess, resolve_points_per_sample
-from mGesf.config import rd_shape, ra_shape
+from config import rd_shape, ra_shape
 from utils.data_utils import plot_confusion_matrix
 
 ########################################################################################################################
@@ -54,9 +54,16 @@ from utils.data_utils import plot_confusion_matrix
 # classes = ['Z', 'Spc', 'Bspc', 'Ent']
 ########################################################################################################################
 
+# idp_data_dir = ['/Users/Leo/Documents/data/idp_29/data/idp-ABCDE-rpt10',
+#                 '/Users/Leo/Documents/data/idp_29/data/idp-ABCDE-rpt2',
+#                 '/Users/Leo/Documents/data/idp_29/data/idp-FGHIJ-rpt10',
+#                 '/Users/Leo/Documents/data/idp_29/data/idp-KLMNO-rpt10',
+#                 '/Users/Leo/Documents/data/idp_29/data/idp-PQRST-rpt10',
+#                 '/Users/Leo/Documents/data/idp_29/data/idp-UVWXY-rpt10',
+#                 '/Users/Leo/Documents/data/idp_29/data/idp-ZSpcBspcEnt-rpt10']
 idp_data_dir = ['../data/idp-ABCDE-rpt10',
                 '../data/idp-ABCDE-rpt2',
-                '../data/idp-FGHIJ-rpt10',
+                '/../data/idp-FGHIJ-rpt10',
                 '../data/idp-KLMNO-rpt10',
                 '../data/idp-PQRST-rpt10',
                 '../data/idp-UVWXY-rpt10',

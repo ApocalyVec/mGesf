@@ -1,12 +1,17 @@
+import pickle
+
 from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox, QWidget
+from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox, QWidget, QVBoxLayout, QScrollArea, QGroupBox, \
+    QFormLayout
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
 
 import config
+from mGesf.utils import camel_case_split
 from utils.GUI_main_window import init_container, init_view
 from utils.labeled_Slider import LabeledSlider
 from PyQt5.QtGui import QIcon, QPixmap
+import os
 
 
 def init_slider_bar_box(parent, label=None, interval=5):
@@ -96,6 +101,24 @@ def init_instruction_text_block(parent, bold=False, font=14):
     return lb_char_to_write, lb_char_next
 
 
+def init_detection_text_block(parent, bold=False, font=14):
+    vl = init_container(parent, style="background-color: white;")
+    # a vertical layout
+    lb_write = QLabel()
+    lb_write.setAlignment(QtCore.Qt.AlignCenter)
+    lb_write.setStyleSheet("font: 32px;")
+    lb_write.setText("You wrote")
+    vl.addWidget(lb_write)
+
+    lb_char_written = QLabel()
+    lb_char_written.setAlignment(QtCore.Qt.AlignCenter)
+    lb_char_written.setStyleSheet("font: bold 56px;")
+    lb_char_written.setText('... nothing')
+    vl.addWidget(lb_char_written)
+
+    return lb_char_written
+
+
 def show_finished_box():
     # show finishing message
     msg = QMessageBox()
@@ -141,3 +164,39 @@ def init_locate_unit_block(parent, number=None, label_position="centertop", imag
     layout.addWidget(label)
 
     return image
+
+
+def init_scroll_area(parent, label, size=None):
+    gb = QGroupBox(label)
+    form = QFormLayout()
+    gb.setLayout(form)
+
+    scroll = QtGui.QScrollArea()
+    scroll.setWidget(gb)
+    scroll.setWidgetResizable(True)
+    if size:
+        scroll.setFixedWidth(size[0])
+        scroll.setFixedHeight(size[1])
+    parent.addWidget(scroll)
+    return form
+
+
+def retrieve_idp_encoder(train_dir: str):
+    """
+    files in the train_dir are name <idp>-<classes>-rpt<repetition times>
+    the classes should be in camel case
+    resolve classes using the one-hot encoder saved from the training
+    @param train_dir:
+    """
+    return pickle.load(open(os.path.join(train_dir, 'idp_encoder.pickle'), 'rb'))
+    # classes = []
+    # for fn in os.listdir(train_dir):
+    #     seps = fn.split('-')
+    #     if len(seps) == 3 and seps[0] == 'idp':  # identify the data files
+    #         classes += camel_case_split(seps[1])
+    # return classes
+
+
+def clear_layout(layout):
+    for i in reversed(range(layout.count())):
+        layout.itemAt(i).widget().setParent(None)

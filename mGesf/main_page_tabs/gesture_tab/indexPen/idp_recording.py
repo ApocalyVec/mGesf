@@ -239,7 +239,7 @@ class IdpRecording(QWidget):
                                                                           bold=True)
 
     def countdown_to_writing(self):
-        self.clear_layout(self.ist_text_block)
+        clear_layout(self.ist_text_block)
         self.reset_instruction()
         self.lb_char_to_write, self.lb_char_next = init_instruction_text_block(self.ist_text_block)
 
@@ -411,10 +411,6 @@ class IdpRecording(QWidget):
     def test_btn_action(self):
         self.update_state('test_pressed')
 
-    def clear_layout(self, layout):
-        for i in reversed(range(layout.count())):
-            self.ist_text_block.itemAt(i).widget().setParent(None)
-
     def recording_btn_action(self):
         # TODO implement this action
         pass
@@ -454,7 +450,7 @@ class IdpRecording(QWidget):
             return False
 
     def reset_instruction(self):
-        self.clear_layout(self.ist_text_block)
+        clear_layout(self.ist_text_block)
         for item in self.metronome_scene.items():
             self.metronome_scene.removeItem(item)
         self.paint()
