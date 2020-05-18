@@ -14,7 +14,7 @@ from PyQt5 import QtCore
 from utils.img_utils import array_to_colormap_qim
 
 import numpy as np
-import mGesf.MMW_worker as MMW_worker
+import mGesf.workers as MMW_worker
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 

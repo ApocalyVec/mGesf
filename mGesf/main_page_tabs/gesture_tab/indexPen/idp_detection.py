@@ -2,13 +2,15 @@ from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QSlider, QLabel
 
 from mGesf.main_page_tabs.gesture_tab import help_btn_action
 from mGesf.main_page_tabs.gesture_tab.indexPen.prob_view import ProbViewWindow
+from mGesf.workers import IdpDetectionWorker
 from utils.GUI_main_window import *
 from utils.GUI_operation_tab import *
 import config
+import pyqtgraph as pg
 
 
-class Detection(QWidget):
-    def __init__(self):
+class IdpDetection(QWidget):
+    def __init__(self, mmw_signal):
         super().__init__()
 
         # -------------------- First class --------------------
@@ -66,11 +68,25 @@ class Detection(QWidget):
                                     label=config.help_btn_label,
                                     function=help_btn_action)
 
+        # init probability view window
         self.prob_view_btn = init_button(parent=self.buttons_block,
                                          label=config.prob_view_btn_label,
                                          function=self.prob_view_btn_action)
         self.prob_view_win = ProbViewWindow(self)
+
+        # init signal processing
+        mmw_signal.connect(self.detection_process_mmw)
         self.encoder = None  # idp classification categories
+
+        # create threading
+        # create a QThread and start the thread that handles
+        self.worker_thread = pg.QtCore.QThread(self)
+        self.worker_thread.start()
+
+        # worker
+        self.dtc_worker = IdpDetectionWorker()
+        self.dtc_worker.moveToThread(self.worker_thread)
+
 
     def load_btn_action(self):
         try:
@@ -79,8 +95,13 @@ class Detection(QWidget):
             print('IndexPen Detection: ' + self.training_dir_text + ' does not exist.')
 
     def start_stop_btn_action(self):
-        return
+        self.load_btn_action()
 
     def prob_view_btn_action(self):
         self.prob_view_win.show()
         print('hey')
+
+    def detection_process_mmw(self, data_dict):
+        self.dtc_worker.tick_signal.emit()  # signal the detection thread to make a prediction
+
+

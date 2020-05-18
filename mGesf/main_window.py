@@ -9,7 +9,7 @@ import time
 from utils.InformationPane import InformationPane
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
-import mGesf.MMW_worker as MMW_worker
+import mGesf.workers as MMW_worker
 
 # tabs ======================================
 import mGesf.main_page_tabs.control_tab as control_tab

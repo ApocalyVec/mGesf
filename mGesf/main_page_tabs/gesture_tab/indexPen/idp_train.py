@@ -9,7 +9,7 @@ from utils.std_utils import Stream
 import sys
 
 
-class Train(QWidget):
+class IdpTrain(QWidget):
     def __init__(self):
         super().__init__()
 
