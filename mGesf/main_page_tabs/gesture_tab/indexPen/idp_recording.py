@@ -1,4 +1,6 @@
 import os
+import time
+
 from PyQt5.QtWidgets import QGraphicsScene, \
     QGraphicsView
 from PyQt5.QtGui import QBrush, QPen, QTransform
@@ -154,12 +156,6 @@ class IdpRecording(QWidget):
         self.training_dir = self.get_training_data_dir()
         self.char_set = generate_char_set(self.classes, self.repeat_times)
 
-        # =========================== timers =============================
-        self.timer = QtCore.QTimer()
-        self.timer.setInterval(self.interval * 1000)
-        self.timer.timeout.connect(self.ticks)
-        self.timer.start()
-
         # ======================= indicators, counters ==========================
         self.state = ['idle']  # see the docstring of self.update_state for details
 
@@ -168,6 +164,16 @@ class IdpRecording(QWidget):
         self.cur_countdown, self.tempo_counter = 0, 0
 
         self.reset_instruction()
+
+        # =========================== timers =============================
+        self.timer = QtCore.QTimer()
+        self.timer.setTimerType(QtCore.Qt.PreciseTimer)
+        self.timer.setInterval(self.interval * 1000)
+        self.timer.timeout.connect(self.ticks)
+        self.timer.start()
+        # self.count = 0
+        # self.start_time = time.time()
+
 
     def update_state(self, action):
         """
@@ -254,13 +260,15 @@ class IdpRecording(QWidget):
         check the current state
         ticks every 'refresh' milliseconds
         """
-
+        # duration = time.time() - self.start_time
+        # self.count += 1
         if 'pending' in self.state:
             pass
         elif 'countingDown' in self.state:
             self.countdown_tick()
         elif 'writing' in self.state:
             self.metronome_tick()
+        pass
 
     @pg.QtCore.pyqtSlot()
     def countdown_tick(self):
