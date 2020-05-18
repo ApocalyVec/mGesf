@@ -5,13 +5,13 @@ from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox, QWidget, 
     QFormLayout
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
-
 import config
 from mGesf.utils import camel_case_split
 from utils.GUI_main_window import init_container, init_view
 from utils.labeled_Slider import LabeledSlider
 from PyQt5.QtGui import QIcon, QPixmap
 import os
+import pyqtgraph as pg
 
 
 def init_slider_bar_box(parent, label=None, interval=5):
@@ -171,14 +171,12 @@ def init_scroll_area(parent, label, size=None):
     form = QFormLayout()
     gb.setLayout(form)
 
-    scroll = QtGui.QScrollArea()
+    scroll = QScrollArea()
     scroll.setWidget(gb)
     scroll.setWidgetResizable(True)
-    if size:
-        scroll.setFixedWidth(size[0])
-        scroll.setFixedHeight(size[1])
+    scroll.resize(size[0], size[1])
     parent.addWidget(scroll)
-    return form
+    return form, scroll
 
 
 def retrieve_idp_encoder(train_dir: str):
@@ -203,6 +201,16 @@ def clear_layout(layout):
 
 
 def circular_sampling(sample, point, timestep):
-    rtn = sample[-(timestep-1):]
-    rtn.append([point]) # expand the channel dimension
+    rtn = sample[-(timestep - 1):]
+    rtn.append([point])  # expand the channel dimension
     return rtn
+
+
+def create_plot_widget(x_lim=None, y_lim=None):
+    plot_widget = pg.PlotWidget()
+    if x_lim:
+        plot_widget.setXRange(*x_lim)
+    if y_lim:
+        plot_widget.setYRange(*y_lim)
+    plot = plot_widget.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
+    return plot_widget, plot

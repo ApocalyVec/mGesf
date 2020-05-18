@@ -117,6 +117,7 @@ class IdpDetection(QWidget):
             model = load_model(self.model_path_text.text())
             self.timestep = int(model.input[0].shape[1])
             self.dtc_worker.setup(self.encoder, model)
+            self.prob_view_win.setup(self.encoder)
         except FileNotFoundError as e:
             print('IndexPen Detection: train data and/or model path not exist')
         print('IndexPen Detection: Load Complete')
@@ -136,7 +137,6 @@ class IdpDetection(QWidget):
         self.is_detecting = not self.is_detecting
 
     def prob_view_btn_action(self):
-        self.ProbViewWindow.setup(self.encoder)
         self.prob_view_win.show()
 
     def detection_process_mmw(self, data_dict):
@@ -165,4 +165,5 @@ class IdpDetection(QWidget):
                            'foo': []}
 
     def process_detection(self, dtc_dict):
-        print(str(dtc_dict['pred']) + str(dtc_dict['output']))
+        print(str(dtc_dict['pred']))
+        self.prob_view_win.signal_dtc_output.emit(dtc_dict['output'])

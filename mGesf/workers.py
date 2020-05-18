@@ -155,7 +155,8 @@ class IdpDetectionWorker(QObject):
                             np.array(samples['ra'])])
         pred = self.encoder.inverse_transform(output)
         self.signal_detection.emit({'pred': pred,
-                                    'output': output})  # notify the mmw data for the gesture tab
+                                    'output': output,
+                                    'foo': np.array(samples['foo'])},)  # notify the mmw data for the gesture tab
 
     def setup(self, encoder, model):
         self.encoder = encoder
