@@ -219,7 +219,7 @@ def decode_iwr_tlv(in_data):
             data = data[pending_bytes:]  # data that are left
 
             # infer range profile from heatmap is the former is not enabled
-            if range_profile is None and rd_heatmap is not None:
+            if range_profile is None and rd_heatmap is not None and len(rd_heatmap) > 0:
                 range_profile = rd_heatmap[:, 0]
             return True, data, detected_points, range_profile, rd_heatmap, azi_heatmap
         except struct.error as se:

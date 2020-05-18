@@ -9,7 +9,7 @@ import time
 from utils.InformationPane import InformationPane
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
-import mGesf.MMW_worker as MMW_worker
+import mGesf.workers as MMW_worker
 
 # tabs ======================================
 import mGesf.main_page_tabs.control_tab as control_tab
@@ -33,8 +33,8 @@ class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         uic.loadUi('mGesf/resource/ui/MainWindow.ui', self)
-
         pg.setConfigOption('background', 'w')
+        self.title = 'Micro-gesture Sensor-fusion'
 
         main_layout = self.findChild(QHBoxLayout, 'mainLayout')
 

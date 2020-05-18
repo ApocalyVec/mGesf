@@ -16,9 +16,11 @@ record_btn_end_label = 'End Recording'
 help_btn_label = "Help"
 send_config_btn_label = 'Send Config'
 sensor_btn_label = 'Start Sensor'
-detection_load_btn_label = 'Load Data&Model'
+detection_load_btn_label = 'Load Data-Model'
 detection_start_btn_label = 'Start Detection'
 detection_end_btn_label = 'Stop Detection'
+prob_view_btn_label = 'Prob. View'
+
 detection_start_Stop_btn_label = 'Start/Stop Detection'
 
 # main window
@@ -43,12 +45,12 @@ gesture_desktop_fingertip_label = "Desktop at Fingertip"
 unit_size = WINDOW_WIDTH / 6
 counter_size_factor = 1.5
 ist_text_size_factor = 3
-
-instruction_block_size = (unit_size * (counter_size_factor + ist_text_size_factor), 512)
-counter_block_size = (unit_size * counter_size_factor, 512)  # a quarter of the instruction block's width
-ist_text_block_size = (unit_size * ist_text_size_factor, 512)
-
-
+base_size = 512
+instruction_block_size = (unit_size * (counter_size_factor + ist_text_size_factor), base_size)
+counter_block_size = (unit_size * counter_size_factor, base_size)  # a quarter of the instruction block's width
+ist_text_block_size = (unit_size * ist_text_size_factor, base_size)
+dtc_text_block_size = (base_size, base_size)
+prob_view_window_size = (1280, 720)
 
 operation_recording_label = "Recording"
 operation_training_label = "Training"
@@ -74,8 +76,8 @@ control_tab_u_port_default = "COM3"
 indexPen_classes_default = "A B C D E"
 indexPen_subjectName_default = "god"
 indexPen_repeatTime_default = 10
-indexPen_trainingDataDir_default = "../data"
-indexPen_modelPath_default = "../model/idp_model.h5"
+indexPen_trainingDataDir_default = "data/"
+indexPen_modelPath_default = "models/idp/idp_29_2020-05-04_03-24-10.425555.h5"
 indexPen_modelDir_default = "../model/"
 indexPen_constructorPath_default = "../learn/idp_classifier.py"
 
@@ -85,7 +87,6 @@ thuMouse_TrainingDataDir_default = "../data"
 thuMouse_constructorPath_default = "../learn/Thu_classifier.py"
 thuMouse_modelDir_default = "../model/"
 thuMouse_modelPath_default = "../model/idp_model.h5"
-
 
 # ============== messages ==============
 config_set_message = "Config file set"

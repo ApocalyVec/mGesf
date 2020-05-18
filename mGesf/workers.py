@@ -9,8 +9,17 @@ from utils.simulation import sim_heatmap, sim_detected_points, sim_imp
 
 import mGesf.exceptions as exceptions
 
+import numpy as np
+
 
 class MmwWorker(QObject):
+    """
+    mmw data package (dict):
+        'range_doppler': ndarray
+        'range_azi': ndarray
+        'pts': ndarray
+        'range_amplitude' ndarray
+    """
     # for passing data to the gesture tab
     signal_mmw_gesture_tab = pyqtSignal(dict)
     # for passing data to the radar tab
@@ -25,7 +34,7 @@ class MmwWorker(QObject):
         super(MmwWorker, self).__init__()
         self.tick_signal.connect(self.mmw_process_on_tick)
         if not mmw_interface:
-            print('None type mmw_interface')
+            print('None type mmw_interface, starting in simulation mode')
 
         self._mmw_interface = mmw_interface
         self._is_running = False
@@ -124,3 +133,32 @@ class MmwWorker(QObject):
         else:
             print('No Radar Interface Connected, ignored.')
             # raise exceptions.InterfaceNotExistError
+
+
+class IdpDetectionWorker(QObject):
+    """
+    detection result package (dict):
+        'pred': ndarray, decoded argmax of the output
+        'output': ndarray, output vector of the prediction model, shape = n * number of classes
+    """
+    tick_signal = pyqtSignal(dict)
+    signal_detection = pyqtSignal(dict)
+
+    def __init__(self, *args, **kwargs):
+        super(IdpDetectionWorker, self).__init__()
+        self.tick_signal.connect(self.detect_on_tick)
+        self.encoder = None
+        self.model = None
+
+    def detect_on_tick(self, samples):
+        output = self.model.predict([np.array(samples['rd']),
+                            np.array(samples['ra'])])
+        pred = self.encoder.inverse_transform(output)
+        self.signal_detection.emit({'pred': pred,
+                                    'output': output,
+                                    'foo': np.array(samples['foo'])},)  # notify the mmw data for the gesture tab
+
+    def setup(self, encoder, model):
+        self.encoder = encoder
+        self.model = model
+

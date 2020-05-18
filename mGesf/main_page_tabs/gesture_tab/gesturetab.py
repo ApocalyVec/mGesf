@@ -4,7 +4,7 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView, QTabWidget
 import pyqtgraph as pg
 
-from mGesf import MMW_worker
+from mGesf import workers
 from utils.GUI_main_window import *
 import config as config
 from mGesf.main_page_tabs.gesture_tab.desktopFingertip.DesktopFingertip import DesktopFingertip
@@ -17,7 +17,7 @@ class GestureTab(QWidget):
     """
     """
 
-    def __init__(self, mmw_worker: MMW_worker, *args, **kwargs):
+    def __init__(self, mmw_worker: workers, *args, **kwargs):
         super().__init__()
         # #################### create layout #################################
 
@@ -59,7 +59,7 @@ class GestureTab(QWidget):
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Radar",
                                                       graph=self.doppler_display)
         self.radar_record_checkbox = init_checkBox(parent=self.radar_runtime_block, function=self.radar_clickBox)
-        mmw_worker.signal_mmw_gesture_tab.connect(self.gesture_process_mmw_data)
+        mmw_worker.signal_mmw_gesture_tab.connect(self.display_mmw_data)
 
 
         # -------------------- fourth class -------------------
@@ -87,7 +87,7 @@ class GestureTab(QWidget):
 
         # Initialize tab screen
         self.tabs = QTabWidget()
-        self.tab1 = IndexPen()
+        self.tab1 = IndexPen(mmw_worker.signal_mmw_gesture_tab)
         self.tab2 = ThuMouth()
         self.tab3 = DesktopFingertip()
 
@@ -148,7 +148,7 @@ class GestureTab(QWidget):
             self.will_recording_UWB = False
             # self.message.setText(config.UWB_box_unchecked)
 
-    def gesture_process_mmw_data(self, data_dict):
+    def display_mmw_data(self, data_dict):
         """
         Process the emitted mmWave data
         This function is evoked when signaled by self.mmw_data_ready which is emitted by the mmw_worker thread.

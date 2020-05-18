@@ -10,7 +10,7 @@ import pyqtgraph as pg
 
 from utils.img_utils import array_to_colormap_qim
 
-import mGesf.MMW_worker as MMW_worker
+import mGesf.workers as MMW_worker
 from utils.GUI_main_window import *
 import config as config
 
@@ -281,7 +281,7 @@ class Control_tab(QWidget):
             3. Send config if valid
         """
 
-        config_path = self.config_textbox.text()
+        config_path = self.config_textbox[1].text()
         if not config_path:
             config_path = config.control_tab_config_file_path_default
 

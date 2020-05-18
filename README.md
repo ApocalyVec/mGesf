@@ -40,3 +40,8 @@ sudo apt-get install ffmpeg
 ```
 For Windows, it's a bit more involved as the downloaded library needs to be added to the environment variables.
 This is a good [tuorial](http://blog.gregzaal.com/how-to-install-ffmpeg-on-windows/).
+
+If you are getting 'permission denied' errors (likely to occur on Windows), install the simpleaudio package by running:
+```bash
+pip install simpleaudio
+```
