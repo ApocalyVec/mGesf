@@ -1,9 +1,12 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QSlider, QLabel
-import pyqtgraph as pg
 from utils.GUI_main_window import *
 from utils.GUI_operation_tab import *
+from mGesf.main_page_tabs.gesture_tab.thuMouse.Locate_Pane import Locate_Pane
 import config
 import os
+import pyautogui as pag
+
+# how many pixels does the cursor move in one step
+step = 3
 
 
 class Recording(QWidget):
@@ -90,24 +93,18 @@ class Recording(QWidget):
         #           1-1-2. circle2 + circle4 (vertical)
 
         # locate canvas
-        self.locate_canvas = init_container(parent=self.recording_block,
-                                            vertical=False)
-
-        self.locate_canvas1_3 = init_container(parent=self.locate_canvas,
-                                               vertical=True)
-
-        self.locate_canvas2_4 = init_container(parent=self.locate_canvas,
-                                               vertical=True)
-
-        # initialized when the locate box is selected and start testing/recording
-        self.locate_1 = None
-        self.locate_2 = None
-        self.locate_3 = None
-        self.locate_4 = None
-
+        # initialized when the self.state = ['locating', 'testing'] or ['locating', 'recording']
+        self.locate_canvas = None
+        self.locate_canvas = Locate_Pane(parent=self.recording_block,
+                                         rows=3,
+                                         columns=3)
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
         self.state = ['idle']  # see the docstring of self.update_state for details
+
+        # position of the cursor
+        self.cursor_x = None
+        self.cursor_y = None
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
@@ -121,6 +118,12 @@ class Recording(QWidget):
 
     def activate_locate_panel(self):
         print('locate')
+
+    def start_test_locate(self):
+        self.put_cursor_to_center()
+
+    def start_test_follow(self):
+        print("testing follow")
 
     def update_state(self, action):
         """
@@ -154,13 +157,32 @@ class Recording(QWidget):
 
         elif action == 'test_pressed':
             if 'idle' in self.state:  # start the test mode
-                if 'locate' in self.state or 'follow' in self.state:
-                    # start testing
+                if 'locate' in self.state:
                     self.idle_to_testing()
                     self.state.remove('idle')
                     self.state.append('testing')
+
+                    self.start_test_locate()
+
+                elif 'follow' in self.state:
+                    self.idle_to_testing()
+                    self.state.remove('idle')
+                    self.state.append('testing')
+
+                    self.start_test_follow()
+
                 else:
                     print("Select a mode")
+
+            elif action == "up_pressed":
+                self._cursor_up()
+            elif action == "down_pressed":
+                self._cursor_down()
+            elif action == "left_pressed":
+                self._cursor_left()
+            elif action == "right_pressed":
+                self._cursor_right()
+
             else:  # back to idle
                 self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
 
@@ -272,11 +294,6 @@ class Recording(QWidget):
             self.recording_btn.setText(config.record_btn_start_label)
             self.test_btn.setDisabled(False)
 
-    def keyPressEvent(self, key_event):
-        print(key_event)
-        if is_enter_key_event(key_event):
-            self.update_state('up_pressed')
-
     def pause_working(self):
         self.state.append('idle')
         self.follow_checkbox.setDisabled(False)
@@ -292,3 +309,41 @@ class Recording(QWidget):
         self.follow_checkbox.setDisabled(True)
         self.locate_checkbox.setDisabled(True)
         print('testing')
+
+    def put_cursor_to_center(self):
+        """Puts the cursor to the center of the canvas"""
+        if 'locate' in self.state:
+            self.cursor_x, self.cursor_y = self.locate_canvas.x(), self.locate_canvas.y()
+            print(str(self.cursor_x) + " " + str(self.cursor_y))
+            pag.move(self.cursor_x, self.cursor_y)
+
+    def _cursor_left(self):
+        self.cursor_x = self.cursor_x + step
+        pag.move(self.cursor_x, self.cursor_y)
+
+    def _cursor_right(self):
+        self.cursor_x = self.cursor_x - step
+        pag.move(self.cursor_x, self.cursor_y)
+
+    def _cursor_up(self):
+        self.cursor_y = self.cursor_y - step
+        pag.move(self.cursor_x, self.cursor_y)
+
+    def _cursor_down(self):
+        self.cursor_y = self.cursor_y + step
+        pag.move(self.cursor_x, self.cursor_y)
+
+    def keyPressEvent(self, key_event):
+        print(key_event)
+        if key_event.key() == QtCore.Qt.Key_Up:
+            self.update_state('up_pressed')
+
+        if key_event.key() == QtCore.Qt.Key_Down:
+            self.update_state('down_pressed')
+
+        if key_event.key() == QtCore.Qt.Key_Left:
+            self.update_state('left_pressed')
+
+        if key_event.key() == QtCore.Qt.Key_Right:
+            self.update_state('right_pressed')
+
