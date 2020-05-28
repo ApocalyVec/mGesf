@@ -5,17 +5,10 @@ from utils.GUI_operation_tab import *
 import config
 import os
 
+
 class Recording(QWidget):
     def __init__(self):
         super().__init__()
-
-        self.willFollow = False
-        self.willLocate = False
-        self.isFollowing = False
-        self.isLocating = False
-        self.is_testing = False
-        self.is_recording = False
-        self.is_dir_valid = False
 
         # for checking only one box
         self._toggle = None
@@ -44,7 +37,7 @@ class Recording(QWidget):
         #       1-4. buttons
         self.taskSelection_block = init_container(parent=self.input_block,
                                                   label="Task Selection",
-                                                  vertical=False)
+                                                  vertical=True)
 
         self.subjectName_block, self.subjectName_textbox = init_inputBox(parent=self.input_block,
                                                                          label="Subject Name",
@@ -58,7 +51,7 @@ class Recording(QWidget):
                                             vertical=False)
 
         # -------------------- fourth class --------------------
-        #   1-1. task selection box (horizontal)
+        #   1-1. task selection box (vertical)
         #       1-1-1. follow checkbox
         #       1-1-2. locate checkbox
 
@@ -88,7 +81,6 @@ class Recording(QWidget):
                                          label=config.record_btn_start_label,
                                          function=self.recording_btn_action)
 
-
         # -------------------- third class --------------------
         #   1. recording block
         #       1-1. Follow canvas
@@ -115,7 +107,7 @@ class Recording(QWidget):
 
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
-
+        self.state = ['idle']  # see the docstring of self.update_state for details
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
@@ -124,121 +116,104 @@ class Recording(QWidget):
         """
         print("tick")
 
-    def reset(self):
-        self.isFollowing = False
-        self.isLocating = False
-        self.is_testing = False
-        self.is_recording = False
-        self.is_dir_valid = False
-        self.timer.stop()
-        self.test_btn.setText(config.test_btn_start_label)
-        self.recording_btn.setText(config.record_btn_start_label)
+    def activate_follow_panel(self):
+        print('follow')
 
-    def interrupt_btn_action(self):
-        self.is_testing = False
-        self.is_recording = False
-        self.timer.stop()
+    def activate_locate_panel(self):
+        print('locate')
 
-        return
+    def update_state(self, action):
+        """
+        update the current state based on action
+        The working states, as oppose to 'idle' include that of 'pending', 'testing', 'countingDown', 'writing'
+        @param action: str: issued with the following functions with the corresponding value:
+            * self.follow_checkBox_action(): 'follow'
+            * self.locate_checkBox_action(): 'locate'
+            * self.recording_btn_action(): 'start_recording'
+            * self.test_btn_action(): 'start_test'
+            * self.update_state: 'countdown_over'
+        """
+        if action == 'follow':
+            # if locate is chosen, remove it
+            if 'locate' in self.state:
+                self.state.remove('locate')
+            self.state.append(action)
 
-    def test_btn_action(self):
+        elif action == 'not_follow':
+            if 'follow' in self.state:
+                self.state.remove('follow')
 
-        if self.is_testing:
-            # end testing
-            self.reset()
+        elif action == 'locate':
+            if 'follow' in self.state:
+                self.state.remove('follow')
+            self.state.append(action)
 
-        elif not self.is_testing:
-            # start recording
-            print("Testing")
+        elif action == 'not_locate':
+            if 'locate' in self.state:
+                self.state.remove('locate')
 
-            self.is_testing = True
-            self.timer.start()
-            self.test_btn.setText(config.test_btn_end_label)
-            if self.willLocate:
-                self.locate_1 = init_locate_unit_block(parent=self.locate_canvas1_3,
-                                                       number="1",
-                                                       label_position="righttop",
-                                                       image_source="resource/figures/circle_off")
+        elif action == 'test_pressed':
+            if 'idle' in self.state:  # start the test mode
+                if 'locate' in self.state or 'follow' in self.state:
+                    # start testing
+                    self.idle_to_testing()
+                    self.state.remove('idle')
+                    self.state.append('testing')
+                else:
+                    print("Select a mode")
+            else:  # back to idle
+                self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
 
-                self.locate_3 = init_locate_unit_block(parent=self.locate_canvas1_3,
-                                                       number="3",
-                                                       label_position="righttop",
-                                                       image_source="resource/figures/circle_off")
+        elif action == 'record_pressed':
+            if 'idle' in self.state:  # start the test mode
+                if 'locate' in self.state or 'follow' in self.state:
+                    # start testing
+                    self.idle_to_recording()
+                    self.state.remove('idle')
+                    self.state.append('recording')
+                else:
+                    print("Select a mode")
+            else:  # back to idle
+                self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
 
-                self.locate_2 = init_locate_unit_block(parent=self.locate_canvas2_4,
-                                                       number="1",
-                                                       label_position="lefttop",
-                                                       image_source="resource/figures/circle_off")
+        elif action == 'interrupt_pressed':
+            if 'testing' in self.state:
+                self.state.remove('testing')
+            elif 'recording' in self.state:
+                self.state.remove('recording')
+            # pause working anyway
+            self.pause_working()
 
-                self.locate_4 = init_locate_unit_block(parent=self.locate_canvas2_4,
-                                                       number="3",
-                                                       label_position="lefttop",
-                                                       image_source="resource/figures/circle_off")
-
-        return
-
-    def recording_btn_action(self):
-
-        if self.is_recording:
-            self.reset()
-
-        # if not recording yet
-        elif not self.is_recording:
-
-            self.update_inputs()
-            # try starting recording
-            # check the data path first
-            self.is_dir_valid = self.check_dir_valid()
-
-            if self.is_dir_valid:
-                # if valid data path, show preparation page
-
-                print("Recording")
-                # start recording
-                self.is_recording = True
-                self.recording_btn.setText(config.record_btn_end_label)
-
-                # TODO change this to the information box
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setText("Recording")
-                msg.exec()
-
-        return
+        else:
+            raise Exception('Unknown State change')
+        self.resolve_state()
 
     def follow_checkBox_action(self):
         if self.follow_checkbox.isChecked():
-            self.willFollow = True
+            self.update_state("follow")
             self._toggle = True
             self.locate_checkbox.setChecked(not self._toggle)
-        else:
-            self.willFollow = False
-            self._toggle = not self._toggle
+            print(self.state)
 
-        '''
-        print("follow?")
-        print(self.willFollow)
-        print("locate?")
-        print(self.willLocate)
-        '''
+        else:
+            self.update_state('not_follow')
+            self._toggle = not self._toggle
+            print(self.state)
+
         return
 
     def locate_checkBox_action(self):
         if self.locate_checkbox.isChecked():
-            self.willLocate = True
+            self.update_state("locate")
             self._toggle = True
             self.follow_checkbox.setChecked(not self._toggle)
+            print(self.state)
 
         else:
-            self.willLocate = False
+            self.update_state('not_locate')
             self._toggle = not self._toggle
+            print(self.state)
 
-        '''
-        print("follow?")
-        print(self.willFollow)
-        print("locate?")
-        print(self.willLocate)
-        '''
         return
 
     def get_training_data_dir(self):
@@ -263,3 +238,57 @@ class Recording(QWidget):
             msg.setText(config.datapath_invalid_message)
             msg.exec()
             return False
+
+    def test_btn_action(self):
+        self.update_state('test_pressed')
+        print(self.state)
+
+        return
+
+    def interrupt_btn_action(self):
+        self.update_state('interrupt_pressed')
+        print(self.state)
+
+        return
+
+    def recording_btn_action(self):
+        self.update_state('record_pressed')
+        print(self.state)
+
+        return
+
+    def resolve_state(self):
+        if 'testing' in self.state:
+            self.test_btn.setText(config.test_btn_end_label)
+            self.recording_btn.setDisabled(True)
+        else:
+            self.test_btn.setText(config.test_btn_start_label)
+            self.recording_btn.setDisabled(False)
+
+        if 'recording' in self.state:
+            self.recording_btn.setText(config.record_btn_end_label)
+            self.test_btn.setDisabled(True)
+        else:
+            self.recording_btn.setText(config.record_btn_start_label)
+            self.test_btn.setDisabled(False)
+
+    def keyPressEvent(self, key_event):
+        print(key_event)
+        if is_enter_key_event(key_event):
+            self.update_state('up_pressed')
+
+    def pause_working(self):
+        self.state.append('idle')
+        self.follow_checkbox.setDisabled(False)
+        self.locate_checkbox.setDisabled(False)
+        print("paused")
+
+    def idle_to_recording(self):
+        self.follow_checkbox.setDisabled(True)
+        self.locate_checkbox.setDisabled(True)
+        print('recording')
+
+    def idle_to_testing(self):
+        self.follow_checkbox.setDisabled(True)
+        self.locate_checkbox.setDisabled(True)
+        print('testing')
