@@ -7,12 +7,14 @@ from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
 from PyQt5.QtGui import QIcon, QPixmap
 import os
 
+from utils.path_utils import get_parent
 
 
 class Target(QWidget):
     """
     Target circles in ThuMouse recording
     """
+
     def __init__(self, number=None, label_position='lefttop'):
         super().__init__()
         # Horizontal -> icon | label
@@ -22,8 +24,11 @@ class Target(QWidget):
         self.on = False
 
         # icons
-        self.on_icon = QPixmap('../mGesf/resource/figures/circle_on.png').scaled(40, 40, Qt.KeepAspectRatio)
-        self.off_icon = QPixmap('../mGesf/resource/figures/circle_off.png').scaled(400, 400, Qt.KeepAspectRatio)
+        on_path = os.getcwd() + '/mGesf/resource/figures/circle_on.png'
+        off_path = os.getcwd() + '/mGesf/resource/figures/circle_off.png'
+
+        self.on_icon = QPixmap(on_path).scaled(40, 40, Qt.KeepAspectRatio)
+        self.off_icon = QPixmap(off_path).scaled(400, 400, Qt.KeepAspectRatio)
 
         if self.on:
             self.image.setPixmap(self.on_icon)

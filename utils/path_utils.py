@@ -650,3 +650,25 @@ def thm_leap_preprocess(paths, dataset_path, label_path, is_plot=False, augmenta
         labels = merge_dict([labels_existing, labels])
     print('Number of items in the label dict is ' + str(len(labels)))
     pickle.dump(labels, open(label_path, 'wb'))
+
+
+# function to get parent
+def get_parent(path, levels=1):
+    """
+    based on https://www.geeksforgeeks.org/get-parent-of-current-directory-using-python/
+    @param path:
+    @param levels:
+    @return:
+    """
+    common = path
+
+    # Using for loop for getting
+    # starting point required for
+    # os.path.relpath()
+    for i in range(levels + 1):
+        # Starting point
+        common = os.path.dirname(common)
+
+        # Parent directory upto specified
+    # level
+    return os.path.relpath(path, common)
