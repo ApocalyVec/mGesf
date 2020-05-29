@@ -1,5 +1,9 @@
+import time
+
+import pyautogui
 from PyQt5.QtWidgets import QMainWindow, qApp
 
+from mGesf.UIController import UIController
 from utils.GUI_operation_tab import *
 import config
 from mGesf.main_page_tabs.gesture_tab.thuMouse.Locate_Pane import Locate_Pane
@@ -57,13 +61,14 @@ class Interaction_window(QMainWindow):
         self.repeat_times = repeat_times
         self.remaining_repeat_times = self.repeat_times
 
-        # for cursor control
-        self.cursor_x, self.cursor_y = self.x(), self.y()
 
         """
         # A list of points the cursor went through
         """
         self.trace = []
+
+    def show(self) -> None:
+        self.showFullScreen()
 
     def open_locate_pane(self):
         self.setWindowTitle("Locate")
@@ -84,26 +89,21 @@ class Interaction_window(QMainWindow):
 
     def put_cursor_to_center(self):
         """Puts the cursor to the center of the canvas"""
-        if 'locate' in self.state:
-            print(str(self.cursor_x) + " " + str(self.cursor_y))
+        if 'locate' in self.state:  # TODO @Nene why do you need to check the state here
             pag.move(self.cursor_x, self.cursor_y)
-            print('moved to' + str(self.cursor_x) + ' ' + str(self.cursor_y))
 
     def _cursor_left(self):
-        self.cursor_x = self.cursor_x - step
-        pag.move(self.cursor_x, self.cursor_y)
+        pyautogui.moveRel(-step, 0)
 
     def _cursor_right(self):
-        self.cursor_x = self.cursor_x + step
-        pag.move(self.cursor_x, self.cursor_y)
+        pyautogui.moveRel(step, 0)
 
     def _cursor_up(self):
-        self.cursor_y = self.cursor_y - step
-        pag.move(self.cursor_x, self.cursor_y)
+        pyautogui.moveRel(0, -step)
 
     def _cursor_down(self):
-        self.cursor_y = self.cursor_y + step
-        pag.move(self.cursor_x, self.cursor_y)
+        pyautogui.moveRel(0, step)
+
 
     def eventFilter(self, obj, event):
         """
@@ -117,13 +117,13 @@ class Interaction_window(QMainWindow):
 
             if key in self.function_keys or key in self.arrow_keys:
                 # process key inputs
-                is_interrupted = self.key_logic(key)
+                self.key_logic(key)
                 # TODO change the status in the parent window
                 # do not use running because the target might not be initialized when just started
                 if 'ready' not in self.state:
                     # update the trace
                     # TODO: not working?
-                    self.trace.append(pag.position())
+                    self.trace.append([time.time(), pag.position()])  # add position and timestamp
                     # check if target reached
                     self.check_target()
 
@@ -222,11 +222,10 @@ class Interaction_window(QMainWindow):
         print(self.trace)
         self.reset()
         self.hide()
-        #@ TODO change the runing state in the parent window
+        # TODO change the runing state in the parent window
 
     def reset(self):
-        # reset trace
-        self.trace = []
+        self.trace = []  # reset trace
         self.state = ['idle']
         self.remaining_repeat_times = self.repeat_times
         clear_layout(self.layout())
