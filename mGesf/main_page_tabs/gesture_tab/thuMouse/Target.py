@@ -29,7 +29,7 @@ class Target(QWidget):
         on_path = os.getcwd() + '/mGesf/resource/figures/circle_on.png'
         off_path = os.getcwd() + '/mGesf/resource/figures/circle_off.png'
 
-        self.on_icon = QPixmap(on_path).scaled(80, 80, Qt.KeepAspectRatio)
+        self.on_icon = QPixmap(on_path).scaled(90, 90, Qt.KeepAspectRatio)
         self.off_icon = QPixmap(off_path).scaled(80, 80, Qt.KeepAspectRatio)
 
         if self.on:

@@ -3,10 +3,6 @@ from utils.GUI_operation_tab import *
 from mGesf.main_page_tabs.gesture_tab.thuMouse.Interaction_window import Interaction_window
 import config
 import os
-import pyautogui as pag
-
-# how many pixels does the cursor move in one step
-step = 3
 
 
 class Recording(QWidget):
@@ -156,7 +152,12 @@ class Recording(QWidget):
                     self.state.remove('idle')
                     self.state.append('testing')
 
+                    # set the interactive window to locate
                     self.interaction_window.open_locate_pane()
+                    # update the state of the instruction window
+                    self.interaction_window.current_state.append('locate')
+                    self.interaction_window.current_state.append('ready')
+
                     self.interaction_window.show()
 
                 elif 'follow' in self.state:
