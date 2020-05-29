@@ -88,7 +88,7 @@ thuMouse_TrainingDataDir_default = "../data"
 thuMouse_constructorPath_default = "../learn/Thu_classifier.py"
 thuMouse_modelDir_default = "../model/"
 thuMouse_modelPath_default = "../model/idp_model.h5"
-
+thuMouse_repeatTimes_default = 4
 # ============== messages ==============
 config_set_message = "Config file set"
 config_invalid_message = "Invalid config path"

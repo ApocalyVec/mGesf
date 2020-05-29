@@ -10,7 +10,7 @@ step = 1
 
 
 class Interaction_window(QMainWindow):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, repeat_times=config.thuMouse_repeatTimes_default):
         """
         :param parent: The previous parent
 
@@ -20,6 +20,7 @@ class Interaction_window(QMainWindow):
         """
         super(Interaction_window, self).__init__(parent)
 
+        self.parent = parent
         self.resize(config.interaction_window_size[0], config.interaction_window_size[1])
         # a widget for resize() the Locate Pane
         # TODO THIS WIDGET SHOULD BE REMOVED IF WE CAN SET PANE LAYOUTS DIRECTLY TO THE WINDOW
@@ -52,6 +53,9 @@ class Interaction_window(QMainWindow):
 
         # register for event filter
         qApp.installEventFilter(self)
+
+        self.repeat_times = repeat_times
+        self.remaining_repeat_times = self.repeat_times
 
         # for cursor control
         self.cursor_x, self.cursor_y = self.x(), self.y()
@@ -113,14 +117,13 @@ class Interaction_window(QMainWindow):
 
             if key in self.function_keys or key in self.arrow_keys:
                 # process key inputs
-                self.key_logic(key)
-
-                # check when started
+                is_interrupted = self.key_logic(key)
+                # TODO change the status in the parent window
+                # do not use running because the target might not be initialized when just started
                 if 'ready' not in self.state:
                     # update the trace
-                    # TODO: different pieces? only one?
+                    # TODO: not working?
                     self.trace.append(pag.position())
-
                     # check if target reached
                     self.check_target()
 
@@ -129,18 +132,23 @@ class Interaction_window(QMainWindow):
 
     def key_logic(self, key):
         """
+        if space_bar:
+            exit()
+            return exit
+
         if 'locate':
             if 'idle':
                 if [ready] -> waiting for return/enter to be pressed
-                else: [paused] -> waiting for space to be pressed
-            elif running + space_bar:
-                pause
-            else 'running' + arrow keys pressed:
-                1. move by arrow keys
-                2. if space pressed -> 'idle'
+            elif 'running' + arrow keys pressed:
+                move by arrow keys
 
-        :return:
+        :return: if the window's interrupted
         """
+        if key == Qt.Key_Space:
+            self.reset()
+            self.hide()
+            return True
+
         if 'locate' in self.state:
             print(self.state)
 
@@ -151,17 +159,20 @@ class Interaction_window(QMainWindow):
                     if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
                         self.setup_locate_pane()
                         self.state_start()
-
+                '''
                 else:       # resume
                     if key == QtCore.Qt.Key_Space:
                         self.state_resume()
-
+                '''
+            '''            
             elif 'running' in self.state and key == QtCore.Qt.Key_Space:
-                self.state_pause()
-
+            self.state_pause()
+            '''
             # arrow keys logic
             if 'running' in self.state and key in self.arrow_keys:
                 self.arrow_key_event(key)
+
+        return False
 
     def arrow_key_event(self, key):
         if key == QtCore.Qt.Key_Up:
@@ -183,11 +194,42 @@ class Interaction_window(QMainWindow):
 
     def check_target(self):
         """
-        #   if the target is under mouse
-        #   start a new round
+        #   if target under mouse:
+        #       start a new round
+        #       update remaining repeat times
+        #   if the task is completed:
+        #       call finish_up()
         """
-        if self.locate_pane.targets[self.locate_pane.activated_target].underMouse():
-            self.locate_pane.random_switch()
+        if self.locate_pane.activated_target:
+            if self.locate_pane.targets[self.locate_pane.activated_target].underMouse():
+                self.remaining_repeat_times -= 1
+                self.locate_pane.random_switch()
+
+        if self.is_completed():
+            self.finish_up()
+
+    def is_completed(self):
+        """
+        Checks if the task is done and the window can be closed
+        :return: True if has reached repeat times
+        """
+        if self.remaining_repeat_times == 0:
+            return True
+        return False
+
+    def finish_up(self):
+        print("Task finished")
+        print(self.trace)
+        self.reset()
+        self.hide()
+        #@ TODO change the runing state in the parent window
+
+    def reset(self):
+        # reset trace
+        self.trace = []
+        self.state = ['idle']
+        self.remaining_repeat_times = self.repeat_times
+        clear_layout(self.layout())
 
     def setup_locate_pane(self):
         # put the cursor to the origin of the window
@@ -201,6 +243,8 @@ class Interaction_window(QMainWindow):
         self.state.remove('ready')
         self.state.append('running')
 
+    """
+
     def state_pause(self):
         print('pause')
         self.state.remove('running')
@@ -210,3 +254,5 @@ class Interaction_window(QMainWindow):
         print('resumed')
         self.state.remove('idle')
         self.state.append('running')
+    
+    """

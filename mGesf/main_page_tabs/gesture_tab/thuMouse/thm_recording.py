@@ -102,11 +102,15 @@ class Recording(QWidget):
 
         # repeat times
         self.repeat_times = self.get_repeat_times()
+        self.is_interactive_window_open = False
 
-    def restart(self):
+    def update_inputs(self):
         self.repeat_times = self.get_repeat_times()
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
+
+    def restart(self):
+        self.update_inputs()
 
         if 'testing' in self.state:
             self.state.remove('testing')
@@ -114,6 +118,12 @@ class Recording(QWidget):
             self.state.remove('recording')
         if 'idle' not in self.state:
             self.state.append('idle')
+
+        self.enable_checkboxes()
+
+        # close the interactive window and reset
+        self.interaction_window.reset()
+        self.interaction_window.hide()
 
     def get_repeat_times(self):
         _user_input = self.repeatTime_textbox.text()
@@ -203,8 +213,10 @@ class Recording(QWidget):
             self.check_locate_follow_logic(act)
         # test/record logic
         elif act == 'test_pressed':
+            self.update_inputs()
             self.check_test_logic(act)
         elif act == 'record_pressed':
+            self.update_inputs()
             self.check_record_logic(act)
         # stop
         elif act == 'interrupt_pressed':
@@ -344,6 +356,7 @@ class Recording(QWidget):
 
     def recording_btn_action(self):
         self.update_state('record_pressed')
+        print("recording")
         print(self.state)
 
         return
@@ -376,3 +389,9 @@ class Recording(QWidget):
         self.follow_checkbox.setDisabled(False)
         self.locate_checkbox.setDisabled(False)
         print("paused")
+
+    def set_interactive_win_closed(self):
+        self.is_interactive_window_open = False
+
+    def set_interactive_win_open(self):
+        self.is_interactive_window_open = True
