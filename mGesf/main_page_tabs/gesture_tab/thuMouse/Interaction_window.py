@@ -40,13 +40,15 @@ class Interaction_window(QMainWindow):
         self.state = ['idle']       # resting when initialized
 
         # Keys allowed in the locate pane
-        self.locate_key_map = [Qt.Key_Left,
-                               Qt.Key_Up,
-                               Qt.Key_Right,
-                               Qt.Key_Down,
-                               Qt.Key_Enter,
-                               Qt.Key_Return,
-                               Qt.Key_Space]
+        # 1. for pause/restart
+        self.function_keys = [Qt.Key_Enter,
+                              Qt.Key_Return,
+                              Qt.Key_Space]
+        # 2. arrow keys
+        self.arrow_keys = {Qt.Key_Left,
+                           Qt.Key_Up,
+                           Qt.Key_Right,
+                           Qt.Key_Down}
 
         # register for event filter
         qApp.installEventFilter(self)
@@ -107,9 +109,10 @@ class Interaction_window(QMainWindow):
         :return:
         """
         if event.type() == QtCore.QEvent.KeyPress:
-            if event.key() in self.locate_key_map:
+            key = event.key()
+
+            if key in self.function_keys or key in self.arrow_keys:
                 # process key inputs
-                key = event.key()
                 self.key_logic(key)
 
                 # check when started
@@ -128,10 +131,11 @@ class Interaction_window(QMainWindow):
         """
         if 'locate':
             if 'idle':
-                if 'ready' -> waiting for return/enter to be pressed
+                if [ready] -> waiting for return/enter to be pressed
                 else: [paused] -> waiting for space to be pressed
-
-            else 'running':
+            elif running + space_bar:
+                pause
+            else 'running' + arrow keys pressed:
                 1. move by arrow keys
                 2. if space pressed -> 'idle'
 
@@ -140,41 +144,42 @@ class Interaction_window(QMainWindow):
         if 'locate' in self.state:
             print(self.state)
 
+            # If in rest
             if 'idle' in self.state:
+                # if to yet started
                 if 'ready' in self.state:
-                    # put the cursor to the origin of the window
-                    # activate the locate pane
                     if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
-                        print('started')
-                        self.put_cursor_to_center()
-                        self.locate_pane.activate()
-                        self.state.remove('idle')
-                        self.state.append('running')
-                else:
+                        self.setup_locate_pane()
+                        self.state_start()
+
+                else:       # resume
                     if key == QtCore.Qt.Key_Space:
-                        print('running')
-                        self.state.remove('idle')
-                        self.state.append('running')
+                        self.state_resume()
 
             elif 'running' in self.state and key == QtCore.Qt.Key_Space:
-                print('pause')
-                self.state.remove('running')
-                self.state.append('idle')
+                self.state_pause()
 
-            if 'running' in self.state:
-                if key == QtCore.Qt.Key_Up:
-                    print('up')
-                    self._cursor_up()
+            # arrow keys logic
+            if 'running' in self.state and key in self.arrow_keys:
+                self.arrow_key_event(key)
 
-                elif key == QtCore.Qt.Key_Down:
-                    print('down')
-                    self._cursor_down()
+    def arrow_key_event(self, key):
+        if key == QtCore.Qt.Key_Up:
+            print('up')
+            self._cursor_up()
+            return
+        elif key == QtCore.Qt.Key_Down:
+            print('down')
+            self._cursor_down()
+            return
+        elif key == QtCore.Qt.Key_Left:
+            self._cursor_left()
+            return
+        elif key == QtCore.Qt.Key_Right:
+            self._cursor_right()
+            return
 
-                elif key == QtCore.Qt.Key_Left:
-                    self._cursor_left()
-
-                elif key == QtCore.Qt.Key_Right:
-                    self._cursor_right()
+        return
 
     def check_target(self):
         """
@@ -183,3 +188,25 @@ class Interaction_window(QMainWindow):
         """
         if self.locate_pane.targets[self.locate_pane.activated_target].underMouse():
             self.locate_pane.random_switch()
+
+    def setup_locate_pane(self):
+        # put the cursor to the origin of the window
+        # activate the locate pane
+        self.put_cursor_to_center()
+        self.locate_pane.activate()
+
+    def state_start(self):
+        print('started')
+        self.state.remove('idle')
+        self.state.remove('ready')
+        self.state.append('running')
+
+    def state_pause(self):
+        print('pause')
+        self.state.remove('running')
+        self.state.append('idle')
+
+    def state_resume(self):
+        print('resumed')
+        self.state.remove('idle')
+        self.state.append('running')
