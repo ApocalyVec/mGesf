@@ -1,6 +1,6 @@
 from utils.GUI_main_window import *
 from utils.GUI_operation_tab import *
-from mGesf.main_page_tabs.gesture_tab.thuMouse.Locate_Pane import Locate_Pane
+from mGesf.main_page_tabs.gesture_tab.thuMouse.Interaction_window import Interaction_window
 import config
 import os
 import pyautogui as pag
@@ -94,10 +94,7 @@ class Recording(QWidget):
 
         # locate canvas
         # initialized when the self.state = ['locating', 'testing'] or ['locating', 'recording']
-        self.locate_canvas = None
-        self.locate_canvas = Locate_Pane(parent=self.recording_block,
-                                         rows=3,
-                                         columns=3)
+        self.interaction_window = Interaction_window(self)
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
         self.state = ['idle']  # see the docstring of self.update_state for details
@@ -113,14 +110,11 @@ class Recording(QWidget):
         """
         print("tick")
 
-    def activate_follow_panel(self):
+    def activate_follow_pane(self):
         print('follow')
 
-    def activate_locate_panel(self):
+    def activate_locate_pane(self):
         print('locate')
-
-    def start_test_locate(self):
-        self.put_cursor_to_center()
 
     def start_test_follow(self):
         print("testing follow")
@@ -162,7 +156,8 @@ class Recording(QWidget):
                     self.state.remove('idle')
                     self.state.append('testing')
 
-                    self.start_test_locate()
+                    self.interaction_window.open_locate_pane()
+                    self.interaction_window.show()
 
                 elif 'follow' in self.state:
                     self.idle_to_testing()
@@ -173,15 +168,6 @@ class Recording(QWidget):
 
                 else:
                     print("Select a mode")
-
-            elif action == "up_pressed":
-                self._cursor_up()
-            elif action == "down_pressed":
-                self._cursor_down()
-            elif action == "left_pressed":
-                self._cursor_left()
-            elif action == "right_pressed":
-                self._cursor_right()
 
             else:  # back to idle
                 self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
@@ -310,40 +296,4 @@ class Recording(QWidget):
         self.locate_checkbox.setDisabled(True)
         print('testing')
 
-    def put_cursor_to_center(self):
-        """Puts the cursor to the center of the canvas"""
-        if 'locate' in self.state:
-            self.cursor_x, self.cursor_y = self.locate_canvas.x(), self.locate_canvas.y()
-            print(str(self.cursor_x) + " " + str(self.cursor_y))
-            pag.move(self.cursor_x, self.cursor_y)
-
-    def _cursor_left(self):
-        self.cursor_x = self.cursor_x + step
-        pag.move(self.cursor_x, self.cursor_y)
-
-    def _cursor_right(self):
-        self.cursor_x = self.cursor_x - step
-        pag.move(self.cursor_x, self.cursor_y)
-
-    def _cursor_up(self):
-        self.cursor_y = self.cursor_y - step
-        pag.move(self.cursor_x, self.cursor_y)
-
-    def _cursor_down(self):
-        self.cursor_y = self.cursor_y + step
-        pag.move(self.cursor_x, self.cursor_y)
-
-    def keyPressEvent(self, key_event):
-        print(key_event)
-        if key_event.key() == QtCore.Qt.Key_Up:
-            self.update_state('up_pressed')
-
-        if key_event.key() == QtCore.Qt.Key_Down:
-            self.update_state('down_pressed')
-
-        if key_event.key() == QtCore.Qt.Key_Left:
-            self.update_state('left_pressed')
-
-        if key_event.key() == QtCore.Qt.Key_Right:
-            self.update_state('right_pressed')
 

@@ -19,6 +19,8 @@ class Target(QWidget):
         super().__init__()
         # Horizontal -> icon | label
         self.layout = QHBoxLayout(self)
+        self.setFixedSize(150, 150)
+
         self.image = QLabel()
         self.image.setAlignment(QtCore.Qt.AlignCenter)
         self.on = False
@@ -27,8 +29,8 @@ class Target(QWidget):
         on_path = os.getcwd() + '/mGesf/resource/figures/circle_on.png'
         off_path = os.getcwd() + '/mGesf/resource/figures/circle_off.png'
 
-        self.on_icon = QPixmap(on_path).scaled(40, 40, Qt.KeepAspectRatio)
-        self.off_icon = QPixmap(off_path).scaled(400, 400, Qt.KeepAspectRatio)
+        self.on_icon = QPixmap(on_path).scaled(80, 80, Qt.KeepAspectRatio)
+        self.off_icon = QPixmap(off_path).scaled(80, 80, Qt.KeepAspectRatio)
 
         if self.on:
             self.image.setPixmap(self.on_icon)
@@ -44,14 +46,17 @@ class Target(QWidget):
             self.label.setText(str(number))
 
             if label_position == "righttop":
+                self.layout.addWidget(self.image)
+                self.layout.addWidget(self.label)
                 self.label.setAlignment(QtCore.Qt.AlignRight)
                 self.label.setAlignment(QtCore.Qt.AlignTop)
 
-            elif label_position == "lefttop":
+            else:
+                self.layout.addWidget(self.label)
+                self.layout.addWidget(self.image)
                 self.label.setAlignment(QtCore.Qt.AlignLeft)
                 self.label.setAlignment(QtCore.Qt.AlignTop)
 
-            self.layout.addWidget(self.label)
 
     def turn_off(self):
         self.image.setPixmap(self.off_icon)
