@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QMainWindow, qApp
 from utils.GUI_operation_tab import *
 import config
 from mGesf.main_page_tabs.gesture_tab.thuMouse.LocatePane import LocatePane
-from mGesf.main_page_tabs.gesture_tab.thuMouse.Follow_Pane import Follow_Pane
+from mGesf.main_page_tabs.gesture_tab.thuMouse.FollowPane import FollowPane
 
 import pyautogui as pag
 
@@ -40,7 +40,7 @@ class Interaction_window(QMainWindow):
 
         self.follow_layout = QHBoxLayout()
         self.follow_layout.setGeometry(self.main_widget.geometry())
-        self.follow_pane = Follow_Pane(parent=self.follow_layout)
+        self.follow_pane = FollowPane(parent=self.follow_layout)
 
         # --------------- LOGIC RELATED --------------------
         # state handler
@@ -83,7 +83,7 @@ class Interaction_window(QMainWindow):
 
     def open_follow_pane(self):
         self.setWindowTitle("Follow")
-        self.follow_layout.addWidget(self.follow_pane)
+        self.main_widget.setLayout(self.follow_layout)
 
     def close_follow_pane(self):
         self.follow_layout.removeWidget(self.follow_pane)
@@ -177,7 +177,7 @@ class Interaction_window(QMainWindow):
                 # if to yet started
                 if 'ready' in self.state:
                     if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
-                        self.setup_follow_pane()
+                        self.start_follow_task()
                         self.state_start()
 
             if 'running' in self.state and key in self.arrow_keys:
@@ -263,9 +263,10 @@ class Interaction_window(QMainWindow):
         self.home_cursor()
         self.locate_pane.activate()
 
-    def setup_follow_pane(self):
+    def start_follow_task(self):
         # put the cursor to the origin of the window
         # activate the locate pane
+        self.main_widget.setLayout(self.follow_layout)
         self.home_cursor()
         self.follow_pane.activate()
 

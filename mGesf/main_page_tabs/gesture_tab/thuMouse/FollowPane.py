@@ -8,7 +8,7 @@ import config
 margin = 5
 
 
-class Follow_Pane(QWidget):
+class FollowPane(QWidget):
     """
     The follow canvas
     """
@@ -25,6 +25,9 @@ class Follow_Pane(QWidget):
         # add to parent
         self.parent = parent
         self.parent.addWidget(self.target)
+
+        l = QLabel('Test')
+        self.parent.addWidget(l)
 
         self.target_diameter = max(self.target.height(), self.target.width())
 
