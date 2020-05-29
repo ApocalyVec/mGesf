@@ -92,7 +92,7 @@ class GestureTab(QWidget):
         self.tab3 = DesktopFingertip()
 
         self.tabs.addTab(self.tab1, config.gesture_index_pen_label)
-        self.tabs.addTab(self.tab2, config.gesture_thuMouth_label)
+        self.tabs.addTab(self.tab2, config.gesture_thuMouse_label)
         self.tabs.addTab(self.tab3, config.gesture_desktop_fingertip_label)
 
         # Add tabs to widget

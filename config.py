@@ -38,7 +38,7 @@ control_tab_config_path_label = 'Config path:'
 
 # gesture tab
 gesture_index_pen_label = "Index Pen"
-gesture_thuMouth_label = "ThuMouth"
+gesture_thuMouse_label = "ThuMouse"
 gesture_desktop_fingertip_label = "Desktop at Fingertip"
 
 # operation tab
@@ -51,6 +51,7 @@ counter_block_size = (unit_size * counter_size_factor, base_size)  # a quarter o
 ist_text_block_size = (unit_size * ist_text_size_factor, base_size)
 dtc_text_block_size = (base_size, base_size)
 prob_view_window_size = (1280, 720)
+interaction_window_size = (800, 800)
 
 operation_recording_label = "Recording"
 operation_training_label = "Training"
