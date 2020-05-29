@@ -1,4 +1,5 @@
 import pickle
+from PyQt5 import QtWidgets
 
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox, QWidget, QVBoxLayout, QScrollArea, QGroupBox, \
@@ -176,3 +177,7 @@ def create_plot_widget(x_lim=None, y_lim=None):
         plot_widget.setYRange(*y_lim)
     plot = plot_widget.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
     return plot_widget, plot
+
+def get_screen_size():
+    sizeObject = QtWidgets.QDesktopWidget().screenGeometry(-1)
+    return sizeObject.width(), sizeObject.height()

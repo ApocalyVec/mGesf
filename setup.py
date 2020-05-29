@@ -12,7 +12,6 @@ requires = ['PyQt5',
             'pydub',
             'ffmpeg',
             'pyautogui',
-            'pynpt'
             ]
 
 setuptools.setup(

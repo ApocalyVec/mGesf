@@ -2,8 +2,6 @@ import time
 
 import pyautogui
 from PyQt5.QtWidgets import QMainWindow, qApp
-
-from mGesf.UIController import UIController
 from utils.GUI_operation_tab import *
 import config
 from mGesf.main_page_tabs.gesture_tab.thuMouse.Locate_Pane import Locate_Pane
@@ -61,6 +59,8 @@ class Interaction_window(QMainWindow):
         self.repeat_times = repeat_times
         self.remaining_repeat_times = self.repeat_times
 
+        # --------------- cursor control --------------------
+        self.cursor_home_pos = [int(x/2) for x in get_screen_size()]
 
         """
         # A list of points the cursor went through
@@ -87,10 +87,10 @@ class Interaction_window(QMainWindow):
     def set_title(self, title):
         self.title = title
 
-    def put_cursor_to_center(self):
+    def home_cursor(self):
         """Puts the cursor to the center of the canvas"""
         if 'locate' in self.state:  # TODO @Nene why do you need to check the state here
-            pag.move(self.cursor_x, self.cursor_y)
+            pyautogui.moveTo(*self.cursor_home_pos)
 
     def _cursor_left(self):
         pyautogui.moveRel(-step, 0)
@@ -233,7 +233,7 @@ class Interaction_window(QMainWindow):
     def setup_locate_pane(self):
         # put the cursor to the origin of the window
         # activate the locate pane
-        self.put_cursor_to_center()
+        self.home_cursor()
         self.locate_pane.activate()
 
     def state_start(self):
