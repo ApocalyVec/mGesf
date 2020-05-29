@@ -11,25 +11,48 @@ step = 1
 
 class Interaction_window(QMainWindow):
     def __init__(self, parent=None):
+        """
+        :param parent: The previous parent
+
+        - The interaction window has both 1. a Lacate Pane and 2. a Follow Pane.
+        - It shows only one Pane at a time.
+
+        """
         super(Interaction_window, self).__init__(parent)
-        self.key_map = [Qt.Key_Left, Qt.Key_Up, Qt.Key_Right, Qt.Key_Down, Qt.Key_Enter, Qt.Key_Return, Qt.Key_Space]
-        self.current_state = ['idle']
 
-        qApp.installEventFilter(self)
-
-        self.cursor_x, self.cursor_y = self.x(), self.y()
-
-        self.title = ''
         self.resize(config.interaction_window_size[0], config.interaction_window_size[1])
+        # a widget for resize() the Locate Pane
+        # TODO THIS WIDGET SHOULD BE REMOVED IF WE CAN SET PANE LAYOUTS DIRECTLY TO THE WINDOW
         self.widget = QWidget()
         self.widget.setFixedSize(self.width(), self.height())
         self.layout().addWidget(self.widget)
+
+        self.title = ''  # to be set later
 
         self.locate_layout = QGridLayout()
         self.follow_layout = QHBoxLayout()
 
         self.locate_pane = Locate_Pane(parent=self.locate_layout, rows=5, columns=5)
         self.follow_pane = None
+
+        # --------------- LOGIC RELATED --------------------
+        # state handler
+        self.state = ['idle']       # resting when initialized
+
+        # Keys allowed in the locate pane
+        self.locate_key_map = [Qt.Key_Left,
+                               Qt.Key_Up,
+                               Qt.Key_Right,
+                               Qt.Key_Down,
+                               Qt.Key_Enter,
+                               Qt.Key_Return,
+                               Qt.Key_Space]
+
+        # register for event filter
+        qApp.installEventFilter(self)
+
+        # for cursor control
+        self.cursor_x, self.cursor_y = self.x(), self.y()
 
         """
         # A list of points the cursor went through
@@ -45,7 +68,7 @@ class Interaction_window(QMainWindow):
 
     def open_follow_pane(self):
         self.setWindowTitle("Follow")
-        # self.follow_layout.addWidget(self.follow_pane)
+        self.follow_layout.addWidget(self.follow_pane)
 
     def close_follow_pane(self):
         self.follow_layout.removeWidget(self.follow_pane)
@@ -55,7 +78,7 @@ class Interaction_window(QMainWindow):
 
     def put_cursor_to_center(self):
         """Puts the cursor to the center of the canvas"""
-        if 'locate' in self.current_state:
+        if 'locate' in self.state:
             print(str(self.cursor_x) + " " + str(self.cursor_y))
             pag.move(self.cursor_x, self.cursor_y)
             print('moved to' + str(self.cursor_x) + ' ' + str(self.cursor_y))
@@ -84,13 +107,13 @@ class Interaction_window(QMainWindow):
         :return:
         """
         if event.type() == QtCore.QEvent.KeyPress:
-            if event.key() in self.key_map:
+            if event.key() in self.locate_key_map:
                 # process key inputs
                 key = event.key()
                 self.key_logic(key)
 
                 # check when started
-                if 'ready' not in self.current_state:
+                if 'ready' not in self.state:
                     # update the trace
                     # TODO: different pieces? only one?
                     self.trace.append(pag.position())
@@ -114,31 +137,31 @@ class Interaction_window(QMainWindow):
 
         :return:
         """
-        if 'locate' in self.current_state:
-            print(self.current_state)
+        if 'locate' in self.state:
+            print(self.state)
 
-            if 'idle' in self.current_state:
-                if 'ready' in self.current_state:
+            if 'idle' in self.state:
+                if 'ready' in self.state:
                     # put the cursor to the origin of the window
                     # activate the locate pane
                     if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
                         print('started')
                         self.put_cursor_to_center()
                         self.locate_pane.activate()
-                        self.current_state.remove('idle')
-                        self.current_state.append('running')
+                        self.state.remove('idle')
+                        self.state.append('running')
                 else:
                     if key == QtCore.Qt.Key_Space:
                         print('running')
-                        self.current_state.remove('idle')
-                        self.current_state.append('running')
+                        self.state.remove('idle')
+                        self.state.append('running')
 
-            elif 'running' in self.current_state and key == QtCore.Qt.Key_Space:
+            elif 'running' in self.state and key == QtCore.Qt.Key_Space:
                 print('pause')
-                self.current_state.remove('running')
-                self.current_state.append('idle')
+                self.state.remove('running')
+                self.state.append('idle')
 
-            if 'running' in self.current_state:
+            if 'running' in self.state:
                 if key == QtCore.Qt.Key_Up:
                     print('up')
                     self._cursor_up()
@@ -154,7 +177,9 @@ class Interaction_window(QMainWindow):
                     self._cursor_right()
 
     def check_target(self):
-        # if the target is under mouse
+        """
+        #   if the target is under mouse
         #   start a new round
+        """
         if self.locate_pane.targets[self.locate_pane.activated_target].underMouse():
             self.locate_pane.random_switch()

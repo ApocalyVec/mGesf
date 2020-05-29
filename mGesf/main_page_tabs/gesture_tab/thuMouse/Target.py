@@ -16,6 +16,22 @@ class Target(QWidget):
     """
 
     def __init__(self, number=None, label_position='lefttop'):
+        """
+        :param number: number to put in label
+        :param label_position: 'lefttop' or 'righttop'
+
+        - QWidget
+            - QHLayout
+            -----------------------------------------
+            |   - image (if no 'number' passed in)  |
+            -----------------------------------------
+            OR
+            ----------------------------
+            |      - label | image     |
+            |OR    - image | label     |
+            ----------------------------
+
+        """
         super().__init__()
         # Horizontal -> icon | label
         self.layout = QHBoxLayout(self)
@@ -25,7 +41,7 @@ class Target(QWidget):
         self.image.setAlignment(QtCore.Qt.AlignCenter)
         self.on = False
 
-        # icons
+        # set up images
         on_path = os.getcwd() + '/mGesf/resource/figures/circle_on.png'
         off_path = os.getcwd() + '/mGesf/resource/figures/circle_off.png'
 
@@ -57,9 +73,16 @@ class Target(QWidget):
                 self.label.setAlignment(QtCore.Qt.AlignLeft)
                 self.label.setAlignment(QtCore.Qt.AlignTop)
 
-
     def turn_off(self):
+        """
+        Changes the image to off.png
+        """
         self.image.setPixmap(self.off_icon)
+        return
 
     def turn_on(self):
+        """
+        Changes the image to on.png
+        """
         self.image.setPixmap(self.on_icon)
+        return

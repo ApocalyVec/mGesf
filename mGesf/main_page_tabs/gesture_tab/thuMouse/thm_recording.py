@@ -155,8 +155,8 @@ class Recording(QWidget):
                     # set the interactive window to locate
                     self.interaction_window.open_locate_pane()
                     # update the state of the instruction window
-                    self.interaction_window.current_state.append('locate')
-                    self.interaction_window.current_state.append('ready')
+                    self.interaction_window.state.append('locate')
+                    self.interaction_window.state.append('ready')
 
                     self.interaction_window.show()
 
