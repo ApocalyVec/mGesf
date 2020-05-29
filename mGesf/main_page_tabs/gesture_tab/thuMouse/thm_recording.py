@@ -31,19 +31,24 @@ class Recording(QWidget):
         # -------------------- third class --------------------
         #   1. Input block
         #       1-1. task selection box (horizontal)
-        #       1-2. subject name textbox
-        #       1-3. training dir textbox
-        #       1-4. buttons
+        #       1-2. repeat time textbox
+        #       1-3. subject name textbox
+        #       1-4. training dir textbox
+        #       1-5. buttons
         self.taskSelection_block = init_container(parent=self.input_block,
                                                   label="Task Selection",
                                                   vertical=True)
 
+        self.repeatTime_block, self.repeatTime_textbox = init_inputBox(parent=self.input_block,
+                                                                       label="Repeat Times: ",
+                                                                       default_input=config.thuMouse_repeatTimes_default)
+
         self.subjectName_block, self.subjectName_textbox = init_inputBox(parent=self.input_block,
-                                                                         label="Subject Name",
+                                                                         label="Subject Name: ",
                                                                          default_input=config.thuMouse_subjectName_default)
 
         self.trainingDataDir_block, self.trainingDataDir_textbox = init_inputBox(parent=self.input_block,
-                                                                                 label="Training Data Directory",
+                                                                                 label="Training Data Directory: ",
                                                                                  default_input=config.thuMouse_TrainingDataDir_default)
 
         self.buttons_block = init_container(parent=self.input_block,
@@ -95,9 +100,34 @@ class Recording(QWidget):
         self.training_dir = self.get_training_data_dir()
         self.state = ['idle']  # see the docstring of self.update_state for details
 
-        # position of the cursor
-        self.cursor_x = None
-        self.cursor_y = None
+        # repeat times
+        self.repeat_times = self.get_repeat_times()
+
+    def restart(self):
+        self.repeat_times = self.get_repeat_times()
+        self.subject_name = self.get_subject_name()
+        self.training_dir = self.get_training_data_dir()
+
+        if 'testing' in self.state:
+            self.state.remove('testing')
+        if 'recording' in self.state:
+            self.state.remove('recording')
+        if 'idle' not in self.state:
+            self.state.append('idle')
+
+    def get_repeat_times(self):
+        _user_input = self.repeatTime_textbox.text()
+        if not _user_input:
+            _user_input = config.thuMouse_repeatTimes_default
+
+        # make sure the input's int
+        try:
+            _user_input = int(_user_input)
+        except AssertionError as ae:
+            _user_input = config.thuMouse_repeatTimes_default
+            print("Repeat times input should be an integer")
+
+        return _user_input
 
     @pg.QtCore.pyqtSlot()
     def ticks(self):
@@ -107,95 +137,140 @@ class Recording(QWidget):
         print("tick")
 
     def activate_follow_pane(self):
-        print('follow')
+        # set the interactive window to follow
+        self.interaction_window.open_follow_pane()
+        # update the state of the instruction window
+        self.interaction_window.state.append('follow')
+        self.interaction_window.state.append('ready')
+
+        self.interaction_window.show()
 
     def activate_locate_pane(self):
-        print('locate')
+        # set the interactive window to locate
+        self.interaction_window.open_locate_pane()
+        # update the state of the instruction window
+        self.interaction_window.state.append('locate')
+        self.interaction_window.state.append('ready')
 
-    def start_test_follow(self):
+        self.interaction_window.show()
+
+    def start_follow_test(self):
         print("testing follow")
+        self.state.remove('idle')
+        self.state.append('testing')
 
-    def update_state(self, action):
+        self.disable_checkboxes()
+
+        self.activate_follow_pane()
+
+    def start_locate_test(self):
+        self.state.remove('idle')
+        self.state.append('testing')
+
+        self.disable_checkboxes()
+
+        self.activate_locate_pane()
+
+    def start_follow_recording(self):
+        print("recording follow")
+        self.state.remove('idle')
+        self.state.append('recording')
+
+        self.disable_checkboxes()
+
+        self.activate_follow_pane()
+
+    def start_locate_recording(self):
+        self.state.remove('idle')
+        self.state.append('recording')
+
+        self.disable_checkboxes()
+        self.activate_locate_pane()
+
+    def update_state(self, act):
         """
         update the current state based on action
         The working states, as oppose to 'idle' include that of 'pending', 'testing', 'countingDown', 'writing'
-        @param action: str: issued with the following functions with the corresponding value:
+        @param act: str: issued with the following functions with the corresponding value:
             * self.follow_checkBox_action(): 'follow'
             * self.locate_checkBox_action(): 'locate'
-            * self.recording_btn_action(): 'start_recording'
-            * self.test_btn_action(): 'start_test'
-            * self.update_state: 'countdown_over'
+            * self.recording_btn_action(): 'recording'
+            * self.test_btn_action(): 'testing'
         """
-        if action == 'follow':
+
+        # check the checkbox logic
+        if act in ['follow', 'not_follow', 'locate', 'not_locate']:
+            self.check_locate_follow_logic(act)
+        # test/record logic
+        elif act == 'test_pressed':
+            self.check_test_logic(act)
+        elif act == 'record_pressed':
+            self.check_record_logic(act)
+        # stop
+        elif act == 'interrupt_pressed':
+            self.restart()
+        else:
+            raise Exception('Unknown State change')
+
+        self.resolve_state()
+
+    def check_record_logic(self, act):
+        if 'idle' in self.state:  # start the test mode
+            if 'locate' in self.state:
+                self.start_locate_recording()
+            elif 'follow' in self.state:
+                self.start_follow_recording()
+            else:
+                print("Select a mode")
+
+        else:  # stop
+            self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
+
+    def check_test_logic(self, act):
+        if 'idle' in self.state:  # start the test mode
+            if 'locate' in self.state:
+                self.start_locate_test()
+            elif 'follow' in self.state:
+                self.start_follow_test()
+            else:
+                print("Select a mode")
+
+        else:  # stop
+            self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
+
+    def check_locate_follow_logic(self, act):
+        """
+        can only choose one
+        :return:
+        """
+        if act == 'follow':
             # if locate is chosen, remove it
             if 'locate' in self.state:
                 self.state.remove('locate')
-            self.state.append(action)
+            self.state.append(act)
 
-        elif action == 'not_follow':
+        elif act == 'not_follow':
             if 'follow' in self.state:
                 self.state.remove('follow')
 
-        elif action == 'locate':
+        elif act == 'locate':
             if 'follow' in self.state:
                 self.state.remove('follow')
-            self.state.append(action)
+            self.state.append(act)
 
-        elif action == 'not_locate':
+        elif act == 'not_locate':
             if 'locate' in self.state:
                 self.state.remove('locate')
 
-        elif action == 'test_pressed':
-            if 'idle' in self.state:  # start the test mode
-                if 'locate' in self.state:
-                    self.idle_to_testing()
-                    self.state.remove('idle')
-                    self.state.append('testing')
+    def start_recording(self):
+        # start testing
+        self.follow_checkbox.setDisabled(True)
+        self.locate_checkbox.setDisabled(True)
+        print('recording')
 
-                    # set the interactive window to locate
-                    self.interaction_window.open_locate_pane()
-                    # update the state of the instruction window
-                    self.interaction_window.state.append('locate')
-                    self.interaction_window.state.append('ready')
-
-                    self.interaction_window.show()
-
-                elif 'follow' in self.state:
-                    self.idle_to_testing()
-                    self.state.remove('idle')
-                    self.state.append('testing')
-
-                    self.start_test_follow()
-
-                else:
-                    print("Select a mode")
-
-            else:  # back to idle
-                self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
-
-        elif action == 'record_pressed':
-            if 'idle' in self.state:  # start the test mode
-                if 'locate' in self.state or 'follow' in self.state:
-                    # start testing
-                    self.idle_to_recording()
-                    self.state.remove('idle')
-                    self.state.append('recording')
-                else:
-                    print("Select a mode")
-            else:  # back to idle
-                self.update_state('interrupt_pressed')  # this is equivalent to issuing an interrupt action
-
-        elif action == 'interrupt_pressed':
-            if 'testing' in self.state:
-                self.state.remove('testing')
-            elif 'recording' in self.state:
-                self.state.remove('recording')
-            # pause working anyway
-            self.pause_working()
-
-        else:
-            raise Exception('Unknown State change')
-        self.resolve_state()
+        # update state
+        self.state.remove('idle')
+        self.state.append('recording')
 
     def follow_checkBox_action(self):
         if self.follow_checkbox.isChecked():
@@ -256,6 +331,13 @@ class Recording(QWidget):
 
     def interrupt_btn_action(self):
         self.update_state('interrupt_pressed')
+
+        # update state
+        if 'testing' in self.state:
+            self.state.remove('testing')
+        elif 'recording' in self.state:
+            self.state.remove('recording')
+
         print(self.state)
 
         return
@@ -265,6 +347,14 @@ class Recording(QWidget):
         print(self.state)
 
         return
+
+    def disable_checkboxes(self):
+        self.follow_checkbox.setDisabled(True)
+        self.locate_checkbox.setDisabled(True)
+
+    def enable_checkboxes(self):
+        self.follow_checkbox.setDisabled(False)
+        self.locate_checkbox.setDisabled(False)
 
     def resolve_state(self):
         if 'testing' in self.state:
@@ -286,15 +376,3 @@ class Recording(QWidget):
         self.follow_checkbox.setDisabled(False)
         self.locate_checkbox.setDisabled(False)
         print("paused")
-
-    def idle_to_recording(self):
-        self.follow_checkbox.setDisabled(True)
-        self.locate_checkbox.setDisabled(True)
-        print('recording')
-
-    def idle_to_testing(self):
-        self.follow_checkbox.setDisabled(True)
-        self.locate_checkbox.setDisabled(True)
-        print('testing')
-
-
