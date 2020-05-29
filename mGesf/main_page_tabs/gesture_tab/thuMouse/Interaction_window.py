@@ -122,11 +122,8 @@ class Interaction_window(QMainWindow):
                 # TODO change the status in the parent window
                 # do not use running because the target might not be initialized when just started
                 if 'ready' not in self.state:
-                    # update the trace
-                    # TODO: not working?
-                    self.trace.append([time.time(), pag.position()])  # add position and timestamp
-                    # check if target reached
-                    self.check_locate_target()
+                    self.trace.append([time.time(), pag.position()])  # update the trace, add position and timestamp
+                    self.check_locate_target() # check if target reached
 
             return True
         return super().eventFilter(obj, event)

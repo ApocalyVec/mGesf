@@ -57,7 +57,7 @@ class LocatePane(QWidget):
         # which target is now activated?
         self.activated_target = None
 
-        parent.addWidget(self.target1, 0, 0, Qt.AlignTop)
+        parent.addWidget(self.target1, 0, 0)
         parent.addWidget(self.target2, 1, 0)
         parent.addWidget(self.target3, 0, 1)
         parent.addWidget(self.target4, 1, 1)
