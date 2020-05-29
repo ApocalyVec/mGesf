@@ -85,7 +85,7 @@ class Tabs(QWidget):
         self.tabs.addTab(self.tab4, config.main_window_uwb_tab_label)
         self.tabs.addTab(self.tab5, config.main_window_gesture_tab_label)
 
-        # Add tabs to widget
+        # Add tabs to main_widget
         self.layout.addWidget(self.tabs)
         self.setLayout(self.layout)
 

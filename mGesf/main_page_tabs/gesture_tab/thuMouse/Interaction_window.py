@@ -4,7 +4,7 @@ import pyautogui
 from PyQt5.QtWidgets import QMainWindow, qApp
 from utils.GUI_operation_tab import *
 import config
-from mGesf.main_page_tabs.gesture_tab.thuMouse.Locate_Pane import Locate_Pane
+from mGesf.main_page_tabs.gesture_tab.thuMouse.LocatePane import LocatePane
 from mGesf.main_page_tabs.gesture_tab.thuMouse.Follow_Pane import Follow_Pane
 
 import pyautogui as pag
@@ -23,21 +23,23 @@ class Interaction_window(QMainWindow):
 
         """
         super(Interaction_window, self).__init__(parent)
+        screen_size = get_screen_size()
 
         self.parent = parent
         self.resize(config.interaction_window_size[0], config.interaction_window_size[1])
-        # a widget for resize() the Locate Pane
-        # TODO THIS WIDGET SHOULD BE REMOVED IF WE CAN SET PANE LAYOUTS DIRECTLY TO THE WINDOW
-        self.widget = QWidget()
-        self.widget.setFixedSize(self.width(), self.height())
-        self.layout().addWidget(self.widget)
-
-        self.title = ''  # to be set later
+        self.main_widget = QWidget()
+        self.main_widget.setFixedSize(*screen_size)
+        self.setCentralWidget(self.main_widget)
+        size_policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        self.main_widget.setSizePolicy(size_policy)
+        self.layout().addWidget(self.main_widget)
 
         self.locate_layout = QGridLayout()
-        self.follow_layout = QHBoxLayout()
+        self.locate_layout.setGeometry(self.main_widget.geometry())
+        self.locate_pane = LocatePane(parent=self.locate_layout)
 
-        self.locate_pane = Locate_Pane(parent=self.locate_layout, rows=5, columns=5)
+        self.follow_layout = QHBoxLayout()
+        self.follow_layout.setGeometry(self.main_widget.geometry())
         self.follow_pane = Follow_Pane(parent=self.follow_layout)
 
         # --------------- LOGIC RELATED --------------------
@@ -62,7 +64,7 @@ class Interaction_window(QMainWindow):
         self.remaining_repeat_times = self.repeat_times
 
         # --------------- cursor control --------------------
-        self.cursor_home_pos = [int(x/2) for x in get_screen_size()]
+        self.cursor_home_pos = [int(x/2) for x in screen_size]
 
         """
         # A list of points the cursor went through
@@ -74,7 +76,7 @@ class Interaction_window(QMainWindow):
 
     def open_locate_pane(self):
         self.setWindowTitle("Locate")
-        self.widget.setLayout(self.locate_layout)
+        self.main_widget.setLayout(self.locate_layout)
 
     def close_locate_pane(self):
         self.locate_layout.removeWidget(self.locate_pane)
@@ -156,7 +158,7 @@ class Interaction_window(QMainWindow):
                 # if to yet started
                 if 'ready' in self.state:
                     if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
-                        self.setup_locate_pane()
+                        self.start_locate_task()
                         self.state_start()
                 '''
                 else:       # resume
@@ -231,7 +233,7 @@ class Interaction_window(QMainWindow):
         if self.follow_pane.activated_target:
             if self.follow_pane.target.underMouse():
                 self.remaining_repeat_times -= 1
-                self.follow_pane.move_target(self.cursor_x, self.cursor_y)
+                self.follow_pane.move_target(*pyautogui.position())
 
         if self.is_completed():
             self.finish_up()
@@ -256,18 +258,18 @@ class Interaction_window(QMainWindow):
         self.trace = []  # reset trace
         self.state = ['idle']
         self.remaining_repeat_times = self.repeat_times
-        clear_layout(self.layout())
 
-    def setup_locate_pane(self):
+    def start_locate_task(self):
         # put the cursor to the origin of the window
         # activate the locate pane
+        self.main_widget.setLayout(self.locate_layout)
         self.home_cursor()
         self.locate_pane.activate()
 
     def setup_follow_pane(self):
         # put the cursor to the origin of the window
         # activate the locate pane
-        self.put_cursor_to_center()
+        self.home_cursor()
         self.follow_pane.activate()
 
     def state_start(self):

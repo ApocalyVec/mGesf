@@ -10,9 +10,9 @@ from mGesf.main_page_tabs.gesture_tab.thuMouse.Target import Target
 from random import randint
 
 
-class Locate_Pane(QWidget):
+class LocatePane(QWidget):
 
-    def __init__(self, parent, rows=4, columns=4):
+    def __init__(self, parent):
         """
         :param parent: A grid-layout
         :param rows: number of rows in the grid
@@ -26,7 +26,7 @@ class Locate_Pane(QWidget):
         #              |
         # WIDGET2      |      WIDGET4
 
-        - interactive window widget
+        - interactive window main_widget
             - grid-layout of size (rows-1 * columns-1)
                 - widget1
                     - target1
@@ -47,7 +47,6 @@ class Locate_Pane(QWidget):
 
         # widgets that hold the 4 targets
         # used for setsize()
-        self.target_w1, self.target_w2, self.target_w3, self.target_w4 = self.set_targets_to_corners()
 
         # for quick reference and change target on/off
         self.targets = {1: self.target1,
@@ -58,10 +57,10 @@ class Locate_Pane(QWidget):
         # which target is now activated?
         self.activated_target = None
 
-        parent.addWidget(self.target_w1, 0, 0)
-        parent.addWidget(self.target_w2, rows - 1, 0)
-        parent.addWidget(self.target_w3, 0, columns - 1)
-        parent.addWidget(self.target_w4, rows - 1, columns - 1)
+        parent.addWidget(self.target1, 0, 0, Qt.AlignTop)
+        parent.addWidget(self.target2, 1, 0)
+        parent.addWidget(self.target3, 0, 1)
+        parent.addWidget(self.target4, 1, 1)
 
     def activate(self):
         # randomly turn on one target when hit
@@ -74,26 +73,3 @@ class Locate_Pane(QWidget):
         # turn on a new one
         self.activate()
 
-    def set_targets_to_corners(self):
-        def _set_to_corner(layout, target, p1, p2):
-            layout.addWidget(target)
-            layout.setAlignment(p1)
-            layout.setAlignment(p2)
-
-        # TODO THIS IS NOT WORKING PROPERLY
-        widget1 = QWidget()
-        widget2 = QWidget()
-        widget3 = QWidget()
-        widget4 = QWidget()
-
-        layout1 = QVBoxLayout(widget1)
-        layout2 = QVBoxLayout(widget2)
-        layout3 = QVBoxLayout(widget3)
-        layout4 = QVBoxLayout(widget4)
-
-        _set_to_corner(layout1, self.target1, QtCore.Qt.AlignLeft, QtCore.Qt.AlignTop)
-        _set_to_corner(layout2, self.target2, QtCore.Qt.AlignLeft, QtCore.Qt.AlignBottom)
-        _set_to_corner(layout3, self.target3, QtCore.Qt.AlignRight, QtCore.Qt.AlignTop)
-        _set_to_corner(layout4, self.target4, QtCore.Qt.AlignRight, QtCore.Qt.AlignBottom)
-
-        return widget1, widget2, widget3, widget4

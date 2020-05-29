@@ -21,7 +21,7 @@ class DesktopFingertip(QWidget):
         tabs.addTab(tab2, config.operation_training_label)
         tabs.addTab(tab3, config.operation_detection_label)
 
-        # Add tabs to widget
+        # Add tabs to main_widget
         self.operation_block.addWidget(tabs)
 
         self.setLayout(self.main_page)
