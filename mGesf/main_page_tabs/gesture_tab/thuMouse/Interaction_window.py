@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QMainWindow, qApp
 from utils.GUI_operation_tab import *
 import config
 from mGesf.main_page_tabs.gesture_tab.thuMouse.Locate_Pane import Locate_Pane
+from mGesf.main_page_tabs.gesture_tab.thuMouse.Follow_Pane import Follow_Pane
+
 import pyautogui as pag
 
 # how many pixels does the cursor move in one step
@@ -34,11 +36,11 @@ class Interaction_window(QMainWindow):
         self.follow_layout = QHBoxLayout()
 
         self.locate_pane = Locate_Pane(parent=self.locate_layout, rows=5, columns=5)
-        self.follow_pane = None
+        self.follow_pane = Follow_Pane(parent=self.follow_layout)
 
         # --------------- LOGIC RELATED --------------------
         # state handler
-        self.state = ['idle']       # resting when initialized
+        self.state = ['idle']  # resting when initialized
 
         # Keys allowed in the locate pane
         # 1. for pause/restart
@@ -78,9 +80,6 @@ class Interaction_window(QMainWindow):
 
     def close_follow_pane(self):
         self.follow_layout.removeWidget(self.follow_pane)
-
-    def set_title(self, title):
-        self.title = title
 
     def put_cursor_to_center(self):
         """Puts the cursor to the center of the canvas"""
@@ -125,7 +124,7 @@ class Interaction_window(QMainWindow):
                     # TODO: not working?
                     self.trace.append(pag.position())
                     # check if target reached
-                    self.check_target()
+                    self.check_locate_target()
 
             return True
         return super().eventFilter(obj, event)
@@ -172,6 +171,19 @@ class Interaction_window(QMainWindow):
             if 'running' in self.state and key in self.arrow_keys:
                 self.arrow_key_event(key)
 
+        elif 'follow' in self.state:
+            print(self.state)
+            # If in rest
+            if 'idle' in self.state:
+                # if to yet started
+                if 'ready' in self.state:
+                    if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
+                        self.setup_follow_pane()
+                        self.state_start()
+
+            if 'running' in self.state and key in self.arrow_keys:
+                self.arrow_key_event(key)
+
         return False
 
     def arrow_key_event(self, key):
@@ -192,7 +204,7 @@ class Interaction_window(QMainWindow):
 
         return
 
-    def check_target(self):
+    def check_locate_target(self):
         """
         #   if target under mouse:
         #       start a new round
@@ -204,6 +216,22 @@ class Interaction_window(QMainWindow):
             if self.locate_pane.targets[self.locate_pane.activated_target].underMouse():
                 self.remaining_repeat_times -= 1
                 self.locate_pane.random_switch()
+
+        if self.is_completed():
+            self.finish_up()
+
+    def check_follow_target(self):
+        """
+        #   if target under mouse:
+        #       move the target to a new place
+        #       update remaining repeat times
+        #   if the task is completed:
+        #       call finish_up()
+        """
+        if self.follow_pane.activated_target:
+            if self.follow_pane.target.underMouse():
+                self.remaining_repeat_times -= 1
+                self.follow_pane.move_target(self.cursor_x, self.cursor_y)
 
         if self.is_completed():
             self.finish_up()
@@ -222,7 +250,7 @@ class Interaction_window(QMainWindow):
         print(self.trace)
         self.reset()
         self.hide()
-        #@ TODO change the runing state in the parent window
+        # @ TODO change the runing state in the parent window
 
     def reset(self):
         # reset trace
@@ -236,6 +264,12 @@ class Interaction_window(QMainWindow):
         # activate the locate pane
         self.put_cursor_to_center()
         self.locate_pane.activate()
+
+    def setup_follow_pane(self):
+        # put the cursor to the origin of the window
+        # activate the locate pane
+        self.put_cursor_to_center()
+        self.follow_pane.activate()
 
     def state_start(self):
         print('started')
