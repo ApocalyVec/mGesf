@@ -10,7 +10,23 @@ from mGesf.main_page_tabs.gesture_tab.thuMouse.FollowPane import FollowPane
 import pyautogui as pag
 
 # how many pixels does the cursor move in one step
-step = 1
+step = 5
+
+
+def _cursor_up():
+    pyautogui.moveRel(0, -step)
+
+
+def _cursor_down():
+    pyautogui.moveRel(0, step)
+
+
+def _cursor_right():
+    pyautogui.moveRel(step, 0)
+
+
+def _cursor_left():
+    pyautogui.moveRel(-step, 0)
 
 
 class Interaction_window(QMainWindow):
@@ -64,7 +80,7 @@ class Interaction_window(QMainWindow):
         self.remaining_repeat_times = self.repeat_times
 
         # --------------- cursor control --------------------
-        self.cursor_home_pos = [int(x/2) for x in screen_size]
+        self.cursor_home_pos = [int(x / 2) for x in screen_size]
 
         """
         # A list of points the cursor went through
@@ -90,21 +106,7 @@ class Interaction_window(QMainWindow):
 
     def home_cursor(self):
         """Puts the cursor to the center of the canvas"""
-        if 'locate' in self.state:  # TODO @Nene why do you need to check the state here
-            pyautogui.moveTo(*self.cursor_home_pos)
-
-    def _cursor_left(self):
-        pyautogui.moveRel(-step, 0)
-
-    def _cursor_right(self):
-        pyautogui.moveRel(step, 0)
-
-    def _cursor_up(self):
-        pyautogui.moveRel(0, -step)
-
-    def _cursor_down(self):
-        pyautogui.moveRel(0, step)
-
+        pyautogui.moveTo(*self.cursor_home_pos)
 
     def eventFilter(self, obj, event):
         """
@@ -123,7 +125,7 @@ class Interaction_window(QMainWindow):
                 # do not use running because the target might not be initialized when just started
                 if 'ready' not in self.state:
                     self.trace.append([time.time(), pag.position()])  # update the trace, add position and timestamp
-                    self.check_locate_target() # check if target reached
+                    self.check_locate_target()  # check if target reached
 
             return True
         return super().eventFilter(obj, event)
@@ -188,17 +190,17 @@ class Interaction_window(QMainWindow):
     def arrow_key_event(self, key):
         if key == QtCore.Qt.Key_Up:
             print('up')
-            self._cursor_up()
+            _cursor_up()
             return
         elif key == QtCore.Qt.Key_Down:
             print('down')
-            self._cursor_down()
+            _cursor_down()
             return
         elif key == QtCore.Qt.Key_Left:
-            self._cursor_left()
+            _cursor_left()
             return
         elif key == QtCore.Qt.Key_Right:
-            self._cursor_right()
+            _cursor_right()
             return
 
         return
@@ -249,12 +251,14 @@ class Interaction_window(QMainWindow):
         print(self.trace)
         self.reset()
         self.hide()
-        #  TODO change the runing state in the parent window
+        #  TODO change the running state in the parent window
 
     def reset(self):
         self.trace = []  # reset trace
         self.state = ['idle']
         self.remaining_repeat_times = self.repeat_times
+        if self.locate_pane.activated_target:
+            self.locate_pane.targets[self.locate_pane.activated_target].turn_off()
 
     def start_locate_task(self):
         # put the cursor to the origin of the window

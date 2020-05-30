@@ -63,8 +63,19 @@ class LocatePane(QWidget):
         parent.addWidget(self.target4, 1, 1)
 
     def activate(self):
-        # randomly turn on one target when hit
-        self.activated_target = randint(1, 4)
+        """
+        randomly turn on one target when hit
+        """
+        # make sure it does not turn on the same one
+        if self.activated_target:
+            new_target = randint(1, 4)
+            while new_target == self.activated_target:
+                new_target = randint(1, 4)
+
+            self.activated_target = new_target
+        else:
+            self.activated_target = randint(1, 4)
+
         self.targets[self.activated_target].turn_on()
 
     def random_switch(self):
