@@ -29,6 +29,27 @@ def _cursor_left():
     pyautogui.moveRel(-step, 0)
 
 
+def arrow_key_event(key):
+    if key == QtCore.Qt.Key_Up:
+        print('up')
+        _cursor_up()
+        return
+    elif key == QtCore.Qt.Key_Down:
+        print('down')
+        _cursor_down()
+        return
+    elif key == QtCore.Qt.Key_Left:
+        print('left')
+        _cursor_left()
+        return
+    elif key == QtCore.Qt.Key_Right:
+        print('right')
+        _cursor_right()
+        return
+
+    return
+
+
 class Interaction_window(QMainWindow):
     def __init__(self, parent=None, repeat_times=config.thuMouse_repeatTimes_default):
         """
@@ -125,7 +146,11 @@ class Interaction_window(QMainWindow):
                 # do not use running because the target might not be initialized when just started
                 if 'ready' not in self.state:
                     self.trace.append([time.time(), pag.position()])  # update the trace, add position and timestamp
-                    self.check_locate_target()  # check if target reached
+
+                    if 'locate' in self.state:
+                        self.check_locate_target()  # check if target reached
+                    elif 'follow' in self.state:
+                        self.check_follow_target()
 
             return True
         return super().eventFilter(obj, event)
@@ -149,61 +174,25 @@ class Interaction_window(QMainWindow):
             self.hide()
             return True
 
-        if 'locate' in self.state:
-            print(self.state)
-
-            # If in rest
-            if 'idle' in self.state:
-                # if to yet started
-                if 'ready' in self.state:
-                    if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
+        # If in rest
+        if 'idle' in self.state:
+            # if to yet started
+            if 'ready' in self.state:
+                if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
+                    if 'locate' in self.state:
+                        print(self.state)
                         self.start_locate_task()
-                        self.state_start()
-                '''
-                else:       # resume
-                    if key == QtCore.Qt.Key_Space:
-                        self.state_resume()
-                '''
-            '''            
-            elif 'running' in self.state and key == QtCore.Qt.Key_Space:
-            self.state_pause()
-            '''
-            # arrow keys logic
-            if 'running' in self.state and key in self.arrow_keys:
-                self.arrow_key_event(key)
-
-        elif 'follow' in self.state:
-            print(self.state)
-            # If in rest
-            if 'idle' in self.state:
-                # if to yet started
-                if 'ready' in self.state:
-                    if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
+                    elif 'follow' in self.state:
+                        print(self.state)
                         self.start_follow_task()
-                        self.state_start()
 
-            if 'running' in self.state and key in self.arrow_keys:
-                self.arrow_key_event(key)
+                    self.state_start()
+
+        # if running
+        if 'running' in self.state and key in self.arrow_keys:
+            arrow_key_event(key)
 
         return False
-
-    def arrow_key_event(self, key):
-        if key == QtCore.Qt.Key_Up:
-            print('up')
-            _cursor_up()
-            return
-        elif key == QtCore.Qt.Key_Down:
-            print('down')
-            _cursor_down()
-            return
-        elif key == QtCore.Qt.Key_Left:
-            _cursor_left()
-            return
-        elif key == QtCore.Qt.Key_Right:
-            _cursor_right()
-            return
-
-        return
 
     def check_locate_target(self):
         """
@@ -229,22 +218,13 @@ class Interaction_window(QMainWindow):
         #   if the task is completed:
         #       call finish_up()
         """
-        if self.follow_pane.activated_target:
-            if self.follow_pane.target.underMouse():
-                self.remaining_repeat_times -= 1
-                self.follow_pane.move_target(*pyautogui.position())
+        if self.follow_pane.target.underMouse():
+            self.remaining_repeat_times -= 1
+            self.follow_pane.move_target(*pyautogui.position())
 
-        if self.is_completed():
-            self.finish_up()
-
-    def is_completed(self):
-        """
-        Checks if the task is done and the window can be closed
-        :return: True if has reached repeat times
-        """
+        # if completed
         if self.remaining_repeat_times == 0:
-            return True
-        return False
+            self.finish_up()
 
     def finish_up(self):
         print("Task finished")
@@ -260,6 +240,9 @@ class Interaction_window(QMainWindow):
         if self.locate_pane.activated_target:
             self.locate_pane.targets[self.locate_pane.activated_target].turn_off()
 
+        self.follow_pane.target.turn_off()
+        self.follow_pane.target.move(self.cursor_home_pos[0], self.cursor_home_pos[1])
+
     def start_locate_task(self):
         # put the cursor to the origin of the window
         # activate the locate pane
@@ -272,6 +255,7 @@ class Interaction_window(QMainWindow):
         # activate the locate pane
         self.main_widget.setLayout(self.follow_layout)
         self.home_cursor()
+        self.follow_pane.target.move(self.cursor_home_pos[0], self.cursor_home_pos[1])
         self.follow_pane.activate()
 
     def state_start(self):

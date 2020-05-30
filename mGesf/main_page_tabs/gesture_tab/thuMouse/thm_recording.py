@@ -132,6 +132,11 @@ class Recording(QWidget):
 
         # make sure the input's int
         try:
+            # TODO @ LEO THIS IS NOT WORKING. IT STILL QUITS IF THE INPUT'S NOT INT
+            #  File "/Users/neneko/Documents/GitHub/mGesf/mGesf/main_page_tabs/gesture_tab/thuMouse/thm_recording.py",
+            #  line 135, in get_repeat_times _user_input = int(_user_input) ValueError: invalid literal for int()
+            #  with base 10: '4m'
+
             _user_input = int(_user_input)
         except AssertionError as ae:
             _user_input = config.thuMouse_repeatTimes_default
@@ -153,6 +158,7 @@ class Recording(QWidget):
         self.interaction_window.state.append('follow')
         self.interaction_window.state.append('ready')
 
+        # move the target to a new place ratehr than the center
         self.interaction_window.show()
 
     def activate_locate_pane(self):
