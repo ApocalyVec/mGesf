@@ -104,10 +104,12 @@ class IdpDetection(QWidget):
         self.interval_counter = 0
         self.dtc_interval = 11
 
+        '''
         # allow dynamic allocation of GPU memory
         tf_config = tf.ConfigProto()
         tf_config.gpu_options.allow_growth = True
         session = tf.Session(config=tf_config)
+        '''
 
     def load_btn_action(self):
         print('IndexPen Detection: Loading...')

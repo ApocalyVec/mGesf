@@ -1,8 +1,9 @@
 import pickle
+from PyQt5 import QtWidgets
 
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider, QMessageBox, QWidget, QVBoxLayout, QScrollArea, QGroupBox, \
-    QFormLayout
+    QFormLayout, QGridLayout
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
 import config
@@ -12,6 +13,7 @@ from utils.labeled_Slider import LabeledSlider
 from PyQt5.QtGui import QIcon, QPixmap
 import os
 import pyqtgraph as pg
+from random import randint
 
 
 def init_slider_bar_box(parent, label=None, interval=5):
@@ -127,45 +129,6 @@ def show_finished_box():
     msg.exec()
 
 
-def init_locate_unit_block(parent, number=None, label_position="centertop", image_source=None):
-    # contains a label(image) and another label(number)
-
-    container = QWidget()
-    parent.addWidget(container)
-    layout = QHBoxLayout(container)
-
-    image = QLabel()
-    image.setAlignment(QtCore.Qt.AlignCenter)
-
-    # if no image_source, use a place holder
-    if not image_source:
-        pixmap = QPixmap("resource/figures")
-    else:
-        pixmap = QPixmap(image_source)
-
-    image.setPixmap(pixmap)
-    container.resize(pixmap.width(), pixmap.height())
-
-    # add the label
-    label = QLabel()
-    if not number:
-        label.setText("0")
-    else:
-        label.setText(number)
-
-    if label_position == "righttop":
-        label.setAlignment(QtCore.Qt.AlignRight)
-        label.setAlignment(QtCore.Qt.AlignTop)
-
-    elif label_position == "lefttop":
-        label.setAlignment(QtCore.Qt.AlignLeft)
-        label.setAlignment(QtCore.Qt.AlignTop)
-
-    layout.addWidget(label)
-
-    return image
-
-
 def init_scroll_area(parent, label, size=None):
     gb = QGroupBox(label)
     form = QFormLayout()
@@ -214,3 +177,7 @@ def create_plot_widget(x_lim=None, y_lim=None):
         plot_widget.setYRange(*y_lim)
     plot = plot_widget.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
     return plot_widget, plot
+
+def get_screen_size():
+    sizeObject = QtWidgets.QDesktopWidget().screenGeometry(-1)
+    return sizeObject.width(), sizeObject.height()

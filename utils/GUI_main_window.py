@@ -77,7 +77,7 @@ def init_inputBox(parent, label=None, label_bold=False, default_input=None):
                            vertical=False)
     textbox = QtWidgets.QLineEdit()
     textbox.setContentsMargins(5, 0, 0, 0)
-    textbox.setText(default_input)
+    textbox.setText(str(default_input))
     block.addWidget(textbox)
     textbox.setStyleSheet("background-color:white;")
 

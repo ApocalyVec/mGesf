@@ -28,7 +28,6 @@ class IdpTrain(QWidget):
         # 2. information
         self.input_block = init_container(parent=self.main_page, vertical=True)
         # self.info_pane = InformationPane(parent=self.main_page, label=None)
-        sys.stdout = Stream(newText=self.on_print)
 
         # -------------------- third class --------------------
         #   1. Input block
@@ -137,6 +136,3 @@ class IdpTrain(QWidget):
 
             if not os.path.exists(self.constructorPath):
                 print("Invalid constructor path")
-
-    def on_print(self, msg):
-        self.info_pane.push(msg)

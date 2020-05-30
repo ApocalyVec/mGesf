@@ -38,7 +38,7 @@ control_tab_config_path_label = 'Config path:'
 
 # gesture tab
 gesture_index_pen_label = "Index Pen"
-gesture_thuMouth_label = "ThuMouth"
+gesture_thuMouse_label = "ThuMouse"
 gesture_desktop_fingertip_label = "Desktop at Fingertip"
 
 # operation tab
@@ -51,6 +51,7 @@ counter_block_size = (unit_size * counter_size_factor, base_size)  # a quarter o
 ist_text_block_size = (unit_size * ist_text_size_factor, base_size)
 dtc_text_block_size = (base_size, base_size)
 prob_view_window_size = (1280, 720)
+interaction_window_size = (800, 800)
 
 operation_recording_label = "Recording"
 operation_training_label = "Training"
@@ -87,7 +88,7 @@ thuMouse_TrainingDataDir_default = "../data"
 thuMouse_constructorPath_default = "../learn/Thu_classifier.py"
 thuMouse_modelDir_default = "../model/"
 thuMouse_modelPath_default = "../model/idp_model.h5"
-
+thuMouse_repeatTimes_default = 4
 # ============== messages ==============
 config_set_message = "Config file set"
 config_invalid_message = "Invalid config path"
