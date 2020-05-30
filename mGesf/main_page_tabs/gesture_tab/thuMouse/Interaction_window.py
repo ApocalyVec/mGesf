@@ -129,31 +129,33 @@ class Interaction_window(QMainWindow):
         """Puts the cursor to the center of the canvas"""
         pyautogui.moveTo(*self.cursor_home_pos)
 
-    def eventFilter(self, obj, event):
-        """
-        only allows key events and key presses
-        :param obj:
-        :param event:
-        :return:
-        """
-        if event.type() == QtCore.QEvent.KeyPress:
-            key = event.key()
+    # def eventFilter(self, obj, event):
+    #     """
+    #     only allows key events and key presses
+    #     :param obj:
+    #     :param event:
+    #     :return:
+    #     """
+    #     if event.type() == QtCore.QEvent.KeyPress:
+    #         key = event.key()
 
-            if key in self.function_keys or key in self.arrow_keys:
-                # process key inputs
-                self.key_logic(key)
-                # TODO change the status in the parent window
-                # do not use running because the target might not be initialized when just started
-                if 'ready' not in self.state:
-                    self.trace.append([time.time(), pag.position()])  # update the trace, add position and timestamp
+    def keyPressEvent(self, key_event):
+        print(key_event.key())
+        key = key_event.key()
+        if key in self.function_keys or key in self.arrow_keys:
+            # process key inputs
+            self.key_logic(key)
+            # TODO change the status in the parent window
+            # do not use running because the target might not be initialized when just started
+            if 'ready' not in self.state:
+                self.trace.append([time.time(), pag.position()])  # update the trace, add position and timestamp
 
-                    if 'locate' in self.state:
-                        self.check_locate_target()  # check if target reached
-                    elif 'follow' in self.state:
-                        self.check_follow_target()
-
-            return True
-        return super().eventFilter(obj, event)
+                if 'locate' in self.state:
+                    self.check_locate_target()  # check if target reached
+                elif 'follow' in self.state:
+                    self.check_follow_target()
+        else:
+            super().keyPressEvent(key_event)
 
     def key_logic(self, key):
         """
@@ -207,8 +209,8 @@ class Interaction_window(QMainWindow):
                 self.remaining_repeat_times -= 1
                 self.locate_pane.random_switch()
 
-        if self.is_completed():
-            self.finish_up()
+        # if self.is_completed():  # TODO @Nene I commented this part, because is_completed() is not defined
+        #     self.finish_up()
 
     def check_follow_target(self):
         """
