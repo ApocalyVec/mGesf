@@ -182,10 +182,8 @@ class Interaction_window(QMainWindow):
             if 'ready' in self.state:
                 if key == QtCore.Qt.Key_Enter or key == QtCore.Qt.Key_Return:
                     if 'locate' in self.state:
-                        print(self.state)
                         self.start_locate_task()
                     elif 'follow' in self.state:
-                        print(self.state)
                         self.start_follow_task()
 
                     self.state_start()
@@ -204,13 +202,14 @@ class Interaction_window(QMainWindow):
         #   if the task is completed:
         #       call finish_up()
         """
+        if self.remaining_repeat_times == 1:
+            self.finish_up()
+
         if self.locate_pane.activated_target:
             if self.locate_pane.targets[self.locate_pane.activated_target].underMouse():
                 self.remaining_repeat_times -= 1
+                print("Remaining: " + str(self.remaining_repeat_times + 1))
                 self.locate_pane.random_switch()
-
-        # if self.is_completed():  # TODO @Nene I commented this part, because is_completed() is not defined
-        #     self.finish_up()
 
     def check_follow_target(self):
         """
@@ -219,17 +218,17 @@ class Interaction_window(QMainWindow):
         #       update remaining repeat times
         #   if the task is completed:
         #       call finish_up()
-        """
-        if self.follow_pane.target.underMouse():
-            self.remaining_repeat_times -= 1
-            self.follow_pane.move_target(*pyautogui.position())
-
-        # if completed
-        if self.remaining_repeat_times == 0:
+        """        # if completed
+        if self.remaining_repeat_times == 1:
             self.finish_up()
 
+        if self.follow_pane.target.underMouse():
+            self.remaining_repeat_times -= 1
+            print("Remaining: "+str(self.remaining_repeat_times + 1))
+            self.follow_pane.move_target(*pyautogui.position())
+
     def finish_up(self):
-        print("Task finished")
+        print("Task completed")
         print(self.trace)
         self.reset()
         self.hide()
@@ -239,6 +238,9 @@ class Interaction_window(QMainWindow):
         self.trace = []  # reset trace
         self.state = ['idle']
         self.remaining_repeat_times = self.repeat_times
+
+        clear_layout(self.layout())
+
         if self.locate_pane.activated_target:
             self.locate_pane.targets[self.locate_pane.activated_target].turn_off()
 
