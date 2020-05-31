@@ -1,7 +1,6 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication
-from pydub import AudioSegment
 
 from mGesf.main_window import MainWindow
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
