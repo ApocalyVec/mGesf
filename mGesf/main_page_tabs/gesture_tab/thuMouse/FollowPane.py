@@ -26,9 +26,6 @@ class FollowPane(QWidget):
         self.parent = parent
         self.parent.addWidget(self.target)
 
-        l = QLabel('Test')
-        self.parent.addWidget(l)
-
         self.target_diameter = max(self.target.height(), self.target.width())
 
         # starting point
@@ -40,7 +37,7 @@ class FollowPane(QWidget):
 
         print(self.target_position_x, self.target_position_y)
         # how big a step does the circle move?
-        self.step = 1
+        self.step = 3
 
     def activate(self):
         self.target.turn_on()
@@ -52,12 +49,17 @@ class FollowPane(QWidget):
         :param cursor_y: y position of the cursor
         :return:
         """
-        new_x1 = randint(self.target_diameter + margin, cursor_x - self.target_diameter - margin)
-        new_x2 = randint(cursor_x + margin, self.width() - self.target_diameter - margin)
+        new_x1 = randint(min(self.target_diameter + margin, cursor_x - self.target_diameter - margin),
+                         max(self.target_diameter + margin, cursor_x - self.target_diameter - margin),)
+        new_x2 = randint(min(self.width() - self.target_diameter - margin, cursor_x + margin),
+                         max(self.width() - self.target_diameter - margin, cursor_x + margin))
+
         new_xs = [new_x1, new_x2]
 
-        new_y1 = randint(self.target_diameter + margin, cursor_y - self.target_diameter - margin)
-        new_y2 = randint(cursor_y + margin, self.width() - self.target_diameter - margin)
+        new_y1 = randint(min(self.target_diameter + margin, cursor_y - self.target_diameter - margin),
+                         max(self.target_diameter + margin, cursor_y - self.target_diameter - margin))
+        new_y2 = randint(min(cursor_y + margin, self.width() - self.target_diameter - margin),
+                         max(cursor_y + margin, self.width() - self.target_diameter - margin))
         new_ys = [new_y1, new_y2]
 
         # choose one x and one y

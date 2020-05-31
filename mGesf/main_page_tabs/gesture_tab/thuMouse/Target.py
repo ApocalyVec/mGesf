@@ -56,21 +56,25 @@ class Target(QWidget):
         # resize the target
         self.resize(self.image.width(), self.image.height())
 
-        self.layout.addWidget(self.image)
         if number:
             # add the label
             self.label = QLabel()
             self.label.setText(str(number))
 
             if label_position == "righttop":
+                self.layout.addWidget(self.image)
                 self.layout.addWidget(self.label)
                 self.label.setAlignment(QtCore.Qt.AlignRight)
                 self.label.setAlignment(QtCore.Qt.AlignTop)
 
             else:
                 self.layout.addWidget(self.label)
+                self.layout.addWidget(self.image)
                 self.label.setAlignment(QtCore.Qt.AlignLeft)
                 self.label.setAlignment(QtCore.Qt.AlignTop)
+
+        else:
+            self.layout.addWidget(self.image)
 
     def turn_off(self):
         """

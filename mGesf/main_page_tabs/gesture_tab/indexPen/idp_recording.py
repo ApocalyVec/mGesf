@@ -230,6 +230,7 @@ class IdpRecording(QWidget):
 
     def idle_to_pending(self):
         self.get_experiment_config()
+        self.char_set = generate_char_set(self.classes, self.repeat_times)
         init_preparation_block(parent=self.ist_text_block, text=self.char_set)
 
     def working_to_idle(self):

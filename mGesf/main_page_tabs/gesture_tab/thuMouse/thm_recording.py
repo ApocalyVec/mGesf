@@ -102,15 +102,14 @@ class Recording(QWidget):
 
         # repeat times
         self.repeat_times = self.get_repeat_times()
-        self.is_interactive_window_open = False
 
     def update_inputs(self):
         self.repeat_times = self.get_repeat_times()
         self.subject_name = self.get_subject_name()
         self.training_dir = self.get_training_data_dir()
+        self.interaction_window.remaining_repeat_times = self.repeat_times
 
     def restart(self):
-        self.update_inputs()
 
         if 'testing' in self.state:
             self.state.remove('testing')
@@ -127,11 +126,16 @@ class Recording(QWidget):
 
     def get_repeat_times(self):
         _user_input = self.repeatTime_textbox.text()
-        if not _user_input:
+        if _user_input == "":
             _user_input = config.thuMouse_repeatTimes_default
 
         # make sure the input's int
         try:
+            # TODO @ LEO THIS IS NOT WORKING. IT STILL QUITS IF THE INPUT'S NOT INT
+            #  File "/Users/neneko/Documents/GitHub/mGesf/mGesf/main_page_tabs/gesture_tab/thuMouse/thm_recording.py",
+            #  line 135, in get_repeat_times _user_input = int(_user_input) ValueError: invalid literal for int()
+            #  with base 10: '4m'
+
             _user_input = int(_user_input)
         except AssertionError as ae:
             _user_input = config.thuMouse_repeatTimes_default
@@ -148,11 +152,12 @@ class Recording(QWidget):
 
     def activate_follow_pane(self):
         # set the interactive window to follow
-        self.interaction_window.open_follow_pane()
+        self.interaction_window. open_follow_pane()
         # update the state of the instruction window
         self.interaction_window.state.append('follow')
         self.interaction_window.state.append('ready')
 
+        # move the target to a new place ratehr than the center
         self.interaction_window.show()
 
     def activate_locate_pane(self):
@@ -213,10 +218,8 @@ class Recording(QWidget):
             self.check_locate_follow_logic(act)
         # test/record logic
         elif act == 'test_pressed':
-            self.update_inputs()
             self.check_test_logic(act)
         elif act == 'record_pressed':
-            self.update_inputs()
             self.check_record_logic(act)
         # stop
         elif act == 'interrupt_pressed':
@@ -289,12 +292,10 @@ class Recording(QWidget):
             self.update_state("follow")
             self._toggle = True
             self.locate_checkbox.setChecked(not self._toggle)
-            print(self.state)
 
         else:
             self.update_state('not_follow')
             self._toggle = not self._toggle
-            print(self.state)
 
         return
 
@@ -303,12 +304,10 @@ class Recording(QWidget):
             self.update_state("locate")
             self._toggle = True
             self.follow_checkbox.setChecked(not self._toggle)
-            print(self.state)
 
         else:
             self.update_state('not_locate')
             self._toggle = not self._toggle
-            print(self.state)
 
         return
 
@@ -337,7 +336,7 @@ class Recording(QWidget):
 
     def test_btn_action(self):
         self.update_state('test_pressed')
-        print(self.state)
+        self.update_inputs()
 
         return
 
@@ -350,12 +349,11 @@ class Recording(QWidget):
         elif 'recording' in self.state:
             self.state.remove('recording')
 
-        print(self.state)
-
         return
 
     def recording_btn_action(self):
         self.update_state('record_pressed')
+        self.update_inputs()
         print("recording")
         print(self.state)
 
@@ -384,14 +382,10 @@ class Recording(QWidget):
             self.recording_btn.setText(config.record_btn_start_label)
             self.test_btn.setDisabled(False)
 
+    '''
     def pause_working(self):
         self.state.append('idle')
         self.follow_checkbox.setDisabled(False)
         self.locate_checkbox.setDisabled(False)
         print("paused")
-
-    def set_interactive_win_closed(self):
-        self.is_interactive_window_open = False
-
-    def set_interactive_win_open(self):
-        self.is_interactive_window_open = True
+    '''
