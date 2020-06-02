@@ -48,6 +48,7 @@ if __name__ == '__main__':
     '''
     _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     # _mmw_interface = None
+    #TODO _uwb_interface = DecaUWBInterface(framerate=, exe_path=, uport=)
 
     # setup system constants
     # refresh_interval every x ms, use 33 when in simulation mode, use 1 when connected to sensors
