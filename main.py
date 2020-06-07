@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QApplication
 
 from mGesf.main_window import MainWindow
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
+from utils.decaWave_utils import DecaUWB_interface
 
 
 if __name__ == '__main__':
@@ -47,6 +48,8 @@ if __name__ == '__main__':
     Start of the application script (do not change this part unless you know what you're doing)
     '''
     _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
+
+
     # _mmw_interface = None
     #TODO _uwb_interface = DecaUWBInterface(framerate=, exe_path=, uport=)
 
