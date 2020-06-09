@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QApplication
 
 from mGesf.main_window import MainWindow
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
-
+from utils.leap_utils.LeapInterface import LeapInterface
 
 if __name__ == '__main__':
     '''
@@ -46,14 +46,15 @@ if __name__ == '__main__':
     '''
     Start of the application script (do not change this part unless you know what you're doing)
     '''
-    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    # _mmw_interface = None
+    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
+    _leap_interface = LeapInterface()
+    _mmw_interface = None
 
     # setup system constants
     # refresh_interval every x ms, use 33 when in simulation mode, use 1 when connected to sensors
     refresh = 1 if _mmw_interface else 33
 
     app = QApplication(sys.argv)
-    window = MainWindow(mmw_interface=_mmw_interface, refresh_interval=refresh, data_path=data_path)
+    window = MainWindow(mmw_interface=_mmw_interface, leap_interface=_leap_interface, refresh_interval=refresh, data_path=data_path)
     app.exec_()
     print('Resuming Console Interaction.')

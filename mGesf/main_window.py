@@ -30,7 +30,7 @@ from utils.std_utils import Stream
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
+    def __init__(self, mmw_interface: MmWaveSensorInterface, leap_interface, refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         uic.loadUi('mGesf/resource/ui/MainWindow.ui', self)
         pg.setConfigOption('background', 'w')
@@ -40,7 +40,7 @@ class MainWindow(QMainWindow):
 
         # create the tabs: Control, Radar, Leap, UWB, and Gesture
         self.main_widget = self.findChild(QWidget, 'mainWidget')
-        self.table_widget = Tabs(self.main_widget, mmw_interface, refresh_interval, data_path)
+        self.table_widget = Tabs(self.main_widget, mmw_interface, leap_interface, refresh_interval, data_path)
         self.setCentralWidget(self.table_widget)
         # create the information black
         # self.info_scroll = self.findChild(QScrollArea, 'infoScroll')
@@ -50,19 +50,19 @@ class MainWindow(QMainWindow):
 class Tabs(QWidget):
     """A frame contains 4 tabs and their contents"""
 
-    def __init__(self, parent, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
+    def __init__(self, parent, mmw_interface: MmWaveSensorInterface, leap_interface,  refresh_interval, data_path, *args, **kwargs):
         super(QWidget, self).__init__(parent)
 
         self.layout = QHBoxLayout(self)
 
         # create threading
         # create a QThread and start the thread that handles
-        self.worker_thread = pg.QtCore.QThread(self)
-        self.worker_thread.start()
+        self.mmw_worker_thread = pg.QtCore.QThread(self)
+        self.mmw_worker_thread.start()
 
-        # worker
+        # worker for sensors
         self.mmw_worker = MMW_worker.MmwWorker(mmw_interface)
-        self.mmw_worker.moveToThread(self.worker_thread)
+        self.mmw_worker.moveToThread(self.mmw_worker_thread)
 
         # timer
         self.timer = QTimer()
