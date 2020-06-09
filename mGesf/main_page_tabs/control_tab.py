@@ -10,7 +10,7 @@ import pyqtgraph as pg
 
 from utils.img_utils import array_to_colormap_qim
 
-import mGesf.workers as MMW_worker
+import mGesf.workers as workers
 from utils.GUI_main_window import *
 import config as config
 
@@ -48,13 +48,20 @@ class Control_tab(QWidget):
                 2-1. message
     """
 
-    def __init__(self, mmw_worker: MMW_worker, refresh_interval, *args, **kwargs):
+    def __init__(self, mmw_worker: workers.MmwWorker, uwb_worker: workers.UWBWorker, refresh_interval, *args, **kwargs):
         super().__init__()
 
         # mmW worker
         self.mmw_worker = mmw_worker
         # connect the mmWave frame signal to the function that processes the data
         self.mmw_worker.signal_mmw_control_tab.connect(self.control_process_mmw_data)
+
+        # UWB worker
+        self.uwb_worker = uwb_worker
+        # connect the mmWave frame signal to the function that processes the data
+        self.uwb_worker.signal_data.connect(self.control_process_uwb_data)
+
+
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
         # add range doppler
@@ -67,6 +74,8 @@ class Control_tab(QWidget):
         self.is_recording_radar = False
         self.is_recording_leap = False
         self.is_recording_UWB = False
+
+        # Create UWB display
 
         # #################### create mmWave layout #################################
 
@@ -156,9 +165,9 @@ class Control_tab(QWidget):
         #               1-1-3-2. UWB runtime view
         self.UWB_connection_btn = init_button(parent=self.UWB_block,
                                               label=config.sensor_btn_label,
-                                              function=self.UWB_connection_btn_action)
+                                              function=self.UWB_start_btn_action)
 
-        self.UWB_runtime_view = self.init_spec_view(parent=self.UWB_block, label="Runtime")
+        self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_line_view(parent=self.UWB_block, label="UWB IR")
         self.UWB_record_checkbox = init_checkBox(parent=self.UWB_block, function=self.UWB_clickBox)
 
         # -------------------- sixth class --------------------
@@ -221,6 +230,30 @@ class Control_tab(QWidget):
         # spc_gv.setFixedSize(config.WINDOW_WIDTH/4, config.WINDOW_HEIGHT/4)
         return scene
 
+    def init_line_view(self, parent, label):
+        if label:
+            ql = QLabel()
+            ql.setAlignment(QtCore.Qt.AlignTop)
+            ql.setAlignment(QtCore.Qt.AlignCenter)
+            ql.setText(label)
+            parent.addWidget(ql)
+        line_view = pg.PlotWidget()
+        parent.addWidget(line_view)
+
+        line_view.setXRange(0, 130, padding=0)
+        line_view.setYRange(0, 1, padding=0)
+
+        pen = pg.mkPen(color=(255, 0, 0), width=2)
+        runtime_plot_1 = line_view.plot(np.zeros((130, 2)), pen=pen, name="Anchor - Real")
+        pen = pg.mkPen(color=(0, 255, 0), width=2)
+        runtime_plot_2 = line_view.plot(np.zeros((130, 2)), pen=pen, name="Anchor - Imaginary")
+        pen = pg.mkPen(color=(255, 255, 0), width=2)
+        runtime_plot_3 = line_view.plot(np.zeros((130, 2)), pen=pen, name="Tag - Real")
+        pen = pg.mkPen(color=(0, 255, 255), width=2)
+        runtime_plot_4 = line_view.plot(np.zeros((130, 2)), pen=pen, name="Tag - Imaginary")
+
+        return runtime_plot_1, runtime_plot_2, runtime_plot_3, runtime_plot_4
+
     def record_btn_action(self):
         """ 1. Checks user input data path
             2. use default path in no input
@@ -272,8 +305,10 @@ class Control_tab(QWidget):
     def leap_connection_btn_action(self):
         print("Leap Connection working...")
 
-    def UWB_connection_btn_action(self):
-        print("UWB Connection working...")
+    def UWB_start_btn_action(self):
+        print("connect to UWB sensor")
+        self.uwb_worker.start_uwb()
+
 
     def send_config_btn_action(self):
         """ 1. Get user entered config path
@@ -336,6 +371,29 @@ class Control_tab(QWidget):
                 self.buffer['mmw']['range_doppler'].append(np.expand_dims(data_dict['range_doppler'], axis=0))
                 self.buffer['mmw']['range_azi'].append(np.expand_dims(data_dict['range_azi'], axis=0))
                 self.buffer['mmw']['detected_points'].append(data_dict['pts'])
+
+    def control_process_uwb_data(self, data_dict):
+        x_samples = list(range(data_dict['a_frame'].shape[0]))
+        a_real = data_dict['a_frame'][:, 0]
+        a_img = data_dict['a_frame'][:, 1]
+        t_real = data_dict['t_frame'][:, 0]
+        t_img = data_dict['t_frame'][:, 1]
+        pen = pg.mkPen(color=(255, 0, 0), width=15)
+
+        self.runtime_plot_1.setData(x_samples, a_real,)
+        self.runtime_plot_2.setData(x_samples, a_img,)
+        self.runtime_plot_3.setData(x_samples, t_real,)
+        self.runtime_plot_4.setData(x_samples, t_img,)
+
+        # runtime_plot_2, runtime_plot_3, runtime_plot_4
+        # self.UWB_runtime_view.plot(x_samples, a_real)
+
+        # self.UWB_runtime_view.plot(x_samples, a_real, "Anchor - Real", pen=pen)
+        # self.UWB_runtime_view.plot(x_samples, a_img, "Anchor - Imaginary", pen=pen)
+        # self.UWB_runtime_view.plot(x_samples, t_real, "Tag - Real", pen=pen)
+        # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
+
+        print('processing UWB data')
 
     def radar_clickBox(self, state):
 

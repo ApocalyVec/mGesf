@@ -9,7 +9,7 @@ import time
 from utils.InformationPane import InformationPane
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
-import mGesf.workers as MMW_worker
+import mGesf.workers as workers
 
 # tabs ======================================
 import mGesf.main_page_tabs.control_tab as control_tab
@@ -66,9 +66,17 @@ class Tabs(QWidget):
         self.worker_thread = pg.QtCore.QThread(self)
         self.worker_thread.start()
 
+        # uwb worker threading
+        self.uwb_worker_thread = pg.QtCore.QThread(self)
+        self.uwb_worker_thread.start()
+
         # worker
-        self.mmw_worker = MMW_worker.MmwWorker(mmw_interface)
+        # mmwave worker
+        self.mmw_worker = workers.MmwWorker(mmw_interface)
         self.mmw_worker.moveToThread(self.worker_thread)
+        # uwb worker
+        self.uwb_worker = workers.UWBWorker(uwb_interface_anchor, uwb_interface_tag)
+        self.uwb_worker.moveToThread(self.worker_thread)
 
         # timer
         self.timer = QTimer()
@@ -79,7 +87,7 @@ class Tabs(QWidget):
         # Initialize tab screen
 
         self.tabs = QTabWidget()
-        self.tab1 = control_tab.Control_tab(self.mmw_worker, refresh_interval, data_path)
+        self.tab1 = control_tab.Control_tab(self.mmw_worker, self.uwb_worker, refresh_interval, data_path)
         self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
         self.tab3 = leap_tab.Leap_tab()
         self.tab4 = UWB_tab.UWB_tab()
@@ -110,3 +118,4 @@ class Tabs(QWidget):
         ticks every 'refresh' milliseconds
         """
         self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
+        self.uwb_worker.tick_signal.emit()  # signals the worker to run process_on_tick for the UWB sensor
