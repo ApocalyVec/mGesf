@@ -49,11 +49,11 @@ if __name__ == '__main__':
     Start of the application script (do not change this part unless you know what you're doing)
     '''
     # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    # _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
-    # _uwb_interface_tag = UWBSensorInterface('Tag', 520)
+    _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
+    _uwb_interface_tag = UWBSensorInterface('Tag', 520)
 
-    _uwb_interface_anchor = None
-    _uwb_interface_tag = None
+   # _uwb_interface_anchor = None
+    #_uwb_interface_tag = None
 
     _mmw_interface = None
     #TODO _uwb_interface = DecaUWBInterface(framerate=, exe_path=, uport=)

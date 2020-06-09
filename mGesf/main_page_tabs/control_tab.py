@@ -240,8 +240,8 @@ class Control_tab(QWidget):
         line_view = pg.PlotWidget()
         parent.addWidget(line_view)
 
-        line_view.setXRange(0, 130, padding=0)
-        line_view.setYRange(0, 1, padding=0)
+        # line_view.setXRange(0, 130, padding=0)
+        # line_view.setYRange(0, 1, padding=0)
 
         pen = pg.mkPen(color=(255, 0, 0), width=2)
         runtime_plot_1 = line_view.plot(np.zeros((130, 2)), pen=pen, name="Anchor - Real")
@@ -373,17 +373,18 @@ class Control_tab(QWidget):
                 self.buffer['mmw']['detected_points'].append(data_dict['pts'])
 
     def control_process_uwb_data(self, data_dict):
-        x_samples = list(range(data_dict['a_frame'].shape[0]))
-        a_real = data_dict['a_frame'][:, 0]
-        a_img = data_dict['a_frame'][:, 1]
-        t_real = data_dict['t_frame'][:, 0]
-        t_img = data_dict['t_frame'][:, 1]
-        pen = pg.mkPen(color=(255, 0, 0), width=15)
+        if data_dict['a_frame'] is not None:
+            x_samples = list(range(data_dict['a_frame'].shape[0]))
+            a_real = data_dict['a_frame'][:, 0]
+            # a_img = data_dict['a_frame'][:, 1]
+            # t_real = data_dict['t_frame'][:, 0]
+            # t_img = data_dict['t_frame'][:, 1]
+            print('processing UWB data')
 
-        self.runtime_plot_1.setData(x_samples, a_real,)
-        self.runtime_plot_2.setData(x_samples, a_img,)
-        self.runtime_plot_3.setData(x_samples, t_real,)
-        self.runtime_plot_4.setData(x_samples, t_img,)
+            self.runtime_plot_1.setData(x_samples, a_real,)
+        # self.runtime_plot_2.setData(x_samples, a_img,)
+        # self.runtime_plot_3.setData(x_samples, t_real,)
+        # self.runtime_plot_4.setData(x_samples, t_img,)
 
         # runtime_plot_2, runtime_plot_3, runtime_plot_4
         # self.UWB_runtime_view.plot(x_samples, a_real)
@@ -393,7 +394,6 @@ class Control_tab(QWidget):
         # self.UWB_runtime_view.plot(x_samples, t_real, "Tag - Real", pen=pen)
         # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
 
-        print('processing UWB data')
 
     def radar_clickBox(self, state):
 
