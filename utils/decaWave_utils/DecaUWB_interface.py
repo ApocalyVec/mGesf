@@ -13,7 +13,7 @@ class UWBSensorInterface:
         self.baud_rate = baud_rate
         self.frame_size = frame_size
         self.data_buffer = b''
-        self.uport = None
+        self.uport = uport
         self.exe_file = None
 
     def connect_virtual_port(self, virtual_port):
