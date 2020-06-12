@@ -87,15 +87,7 @@ class LeapInterface:
         # public interface:
         self.LeapInfo = namedtuple('LeapInfo', 'service connected has_focus')
         self._leap.init()
-
-    def connect_sensor(self):
-        # connect to the sensor
-        self.getLeapFrame()
-
-    def start_sensor(self):
-        # tell the sensor to start sending frames
-        frame = self.getLeapFrame()
-        return frame
+        # TODO get a confirmation that the sensor is connected
 
     def process_frame(self):
         # return a frame of the sensor
@@ -159,21 +151,3 @@ def toArray(p):
 
 def anotherToArray(type, p):
     return np.array((type, 'x:', round(p[0], 3), ' y:', round(p[1], 3), ' z:', round(p[2], 3)))
-
-# def run_test():
-#     import time
-#
-#     while 1:
-#         # info = getLeapInfo()
-#         frame = getLeapFrame()
-#
-#         # print(info)
-#         print(frame)
-#
-#         time.sleep(1)
-#
-#
-# # normally, this file is used as a library that you import
-# # however, you can also just test by running "python leap.py" to see if things are working
-# if __name__ == "__main__":
-#     run_test()
