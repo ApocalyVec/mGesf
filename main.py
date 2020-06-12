@@ -52,13 +52,13 @@ if __name__ == '__main__':
     # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     _leap_interface = LeapInterface()
     _mmw_interface = None
-    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
-    _uwb_interface_tag = UWBSensorInterface('Tag', 520)
+    # _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
+    # _uwb_interface_tag = UWBSensorInterface('Tag', 520)
+    _uwb_interface_anchor = None
+    _uwb_interface_tag = None
     #TODO _uwb_interface = DecaUWBInterface(framerate=, exe_path=, uport=)
     # _uwb_interface_anchor = None
     #_uwb_interface_tag = None
-
 
     # setup system constants
     # refresh_interval every x ms, use 33 when in simulation mode, use 1 when connected to sensors

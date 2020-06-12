@@ -74,10 +74,10 @@ class Tabs(QWidget):
         # worker
         # mmwave worker
         self.mmw_worker = workers.MmwWorker(mmw_interface)
-        self.mmw_worker.moveToThread(self.worker_thread)
+        self.mmw_worker.moveToThread(self.mmw_worker_thread)
         # uwb worker
         self.uwb_worker = workers.UWBWorker(uwb_interface_anchor, uwb_interface_tag)
-        self.uwb_worker.moveToThread(self.worker_thread)
+        self.uwb_worker.moveToThread(self.uwb_worker_thread)
 
         # timer
         self.timer = QTimer()
