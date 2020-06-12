@@ -3,7 +3,9 @@ import sys
 from PyQt5.QtWidgets import QApplication
 
 from mGesf.main_window import MainWindow
+from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
+from utils.decaWave_utils import DecaUWB_interface
 
 
 if __name__ == '__main__':
@@ -46,14 +48,23 @@ if __name__ == '__main__':
     '''
     Start of the application script (do not change this part unless you know what you're doing)
     '''
-    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    # _mmw_interface = None
+    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
+    _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
+    _uwb_interface_tag = UWBSensorInterface('Tag', 520)
+
+   # _uwb_interface_anchor = None
+    #_uwb_interface_tag = None
+
+    _mmw_interface = None
+    #TODO _uwb_interface = DecaUWBInterface(framerate=, exe_path=, uport=)
 
     # setup system constants
     # refresh_interval every x ms, use 33 when in simulation mode, use 1 when connected to sensors
-    refresh = 1 if _mmw_interface else 33
+    refresh = 200 if _mmw_interface else 33
 
     app = QApplication(sys.argv)
-    window = MainWindow(mmw_interface=_mmw_interface, refresh_interval=refresh, data_path=data_path)
+    window = MainWindow(mmw_interface=_mmw_interface,
+                        uwb_interface_anchor=_uwb_interface_anchor, uwb_interface_tag=_uwb_interface_tag,
+                        refresh_interval=refresh, data_path=data_path)
     app.exec_()
     print('Resuming Console Interaction.')

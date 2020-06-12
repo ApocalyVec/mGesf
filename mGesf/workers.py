@@ -5,7 +5,8 @@ from PyQt5.QtCore import pyqtSignal, QObject
 import pyqtgraph as pg
 
 import config
-from utils.simulation import sim_heatmap, sim_detected_points, sim_imp
+from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
+from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb
 
 import mGesf.exceptions as exceptions
 
@@ -162,3 +163,45 @@ class IdpDetectionWorker(QObject):
         self.encoder = encoder
         self.model = model
 
+
+class UWBWorker(QObject):
+    signal_data = pyqtSignal(dict)
+    tick_signal = pyqtSignal()
+
+    def __init__(self, uwb_interface_anchor: UWBSensorInterface=None, uwb_interface_tag: UWBSensorInterface=None, *args, **kwargs):
+        super(UWBWorker, self).__init__()
+        self.tick_signal.connect(self.uwb_process_on_tick)
+        if uwb_interface_anchor is None and uwb_interface_tag is None:
+            print('None type uwb_interface, starting in simulation mode')
+
+        self._uwb_interface_anchor = uwb_interface_anchor
+        self._uwb_interface_tag = uwb_interface_tag
+
+        self._is_running = False
+
+    @pg.QtCore.pyqtSlot()
+    def uwb_process_on_tick(self):
+        if self._is_running:
+            if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):
+                a_frame = self._uwb_interface_anchor.generate_frame()
+                t_frame = self._uwb_interface_tag.generate_frame()
+
+            else:  # this is in simulation mode
+                a_frame = sim_uwb()
+                t_frame = sim_uwb()
+
+            # notify the mmw data for the radar tab
+            data_dict = {'a_frame': a_frame,
+                         't_frame': t_frame}
+            self.signal_data.emit(data_dict)  # notify the mmw data for the sensor tab
+
+    def start_uwb(self):
+        if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
+            try:
+                self._uwb_interface_anchor.connect_virtual_port('COM32')
+                self._uwb_interface_tag.connect_virtual_port('COM30')
+            except exceptions.PortsNotSetUpError:
+                print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
+        else:
+            print('Start Simulating WUB data')
+        self._is_running = True
