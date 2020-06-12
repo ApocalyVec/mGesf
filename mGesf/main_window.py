@@ -30,7 +30,7 @@ from utils.std_utils import Stream
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, mmw_interface: MmWaveSensorInterface,
+    def __init__(self, mmw_interface: MmWaveSensorInterface, leap_interface,
                  uwb_interface_anchor, uwb_interface_tag,
                  refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
@@ -42,7 +42,7 @@ class MainWindow(QMainWindow):
 
         # create the tabs: Control, Radar, Leap, UWB, and Gesture
         self.main_widget = self.findChild(QWidget, 'mainWidget')
-        self.table_widget = Tabs(self.main_widget, mmw_interface,
+        self.table_widget = Tabs(self.main_widget, mmw_interface, leap_interface,
                                  uwb_interface_anchor, uwb_interface_tag,
                                  refresh_interval, data_path)
         self.setCentralWidget(self.table_widget)
@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
 class Tabs(QWidget):
     """A frame contains 4 tabs and their contents"""
 
-    def __init__(self, parent, mmw_interface: MmWaveSensorInterface,
+    def __init__(self, parent, mmw_interface: MmWaveSensorInterface, leap_interface,
                  uwb_interface_anchor, uwb_interface_tag,
                  refresh_interval, data_path, *args, **kwargs):
         super(QWidget, self).__init__(parent)
@@ -63,9 +63,10 @@ class Tabs(QWidget):
 
         # create threading
         # create a QThread and start the thread that handles
-        self.worker_thread = pg.QtCore.QThread(self)
-        self.worker_thread.start()
+        self.mmw_worker_thread = pg.QtCore.QThread(self)
+        self.mmw_worker_thread.start()
 
+        # worker for sensors
         # uwb worker threading
         self.uwb_worker_thread = pg.QtCore.QThread(self)
         self.uwb_worker_thread.start()
@@ -73,10 +74,10 @@ class Tabs(QWidget):
         # worker
         # mmwave worker
         self.mmw_worker = workers.MmwWorker(mmw_interface)
-        self.mmw_worker.moveToThread(self.worker_thread)
+        self.mmw_worker.moveToThread(self.mmw_worker_thread)
         # uwb worker
         self.uwb_worker = workers.UWBWorker(uwb_interface_anchor, uwb_interface_tag)
-        self.uwb_worker.moveToThread(self.worker_thread)
+        self.uwb_worker.moveToThread(self.uwb_worker_thread)
 
         # timer
         self.timer = QTimer()
