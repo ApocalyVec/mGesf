@@ -55,6 +55,7 @@ class Control_tab(QWidget):
         self.mmw_worker = mmw_worker
         # connect the mmWave frame signal to the function that processes the data
         self.mmw_worker.signal_mmw_control_tab.connect(self.control_process_mmw_data)
+        # self.leapMotion_worker = leapMotion_worker
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
         # add range doppler
@@ -270,7 +271,8 @@ class Control_tab(QWidget):
             self.radar_connection_btn.setText('Disconnect')
 
     def leap_connection_btn_action(self):
-        print("Leap Connection working...")
+        self.mmw_worker
+        print('Leap Connection working...')
 
     def UWB_connection_btn_action(self):
         print("UWB Connection working...")

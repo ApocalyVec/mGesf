@@ -26,6 +26,8 @@ class MmwWorker(QObject):
     signal_mmw_radar_tab = pyqtSignal(dict)
     # for passing data to the control tab
     signal_mmw_control_tab = pyqtSignal(dict)
+    # for passing data to the LeapMotion tab
+    signal_mmw_leapMotion_tab = pyqtSignal(dict)
 
     tick_signal = pyqtSignal()
     timing_list = []  # TODO refactor timing calculation
@@ -161,4 +163,3 @@ class IdpDetectionWorker(QObject):
     def setup(self, encoder, model):
         self.encoder = encoder
         self.model = model
-
