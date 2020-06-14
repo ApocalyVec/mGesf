@@ -1,22 +1,24 @@
 import serial
 import numpy as np
 from struct import *
+import os
+
 
 
 class UWBSensorInterface:
 
-    def __init__(self, role, frame_size, baud_rate=9600, uport=None):
+    def __init__(self, role, frame_size, baud_rate=9600, uport=None, exe_file = None):
 
         self.role = role
         self.baud_rate = baud_rate
         self.frame_size = frame_size
         self.data_buffer = b''
-        self.uport = None
+        self.uport = uport
+        self.exe_file = None
 
     def connect_virtual_port(self, virtual_port):
         try:
             self.uport = serial.Serial(port=virtual_port, baudrate=self.baud_rate, timeout=0)
-
         except:
             print("port is in use or not open")
             return
@@ -38,3 +40,21 @@ class UWBSensorInterface:
         except:
             print("already closed or cannot close")
             return
+
+
+    def start_sensor(self, exe_path):
+        self.exe_file = exe_path
+        try:
+            os.system("taskkill /im "+exe_path)
+            os.startfile(exe_path)
+        except:
+            print("cannot open sensor")
+            return
+
+    def stop_sensor(self):
+        os.system("taskkill /im " + self.exe_file)
+        os.startfile(self.exe_file)
+
+
+
+

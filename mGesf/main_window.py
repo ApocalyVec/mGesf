@@ -9,7 +9,7 @@ import time
 from utils.InformationPane import InformationPane
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
-import mGesf.workers as MMW_worker
+import mGesf.workers as workers
 
 # tabs ======================================
 import mGesf.main_page_tabs.control_tab as control_tab
@@ -30,7 +30,9 @@ from utils.std_utils import Stream
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
+    def __init__(self, mmw_interface: MmWaveSensorInterface, leap_interface,
+                 uwb_interface_anchor, uwb_interface_tag,
+                 refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         uic.loadUi('mGesf/resource/ui/MainWindow.ui', self)
         pg.setConfigOption('background', 'w')
@@ -40,7 +42,9 @@ class MainWindow(QMainWindow):
 
         # create the tabs: Control, Radar, Leap, UWB, and Gesture
         self.main_widget = self.findChild(QWidget, 'mainWidget')
-        self.table_widget = Tabs(self.main_widget, mmw_interface, refresh_interval, data_path)
+        self.table_widget = Tabs(self.main_widget, mmw_interface, leap_interface,
+                                 uwb_interface_anchor, uwb_interface_tag,
+                                 refresh_interval, data_path)
         self.setCentralWidget(self.table_widget)
         # create the information black
         # self.info_scroll = self.findChild(QScrollArea, 'infoScroll')
@@ -50,19 +54,30 @@ class MainWindow(QMainWindow):
 class Tabs(QWidget):
     """A frame contains 4 tabs and their contents"""
 
-    def __init__(self, parent, mmw_interface: MmWaveSensorInterface, refresh_interval, data_path, *args, **kwargs):
+    def __init__(self, parent, mmw_interface: MmWaveSensorInterface, leap_interface,
+                 uwb_interface_anchor, uwb_interface_tag,
+                 refresh_interval, data_path, *args, **kwargs):
         super(QWidget, self).__init__(parent)
 
         self.layout = QHBoxLayout(self)
 
         # create threading
         # create a QThread and start the thread that handles
-        self.worker_thread = pg.QtCore.QThread(self)
-        self.worker_thread.start()
+        self.mmw_worker_thread = pg.QtCore.QThread(self)
+        self.mmw_worker_thread.start()
+
+        # worker for sensors
+        # uwb worker threading
+        self.uwb_worker_thread = pg.QtCore.QThread(self)
+        self.uwb_worker_thread.start()
 
         # worker
-        self.mmw_worker = MMW_worker.MmwWorker(mmw_interface)
-        self.mmw_worker.moveToThread(self.worker_thread)
+        # mmwave worker
+        self.mmw_worker = workers.MmwWorker(mmw_interface)
+        self.mmw_worker.moveToThread(self.mmw_worker_thread)
+        # uwb worker
+        self.uwb_worker = workers.UWBWorker(uwb_interface_anchor, uwb_interface_tag)
+        self.uwb_worker.moveToThread(self.uwb_worker_thread)
 
         # timer
         self.timer = QTimer()
@@ -73,7 +88,7 @@ class Tabs(QWidget):
         # Initialize tab screen
 
         self.tabs = QTabWidget()
-        self.tab1 = control_tab.Control_tab(self.mmw_worker, refresh_interval, data_path)
+        self.tab1 = control_tab.Control_tab(self.mmw_worker, self.uwb_worker, refresh_interval, data_path)
         self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
         self.tab3 = leap_tab.Leap_tab()
         self.tab4 = UWB_tab.UWB_tab()
@@ -104,3 +119,4 @@ class Tabs(QWidget):
         ticks every 'refresh' milliseconds
         """
         self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
+        self.uwb_worker.tick_signal.emit()  # signals the worker to run process_on_tick for the UWB sensor
