@@ -37,7 +37,7 @@ lib_path = os.path.join(os.path.dirname(__file__), lib_path)
 # library: cd to the directory with the library so that sibling dlls can be loaded from the cwd.
 prev_dir = os.getcwd()
 os.chdir(lib_path)
-_leap = CDLL(lib_file)
+#_leap = CDLL(lib_file)
 os.chdir(prev_dir)
 
 
@@ -71,8 +71,8 @@ class cLeapFrame(Structure):
     ]
 
 # set up function args
-_leap.getInfo.argtypes = [POINTER(cLeapInfo)]
-_leap.getFrame.argtypes = [POINTER(cLeapFrame)]
+#_leap.getInfo.argtypes = [POINTER(cLeapInfo)]
+#_leap.getFrame.argtypes = [POINTER(cLeapFrame)]
 
 
 def toArray(p):
@@ -144,7 +144,7 @@ def getLeapFrame():
     return LeapFrame(hands=hands)
 
 
-_leap.init()
+#_leap.init()
 
 def run_test():
     import time
