@@ -42,36 +42,36 @@ class UWB_tab(QWidget):
 
         # ====================== Add graphs to the grid =======================================
         #  ----------- Tag Impluse response -------------------------
-        self.statistics_view = self.init_curve_view(pos=(0, 0),
-                                                    label='Tag Impluse response(Real, imag)',
-                                                    x_lim=(-0.5, 0.5),
-                                                    y_lim=(0, 1.))
+        self.TRI = self.init_curve_view(pos=(0, 0),
+                                        label='Tag Impluse response(Real, imag)',
+                                        x_lim=(-0.5, 0.5),
+                                        y_lim=(0, 1.))
 
-        self.scatterXY = self.init_curve_view(pos=(0, 1),
-                                              label='Tag Impluse response(mag)',
-                                              x_lim=(-0.5, 0.5),
-                                              y_lim=(0, 1.))
+        self.TM = self.init_curve_view(pos=(0, 1),
+                                       label='Tag Impluse response(mag)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(0, 1.))
 
-        self.scatterZD = self.init_curve_view(pos=(0, 2),
-                                              label='Tag Impluse response(phase)',
-                                              x_lim=(-0.5, 0.5),
-                                              y_lim=(-1., 1.))
+        self.TP = self.init_curve_view(pos=(0, 2),
+                                       label='Tag Impluse response(phase)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(-1., 1.))
 
         #  ----------- Anchor Impluse response -------------------------
-        self.ra_view = self.init_curve_view(pos=(1, 0),
-                                            label='Anchor Impluse response(Real, imag)',
-                                            x_lim=(-10, 260),
-                                            y_lim=(1500, 3800))
+        self.ARI = self.init_curve_view(pos=(1, 0),
+                                        label='Anchor Impluse response(Real, imag)',
+                                        x_lim=(-10, 260),
+                                        y_lim=(1500, 3800))
 
-        self.doppler_display = self.init_curve_view(pos=(1, 1),
-                                                    label='Anchor Impluse response(mag)',
-                                                    x_lim=(-0.5, 0.5),
-                                                    y_lim=(0, 1.))
+        self.AR = self.init_curve_view(pos=(1, 1),
+                                       label='Anchor Impluse response(mag)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(0, 1.))
 
-        self.azi_display = self.init_curve_view(pos=(1, 2),
-                                                label='Anchor Impluse response(phase)',
-                                                x_lim=(-0.5, 0.5),
-                                                y_lim=(0, 1.))
+        self.AP = self.init_curve_view(pos=(1, 2),
+                                       label='Anchor Impluse response(phase)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(0, 1.))
 
         # ====================== Add info to info_vl =======================================
         self.info_label = QLabel()
@@ -113,7 +113,11 @@ class UWB_tab(QWidget):
             the memory and evicted when the user click 'stop_record'
         :param data_dict:
         """
-        # update range doppler spectrogram
+
+        sensor_a = data_dict['a_frame']
+        sensor_b = data_dict['b_frame']
+
+        '''# update range doppler spectrogram
         doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
         doppler_qpixmap = QPixmap(doppler_heatmap_qim)
         doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
@@ -132,7 +136,7 @@ class UWB_tab(QWidget):
         # update range amplitude profile
         ra = np.asarray(data_dict['range_amplitude'])
         range_bin_space = np.asarray(range(len(ra)))
-        self.ra_view.setData(range_bin_space, ra)
+        self.ra_view.setData(range_bin_space, ra)'''
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
