@@ -41,31 +41,33 @@ class UWB_tab(QWidget):
         main_page.addLayout(self.info_vl)
 
         # ====================== Add graphs to the grid =======================================
-        # add statistics
+        #  ----------- Tag Impluse response -------------------------
         self.statistics_view = self.init_curve_view(pos=(0, 0),
                                                     label='Tag Impluse response(Real, imag)',
                                                     x_lim=(-0.5, 0.5),
                                                     y_lim=(0, 1.))
-        # add detected points plots
+
         self.scatterXY = self.init_curve_view(pos=(0, 1),
                                               label='Tag Impluse response(mag)',
                                               x_lim=(-0.5, 0.5),
                                               y_lim=(0, 1.))
+
         self.scatterZD = self.init_curve_view(pos=(0, 2),
                                               label='Tag Impluse response(phase)',
                                               x_lim=(-0.5, 0.5),
                                               y_lim=(-1., 1.))
 
+        #  ----------- Anchor Impluse response -------------------------
         self.ra_view = self.init_curve_view(pos=(1, 0),
                                             label='Anchor Impluse response(Real, imag)',
                                             x_lim=(-10, 260),
                                             y_lim=(1500, 3800))
-        # add range doppler
+
         self.doppler_display = self.init_curve_view(pos=(1, 1),
                                                     label='Anchor Impluse response(mag)',
                                                     x_lim=(-0.5, 0.5),
                                                     y_lim=(0, 1.))
-        # add range azi
+
         self.azi_display = self.init_curve_view(pos=(1, 2),
                                                 label='Anchor Impluse response(phase)',
                                                 x_lim=(-0.5, 0.5),
@@ -88,49 +90,6 @@ class UWB_tab(QWidget):
         #     print('App: not using IWR6843AoP')
 
         self.show()
-
-    def init_statistics(self, pos, label):
-        vl = init_view(label)
-        statistics_ui = {'pid': QLabel(),
-                         'ver': QLabel(),
-                         'dlen': QLabel(),
-                         'numTLVs': QLabel(),
-                         'numObj': QLabel(),
-                         'pf': QLabel()}
-        [v.setText(k) for k, v in statistics_ui.items()]
-        [vl.addWidget(v) for v in statistics_ui.values()]
-        scene = QGraphicsScene(self)
-        spc_gv = QGraphicsView()
-        spc_gv.setScene(scene)
-        self.figure_gl.addLayout(vl, *pos)
-
-        return vl
-
-    def init_spec_view(self, pos, label):
-        display = QGraphicsPixmapItem()
-        vl = init_view(label)
-
-        spc_gv = QGraphicsView()
-        vl.addWidget(spc_gv)
-
-        self.figure_gl.addLayout(vl, *pos)
-        scene = QGraphicsScene(self)
-        spc_gv.setScene(scene)
-        scene.addItem(display)
-        return display
-
-    def init_pts_view(self, pos, label, x_lim, y_lim):
-        vl = init_view(label)
-
-        pts_plt = pg.PlotWidget()
-        vl.addWidget(pts_plt)
-
-        self.figure_gl.addLayout(vl, *pos)
-        pts_plt.setXRange(*x_lim)
-        pts_plt.setYRange(*y_lim)
-        scatter = pg.ScatterPlotItem(pen=None, symbol='o')
-        pts_plt.addItem(scatter)
-        return scatter
 
     def init_curve_view(self, pos, label, x_lim, y_lim):
         vl = init_view(label)
