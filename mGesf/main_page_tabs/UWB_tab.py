@@ -155,25 +155,25 @@ class UWB_tab(QWidget):
         :param data_dict:
         """
         # update range doppler spectrogram
-        doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
-        doppler_qpixmap = QPixmap(doppler_heatmap_qim)
-        doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        self.doppler_display.setPixmap(doppler_qpixmap)
-
-        # update range azimuth spectrogram
-        azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
-        azi_qpixmap = QPixmap(azi_heatmap_qim)
-        azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        self.azi_display.setPixmap(azi_qpixmap)
-
-        # update the 2d scatter plot for the detected points
-        self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
-        self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
-
-        # update range amplitude profile
-        ra = np.asarray(data_dict['range_amplitude'])
-        range_bin_space = np.asarray(range(len(ra)))
-        self.ra_view.setData(range_bin_space, ra)
+        # doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
+        # doppler_qpixmap = QPixmap(doppler_heatmap_qim)
+        # doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        # self.doppler_display.setPixmap(doppler_qpixmap)
+        #
+        # # update range azimuth spectrogram
+        # azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
+        # azi_qpixmap = QPixmap(azi_heatmap_qim)
+        # azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        # self.azi_display.setPixmap(azi_qpixmap)
+        #
+        # # update the 2d scatter plot for the detected points
+        # self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
+        # self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
+        #
+        # # update range amplitude profile
+        # ra = np.asarray(data_dict['range_amplitude'])
+        # range_bin_space = np.asarray(range(len(ra)))
+        # self.ra_view.setData(range_bin_space, ra)
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}

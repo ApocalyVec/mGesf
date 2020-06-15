@@ -34,4 +34,4 @@ def sim_imp():
 
 
 def sim_uwb():
-    return np.reshape(np.random.uniform(low=0.0, high=1.0, size=(130 * 2)), newshape=(130, 2))
+    return np.reshape(np.random.uniform(low=0.0, high=1.0, size=(65 * 2)), newshape=(65, 2))
