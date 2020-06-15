@@ -41,35 +41,37 @@ class UWB_tab(QWidget):
         main_page.addLayout(self.info_vl)
 
         # ====================== Add graphs to the grid =======================================
-        # add statistics
-        self.statistics_view = self.init_curve_view(pos=(0, 0),
-                                                    label='Tag Impluse response(Real, imag)',
-                                                    x_lim=(-0.5, 0.5),
-                                                    y_lim=(0, 1.))
-        # add detected points plots
-        self.scatterXY = self.init_curve_view(pos=(0, 1),
-                                              label='Tag Impluse response(mag)',
-                                              x_lim=(-0.5, 0.5),
-                                              y_lim=(0, 1.))
-        self.scatterZD = self.init_curve_view(pos=(0, 2),
-                                              label='Tag Impluse response(phase)',
-                                              x_lim=(-0.5, 0.5),
-                                              y_lim=(-1., 1.))
+        #  ----------- Tag Impluse response -------------------------
+        self.TRI = self.init_curve_view(pos=(0, 0),
+                                        label='Tag Impluse response(Real, imag)',
+                                        x_lim=(-0.5, 0.5),
+                                        y_lim=(0, 1.))
 
-        self.ra_view = self.init_curve_view(pos=(1, 0),
-                                            label='Anchor Impluse response(Real, imag)',
-                                            x_lim=(-10, 260),
-                                            y_lim=(1500, 3800))
-        # add range doppler
-        self.doppler_display = self.init_curve_view(pos=(1, 1),
-                                                    label='Anchor Impluse response(mag)',
-                                                    x_lim=(-0.5, 0.5),
-                                                    y_lim=(0, 1.))
-        # add range azi
-        self.azi_display = self.init_curve_view(pos=(1, 2),
-                                                label='Anchor Impluse response(phase)',
-                                                x_lim=(-0.5, 0.5),
-                                                y_lim=(0, 1.))
+        self.TM = self.init_curve_view(pos=(0, 1),
+                                       label='Tag Impluse response(mag)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(0, 1.))
+
+        self.TP = self.init_curve_view(pos=(0, 2),
+                                       label='Tag Impluse response(phase)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(-1., 1.))
+
+        #  ----------- Anchor Impluse response -------------------------
+        self.ARI = self.init_curve_view(pos=(1, 0),
+                                        label='Anchor Impluse response(Real, imag)',
+                                        x_lim=(-10, 260),
+                                        y_lim=(1500, 3800))
+
+        self.AR = self.init_curve_view(pos=(1, 1),
+                                       label='Anchor Impluse response(mag)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(0, 1.))
+
+        self.AP = self.init_curve_view(pos=(1, 2),
+                                       label='Anchor Impluse response(phase)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(0, 1.))
 
         # ====================== Add info to info_vl =======================================
         self.info_label = QLabel()
@@ -88,49 +90,6 @@ class UWB_tab(QWidget):
         #     print('App: not using IWR6843AoP')
 
         self.show()
-
-    def init_statistics(self, pos, label):
-        vl = init_view(label)
-        statistics_ui = {'pid': QLabel(),
-                         'ver': QLabel(),
-                         'dlen': QLabel(),
-                         'numTLVs': QLabel(),
-                         'numObj': QLabel(),
-                         'pf': QLabel()}
-        [v.setText(k) for k, v in statistics_ui.items()]
-        [vl.addWidget(v) for v in statistics_ui.values()]
-        scene = QGraphicsScene(self)
-        spc_gv = QGraphicsView()
-        spc_gv.setScene(scene)
-        self.figure_gl.addLayout(vl, *pos)
-
-        return vl
-
-    def init_spec_view(self, pos, label):
-        display = QGraphicsPixmapItem()
-        vl = init_view(label)
-
-        spc_gv = QGraphicsView()
-        vl.addWidget(spc_gv)
-
-        self.figure_gl.addLayout(vl, *pos)
-        scene = QGraphicsScene(self)
-        spc_gv.setScene(scene)
-        scene.addItem(display)
-        return display
-
-    def init_pts_view(self, pos, label, x_lim, y_lim):
-        vl = init_view(label)
-
-        pts_plt = pg.PlotWidget()
-        vl.addWidget(pts_plt)
-
-        self.figure_gl.addLayout(vl, *pos)
-        pts_plt.setXRange(*x_lim)
-        pts_plt.setYRange(*y_lim)
-        scatter = pg.ScatterPlotItem(pen=None, symbol='o')
-        pts_plt.addItem(scatter)
-        return scatter
 
     def init_curve_view(self, pos, label, x_lim, y_lim):
         vl = init_view(label)
@@ -154,26 +113,30 @@ class UWB_tab(QWidget):
             the memory and evicted when the user click 'stop_record'
         :param data_dict:
         """
-        # update range doppler spectrogram
-        # doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
-        # doppler_qpixmap = QPixmap(doppler_heatmap_qim)
-        # doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        # self.doppler_display.setPixmap(doppler_qpixmap)
-        #
-        # # update range azimuth spectrogram
-        # azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
-        # azi_qpixmap = QPixmap(azi_heatmap_qim)
-        # azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        # self.azi_display.setPixmap(azi_qpixmap)
-        #
-        # # update the 2d scatter plot for the detected points
-        # self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
-        # self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
-        #
-        # # update range amplitude profile
-        # ra = np.asarray(data_dict['range_amplitude'])
-        # range_bin_space = np.asarray(range(len(ra)))
-        # self.ra_view.setData(range_bin_space, ra)
+
+        sensor_a = data_dict['a_frame']
+        sensor_b = data_dict['b_frame']
+
+        '''# update range doppler spectrogram
+        doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
+        doppler_qpixmap = QPixmap(doppler_heatmap_qim)
+        doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        self.doppler_display.setPixmap(doppler_qpixmap)
+
+        # update range azimuth spectrogram
+        azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
+        azi_qpixmap = QPixmap(azi_heatmap_qim)
+        azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        self.azi_display.setPixmap(azi_qpixmap)
+
+        # update the 2d scatter plot for the detected points
+        self.scatterXY.setData(data_dict['pts'][:, 0], data_dict['pts'][:, 1])
+        self.scatterZD.setData(data_dict['pts'][:, 2], data_dict['pts'][:, 3])
+
+        # update range amplitude profile
+        ra = np.asarray(data_dict['range_amplitude'])
+        range_bin_space = np.asarray(range(len(ra)))
+        self.ra_view.setData(range_bin_space, ra)'''
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
