@@ -28,10 +28,10 @@ def init_view(label):
 
 
 class UWB_tab(QWidget):
-    def __init__(self, mmw_worker: MMW_worker, refresh_interval, *args, **kwargs):
+    def __init__(self, uwb_worker: MMW_worker.UWBWorker, refresh_interval, *args, **kwargs):
         super().__init__()
 
-        self.mmw_worker = mmw_worker
+        self.uwb_worker = uwb_worker
 
         main_page = QtWidgets.QVBoxLayout(self)
         self.setLayout(main_page)
