@@ -196,10 +196,7 @@ class Control_tab(QWidget):
         self.is_valid_config_path, self.config_textbox = setup_configPath_block(parent=self.radar_sensor_block)
         self.sensor_buttons_block = init_container(self.radar_sensor_block, vertical=False)
 
-        # -------------------- seventh class --------------------
-        #                   1-1-1-2-2. sensor buttons block
-        #                       1-1-1-2-2-1. Send_config Button
-        #                       1-1-1-2-2-2. Start/Stop sensor button
+
         self.config_connection_btn = init_button(parent=self.sensor_buttons_block,
                                                  label=config.send_config_btn_label,
                                                  function=self.send_config_btn_action)
@@ -379,10 +376,10 @@ class Control_tab(QWidget):
             # t_img = data_dict['t_frame'][:, 1]
             print('processing UWB data')
 
-            self.runtime_plot_1.setData(x_samples, a_real, )
-        # self.runtime_plot_2.setData(x_samples, a_img,)
-        # self.runtime_plot_3.setData(x_samples, t_real,)
-        # self.runtime_plot_4.setData(x_samples, t_img,)
+            self.runtime_plot_1.setData(x_samples, a_real,)
+            # self.runtime_plot_2.setData(x_samples, a_img,)
+            # self.runtime_plot_3.setData(x_samples, t_real,)
+            # self.runtime_plot_4.setData(x_samples, t_img,)
 
         # runtime_plot_2, runtime_plot_3, runtime_plot_4
         # self.UWB_runtime_view.plot(x_samples, a_real)

@@ -190,10 +190,10 @@ class UWBWorker(QObject):
                 a_frame = sim_uwb()
                 t_frame = sim_uwb()
 
-            # notify the mmw data for the radar tab
+            # notify the uwb real imag data
             data_dict = {'a_frame': a_frame,
                          't_frame': t_frame}
-            self.signal_data.emit(data_dict)  # notify the mmw data for the sensor tab
+            self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 
     def start_uwb(self):
         if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
