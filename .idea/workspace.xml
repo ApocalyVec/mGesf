@@ -22,8 +22,6 @@
     <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="change default text entries">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mGesf/main_page_tabs/UWB_tab.py" beforeDir="false" afterPath="$PROJECT_DIR$/mGesf/main_page_tabs/UWB_tab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mGesf/main_page_tabs/control_tab.py" beforeDir="false" afterPath="$PROJECT_DIR$/mGesf/main_page_tabs/control_tab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mGesf/workers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mGesf/workers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/decaWave_utils/DecaUWB_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/decaWave_utils/DecaUWB_interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +67,10 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/mGesf" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mGesf" />
       <recent name="$PROJECT_DIR$/utils" />
@@ -76,13 +78,9 @@
       <recent name="$PROJECT_DIR$/utils/archived/data_utils" />
       <recent name="$PROJECT_DIR$/mGesf/profiles/iwr1443" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/mGesf" />
-    </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="control_tab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="UWB_tab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,12 +88,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mGesf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mGesf/main_page_tabs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mGesf/control_tab.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mGesf/main_page_tabs/UWB_tab.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,6 +146,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="secretKeyGeneration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mGesf" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/secretKeyGeneration.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="sound" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,18 +191,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.control_tab" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.scratch_11" />
       <item itemvalue="Python.sound" />
+      <item itemvalue="Python.secretKeyGeneration" />
+      <item itemvalue="Python.UWB_tab" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.UWB_tab" />
+        <item itemvalue="Python.secretKeyGeneration" />
         <item itemvalue="Python.scratch_11" />
         <item itemvalue="Python.sound" />
-        <item itemvalue="Python.control_tab" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +239,7 @@
       <workItem from="1591715284035" duration="4141000" />
       <workItem from="1592270980410" duration="1297000" />
       <workItem from="1592276109262" duration="3244000" />
+      <workItem from="1592279612933" duration="8220000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ApocalyVec/mGesf into instruction_area&#10;&#10;# Conflicts:&#10;#&#9;README.md&#10;#&#9;config.py&#10;#&#9;mGesf/main_page_tabs/control_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/__init__.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/desktopFingertip/DesktopFingertip.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/gesture_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/indexPen/IndexPen.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/thuMouth/ThuMouse.py&#10;#&#9;setup.py&#10;#&#9;utils/GUI_main_window.py&#10;#&#9;utils/GUI_operation_tab.py&#10;#&#9;utils/InformationPane.py&#10;#&#9;utils/graph_utils.py&#10;#&#9;utils/sound.py">
       <created>1589525601569</created>
@@ -474,7 +496,7 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="180" y="114" key="DiffContextDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588631937" />
-    <state width="915" height="257" key="GridCell.Tab.0.bottom" timestamp="1592279505245">
+    <state width="1877" height="365" key="GridCell.Tab.0.bottom" timestamp="1592291270793">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1588215570161" />
@@ -483,8 +505,8 @@
     <state width="854" height="209" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327918" />
-    <state width="915" height="257" key="GridCell.Tab.0.bottom/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
-    <state width="915" height="257" key="GridCell.Tab.0.center" timestamp="1592279505245">
+    <state width="1877" height="365" key="GridCell.Tab.0.bottom/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592291270793" />
+    <state width="1877" height="365" key="GridCell.Tab.0.center" timestamp="1592291270792">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1588215570160" />
@@ -493,8 +515,8 @@
     <state width="854" height="209" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.center/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327913" />
-    <state width="915" height="257" key="GridCell.Tab.0.center/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
-    <state width="915" height="257" key="GridCell.Tab.0.left" timestamp="1592279505245">
+    <state width="1877" height="365" key="GridCell.Tab.0.center/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592291270792" />
+    <state width="1877" height="365" key="GridCell.Tab.0.left" timestamp="1592291270792">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1588215570159" />
@@ -503,8 +525,8 @@
     <state width="854" height="209" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653609" />
     <state width="2518" height="394" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.left/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327908" />
-    <state width="915" height="257" key="GridCell.Tab.0.left/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
-    <state width="915" height="257" key="GridCell.Tab.0.right" timestamp="1592279505245">
+    <state width="1877" height="365" key="GridCell.Tab.0.left/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592291270792" />
+    <state width="1877" height="365" key="GridCell.Tab.0.right" timestamp="1592291270792">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1588215570160" />
@@ -513,27 +535,27 @@
     <state width="854" height="209" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.right/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327915" />
-    <state width="915" height="257" key="GridCell.Tab.0.right/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
-    <state width="915" height="257" key="GridCell.Tab.1.bottom" timestamp="1592279505245">
+    <state width="1877" height="365" key="GridCell.Tab.0.right/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592291270792" />
+    <state width="958" height="257" key="GridCell.Tab.1.bottom" timestamp="1592287126703">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.1.bottom/0.23.1440.819@0.23.1440.819" timestamp="1588215570164" />
-    <state width="915" height="257" key="GridCell.Tab.1.bottom/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
-    <state width="915" height="257" key="GridCell.Tab.1.center" timestamp="1592279505245">
+    <state width="958" height="257" key="GridCell.Tab.1.bottom/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592287126703" />
+    <state width="958" height="257" key="GridCell.Tab.1.center" timestamp="1592287126703">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.1.center/0.23.1440.819@0.23.1440.819" timestamp="1588215570162" />
-    <state width="915" height="257" key="GridCell.Tab.1.center/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
-    <state width="915" height="257" key="GridCell.Tab.1.left" timestamp="1592279505245">
+    <state width="958" height="257" key="GridCell.Tab.1.center/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592287126703" />
+    <state width="958" height="257" key="GridCell.Tab.1.left" timestamp="1592287126703">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.1.left/0.23.1440.819@0.23.1440.819" timestamp="1588215570161" />
-    <state width="915" height="257" key="GridCell.Tab.1.left/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
-    <state width="915" height="257" key="GridCell.Tab.1.right" timestamp="1592279505245">
+    <state width="958" height="257" key="GridCell.Tab.1.left/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592287126703" />
+    <state width="958" height="257" key="GridCell.Tab.1.right" timestamp="1592287126703">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.1.right/0.23.1440.819@0.23.1440.819" timestamp="1588215570164" />
-    <state width="915" height="257" key="GridCell.Tab.1.right/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592279505245" />
+    <state width="958" height="257" key="GridCell.Tab.1.right/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592287126703" />
     <state x="69" y="133" key="MergeDialog" timestamp="1590787288730">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
@@ -575,10 +597,10 @@
     <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1030@0.23.1792.1030" timestamp="1590766608337" />
     <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1031@0.23.1792.1031" timestamp="1590778201362" />
     <state x="679" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1033@0.23.1792.1033" timestamp="1591135037567" />
-    <state x="954" y="0" width="973" height="1057" key="dock-window-1" timestamp="1592277156814">
+    <state x="825" y="-15" width="930" height="1057" maximized="true" key="dock-window-1" timestamp="1592289392152">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="954" y="0" width="973" height="1057" key="dock-window-1/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592277156814" />
+    <state x="825" y="-15" width="930" height="1057" maximized="true" key="dock-window-1/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592289392152" />
     <state x="1090" y="258" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589672491862">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
@@ -594,7 +616,7 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="565" y="225" key="refactoring.ChangeSignatureDialog/0.23.1440.819@0.23.1440.819" timestamp="1588208894455" />
-    <state x="623" y="183" width="894" height="868" key="search.everywhere.popup" timestamp="1592277799350">
+    <state x="623" y="183" width="894" height="868" key="search.everywhere.popup" timestamp="1592289421417">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="467" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1588209007331" />
@@ -602,7 +624,7 @@
     <state x="581" y="203" width="834" height="851" key="search.everywhere.popup/0.23.1792.1030@0.23.1792.1030" timestamp="1591715349037" />
     <state x="581" y="203" width="834" height="852" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1591717030365" />
     <state x="581" y="204" width="834" height="854" key="search.everywhere.popup/0.23.1792.1033@0.23.1792.1033" timestamp="1590033517185" />
-    <state x="623" y="183" width="894" height="868" key="search.everywhere.popup/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592277799350" />
+    <state x="623" y="183" width="894" height="868" key="search.everywhere.popup/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592289421417" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -637,7 +659,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mGesf$scratch_11.coverage" NAME="scratch_11 Coverage Results" MODIFIED="1591717294619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/mGesf$secretKeyGeneration.coverage" NAME="secretKeyGeneration Coverage Results" MODIFIED="1592280708777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/mGesf$sound.coverage" NAME="sound Coverage Results" MODIFIED="1589669297616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mGesf" />
-    <SUITE FILE_PATH="coverage/mGesf$main.coverage" NAME="main Coverage Results" MODIFIED="1592279349744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mGesf$UWB_tab.coverage" NAME="UWB_tab Coverage Results" MODIFIED="1592281023428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mGesf/main_page_tabs" />
+    <SUITE FILE_PATH="coverage/mGesf$main.coverage" NAME="main Coverage Results" MODIFIED="1592291264587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

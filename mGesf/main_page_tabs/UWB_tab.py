@@ -43,38 +43,42 @@ class UWB_tab(QWidget):
         # ====================== Add graphs to the grid =======================================
 
         #  ----------- Anchor Impluse response -------------------------
-        self.ARI = self.init_curve_view(pos=(0, 0),
-                                        label='Anchor Impluse response(Real, imag)',
-                                        x_lim=(-10, 260),
-                                        y_lim=(1500, 3800))
+        self.pen1 = pg.mkPen(color=(255, 0, 0), width=2)
+        self.pen2 = pg.mkPen(color=(0, 255, 0), width=2)
+        self.pen3 = pg.mkPen(color=(0, 255, 255), width=2)
 
-        self.AM = self.init_curve_view(pos=(0, 1),
-                                       label='Anchor Impluse response(mag)',
-                                       x_lim=(-0.5, 0.5),
-                                       y_lim=(0, 1.))
+        #  ----------- Anchor Impluse response -------------------------
 
-        self.AP = self.init_curve_view(pos=(0, 2),
-                                       label='Anchor Impluse response(phase)',
-                                       x_lim=(-0.5, 0.5),
-                                       y_lim=(0, 1.))
+        self.ARI_real, self.ARI_imag = self.init_real_imag_curve_view(pos=(0, 0),
+                                                                      label='Anchor Impluse response(Real, imag)',
+                                                                      x_lim=(0, 65),
+                                                                      y_lim=(-25000, 25000))
+
+        self.AM = self.init_mag_curve_view(pos=(0, 1),
+                                           label='Anchor Impluse response(mag)',
+                                           x_lim=(0, 65),
+                                           y_lim=(0, 25000))
+
+        self.AP = self.init_mag_curve_view(pos=(0, 2),
+                                           label='Anchor Impluse response(phase)',
+                                           x_lim=(0, 65),
+                                           y_lim=(0, 25000))
 
         #  ----------- Tag Impluse response -------------------------
-        self.TRI = self.init_curve_view(pos=(1, 0),
-                                        label='Tag Impluse response(Real, imag)',
-                                        x_lim=(-0.5, 0.5),
-                                        y_lim=(0, 1.))
+        self.TRI_real, self.TRI_imag = self.init_real_imag_curve_view(pos=(1, 0),
+                                                                      label='Tag Impluse response(Real, imag)',
+                                                                      x_lim=(0, 65),
+                                                                      y_lim=(-25000, 25000))
 
-        self.TM = self.init_curve_view(pos=(1, 1),
-                                       label='Tag Impluse response(mag)',
-                                       x_lim=(-0.5, 0.5),
-                                       y_lim=(0, 1.))
+        self.TM = self.init_mag_curve_view(pos=(1, 1),
+                                           label='Tag Impluse response(mag)',
+                                           x_lim=(0, 65),
+                                           y_lim=(0, 25000))
 
-        self.TP = self.init_curve_view(pos=(1, 2),
-                                       label='Tag Impluse response(phase)',
-                                       x_lim=(-0.5, 0.5),
-                                       y_lim=(-1., 1.))
-
-
+        self.TP = self.init_mag_curve_view(pos=(1, 2),
+                                           label='Tag Impluse response(phase)',
+                                           x_lim=(0, 65),
+                                           y_lim=(0, 25000))
 
         # ====================== Add info to info_vl =======================================
         self.info_label = QLabel()
@@ -94,7 +98,7 @@ class UWB_tab(QWidget):
 
         self.show()
 
-    def init_curve_view(self, pos, label, x_lim, y_lim):
+    def init_real_imag_curve_view(self, pos, label, x_lim, y_lim):
         vl = init_view(label)
 
         curve_plt = pg.PlotWidget()
@@ -103,8 +107,24 @@ class UWB_tab(QWidget):
 
         curve_plt.setXRange(*x_lim)
         curve_plt.setYRange(*y_lim)
-        curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
-        return curve
+
+        real_curve = curve_plt.plot([], [], pen=self.pen1, name="Real")
+        imag_curve = curve_plt.plot([], [], pen=self.pen2, name="Imaginary")
+
+        return real_curve, imag_curve
+
+    def init_mag_curve_view(self, pos, label, x_lim, y_lim):
+        vl = init_view(label)
+
+        curve_plt = pg.PlotWidget()
+        vl.addWidget(curve_plt)
+        self.figure_gl.addLayout(vl, *pos)
+
+        curve_plt.setXRange(*x_lim)
+        curve_plt.setYRange(*y_lim)
+
+        mag_curve = curve_plt.plot([], [], pen=self.pen3, name="Magnitude")
+        return mag_curve
 
     def uwb_process_data(self, data_dict):
         """
@@ -120,6 +140,8 @@ class UWB_tab(QWidget):
         sensor_a = data_dict['a_frame']
         sensor_t = data_dict['t_frame']
         # print('UWB tab received data')
+
+        # resolve anchor frame
         if data_dict['a_frame'] is not None:
             x_samples = list(range(data_dict['a_frame'].shape[0]))
 
@@ -127,18 +149,30 @@ class UWB_tab(QWidget):
             a_real = data_dict['a_frame'][:, 0]
             a_imag = data_dict['a_frame'][:, 1]
 
+            # magnitude for anchor
+            a_mag = np.sqrt(np.add(np.square(a_real), np.square(a_imag)))
+
+            # plot real and imag and mag
+            self.ARI_real.setData(x_samples, a_real, )
+            self.ARI_imag.setData(x_samples, a_imag, )
+            self.AM.setData(x_samples, a_mag)
+
+        # resolve tag frame
+        if data_dict['t_frame'] is not None:
+            x_samples = list(range(data_dict['t_frame'].shape[0]))
+
+            # real and imag data. anchor
+            t_real = data_dict['t_frame'][:, 0]
+            t_imag = data_dict['t_frame'][:, 1]
+
+            # magnitude. tag
+            t_mag = np.sqrt(np.add(np.square(t_real), np.square(t_imag)))
 
             # plot real and imag pairs
-            self.ARI.setData(x_samples, a_real,)
-            self.AM.setData(x_samples, a_imag,)
-
-
-
-        # if data_dict['t_frame'] is not None:
-        #     x_samples = list(range(data_dict['t_frame'].shape[0]))
-        #
-        #     t_real = data_dict['t_frame'][:, 0]
-        #     t_imag = data_dict['t_frame'][:, 1]
+            self.TRI_real.setData(x_samples, t_real, )
+            self.TRI_imag.setData(x_samples, t_imag, )
+            self.TM.setData(x_samples, t_mag)
+            # self.TM.addLegend()
 
         '''# update range doppler spectrogram
         doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])

@@ -35,7 +35,7 @@ class UWBSensorInterface:
             # print(real_imag_pairs)
             # self.data_buffer = self.data_buffer[self.frame_size:]
             self.data_buffer = b''
-            print(1)
+            # print(1)
 
             return real_imag_pairs
         else:
