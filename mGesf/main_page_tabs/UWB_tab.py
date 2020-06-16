@@ -14,7 +14,7 @@ from PyQt5 import QtCore
 from utils.img_utils import array_to_colormap_qim
 
 import numpy as np
-import mGesf.workers as MMW_worker
+import mGesf.workers as workers
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 
@@ -28,7 +28,7 @@ def init_view(label):
 
 
 class UWB_tab(QWidget):
-    def __init__(self, uwb_worker: MMW_worker.UWBWorker, refresh_interval, *args, **kwargs):
+    def __init__(self, uwb_worker: workers.UWBWorker, refresh_interval, *args, **kwargs):
         super().__init__()
 
         self.uwb_worker = uwb_worker
@@ -41,37 +41,40 @@ class UWB_tab(QWidget):
         main_page.addLayout(self.info_vl)
 
         # ====================== Add graphs to the grid =======================================
-        #  ----------- Tag Impluse response -------------------------
-        self.TRI = self.init_curve_view(pos=(0, 0),
-                                        label='Tag Impluse response(Real, imag)',
-                                        x_lim=(-0.5, 0.5),
-                                        y_lim=(0, 1.))
-
-        self.TM = self.init_curve_view(pos=(0, 1),
-                                       label='Tag Impluse response(mag)',
-                                       x_lim=(-0.5, 0.5),
-                                       y_lim=(0, 1.))
-
-        self.TP = self.init_curve_view(pos=(0, 2),
-                                       label='Tag Impluse response(phase)',
-                                       x_lim=(-0.5, 0.5),
-                                       y_lim=(-1., 1.))
 
         #  ----------- Anchor Impluse response -------------------------
-        self.ARI = self.init_curve_view(pos=(1, 0),
+        self.ARI = self.init_curve_view(pos=(0, 0),
                                         label='Anchor Impluse response(Real, imag)',
                                         x_lim=(-10, 260),
                                         y_lim=(1500, 3800))
 
-        self.AR = self.init_curve_view(pos=(1, 1),
+        self.AM = self.init_curve_view(pos=(0, 1),
                                        label='Anchor Impluse response(mag)',
                                        x_lim=(-0.5, 0.5),
                                        y_lim=(0, 1.))
 
-        self.AP = self.init_curve_view(pos=(1, 2),
+        self.AP = self.init_curve_view(pos=(0, 2),
                                        label='Anchor Impluse response(phase)',
                                        x_lim=(-0.5, 0.5),
                                        y_lim=(0, 1.))
+
+        #  ----------- Tag Impluse response -------------------------
+        self.TRI = self.init_curve_view(pos=(1, 0),
+                                        label='Tag Impluse response(Real, imag)',
+                                        x_lim=(-0.5, 0.5),
+                                        y_lim=(0, 1.))
+
+        self.TM = self.init_curve_view(pos=(1, 1),
+                                       label='Tag Impluse response(mag)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(0, 1.))
+
+        self.TP = self.init_curve_view(pos=(1, 2),
+                                       label='Tag Impluse response(phase)',
+                                       x_lim=(-0.5, 0.5),
+                                       y_lim=(-1., 1.))
+
+
 
         # ====================== Add info to info_vl =======================================
         self.info_label = QLabel()
@@ -79,7 +82,7 @@ class UWB_tab(QWidget):
         self.info_vl.addWidget(self.info_label)
 
         # connect the mmWave frame signal to the function that processes the data
-        self.mmw_worker.signal_data.connect(self.uwb_process_mmw_data)
+        self.uwb_worker.signal_data.connect(self.uwb_process_data)
 
         # prepare the sensor interface
         # if mmw_interface:
@@ -103,7 +106,7 @@ class UWB_tab(QWidget):
         curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
         return curve
 
-    def uwb_process_mmw_data(self, data_dict):
+    def uwb_process_data(self, data_dict):
         """
         Process the emitted mmWave data
         This function is evoked when signaled by self.mmw_data_ready which is emitted by the mmw_worker thread.
@@ -115,7 +118,27 @@ class UWB_tab(QWidget):
         """
 
         sensor_a = data_dict['a_frame']
-        sensor_b = data_dict['b_frame']
+        sensor_t = data_dict['t_frame']
+        # print('UWB tab received data')
+        if data_dict['a_frame'] is not None:
+            x_samples = list(range(data_dict['a_frame'].shape[0]))
+
+            # real and imag data
+            a_real = data_dict['a_frame'][:, 0]
+            a_imag = data_dict['a_frame'][:, 1]
+
+
+            # plot real and imag pairs
+            self.ARI.setData(x_samples, a_real,)
+            self.AM.setData(x_samples, a_imag,)
+
+
+
+        # if data_dict['t_frame'] is not None:
+        #     x_samples = list(range(data_dict['t_frame'].shape[0]))
+        #
+        #     t_real = data_dict['t_frame'][:, 0]
+        #     t_imag = data_dict['t_frame'][:, 1]
 
         '''# update range doppler spectrogram
         doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])

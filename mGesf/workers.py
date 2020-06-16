@@ -13,7 +13,7 @@ import mGesf.exceptions as exceptions
 import numpy as np
 
 
-class MmwWorker(QObject):
+class  MmwWorker(QObject):
     """
     mmw data package (dict):
         'range_doppler': ndarray

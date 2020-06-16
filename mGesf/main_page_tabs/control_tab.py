@@ -371,13 +371,13 @@ class Control_tab(QWidget):
         if data_dict['a_frame'] is not None:
             x_samples = list(range(data_dict['a_frame'].shape[0]))
             a_real = data_dict['a_frame'][:, 0]
-            # a_img = data_dict['a_frame'][:, 1]
+            a_img = data_dict['a_frame'][:, 1]
             # t_real = data_dict['t_frame'][:, 0]
             # t_img = data_dict['t_frame'][:, 1]
-            print('processing UWB data')
+            # print('processing UWB data')
 
             self.runtime_plot_1.setData(x_samples, a_real,)
-            # self.runtime_plot_2.setData(x_samples, a_img,)
+            self.runtime_plot_2.setData(x_samples, a_img,)
             # self.runtime_plot_3.setData(x_samples, t_real,)
             # self.runtime_plot_4.setData(x_samples, t_img,)
 
