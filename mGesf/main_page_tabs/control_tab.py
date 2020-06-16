@@ -61,7 +61,6 @@ class Control_tab(QWidget):
         # connect the mmWave frame signal to the function that processes the data
         self.uwb_worker.signal_data.connect(self.control_process_uwb_data)
 
-
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
         # add range doppler
@@ -120,7 +119,6 @@ class Control_tab(QWidget):
         self.sub_record_block = init_container(parent=self.record_block,
                                                style="background-color: " + config.subcontainer_color + ";")
 
-
         self.data_path_block, self.data_path_textbox = init_inputBox(parent=self.sub_record_block,
                                                                      label=config.control_tab_output_path_label,
                                                                      label_bold=True,
@@ -167,7 +165,8 @@ class Control_tab(QWidget):
                                               label=config.sensor_btn_label,
                                               function=self.UWB_start_btn_action)
 
-        self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_line_view(parent=self.UWB_block, label="UWB IR")
+        self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_line_view(
+            parent=self.UWB_block, label="UWB IR")
         self.UWB_record_checkbox = init_checkBox(parent=self.UWB_block, function=self.UWB_clickBox)
 
         # -------------------- sixth class --------------------
@@ -309,7 +308,6 @@ class Control_tab(QWidget):
         print("connect to UWB sensor")
         self.uwb_worker.start_uwb()
 
-
     def send_config_btn_action(self):
         """ 1. Get user entered config path
             2. use default config path in no input
@@ -381,7 +379,7 @@ class Control_tab(QWidget):
             # t_img = data_dict['t_frame'][:, 1]
             print('processing UWB data')
 
-            self.runtime_plot_1.setData(x_samples, a_real,)
+            self.runtime_plot_1.setData(x_samples, a_real, )
         # self.runtime_plot_2.setData(x_samples, a_img,)
         # self.runtime_plot_3.setData(x_samples, t_real,)
         # self.runtime_plot_4.setData(x_samples, t_img,)
@@ -393,7 +391,6 @@ class Control_tab(QWidget):
         # self.UWB_runtime_view.plot(x_samples, a_img, "Anchor - Imaginary", pen=pen)
         # self.UWB_runtime_view.plot(x_samples, t_real, "Tag - Real", pen=pen)
         # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
-
 
     def radar_clickBox(self, state):
 

@@ -42,7 +42,7 @@ class Radar_tab(QWidget):
 
         # ====================== Add graphs to the grid =======================================
         # add statistics
-        self.statistics_view= self.init_statistics(pos=(0, 0), label='statistics')
+        self.statistics_view = self.init_statistics(pos=(0, 0), label='statistics')
         # add detected points plots
         self.scatterXY = self.init_pts_view(pos=(0, 1), label='Detected Points XY', x_lim=(-0.5, 0.5),
                                             y_lim=(0, 1.))
@@ -104,7 +104,7 @@ class Radar_tab(QWidget):
         return display
 
     def init_pts_view(self, pos, label, x_lim, y_lim):
-        vl= init_view(label)
+        vl = init_view(label)
 
         pts_plt = pg.PlotWidget()
         vl.addWidget(pts_plt)
