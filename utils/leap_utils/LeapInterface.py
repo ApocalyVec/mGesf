@@ -3,9 +3,17 @@ from ctypes import *
 from collections import namedtuple
 import os
 import numpy as np
-
+import socket
 
 class LeapInterface:
+    listensocket = socket.socket() # Creates an instance of socket
+    Port = 8000
+    maxConnections = 999
+    IP = socket.gethostname()
+    clientsocket = socket
+    address = socket
+    running = False
+
     def __init__(self):
         pass
 
@@ -28,20 +36,23 @@ class LeapInterface:
         self._send_stop_command()
 
     def _set_up_local_network_port(self):
-        # TODO
-        pass
+        self.listensocket.bind(('',self.Port))
+        self.listensocket.listen(self.maxConnections)
+        print("Server started at " + self.IP + " on port " + str(self.Port))
+        (self.clientsocket, self.address) = self.listensocket.accept()
+        print("New connnection made")
 
     def _send_start_command(self):
-        # TODO
-        pass
+        self.running = True
 
     def _get_frame_from_network_port(self):
-        # TODO
-        return 0
+        if self.running:
+            return self.clientsocket.recv(1024).decode() #Gets the incoming message
+        else:
+            return ""
 
     def _send_stop_command(self):
-        # TODO
-        pass
+        self.running = False
 
 
 # lib_path, lib_file = 'x64', 'LeapC.dll'
