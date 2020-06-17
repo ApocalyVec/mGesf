@@ -150,7 +150,7 @@ class UWB_tab(QWidget):
             a_imag = data_dict['a_frame'][:, 1]
 
             # magnitude for anchor
-            a_mag = np.sqrt(np.add(np.square(a_real), np.square(a_imag)))
+            a_mag = np.log10(np.sqrt(np.add(np.square(a_real), np.square(a_imag))))
 
             # plot real and imag and mag
             self.ARI_real.setData(x_samples, a_real, )
@@ -166,7 +166,7 @@ class UWB_tab(QWidget):
             t_imag = data_dict['t_frame'][:, 1]
 
             # magnitude. tag
-            t_mag = np.sqrt(np.add(np.square(t_real), np.square(t_imag)))
+            t_mag = np.log10(np.sqrt(np.add(np.square(t_real), np.square(t_imag))))
 
             # plot real and imag pairs
             self.TRI_real.setData(x_samples, t_real, )
