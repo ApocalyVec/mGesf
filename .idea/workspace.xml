@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="change default text entries">
+    <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="LeapCode Server code set up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/leap_utils/LeapInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/leap_utils/LeapInterface.py" afterDir="false" />
     </list>
@@ -78,8 +78,8 @@
       <recent name="$PROJECT_DIR$/mGesf" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="control_tab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.LeapInterface">
+    <configuration name="LeapInterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,12 +87,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mGesf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils/leap_utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mGesf/control_tab.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/leap_utils/LeapInterface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="leap_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mGesf" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils/leap_utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/leap_utils/leap_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,18 +188,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.control_tab" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.scratch_11" />
       <item itemvalue="Python.sound" />
+      <item itemvalue="Python.leap_test" />
+      <item itemvalue="Python.LeapInterface" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.LeapInterface" />
+        <item itemvalue="Python.leap_test" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.scratch_11" />
         <item itemvalue="Python.sound" />
-        <item itemvalue="Python.control_tab" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -389,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591716288437</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="LeapCode Server code set up">
+      <created>1592314722334</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1592314722338</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +436,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'master' of https://github.com/ApocalyVec/mGesf into instruction_area&#10;&#10;# Conflicts:&#10;#&#9;README.md&#10;#&#9;config.py&#10;#&#9;mGesf/main_page_tabs/control_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/__init__.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/desktopFingertip/DesktopFingertip.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/gesture_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/indexPen/IndexPen.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/thuMouth/ThuMouse.py&#10;#&#9;setup.py&#10;#&#9;utils/GUI_main_window.py&#10;#&#9;utils/GUI_operation_tab.py&#10;#&#9;utils/InformationPane.py&#10;#&#9;utils/graph_utils.py&#10;#&#9;utils/sound.py" />
     <MESSAGE value="add iwr1443 support" />
     <MESSAGE value="add transformers" />
     <MESSAGE value="add GUI interface for iwr1443" />
@@ -433,7 +460,8 @@
     <MESSAGE value="update dependencies" />
     <MESSAGE value="add UWB interface framework" />
     <MESSAGE value="add UWB interfaces to mGesf" />
-    <option name="LAST_COMMIT_MESSAGE" value="add UWB interfaces to mGesf" />
+    <MESSAGE value="LeapCode Server code set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeapCode Server code set up" />
   </component>
   <component name="WindowStateProjectService">
     <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591137350488">
@@ -467,57 +495,69 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="180" y="114" key="DiffContextDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588631937" />
-    <state width="854" height="209" key="GridCell.Tab.0.bottom" timestamp="1591719653610">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state width="1899" height="375" key="GridCell.Tab.0.bottom" timestamp="1592923191255">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592335161611" />
+    <state width="1899" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592923191255" />
     <state width="1398" height="160" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1588215570161" />
     <state width="1750" height="260" key="GridCell.Tab.0.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026711" />
     <state width="1750" height="205" key="GridCell.Tab.0.bottom/0.23.1792.1030@0.23.1792.1030" timestamp="1590790720436" />
     <state width="854" height="209" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327918" />
-    <state width="854" height="209" key="GridCell.Tab.0.center" timestamp="1591719653610">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state width="1899" height="375" key="GridCell.Tab.0.center" timestamp="1592923191255">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1592335161611" />
+    <state width="1899" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592923191255" />
     <state width="1398" height="160" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1588215570160" />
     <state width="1750" height="260" key="GridCell.Tab.0.center/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026711" />
     <state width="1750" height="205" key="GridCell.Tab.0.center/0.23.1792.1030@0.23.1792.1030" timestamp="1590790720435" />
     <state width="854" height="209" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.center/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327913" />
-    <state width="854" height="209" key="GridCell.Tab.0.left" timestamp="1591719653609">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state width="1899" height="375" key="GridCell.Tab.0.left" timestamp="1592923191254">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1592335161611" />
+    <state width="1899" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592923191254" />
     <state width="1398" height="160" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1588215570159" />
     <state width="1750" height="260" key="GridCell.Tab.0.left/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026710" />
     <state width="1750" height="205" key="GridCell.Tab.0.left/0.23.1792.1030@0.23.1792.1030" timestamp="1590790720434" />
     <state width="854" height="209" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653609" />
     <state width="2518" height="394" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.left/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327908" />
-    <state width="854" height="209" key="GridCell.Tab.0.right" timestamp="1591719653610">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state width="1899" height="375" key="GridCell.Tab.0.right" timestamp="1592923191255">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1592335161611" />
+    <state width="1899" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592923191255" />
     <state width="1398" height="160" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1588215570160" />
     <state width="1750" height="260" key="GridCell.Tab.0.right/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026711" />
     <state width="1750" height="205" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1590790720435" />
     <state width="854" height="209" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.right/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327915" />
-    <state width="1398" height="160" key="GridCell.Tab.1.bottom" timestamp="1588215570164">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="662" height="281" key="GridCell.Tab.1.bottom" timestamp="1592335161612">
+      <screen x="0" y="0" width="1368" height="872" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.bottom/0.23.1440.819@0.23.1440.819" timestamp="1588215570164" />
-    <state width="1398" height="160" key="GridCell.Tab.1.center" timestamp="1588215570163">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="662" height="281" key="GridCell.Tab.1.center" timestamp="1592335161612">
+      <screen x="0" y="0" width="1368" height="872" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.center/0.23.1440.819@0.23.1440.819" timestamp="1588215570162" />
-    <state width="1398" height="160" key="GridCell.Tab.1.left" timestamp="1588215570161">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="662" height="281" key="GridCell.Tab.1.left" timestamp="1592335161612">
+      <screen x="0" y="0" width="1368" height="872" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.left/0.23.1440.819@0.23.1440.819" timestamp="1588215570161" />
-    <state width="1398" height="160" key="GridCell.Tab.1.right" timestamp="1588215570164">
-      <screen x="0" y="23" width="1440" height="819" />
+    <state width="662" height="281" key="GridCell.Tab.1.right" timestamp="1592335161612">
+      <screen x="0" y="0" width="1368" height="872" />
     </state>
+    <state width="662" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.right/0.23.1440.819@0.23.1440.819" timestamp="1588215570164" />
     <state x="69" y="133" key="MergeDialog" timestamp="1590787288730">
       <screen x="0" y="23" width="1792" height="1030" />

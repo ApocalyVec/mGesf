@@ -2,8 +2,9 @@ import random
 from ctypes import *
 from collections import namedtuple
 import os
-import numpy as np
+import numpy
 import socket
+import json
 
 class LeapInterface:
     listensocket = socket.socket() # Creates an instance of socket
@@ -11,8 +12,8 @@ class LeapInterface:
     maxConnections = 999
     IP = socket.gethostname()
     clientsocket = socket
-    address = socket
     running = False
+    path = open('leap_test.py', 'r')
 
     def __init__(self):
         pass
@@ -30,6 +31,7 @@ class LeapInterface:
         # this function should return NONE WITHOUT blocking if a frame is not complete
         # return random.random()
         frame = self._get_frame_from_network_port()
+        print(frame)
         return frame
 
     def sensor_stop(self):
@@ -39,7 +41,8 @@ class LeapInterface:
         self.listensocket.bind(('',self.Port))
         self.listensocket.listen(self.maxConnections)
         print("Server started at " + self.IP + " on port " + str(self.Port))
-        (self.clientsocket, self.address) = self.listensocket.accept()
+        self.clientsocket = self.listensocket.accept()
+        # need to get above working properly
         print("New connnection made")
 
     def _send_start_command(self):
@@ -47,9 +50,22 @@ class LeapInterface:
 
     def _get_frame_from_network_port(self):
         if self.running:
-            return self.clientsocket.recv(1024).decode() #Gets the incoming message
-        else:
-            return ""
+            return self.clientsocket[0].recv(1024).decode() #Gets the incoming message
+            # full_msg = self.clientsocket[0].recv(1024)
+            # print(pickle.loads(full_msg[HEADERSIZE:]))
+
+    # with self.listensocket(self.listensocket.AF_INET, self.listensocket.SOCK_STREAM) as s:
+        #     s.bind((self.IP, self.Port))
+        #     s.listen()
+        #     conn, addr = s.accept()
+        #     with conn:
+        #         print ('Connected by', addr)
+        #         while True:
+        #             data = conn.recv(1024)
+        #             if not data:
+        #                 break
+        #             conn.sendall(data)
+        #             return data
 
     def _send_stop_command(self):
         self.running = False
