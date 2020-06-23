@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="LeapCode Server code set up">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/leap_utils/LeapInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/leap_utils/LeapInterface.py" afterDir="false" />
-    </list>
+    <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="LeapCode Server code set up" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -417,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592314722338</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="LeapCode Server code set up">
+      <created>1592923383424</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1592923383424</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
