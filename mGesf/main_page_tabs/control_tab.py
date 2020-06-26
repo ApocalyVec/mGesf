@@ -48,18 +48,21 @@ class Control_tab(QWidget):
                 2-1. message
     """
 
-    def __init__(self, mmw_worker: workers.MmwWorker, uwb_worker: workers.UWBWorker, refresh_interval, *args, **kwargs):
+    def __init__(self, mmw_worker: workers.MmwWorker, uwb_worker: workers.UWBWorker, leap_worker: workers.LeapWorker,
+                 refresh_interval, *args, **kwargs):
         super().__init__()
 
         # mmW worker
         self.mmw_worker = mmw_worker
-        # connect the mmWave frame signal to the function that processes the data
         self.mmw_worker.signal_mmw_control_tab.connect(self.control_process_mmw_data)
 
         # UWB worker
         self.uwb_worker = uwb_worker
-        # connect the mmWave frame signal to the function that processes the data
         self.uwb_worker.signal_data.connect(self.control_process_uwb_data)
+
+        # LeapMotion worker
+        self.leap_worker = leap_worker
+        self.leap_worker.signal_leap.connect(self.control_process_leap_data)
 
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
@@ -303,6 +306,7 @@ class Control_tab(QWidget):
 
     def leap_connection_btn_action(self):
         print("Leap Connection working...")
+        self.leap_worker.start_leap()
 
     def UWB_start_btn_action(self):
         print("connect to UWB sensor")
@@ -391,6 +395,9 @@ class Control_tab(QWidget):
         # self.UWB_runtime_view.plot(x_samples, a_img, "Anchor - Imaginary", pen=pen)
         # self.UWB_runtime_view.plot(x_samples, t_real, "Tag - Real", pen=pen)
         # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
+
+    def control_process_leap_data(self, data_dict):
+        pass
 
     def radar_clickBox(self, state):
 

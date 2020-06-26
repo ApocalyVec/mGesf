@@ -1,6 +1,8 @@
 import socket
 import time
 
+from mGesf.exceptions import LeapPortTimeoutError
+
 
 class LeapInterface:
     listensocket = socket.socket()  # Creates an instance of socket
@@ -9,7 +11,6 @@ class LeapInterface:
     IP = socket.gethostname()
     clientsocket = socket
     running = False
-    path = open('leap_test.py', 'r')
 
     def __init__(self):
         pass
@@ -27,17 +28,19 @@ class LeapInterface:
         # this function should return NONE WITHOUT blocking if a frame is not complete
         # return random.random()
         frame = self._get_frame_from_network_port()
-        print(frame)
-        return frame
+        frame = [float(x) for x in frame.split(' ')]
+        return frame, None  # TODO add the leap camera image
 
-    def sensor_stop(self):
+    def stop_sensor(self):
         self._send_stop_command()
 
     def _set_up_local_network_port(self):
         self.listensocket.bind(('', self.Port))
         self.listensocket.listen(self.maxConnections)
         print("Server started at " + self.IP + " on port " + str(self.Port))
+
         self.clientsocket = self.listensocket.accept()
+
         # need to get above working properly
         print("New connnection made")
 
@@ -52,11 +55,6 @@ class LeapInterface:
         self.running = False
 
 
-leap_interface = LeapInterface()
-leap_interface.connect_sensor()
-leap_interface.start_sensor()
-
-
 def run_test():
     while 1:
         frame = leap_interface.process_frame()
@@ -65,4 +63,7 @@ def run_test():
 
 
 if __name__ == "__main__":
+    leap_interface = LeapInterface()
+    leap_interface.connect_sensor()
+    leap_interface.start_sensor()
     run_test()
