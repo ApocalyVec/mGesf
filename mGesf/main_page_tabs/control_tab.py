@@ -159,6 +159,7 @@ class Control_tab(QWidget):
 
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
         self.leap_record_checkbox = init_checkBox(parent=self.leap_block, function=self.leap_clickBox)
+        self.leap_scatter = self.init_leap_scatter(parent=self.leap_runtime_view, label="LeapMouse")
 
         # -------------------- fifth class --------------------
         #           1-1-3. UWB block
@@ -168,7 +169,7 @@ class Control_tab(QWidget):
                                               label=config.sensor_btn_label,
                                               function=self.UWB_start_btn_action)
 
-        self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_line_view(
+        self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_uwb_line_view(
             parent=self.UWB_block, label="UWB IR")
         self.UWB_record_checkbox = init_checkBox(parent=self.UWB_block, function=self.UWB_clickBox)
 
@@ -232,7 +233,7 @@ class Control_tab(QWidget):
         # spc_gv.setFixedSize(config.WINDOW_WIDTH/4, config.WINDOW_HEIGHT/4)
         return scene
 
-    def init_line_view(self, parent, label):
+    def init_uwb_line_view(self, parent, label):
         if label:
             ql = QLabel()
             ql.setAlignment(QtCore.Qt.AlignTop)
@@ -255,6 +256,22 @@ class Control_tab(QWidget):
         runtime_plot_4 = line_view.plot(np.zeros((130, 2)), pen=pen, name="Tag - Imaginary")
 
         return runtime_plot_1, runtime_plot_2, runtime_plot_3, runtime_plot_4
+
+    def init_leap_scatter(self, parent, label):
+        if label:
+            ql = QLabel()
+            ql.setAlignment(QtCore.Qt.AlignTop)
+            ql.setAlignment(QtCore.Qt.AlignCenter)
+            ql.setText(label)
+            parent.addWidget(ql)
+
+        pts_plt = pg.PlotWidget()
+        parent.addWidget(pts_plt)
+        pts_plt.setXRange(-0.1, 0.1)
+        pts_plt.setYRange(1.5, 1.7)
+        scatter = pg.ScatterPlotItem(pen=None, symbol='o')
+        pts_plt.addItem(scatter)
+        return scatter
 
     def record_btn_action(self):
         """ 1. Checks user input data path
@@ -397,7 +414,8 @@ class Control_tab(QWidget):
         # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
 
     def control_process_leap_data(self, data_dict):
-        pass
+        new_x_pos, new_y_pos = data_dict['leapmouse'][3], data_dict['leapmouse'][4]
+        self.leap_scatter.setData([new_x_pos], [new_y_pos])
 
     def radar_clickBox(self, state):
 

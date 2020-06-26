@@ -211,8 +211,8 @@ class UWBWorker(QObject):
 
 class LeapWorker(QObject):
     """
-    leap data package (dict):
-
+    leap data package (dict): leapmouse: [current vertical position, current horizontal position, current z position,
+    new X position, new Y position]
     """
     # for passing data to the gesture tab
     signal_leap = pyqtSignal(dict)
@@ -232,11 +232,11 @@ class LeapWorker(QObject):
     def leap_process_on_tick(self):
         if self._is_running:
             if self._leap_interface:
-                data = self._leap_interface.process_frame()
+                leapMouse_data, image = self._leap_interface.process_frame()
             else:
-                data = sim_leap()
-            data_dict = {'leapmouse': data,
-                         'image': None}
+                leapMouse_data, image = sim_leap()
+            data_dict = {'leapmouse': leapMouse_data,
+                         'image': image}
             self.signal_leap.emit(data_dict)
 
     def start_leap(self):
