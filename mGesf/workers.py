@@ -197,11 +197,12 @@ class UWBWorker(QObject):
 
     def start_uwb(self):
         if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
-            try:
-                self._uwb_interface_anchor.connect_virtual_port('COM32')
-                self._uwb_interface_tag.connect_virtual_port('COM30')
-            except exceptions.PortsNotSetUpError:
-                print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
+            print("start uwb sensor")
+            # try:
+            #     self._uwb_interface_anchor.connect_virtual_port('COM32')
+            #     self._uwb_interface_tag.connect_virtual_port('COM30')
+            # except exceptions.PortsNotSetUpError:
+            #     print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
         else:
             print('Start Simulating WUB data')
         self._is_running = True

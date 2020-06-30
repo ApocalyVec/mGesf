@@ -60,13 +60,21 @@ if __name__ == '__main__':
     # _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
     # _uwb_interface_tag = UWBSensorInterface('Tag', 520)
 
-    # _uwb_interface_anchor = None
-    # _uwb_interface_tag = None
+    _uwb_interface_anchor = None
+    _uwb_interface_tag = None
 
-    _uwb_interface_anchor = UWBSensorInterface('Anchor',520)
-    _uwb_interface_anchor.connect_virtual_port('COM32')
+    _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
     _uwb_interface_tag = UWBSensorInterface('Tag', 520)
-    _uwb_interface_tag.connect_virtual_port('COM30')
+    # try:
+    #     _uwb_interface_anchor = UWBSensorInterface('Anchor',520)
+    #     _uwb_interface_tag = UWBSensorInterface('Tag', 520)
+    #
+    # except:
+    #     _uwb_interface_anchor = None
+    #     _uwb_interface_tag = None
+
+    # _uwb_interface_anchor.connect_virtual_port('COM32')
+    # _uwb_interface_tag.connect_virtual_port('COM30')
 
 
 
