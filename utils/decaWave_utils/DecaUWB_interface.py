@@ -15,11 +15,14 @@ class UWBSensorInterface:
         self.data_buffer = b''
         self.uport = uport
         self.exe_file = None
+        self.connected = False
 
     def connect_virtual_port(self, virtual_port):
         try:
             self.uport = serial.Serial(port=virtual_port, baudrate=self.baud_rate, timeout=0)
             self.uport.flushOutput()
+            self.connected = True
+
         except:
             print("port is in use or not open")
             return

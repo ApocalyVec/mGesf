@@ -182,7 +182,7 @@ class UWBWorker(QObject):
     @pg.QtCore.pyqtSlot()
     def uwb_process_on_tick(self):
         if self._is_running:
-            if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):
+            if self._uwb_interface_anchor.connected and self._uwb_interface_tag.connected:
                 a_frame = self._uwb_interface_anchor.generate_frame()
                 t_frame = self._uwb_interface_tag.generate_frame()
 

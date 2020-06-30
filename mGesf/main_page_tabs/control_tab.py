@@ -352,6 +352,7 @@ class Control_tab(QWidget):
         if not (self.uwb_worker._uwb_interface_anchor is None):
             try:
                 self.uwb_worker._uwb_interface_anchor.connect_virtual_port(self.anchor_port_textbox.text())
+
                 print("uwb anchor connected")
             except exceptions.PortsNotSetUpError:
                 print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
