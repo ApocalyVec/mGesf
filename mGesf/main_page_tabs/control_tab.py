@@ -14,7 +14,7 @@ import mGesf.workers as workers
 from utils.GUI_main_window import *
 import config as config
 
-
+import mGesf.exceptions as exceptions
 class Control_tab(QWidget):
     """
         main page
@@ -161,13 +161,49 @@ class Control_tab(QWidget):
         #           1-1-3. UWB block
         #               1-1-3-1. UWB connection button
         #               1-1-3-2. UWB runtime view
-        self.UWB_connection_btn = init_button(parent=self.UWB_block,
+
+        self.uwb_connection_block = init_container(parent=self.UWB_block,label="Connection: ",
+                                                   style="background-color: " + config.container_color + ";")
+
+
+
+        self.uwb_anchor_block, self.tag_port_textbox = init_inputBox(parent=self.uwb_connection_block,
+                                                                 label=config.uwb_tag_port,
+                                                                 label_bold=True,
+                                                                 default_input=config.uwb_tag_default_port)
+
+        self.uwb_tag_block, self.anchor_port_textbox = init_inputBox(parent=self.uwb_connection_block,
+                                                                 label=config.uwb_anchor_port,
+                                                                 label_bold=True,
+                                                                 default_input=config.uwb_anchor_default_port)
+
+        self.UWB_tag_connection_btn = init_button(parent=self.uwb_connection_block,
+                                              label="Connect uwb tag",
+                                              function=self.uwb_tag_connection_btn_action)
+
+        self.UWB_anchor_connection_btn = init_button(parent=self.uwb_connection_block,
+                                              label="Connect uwb anchor",
+                                              function=self.uwb_anchor_connection_btn_action)
+
+
+        #     UWB sensor block
+        self.uwb_sensor_block = init_container(parent=self.UWB_block,label="Sensor",
+                                                   style="background-color: " + config.container_color + ";")
+
+
+
+        self.UWB_sensor_start_btn = init_button(parent=self.uwb_sensor_block,
                                               label=config.sensor_btn_label,
                                               function=self.UWB_start_btn_action)
+
 
         self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_line_view(
             parent=self.UWB_block, label="UWB IR")
         self.UWB_record_checkbox = init_checkBox(parent=self.UWB_block, function=self.UWB_clickBox)
+
+
+
+
 
         # -------------------- sixth class --------------------
 
@@ -183,7 +219,7 @@ class Control_tab(QWidget):
                                                                  default_input=config.control_tab_u_port_default)
         # ***** connect button *****
         self.radar_connection_btn = init_button(parent=self.radar_connection_block,
-                                                label=config.radar_connection_btn_label,
+                                                label=config.connection_btn_label,
                                                 function=self.radar_connection_btn_action)
 
         # -------------------- sixth class --------------------
@@ -196,10 +232,7 @@ class Control_tab(QWidget):
         self.is_valid_config_path, self.config_textbox = setup_configPath_block(parent=self.radar_sensor_block)
         self.sensor_buttons_block = init_container(self.radar_sensor_block, vertical=False)
 
-        # -------------------- seventh class --------------------
-        #                   1-1-1-2-2. sensor buttons block
-        #                       1-1-1-2-2-1. Send_config Button
-        #                       1-1-1-2-2-2. Start/Stop sensor button
+
         self.config_connection_btn = init_button(parent=self.sensor_buttons_block,
                                                  label=config.send_config_btn_label,
                                                  function=self.send_config_btn_action)
@@ -304,9 +337,37 @@ class Control_tab(QWidget):
     def leap_connection_btn_action(self):
         print("Leap Connection working...")
 
+
+    def uwb_tag_connection_btn_action(self):
+
+        if not (self.uwb_worker._uwb_interface_tag is None):
+            try:
+                self.uwb_worker._uwb_interface_tag.connect_virtual_port(self.tag_port_textbox.text())
+                print("uwb tag connected")
+            except exceptions.PortsNotSetUpError:
+                print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
+
+    def uwb_anchor_connection_btn_action(self):
+
+        if not (self.uwb_worker._uwb_interface_anchor is None):
+            try:
+                self.uwb_worker._uwb_interface_anchor.connect_virtual_port(self.anchor_port_textbox.text())
+
+                print("uwb anchor connected")
+            except exceptions.PortsNotSetUpError:
+                print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
+
     def UWB_start_btn_action(self):
         print("connect to UWB sensor")
-        self.uwb_worker.start_uwb()
+        if self.uwb_worker._is_running is True:
+            self.uwb_worker._is_running = False
+            self.UWB_sensor_start_btn.setText("Start UWB")
+        else:
+            self.uwb_worker.start_uwb()
+            self.UWB_sensor_start_btn.setText("Stop UWB")
+
+        # self.uwb_worker.start_uwb()
+
 
     def send_config_btn_action(self):
         """ 1. Get user entered config path
@@ -374,15 +435,15 @@ class Control_tab(QWidget):
         if data_dict['a_frame'] is not None:
             x_samples = list(range(data_dict['a_frame'].shape[0]))
             a_real = data_dict['a_frame'][:, 0]
-            # a_img = data_dict['a_frame'][:, 1]
+            a_img = data_dict['a_frame'][:, 1]
             # t_real = data_dict['t_frame'][:, 0]
             # t_img = data_dict['t_frame'][:, 1]
-            print('processing UWB data')
+            # print('processing UWB data')
 
-            self.runtime_plot_1.setData(x_samples, a_real, )
-        # self.runtime_plot_2.setData(x_samples, a_img,)
-        # self.runtime_plot_3.setData(x_samples, t_real,)
-        # self.runtime_plot_4.setData(x_samples, t_img,)
+            self.runtime_plot_1.setData(x_samples, a_real,)
+            self.runtime_plot_2.setData(x_samples, a_img,)
+            # self.runtime_plot_3.setData(x_samples, t_real,)
+            # self.runtime_plot_4.setData(x_samples, t_img,)
 
         # runtime_plot_2, runtime_plot_3, runtime_plot_4
         # self.UWB_runtime_view.plot(x_samples, a_real)
