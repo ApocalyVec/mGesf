@@ -6,17 +6,20 @@ from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
     QHBoxLayout, QFormLayout, QScrollArea
 import pyqtgraph as pg
 import time
+
+from mGesf.main_page_tabs.ControlTab import ControlTab
+from mGesf.main_page_tabs.RadarTab import RadarTab
+from mGesf.main_page_tabs.LeapTab import LeapTab
+from mGesf.main_page_tabs.XeThruX4Tab import XeThruX4Tab
+from mGesf.main_page_tabs.UWBTab import UWBTab
+from mGesf.main_page_tabs.gesture_tab.GestureTab import GestureTab
+
 from utils.InformationPane import InformationPane
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 import mGesf.workers as workers
 
 # tabs ======================================
-import mGesf.main_page_tabs.control_tab as control_tab
-import mGesf.main_page_tabs.radar_tab as radar_tab
-import mGesf.main_page_tabs.leap_tab as leap_tab
-import mGesf.main_page_tabs.UWB_tab as UWB_tab
-import mGesf.main_page_tabs.gesture_tab.gesturetab as gesture_tab
 import config as config
 
 # class WorkerSignals(QObject):
@@ -89,17 +92,19 @@ class Tabs(QWidget):
         # Initialize tab screen
 
         self.tabs = QTabWidget()
-        self.tab1 = control_tab.Control_tab(self.mmw_worker, self.uwb_worker, refresh_interval, data_path)
-        self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
-        self.tab3 = leap_tab.Leap_tab()
-        self.tab4 = UWB_tab.UWB_tab(self.uwb_worker, refresh_interval, data_path)
-        self.tab5 = gesture_tab.GestureTab(self.mmw_worker)
+        self.tab1 = ControlTab(self.mmw_worker, self.uwb_worker, refresh_interval, data_path)
+        self.tab2 = RadarTab(self.mmw_worker, refresh_interval, data_path)
+        self.tab3 = LeapTab()
+        self.tab4 = UWBTab(self.uwb_worker, refresh_interval, data_path)
+        self.tab5 = XeThruX4Tab()
+        self.tab6 = GestureTab(self.mmw_worker)
 
         self.tabs.addTab(self.tab1, config.main_window_control_tab_label)
         self.tabs.addTab(self.tab2, config.main_window_radar_tab_label)
         self.tabs.addTab(self.tab3, config.main_window_leap_tab_label)
         self.tabs.addTab(self.tab4, config.main_window_uwb_tab_label)
-        self.tabs.addTab(self.tab5, config.main_window_gesture_tab_label)
+        self.tabs.addTab(self.tab5, "XeThruX4")
+        self.tabs.addTab(self.tab6, config.main_window_gesture_tab_label)
 
         # Add tabs to main_widget
         self.layout.addWidget(self.tabs)

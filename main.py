@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
-from mGesf.main_window import MainWindow
+from mGesf.MainWindow import MainWindow
 from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
 from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 from utils.decaWave_utils import DecaUWB_interface
