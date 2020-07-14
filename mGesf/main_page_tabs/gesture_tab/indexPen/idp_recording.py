@@ -46,11 +46,11 @@ class IdpRecording(QWidget):
 
         self.interval_last_block, self.interval_slider_view = init_slider_bar_box(self.input_block,
                                                                                   label=config.operation_interval_label,
-                                                                                  interval=config.recording_interval)
+                                                                                  max_value=config.recording_interval)
 
         self.repeats_block, self.repeat_slider_view = init_slider_bar_box(self.input_block,
                                                                           label=config.operation_repeats_label,
-                                                                          interval=config.repeat_times)
+                                                                          max_value=config.repeat_times)
 
         self.classes_block, self.classes_textbox = init_inputBox(self.input_block,
                                                                  label=config.operation_classes_label,

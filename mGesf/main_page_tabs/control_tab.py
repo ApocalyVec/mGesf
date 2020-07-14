@@ -3,6 +3,7 @@ import pickle
 import time
 from datetime import datetime
 import numpy as np
+import re
 
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView, QTabWidget
@@ -23,6 +24,10 @@ class UWB_radar_pane(QWidget):
     def __init__(self):
         super().__init__()
 
+        # default range
+        self.range_min = 0
+        self.range_max = 0.4
+
         # for checking only one freq box
         self._toggle = None
         self.state = ['idle']  # see the docstring of self.update_state for details
@@ -39,27 +44,38 @@ class UWB_radar_pane(QWidget):
         self.device.activated[str].connect(self.device_onChanged)
         #       - port (input box)
         self.uwb_radar_port_block, self.uwb_radar_port_textbox = init_inputBox(parent=self.main_page,
-                                                                               label="Port(device_name): ",
+                                                                               label="Port (device_name): ",
                                                                                label_bold=True,
                                                                                default_input="Default: COM8")
 
-        self.taskSelection_block = init_container(parent=self.main_page,
-                                                  label="Task Selection",
-                                                  vertical=True)
+        self.freq_block = init_container(parent=self.main_page,
+                                                  label="Frequency Band",
+                                                  vertical=False)
         #       - frequency band (check box)
-        self.low_freq_checkbox = init_checkBox(parent=self.taskSelection_block,
+        self.low_freq_checkbox = init_checkBox(parent=self.freq_block,
                                                label="Low (7.290 GHz)",
                                                function=self.low_freq_action)
-        self.high_freq_checkbox = init_checkBox(parent=self.taskSelection_block,
+        self.high_freq_checkbox = init_checkBox(parent=self.freq_block,
                                                 label="High (8.748 GHz)",
                                                 function=self.high_freq_action)
 
-        #       - range (double bar)
+        #       - range (input boxes)
         self.range_container = init_container(parent=self.main_page,
-                                              label="Range",
-                                              label_bold=True)
-        self.range = RangeSlider()
-        self.range_container.addWidget(self.range)
+                                              label="Range (m) [0.5 ~ 3]",
+                                              label_bold=True,
+                                              vertical=False)
+
+        self.min_range_block, self.min_range_textbox = init_inputBox(parent=self.range_container,
+                                                                               label="Min:",
+                                                                               label_bold=False,
+                                                                               default_input="0")
+        self.min_range_textbox.textChanged.connect(self.check_range)
+        self.max_range_block, self.max_range_textbox = init_inputBox(parent=self.range_container,
+                                                                               label="Max:",
+                                                                               label_bold=False,
+                                                                               default_input="0.4")
+        self.max_range_textbox.textChanged.connect(self.check_range)
+
         #       - fps ( bar)
         self.fps_block, self.fps_slider_view = init_slider_bar_box(self.main_page,
                                                                    label="FPS",
@@ -85,6 +101,15 @@ class UWB_radar_pane(QWidget):
                                      label="Reset to default",
                                      function=self.reset_btn_action)
         self.show()
+
+    def check_range(self):
+
+        self.range_min =  re.findall("\d+\.\d+", self.min_range_textbox.text())
+        self.range_max = re.findall("\d+\.\d+", self.max_range_textbox.text())
+
+        if self.range_min >= self.range_max:
+            print("Range_min >= range_max.")
+
 
     def low_freq_action(self):
         if self.low_freq_checkbox.isChecked():
@@ -151,7 +176,13 @@ class UWB_radar_pane(QWidget):
         # start testing
         self.low_freq_checkbox.setDisabled(True)
         self.high_freq_checkbox.setDisabled(True)
-        print('recording')
+
+        # check range value
+        if self.range_min >= self.range_max:
+            print("Range_min >= range_max. Can't start.")
+            return
+        else:
+           print('recording')
 
     def reset_btn_action(self):
         # start testing
