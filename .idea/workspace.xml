@@ -19,16 +19,675 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="">
+    <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="add py module connector for UWB radar">
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/MANIFEST.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x2_m200_plot_respiration_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x2_m200_read_record_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x2_m200_record_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x4_m200__x4_m300_manipulate_noisemap_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x4_m200__x4_m300_printout_infromation_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x4_m200__x4_m300_printout_pulsedoppler_data_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x4_m200_sleep_record_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x4_m300_playback_recording_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x4_m300_plot_movementlist_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x4_m300_printout_presence_state_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x_e_p__x4_m200__x4_m300_access_registers_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/_x_e_p__x4_m200__x4_m300_plot_record_playback_radar_raw_data_8py-example.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/annotated.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/bc_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/bdwn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classes.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg_block-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg_block.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg_map-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg_map.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg_segment-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_reg_segment.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_regmap_error-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1regmap_1_1_regmap_error.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_apc_dvdd_testmode-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_apc_dvdd_testmode.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_apc_temp_trim-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_apc_temp_trim.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_avdd_rx_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_avdd_rx_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_avdd_testmode-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_avdd_testmode.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_avdd_tx_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_avdd_tx_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_boot_from_otp_pif-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_boot_from_otp_pif.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_boot_from_otp_spi-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_boot_from_otp_spi.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_chip_id_dig-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_chip_id_dig.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_chip_id_sys-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_chip_id_sys.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_clkout_sel-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_clkout_sel.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl3-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl3.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl4-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_ctrl4.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_frac0-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_frac0.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_frac1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_frac1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_frac2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_common_pll_frac2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_cpu_reset-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_cpu_reset.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_cpu_spi_master_clk_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_cpu_spi_master_clk_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dac_anatestreq-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dac_anatestreq.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dac_trim-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dac_trim.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_debug-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_debug.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_debug_xif-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_debug_xif.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dvdd_rx_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dvdd_rx_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dvdd_testmode-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dvdd_testmode.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dvdd_tx_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_dvdd_tx_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_fetch_radar_data_pif-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_fetch_radar_data_pif.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_fetch_radar_data_spi-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_fetch_radar_data_spi.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_firmware_version-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_firmware_version.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_firmware_version_spi-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_firmware_version_spi.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_force_one-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_force_one.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_force_zero-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_force_zero.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_from_cpu_read_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_from_cpu_read_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_from_cpu_write_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_from_cpu_write_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_from_mem_read_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_from_mem_read_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_gpio_in-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_gpio_in.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_gpio_oe-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_gpio_oe.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_gpio_out-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_gpio_out.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl3-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl3.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl4-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl4.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl5-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl5.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl6-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_io_ctrl6.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_iref_trim-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_iref_trim.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_ldo_status1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_ldo_status1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_ldo_status2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_ldo_status2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_lna_anatestreq-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_lna_anatestreq.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_lock_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_lock_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mclk_trx_backend_clk_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mclk_trx_backend_clk_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mcu_bist_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mcu_bist_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mcu_bist_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mcu_bist_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mem_first_addr_lsb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mem_first_addr_lsb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mem_first_addr_msb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mem_first_addr_msb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mem_mode-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_mem_mode.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_misc_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_misc_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_osc_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_osc_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_otp_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_otp_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_p_i_f-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_p_i_f.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mb_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mb_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mb_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mb_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mem_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mem_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mem_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_mem_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data0_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data0_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data0_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data0_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data1_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data1_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data1_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data1_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_pif_radar_data_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_preamp_trim-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_preamp_trim.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_bist_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_bist_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_bist_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_bist_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_pif-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_pif.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_pif_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_pif_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_spi-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_spi.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_spi_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_data_spi_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_readout_idle-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_radar_readout_idle.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_ram_select-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_ram_select.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_counter_lsb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_counter_lsb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_counter_num_bytes-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_counter_num_bytes.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_i1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_i1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_i2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_i2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_q1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_q1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_q2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_downconversion_coeff_q2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_fe_anatestreq-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_fe_anatestreq.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_mframes-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_mframes.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_mframes_coarse-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_mframes_coarse.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_ctrl1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_ctrl1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_ctrl2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_ctrl2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_skew_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_skew_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_skewcalin-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_skewcalin.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_pll_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_line_first_msb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_line_first_msb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_line_last_msb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_line_last_msb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_lsbs-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_lsbs.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_write_offset_msb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_ram_write_offset_msb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_reset_counters-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_reset_counters.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_wait-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_rx_wait.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_s_p_i-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_s_p_i.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_sampler_preset_lsb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_sampler_preset_lsb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_sampler_preset_msb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_sampler_preset_msb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_smpl_mode-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_smpl_mode.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_config-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_config.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_config_pif-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_config_pif.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_idle-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_idle.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_mode-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_mode.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_radar_burst_kick-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_radar_burst_kick.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_radar_burst_size_lsb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_radar_burst_size_lsb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_send-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_master_send.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mb_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mb_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mb_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mb_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mem_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mem_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mem_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_mem_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data0_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data0_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data0_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data0_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data1_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data1_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data1_fifo_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data1_fifo_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data_clear_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_spi_radar_data_clear_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_to_cpu_read_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_to_cpu_read_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_to_cpu_write_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_to_cpu_write_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_to_mem_write_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_to_mem_write_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_backend_done-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_backend_done.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_clocks_per_pulse-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_clocks_per_pulse.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_ctrl_done-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_ctrl_done.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_ctrl_mode-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_ctrl_mode.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_max_h-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_max_h.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_max_l-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_max_l.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_min_h-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_min_h.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_min_l-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_min_l.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_override_h-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_override_h.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_override_l-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_override_l.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_override_load-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_override_load.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_step-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_dac_step.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_iterations-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_iterations.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_reset-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_reset.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_taps0-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_taps0.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_taps1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_taps1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_taps2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_lfsr_taps2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_pulses_per_step_lsb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_pulses_per_step_lsb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_pulses_per_step_msb-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_pulses_per_step_msb.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_start-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_trx_start.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_ctrl1-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_ctrl1.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_ctrl2-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_ctrl2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_skew_ctrl-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_skew_ctrl.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_skewcalin-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_skewcalin.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_status-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_pll_status.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_wait-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_tx_wait.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_vref_trim-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_vref_trim.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_x4-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_x4.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_x_i_f-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1extras_1_1x4__regmap__autogen_1_1_x_i_f.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnector_1_1_data_player.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnector_1_1_data_reader.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnector_1_1_data_recorder.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnector_1_1_module_connector-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnector_1_1_module_connector.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_baseband_ap_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_baseband_ap_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_baseband_iq_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_baseband_iq_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_data_record-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_data_record.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_data_type-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_data_type.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_detection_zone-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_detection_zone.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_detection_zone_limits-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_detection_zone_limits.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_files-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_files.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_frame_area-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_frame_area.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_io_pin_control-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_io_pin_control.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_periodic_noisemap_store-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_periodic_noisemap_store.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_preferred_split_size-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_preferred_split_size.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_pulse_doppler_byte_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_pulse_doppler_byte_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_pulse_doppler_float_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_pulse_doppler_float_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_data_player-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_data_player.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_data_reader-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_data_reader.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_data_recorder-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_data_recorder.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x2_m200-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x2_m200.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x4_m200-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x4_m200.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x4_m210-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x4_m210.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x4_m300-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x4_m300.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x_e_p-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_py_x_e_p.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_python_module_connector-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_python_module_connector.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_baseband_float_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_baseband_float_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_baseband_q15_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_baseband_q15_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_rf_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_rf_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_rf_normalized_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_radar_rf_normalized_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_recording_options-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_recording_options.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_respiration_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_respiration_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_sleep_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_sleep_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_sleep_stage_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_sleep_stage_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_vital_signs_data-members.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/classpymoduleconnector_1_1moduleconnectorwrapper_1_1_vital_signs_data.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/closed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/dir_36e033e58529ac6905715f15baf998ff.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/dir_37970b8c919dbb78797b89263614de2e.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/dir_6e3993fc4f4fb51c3268b00e4ca52469.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/dir_7b9fda4ede1ad0c9cccc7ced99bb1d75.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/dir_8860b28741c99f80bfa7e4047a1f7b04.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/doxygen-print.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/doxygen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/doxygen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/dynsections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/examples.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/folderclosed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/folderopen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_a.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_c.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_d.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_e.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_f.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_a.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_c.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_d.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_e.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_f.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_g.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_i.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_l.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_m.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_o.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_p.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_r.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_s.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_u.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_w.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_func_x.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_g.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_i.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_l.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_m.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_o.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_p.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_r.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_s.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_u.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_w.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/functions_x.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/graph_legend.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/graph_legend.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/graph_legend.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/header-shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/hierarchy.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/index.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_0.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_0.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_0.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_1.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_1.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_2.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_2.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_3.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_3.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_4.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_4.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_5.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_5.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_6.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_6.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherit_graph_6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/inherits.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/menu_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/menudata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/namespacemembers.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/namespacemembers_func.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/namespacepymoduleconnector_1_1extras_1_1auto.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/namespacepymoduleconnector_1_1moduleconnector.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/namespaces.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/nav_f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/nav_g.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/nav_h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/novelda_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/novelda_logo_negative.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/novelda_logo_with_line.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/pages.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/pymc_main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_10.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_12.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_13.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_c.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_e.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_f.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/all_f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_c.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_e.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_f.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/classes_f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_10.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_c.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_e.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_f.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/functions_f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/mag_sel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/namespaces_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/namespaces_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/nomatches.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/pages_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/pages_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/search_l.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/search_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/search_r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/search/searchdata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/splitbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/sync_off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/sync_on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/tab_a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/tab_b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/tab_h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/tab_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/doc/output/html/xethru-logo_220x55HD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X2M200_plot_respiration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X2M200_read_record.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X2M200_record.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X4M200_X4M300_manipulate_noisemap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X4M200_X4M300_printout_infromation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X4M200_X4M300_printout_pulsedoppler_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X4M200_sleep_record.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X4M300_playback_recording.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X4M300_plot_movementlist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/X4M300_printout_presence_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/XEP_X4M200_X4M300_access_registers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/XEP_X4M200_X4M300_plot_record_playback_radar_raw_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/examples/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/extras/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/extras/auto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/extras/regmap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/extras/x4_regmap_autogen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/ids.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/moduleconnector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/moduleconnectorwrapper/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/moduleconnectorwrapper/libboost_filesystem-mt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/moduleconnectorwrapper/libboost_system-mt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/moduleconnectorwrapper/libgcc_s_seh-1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/moduleconnectorwrapper/libstdc++-6.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/moduleconnectorwrapper/libwinpthread-1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/pymoduleconnector/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/XeThru_utils/pymoduleconnector/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mGesf/main_page_tabs/control_tab.py" beforeDir="false" afterPath="$PROJECT_DIR$/mGesf/main_page_tabs/control_tab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mGesf/workers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mGesf/workers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/decaWave_utils/DecaUWB_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/decaWave_utils/DecaUWB_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,7 +699,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="thu_recording" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +713,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -67,11 +727,15 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="mGesf" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="mGesf" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/mGesf" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mGesf" />
       <recent name="$PROJECT_DIR$/utils" />
@@ -79,8 +743,13 @@
       <recent name="$PROJECT_DIR$/utils/archived/data_utils" />
       <recent name="$PROJECT_DIR$/mGesf/profiles/iwr1443" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utils/XeThru_utils" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/mGesf" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.setup">
     <configuration name="UWB_tab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,7 +838,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sound" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,13 +846,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mGesf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mGesf/sound.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
+      <option name="PARAMETERS" value="install" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -194,17 +863,17 @@
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.scratch_11" />
-      <item itemvalue="Python.sound" />
       <item itemvalue="Python.secretKeyGeneration" />
       <item itemvalue="Python.UWB_tab" />
+      <item itemvalue="Python.setup" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.setup" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.secretKeyGeneration" />
         <item itemvalue="Python.UWB_tab" />
         <item itemvalue="Python.scratch_11" />
-        <item itemvalue="Python.sound" />
       </list>
     </recent_temporary>
   </component>
@@ -465,7 +1134,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add iwr1443 support" />
     <MESSAGE value="add transformers" />
     <MESSAGE value="add GUI interface for iwr1443" />
     <MESSAGE value="add webcam supports" />
@@ -490,15 +1158,17 @@
     <MESSAGE value="add UWB interfaces to mGesf" />
     <MESSAGE value="change default text entries" />
     <MESSAGE value="mag to dB" />
-    <option name="LAST_COMMIT_MESSAGE" value="mag to dB" />
+    <MESSAGE value="add py module connector for UWB radar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add py module connector for UWB radar" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591137350488">
-      <screen x="0" y="23" width="1792" height="1033" />
+    <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594694178119">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.819@0.23.1440.819" timestamp="1588210620716" />
     <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1589669027072" />
     <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1033@0.23.1792.1033" timestamp="1591137350488" />
+    <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1036@0.23.1792.1036" timestamp="1594694178119" />
     <state x="466" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590793296975">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
@@ -512,21 +1182,22 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="495" y="166" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1440.819@0.23.1440.819" timestamp="1588208590490" />
-    <state x="428" y="0" key="CommitChangelistDialog2" timestamp="1592377495924">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="399" y="23" key="CommitChangelistDialog2" timestamp="1594693478437">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state x="-2160" y="389" key="CommitChangelistDialog2/-2560.23.2560.1417/0.23.1792.1033@-2560.23.2560.1417" timestamp="1591136975360" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1028@0.23.1792.1028" timestamp="1589786246608" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1030@0.23.1792.1030" timestamp="1590790799242" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1031@0.23.1792.1031" timestamp="1591716288284" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1033@0.23.1792.1033" timestamp="1590952755574" />
+    <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1036@0.23.1792.1036" timestamp="1594693478437" />
     <state x="428" y="0" key="CommitChangelistDialog2/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1592377495924" />
     <state x="180" y="114" key="DiffContextDialog" timestamp="1590588631937">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="180" y="114" key="DiffContextDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588631937" />
-    <state width="1877" height="142" key="GridCell.Tab.0.bottom" timestamp="1593487206497">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1750" height="296" key="GridCell.Tab.0.bottom" timestamp="1594694336588">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1588215570161" />
     <state width="1750" height="260" key="GridCell.Tab.0.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026711" />
@@ -534,9 +1205,10 @@
     <state width="854" height="209" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327918" />
+    <state width="1750" height="296" key="GridCell.Tab.0.bottom/0.23.1792.1036@0.23.1792.1036" timestamp="1594694336588" />
     <state width="1877" height="142" key="GridCell.Tab.0.bottom/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593487206497" />
-    <state width="1877" height="142" key="GridCell.Tab.0.center" timestamp="1593487206497">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1750" height="296" key="GridCell.Tab.0.center" timestamp="1594694336586">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1588215570160" />
     <state width="1750" height="260" key="GridCell.Tab.0.center/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026711" />
@@ -544,9 +1216,10 @@
     <state width="854" height="209" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.center/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327913" />
+    <state width="1750" height="296" key="GridCell.Tab.0.center/0.23.1792.1036@0.23.1792.1036" timestamp="1594694336586" />
     <state width="1877" height="142" key="GridCell.Tab.0.center/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593487206497" />
-    <state width="1877" height="142" key="GridCell.Tab.0.left" timestamp="1593487206497">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1750" height="296" key="GridCell.Tab.0.left" timestamp="1594694336586">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1588215570159" />
     <state width="1750" height="260" key="GridCell.Tab.0.left/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026710" />
@@ -554,9 +1227,10 @@
     <state width="854" height="209" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653609" />
     <state width="2518" height="394" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.left/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327908" />
+    <state width="1750" height="296" key="GridCell.Tab.0.left/0.23.1792.1036@0.23.1792.1036" timestamp="1594694336586" />
     <state width="1877" height="142" key="GridCell.Tab.0.left/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593487206497" />
-    <state width="1877" height="142" key="GridCell.Tab.0.right" timestamp="1593487206497">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1750" height="296" key="GridCell.Tab.0.right" timestamp="1594694336587">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state width="1398" height="160" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1588215570160" />
     <state width="1750" height="260" key="GridCell.Tab.0.right/0.23.1792.1028@0.23.1792.1028" timestamp="1589786026711" />
@@ -564,6 +1238,7 @@
     <state width="854" height="209" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.right/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327915" />
+    <state width="1750" height="296" key="GridCell.Tab.0.right/0.23.1792.1036@0.23.1792.1036" timestamp="1594694336587" />
     <state width="1877" height="142" key="GridCell.Tab.0.right/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593487206497" />
     <state width="958" height="257" key="GridCell.Tab.1.bottom" timestamp="1592287126703">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -598,12 +1273,13 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="705" y="255" key="RollbackChangesDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588634364" />
-    <state x="454" y="83" key="SettingsEditor" timestamp="1590707085484">
-      <screen x="0" y="23" width="1792" height="1030" />
+    <state x="454" y="83" key="SettingsEditor" timestamp="1594694135155">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state x="365" y="71" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1588166546548" />
     <state x="454" y="83" key="SettingsEditor/0.23.1792.1028@0.23.1792.1028" timestamp="1589785757519" />
     <state x="454" y="83" key="SettingsEditor/0.23.1792.1030@0.23.1792.1030" timestamp="1590707085484" />
+    <state x="454" y="83" key="SettingsEditor/0.23.1792.1036@0.23.1792.1036" timestamp="1594694135155" />
     <state x="-1851" y="373" key="Vcs.Push.Dialog.v2" timestamp="1591136980036">
       <screen x="-2560" y="23" width="2560" height="1417" />
     </state>
@@ -646,8 +1322,8 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="565" y="225" key="refactoring.ChangeSignatureDialog/0.23.1440.819@0.23.1440.819" timestamp="1588208894455" />
-    <state x="623" y="183" width="894" height="868" key="search.everywhere.popup" timestamp="1593484703428">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="581" y="204" width="835" height="857" key="search.everywhere.popup" timestamp="1594693930674">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state x="623" y="183" width="894" height="868" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593118641052" />
     <state x="467" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1588209007331" />
@@ -655,6 +1331,7 @@
     <state x="581" y="203" width="834" height="851" key="search.everywhere.popup/0.23.1792.1030@0.23.1792.1030" timestamp="1591715349037" />
     <state x="581" y="203" width="834" height="852" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1591717030365" />
     <state x="581" y="204" width="834" height="854" key="search.everywhere.popup/0.23.1792.1033@0.23.1792.1033" timestamp="1590033517185" />
+    <state x="581" y="204" width="835" height="857" key="search.everywhere.popup/0.23.1792.1036@0.23.1792.1036" timestamp="1594693930674" />
     <state x="623" y="183" width="894" height="868" key="search.everywhere.popup/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1593484703428" />
   </component>
   <component name="XDebuggerManager">
@@ -684,8 +1361,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mGesf$main.coverage" NAME="main Coverage Results" MODIFIED="1594146679978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/mGesf$scratch_11.coverage" NAME="scratch_11 Coverage Results" MODIFIED="1591717294619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/mGesf$sound.coverage" NAME="sound Coverage Results" MODIFIED="1589669297616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mGesf" />
-    <SUITE FILE_PATH="coverage/mGesf$main.coverage" NAME="main Coverage Results" MODIFIED="1593487121328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mGesf$LeapInterface.coverage" NAME="LeapInterface Coverage Results" MODIFIED="1594145954082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/leap_utils" />
+    <SUITE FILE_PATH="coverage/mGesf$setup.coverage" NAME="setup Coverage Results" MODIFIED="1594694298336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
