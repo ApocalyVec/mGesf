@@ -12,7 +12,7 @@ def init_view(label):
     vl.addWidget(ql)
     return vl
 
-class Leap_tab(QWidget):
+class LeapTab(QWidget):
     def __init__(self, leap_worker: Leap_worker, refresh_interval, *args, **kwargs):
         super().__init__()
 
