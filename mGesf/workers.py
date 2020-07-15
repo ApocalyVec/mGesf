@@ -183,7 +183,7 @@ class UWBWorker(QObject):
     @pg.QtCore.pyqtSlot()
     def uwb_process_on_tick(self):
         if self._is_running:
-            if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):
+            if self._uwb_interface_anchor.connected and self._uwb_interface_tag.connected:
                 a_frame = self._uwb_interface_anchor.generate_frame()
                 t_frame = self._uwb_interface_tag.generate_frame()
 
@@ -191,19 +191,19 @@ class UWBWorker(QObject):
                 a_frame = sim_uwb()
                 t_frame = sim_uwb()
 
-            # notify the mmw data for the radar tab
+            # notify the uwb real imag data
             data_dict = {'a_frame': a_frame,
                          't_frame': t_frame}
-            self.signal_data.emit(data_dict)  # notify the mmw data for the sensor tab
+            self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 
     def start_uwb(self):
-        if not (
-                self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
-            try:
-                self._uwb_interface_anchor.connect_virtual_port('COM32')
-                self._uwb_interface_tag.connect_virtual_port('COM30')
-            except exceptions.PortsNotSetUpError:
-                print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
+        if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
+            print("start uwb sensor")
+            # try:
+            #     self._uwb_interface_anchor.connect_virtual_port('COM32')
+            #     self._uwb_interface_tag.connect_virtual_port('COM30')
+            # except exceptions.PortsNotSetUpError:
+            #     print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
         else:
             print('Start Simulating WUB data')
         self._is_running = True
