@@ -38,7 +38,7 @@ import os
 os.chdir('utils/XeThru_utils/pymoduleconnector')
 import subprocess
 
-subprocess.call(['python', 'utils/XeThru_utils/pymoduleconnector/setup.py', 'install'])
+subprocess.call(['python', 'setup.py', 'install'])
 
 # from setuptools import sandbox
 # sandbox.run_setup('/Users/Leo/PycharmProjects/mGesf/utils/XeThru_utils/pymoduleconnector/setup.py', ['clean', 'bdist_wheel'])
