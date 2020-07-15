@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout, QHBoxLayout
+from PyQt5.QtWidgets import QLabel, QCheckBox, QFrame, QVBoxLayout, QHBoxLayout, QComboBox
 
 import config as config
 
@@ -110,3 +110,13 @@ def draw_boarder(parent, width, height):
     parent.addWidget(frame)
 
     return frame
+
+def init_combo_box(parent, label, item_list):
+    container = init_container(parent=parent, label=label, vertical=False)
+    combo_widget = QtGui.QWidget()
+    combo_box = QComboBox()
+    for i in item_list:
+        combo_box.addItem(i)
+    container.addWidget(combo_box)
+
+    return combo_box

@@ -1,21 +1,10 @@
-import os
-import pickle
-import time
-from datetime import datetime
-
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import pyqtSlot, QTimer
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, QVBoxLayout, QPushButton, QTabWidget, \
-    QGraphicsView, QGraphicsScene
+from PyQt5.QtWidgets import QWidget, QLabel
 import pyqtgraph as pg
 from PyQt5 import QtCore
 
-from utils.img_utils import array_to_colormap_qim
-
 import numpy as np
 import mGesf.workers as workers
-from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 
 
 def init_view(label):
@@ -27,7 +16,7 @@ def init_view(label):
     return vl
 
 
-class UWB_tab(QWidget):
+class UWBTab(QWidget):
     def __init__(self, uwb_worker: workers.UWBWorker, refresh_interval, *args, **kwargs):
         super().__init__()
 

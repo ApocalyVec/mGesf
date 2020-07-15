@@ -27,7 +27,7 @@ def init_view(label):
     return vl
 
 
-class Radar_tab(QWidget):
+class RadarTab(QWidget):
     def __init__(self, mmw_worker: MMW_worker, refresh_interval, *args, **kwargs):
         super().__init__()
 
