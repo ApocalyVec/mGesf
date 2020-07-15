@@ -6,10 +6,11 @@ timing_list = []
 
 def run_test():
     leap_interface = LeapInterface()
-
+    leap_interface.connect_sensor()
+    leap_interface.start_sensor()
     while 1:
         # info = getLeapInfo()
-        frame = leap_interface.getLeapFrame()
+        frame = leap_interface.process_frame()
         # print(info)
         print(frame)
         timing_list.append(time.time())

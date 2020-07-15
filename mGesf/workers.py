@@ -6,14 +6,14 @@ import pyqtgraph as pg
 
 import config
 from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
-from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb
+from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb, sim_leap
 
 import mGesf.exceptions as exceptions
 
 import numpy as np
 
 
-class  MmwWorker(QObject):
+class MmwWorker(QObject):
     """
     mmw data package (dict):
         'range_doppler': ndarray
@@ -153,11 +153,11 @@ class IdpDetectionWorker(QObject):
 
     def detect_on_tick(self, samples):
         output = self.model.predict([np.array(samples['rd']),
-                            np.array(samples['ra'])])
+                                     np.array(samples['ra'])])
         pred = self.encoder.inverse_transform(output)
         self.signal_detection.emit({'pred': pred,
                                     'output': output,
-                                    'foo': np.array(samples['foo'])},)  # notify the mmw data for the gesture tab
+                                    'foo': np.array(samples['foo'])}, )  # notify the mmw data for the gesture tab
 
     def setup(self, encoder, model):
         self.encoder = encoder
@@ -168,7 +168,8 @@ class UWBWorker(QObject):
     signal_data = pyqtSignal(dict)
     tick_signal = pyqtSignal()
 
-    def __init__(self, uwb_interface_anchor: UWBSensorInterface=None, uwb_interface_tag: UWBSensorInterface=None, *args, **kwargs):
+    def __init__(self, uwb_interface_anchor: UWBSensorInterface = None, uwb_interface_tag: UWBSensorInterface = None,
+                 *args, **kwargs):
         super(UWBWorker, self).__init__()
         self.tick_signal.connect(self.uwb_process_on_tick)
         if uwb_interface_anchor is None and uwb_interface_tag is None:
@@ -206,3 +207,56 @@ class UWBWorker(QObject):
         else:
             print('Start Simulating WUB data')
         self._is_running = True
+
+
+class LeapWorker(QObject):
+    """
+    leap data package (dict): leapmouse: [current vertical position, current horizontal position, current z position,
+    new X position, new Y position]
+    """
+    # for passing data to the gesture tab
+    signal_leap = pyqtSignal(dict)
+    tick_signal = pyqtSignal()
+    timing_list = []
+
+    def __init__(self, leap_interface=None, *args, **kwargs):
+        super(LeapWorker, self).__init__()
+        self.tick_signal.connect(self.leap_process_on_tick)
+        if not leap_interface:
+            print('None type LeapInterface, starting in simulation mode')
+
+        self._leap_interface = leap_interface
+        self._is_running = False
+
+    @pg.QtCore.pyqtSlot()
+    def leap_process_on_tick(self):
+        if self._is_running:
+            if self._leap_interface:
+                leapMouse_data, image = self._leap_interface.process_frame()
+            else:
+                leapMouse_data, image = sim_leap()
+            data_dict = {'leapmouse': leapMouse_data,
+                         'image': image}
+            self.signal_leap.emit(data_dict)
+
+    def start_leap(self):
+        if self._leap_interface:  # if the sensor interface is established
+            try:
+                self._leap_interface.connect_sensor()
+                self._leap_interface.start_sensor()
+            except exceptions.LeapPortTimeoutError:
+                print('LeapInterface requires LeapMouse running, if you do not have the LeapMotion hardware, '
+                      'set LeapInterface to None')
+        else:
+            print('Start Simulating Leap data')
+        self._is_running = True
+
+    def stop_leap(self):
+        self._is_running = False
+        time.sleep(0.1)  # wait 100ms for the previous frames to finish process
+        if self._leap_interface:
+            self._leap_interface.stop_sensor()
+            print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
+        else:
+            print('Stop Simulating mmW data')
+            print('frame rate calculation is not enabled in simulation mode')
