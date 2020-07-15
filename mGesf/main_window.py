@@ -91,7 +91,7 @@ class Tabs(QWidget):
         self.tabs = QTabWidget()
         self.tab1 = control_tab.Control_tab(self.mmw_worker, self.uwb_worker, self.leap_worker, refresh_interval, data_path)
         self.tab2 = radar_tab.Radar_tab(self.mmw_worker, refresh_interval, data_path)
-        self.tab3 = leap_tab.Leap_tab()
+        self.tab3 = leap_tab.Leap_tab(self.leap_worker, refresh_interval, data_path)
         self.tab4 = UWB_tab.UWB_tab(self.uwb_worker, refresh_interval, data_path)
         self.tab5 = gesture_tab.GestureTab(self.mmw_worker)
 
