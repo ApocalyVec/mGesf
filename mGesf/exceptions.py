@@ -51,3 +51,12 @@ class StoragePathInvalidError(MGesFError):
         return 'Invalid path...'
 
     pass
+
+
+class LeapPortTimeoutError(MGesFError):
+    """Raised when LeapInterface is running without LeapMouse"""
+
+    def __str__(self):
+        return 'LeapMouse is not running'
+
+    pass
