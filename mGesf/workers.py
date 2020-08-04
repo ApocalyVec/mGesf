@@ -6,7 +6,7 @@ import pyqtgraph as pg
 
 import config
 from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
-from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb, sim_leap
+from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb, sim_leap, sim_xe4thru
 
 import mGesf.exceptions as exceptions
 
@@ -197,15 +197,16 @@ class UWBWorker(QObject):
             self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 
     def start_uwb(self):
-        if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
-            print("start uwb sensor")
+        if not (
+                self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
+            print("start UWB sensor")
             # try:
             #     self._uwb_interface_anchor.connect_virtual_port('COM32')
             #     self._uwb_interface_tag.connect_virtual_port('COM30')
             # except exceptions.PortsNotSetUpError:
             #     print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
         else:
-            print('Start Simulating WUB data')
+            print('Start Simulating UWB data')
         self._is_running = True
 
 
@@ -258,7 +259,7 @@ class LeapWorker(QObject):
             self._leap_interface.stop_sensor()
             print('frame rate is ' + str(1 / np.mean(self.timing_list)))  # TODO refactor timing calculation
         else:
-            print('Stop Simulating mmW data')
+            print('Stop Simulating leap data')
             print('frame rate calculation is not enabled in simulation mode')
 
 
@@ -266,44 +267,28 @@ class Xe4ThruWorker(QObject):
     signal_data = pyqtSignal(dict)
     tick_signal = pyqtSignal()
 
-    def __init__(self, uwb_interface_anchor: UWBSensorInterface = None, uwb_interface_tag: UWBSensorInterface = None,
-                 *args, **kwargs):
+    def __init__(self, xeThruX4Sensor_interface=None, *args, **kwargs):
         super(Xe4ThruWorker, self).__init__()
         self.tick_signal.connect(self.xe4thru_process_on_tick)
-        # if uwb_interface_anchor is None and uwb_interface_tag is None:
-        #     print('None type uwb_interface, starting in simulation mode')
-        #
-        # self._uwb_interface_anchor = uwb_interface_anchor
-        # self._uwb_interface_tag = uwb_interface_tag
-        #
-        # self._is_running = False
+        self.xeThruX4Sensor_interface = xeThruX4Sensor_interface
+        self._is_running = False
 
     @pg.QtCore.pyqtSlot()
     def xe4thru_process_on_tick(self):
-        pass
-        # if self._is_running:
-        #     if self._uwb_interface_anchor.connected and self._uwb_interface_tag.connected:
-        #         a_frame = self._uwb_interface_anchor.generate_frame()
-        #         t_frame = self._uwb_interface_tag.generate_frame()
-        #
-        #     else:  # this is in simulation mode
-        #         a_frame = sim_uwb()
-        #         t_frame = sim_uwb()
-        #
-        #     # notify the uwb real imag data
-        #     data_dict = {'a_frame': a_frame,
-        #                  't_frame': t_frame}
-        #     self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
+        if self._is_running:
+            frame = self.xeThruX4Sensor_interface.read_frame() if self.xeThruX4Sensor_interface else sim_xe4thru()
+            data_dict = {'frame': frame}
+            self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 
-    def start_xe4thru(self):
-        pass
-        # if not (self._uwb_interface_anchor is None and self._uwb_interface_tag is None):  # if the sensor interface is established
-        #     print("start uwb sensor")
-        #     # try:
-        #     #     self._uwb_interface_anchor.connect_virtual_port('COM32')
-        #     #     self._uwb_interface_tag.connect_virtual_port('COM30')
-        #     # except exceptions.PortsNotSetUpError:
-        #     #     print('UWB COM ports are not set up, connect to the sensor prior to start the sensor')
-        # else:
-        #     print('Start Simulating WUB data')
-        # self._is_running = True
+    def start_sensor(self, device_name, min_range, max_range, center_frequency, fps, baseband):
+        if self.xeThruX4Sensor_interface:
+            self.xeThruX4Sensor_interface.config_x4_sensor(device_name=device_name, min_range=min_range, max_range=max_range,
+                                                           center_frequency=center_frequency, FPS=fps, baseband=baseband)
+            self.xeThruX4Sensor_interface.clear_xep_buffer()
+        else:
+            print('Start Simulating Xe4Thru data')
+        self._is_running = True
+
+    def stop_sensor(self):
+        self._is_running = False
+        self.xeThruX4Sensor_interface.stop_sensor() if self.xeThruX4Sensor_interface else print('Stopping simulating')
