@@ -5,8 +5,8 @@ import matplotlib.pyplot
 if __name__ == '__main__':
     X4M300 = xeThruX4SensorInterface()
 
-    X4M300.config_x4_sensor(device_name='COM8', min_range=-0.1, max_range=0.4,
-                            center_frequency=3, FPS=10, baseband=False)
+    X4M300.config_x4_sensor(device_name='COM8', min_range=0, max_range=0.15,
+                            center_frequency=3, FPS=1, baseband=False)
 
     X4M300.clear_xep_buffer()
     counter = 0
@@ -17,4 +17,9 @@ if __name__ == '__main__':
             print(counter)
             print(frame)
             plt.plot(frame)
+            plt.title("fast time index example")
+            plt.xlabel("fast time index")
+            plt.ylabel("amplitude")
+
             plt.show()
+            history = np.array(X4M300.frame_history)
