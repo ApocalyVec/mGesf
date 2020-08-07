@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="LeapCode Server code set up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/leap_utils/leap_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/leap_utils/leap_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
       <recent name="$PROJECT_DIR$/mGesf" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.LeapInterface">
+  <component name="RunManager" selected="Python.xeThruTest">
     <configuration name="LeapInterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,7 +90,30 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/leap_utils/LeapInterface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mGesf" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/fun.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,6 +134,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/leap_utils/leap_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -143,29 +166,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scratch_11" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="mGesf" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_11.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sound" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="xeThruTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -173,12 +174,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mGesf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mGesf/sound.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/xeThruTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,18 +190,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.scratch_11" />
-      <item itemvalue="Python.sound" />
       <item itemvalue="Python.leap_test" />
       <item itemvalue="Python.LeapInterface" />
+      <item itemvalue="Python.xeThruTest" />
+      <item itemvalue="Python.fun" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.xeThruTest" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.fun" />
         <item itemvalue="Python.LeapInterface" />
         <item itemvalue="Python.leap_test" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.scratch_11" />
-        <item itemvalue="Python.sound" />
       </list>
     </recent_temporary>
   </component>
@@ -234,6 +235,20 @@
       <workItem from="1591134656354" duration="2334000" />
       <workItem from="1591302782743" duration="3132000" />
       <workItem from="1591715284035" duration="4141000" />
+      <workItem from="1594782054816" duration="2198000" />
+      <workItem from="1594796143438" duration="166000" />
+      <workItem from="1595340323397" duration="3440000" />
+      <workItem from="1595438997288" duration="1780000" />
+      <workItem from="1595800431167" duration="594000" />
+      <workItem from="1595823205180" duration="5076000" />
+      <workItem from="1595877996896" duration="2901000" />
+      <workItem from="1595912140637" duration="2221000" />
+      <workItem from="1596536868274" duration="4995000" />
+      <workItem from="1596584824009" duration="599000" />
+      <workItem from="1596647315674" duration="1207000" />
+      <workItem from="1596680376331" duration="599000" />
+      <workItem from="1596685354269" duration="599000" />
+      <workItem from="1596833836473" duration="1239000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ApocalyVec/mGesf into instruction_area&#10;&#10;# Conflicts:&#10;#&#9;README.md&#10;#&#9;config.py&#10;#&#9;mGesf/main_page_tabs/control_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/__init__.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/desktopFingertip/DesktopFingertip.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/gesture_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/indexPen/IndexPen.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/thuMouth/ThuMouse.py&#10;#&#9;setup.py&#10;#&#9;utils/GUI_main_window.py&#10;#&#9;utils/GUI_operation_tab.py&#10;#&#9;utils/InformationPane.py&#10;#&#9;utils/graph_utils.py&#10;#&#9;utils/sound.py">
       <created>1589525601569</created>
@@ -431,7 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592923962391</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="X4M300 example downconversion">
+      <created>1596536977546</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1596536977546</updated>
+    </task>
+    <task id="LOCAL-00030" summary="test">
+      <created>1596545360888</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1596545360888</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,16 +471,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add iwr1443 support" />
-    <MESSAGE value="add transformers" />
     <MESSAGE value="add GUI interface for iwr1443" />
     <MESSAGE value="add webcam supports" />
     <MESSAGE value="change default text entries" />
@@ -475,9 +503,15 @@
     <MESSAGE value="add UWB interface framework" />
     <MESSAGE value="add UWB interfaces to mGesf" />
     <MESSAGE value="LeapCode Server code set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeapCode Server code set up" />
+    <MESSAGE value="X4M300 example downconversion" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#Notifications" timestamp="1595835429467">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Notifications/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595835429467" />
     <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591137350488">
       <screen x="0" y="23" width="1792" height="1033" />
     </state>
@@ -489,28 +523,25 @@
     </state>
     <state x="466" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590787957334" />
     <state x="466" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1590793296975" />
-    <state x="628" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588092810121">
-      <screen x="0" y="23" width="1440" height="819" />
-    </state>
-    <state x="628" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.819@0.23.1440.819" timestamp="1588092810121" />
     <state x="495" y="166" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1588208590490">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="495" y="166" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1440.819@0.23.1440.819" timestamp="1588208590490" />
-    <state x="399" y="23" key="CommitChangelistDialog2" timestamp="1591716288284">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state x="428" y="0" key="CommitChangelistDialog2" timestamp="1596545387818">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-2160" y="389" key="CommitChangelistDialog2/-2560.23.2560.1417/0.23.1792.1033@-2560.23.2560.1417" timestamp="1591136975360" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1028@0.23.1792.1028" timestamp="1589786246608" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1030@0.23.1792.1030" timestamp="1590790799242" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1031@0.23.1792.1031" timestamp="1591716288284" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1033@0.23.1792.1033" timestamp="1590952755574" />
+    <state x="428" y="0" key="CommitChangelistDialog2/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596545387818" />
     <state x="180" y="114" key="DiffContextDialog" timestamp="1590588631937">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="180" y="114" key="DiffContextDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588631937" />
-    <state width="1348" height="180" key="GridCell.Tab.0.bottom" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="165" key="GridCell.Tab.0.bottom" timestamp="1596542891568">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -520,8 +551,9 @@
     <state width="854" height="209" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327918" />
-    <state width="1348" height="180" key="GridCell.Tab.0.center" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="165" key="GridCell.Tab.0.bottom/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596542891568" />
+    <state width="1877" height="165" key="GridCell.Tab.0.center" timestamp="1596542891568">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -531,8 +563,9 @@
     <state width="854" height="209" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.center/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327913" />
-    <state width="1348" height="180" key="GridCell.Tab.0.left" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="165" key="GridCell.Tab.0.center/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596542891568" />
+    <state width="1877" height="165" key="GridCell.Tab.0.left" timestamp="1596542891568">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -542,8 +575,9 @@
     <state width="854" height="209" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653609" />
     <state width="2518" height="394" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.left/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327908" />
-    <state width="1348" height="180" key="GridCell.Tab.0.right" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="165" key="GridCell.Tab.0.left/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596542891568" />
+    <state width="1877" height="165" key="GridCell.Tab.0.right" timestamp="1596542891568">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -553,26 +587,31 @@
     <state width="854" height="209" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.right/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327915" />
-    <state width="662" height="281" key="GridCell.Tab.1.bottom" timestamp="1592335161612">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="165" key="GridCell.Tab.0.right/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596542891568" />
+    <state width="1877" height="257" key="GridCell.Tab.1.bottom" timestamp="1595923427639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="662" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.bottom/0.23.1440.819@0.23.1440.819" timestamp="1588215570164" />
-    <state width="662" height="281" key="GridCell.Tab.1.center" timestamp="1592335161612">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="257" key="GridCell.Tab.1.bottom/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595923427639" />
+    <state width="1877" height="257" key="GridCell.Tab.1.center" timestamp="1595923427639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="662" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.center/0.23.1440.819@0.23.1440.819" timestamp="1588215570162" />
-    <state width="662" height="281" key="GridCell.Tab.1.left" timestamp="1592335161612">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="257" key="GridCell.Tab.1.center/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595923427639" />
+    <state width="1877" height="257" key="GridCell.Tab.1.left" timestamp="1595923427639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="662" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.left/0.23.1440.819@0.23.1440.819" timestamp="1588215570161" />
-    <state width="662" height="281" key="GridCell.Tab.1.right" timestamp="1592335161612">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1877" height="257" key="GridCell.Tab.1.left/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595923427639" />
+    <state width="1877" height="257" key="GridCell.Tab.1.right" timestamp="1595923427639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="662" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1592335161612" />
     <state width="1398" height="160" key="GridCell.Tab.1.right/0.23.1440.819@0.23.1440.819" timestamp="1588215570164" />
+    <state width="1877" height="257" key="GridCell.Tab.1.right/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595923427639" />
     <state x="69" y="133" key="MergeDialog" timestamp="1590787288730">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
@@ -586,56 +625,72 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="705" y="255" key="RollbackChangesDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588634364" />
-    <state x="454" y="83" key="SettingsEditor" timestamp="1590707085484">
-      <screen x="0" y="23" width="1792" height="1030" />
+    <state x="486" y="61" key="SettingsEditor" timestamp="1595341112221">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="365" y="71" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1588166546548" />
     <state x="454" y="83" key="SettingsEditor/0.23.1792.1028@0.23.1792.1028" timestamp="1589785757519" />
     <state x="454" y="83" key="SettingsEditor/0.23.1792.1030@0.23.1792.1030" timestamp="1590707085484" />
-    <state x="-1851" y="373" key="Vcs.Push.Dialog.v2" timestamp="1591136980036">
-      <screen x="-2560" y="23" width="2560" height="1417" />
+    <state x="486" y="61" key="SettingsEditor/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595341112221" />
+    <state x="593" y="224" key="Vcs.Push.Dialog.v2" timestamp="1596538841716">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1851" y="373" key="Vcs.Push.Dialog.v2/-2560.23.2560.1417/0.23.1792.1033@-2560.23.2560.1417" timestamp="1591136980036" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1589786250088" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1590790801630" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1590806913800" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1033@0.23.1792.1033" timestamp="1590952758216" />
-    <state x="573" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1591134656438">
-      <screen x="0" y="23" width="1792" height="1034" />
+    <state x="593" y="224" key="Vcs.Push.Dialog.v2/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596538841716" />
+    <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1595907335028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="968" height="533" key="XDebugger.FullValuePopup/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595907335028" />
+    <state x="614" y="353" key="com.intellij.ide.util.TipDialog" timestamp="1595890492261">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="573" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590766408613" />
     <state x="573" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1591096071763" />
     <state x="573" y="371" key="com.intellij.ide.util.TipDialog/0.23.1792.1033@0.23.1792.1033" timestamp="1590605926039" />
     <state x="573" y="371" key="com.intellij.ide.util.TipDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1591134656438" />
-    <state x="679" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591135037567">
-      <screen x="0" y="23" width="1792" height="1033" />
+    <state x="614" y="353" key="com.intellij.ide.util.TipDialog/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595890492261" />
+    <state x="2534" y="602" key="com.intellij.ide.util.TipDialog/1920.249.1920.1050/0.0.1920.1050@1920.249.1920.1050" timestamp="1594796310809" />
+    <state x="728" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595835422219">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1030@0.23.1792.1030" timestamp="1590766608337" />
     <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1031@0.23.1792.1031" timestamp="1590778201362" />
     <state x="679" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1033@0.23.1792.1033" timestamp="1591135037567" />
+    <state x="728" y="446" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595835422219" />
+    <state x="414" y="0" width="1522" height="759" key="dock-window-1" timestamp="1595837526118">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="0" width="1522" height="759" key="dock-window-1/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595837526118" />
     <state x="1090" y="258" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589672491862">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="1090" y="258" key="git4idea.branch.GitSmartOperationDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1589672491862" />
-    <state x="591" y="336" key="git4idea.merge.GitPullDialog" timestamp="1591716300217">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state x="633" y="319" width="529" height="419" key="git4idea.merge.GitPullDialog" timestamp="1596840654854">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="633" y="319" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594782579909" />
     <state x="591" y="336" key="git4idea.merge.GitPullDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1591715326945" />
     <state x="591" y="336" key="git4idea.merge.GitPullDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1591716300217" />
     <state x="591" y="337" key="git4idea.merge.GitPullDialog/0.23.1792.1033@0.23.1792.1033" timestamp="1590033673845" />
     <state x="591" y="337" key="git4idea.merge.GitPullDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1590951124726" />
+    <state x="633" y="319" width="529" height="419" key="git4idea.merge.GitPullDialog/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1596840654854" />
     <state x="565" y="225" key="refactoring.ChangeSignatureDialog" timestamp="1588208894455">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="565" y="225" key="refactoring.ChangeSignatureDialog/0.23.1440.819@0.23.1440.819" timestamp="1588208894455" />
-    <state x="581" y="203" width="834" height="852" key="search.everywhere.popup" timestamp="1591717030365">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state x="2543" y="432" width="894" height="868" key="search.everywhere.popup" timestamp="1596539703940">
+      <screen x="1920" y="249" width="1920" height="1050" />
     </state>
     <state x="467" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1588209007331" />
     <state x="581" y="203" width="834" height="850" key="search.everywhere.popup/0.23.1792.1028@0.23.1792.1028" timestamp="1589786362193" />
     <state x="581" y="203" width="834" height="851" key="search.everywhere.popup/0.23.1792.1030@0.23.1792.1030" timestamp="1591715349037" />
     <state x="581" y="203" width="834" height="852" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1591717030365" />
     <state x="581" y="204" width="834" height="854" key="search.everywhere.popup/0.23.1792.1033@0.23.1792.1033" timestamp="1590033517185" />
+    <state x="623" y="183" width="894" height="868" key="search.everywhere.popup/1920.249.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1595841106325" />
+    <state x="2543" y="432" width="894" height="868" key="search.everywhere.popup/1920.249.1920.1050/0.0.1920.1050@1920.249.1920.1050" timestamp="1596539703940" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,5 +722,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mGesf$xeThruTest.coverage" NAME="xeThruTest Coverage Results" MODIFIED="1596840631224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/mGesf$fun.coverage" NAME="fun Coverage Results" MODIFIED="1595450262000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/mGesf$main.coverage" NAME="main Coverage Results" MODIFIED="1596542837992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
