@@ -52,6 +52,7 @@ class ControlTab(QWidget):
     """
 
     def __init__(self, mmw_worker: workers.MmwWorker, uwb_worker: workers.UWBWorker, leap_worker: workers.LeapWorker,
+                 Xe4Thru_worker: workers.Xe4ThruWorker,
                  refresh_interval, *args, **kwargs):
         super().__init__()
 

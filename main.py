@@ -49,32 +49,16 @@ if __name__ == '__main__':
     '''
     Start of the application script (do not change this part unless you know what you're doing)
     '''
-    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     _leap_interface = LeapInterface()
+    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     _mmw_interface = None
-
-
-    '''
-    UWB demo interface
-    '''
-    # _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
-    # _uwb_interface_tag = UWBSensorInterface('Tag', 520)
-
     _uwb_interface_anchor = None
     _uwb_interface_tag = None
 
     _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
     _uwb_interface_tag = UWBSensorInterface('Tag', 520)
-    # try:
-    #     _uwb_interface_anchor = UWBSensorInterface('Anchor',520)
-    #     _uwb_interface_tag = UWBSensorInterface('Tag', 520)
-    #
-    # except:
-    #     _uwb_interface_anchor = None
-    #     _uwb_interface_tag = None
 
-    # _uwb_interface_anchor.connect_virtual_port('COM32')
-    # _uwb_interface_tag.connect_virtual_port('COM30')
+    _xeThruX4SensorInterface = None
 
 
 
@@ -89,6 +73,7 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = MainWindow(mmw_interface=_mmw_interface, leap_interface=_leap_interface,
                         uwb_interface_anchor=_uwb_interface_anchor, uwb_interface_tag=_uwb_interface_tag,
+                        xeThruX4SensorInterface = _xeThruX4SensorInterface,
                         refresh_interval=refresh, data_path=data_path)
     app.exec_()
     print('Resuming Console Interaction.')
