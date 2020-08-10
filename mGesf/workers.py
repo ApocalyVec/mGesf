@@ -276,7 +276,7 @@ class Xe4ThruWorker(QObject):
     @pg.QtCore.pyqtSlot()
     def xe4thru_process_on_tick(self):
         if self._is_running:
-            frame = self.xeThruX4Sensor_interface.read_frame() if self.xeThruX4Sensor_interface else sim_xe4thru()
+            frame = self.xeThruX4Sensor_interface.read_frame() if self.xeThruX4Sensor_interface.connected else sim_xe4thru()
             data_dict = {'frame': frame}
             self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 

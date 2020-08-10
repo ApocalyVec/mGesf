@@ -8,6 +8,7 @@ from utils.iwr6843_utils.mmWave_interface import MmWaveSensorInterface
 from utils.decaWave_utils import DecaUWB_interface
 
 from utils.leap_utils.LeapInterface import LeapInterface
+from utils.XeThru_utils.xeThruX4_interface import xeThruX4SensorInterface
 
 if __name__ == '__main__':
     '''
@@ -58,7 +59,7 @@ if __name__ == '__main__':
     _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
     _uwb_interface_tag = UWBSensorInterface('Tag', 520)
 
-    _xeThruX4SensorInterface = None
+    _xeThruX4SensorInterface = xeThruX4SensorInterface()
 
 
 

@@ -29,6 +29,8 @@ class xeThruX4SensorInterface:
         self.clutter_removal_frame_history = []
         self.clutter = None
 
+        self.connected = False
+
     def reset(self, device_name):
         try:
             mc = pymoduleconnector.ModuleConnector(device_name)
@@ -84,6 +86,8 @@ class xeThruX4SensorInterface:
             # Start streaming of data
             self.xep.x4driver_set_frame_area(min_range, max_range)
             self.xep.x4driver_set_fps(FPS)
+
+            self.connected = True
         except:
             print("error while config")
             return
@@ -95,15 +99,19 @@ class xeThruX4SensorInterface:
         self.max_range = max_range
         # boolean
         self.baseband = baseband
+        # self.display_xep_sys_info()
 
     def stop_sensor(self):
         if self.xep is not None:
             try:
-                self.reset(self.device_name)
+                self.xep.module_reset()
+                self.connected = False
             except:
                 print("please check the connection")
+                self.connected = False
         else:
             print("no connection history, please check usb")
+            self.connected = False
 
     def display_xep_sys_info(self):
         if self.xep is not None:
