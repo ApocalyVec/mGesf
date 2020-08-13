@@ -48,10 +48,10 @@ class xeThruX4SensorInterface:
             raise
 
     def config_x4_sensor(self, device_name, min_range=-0.1, max_range=0.4, center_frequency=3, FPS=10, baseband=False):
-        try:
-            self.reset(device_name)
-        except:
-            return
+        # try:
+        #     self.reset(device_name)
+        # except:
+        #     return
 
         self.mc = pymoduleconnector.ModuleConnector(device_name)
 
@@ -80,7 +80,7 @@ class xeThruX4SensorInterface:
             self.xep.x4driver_set_dac_max(1200)
             # Set integration
             self.xep.x4driver_set_iterations(64)
-            self.xep.x4driver_set_pulses_per_step(20)
+            self.xep.x4driver_set_pulses_per_step(25)
             # baseband?
             self.xep.x4driver_set_downconversion(int(baseband))
             # Start streaming of data

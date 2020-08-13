@@ -7,7 +7,7 @@ from mGesf import workers
 from utils.GUI_main_window import init_container, init_combo_box, init_inputBox, init_checkBox, init_button
 from utils.GUI_operation_tab import init_slider_bar_box
 import pyqtgraph as pg
-
+from utils.XeThru_utils.xeThruX4_algorithm import *
 
 def init_view(label):
     vl = QtWidgets.QVBoxLayout()
@@ -107,7 +107,7 @@ class XeThruX4ControlPane(QWidget):
                                      label="Reset to default",
                                      function=self.reset_btn_action)
 
-        self.rf_curve = self.init_xethrux4_runtime_view(parent=self.main_page, label="RF frame")
+        self.rf_curve, self.baseband_curve = self.init_xethrux4_runtime_view(parent=self.main_page, label="RF frame")
 
         self.show()
 
@@ -194,7 +194,8 @@ class XeThruX4ControlPane(QWidget):
 
     def start_stop_btn_action(self):
 
-        # print(self.fps_slider_view.value())
+        self.start_stop__btn.blockSignals(True)
+
         if self.Xe4Thru_worker._is_running:
             # self.Xe4Thru_worker.stop_sensor()
             self.Xe4Thru_worker.stop_sensor()
@@ -237,6 +238,8 @@ class XeThruX4ControlPane(QWidget):
             else:
                 print("Please check your input")
 
+        self.start_stop__btn.blockSignals(False)
+
     def reset_btn_action(self):
         #reset to defalut
         self.XeThruX4_port_textbox.setText("COM8")
@@ -265,14 +268,19 @@ class XeThruX4ControlPane(QWidget):
         # rf_frame.setXRange(*x_lim)
         # rf_frame.setYRange(*y_lim)
 
-        pen = pg.mkPen(color=(255, 0, 0), width=2)
+        pen = pg.mkPen(color=(0, 0, 255), width=1)
         rf_curve = rf_frame.plot([], [], pen=pen, name="rf_curve")
 
-        return rf_curve
+        pen = pg.mkPen(color=(255, 0, 0), width=2)
+        baseband = rf_frame.plot([], [], pen=pen, name="baseband_curve")
+
+        return rf_curve, baseband
 
     def control_process_xethru_data(self, data_dict):
         if data_dict['frame'] is not None:
             xsamples = list(range(data_dict['frame'].shape[0]))
             rf_frame = data_dict['frame']
-            clutter_free = self.Xe4Thru_worker.xeThruX4Sensor_interface.read_clutter_removal_frame(rf_frame, 0.85)
-            self.rf_curve.setData(xsamples, clutter_free)
+            # clutter_free = self.Xe4Thru_worker.xeThruX4Sensor_interface.read_clutter_removal_frame(rf_frame, 0.5)
+            baseband = xep_rf_frame_downconversion(rf_frame, self.Xe4Thru_worker.xeThruX4Sensor_interface.center_frequency)
+            self.rf_curve.setData(xsamples, rf_frame)
+            self.baseband_curve.setData(xsamples, baseband)

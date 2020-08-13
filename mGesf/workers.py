@@ -282,8 +282,10 @@ class Xe4ThruWorker(QObject):
 
     def start_sensor(self, device_name, min_range, max_range, center_frequency, fps, baseband):
         if self.xeThruX4Sensor_interface:
-            self.xeThruX4Sensor_interface.config_x4_sensor(device_name=device_name, min_range=min_range, max_range=max_range,
-                                                           center_frequency=center_frequency, FPS=fps, baseband=baseband)
+            self.xeThruX4Sensor_interface.config_x4_sensor(device_name=device_name, min_range=min_range,
+                                                           max_range=max_range,
+                                                           center_frequency=center_frequency, FPS=fps,
+                                                           baseband=baseband)
             self.xeThruX4Sensor_interface.clear_xep_buffer()
         else:
             print('Start Simulating Xe4Thru data')
