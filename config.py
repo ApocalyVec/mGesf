@@ -36,14 +36,18 @@ control_tab_data_port_label = 'Data Port (Standard): '
 control_tab_output_path_label = 'Output path:'
 control_tab_config_path_label = 'Config path:'
 
-#uwb control tab
+# uwb control tab
 uwb_anchor_port = 'Anchor port: '
 uwb_tag_port = 'Tag port: '
 uwb_tag_default_port = 'COM30'
 uwb_anchor_default_port = 'COM32'
 
-
-
+# xeThruX4 control
+init_xeThruX4_data_dict = {'frame': None,
+                       'baseband_frame': None,
+                       'clutter_removal_frame': None,
+                       'clutter_removal_baseband_frame': None,
+                       'ir_spectrogram': None}
 
 # gesture tab
 gesture_index_pen_label = "Index Pen"

@@ -65,7 +65,7 @@ if __name__ == '__main__':
     from utils.XeThru_utils.xeThruX4_interface import xeThruX4SensorInterface
     _xeThruX4SensorInterface = xeThruX4SensorInterface()
     '''
-    #_xeThruX4SensorInterface = None
+    # _xeThruX4SensorInterface = None
     from utils.XeThru_utils.xeThruX4_interface import xeThruX4SensorInterface
     _xeThruX4SensorInterface = xeThruX4SensorInterface()
     '''

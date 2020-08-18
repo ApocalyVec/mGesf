@@ -282,16 +282,28 @@ class Xe4ThruWorker(QObject):
     @pg.QtCore.pyqtSlot()
     def xe4thru_process_on_tick(self):
         if self._is_running:
+            data_dict = config.init_xeThruX4_data_dict
             if self.xeThruX4Sensor_interface:
-                frame = self.xeThruX4Sensor_interface.read_frame()
-                ir_spectrogram = self.xeThruX4Sensor_interface.frame_history
+                frame, baseband_frame, clutter_removal_frame, clutter_removal_baseband_frame = self.xeThruX4Sensor_interface.read_frame()
+                ir_spectrogram = self.xeThruX4Sensor_interface.clutter_removal_baseband_history
+
+                if frame is not None:
+                    data_dict = {'frame': frame,
+                                 'baseband_frame': baseband_frame,
+                                 'clutter_removal_frame': clutter_removal_frame,
+                                 'clutter_removal_baseband_frame': clutter_removal_baseband_frame,
+                                 'ir_spectrogram': np.array(list(ir_spectrogram))}
             else:
                 frame = sim_xe4thru()
                 self.frame_buffer.append(frame)
                 ir_spectrogram = self.frame_buffer
-            if frame is not None:
-                data_dict = {'frame': frame, 'ir_spectrogram': np.array(list(ir_spectrogram))}
-                self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
+                data_dict = {'frame': frame,
+                             'baseband_frame': frame,
+                             'clutter_removal_frame': frame,
+                             'clutter_removal_baseband_frame': frame,
+                             'ir_spectrogram': np.array(list(ir_spectrogram))}
+
+            self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 
 
     def start_sensor(self, device_name, min_range, max_range, center_frequency, fps, baseband):
@@ -311,3 +323,4 @@ class Xe4ThruWorker(QObject):
     def stop_sensor(self):
         self._is_running = False
         self.xeThruX4Sensor_interface.stop_sensor() if self.xeThruX4Sensor_interface else print('Stopping simulating')
+

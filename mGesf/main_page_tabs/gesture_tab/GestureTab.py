@@ -164,10 +164,11 @@ class GestureTab(QWidget):
             # self.message.setText(config.UWB_box_unchecked)
 
     def display_xethrux4_data(self, data_dict):
-        ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
-        ir_qpixmap = QPixmap(ir_heatmap_qim)
-        ir_qpixmap = ir_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
+        if data_dict['frame'] is not None:
+            ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
+            ir_qpixmap = QPixmap(ir_heatmap_qim)
+            ir_qpixmap = ir_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+            self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
 
     def display_mmw_data(self, data_dict):
         """
