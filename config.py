@@ -68,7 +68,7 @@ operation_detection_label = "Detection"
 trainingDataPath_label = "Training Data Path"
 operation_model_path_label = "Model Path"
 
-operation_interval_label = "Interval lasts (sec)"
+operation_interval_label = "Interval lasts (sec) [NOT IMPLEMENTED]"
 operation_repeats_label = "Repeats (times)"
 operation_classes_label = "Classes"
 operation_subject_name_label = "Subject Name"
