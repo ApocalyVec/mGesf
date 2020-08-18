@@ -176,7 +176,7 @@ class GestureTab(QWidget):
             ir_qpixmap = QPixmap(ir_heatmap_qim)
             ir_qpixmap = ir_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
             self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
-
+        # todo add recording xethrux4data
         # if self.is_recording and self.will_recording_xethrux4:
         #     utils.record_mmw_frame(data_dict=data_dict, buffer=self.buffer)
 
@@ -207,7 +207,7 @@ class GestureTab(QWidget):
             self.is_recording = False
             today = datetime.now()
             data_path = os.path.join(self.tab_idp.get_record_data_path(),
-                                     today.strftime("%b-%d-%Y-%H-%M-%S") + '_data.mgesf')
+                                     today.strftime("%b-%d-%Y-%H-%M-%S") + '_data.mgesf')  # TODO add char_set and interval last to data path
             label_path = os.path.join(self.tab_idp.get_record_data_path(),
                                      today.strftime("%b-%d-%Y-%H-%M-%S") + '_label.mgesf')
             try:
