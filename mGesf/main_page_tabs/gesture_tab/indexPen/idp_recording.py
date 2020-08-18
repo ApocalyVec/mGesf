@@ -222,6 +222,7 @@ class IdpRecording(QWidget):
             else:
                 raise Exception('Unknown State change')
         elif action == 'record_over':
+            self.finish_recording()
             self.working_to_idle()  # working includes that
             self.state = ['idle']
         elif action == 'interrupt':
@@ -244,10 +245,11 @@ class IdpRecording(QWidget):
         self.char_set = generate_char_set(self.classes, self.repeat_times)
         init_preparation_block(parent=self.ist_text_block, text=self.char_set)
 
+    def finish_recording(self):
+        self.record_signal.emit({'cmd': 'end', 'label': self.char_set})
+
     def working_to_idle(self):
         self.reset_instruction()
-        if 'recording' in self.state:
-            self.record_signal.emit({'cmd': 'end', 'label': self.char_set})
 
     def pending_to_countdown(self):
         # clear the preparation text block
