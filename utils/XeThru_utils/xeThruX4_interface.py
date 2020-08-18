@@ -137,11 +137,8 @@ class xeThruX4SensorInterface:
             if self.baseband:
                 n = len(frame)
                 frame = frame[:n // 2] + 1j * frame[n // 2:]
-
             self.frame_history.append(frame)
-
             return frame
-
         else:
             return None
 
