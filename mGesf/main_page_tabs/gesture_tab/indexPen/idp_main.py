@@ -8,7 +8,7 @@ import config
 
 
 class IndexPen(QWidget):
-    def __init__(self, mmw_signal, *args, **kwargs):
+    def __init__(self, record_signal, mmw_signal, *args, **kwargs):
         super().__init__()
         self.main_page = QHBoxLayout(self)
 
@@ -16,16 +16,19 @@ class IndexPen(QWidget):
 
         # Initialize tab screen
         tabs = QTabWidget()
-        tab1 = IdpRecording()
-        tab2 = IdpTrain()
-        tab3 = IdpDetection(mmw_signal)
+        self.tab_recording = IdpRecording(record_signal)
+        self.tab_training = IdpTrain()
+        self.tab_detection = IdpDetection(mmw_signal)
 
-        tabs.addTab(tab1, config.operation_recording_label)
-        tabs.addTab(tab2, config.operation_training_label)
-        tabs.addTab(tab3, config.operation_detection_label)
+        tabs.addTab(self.tab_recording, config.operation_recording_label)
+        tabs.addTab(self.tab_training, config.operation_training_label)
+        tabs.addTab(self.tab_detection, config.operation_detection_label)
 
         # Add tabs to main_widget
         self.operation_block.addWidget(tabs)
 
         self.setLayout(self.main_page)
         self.show()
+
+    def get_record_data_path(self):
+        return self.tab_recording.get_data_path()
