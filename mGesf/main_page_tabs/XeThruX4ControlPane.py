@@ -279,7 +279,11 @@ class XeThruX4ControlPane(QWidget):
         if data_dict['frame'] is not None:
             xsamples = list(range(data_dict['frame'].shape[0]))
             rf_frame = data_dict['frame']
+            baseband = data_dict['baseband_frame']
             # clutter_free = self.Xe4Thru_worker.xeThruX4Sensor_interface.read_clutter_removal_frame(rf_frame, 0.5)
-            baseband = xep_rf_frame_downconversion(rf_frame, self.Xe4Thru_worker.center_frequency)
-            self.rf_curve.setData(xsamples, rf_frame)
-            self.baseband_curve.setData(xsamples, baseband)
+
+            clutter_removal_rf_frame = data_dict['clutter_removal_frame']
+            clutter_removal_baseband_frame = data_dict['clutter_removal_baseband_frame']
+
+            self.rf_curve.setData(xsamples, clutter_removal_rf_frame)
+            self.baseband_curve.setData(xsamples, clutter_removal_baseband_frame)
