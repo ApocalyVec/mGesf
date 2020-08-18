@@ -21,12 +21,29 @@
   <component name="ChangeListManager">
     <list default="true" id="cbc9e7dc-fa87-4a81-add8-6ee62032af1e" name="Default Changelist" comment="LeapCode Server code set up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/leap_utils/leap_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/leap_utils/leap_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mGesf/workers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mGesf/workers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/XeThru_utils/xeThruX4_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/XeThru_utils/xeThruX4_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/simulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,6 +83,10 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/mGesf" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mGesf" />
       <recent name="$PROJECT_DIR$/utils" />
@@ -73,12 +94,8 @@
       <recent name="$PROJECT_DIR$/utils/archived/data_utils" />
       <recent name="$PROJECT_DIR$/mGesf/profiles/iwr1443" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/mGesf" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.LeapInterface">
+  <component name="RunManager" selected="Python.main">
     <configuration name="LeapInterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mGesf" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,6 +108,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/leap_utils/LeapInterface.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -112,6 +130,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/leap_utils/leap_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -188,17 +207,17 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.LeapInterface" />
+      <item itemvalue="Python.leap_test" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.scratch_11" />
       <item itemvalue="Python.sound" />
-      <item itemvalue="Python.leap_test" />
-      <item itemvalue="Python.LeapInterface" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.LeapInterface" />
         <item itemvalue="Python.leap_test" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.scratch_11" />
         <item itemvalue="Python.sound" />
       </list>
@@ -234,6 +253,8 @@
       <workItem from="1591134656354" duration="2334000" />
       <workItem from="1591302782743" duration="3132000" />
       <workItem from="1591715284035" duration="4141000" />
+      <workItem from="1594783647525" duration="23000" />
+      <workItem from="1596525013133" duration="6263000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ApocalyVec/mGesf into instruction_area&#10;&#10;# Conflicts:&#10;#&#9;README.md&#10;#&#9;config.py&#10;#&#9;mGesf/main_page_tabs/control_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/__init__.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/desktopFingertip/DesktopFingertip.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/gesture_tab.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/indexPen/IndexPen.py&#10;#&#9;mGesf/main_page_tabs/gesture_tab/thuMouth/ThuMouse.py&#10;#&#9;setup.py&#10;#&#9;utils/GUI_main_window.py&#10;#&#9;utils/GUI_operation_tab.py&#10;#&#9;utils/InformationPane.py&#10;#&#9;utils/graph_utils.py&#10;#&#9;utils/sound.py">
       <created>1589525601569</created>
@@ -431,7 +452,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592923962391</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update setup for pymodule connector">
+      <created>1594782505247</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1594782505247</updated>
+    </task>
+    <task id="LOCAL-00030" summary="refactor sensor workers and threads in MainWindow.py">
+      <created>1596540780842</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1596540780842</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,16 +477,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add iwr1443 support" />
-    <MESSAGE value="add transformers" />
     <MESSAGE value="add GUI interface for iwr1443" />
     <MESSAGE value="add webcam supports" />
     <MESSAGE value="change default text entries" />
@@ -475,7 +509,9 @@
     <MESSAGE value="add UWB interface framework" />
     <MESSAGE value="add UWB interfaces to mGesf" />
     <MESSAGE value="LeapCode Server code set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeapCode Server code set up" />
+    <MESSAGE value="update setup for pymodule connector" />
+    <MESSAGE value="refactor sensor workers and threads in MainWindow.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor sensor workers and threads in MainWindow.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="229" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591137350488">
@@ -497,20 +533,23 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="495" y="166" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1440.819@0.23.1440.819" timestamp="1588208590490" />
-    <state x="399" y="23" key="CommitChangelistDialog2" timestamp="1591716288284">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state x="399" y="23" key="CommitChangelistDialog2" timestamp="1596544848657">
+      <screen x="0" y="23" width="1792" height="1041" />
     </state>
     <state x="-2160" y="389" key="CommitChangelistDialog2/-2560.23.2560.1417/0.23.1792.1033@-2560.23.2560.1417" timestamp="1591136975360" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1028@0.23.1792.1028" timestamp="1589786246608" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1030@0.23.1792.1030" timestamp="1590790799242" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1031@0.23.1792.1031" timestamp="1591716288284" />
     <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1033@0.23.1792.1033" timestamp="1590952755574" />
+    <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1036@0.23.1792.1036" timestamp="1594782505018" />
+    <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1037@0.23.1792.1037" timestamp="1596540780647" />
+    <state x="399" y="23" key="CommitChangelistDialog2/0.23.1792.1041@0.23.1792.1041" timestamp="1596544848657" />
     <state x="180" y="114" key="DiffContextDialog" timestamp="1590588631937">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="180" y="114" key="DiffContextDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588631937" />
-    <state width="1348" height="180" key="GridCell.Tab.0.bottom" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1750" height="298" key="GridCell.Tab.0.bottom" timestamp="1596544848676">
+      <screen x="0" y="23" width="1792" height="1041" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -520,8 +559,11 @@
     <state width="854" height="209" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327918" />
-    <state width="1348" height="180" key="GridCell.Tab.0.center" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1750" height="421" key="GridCell.Tab.0.bottom/0.23.1792.1036@0.23.1792.1036" timestamp="1594783283274" />
+    <state width="1750" height="287" key="GridCell.Tab.0.bottom/0.23.1792.1037@0.23.1792.1037" timestamp="1596544421756" />
+    <state width="1750" height="298" key="GridCell.Tab.0.bottom/0.23.1792.1041@0.23.1792.1041" timestamp="1596544848676" />
+    <state width="1750" height="298" key="GridCell.Tab.0.center" timestamp="1596544848675">
+      <screen x="0" y="23" width="1792" height="1041" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -531,8 +573,11 @@
     <state width="854" height="209" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.center/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327913" />
-    <state width="1348" height="180" key="GridCell.Tab.0.left" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1750" height="421" key="GridCell.Tab.0.center/0.23.1792.1036@0.23.1792.1036" timestamp="1594783283273" />
+    <state width="1750" height="287" key="GridCell.Tab.0.center/0.23.1792.1037@0.23.1792.1037" timestamp="1596544421755" />
+    <state width="1750" height="298" key="GridCell.Tab.0.center/0.23.1792.1041@0.23.1792.1041" timestamp="1596544848675" />
+    <state width="1750" height="298" key="GridCell.Tab.0.left" timestamp="1596544848674">
+      <screen x="0" y="23" width="1792" height="1041" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -542,8 +587,11 @@
     <state width="854" height="209" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653609" />
     <state width="2518" height="394" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.left/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327908" />
-    <state width="1348" height="180" key="GridCell.Tab.0.right" timestamp="1592937768297">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1750" height="421" key="GridCell.Tab.0.left/0.23.1792.1036@0.23.1792.1036" timestamp="1594783283273" />
+    <state width="1750" height="287" key="GridCell.Tab.0.left/0.23.1792.1037@0.23.1792.1037" timestamp="1596544421755" />
+    <state width="1750" height="298" key="GridCell.Tab.0.left/0.23.1792.1041@0.23.1792.1041" timestamp="1596544848674" />
+    <state width="1750" height="298" key="GridCell.Tab.0.right" timestamp="1596544848675">
+      <screen x="0" y="23" width="1792" height="1041" />
     </state>
     <state width="1348" height="180" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1592937768297" />
     <state width="1899" height="180" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592925800954" />
@@ -553,6 +601,9 @@
     <state width="854" height="209" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1591719653610" />
     <state width="2518" height="394" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1591137343740" />
     <state width="1750" height="265" key="GridCell.Tab.0.right/0.23.1792.1034@0.23.1792.1034" timestamp="1591052327915" />
+    <state width="1750" height="421" key="GridCell.Tab.0.right/0.23.1792.1036@0.23.1792.1036" timestamp="1594783283273" />
+    <state width="1750" height="287" key="GridCell.Tab.0.right/0.23.1792.1037@0.23.1792.1037" timestamp="1596544421756" />
+    <state width="1750" height="298" key="GridCell.Tab.0.right/0.23.1792.1041@0.23.1792.1041" timestamp="1596544848675" />
     <state width="662" height="281" key="GridCell.Tab.1.bottom" timestamp="1592335161612">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -586,23 +637,27 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="705" y="255" key="RollbackChangesDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590588634364" />
-    <state x="454" y="83" key="SettingsEditor" timestamp="1590707085484">
-      <screen x="0" y="23" width="1792" height="1030" />
+    <state x="454" y="83" key="SettingsEditor" timestamp="1596544765396">
+      <screen x="0" y="23" width="1792" height="1041" />
     </state>
     <state x="365" y="71" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1588166546548" />
     <state x="454" y="83" key="SettingsEditor/0.23.1792.1028@0.23.1792.1028" timestamp="1589785757519" />
     <state x="454" y="83" key="SettingsEditor/0.23.1792.1030@0.23.1792.1030" timestamp="1590707085484" />
-    <state x="-1851" y="373" key="Vcs.Push.Dialog.v2" timestamp="1591136980036">
-      <screen x="-2560" y="23" width="2560" height="1417" />
+    <state x="454" y="83" key="SettingsEditor/0.23.1792.1037@0.23.1792.1037" timestamp="1596544381888" />
+    <state x="454" y="83" key="SettingsEditor/0.23.1792.1041@0.23.1792.1041" timestamp="1596544765396" />
+    <state x="496" y="279" key="Vcs.Push.Dialog.v2" timestamp="1594782515981">
+      <screen x="0" y="23" width="1792" height="1036" />
     </state>
     <state x="-1851" y="373" key="Vcs.Push.Dialog.v2/-2560.23.2560.1417/0.23.1792.1033@-2560.23.2560.1417" timestamp="1591136980036" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1589786250088" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1590790801630" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1590806913800" />
     <state x="496" y="278" key="Vcs.Push.Dialog.v2/0.23.1792.1033@0.23.1792.1033" timestamp="1590952758216" />
-    <state x="573" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1591134656438">
-      <screen x="0" y="23" width="1792" height="1034" />
+    <state x="496" y="279" key="Vcs.Push.Dialog.v2/0.23.1792.1036@0.23.1792.1036" timestamp="1594782515981" />
+    <state x="573" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1596525013493">
+      <screen x="0" y="23" width="1792" height="1037" />
     </state>
+    <state x="573" y="372" key="com.intellij.ide.util.TipDialog/-3440.23.3440.1417/0.23.1792.1037@0.23.1792.1037" timestamp="1596525013493" />
     <state x="573" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1590766408613" />
     <state x="573" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1591096071763" />
     <state x="573" y="371" key="com.intellij.ide.util.TipDialog/0.23.1792.1033@0.23.1792.1033" timestamp="1590605926039" />
@@ -617,25 +672,29 @@
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="1090" y="258" key="git4idea.branch.GitSmartOperationDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1589672491862" />
-    <state x="591" y="336" key="git4idea.merge.GitPullDialog" timestamp="1591716300217">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state x="591" y="338" key="git4idea.merge.GitPullDialog" timestamp="1596539021840">
+      <screen x="0" y="23" width="1792" height="1037" />
     </state>
     <state x="591" y="336" key="git4idea.merge.GitPullDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1591715326945" />
     <state x="591" y="336" key="git4idea.merge.GitPullDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1591716300217" />
     <state x="591" y="337" key="git4idea.merge.GitPullDialog/0.23.1792.1033@0.23.1792.1033" timestamp="1590033673845" />
     <state x="591" y="337" key="git4idea.merge.GitPullDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1590951124726" />
+    <state x="591" y="338" key="git4idea.merge.GitPullDialog/0.23.1792.1037@0.23.1792.1037" timestamp="1596539021840" />
     <state x="565" y="225" key="refactoring.ChangeSignatureDialog" timestamp="1588208894455">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="565" y="225" key="refactoring.ChangeSignatureDialog/0.23.1440.819@0.23.1440.819" timestamp="1588208894455" />
-    <state x="581" y="203" width="834" height="852" key="search.everywhere.popup" timestamp="1591717030365">
-      <screen x="0" y="23" width="1792" height="1031" />
+    <state x="581" y="204" width="835" height="858" key="search.everywhere.popup" timestamp="1596543118528">
+      <screen x="0" y="23" width="1792" height="1037" />
     </state>
+    <state x="-1297" y="207" width="894" height="874" key="search.everywhere.popup/-1920.23.1920.1057/0.23.1792.1037@-1920.23.1920.1057" timestamp="1596538927173" />
+    <state x="581" y="204" width="834" height="857" key="search.everywhere.popup/-3440.23.3440.1417/0.23.1792.1037@0.23.1792.1037" timestamp="1596525023651" />
     <state x="467" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1588209007331" />
     <state x="581" y="203" width="834" height="850" key="search.everywhere.popup/0.23.1792.1028@0.23.1792.1028" timestamp="1589786362193" />
     <state x="581" y="203" width="834" height="851" key="search.everywhere.popup/0.23.1792.1030@0.23.1792.1030" timestamp="1591715349037" />
     <state x="581" y="203" width="834" height="852" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1591717030365" />
     <state x="581" y="204" width="834" height="854" key="search.everywhere.popup/0.23.1792.1033@0.23.1792.1033" timestamp="1590033517185" />
+    <state x="581" y="204" width="835" height="858" key="search.everywhere.popup/0.23.1792.1037@0.23.1792.1037" timestamp="1596543118528" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,5 +726,12 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mGesf$main.coverage" NAME="main Coverage Results" MODIFIED="1596544776086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mGesf$scratch_11.coverage" NAME="scratch_11 Coverage Results" MODIFIED="1591717294619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/mGesf$sound.coverage" NAME="sound Coverage Results" MODIFIED="1589669297616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mGesf" />
+    <SUITE FILE_PATH="coverage/mGesf$LeapInterface.coverage" NAME="LeapInterface Coverage Results" MODIFIED="1596539249156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/leap_utils" />
+    <SUITE FILE_PATH="coverage/mGesf$setup.coverage" NAME="setup Coverage Results" MODIFIED="1594694298336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
