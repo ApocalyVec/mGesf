@@ -1,0 +1,11 @@
+<map id="arch_ioport_port_to_base" name="arch_ioport_port_to_base">
+<area shape="rect" id="node2" href="$ioport__pio_8h.xhtml#a9f41f6e31f878692e4dc785b7e5e1ad1" title="arch_ioport_pin_to_base" alt="" coords="229,5,392,32"/>
+<area shape="rect" id="node3" href="$ioport__pio_8h.xhtml#aa6472a0ec5f81577b9cde2d59bc1fd24" title="arch_ioport_enable_port" alt="" coords="231,56,391,83"/>
+<area shape="rect" id="node4" href="$ioport__pio_8h.xhtml#af570c68f452d88cc2643b2e9edf1c3ad" title="arch_ioport_disable_port" alt="" coords="229,107,392,133"/>
+<area shape="rect" id="node5" href="$ioport__pio_8h.xhtml#a6739905dc552d38327247c322dc5b2a3" title="arch_ioport_set_port_mode" alt="" coords="221,157,400,184"/>
+<area shape="rect" id="node6" href="$ioport__pio_8h.xhtml#a873196c80651c941e4d866e89905bc4c" title="arch_ioport_set_port_dir" alt="" coords="230,208,391,235"/>
+<area shape="rect" id="node7" href="$ioport__pio_8h.xhtml#a289b4a6c7fcfb1d49c20fe82563ca8aa" title="arch_ioport_set_port\l_level" alt="" coords="241,259,381,301"/>
+<area shape="rect" id="node8" href="$ioport__pio_8h.xhtml#a6a817b1e23d9ce4e69531077d1ab6422" title="arch_ioport_get_port\l_level" alt="" coords="241,325,381,366"/>
+<area shape="rect" id="node9" href="$ioport__pio_8h.xhtml#ae628b207f4ca33d690c5e409aa926329" title="arch_ioport_toggle\l_port_level" alt="" coords="247,390,375,431"/>
+<area shape="rect" id="node10" href="$ioport__pio_8h.xhtml#a10d5e38f1bdf4c3c9e0896557510d5db" title="arch_ioport_set_port\l_sense_mode" alt="" coords="241,455,381,497"/>
+</map>

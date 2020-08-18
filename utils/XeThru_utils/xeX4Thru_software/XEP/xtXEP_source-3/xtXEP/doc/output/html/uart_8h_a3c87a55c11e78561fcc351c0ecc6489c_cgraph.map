@@ -1,0 +1,4 @@
+<map id="UART_PutChar" name="UART_PutChar">
+<area shape="rect" id="node2" href="$uart_8c.xhtml#a00e60c418f3031062060215af67aa3e1" title="Return 1 if a character can be read in UART. " alt="" coords="167,5,292,32"/>
+<area shape="rect" id="node3" href="$uart_8c.xhtml#a0e1ced71e618555dec64e649c8035124" title="Return 1 if a character can be send to UART. " alt="" coords="171,56,287,83"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="GMACB_AutoNegotiate" name="GMACB_AutoNegotiate">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#gabf89fc2e0cb8e9ec7e0b99a5a14cae50" title="Enable MDI with PHY. " alt="" coords="449,5,590,32"/>
+<area shape="rect" id="node3" href="$gmacb__phy_8c.xhtml#add851348aa8e6c519d4efda3e53d025d" title="Read PHY register. " alt="" coords="454,81,585,108"/>
+<area shape="rect" id="node4" href="$gmacb__phy_8c.xhtml#aba0c6004ff96312d6cd98d4948ec0014" title="Write PHY register Return 1 if successfully, 0 if timeout. " alt="" coords="246,195,377,221"/>
+<area shape="rect" id="node5" href="$gmacb__phy_8c.xhtml#aced88b292369024663d7391ee02d2539" title="Dump all the useful registers. " alt="" coords="224,43,399,69"/>
+<area shape="rect" id="node6" href="$group__gmac__defines.xhtml#ga6013c7006f83c59d4895a92e3f473804" title="Enable MDI with PHY. " alt="" coords="447,132,592,159"/>
+<area shape="rect" id="node7" href="$group__gmac__defines.xhtml#ga144f2054229d8431f26a425ff7fd1bef" title="Enable RGMII mode for GMAC, called once after auto negotiate. " alt="" coords="238,245,385,272"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="xtfile_init" name="xtfile_init">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a31dcedbddd6f896d0157ce276d449fd4" title="Checks if external memory is enabled. " alt="" coords="132,5,287,47"/>
+<area shape="rect" id="node3" href="$xtsemaphore_8h.xhtml#a397a6e9c0a37ad527526e2c8ad9c5c7e" title="Create handle to mutex. " alt="" coords="335,97,441,123"/>
+<area shape="rect" id="node4" href="$xfs_8c.xhtml#acb8c539cd456d3e5789a479ae0642acd" title="Initialize the file system. " alt="" coords="176,122,243,149"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/host/core/USBHDriver.h" name="src/hal/x4m0x_s70/libraries/libusb/host/core/USBHDriver.h">
+<area shape="rect" id="node2" href="$_u_s_b_h___h_a_l_8c.xhtml" title="USB host driver Compliance with common driver UHD. " alt="" coords="5,191,248,233"/>
+<area shape="rect" id="node3" href="$uhi__cdc_8c.xhtml" title="USB host Communication Device Class interface. " alt="" coords="272,191,467,233"/>
+<area shape="rect" id="node4" href="$_u_s_b_h_8h.xhtml" title="Interface of the USB Host Controller (UHC) " alt="" coords="451,95,645,136"/>
+<area shape="rect" id="node5" href="$_u_s_b_h_8c.xhtml" title="USB Host Controller (UHC) " alt="" coords="491,191,685,233"/>
+<area shape="rect" id="node6" href="$uhi__hid__mouse_8c.xhtml" title="USB host Human Interface Device (HID) mouse driver. " alt="" coords="709,184,904,240"/>
+<area shape="rect" id="node7" href="$uhi__msc_8c.xhtml" title="USB host Mass Storage Class interface. " alt="" coords="928,191,1123,233"/>
+</map>

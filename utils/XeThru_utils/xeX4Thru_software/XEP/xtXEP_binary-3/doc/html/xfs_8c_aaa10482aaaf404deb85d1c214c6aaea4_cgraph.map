@@ -1,0 +1,9 @@
+<map id="xfs_create_file" name="xfs_create_file">
+<area shape="rect" id="node2" href="$xfs_8c.xhtml#a51fef9f1383012edd34a7ad0608f90eb" title="Checks if a file with given type and identifier exists. " alt="" coords="201,93,311,120"/>
+<area shape="rect" id="node3" href="$xfs_8c.xhtml#a538f8868287ede7b1e971f0ee38e001d" title="xfs_lock" alt="" coords="411,5,483,32"/>
+<area shape="rect" id="node4" href="$xfs_8c.xhtml#a215a24f98332957af4751a173771183a" title="xfs_file_count" alt="" coords="393,81,501,108"/>
+<area shape="rect" id="node5" href="$xfs_8c.xhtml#adc902d397994654027ba6a892ba72360" title="xfs_unlock" alt="" coords="403,132,491,159"/>
+<area shape="rect" id="node6" href="$xfs_8c.xhtml#a845d7cb49ea774a8b1dd22f5f723a8bc" title="xfs_find_free_contiguous\l_section_of_size" alt="" coords="167,195,345,237"/>
+<area shape="rect" id="node7" href="$xfs_8c.xhtml#a06b271b8c14d9ef5dd3e28fb9885f5f6" title="xfs_store_file_entry\l_in_allocation_table" alt="" coords="183,261,329,302"/>
+<area shape="rect" id="node8" href="$xfs_8c.xhtml#a7b9303aef25ff6fcc0ac8087eca101d4" title="xfs_commit_allocation\l_table" alt="" coords="174,326,338,367"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GetEndpointStatus" name="GetEndpointStatus">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga1a1fd7ed1af2be8e202879458a6cfda7" title="Sets/Clear/Get the HALT state on the endpoint. " alt="" coords="196,5,323,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="212,56,307,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="210,107,309,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="GMACD_SetRxCallback" name="GMACD_SetRxCallback">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#ga6c39b23fa0f7760458941d6a5bf90669" title="Disable interrupt(s). " alt="" coords="221,5,344,32"/>
+<area shape="rect" id="node3" href="$group__gmac__defines.xhtml#ga7ada4663e83402d9ca6da62f166e115f" title="Enable interrupt(s). " alt="" coords="223,56,342,83"/>
+</map>

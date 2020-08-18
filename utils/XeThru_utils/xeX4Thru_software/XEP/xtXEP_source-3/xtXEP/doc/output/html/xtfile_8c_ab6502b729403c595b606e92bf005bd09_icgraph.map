@@ -1,0 +1,12 @@
+<map id="xtfile_lock" name="xtfile_lock">
+<area shape="rect" id="node2" href="$xtfile_8c.xhtml#adb0d51c5b210a72ee8bf5e56b06334e9" title="xtfile_close_all_files" alt="" coords="150,5,295,32"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#aab3ec81dba994ab42e047561a13c5e27" title="Creates and opens a new file with given type and identifiers with an empty content of given size..." alt="" coords="137,57,308,98"/>
+<area shape="rect" id="node4" href="$xtfile_8c.xhtml#a10291a10929d065f8ec410f55e716bf1" title="Creates and opens a new file with given type and identifiers with the contents provided in the data b..." alt="" coords="356,93,527,120"/>
+<area shape="rect" id="node5" href="$xtfile_8c.xhtml#a9ea9a4d241077c7c7d3982bc1159f9ac" title="Deletes the file with the specified type and identifier. " alt="" coords="173,173,272,200"/>
+<area shape="rect" id="node6" href="$xtfile_8c.xhtml#acd9f464dd135cbeaf8671e7c3c4c900f" title="xtfile_get_handle" alt="" coords="157,224,288,251"/>
+<area shape="rect" id="node7" href="$xtfile_8c.xhtml#ade819cbf4de9ee15f62317e3bf84fed6" title="Opens an existing file with given type and identifier. " alt="" coords="177,275,268,301"/>
+<area shape="rect" id="node8" href="$xtfile_8c.xhtml#a60f5bc8f5e3c8f0e61a4c41d05c15556" title="Gets the pointer and size of the content of the file. " alt="" coords="161,325,285,352"/>
+<area shape="rect" id="node9" href="$xtfile_8c.xhtml#ac05fab0f49744c5d44341417604533d8" title="Clears the entire file contents. " alt="" coords="177,376,268,403"/>
+<area shape="rect" id="node10" href="$xtfile_8c.xhtml#a1c5bee91f1654db6aaca14d4f313c32a" title="Writes data to file. " alt="" coords="178,427,267,453"/>
+<area shape="rect" id="node11" href="$xtfile_8c.xhtml#ab3f02b575f459d00a3005fed712dcace" title="Closes an open file. " alt="" coords="177,477,269,504"/>
+</map>

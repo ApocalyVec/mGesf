@@ -1,0 +1,9 @@
+<map id="xethru_task" name="xethru_task">
+<area shape="rect" id="node2" href="$mcp__wrapper_8c.xhtml#a8efb91e9c3d5560175665b4d761dc3c1" title="mcpw_get_instance_size" alt="" coords="144,5,312,32"/>
+<area shape="rect" id="node3" href="$mcp__wrapper_8c.xhtml#a084d5ccbec6eb410307e89841bd01dde" title="mcpw_init" alt="" coords="188,56,268,83"/>
+<area shape="rect" id="node4" href="$task__xethru_8c.xhtml#aaee208ebf2b292e2ee902fc38f03e6d3" title="mcpw_send_bytes" alt="" coords="163,107,293,133"/>
+<area shape="rect" id="node5" href="$task__xethru_8c.xhtml#a52b9d69168805fb3152bb63f74bd4bde" title="mcpw_wait_for_response" alt="" coords="145,157,311,184"/>
+<area shape="rect" id="node6" href="$task__xethru_8c.xhtml#a096853bdfdec199c03de9b0933397a3c" title="mcpw_response_ready" alt="" coords="151,208,305,235"/>
+<area shape="rect" id="node7" href="$task__xethru_8c.xhtml#a4d700c7ee4beaac0a8a4c95c11e5c673" title="mcpw_demo_x4m200" alt="" coords="154,259,302,285"/>
+<area shape="rect" id="node8" href="$task_8h.xhtml#a3fc5adc340b17cb07c12ffa90d7bb8f3" title="vTaskDelay" alt="" coords="360,284,448,311"/>
+</map>

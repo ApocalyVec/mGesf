@@ -1,0 +1,6 @@
+<map id="_CDCDEEMDriverConfigurationDescriptorsOTG" name="_CDCDEEMDriverConfigurationDescriptorsOTG">
+<area shape="rect" id="node2" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="20,5,199,32"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_otg_descriptor.xhtml" title="_USBOtgDescriptor" alt="" coords="36,56,183,83"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="5,107,213,133"/>
+<area shape="rect" id="node5" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="20,157,199,184"/>
+</map>

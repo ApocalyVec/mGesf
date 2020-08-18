@@ -1,0 +1,5 @@
+<map id="uhi_msc_transfer" name="uhi_msc_transfer">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ae40b333993e7c9aba64dc65f41ede8c4" title="Sends the CBW packet. " alt="" coords="560,5,667,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a4b8bf30114a15489e5f8b0619a8319ea" title="Checks the CBW packet transfer and launch the next step The next step can be a DATA phase or a CSW pa..." alt="" coords="371,31,512,57"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#ad0e3a3e50fb04240291caac060b32828" title="Start the transfer of the CSW packet. " alt="" coords="185,81,323,108"/>
+</map>

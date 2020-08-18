@@ -1,0 +1,5 @@
+<map id="xt_get_system_timer_us" name="xt_get_system_timer_us">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#a7d0980e5e1fb4f42a5d10102c91609f4" title="Delays the execution for the specified number of microseconds. " alt="" coords="269,5,367,32"/>
+<area shape="rect" id="node3" href="$xthousekeeping_8c.xhtml#ad5a7723fb96e5789fa7ecb2554da3b04" title="xthousekeeping_trigger\l_crashdump" alt="" coords="232,57,404,98"/>
+<area shape="rect" id="node4" href="$xttoolbox_8c.xhtml#adfa8238f924a2d17957bdefcbab51490" title="Get accurate timer in microseconds. " alt="" coords="253,123,383,149"/>
+</map>

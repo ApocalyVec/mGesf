@@ -1,0 +1,4 @@
+<map id="_uart_task_init" name="_uart_task_init">
+<area shape="rect" id="node2" href="$xtio__serial__com_8c.xhtml#a143e7abdc640864b988cc34a2d53fd81" title="Initiate serial communication &#45; USB if available, otherwise UART. " alt="" coords="192,5,339,32"/>
+<area shape="rect" id="node3" href="$xtio__serial__com_8c.xhtml#a875308939bcbe311557d0e0fb97f9b7d" title="Initiate debug serial communication. " alt="" coords="168,56,363,83"/>
+</map>

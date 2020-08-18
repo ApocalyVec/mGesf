@@ -1,0 +1,4 @@
+<map id="uhi_msc_mem_get_lun" name="uhi_msc_mem_get_lun">
+<area shape="rect" id="node2" href="$group__uhi__msc__group.xhtml#ga2e7cf8daaa331de6b805e644955f0045" title="Tests if the interface UHI Mass Storage is available The UHI Mass Storage can be busy during the enum..." alt="" coords="224,5,379,32"/>
+<area shape="rect" id="node3" href="$group__uhi__msc__group.xhtml#ga5da9d100f90027db04910efe08c4a057" title="Gives the number of LUN available Note: A LUN can be available, but with a status LUN_NOT_PRESENT..." alt="" coords="237,56,366,83"/>
+</map>

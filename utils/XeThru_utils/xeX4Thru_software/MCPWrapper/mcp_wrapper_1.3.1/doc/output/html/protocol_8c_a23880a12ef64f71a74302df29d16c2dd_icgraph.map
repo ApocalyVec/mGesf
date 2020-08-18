@@ -1,0 +1,10 @@
+<map id="process_uint" name="process_uint">
+<area shape="rect" id="node2" href="$protocol_8h.xhtml#a4101dfe16512a1296288f0a8585265f4" title="createStartBootloaderCommand" alt="" coords="155,5,361,32"/>
+<area shape="rect" id="node3" href="$protocol_8h.xhtml#a40294e6747a996253c189ff43ddd0ea3" title="createX4DriverReadFromSpi\lRegisterCommand" alt="" coords="167,57,349,98"/>
+<area shape="rect" id="node4" href="$protocol_8h.xhtml#a913a80784a4caa4209537a889e686b6b" title="createSetIOPinControlCommand" alt="" coords="153,123,363,149"/>
+<area shape="rect" id="node5" href="$protocol_8h.xhtml#a81c1167b288478190589a98b4c9a7a0b" title="createSetIOPinValueCommand" alt="" coords="157,173,359,200"/>
+<area shape="rect" id="node6" href="$protocol_8h.xhtml#a55930b341607eaa2563f3047fd24b772" title="createGetIOPinValueCommand" alt="" coords="157,224,359,251"/>
+<area shape="rect" id="node7" href="$protocol_8h.xhtml#aa19017b32d2c1f125bc5d08ab7e6bedb" title="createSetOutputControlCommand" alt="" coords="149,275,367,301"/>
+<area shape="rect" id="node8" href="$protocol_8h.xhtml#a4f0a20b0f23527c4b04b6b1ad97437ce" title="createSetBaudRate" alt="" coords="191,325,325,352"/>
+<area shape="rect" id="node9" href="$protocol_8h.xhtml#a0cb752785cc9b92472122c08c5cf53e5" title="createSetNoiseMapControl\lCommand" alt="" coords="169,377,347,418"/>
+</map>

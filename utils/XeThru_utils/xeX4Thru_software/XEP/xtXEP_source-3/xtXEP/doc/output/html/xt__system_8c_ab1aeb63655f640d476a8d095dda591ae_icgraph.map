@@ -1,0 +1,4 @@
+<map id="get_pc" name="get_pc">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#ac6fbcd6ee86a6cc239db400a2f9560a6" title="Gets the system timer in microseconds. " alt="" coords="119,5,298,32"/>
+<area shape="rect" id="node3" href="$xt__system_8c.xhtml#a9b086edc4d10515d81e925efba022638" title="Gets the program counter of the specified task. " alt="" coords="119,57,299,98"/>
+</map>

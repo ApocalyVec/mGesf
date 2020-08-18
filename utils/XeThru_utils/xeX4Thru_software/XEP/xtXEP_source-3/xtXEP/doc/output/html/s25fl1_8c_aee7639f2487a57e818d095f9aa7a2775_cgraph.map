@@ -1,0 +1,8 @@
+<map id="S25FL1D_EraseSector" name="S25FL1D_EraseSector">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a300f42045ccdeb44839f77a260052bcb" title="Reads and returns the status register of the serial flash. " alt="" coords="483,125,649,151"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a1a915b35968bc2e31ab4fe5e38a76708" title="Start S25FL1D Send command with/without data write/read. " alt="" coords="697,49,884,75"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a1784cf7192ea7c105426b41420cab077" title="S25FL1D_CheckProtectedAddr" alt="" coords="217,99,435,126"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#ac688485752eaf90e9d91d99d362d52b9" title="S25FL1D_EnableWrite" alt="" coords="246,49,406,75"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#a8be9db10e4e0f291c0cb537fcc7e3d68" title="Start S25FL1D Memory access with/without data write/read. " alt="" coords="235,201,417,227"/>
+<area shape="rect" id="node7" href="$s25fl1_8c.xhtml#acae5393b56a4415eb9a29f9b53df8bf9" title="Wait for transfer to finish calling the SPI driver ISR. " alt="" coords="263,150,389,177"/>
+</map>

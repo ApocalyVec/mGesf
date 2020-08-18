@@ -1,0 +1,4 @@
+<map id="uhi_msc_scsi_read_capacity" name="uhi_msc_scsi_read_capacity">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ac95ce59659e65907d582bccbabe47522" title="Step 4 of the initialization of a USB MSC device Sends the SCSI READ CAPACITY request on the current ..." alt="" coords="257,5,425,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#acdfb46388d2b6e842e93d193a169440f" title="Decodes the result of scsi TEST UNIT READY command Launches READ CAPACITY command, if a new LUN has been detected. " alt="" coords="256,57,425,98"/>
+</map>

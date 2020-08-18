@@ -1,0 +1,6 @@
+<map id="HIDDTransferDriver_ConfigurationChangedHandler" name="HIDDTransferDriver_ConfigurationChangedHandler">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="314,5,442,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga946b2d10dfc497b6b24e602be6f3bd05" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="288,56,468,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid.xhtml#ga82ccc86124b2cd8918810b69c0afec13" title="Parse the USB HID Function Interface. " alt="" coords="275,107,481,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hid.xhtml#ga18ed1d60f54db7c0dd38b3db4fcccfa8" title="Start polling interrupt OUT pipe (output report, host to device) if there is. " alt="" coords="284,158,472,199"/>
+</map>

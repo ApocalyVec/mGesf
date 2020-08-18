@@ -1,0 +1,4 @@
+<map id="_usb_available" name="_usb_available">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="168,5,343,32"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a984c6d05372bfd34dc338a85d21dc81a" title="Get level of specified IO pin. " alt="" coords="391,31,500,57"/>
+</map>

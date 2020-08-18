@@ -1,0 +1,4 @@
+include pymoduleconnector/moduleconnectorwrapper/_moduleconnectorwrapper.*
+include pymoduleconnector/moduleconnectorwrapper/*.dll
+include README.txt
+graft pymoduleconnector/doc/output/html

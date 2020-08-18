@@ -1,0 +1,3 @@
+<map id="AUDDStream_ChangeMute" name="AUDDStream_ChangeMute">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga29cac99748de8021bda0ee58a75b9682" title="Callback triggered after the new mute status of a channel has been read. " alt="" coords="251,5,407,32"/>
+</map>

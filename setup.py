@@ -46,7 +46,6 @@ elif platform == "win32":
     # Windows...
     os.chdir('utils/XeThru_utils/xeX4Thru_software/ModuleConnector/ModuleConnector-win32_win64-1/python36-win64')
 
-
 import subprocess
 subprocess.call(['python', 'setup.py', 'install'])
 

@@ -1,0 +1,5 @@
+<map id="_x4driver_get_x4_internal_register" name="_x4driver_get_x4_internal_register">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#ae0d00fd40c63804105a1bbda83f78df1" title="Gets x4 software register value. " alt="" coords="251,5,405,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="239,71,417,98"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a065f521890358aad96f06f1c65a73901" title="Gets XIF register value. " alt="" coords="239,122,417,149"/>
+</map>

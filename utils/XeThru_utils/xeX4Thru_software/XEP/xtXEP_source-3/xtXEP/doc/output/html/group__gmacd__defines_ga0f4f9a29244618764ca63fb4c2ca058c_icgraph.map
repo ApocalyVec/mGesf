@@ -1,0 +1,4 @@
+<map id="GMACD_ResetRx" name="GMACD_ResetRx">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga418589cbbef19de6084670d572b6ae27" title="Initialize necessary allocated buffer lists for GMAC Driver to transfer data. " alt="" coords="181,5,328,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#gaede5219eb9101a760ecb266722825318" title="Reset TX &amp; RX queue &amp; statistics. " alt="" coords="198,56,311,83"/>
+</map>

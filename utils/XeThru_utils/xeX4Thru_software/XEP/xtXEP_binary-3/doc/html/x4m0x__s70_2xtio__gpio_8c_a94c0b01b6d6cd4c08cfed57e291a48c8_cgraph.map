@@ -1,0 +1,3 @@
+<map id="disable_io_irq" name="disable_io_irq">
+<area shape="rect" id="node2" href="$pio__it_8h.xhtml#a07463cb19ee17ef2afdd2f31def188c5" title="Disables a given interrupt source, with no added side effects. " alt="" coords="161,5,267,32"/>
+</map>

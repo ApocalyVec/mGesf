@@ -1,0 +1,4 @@
+<map id="uhi_cdc_set_ctrl_line" name="uhi_cdc_set_ctrl_line">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group.xhtml#ga4aadc9c27177996b0ca5874580595f0c" title="Open a port of UHI CDC interface. " alt="" coords="207,5,317,32"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group.xhtml#ga10b486d8cec3a08af408f3683bcf66ee" title="Close a port. " alt="" coords="207,56,317,83"/>
+</map>

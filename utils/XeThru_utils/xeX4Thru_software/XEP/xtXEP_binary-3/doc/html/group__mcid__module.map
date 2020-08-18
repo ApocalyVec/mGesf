@@ -1,0 +1,6 @@
+<map id="MCI Driver (HAL for SD/MMC Lib)" name="MCI Driver (HAL for SD/MMC Lib)">
+<area shape="rect" id="node1" href="$group__mcid__functions.xhtml" title="MCI Driver Functions" alt="" coords="207,5,357,32"/>
+<area shape="rect" id="node2" href="$group__mcid__structs.xhtml" title="MCI Driver Data Structs" alt="" coords="196,56,368,83"/>
+<area shape="rect" id="node3" href="$group__mcid__defines.xhtml" title="MCI Driver Defines" alt="" coords="213,107,351,133"/>
+<area shape="rect" id="node5" href="$group__hsmci__module.xhtml" title="Working with HSMCI" alt="" coords="209,157,355,184"/>
+</map>

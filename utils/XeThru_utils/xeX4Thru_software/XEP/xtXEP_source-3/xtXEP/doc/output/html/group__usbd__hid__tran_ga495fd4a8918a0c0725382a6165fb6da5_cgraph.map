@@ -1,0 +1,5 @@
+<map id="HIDDTransferDriver_GetDescriptor" name="HIDDTransferDriver_GetDescriptor">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="247,5,346,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga02b4d22818a9e99025383bbc5a2507d7" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="223,56,370,83"/>
+<area shape="rect" id="node4" href="$group__usb__descriptor.xhtml#gab2cf48af0ca19522832310e3eed00490" title="Parses the given Configuration descriptor (followed by relevant interface, endpoint and class&#45;specifi..." alt="" coords="196,107,397,149"/>
+</map>

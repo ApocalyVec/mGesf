@@ -1,0 +1,10 @@
+<map id="usart_serial_init" name="usart_serial_init">
+<area shape="rect" id="node2" href="$group__sysclk__group.xhtml#ga8ae5a954767dfc4d16ce5ae7928e6edf" title="Retrieves the current rate in Hz of the peripheral clocks. " alt="" coords="363,22,532,49"/>
+<area shape="rect" id="node3" href="$group__sysclk__group.xhtml#ga97354113454b658bf76596b3580cf195" title="Enable a peripheral&#39;s clock. " alt="" coords="363,229,531,271"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__usart__group.xhtml#gaeef2121bcab41f9850e58c59fdc34d10" title="Configure USART to work in RS232 mode. " alt="" coords="183,110,298,137"/>
+<area shape="rect" id="node5" href="$group__sysclk__group.xhtml#gae7ac107dcdb3b01de4af539cab17a93d" title="Retrieves the current rate in Hz of the Peripheral Bus clock attached to the specified peripheral..." alt="" coords="167,44,315,85"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__usart__group.xhtml#ga1c3a4036f8b9b21f833a641b07b84f6c" title="Enable USART transmitter. " alt="" coords="183,211,298,238"/>
+<area shape="rect" id="node7" href="$group__sam__drivers__usart__group.xhtml#ga7fd617322d666621fee15501ae0de7c7" title="Enable USART receiver. " alt="" coords="183,262,298,289"/>
+<area shape="rect" id="node8" href="$group__sam__drivers__flexcom__group.xhtml#gad2900fd33f36b75e9ff5e5b833ba9943" title="Enable the FLEXCOM module. " alt="" coords="185,161,297,187"/>
+<area shape="rect" id="node9" href="$group__sam__drivers__flexcom__group.xhtml#ga9c5585af21feb7255c56d8aaa80d7141" title="Set the FLEXCOM opration mode. " alt="" coords="168,363,313,390"/>
+</map>

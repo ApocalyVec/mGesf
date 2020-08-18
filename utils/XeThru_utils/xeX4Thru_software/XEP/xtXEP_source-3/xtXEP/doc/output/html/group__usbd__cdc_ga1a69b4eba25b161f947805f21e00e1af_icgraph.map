@@ -1,0 +1,4 @@
+<map id="CDCDEEMPort_Write" name="CDCDEEMPort_Write">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga626636e7fcd1458fabf797f1280bd272" title="Sends a data buffer through the virtual COM port created by the CDC device serial driver..." alt="" coords="207,5,333,32"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#ga28acc08820659f041668dd2edf6284da" title="_TransferCallback" alt="" coords="204,56,336,83"/>
+</map>

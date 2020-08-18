@@ -1,0 +1,5 @@
+<map id="xtio_irq_unregister_callback" name="xtio_irq_unregister_callback">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a58dee74fbb4ad804b56f971e48fc1e9c" title="xtio_decode_pin_id" alt="" coords="193,5,336,32"/>
+<area shape="rect" id="node3" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a94c0b01b6d6cd4c08cfed57e291a48c8" title="disable_io_irq" alt="" coords="211,56,319,83"/>
+<area shape="rect" id="node4" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a4ed9b32000d3b15c46ffd748f32ed44d" title="Default interrupt handler for unused IRQs. " alt="" coords="199,107,330,133"/>
+</map>

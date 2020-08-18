@@ -1,0 +1,8 @@
+<map id="src/main.c" name="src/main.c">
+<area shape="rect" id="node2" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="5,80,76,107"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="237,80,319,107"/>
+<area shape="rect" id="node6" href="$xep__application_8h.xhtml" title="XEP Module application interface. " alt="" coords="343,80,477,107"/>
+<area shape="rect" id="node7" href="$task__monitor_8h.xhtml" title="System monitor task. " alt="" coords="501,80,618,107"/>
+<area shape="rect" id="node8" href="$task__hostcom_8h.xhtml" title="task_hostcom.h" alt="" coords="641,80,765,107"/>
+<area shape="rect" id="node9" href="$task__radar_8h.xhtml" title="Radar event task. " alt="" coords="790,80,891,107"/>
+</map>

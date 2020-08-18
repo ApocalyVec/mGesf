@@ -1,0 +1,4 @@
+<map id="usart_init_sync_slave" name="usart_init_sync_slave">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#ga6cb84f0297ddca62d4077f616efa5c5b" title="Reset the USART and disable TX and RX. " alt="" coords="230,5,317,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__usart__group.xhtml#ga6d4739357149c140c2e283a287158608" title="Select the SCK pin as the source of baud rate for the USART synchronous slave modes. " alt="" coords="200,57,347,98"/>
+</map>

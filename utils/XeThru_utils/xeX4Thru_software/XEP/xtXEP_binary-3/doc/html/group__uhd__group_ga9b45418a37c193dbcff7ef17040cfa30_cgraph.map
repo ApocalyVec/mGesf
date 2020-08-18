@@ -1,0 +1,15 @@
+<map id="USBH_HAL_DisableUsb" name="USBH_HAL_DisableUsb">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#af53df9330077448ac0d721dbef847c9f" title="Check if clock is usable or not. " alt="" coords="231,5,398,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a78d27724945f587c54cba1d9617979c8" title="Freeze or unfreeze USB clock. " alt="" coords="229,56,400,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#aa9a5b060519f982e8cd29dc32754b5a9" title="Gets USB host interrupt status. " alt="" coords="230,107,399,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#a8b5061d7281a8104020962d8b6291da1" title="Sets USB host disable the Generation of Start of Frame. " alt="" coords="240,157,389,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#abb9881c68cce5603acf01ad61966bf07" title="Raise interrupt for endpoint. " alt="" coords="265,208,364,235"/>
+<area shape="rect" id="node7" href="$group___u_s_b_h__group__interne.xhtml#ga78a0073e6ae8ed58cc6a28ea89820ef1" title="Notify device connection or disconnection. " alt="" coords="225,259,404,285"/>
+<area shape="rect" id="node8" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="262,309,367,336"/>
+<area shape="rect" id="node9" href="$usbhs_8h.xhtml#a07183fee11fbf4c00401b455bdfed9dd" title=" USBHS_CTRL " alt="" coords="239,360,391,387"/>
+<area shape="rect" id="node10" href="$usbhs_8h.xhtml#a271a9d7a4f68db5bfab4401f8e67d347" title="Enables or disables USB. " alt="" coords="243,411,387,437"/>
+<area shape="rect" id="node11" href="$libraries_2libboard_2resources___x4_m0x_2system__sams70_8c.xhtml#ad110a0837c9e910d788b9b73fd3d92dd" title="Disables USB clock. " alt="" coords="243,461,386,488"/>
+<area shape="rect" id="node12" href="$pmc_8h.xhtml#a2bb6755e2bf15a75e193cb6510064fa4" title="Disables the clock of a peripheral. " alt="" coords="231,512,399,539"/>
+<area shape="rect" id="node13" href="$group__uhd__group.xhtml#ga5d9360ec239feb3ede5e4a0223d3c6e2" title="Manages the sleep mode following the USBHS state. " alt="" coords="249,563,380,589"/>
+<area shape="rect" id="node14" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="254,613,375,640"/>
+</map>

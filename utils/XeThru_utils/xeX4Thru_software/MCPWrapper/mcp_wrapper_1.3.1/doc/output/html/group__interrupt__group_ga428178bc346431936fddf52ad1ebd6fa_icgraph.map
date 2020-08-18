@@ -1,0 +1,7 @@
+<map id="cpu_irq_restore" name="cpu_irq_restore">
+<area shape="rect" id="node2" href="$group__sleepmgr__group.xhtml#gac1a7002fd7879c57cc22ccab48be7114" title="Increase lock count for a sleep mode. " alt="" coords="171,5,316,32"/>
+<area shape="rect" id="node3" href="$group__sleepmgr__group.xhtml#ga0c3c8087f46b2332f8a274c6651afe3f" title="Decrease lock count for a sleep mode. " alt="" coords="164,56,323,83"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__efc__group.xhtml#ga48f3f38debde0c03c936f777aef6cc2e" title="Perform the given command and wait until its completion (or an error). " alt="" coords="167,107,320,133"/>
+<area shape="rect" id="node5" href="$fpu_8h.xhtml#ac8197ab2bad6b583cc11f4543cf14c85" title="Enable FPU. " alt="" coords="201,157,285,184"/>
+<area shape="rect" id="node6" href="$fpu_8h.xhtml#ae58a0e3a39267b099529e2be20a16cf4" title="Disable FPU. " alt="" coords="200,208,287,235"/>
+</map>

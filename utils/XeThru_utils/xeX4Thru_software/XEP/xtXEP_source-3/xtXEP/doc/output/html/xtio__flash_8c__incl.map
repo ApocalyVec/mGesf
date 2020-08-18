@@ -1,0 +1,7 @@
+<map id="src/hal/x4m0x_s70/xtio_flash.c" name="src/hal/x4m0x_s70/xtio_flash.c">
+<area shape="rect" id="node2" href="$xtmemory_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="5,95,104,121"/>
+<area shape="rect" id="node3" href="$xtsemaphore_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="129,95,247,121"/>
+<area shape="rect" id="node4" href="$xtio__flash_8h.xhtml" title="Local header file for xtio FLASH functions. " alt="" coords="271,95,366,121"/>
+<area shape="rect" id="node5" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="390,95,461,121"/>
+<area shape="rect" id="node8" href="$flashd_8h.xhtml" title="The flash driver provides the unified interface for flash program operations. " alt="" coords="689,95,761,121"/>
+</map>

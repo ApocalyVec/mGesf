@@ -1,0 +1,8 @@
+<map id="x4driver_set_downconversion" name="x4driver_set_downconversion">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="537,53,636,80"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a14e3623f55953194c1660b4fcc5814cf" title="Sets a register segment. " alt="" coords="263,148,449,175"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="539,133,635,160"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="497,209,676,236"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a7adc63aa5a9f25cdb5f613388d816f82" title="Updates downconversion coefficients. " alt="" coords="265,31,447,73"/>
+<area shape="rect" id="node7" href="$x4driver_8c.xhtml#a59bb6ec7d08888223c01bffa2aedcf50" title="Set frame area start and end in meters. " alt="" coords="265,97,447,124"/>
+</map>

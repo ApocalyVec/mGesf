@@ -1,0 +1,5 @@
+<map id="uhi_msc_enable_step4" name="uhi_msc_enable_step4">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a26a2e9dd16de03b452df7484700d6754" title="Step 3 of the initialization of a USB MSC device Selects the next LUN. " alt="" coords="472,5,640,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#ac2339d091ff134f06cf5f9cbb0185cb3" title="Sends the CBW packet of the scsi READ CAPACITY command. " alt="" coords="221,68,424,95"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#a0920da8c6f19a6a5fc403687174cd525" title="Step 5 of the initialization of a USB MSC device Go to the initialization of the next LUN..." alt="" coords="239,119,407,145"/>
+</map>

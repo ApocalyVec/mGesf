@@ -1,0 +1,4 @@
+<map id="USBHS_UsbMode" name="USBHS_UsbMode">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga3699059b9b9b52b7e55af6d070a7fe61" title="Initializes the USB HW Access driver. " alt="" coords="229,5,348,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="189,56,388,83"/>
+</map>

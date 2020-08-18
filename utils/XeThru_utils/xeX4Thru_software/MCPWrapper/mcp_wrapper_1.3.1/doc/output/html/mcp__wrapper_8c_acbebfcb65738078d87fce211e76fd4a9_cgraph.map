@@ -1,0 +1,4 @@
+<map id="mcpw_store_noisemap" name="mcpw_store_noisemap">
+<area shape="rect" id="node2" href="$mcp__wrapper_8c.xhtml#af4b6466ee142c75a81c2d0c4e52baa40" title="mcpw_start_send" alt="" coords="249,5,373,32"/>
+<area shape="rect" id="node3" href="$protocol_8c.xhtml#a8a442d5d585db2aa20cb6584c0b651d1" title="createStoreNoiseMapCommand" alt="" coords="208,56,415,83"/>
+</map>

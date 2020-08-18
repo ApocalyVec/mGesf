@@ -1,0 +1,4 @@
+<map id="arch_ioport_set_port_sense_mode" name="arch_ioport_set_port_sense_mode">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#gacdf0448dd0e6c0338c96f0d1715cd33f" title="Set the pin sense mode of a multiple IOPORT pins on a single port. " alt="" coords="193,5,383,32"/>
+<area shape="rect" id="node3" href="$ioport__pio_8h.xhtml#a200de47e9838f5342e52a1034ef30013" title="arch_ioport_set_pin\l_sense_mode" alt="" coords="221,57,355,98"/>
+</map>

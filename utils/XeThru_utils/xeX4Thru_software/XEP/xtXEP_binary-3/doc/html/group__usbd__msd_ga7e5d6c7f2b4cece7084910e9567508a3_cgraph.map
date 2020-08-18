@@ -1,0 +1,10 @@
+<map id="SBC_Write10" name="SBC_Write10">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#gaedd02c4c2e4224d76f3b5dc363abd546" title="Check if the LUN can write. " alt="" coords="179,5,338,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga6259d674a30286b49d79ffa89b44e809" title="Updates the sense data of a LUN with the given key and codes. " alt="" coords="409,31,584,57"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#ga5944997ebb6926907d5c9d86e63b9fcf" title="MED_GetBlockSize" alt="" coords="187,107,330,133"/>
+<area shape="rect" id="node5" href="$group__usbd__msd.xhtml#gae549ae32f073c7a21e57599edd3abc37" title="MED_IsMappedWRSupported" alt="" coords="156,157,361,184"/>
+<area shape="rect" id="node6" href="$group__usbd__msd.xhtml#gafeb7ba2e26fafad5775d2016bb16859b" title="MED_GetMappedAddress" alt="" coords="167,208,351,235"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gaa786fa9bbfd3c2f64b5f486e537ffebb" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="209,259,308,285"/>
+<area shape="rect" id="node8" href="$_s_b_c_methods_8c.xhtml#ga65e2aa51e755428df116ecc89b7aa996" title="This function is to be used as a callback for USB or LUN transfers. " alt="" coords="183,309,334,336"/>
+<area shape="rect" id="node9" href="$group__usbd__msd.xhtml#gafc350a85607c66c7e8ceb616ef18c6fa" title="Writes data on the a LUN starting at the specified block address. " alt="" coords="215,360,302,387"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="xt_idle_sleep" name="xt_idle_sleep">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#afd2617026109aed181bfdf4506d1961d" title="xt_task_report_idle" alt="" coords="165,5,308,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="205,56,269,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8a55dfb43484b3ed4d181761f92cc2db" title="Wait For Interrupt. " alt="" coords="208,107,265,133"/>
+<area shape="rect" id="node5" href="$xt__system_8c.xhtml#a4987330d65f24fe1d70291545f0a7870" title="xt_task_report_active" alt="" coords="157,157,316,184"/>
+</map>

@@ -1,0 +1,27 @@
+<map id="PMC_EnablePeripheral" name="PMC_EnablePeripheral">
+<area shape="rect" id="node2" href="$startup__sams70_8c.xhtml#a7cecd108fd88dec10ce2e97ad905e4ef" title="Performs the low&#45;level initialization of the chip. " alt="" coords="533,53,631,80"/>
+<area shape="rect" id="node3" href="$board__memories_8h.xhtml#a0e0e3f4ee2328faeb9f45c5fc591f8de" title="Configures the EBI for SDRAM (IS42S16100E&#45;7B) access. " alt="" coords="493,111,671,137"/>
+<area shape="rect" id="node4" href="$dbg__console_8c.xhtml#ace83a2e17586584b7c798ca7ba872bb9" title="Configures an USART peripheral with the specified parameters. " alt="" coords="523,173,641,200"/>
+<area shape="rect" id="node5" href="$afec_8c.xhtml#a950774d7e0aa6c4b616f9147fd048573" title="Initialize the AFE controller. " alt="" coords="269,512,383,539"/>
+<area shape="rect" id="node6" href="$group__gmacd__defines.xhtml#ga8706caf686e1d073851111db1ba2663c" title="Initialize the GMAC with the Gmac controller address. " alt="" coords="277,563,375,589"/>
+<area shape="rect" id="node7" href="$iso7816__4_8c.xhtml#a31fe7825ff1becdc1db5069d4236b75c" title="Initializes a ISO driver. " alt="" coords="275,613,377,640"/>
+<area shape="rect" id="node8" href="$group__can__module.xhtml#ga9b35cd79fb5eeec8cf1ba7247b25a646" title="Initializes the MCAN hardware for giving peripheral. " alt="" coords="539,249,625,276"/>
+<area shape="rect" id="node9" href="$group__mcid__functions.xhtml#gaf3888b57bf46a3d153daa692d739f346" title="Enable MCI peripheral access clock. " alt="" coords="258,664,394,691"/>
+<area shape="rect" id="node10" href="$pio_8c.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="271,259,381,285"/>
+<area shape="rect" id="node11" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="483,305,681,332"/>
+<area shape="rect" id="node12" href="$xtio__i2c_8h.xhtml#a7b0e666ddfaac918eb931d278b66559c" title="xtio_i2c_init" alt="" coords="534,359,630,385"/>
+<area shape="rect" id="node13" href="$xtio__uart_8h.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="510,411,654,437"/>
+<area shape="rect" id="node14" href="$pio__capture_8c.xhtml#a2bd58aa646eab74ad61f326639c402bf" title="Initialize the PIO Capture. " alt="" coords="266,715,386,741"/>
+<area shape="rect" id="node15" href="$pio__it_8c.xhtml#ad31e05d6debb1e88af6124cd7751af22" title="Initializes the PIO interrupt management logic. " alt="" coords="245,5,407,32"/>
+<area shape="rect" id="node16" href="$sdramc_8c.xhtml#acba42d34b53227828bbecdd7c642e00a" title="Configure and initialize the SDRAM controller. " alt="" coords="253,765,399,792"/>
+<area shape="rect" id="node17" href="$spi_8c.xhtml#a0ebb1d25f8889b00a9dd846059456175" title="Configures a SPI peripheral as specified. " alt="" coords="271,816,381,843"/>
+<area shape="rect" id="node18" href="$spi__dma_8c.xhtml#a36e110a3cda7abf52985f30626c47b5f" title="Configures the parameters for the device corresponding to the cs value. " alt="" coords="257,867,395,893"/>
+<area shape="rect" id="node19" href="$spi__dma_8c.xhtml#ae3c774fb7e4bcf2db4e5d9e8891b6abd" title="Starts a SPI master transfer. " alt="" coords="247,917,405,944"/>
+<area shape="rect" id="node20" href="$ssc_8c.xhtml#a936155ced242aad2850d1e341c80b9c1" title="Configures a SSC peripheral.If the divided clock is not used, the master clock frequency can be set t..." alt="" coords="267,968,385,995"/>
+<area shape="rect" id="node21" href="$uart__dma_8c.xhtml#a8b463d15a44a1b7058c8d1f259c84fcf" title="Initializes the UartDma structure and the corresponding UART &amp; DMA . " alt="" coords="259,1019,393,1045"/>
+<area shape="rect" id="node22" href="$usart__dma_8c.xhtml#a0f760ac1d4ebf29b670399b45ba1ee33" title="Initializes the USARTDma structure and the corresponding USART &amp; DMA . " alt="" coords="255,411,397,437"/>
+<area shape="rect" id="node23" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="237,1069,415,1096"/>
+<area shape="rect" id="node24" href="$group__usbd__hal.xhtml#ga738c63d27bd4c464410b95c7aea8126b" title="Enables the clock of the UDP peripheral. " alt="" coords="227,1120,425,1147"/>
+<area shape="rect" id="node25" href="$group__usbd__hal.xhtml#gaa50e34166752f405f9fc09d5c9ac3273" title="Enables the clock of the UDP peripheral. " alt="" coords="217,1171,435,1197"/>
+<area shape="rect" id="node26" href="$xtio__usb_8c.xhtml#a963822fd2da932f8a088af4b8069c540" title="Configure USBHS settings for USB device. " alt="" coords="258,1221,394,1248"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="MSDFunction_StateMachine" name="MSDFunction_StateMachine">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga804bf63efb2d4420a3bf42984e807e72" title="Returns the current state of the USB device. " alt="" coords="269,5,395,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#gac202c092099685d21ac19320311b1d0f" title="State machine for the MSD device driver. " alt="" coords="253,56,411,83"/>
+</map>

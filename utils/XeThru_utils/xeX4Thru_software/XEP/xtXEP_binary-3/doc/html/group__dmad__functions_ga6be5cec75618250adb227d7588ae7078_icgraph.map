@@ -1,0 +1,12 @@
+<map id="XDMAD_StopTransfer" name="XDMAD_StopTransfer">
+<area shape="rect" id="node2" href="$qspi__dma_8c.xhtml#a3f74a9c30f8d87121341efbe86f7b992" title="Disables a QSPI Rx channel. " alt="" coords="211,5,421,32"/>
+<area shape="rect" id="node3" href="$qspi__dma_8c.xhtml#a475ae8a5f6c8d35f9942611d5512144a" title="Disables a QSPI Tx channel. " alt="" coords="211,56,421,83"/>
+<area shape="rect" id="node4" href="$qspi__dma_8c.xhtml#a3bb12a4d22e8c71f840710b19c769067" title="Disables a QSPI SPI Rx and Tx channels. " alt="" coords="222,107,410,133"/>
+<area shape="rect" id="node5" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="255,157,377,184"/>
+<area shape="rect" id="node6" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="255,208,377,235"/>
+<area shape="rect" id="node7" href="$uart__dma_8c.xhtml#a2e608c15e9d2dff4ca4e98f8ee417ed4" title="This function disables the appropriate DMA channel for Rx channel of USART. " alt="" coords="219,259,413,285"/>
+<area shape="rect" id="node8" href="$uart__dma_8c.xhtml#a9b0fc44709de4abbf35be9aac35d689f" title="This function disables the appropriate DMA channel for Tx channel of USART. " alt="" coords="220,309,412,336"/>
+<area shape="rect" id="node9" href="$usart__dma_8c.xhtml#a7e691f994b89f0457929df9639a3caea" title="This function disables the appropriate DMA channel for Rx channel of USART. " alt="" coords="215,360,417,387"/>
+<area shape="rect" id="node10" href="$usart__dma_8c.xhtml#a10da1227ede3bfae0413010a0c77975f" title="This function disables the appropriate DMA channel for Tx channel of USART. " alt="" coords="215,411,417,437"/>
+<area shape="rect" id="node11" href="$xtio__uart_8h.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="244,461,388,488"/>
+</map>

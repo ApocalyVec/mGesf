@@ -1,0 +1,4 @@
+<map id="NVIC_SetPriority" name="NVIC_SetPriority">
+<area shape="rect" id="node2" href="$freertos__peripheral__control__private_8h.xhtml#a7484251dfa9f4e29252315a2bacd051b" title="configure_interrupt\l_controller" alt="" coords="173,5,301,47"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___sys_tick_functions.xhtml#gae4e8f0238527c69f522029b93c8e5b78" title="System Tick Configuration. " alt="" coords="181,71,293,98"/>
+</map>

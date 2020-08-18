@@ -1,0 +1,14 @@
+<map id="dispatch_message_hostcom_send_reply_byte" name="dispatch_message_hostcom_send_reply_byte">
+<area shape="rect" id="node2" href="$xep__application__mcp__callbacks_8h.xhtml#ade8de22b982f74c728af66c33bcf42e2" title="onMcpSystemRunTest" alt="" coords="301,5,462,32"/>
+<area shape="rect" id="node3" href="$xep__application__mcp__callbacks_8h.xhtml#afe11f1a76ca4a0d72981f8dd137f593a" title="onMcpGetCrashDump" alt="" coords="300,56,463,83"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#ae55a880919155229a71fa3408ba5fde3" title="onMcpX4DriverGetDownconversion" alt="" coords="259,107,504,133"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#a22153db6d48ea306686350021163d9b1" title="onMcpX4DriverGetDacStep" alt="" coords="283,157,479,184"/>
+<area shape="rect" id="node6" href="$xep__application__mcp__callbacks_8h.xhtml#ad1b2610d855a63f3c73b5e07b7dcf440" title="onMcpX4DriverGetTxCenter\lFrequency" alt="" coords="282,209,481,250"/>
+<area shape="rect" id="node7" href="$xep__application__mcp__callbacks_8h.xhtml#a13dd76326f41187a34698f9eab67c5e4" title="onMcpX4DriverGetTxPower" alt="" coords="285,275,478,301"/>
+<area shape="rect" id="node8" href="$xep__application__mcp__callbacks_8h.xhtml#af618862372201f145df4d98d54819758" title="onMcpX4DriverReadFromSpi\lRegister" alt="" coords="281,326,482,367"/>
+<area shape="rect" id="node9" href="$xep__application__mcp__callbacks_8h.xhtml#ab1ee8219699e8ad5565777e7962bd09f" title="onMcpX4DriverGetSpiRegister" alt="" coords="275,392,487,419"/>
+<area shape="rect" id="node10" href="$xep__application__mcp__callbacks_8h.xhtml#a269b9593eb2635b8c5b600e8d69a331f" title="onMcpX4DriverGetPifRegister" alt="" coords="278,443,485,469"/>
+<area shape="rect" id="node11" href="$xep__application__mcp__callbacks_8h.xhtml#a6fc8f78920527c2d055ab44a74192789" title="onMcpX4DriverGetXifRegister" alt="" coords="278,493,485,520"/>
+<area shape="rect" id="node12" href="$xep__application__mcp__callbacks_8h.xhtml#a4f984ea88bc111ee46e9a82d80534d78" title="onMcpX4DriverGetPrfDiv" alt="" coords="292,544,471,571"/>
+<area shape="rect" id="node13" href="$xep__application__mcp__callbacks_8h.xhtml#ad862bf24dc31d741e7fa5a9ade1c9f39" title="onMcpGetFileData" alt="" coords="312,595,451,621"/>
+</map>

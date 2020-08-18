@@ -1,0 +1,7 @@
+<map id="xt_get_reset_reason" name="xt_get_reset_reason">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#a88a96f708160bd3ccf8a8f0986f51d88" title="Get crash count. " alt="" coords="207,5,353,32"/>
+<area shape="rect" id="node3" href="$xthousekeeping_8c.xhtml#a992dd5dce07dd564e492d3a3c021d6ad" title="Function to check if safe mode is entered. " alt="" coords="401,31,620,57"/>
+<area shape="rect" id="node4" href="$xt__system_8c.xhtml#a3c4b3201bcc90f24579249f3b6297fb3" title="Get reset count. " alt="" coords="207,107,353,133"/>
+<area shape="rect" id="node5" href="$xthousekeeping_8c.xhtml#ad5a7723fb96e5789fa7ecb2554da3b04" title="xthousekeeping_trigger\l_crashdump" alt="" coords="425,142,597,183"/>
+<area shape="rect" id="node6" href="$task__monitor_8c.xhtml#ad45490893a79383d6cd047fa3e4c3638" title="task_monitor" alt="" coords="668,179,775,205"/>
+</map>

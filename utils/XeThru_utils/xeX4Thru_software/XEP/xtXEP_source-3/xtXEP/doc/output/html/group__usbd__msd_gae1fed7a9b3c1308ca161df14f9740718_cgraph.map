@@ -1,0 +1,4 @@
+<map id="MSDD_PreProcessCommand" name="MSDD_PreProcessCommand">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga1d0b6dc8262b619aa9c0f6a4c47c15bf" title="Returns the expected transfer length and direction (IN, OUT or don&#39;t care) from the host point&#45;of&#45;vie..." alt="" coords="260,5,492,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga2a08f011fbfff2f3a419b28bb6d14b16" title="Return information about the transfer length and direction expected by the device for a particular co..." alt="" coords="267,56,485,83"/>
+</map>

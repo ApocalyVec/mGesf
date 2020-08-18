@@ -1,0 +1,4 @@
+<map id="NVIC_SystemReset" name="NVIC_SystemReset">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="197,5,261,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8bb1a07c32b865536006f46d4097fdc0" title="No Operation. " alt="" coords="197,56,261,83"/>
+</map>

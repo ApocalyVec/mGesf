@@ -1,0 +1,5 @@
+<map id="LCDD_Off" name="LCDD_Off">
+<area shape="rect" id="node2" href="$ili9488__spi_8h.xhtml#a8fb0156b534d287de2043cb7f4087f2e" title="ILI9488_SpiOff" alt="" coords="157,5,269,32"/>
+<area shape="rect" id="node3" href="$ili9488__ebi_8h.xhtml#a7fb889954871eaf062eaf02668c150b9" title="ILI9488_EbiOff" alt="" coords="158,56,269,83"/>
+<area shape="rect" id="node4" href="$pwmc_8h.xhtml#ad568ae9cc98ca77642950aded8981aab" title="Sets the duty cycle used by a PWM channel. " alt="" coords="136,107,291,133"/>
+</map>

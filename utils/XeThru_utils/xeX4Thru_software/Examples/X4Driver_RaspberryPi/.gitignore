@@ -1,0 +1,11 @@
+# Blacklist files/folders in same directory as the .gitignore file
+/*
+
+# Whitelist some files
+!.gitignore
+!Readme.md
+!Makefile
+!X4M05RPIconnection.pdf
+!include
+!src
+!LICENSE.md

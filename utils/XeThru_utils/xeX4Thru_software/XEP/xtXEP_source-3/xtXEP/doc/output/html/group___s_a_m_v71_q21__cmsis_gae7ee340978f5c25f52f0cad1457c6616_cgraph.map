@@ -1,0 +1,15 @@
+<map id="Reset_Handler" name="Reset_Handler">
+<area shape="rect" id="node2" href="$startup__same70_8c.xhtml#a11967f52e54564f4e39b12755f00d2fd" title="TCM memory Disable. " alt="" coords="231,5,334,32"/>
+<area shape="rect" id="node3" href="$startup__same70_8c.xhtml#a7cecd108fd88dec10ce2e97ad905e4ef" title="Performs the low&#45;level initialization of the chip. " alt="" coords="233,56,332,83"/>
+<area shape="rect" id="node4" href="$startup__same70_8c.xhtml#a5f388c8556f7cb6a84b5692db6b6ad80" title="__libc_init_array" alt="" coords="221,107,344,133"/>
+<area shape="rect" id="node5" href="$main_8c.xhtml#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="255,157,310,184"/>
+<area shape="rect" id="node6" href="$wdt_8h.xhtml#a2c90c26f4d7ba23f6e336bba01f5822b" title="Disable watchdog. " alt="" coords="445,183,549,209"/>
+<area shape="rect" id="node7" href="$xep__hal_8h.xhtml#a389bc6b896aa270d8a1e473dd9c32ffc" title="Sets the cause of the coming software reset. " alt="" coords="207,259,359,285"/>
+<area shape="rect" id="node8" href="$rstc_8h.xhtml#a00dbcf459aed53f5f826d4b3a867018e" title="Resets the processor. " alt="" coords="203,309,362,336"/>
+<area shape="rect" id="node9" href="$xep__hal_8h.xhtml#a31dcedbddd6f896d0157ce276d449fd4" title="Checks if external memory is enabled. " alt="" coords="205,361,360,402"/>
+<area shape="rect" id="node10" href="$board__memories_8c.xhtml#a72c8120eb2a9e06872355e2cb8b7b775" title="BOARD_ConfigureAndTestSdram" alt="" coords="168,427,397,453"/>
+<area shape="rect" id="node11" href="$group___c_m_s_i_s___core___cache_functions.xhtml#gaf9e7c6c8e16ada1f95e5bf5a03505b68" title="Enable I&#45;Cache. " alt="" coords="211,477,354,504"/>
+<area shape="rect" id="node12" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga63aa640d9006021a796a5dcf9c7180b6" title="Enable D&#45;Cache. " alt="" coords="208,528,357,555"/>
+<area shape="rect" id="node13" href="$timetick_8h.xhtml#aa2dae3f4bc7d890535afc5bc707feacc" title="Configures the System Timer. " alt="" coords="210,579,355,605"/>
+<area shape="rect" id="node14" href="$startup__sams70_8c.xhtml#a0af7232f7a8c719d4eb2f14796141a00" title="prvGetRegistersFromStack" alt="" coords="187,629,378,656"/>
+</map>

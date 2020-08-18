@@ -1,0 +1,6 @@
+<map id="examples/atmel_samg55/src/ASF/sam/boards/samg55_xplained_pro/board_init.c" name="examples/atmel_samg55/src/ASF/sam/boards/samg55_xplained_pro/board_init.c">
+<area shape="rect" id="node2" href="$compiler_8h.xhtml" title="Commonly used includes, types and macros. " alt="" coords="13,184,96,211"/>
+<area shape="rect" id="node3" href="$board_8h.xhtml" title="Standard board header file. " alt="" coords="22,109,87,136"/>
+<area shape="rect" id="node4" href="$conf__board_8h.xhtml" title="Board configuration. " alt="" coords="112,109,208,136"/>
+<area shape="rect" id="node5" href="$ioport_8h.xhtml" title="Common IOPORT service main header file for AVR, UC3 and ARM architectures. " alt="" coords="232,109,298,136"/>
+</map>

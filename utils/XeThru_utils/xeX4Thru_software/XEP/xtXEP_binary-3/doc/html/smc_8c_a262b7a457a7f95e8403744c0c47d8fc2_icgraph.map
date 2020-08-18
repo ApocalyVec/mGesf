@@ -1,0 +1,4 @@
+<map id="SMC_ECC_GetCorrectoinType" name="SMC_ECC_GetCorrectoinType">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#a769bffc6d644405da658bad10af33b14" title="Get ECC code for 8bit/16&#45;bit data path NAND flash by giving data path. " alt="" coords="261,5,432,32"/>
+<area shape="rect" id="node3" href="$smc_8c.xhtml#acddb0faced2947d02082c298c51c8522" title="Verifies hsiao codes for a data block. " alt="" coords="265,56,428,83"/>
+</map>

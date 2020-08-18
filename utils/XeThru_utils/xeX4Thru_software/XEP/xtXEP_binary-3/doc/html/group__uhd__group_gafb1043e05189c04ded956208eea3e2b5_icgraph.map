@@ -1,0 +1,6 @@
+<map id="USBH_HAL_ControlReqEnd" name="USBH_HAL_ControlReqEnd">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="281,5,435,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga0e9c1f691d695f4c878712831d38e9c0" title="USBH_HAL_ControlTimeout" alt="" coords="259,56,457,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga85b92a3f7bc4357fae366d2f7a1c595b" title="USBH_HAL_ControlInterrupt" alt="" coords="257,107,459,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga1ddb6a33201674d513c4ad9c5de79e93" title="USBH_HAL_PhaseControlSetup" alt="" coords="247,157,469,184"/>
+</map>

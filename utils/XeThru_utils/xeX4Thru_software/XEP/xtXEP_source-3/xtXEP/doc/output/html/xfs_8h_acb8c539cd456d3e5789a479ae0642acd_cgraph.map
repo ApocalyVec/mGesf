@@ -1,0 +1,8 @@
+<map id="xfs_init" name="xfs_init">
+<area shape="rect" id="node2" href="$xtsemaphore_8h.xhtml#a397a6e9c0a37ad527526e2c8ad9c5c7e" title="Create handle to mutex. " alt="" coords="152,5,259,32"/>
+<area shape="rect" id="node3" href="$crc_8c.xhtml#a5a735798e6972adc694a5428dd7ccaf9" title="crcInit" alt="" coords="175,56,235,83"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a1fac657ee93738242d05ad86ceb17260" title="Gets the flash block size. " alt="" coords="133,107,278,133"/>
+<area shape="rect" id="node5" href="$xtmemory_8h.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="120,157,291,184"/>
+<area shape="rect" id="node6" href="$xfs_8c.xhtml#ad61db31cb6bd0341f2a43b173efffced" title="xfs_check_integrity" alt="" coords="134,208,277,235"/>
+<area shape="rect" id="node7" href="$xfs_8c.xhtml#a975b6f2d064a2205832dfc2b7e0b7799" title="Formats the file system to an empty state. " alt="" coords="160,259,251,285"/>
+</map>

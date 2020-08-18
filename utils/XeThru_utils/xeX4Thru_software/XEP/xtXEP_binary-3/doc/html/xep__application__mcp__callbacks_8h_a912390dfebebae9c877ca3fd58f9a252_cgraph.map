@@ -1,0 +1,6 @@
+<map id="onMcpCommitFile" name="onMcpCommitFile">
+<area shape="rect" id="node2" href="$xtfile_8h.xhtml#acd9f464dd135cbeaf8671e7c3c4c900f" title="xtfile_get_handle" alt="" coords="225,5,356,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="188,57,393,98"/>
+<area shape="rect" id="node4" href="$xtfile_8h.xhtml#ab3f02b575f459d00a3005fed712dcace" title="Closes an open file. " alt="" coords="245,123,337,149"/>
+<area shape="rect" id="node5" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="188,174,393,215"/>
+</map>

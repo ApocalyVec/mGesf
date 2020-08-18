@@ -1,0 +1,3 @@
+<map id="USBDCallbacks_Reset" name="USBDCallbacks_Reset">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gad1bf93dee935f232cc0acae8cac8f264" title="Handle the USB reset event, should be invoked whenever HW found USB reset signal on bus..." alt="" coords="216,5,368,32"/>
+</map>

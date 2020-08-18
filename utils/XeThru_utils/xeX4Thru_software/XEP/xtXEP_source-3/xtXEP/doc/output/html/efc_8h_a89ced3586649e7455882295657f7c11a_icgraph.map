@@ -1,0 +1,14 @@
+<map id="EFC_PerformCommand" name="EFC_PerformCommand">
+<area shape="rect" id="node2" href="$flashd_8c.xhtml#af5aa6cf7d990999403e5a74b0b35b04b" title="Erases the entire flash. " alt="" coords="257,5,374,32"/>
+<area shape="rect" id="node3" href="$flashd_8c.xhtml#a7b5d4ee5192faa436afed0475bf6a40c" title="Erases flash by sector. " alt="" coords="236,56,395,83"/>
+<area shape="rect" id="node4" href="$flashd_8c.xhtml#a34e9d4df1bed173204d4be83b720b24f" title="Erases flash by pages. " alt="" coords="238,107,393,133"/>
+<area shape="rect" id="node5" href="$flashd_8c.xhtml#aaf0c7fb937ecf006c011ab50928ef921" title="Writes a data buffer in the internal flash. " alt="" coords="259,157,371,184"/>
+<area shape="rect" id="node6" href="$flashd_8c.xhtml#a29e89431146b26ca80a4926ad20e4b0a" title="Locks all the regions in the given address range. " alt="" coords="260,208,371,235"/>
+<area shape="rect" id="node7" href="$flashd_8c.xhtml#a964a05cff2bc8f9d6477f4cf70f253d9" title="Unlocks all the regions in the given address range. " alt="" coords="253,259,377,285"/>
+<area shape="rect" id="node8" href="$flashd_8c.xhtml#a0e4b85a84bb516ced1e39bd110ebce7d" title="Returns the number of locked regions inside the given address range. " alt="" coords="247,309,383,336"/>
+<area shape="rect" id="node9" href="$flashd_8c.xhtml#a1ff2939b103369d0a692d2e30b526e0c" title="Check if the given GPNVM bit is set or not. " alt="" coords="235,411,396,437"/>
+<area shape="rect" id="node10" href="$flashd_8c.xhtml#aeec5f51a495cb3a4b2199e1fae1dadd0" title="Sets the selected GPNVM bit. " alt="" coords="461,385,611,412"/>
+<area shape="rect" id="node11" href="$flashd_8c.xhtml#ae7a300e050a12cb95924da15da085fdf" title="Clears the selected GPNVM bit. " alt="" coords="455,448,617,475"/>
+<area shape="rect" id="node12" href="$xtio__flash_8h.xhtml#af0f72b62a3aad8055338aa7512145281" title="xtio_flash_store_hw_data" alt="" coords="224,512,407,539"/>
+<area shape="rect" id="node13" href="$xtio__flash_8h.xhtml#a7f2f3c13481483a835cd068228d2857e" title="xtio_flash_read_hw_data" alt="" coords="226,563,405,589"/>
+</map>

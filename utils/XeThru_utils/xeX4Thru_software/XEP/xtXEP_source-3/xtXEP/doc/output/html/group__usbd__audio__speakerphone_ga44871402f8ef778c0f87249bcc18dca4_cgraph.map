@@ -1,0 +1,5 @@
+<map id="AUDDSpeakerPhoneDriver_ConfigurationChangeHandler" name="AUDDSpeakerPhoneDriver_ConfigurationChangeHandler">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga946b2d10dfc497b6b24e602be6f3bd05" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="275,5,455,32"/>
+<area shape="rect" id="node3" href="$group__usb__descriptor.xhtml#gac720e8b7e3cec002c16397a66f5e03b1" title="Parses the given descriptor list via customized function. " alt="" coords="282,57,447,98"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga45b93243bf2d1901950ba029b579c625" title="Parse descriptors: Interrupt IN, Bulk EP IN/OUT. " alt="" coords="267,123,463,149"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="xtlock_create" name="xtlock_create">
+<area shape="rect" id="node2" href="$memorypool_8c.xhtml#add5e7dc361e5bc4c7b9a0521cc5a85cb" title="Create memory pool. " alt="" coords="160,5,311,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch_8c.xhtml#afdd804b6e97bf0e80934820062bae10c" title="Register to dispatcher, returning the queue used for dispatch messages. " alt="" coords="169,56,301,83"/>
+<area shape="rect" id="node4" href="$xtio__flash_8c.xhtml#a4b959a98419bc53f38212b561edb0d07" title="Erases specified flash area. " alt="" coords="173,107,298,133"/>
+<area shape="rect" id="node5" href="$xtio__flash_8c.xhtml#a0f73f9b3594686e4318f0ca195cc38b4" title="Writes data to flash. " alt="" coords="176,157,295,184"/>
+<area shape="rect" id="node6" href="$xtio__flash_8c.xhtml#a69a3f02de1c4e206640015c8d19af4f9" title="stores data in flash. " alt="" coords="174,208,297,235"/>
+<area shape="rect" id="node7" href="$xfs_8h.xhtml#acb8c539cd456d3e5789a479ae0642acd" title="Initialize the file system. " alt="" coords="202,259,269,285"/>
+<area shape="rect" id="node8" href="$xtfile_8c.xhtml#a9b3de70a5a8926b3903335feecd3713c" title="Initialize the file system. " alt="" coords="359,284,437,311"/>
+</map>

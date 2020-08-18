@@ -1,0 +1,6 @@
+<map id="configure_rx_dma" name="configure_rx_dma">
+<area shape="rect" id="node2" href="$group__asfdoc__sam__drivers__pdc__group.xhtml#ga8cbc8c88b0b1d636ff9f0b5b42fbd9e8" title="Configure PDC for data receive. " alt="" coords="211,5,297,32"/>
+<area shape="rect" id="node3" href="$group__asfdoc__sam__drivers__pdc__group.xhtml#gadb600d48347212bcf1d0229951b036cd" title="Enable PDC transfers (TX and/or RX). " alt="" coords="185,56,323,83"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__usart__group.xhtml#ga33c4b214e790bf6b04c8867dd66c3336" title="Enable USART interrupts. " alt="" coords="179,107,329,133"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__usart__group.xhtml#gaa3a3c3eb673f70359570302dcf1a5b6a" title="Disable USART interrupts. " alt="" coords="177,157,331,184"/>
+</map>

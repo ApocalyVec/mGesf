@@ -1,0 +1,4 @@
+<map id="PCtoRDRSetDataRateAndClockFrequency" name="PCtoRDRSetDataRateAndClockFrequency">
+<area shape="rect" id="node2" href="$iso7816__4_8h.xhtml#a4f21350e85fdbe8ced11f50d509b5364" title="Set data rate and clock frequency. " alt="" coords="292,5,515,47"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#gac28d67fe827877df9957534dfc77ad2e" title="Response Pipe, Bulk&#45;IN Messages Answer to: PC_to_RDR_SetDataRateAndClockFrequency. " alt="" coords="272,71,535,98"/>
+</map>

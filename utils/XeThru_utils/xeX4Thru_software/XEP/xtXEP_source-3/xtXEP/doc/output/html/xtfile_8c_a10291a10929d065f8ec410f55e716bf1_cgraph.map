@@ -1,0 +1,6 @@
+<map id="xtfile_create_and_open" name="xtfile_create_and_open">
+<area shape="rect" id="node2" href="$xtfile_8c.xhtml#aab3ec81dba994ab42e047561a13c5e27" title="Creates and opens a new file with given type and identifiers with an empty content of given size..." alt="" coords="224,28,395,70"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#ab6502b729403c595b606e92bf005bd09" title="xtfile_lock" alt="" coords="451,9,535,36"/>
+<area shape="rect" id="node4" href="$xtfile_8c.xhtml#a5f00b9d0119e29899a5acf83033147e4" title="xtfile_unlock" alt="" coords="443,64,543,90"/>
+<area shape="rect" id="node5" href="$xfs_8c.xhtml#a9fadb27c69014a6f606f00781d0c24e5" title="Writes the file data to flash at given offset. " alt="" coords="258,145,361,172"/>
+</map>

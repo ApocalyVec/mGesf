@@ -1,0 +1,6 @@
+<map id="usart_set_async_baudrate" name="usart_set_async_baudrate">
+<area shape="rect" id="node2" href="$group__group__sam__drivers__usart.xhtml#gaeef2121bcab41f9850e58c59fdc34d10" title="Configure USART to work in RS232 mode. " alt="" coords="245,5,359,32"/>
+<area shape="rect" id="node3" href="$group__group__sam__drivers__usart.xhtml#gaf42f05f73f1095fc7a2b28ebbf97bf4b" title="Configure USART to work in SPI mode and act as a slave. " alt="" coords="235,56,369,83"/>
+<area shape="rect" id="node4" href="$task__xethru_8c.xhtml#a54c65348b306e1067cb83cfd0b41cfe6" title="mcpw_demo_x4m300" alt="" coords="424,132,572,159"/>
+<area shape="rect" id="node5" href="$task__xethru_8c.xhtml#a4d700c7ee4beaac0a8a4c95c11e5c673" title="mcpw_demo_x4m200" alt="" coords="228,157,376,184"/>
+</map>

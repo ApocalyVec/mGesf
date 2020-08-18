@@ -1,0 +1,3 @@
+<map id="USBD_HAL_CancelIo" name="USBD_HAL_CancelIo">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga5e6b01495743675aae106e51aee3d1e3" title="Handles a completed transfer on the given endpoint, invoking the configured callback if any..." alt="" coords="208,5,372,32"/>
+</map>

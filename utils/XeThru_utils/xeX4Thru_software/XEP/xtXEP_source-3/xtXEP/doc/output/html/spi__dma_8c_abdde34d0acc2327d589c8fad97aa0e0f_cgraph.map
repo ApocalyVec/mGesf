@@ -1,0 +1,8 @@
+<map id="_spid_configureDmaChannels" name="_spid_configureDmaChannels">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga8c7517080f70e93096364e916af6e6f2" title="Initialize xDMA driver instance. " alt="" coords="290,5,418,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga2a3178c1d2615b7a4d7a0005662cdd89" title="Free the specified xDMA channel. " alt="" coords="492,132,648,159"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="264,107,444,133"/>
+<area shape="rect" id="node5" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="278,157,430,184"/>
+<area shape="rect" id="node6" href="$spi__dma_8c.xhtml#ac612542f98d1fbf87bbf0e3ea7870cb1" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="305,208,403,235"/>
+<area shape="rect" id="node7" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="265,259,443,285"/>
+</map>

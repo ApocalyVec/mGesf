@@ -1,0 +1,15 @@
+<map id="_CdcAuddDriverConfigurationDescriptors" name="_CdcAuddDriverConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___c_d_c_union_descriptor.xhtml" title="_CDCUnionDescriptor" alt="" coords="51,29,211,56"/>
+<area shape="rect" id="node3" href="$struct___a_u_d_d_speaker_phone_ac_descriptors.xhtml" title="List of descriptors for detailing the audio control interface of a device using a USB Audio Speakerph..." alt="" coords="5,80,256,107"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_interface_association_descriptor.xhtml" title="_USBInterfaceAssociation\lDescriptor" alt="" coords="37,133,224,174"/>
+<area shape="rect" id="node5" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="41,212,220,239"/>
+<area shape="rect" id="node6" href="$struct___c_d_c_call_management_descriptor.xhtml" title="_CDCCallManagementDescriptor" alt="" coords="15,263,246,289"/>
+<area shape="rect" id="node7" href="$struct___a_u_d_format_type_one_descriptor1.xhtml" title="Format type I descriptor with one discrete sampling frequency. " alt="" coords="15,320,247,347"/>
+<area shape="rect" id="node8" href="$struct___a_u_d_streaming_interface_descriptor.xhtml" title="_AUDStreamingInterfaceDescriptor" alt="" coords="7,380,254,407"/>
+<area shape="rect" id="node9" href="$struct___a_u_d_endpoint_descriptor.xhtml" title="_AUDEndpointDescriptor" alt="" coords="41,435,221,461"/>
+<area shape="rect" id="node10" href="$struct___c_d_c_header_descriptor.xhtml" title="_CDCHeaderDescriptor" alt="" coords="45,485,216,512"/>
+<area shape="rect" id="node11" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="27,536,235,563"/>
+<area shape="rect" id="node12" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="41,664,220,691"/>
+<area shape="rect" id="node13" href="$struct___a_u_d_data_endpoint_descriptor.xhtml" title="_AUDDataEndpointDescriptor" alt="" coords="25,724,236,751"/>
+<area shape="rect" id="node14" href="$struct___c_d_c_abstract_control_management_descriptor.xhtml" title="_CDCAbstractControlManagement\lDescriptor" alt="" coords="9,775,252,817"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="_SetupMemoryRegion" name="_SetupMemoryRegion">
+<area shape="rect" id="node2" href="$mpu_8h.xhtml#a5bdbf8327da8abb7c67a214586df72f4" title="Calculate region size for the RASR. " alt="" coords="215,5,391,32"/>
+<area shape="rect" id="node3" href="$mpu_8h.xhtml#a5b599da2790baa9affb17efe20e758a1" title="Setup a memory region. " alt="" coords="241,56,364,83"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a2daff1abf4c972f5d57d94a65a24a3cf" title="Gets the size of the entire flash. " alt="" coords="231,107,374,133"/>
+<area shape="rect" id="node5" href="$mpu_8h.xhtml#a04bb5350667e9ca80c259db5544c7bec" title="Enables the MPU module. " alt="" coords="252,157,353,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga1ff33c0b5ed0e687dd7967a1dd283d5f" title="Set Main Stack Pointer. " alt="" coords="257,208,348,235"/>
+<area shape="rect" id="node7" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#gac5267c10c9b15b5349eea0a959ea014c" title="Get Main Stack Pointer. " alt="" coords="257,259,349,285"/>
+</map>

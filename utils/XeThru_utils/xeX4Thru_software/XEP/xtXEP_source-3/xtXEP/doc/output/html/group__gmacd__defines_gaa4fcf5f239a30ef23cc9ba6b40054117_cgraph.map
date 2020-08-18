@@ -1,0 +1,4 @@
+<map id="GMACD_ResetTx" name="GMACD_ResetTx">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#ga43e952eb0a8ec8d8131ac69b6a30842d" title="Enable/Disable GMAC transmit. " alt="" coords="180,5,345,32"/>
+<area shape="rect" id="node3" href="$group__gmac__defines.xhtml#ga599028cc27124c0c292562833f31319c" title="Set Tx Queue. " alt="" coords="189,56,336,83"/>
+</map>

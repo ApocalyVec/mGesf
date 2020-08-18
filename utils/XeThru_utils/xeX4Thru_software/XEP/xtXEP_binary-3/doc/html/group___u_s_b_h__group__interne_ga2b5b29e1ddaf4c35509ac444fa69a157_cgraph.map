@@ -1,0 +1,5 @@
+<map id="USBH_enumeration_error" name="USBH_enumeration_error">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="268,5,423,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga572eb439f63403cc1f218136d527690c" title="Device enumeration step 1 Reset USB line. " alt="" coords="249,56,441,83"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga85036d02a8ba359ad946070bbc8a4080" title="Enters a specific device in USB suspend mode Suspend the USB line or a port on USB hub..." alt="" coords="240,107,451,133"/>
+</map>

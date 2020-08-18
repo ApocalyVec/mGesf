@@ -1,0 +1,4 @@
+<map id="AUDDFunction_Configure" name="AUDDFunction_Configure">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdcaud.xhtml#gae3b857caf03672721667a11656b023ed" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="236,5,455,47"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidaud.xhtml#ga3964e181a871753372233070c5cb9672" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="238,71,453,112"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="SPID_SendCommand" name="SPID_SendCommand">
+<area shape="rect" id="node2" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="235,5,399,32"/>
+<area shape="rect" id="node3" href="$spi_8h.xhtml#a43013aa88577daf7494eec9bfc4359aa" title="Configures SPI chip select. " alt="" coords="259,56,376,83"/>
+<area shape="rect" id="node4" href="$spi__dma_8c.xhtml#abdde34d0acc2327d589c8fad97aa0e0f" title="Configure the DMA Channels: 0 RX, 1 TX. " alt="" coords="212,107,423,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="235,157,400,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="254,208,381,235"/>
+<area shape="rect" id="node7" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="255,259,379,285"/>
+<area shape="rect" id="node8" href="$spi__dma_8c.xhtml#a493ba599c88332870f21f381a5193055" title="Configure the DMA source and destination with Linker List mode. " alt="" coords="233,309,401,336"/>
+<area shape="rect" id="node9" href="$spi_8h.xhtml#ad983db901253eb7cc58874a4d495a106" title="Enables a SPI peripheral. " alt="" coords="271,360,363,387"/>
+<area shape="rect" id="node10" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga696fadbf7b9cc71dad42fab61873a40d" title="SCB_CleanDCache_by_Addr" alt="" coords="217,411,418,437"/>
+<area shape="rect" id="node11" href="$group__dmad__functions.xhtml#ga20bc2d5f85c7145a43d7ccd13b067e50" title="Start xDMA transfer. " alt="" coords="238,461,397,488"/>
+</map>

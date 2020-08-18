@@ -1,0 +1,7 @@
+<map id="TWI_WriteByte" name="TWI_WriteByte">
+<area shape="rect" id="node2" href="$twi_8c.xhtml#a933fafb0a0d430f7feb10d01138b0466" title="Starts a write operation on the TWI to access the selected slave, then returns immediately. " alt="" coords="171,32,284,59"/>
+<area shape="rect" id="node3" href="$twid_8c.xhtml#a67c6f278372fcb213e7848929db89d3f" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="355,7,445,33"/>
+<area shape="rect" id="node4" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="339,69,461,96"/>
+<area shape="rect" id="node5" href="$twid_8c.xhtml#a1bc4824729ea7fce14e514036ee38490" title="Interrupt handler for a TWI peripheral. " alt="" coords="172,133,283,160"/>
+<area shape="rect" id="node6" href="$group___s_a_m_e70_n19__cmsis.xhtml#ga29c3d5f43aaca36cf4529d56917f9706" title="TWIHS2_Handler" alt="" coords="164,184,291,211"/>
+</map>

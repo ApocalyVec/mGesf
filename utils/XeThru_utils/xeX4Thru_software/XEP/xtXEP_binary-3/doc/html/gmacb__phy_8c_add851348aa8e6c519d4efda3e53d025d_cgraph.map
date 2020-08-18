@@ -1,0 +1,5 @@
+<map id="GMACB_ReadPhy" name="GMACB_ReadPhy">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#ga6f6f590403bb6a1e27b19715fae19d20" title="Execute PHY maintenance command. " alt="" coords="184,5,331,32"/>
+<area shape="rect" id="node3" href="$gmacb__phy_8c.xhtml#add3908b951252bdb91a944c1895ed794" title="Wait PHY operation complete. " alt="" coords="194,56,321,83"/>
+<area shape="rect" id="node4" href="$group__gmac__defines.xhtml#gac8f081caf9548311d6bd54ce1fca606d" title="Return PHY maintenance data returned. " alt="" coords="195,107,319,133"/>
+</map>

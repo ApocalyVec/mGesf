@@ -1,0 +1,5 @@
+<map id="xtfile_delete" name="xtfile_delete">
+<area shape="rect" id="node2" href="$xep__application__mcp__callbacks_8h.xhtml#a5c62248de35baf6dcbef3aef0b6ab501" title="onMcpClearCrashDump" alt="" coords="152,5,325,32"/>
+<area shape="rect" id="node3" href="$xep__application__mcp__callbacks_8c.xhtml#a7f8cc9c9173f6cd4a55f1679d3c55e8f" title="wait_and_confirm_file\l_delete" alt="" coords="159,57,318,98"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#a3e9674072380859aa2ce9841402c33e9" title="onMcpDeleteFile" alt="" coords="373,93,500,120"/>
+</map>

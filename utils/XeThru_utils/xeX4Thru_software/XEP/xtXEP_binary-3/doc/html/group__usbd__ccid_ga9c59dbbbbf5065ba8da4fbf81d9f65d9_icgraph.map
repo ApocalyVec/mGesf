@@ -1,0 +1,3 @@
+<map id="USBDCallbacks_RequestReceived" name="USBDCallbacks_RequestReceived">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gab76f94b99aa061efe700867fc400738c" title="Handle the USB setup package received, should be invoked when an endpoint got a setup package as requ..." alt="" coords="288,5,456,32"/>
+</map>

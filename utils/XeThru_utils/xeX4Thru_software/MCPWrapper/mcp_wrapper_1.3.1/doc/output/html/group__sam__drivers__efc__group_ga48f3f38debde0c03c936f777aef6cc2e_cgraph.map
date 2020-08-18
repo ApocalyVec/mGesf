@@ -1,0 +1,5 @@
+<map id="efc_perform_command" name="efc_perform_command">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga5992cb015c55a0f4ed563e66a8793771" title="Get and clear the global interrupt flags. " alt="" coords="213,5,311,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__efc__group.xhtml#gab1eca9d39607dadbaa19e33b0dd6097c" title="Perform command. " alt="" coords="207,56,317,83"/>
+<area shape="rect" id="node4" href="$group__interrupt__group.xhtml#ga428178bc346431936fddf52ad1ebd6fa" title="Restore global interrupt flags. " alt="" coords="207,107,317,133"/>
+</map>

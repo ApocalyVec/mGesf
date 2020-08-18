@@ -1,0 +1,5 @@
+<map id="prvCheckTasksWaitingTermination" name="prvCheckTasksWaitingTermination">
+<area shape="rect" id="node2" href="$tasks_8c.xhtml#a084d232640bd1d04bcac0b8784417015" title="vTaskSuspendAll" alt="" coords="275,5,396,32"/>
+<area shape="rect" id="node3" href="$tasks_8c.xhtml#ab173f313b22f1a57dfceb98cb01b0508" title="xTaskResumeAll" alt="" coords="275,56,395,83"/>
+<area shape="rect" id="node4" href="$list_8h.xhtml#a6c083a9d7103fca1c9abd0de20839651" title="vListRemove" alt="" coords="444,81,539,108"/>
+</map>

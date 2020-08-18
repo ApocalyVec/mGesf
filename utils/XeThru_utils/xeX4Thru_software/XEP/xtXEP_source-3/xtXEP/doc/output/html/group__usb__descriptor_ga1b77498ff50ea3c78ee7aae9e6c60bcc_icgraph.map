@@ -1,0 +1,6 @@
+<map id="USBGenericDescriptor_GetLength" name="USBGenericDescriptor_GetLength">
+<area shape="rect" id="node2" href="$group__usb__descriptor.xhtml#ga0679b0b034bd64c70d048279c6058a48" title="Returns a pointer to the descriptor right after the given one, when parsing a Configuration descripto..." alt="" coords="219,51,384,92"/>
+<area shape="rect" id="node3" href="$group__usb__descriptor.xhtml#gac720e8b7e3cec002c16397a66f5e03b1" title="Parses the given descriptor list via customized function. " alt="" coords="450,5,615,47"/>
+<area shape="rect" id="node4" href="$group__usb__descriptor.xhtml#gab2cf48af0ca19522832310e3eed00490" title="Parses the given Configuration descriptor (followed by relevant interface, endpoint and class&#45;specifi..." alt="" coords="432,84,633,125"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#gadbb4c8a840d3ff539be6fa5fa9f4a4e0" title="Sends the requested USB descriptor to the host if available, or STALLs the request. " alt="" coords="246,167,357,194"/>
+</map>

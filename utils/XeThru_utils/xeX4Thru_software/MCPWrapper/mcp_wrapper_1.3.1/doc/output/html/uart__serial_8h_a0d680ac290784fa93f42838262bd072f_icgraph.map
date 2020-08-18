@@ -1,0 +1,4 @@
+<map id="usart_serial_putchar" name="usart_serial_putchar">
+<area shape="rect" id="node2" href="$usart__serial_8c.xhtml#af9393f1fa29d87970159fabd511b7de1" title="Send a sequence of bytes to USART device. " alt="" coords="192,5,315,47"/>
+<area shape="rect" id="node3" href="$group__group__common__utils__stdio__stdio__serial.xhtml#ga69a6d76cd00643343f3839b6c3e68cd9" title="Initializes the stdio in Serial Mode. " alt="" coords="197,71,309,98"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="src/System/File/xtfile.c" name="src/System/File/xtfile.c">
+<area shape="rect" id="node2" href="$xtfile_8h.xhtml" title="xtfile.h" alt="" coords="5,80,69,107"/>
+<area shape="rect" id="node3" href="$xfs_8h.xhtml" title="xfs.h" alt="" coords="94,80,146,107"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="171,80,253,107"/>
+<area shape="rect" id="node5" href="$xtmemory_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="277,80,376,107"/>
+<area shape="rect" id="node6" href="$xtsemaphore_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="401,80,519,107"/>
+<area shape="rect" id="node7" href="$task__monitor_8h.xhtml" title="System monitor task. " alt="" coords="543,80,660,107"/>
+</map>

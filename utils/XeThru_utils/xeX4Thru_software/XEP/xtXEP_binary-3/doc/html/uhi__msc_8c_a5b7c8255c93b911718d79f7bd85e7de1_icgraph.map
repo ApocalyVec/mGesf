@@ -1,0 +1,4 @@
+<map id="uhi_msc_scsi_request_sense" name="uhi_msc_scsi_request_sense">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#acdfb46388d2b6e842e93d193a169440f" title="Decodes the result of scsi TEST UNIT READY command Launches READ CAPACITY command, if a new LUN has been detected. " alt="" coords="252,5,421,47"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a92c046c6e68ca0de12edffbb8313c8da" title="Decodes the result of scsi READ CAPACITY command Launches MODE SENSE 6 command. " alt="" coords="216,71,457,98"/>
+</map>

@@ -273,12 +273,18 @@ class Xe4ThruWorker(QObject):
         self.xeThruX4Sensor_interface = xeThruX4Sensor_interface
         self._is_running = False
 
+        self.center_frequency = 3  # default value
+
     @pg.QtCore.pyqtSlot()
     def xe4thru_process_on_tick(self):
         if self._is_running:
-            frame = self.xeThruX4Sensor_interface.read_frame() if self.xeThruX4Sensor_interface.connected else sim_xe4thru()
+            if self.xeThruX4Sensor_interface:
+                frame = self.xeThruX4Sensor_interface.read_frame()
+            else:
+                frame = sim_xe4thru()
             data_dict = {'frame': frame}
             self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
+
 
     def start_sensor(self, device_name, min_range, max_range, center_frequency, fps, baseband):
         if self.xeThruX4Sensor_interface:
@@ -287,8 +293,9 @@ class Xe4ThruWorker(QObject):
                                                            center_frequency=center_frequency, FPS=fps,
                                                            baseband=baseband)
             self.xeThruX4Sensor_interface.clear_xep_buffer()
-        else:
+        else:  # simulation mode
             print('Start Simulating Xe4Thru data')
+        self.center_frequency = center_frequency
         self._is_running = True
 
     def stop_sensor(self):

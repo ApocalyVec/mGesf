@@ -1,0 +1,5 @@
+<map id="AUDDFunction_Initialize" name="AUDDFunction_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga08ddc53d41957a6a3432a2d48a5b151e" title="Initialize AUDDStream instance. " alt="" coords="225,5,437,47"/>
+<area shape="rect" id="node3" href="$group__usbd__aud__fun.xhtml#ga33474aa72566d6bae757c7c2d560ab6d" title="Callback triggerred after the mute or volume status of the channel has been changed. " alt="" coords="226,71,437,98"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga00b3f4d58344739d4fd1877d7cf46e79" title="Initialize AUDDSpeakerPhone instance. " alt="" coords="225,122,437,149"/>
+</map>

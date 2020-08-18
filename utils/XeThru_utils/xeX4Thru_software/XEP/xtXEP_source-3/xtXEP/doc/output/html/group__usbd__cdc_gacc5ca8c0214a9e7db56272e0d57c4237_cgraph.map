@@ -1,0 +1,3 @@
+<map id="CDCDSerial_Read" name="CDCDSerial_Read">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga8999bdf9f9412e4545f777ef2764cca7" title="Receives data from the host through the virtual COM port created by the CDC device serial driver..." alt="" coords="188,5,348,32"/>
+</map>

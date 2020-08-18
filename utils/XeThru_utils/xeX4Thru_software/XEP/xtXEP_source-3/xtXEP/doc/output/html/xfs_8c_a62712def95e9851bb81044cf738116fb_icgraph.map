@@ -1,0 +1,6 @@
+<map id="xfs_file_offset_to_pointer" name="xfs_file_offset_to_pointer">
+<area shape="rect" id="node2" href="$xfs_8h.xhtml#a1944fe2fe57fccee85079970b8f38432" title="Clears the flash area used to store file data. " alt="" coords="203,5,305,32"/>
+<area shape="rect" id="node3" href="$xfs_8h.xhtml#a9fadb27c69014a6f606f00781d0c24e5" title="Writes the file data to flash at given offset. " alt="" coords="203,56,305,83"/>
+<area shape="rect" id="node4" href="$xfs_8h.xhtml#afcbd27cc31bf59c4ecf4520a56c871a6" title="Gets a pointer to the file data in flash. " alt="" coords="181,107,327,133"/>
+<area shape="rect" id="node5" href="$xfs_8h.xhtml#ad8bf4b21f48539701e1cbeb7a4001912" title="Copies the data from the file into the given buffer. " alt="" coords="189,157,319,184"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="_uart_task_rx" name="_uart_task_rx">
+<area shape="rect" id="node2" href="$task__monitor_8c.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register task to monitor. " alt="" coords="165,5,328,32"/>
+<area shape="rect" id="node3" href="$task__monitor_8c.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Reset counter to indicate that task is alive. " alt="" coords="175,56,318,83"/>
+<area shape="rect" id="node4" href="$xtio__uart_8c.xhtml#a3811371738f4f0a683fdfa3c0c9eac25" title="xtio_uart_receive" alt="" coords="181,107,312,133"/>
+<area shape="rect" id="node5" href="$xtio__uart_8c.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="380,183,524,209"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml#a75257f6264fe4bb32722e8eccd519680" title="Configures UART module with the specified baudrate. " alt="" coords="161,208,332,235"/>
+</map>

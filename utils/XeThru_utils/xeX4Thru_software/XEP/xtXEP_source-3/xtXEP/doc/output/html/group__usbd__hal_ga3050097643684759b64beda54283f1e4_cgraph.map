@@ -1,0 +1,6 @@
+<map id="UDPHS_DmaSingle" name="UDPHS_DmaSingle">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#ad9705f77c87a304d55e72f6fd13dd77d" title="Sets USBHS&#39;s DMA Buffer addresse. " alt="" coords="201,5,380,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#abf7bc46296d9353fa33a82ee8a1a2ace" title="Get Dma Status. " alt="" coords="205,56,377,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a3609af8e5813e7837a44ad8de0946fc5" title="Setup the USBHS DMA. " alt="" coords="207,107,375,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#ad1cea33281f84fba93b0b4ecd554ce3a" title="Enables DMA interrupt for a given endpoint. " alt="" coords="200,157,381,184"/>
+</map>

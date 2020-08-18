@@ -1,0 +1,5 @@
+<map id="S25FL1D_DisableWrite" name="S25FL1D_DisableWrite">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a0a4a002ffca545ddb295efab00a4ab53" title="Writes the given value in the status register of the serial flash device. " alt="" coords="241,5,399,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a594058ed761d8012b697ece88b70e1e2" title="Writes the given value in the status register of the serial flash device. " alt="" coords="217,56,423,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a6e299269e367ae9838e0698dbe750e10" title="Writes data at the specified address on the serial firmware dataflash. " alt="" coords="261,107,379,133"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="USBH_enumeration_step4" name="USBH_enumeration_step4">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga6d1a91042ba3675ea7495dce99f1871b" title="Returns the speed of connected device. " alt="" coords="259,5,423,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#gaaeb6a2996975d8fe4a245e6ff0ec66f2" title="Enable a internal timeout on SOF events. " alt="" coords="258,57,425,98"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga5946f5d7c3385b5001db37d9455f5c67" title="Device enumeration step 5 Requests the USB device descriptor. " alt="" coords="245,123,437,149"/>
+</map>

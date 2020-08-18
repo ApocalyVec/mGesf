@@ -1,0 +1,5 @@
+<map id="UDP_MblWriteFifo" name="UDP_MblWriteFifo">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="216,5,315,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#gafa6295dfe0e4e2eaaec7818940d64b18" title="Endpoint interrupt handler. " alt="" coords="184,56,347,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#gaedece2a858b9ec25badf17f20ef8a7a7" title="Sends data through a USB endpoint. " alt="" coords="217,107,314,133"/>
+</map>

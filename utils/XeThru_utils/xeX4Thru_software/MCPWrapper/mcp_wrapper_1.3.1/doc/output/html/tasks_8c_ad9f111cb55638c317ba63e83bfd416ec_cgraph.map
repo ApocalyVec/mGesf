@@ -1,0 +1,10 @@
+<map id="prvAllocateTCBAndStack" name="prvAllocateTCBAndStack">
+<area shape="rect" id="node2" href="$portable_8h.xhtml#a237d63f90b28e0950bd86f76815cd6e3" title="pvPortMalloc" alt="" coords="277,5,373,32"/>
+<area shape="rect" id="node3" href="$portable_8h.xhtml#a735cd3085bb7ba06ff8e47565bfd7016" title="vPortFree" alt="" coords="286,56,363,83"/>
+<area shape="rect" id="node4" href="$task_8h.xhtml#aedf96103020b8038bd2dfb77736b3b19" title="task.h " alt="" coords="220,107,429,133"/>
+<area shape="rect" id="node5" href="$task_8h.xhtml#a6661c782f8eef65c1edc0ae6a47c5a0d" title="xTaskGetCurrentTaskHandle" alt="" coords="231,157,419,184"/>
+<area shape="rect" id="node6" href="$task_8h.xhtml#ad861dc499c1495261bb93a4a786623fd" title="xTaskGetSchedulerState" alt="" coords="241,208,408,235"/>
+<area shape="rect" id="node7" href="$task_8h.xhtml#a7a7ce24a330c32b4b904e1ef43ebde2c" title="vTaskPriorityInherit" alt="" coords="259,259,390,285"/>
+<area shape="rect" id="node8" href="$list_8h.xhtml#a6c083a9d7103fca1c9abd0de20839651" title="vListRemove" alt="" coords="277,309,372,336"/>
+<area shape="rect" id="node9" href="$task_8h.xhtml#a06ccdb021e30e3dedcd997bedba08f81" title="vTaskPriorityDisinherit" alt="" coords="249,360,400,387"/>
+</map>

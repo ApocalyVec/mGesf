@@ -1,0 +1,3 @@
+<map id="AUDDSpeakerPhoneDriver_MuteChanged" name="AUDDSpeakerPhoneDriver_MuteChanged">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga1452577f1640fb13310e25c3f89d451e" title="Callback triggered after the new mute status of a channel has been read by AUDDSpeakerPhoneDriver_Set..." alt="" coords="245,13,495,39"/>
+</map>

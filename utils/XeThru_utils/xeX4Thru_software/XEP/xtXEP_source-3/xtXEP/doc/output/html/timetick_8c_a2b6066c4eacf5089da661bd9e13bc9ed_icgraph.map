@@ -1,0 +1,13 @@
+<map id="Wait" name="Wait">
+<area shape="rect" id="node2" href="$gmacb__phy_8c.xhtml#a9aa4129425bc32dcd2ec8ee4643980cf" title="Do a HW initialize to the PHY (via RSTC) and set up clocks &amp; PIOs This should be called only once to ..." alt="" coords="159,5,278,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#acae5393b56a4415eb9a29f9b53df8bf9" title="Wait for transfer to finish calling the SPI driver ISR. " alt="" coords="155,56,282,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a844d03d4455661877b4cd85d753cc03a" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="141,107,296,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a3d08b0e2a530933edbff8459c7d3559a" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="139,157,299,184"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#a4c6fd4ef041626a21913d696dc98b2e0" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="101,208,336,235"/>
+<area shape="rect" id="node7" href="$s25fl1_8c.xhtml#afb88d105142c2a47764cc9fba6012d60" title="Erases all the content of the memory chip. " alt="" coords="143,259,294,285"/>
+<area shape="rect" id="node8" href="$s25fl1_8c.xhtml#a8840163f9bd8c203feeeeba16ba8dbde" title="Reads data from the specified address on the serial flash. " alt="" coords="145,309,292,336"/>
+<area shape="rect" id="node9" href="$s25fl1_8c.xhtml#afe5e46d0d65395239616923012853fc8" title="Reads data from the specified address on the serial flash. " alt="" coords="143,360,294,387"/>
+<area shape="rect" id="node10" href="$s25fl1_8c.xhtml#a3863304299f6a83b97043f7fc6468d67" title="Reads data from the specified address on the serial flash. " alt="" coords="139,411,298,437"/>
+<area shape="rect" id="node11" href="$s25fl1_8c.xhtml#a650c5d2bd603e1f26fb235ecf2bfd09f" title="Reads data from the specified address on the serial flash. " alt="" coords="137,461,301,488"/>
+<area shape="rect" id="node12" href="$wm8904_8c.xhtml#a2a5c4cf6f0f14c87098174f5df4cad0f" title="WM8904_Init" alt="" coords="167,512,270,539"/>
+</map>

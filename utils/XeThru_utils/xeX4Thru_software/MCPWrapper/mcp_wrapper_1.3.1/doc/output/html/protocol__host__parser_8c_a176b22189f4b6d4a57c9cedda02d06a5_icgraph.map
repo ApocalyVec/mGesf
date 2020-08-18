@@ -1,0 +1,7 @@
+<map id="bytes_to_float" name="bytes_to_float">
+<area shape="rect" id="node2" href="$protocol__host__parser_8h.xhtml#a43f3732f9f5adc9b7fe409391edb9749" title="parse_presence_single" alt="" coords="161,5,315,32"/>
+<area shape="rect" id="node3" href="$protocol__host__parser_8h.xhtml#a49dc96ded8bdab7fa0c66df331f7dce3" title="parse_baseband_iq" alt="" coords="171,56,305,83"/>
+<area shape="rect" id="node4" href="$protocol__host__parser_8h.xhtml#a7203ea3951462b2d1b41d65f67e8615a" title="parse_baseband_ap" alt="" coords="169,107,307,133"/>
+<area shape="rect" id="node5" href="$protocol__host__parser_8h.xhtml#a1d7a9c5ebdff244e0aeda763a574f2c6" title="parse_sleep_status" alt="" coords="171,157,305,184"/>
+<area shape="rect" id="node6" href="$protocol__host__parser_8h.xhtml#aa5664de178367c7faa1ee945dbc71761" title="parse_respiration_status" alt="" coords="156,208,320,235"/>
+</map>

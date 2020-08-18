@@ -1,0 +1,15 @@
+<map id="task_hostcom" name="task_hostcom">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a31dcedbddd6f896d0157ce276d449fd4" title="Checks if external memory is enabled. " alt="" coords="429,175,583,217"/>
+<area shape="rect" id="node3" href="$xep__dispatch_8h.xhtml#afdd804b6e97bf0e80934820062bae10c" title="Register to dispatcher, returning the queue used for dispatch messages. " alt="" coords="199,56,331,83"/>
+<area shape="rect" id="node4" href="$xep__dispatch_8h.xhtml#afc54f244b185ba5b8490a6c9007f1c17" title="Subscribe to message tag. " alt="" coords="193,107,337,133"/>
+<area shape="rect" id="node5" href="$xtmemory_8h.xhtml#ac094f55ba76fe2ae6e6b584f62ede7e0" title="Allocate memory from default location. " alt="" coords="412,416,600,443"/>
+<area shape="rect" id="node6" href="$xtmemory_8h.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="179,208,350,235"/>
+<area shape="rect" id="node7" href="$task__hostcom_8c.xhtml#a2107f903297b89d9863455c76cdcd97d" title="mcp_handle_protocol\l_packet" alt="" coords="185,259,344,301"/>
+<area shape="rect" id="node8" href="$task__hostcom_8c.xhtml#a712c0905d53d8aba5669e222b0f7d144" title="mcp_handle_protocol\l_error" alt="" coords="185,325,344,366"/>
+<area shape="rect" id="node9" href="$task__monitor_8c.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register task to monitor. " alt="" coords="183,391,346,417"/>
+<area shape="rect" id="node10" href="$task__monitor_8c.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Reset counter to indicate that task is alive. " alt="" coords="193,5,336,32"/>
+<area shape="rect" id="node11" href="$task__hostcom_8c.xhtml#a0f5ebca55fdae14c22971c756ac7ac30" title="process_dispatch_message\l_hostcom_send" alt="" coords="165,493,364,534"/>
+<area shape="rect" id="node12" href="$xtsemaphore_8h.xhtml#a43f4af132e6f6f5cda6ba0ba20e0895d" title="Lock mutex. " alt="" coords="219,559,310,585"/>
+<area shape="rect" id="node13" href="$task__hostcom_8c.xhtml#aa2bbba52858032099c52be418bb6e715" title="flush_message_queue" alt="" coords="182,609,347,636"/>
+<area shape="rect" id="node14" href="$xtsemaphore_8h.xhtml#a06bdc2b347e98a86047a4a29ab698c6c" title="Unlock mutex. " alt="" coords="211,660,318,687"/>
+</map>

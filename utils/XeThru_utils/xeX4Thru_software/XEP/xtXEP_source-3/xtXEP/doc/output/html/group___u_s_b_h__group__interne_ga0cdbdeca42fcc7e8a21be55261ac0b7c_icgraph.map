@@ -1,0 +1,4 @@
+<map id="USBH_remotewakeup" name="USBH_remotewakeup">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga8793c42aa4012a8bb24364f4243b4bff" title="Notify that a resume bus occurs A resume can occur after a downstream or an upstream resume..." alt="" coords="216,5,375,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group.xhtml#gaa8954a787d685fc5e64a46fe2bd23631" title="Suspends a USB line. " alt="" coords="235,56,356,83"/>
+</map>

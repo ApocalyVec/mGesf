@@ -1,0 +1,20 @@
+<map id="SCB_CleanDCache_by_Addr" name="SCB_CleanDCache_by_Addr">
+<area shape="rect" id="node2" href="$flashd_8c.xhtml#aaf0c7fb937ecf006c011ab50928ef921" title="Writes a data buffer in the internal flash. " alt="" coords="297,5,409,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga4dade176be1ff02c5dfb6371d873b5ed" title="Send a frame split into buffers. " alt="" coords="287,56,418,83"/>
+<area shape="rect" id="node4" href="$group__can__module.xhtml#gaa6911926348cdcfd85d9931096fafecc" title="Get Rx buffer. " alt="" coords="267,107,438,133"/>
+<area shape="rect" id="node5" href="$group__mcid__functions.xhtml#ga745dbddddd85ddbe2c71a9df4c3e38af" title="HSMCI DMA R/W. " alt="" coords="277,157,428,184"/>
+<area shape="rect" id="node6" href="$qspi__dma_8c.xhtml#a16f401ef0f29ab14079e0355d7a48005" title="Starts a QSPI read or write operation. " alt="" coords="272,208,433,235"/>
+<area shape="rect" id="node7" href="$qspi__dma_8c.xhtml#ad1458b726cb714996c845b482425a10d" title="Starts a SPI master transfer. " alt="" coords="277,259,428,285"/>
+<area shape="rect" id="node8" href="$spi__dma_8c.xhtml#ae3c774fb7e4bcf2db4e5d9e8891b6abd" title="Starts a SPI master transfer. " alt="" coords="273,309,432,336"/>
+<area shape="rect" id="node9" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="291,360,414,387"/>
+<area shape="rect" id="node10" href="$uart__dma_8c.xhtml#a4b0eba333355f3b94f077336b2488a1b" title="Configure the UART Rx DMA mode. " alt="" coords="271,411,434,437"/>
+<area shape="rect" id="node11" href="$uart__dma_8c.xhtml#af00fa029eee33daf8645cedf2d8ef930" title="Configure the UART Tx DMA mode. " alt="" coords="272,461,433,488"/>
+<area shape="rect" id="node12" href="$uart__dma_8c.xhtml#a649abc6e6061e5cbe6450fbba03aa025" title="Starts a UART master transfer. " alt="" coords="285,512,421,539"/>
+<area shape="rect" id="node13" href="$usart__dma_8c.xhtml#a850d3378fd0a34d99a0ce5888a83a8eb" title="Configure the USART Rx DMA Destination with Linker List mode. " alt="" coords="285,563,420,589"/>
+<area shape="rect" id="node14" href="$usart__dma_8c.xhtml#a9c980b56e34d2c15f6b0f179b0086313" title="Configure the USART tx DMA source with Linker List mode. " alt="" coords="286,613,419,640"/>
+<area shape="rect" id="node15" href="$usart__dma_8c.xhtml#a898156572b03a6af7edcb27940d79148" title="Starts a USART master transfer. " alt="" coords="280,664,425,691"/>
+<area shape="rect" id="node16" href="$group__usbd__hal.xhtml#ga81935b1ed57f1d4e636df4565de436a5" title="Sends data through a USB endpoint. " alt="" coords="299,715,406,741"/>
+<area shape="rect" id="node17" href="$group__usbd__hal.xhtml#ga8ebf6dcf09581aa66fbfc89862516e60" title="Special write function. " alt="" coords="270,765,435,792"/>
+<area shape="rect" id="node18" href="$group__uhd__group.xhtml#gaee441a294b489cd2d9861de8a0139d31" title="USBHS_SCB_CleanDCache\l_by_Addr" alt="" coords="255,817,451,858"/>
+<area shape="rect" id="node19" href="$xtio__flash_8h.xhtml#af0f72b62a3aad8055338aa7512145281" title="xtio_flash_store_hw_data" alt="" coords="261,883,444,909"/>
+</map>

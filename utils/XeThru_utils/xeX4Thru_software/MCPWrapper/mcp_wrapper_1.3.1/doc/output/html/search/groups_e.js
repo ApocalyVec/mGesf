@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['sam3a_2f3n_2f3s_2f3u_2f3x_2f4e_2f4n_2f4s_2fg_20peripheral_20dma_20controller_20_28pdc_29_20driver',['SAM3A/3N/3S/3U/3X/4E/4N/4S/G Peripheral DMA Controller (PDC) Driver',['../group__asfdoc__sam__drivers__pdc__group.xhtml',1,'']]],
+  ['status_20and_20control_20registers',['Status and Control Registers',['../group___c_m_s_i_s___c_o_r_e.xhtml',1,'']]],
+  ['systick_20functions',['SysTick Functions',['../group___c_m_s_i_s___core___sys_tick_functions.xhtml',1,'']]],
+  ['system_20control_20block_20_28scb_29',['System Control Block (SCB)',['../group___c_m_s_i_s___s_c_b.xhtml',1,'']]],
+  ['system_20controls_20not_20in_20scb_20_28scnscb_29',['System Controls not in SCB (SCnSCB)',['../group___c_m_s_i_s___s_cn_s_c_b.xhtml',1,'']]],
+  ['system_20tick_20timer_20_28systick_29',['System Tick Timer (SysTick)',['../group___c_m_s_i_s___sys_tick.xhtml',1,'']]],
+  ['standard_20i_2fo_20_28stdio_29',['Standard I/O (stdio)',['../group__group__common__utils__stdio.xhtml',1,'']]],
+  ['standard_20serial_20i_2fo_20_28stdio_29',['Standard serial I/O (stdio)',['../group__group__common__utils__stdio__stdio__serial.xhtml',1,'']]],
+  ['statistics_20functions',['Statistics Functions',['../group__group_stats.xhtml',1,'']]],
+  ['support_20functions',['Support Functions',['../group__group_support.xhtml',1,'']]],
+  ['supply_20controller_20_28supc_29',['Supply Controller (SUPC)',['../group__sam__drivers__supc__group.xhtml',1,'']]],
+  ['sam_20parts',['SAM parts',['../group__sam__part__macros__group.xhtml',1,'']]],
+  ['serial_20peripheral_20interface',['Serial Peripheral Interface',['../group___s_a_m_g55___s_p_i.xhtml',1,'']]],
+  ['supply_20controller',['Supply Controller',['../group___s_a_m_g55___s_u_p_c.xhtml',1,'']]],
+  ['samg55_20xplained_20pro_20board',['SAMG55 Xplained Pro board',['../group__samg55__xplained__pro__group.xhtml',1,'']]],
+  ['samg55g18_20definitions',['SAMG55G18 definitions',['../group___s_a_m_g55_g18__definitions.xhtml',1,'']]],
+  ['samg55g19_20definitions',['SAMG55G19 definitions',['../group___s_a_m_g55_g19__definitions.xhtml',1,'']]],
+  ['samg55j18_20definitions',['SAMG55J18 definitions',['../group___s_a_m_g55_j18__definitions.xhtml',1,'']]],
+  ['samg55j19_20definitions',['SAMG55J19 definitions',['../group___s_a_m_g55_j19__definitions.xhtml',1,'']]],
+  ['samg55n19_20definitions',['SAMG55N19 definitions',['../group___s_a_m_g55_n19__definitions.xhtml',1,'']]],
+  ['serial_20interface_20_28serial_29',['Serial Interface (Serial)',['../group__serial__group.xhtml',1,'']]],
+  ['sleep_20manager',['Sleep manager',['../group__sleepmgr__group.xhtml',1,'']]],
+  ['square_20root',['Square Root',['../group___s_q_r_t.xhtml',1,'']]],
+  ['system_20clock_20management',['System Clock Management',['../group__sysclk__group.xhtml',1,'']]]
+];

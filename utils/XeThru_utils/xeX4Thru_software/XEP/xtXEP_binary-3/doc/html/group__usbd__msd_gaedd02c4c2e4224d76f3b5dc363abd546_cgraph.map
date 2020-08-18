@@ -1,0 +1,4 @@
+<map id="SBCLunCanBeWritten" name="SBCLunCanBeWritten">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga6f8ad39249cd0f7dc9992a7ff44ba164" title="Check if the LUN is ready. " alt="" coords="212,5,332,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga6259d674a30286b49d79ffa89b44e809" title="Updates the sense data of a LUN with the given key and codes. " alt="" coords="380,31,555,57"/>
+</map>

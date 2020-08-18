@@ -1,0 +1,17 @@
+<map id="examples/atmel_samg55/src/ASF/sam/drivers" name="examples/atmel_samg55/src/ASF/sam/drivers">
+<area shape="rect" id="node2" href="dir_204f8da9c5cad38dc30896c092365129.xhtml" title="efc" alt="" coords="517,63,589,111"/>
+<area shape="rect" id="node8" href="dir_7f529e4fc6ea7f44596b5de9bf0437d9.xhtml" title="utils" alt="" coords="277,159,349,207"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000025_000026.xhtml" title="1" alt="" coords="365,176,373,190"/>
+<area shape="rect" id="node3" href="dir_97c73c06b06644114f543d76becb2056.xhtml" title="flexcom" alt="" coords="421,63,493,111"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000033_000026.xhtml" title="2" alt="" coords="366,158,374,172"/>
+<area shape="rect" id="node4" href="dir_11cd7f52a0db6c82dd55dba701a27e4b.xhtml" title="pdc" alt="" coords="325,63,397,111"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000034_000026.xhtml" title="1" alt="" coords="337,139,345,154"/>
+<area shape="rect" id="node5" href="dir_dbe4c1b4aa947ce1d49dbaea57da1c53.xhtml" title="pmc" alt="" coords="229,63,301,111"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000036_000026.xhtml" title="3" alt="" coords="297,131,305,146"/>
+<area shape="rect" id="node6" href="dir_8437aa95e7927be94d7d30b337a8183e.xhtml" title="supc" alt="" coords="133,63,205,111"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000037_000026.xhtml" title="1" alt="" coords="260,143,268,157"/>
+<area shape="rect" id="node7" href="dir_81baf62f2db4b23720ab7ecc8517864e.xhtml" title="usart" alt="" coords="37,63,109,111"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000038_000026.xhtml" title="1" alt="" coords="256,159,264,174"/>
+<area shape="rect" id="clust2" href="dir_e6d561ac73579e0cda4a92437875255b.xhtml" alt="" coords="27,52,696,121"/>
+<area shape="rect" id="clust1" href="dir_48be2503ae6ae6de0698f11fb632640c.xhtml" title="sam" alt="" coords="16,16,707,132"/>
+</map>

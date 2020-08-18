@@ -1,0 +1,48 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/usb.h" name="src/hal/x4m0x_s70/libraries/libusb/usb.h">
+<area shape="rect" id="node2" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="13,169,83,196"/>
+<area shape="rect" id="node3" href="$_u_s_b_d_8h.xhtml" title="include/USBD.h" alt="" coords="1382,408,1503,435"/>
+<area shape="rect" id="node4" href="$_u_s_b_descriptors_8h.xhtml" title="USBDescriptors.h" alt="" coords="950,483,1085,509"/>
+<area shape="rect" id="node5" href="$_u_s_b_requests_8h.xhtml" title="USBRequests.h" alt="" coords="2965,483,3085,509"/>
+<area shape="rect" id="node6" href="$_u_s_b_lib___types_8h.xhtml" title="Definitions for USB Lib compiling. " alt="" coords="511,483,633,509"/>
+<area shape="rect" id="node7" href="$_u_s_b_d___h_a_l_8h.xhtml" title="This file defines functions for USB Device Hardware Access Level. " alt="" coords="471,333,625,360"/>
+<area shape="rect" id="node8" href="$_u_s_b_d___config_8h.xhtml" title="USB Device Framework configurations. " alt="" coords="25,95,193,121"/>
+<area shape="rect" id="node9" href="$_u_s_b_d_driver_8h.xhtml" title="include/USBDDriver.h" alt="" coords="2271,408,2430,435"/>
+<area shape="rect" id="node10" href="$_a_u_d_descriptors_8h.xhtml" title="Definitions and classes for USB Audio class descriptors. " alt="" coords="773,408,958,435"/>
+<area shape="rect" id="node11" href="$_a_u_d_d_function_8h.xhtml" title="include/AUDDFunction.h" alt="" coords="2354,169,2529,196"/>
+<area shape="rect" id="node12" href="$_a_u_d_d_speaker_phone_8h.xhtml" title="USB Audio Speaker &amp; Microphone Function. " alt="" coords="1207,251,1374,278"/>
+<area shape="rect" id="node13" href="$_a_u_d_d_stream_8h.xhtml" title="USB Audio Device Streaming interface with controls. " alt="" coords="1207,333,1329,360"/>
+<area shape="rect" id="node14" href="$_a_u_d_d_speaker_driver_8h.xhtml" title="include/AUDDSpeakerDriver.h" alt="" coords="790,169,1002,196"/>
+<area shape="rect" id="node15" href="$_a_u_d_d_speaker_phone_driver_8h.xhtml" title="include/AUDDSpeakerPhone\lDriver.h" alt="" coords="656,244,859,285"/>
+<area shape="rect" id="node16" href="$_a_u_d_requests_8h.xhtml" title="Definitions and classes for USB Audio class requests. " alt="" coords="4283,95,4453,121"/>
+<area shape="rect" id="node17" href="$_c_d_c_a_u_d_d_driver_8h.xhtml" title="include/CDCAUDDDriver.h" alt="" coords="1764,333,1951,360"/>
+<area shape="rect" id="node18" href="$_c_d_c_descriptors_8h.xhtml" title="Definitions and classes for USB CDC class descriptors. " alt="" coords="4019,408,4154,435"/>
+<area shape="rect" id="node19" href="$_c_d_c_d_serial_8h.xhtml" title="Single CDC Serial Port Function for USB device &amp; composite driver. " alt="" coords="3172,251,3329,278"/>
+<area shape="rect" id="node20" href="$_c_d_c_d_serial_port_8h.xhtml" title="Definition of a class for implementing a USB device CDC serial port function. " alt="" coords="2958,333,3093,360"/>
+<area shape="rect" id="node21" href="$_c_d_c_requests_8h.xhtml" title="Definitions and classes for USB CDC class requests (mostly for ACM). " alt="" coords="3420,408,3540,435"/>
+<area shape="rect" id="node22" href="$_c_d_c_notifications_8h.xhtml" title="Definitions and methods for USB CDC Notifications. " alt="" coords="3255,408,3396,435"/>
+<area shape="rect" id="node23" href="$_c_d_c_d_serial_driver_8h.xhtml" title="include/CDCDSerialDriver.h" alt="" coords="3387,169,3581,196"/>
+<area shape="rect" id="node24" href="$_c_d_c_h_i_d_d_driver_8h.xhtml" title="include/CDCHIDDDriver.h" alt="" coords="3716,333,3897,360"/>
+<area shape="rect" id="node25" href="$_h_i_d_descriptors_8h.xhtml" title="HIDDescriptors.h" alt="" coords="3864,408,3995,435"/>
+<area shape="rect" id="node26" href="$_h_i_d_reports_8h.xhtml" title="HIDReports.h" alt="" coords="4233,483,4338,509"/>
+<area shape="rect" id="node27" href="$_h_i_d_usages_8h.xhtml" title="HIDUsages.h" alt="" coords="5073,483,5178,509"/>
+<area shape="rect" id="node28" href="$_c_d_c_m_s_d_driver_8h.xhtml" title="include/CDCMSDDriver.h" alt="" coords="4225,251,4404,278"/>
+<area shape="rect" id="node29" href="$_m_s_descriptors_8h.xhtml" title="MSDescriptors.h" alt="" coords="4125,333,4251,360"/>
+<area shape="rect" id="node30" href="$_m_s_d_lun_8h.xhtml" title="MSDLun.h" alt="" coords="4850,333,4937,360"/>
+<area shape="rect" id="node31" href="$_s_b_c_8h.xhtml" title="SBC.h" alt="" coords="4972,408,5033,435"/>
+<area shape="rect" id="node32" href="$_m_s_d_i_o_fifo_8h.xhtml" title="MSDIOFifo.h" alt="" coords="4849,408,4948,435"/>
+<area shape="rect" id="node33" href="$_d_u_a_l_c_d_c_d_driver_8h.xhtml" title="include/DUALCDCDDriver.h" alt="" coords="3607,251,3801,278"/>
+<area shape="rect" id="node34" href="$_h_i_d_a_u_d_d_driver_8h.xhtml" title="include/HIDAUDDDriver.h" alt="" coords="1557,333,1739,360"/>
+<area shape="rect" id="node35" href="$_h_i_d_d_function_8h.xhtml" title="Definitions used for general HID support. " alt="" coords="3117,333,3286,360"/>
+<area shape="rect" id="node36" href="$_h_i_d_requests_8h.xhtml" title="HIDRequests.h" alt="" coords="4580,408,4695,435"/>
+<area shape="rect" id="node37" href="$_h_i_d_d_keyboard_8h.xhtml" title="Definition of methods for using a HID keyboard function. " alt="" coords="2759,333,2934,360"/>
+<area shape="rect" id="node38" href="$_h_i_d_d_keyboard_driver_8h.xhtml" title="include/HIDDKeyboardDriver.h" alt="" coords="2731,251,2943,278"/>
+<area shape="rect" id="node39" href="$_h_i_d_d_mouse_driver_8h.xhtml" title="include/HIDDMouseDriver.h" alt="" coords="4529,333,4724,360"/>
+<area shape="rect" id="node40" href="$_h_i_d_d_transfer_driver_8h.xhtml" title="include/HIDDTransferDriver.h" alt="" coords="1975,333,2177,360"/>
+<area shape="rect" id="node41" href="$_h_i_d_m_s_d_driver_8h.xhtml" title="include/HIDMSDDriver.h" alt="" coords="3825,251,3999,278"/>
+<area shape="rect" id="node42" href="$_m_s_d_8h.xhtml" title="include/MSD.h" alt="" coords="5142,333,5255,360"/>
+<area shape="rect" id="node43" href="$_m_s_d_driver_8h.xhtml" title="include/MSDDriver.h" alt="" coords="4966,95,5117,121"/>
+<area shape="rect" id="node44" href="$_m_s_d_d_state_machine_8h.xhtml" title="MSDDStateMachine.h" alt="" coords="4853,251,5016,278"/>
+<area shape="rect" id="node45" href="$_m_s_d_function_8h.xhtml" title="Mass storage function driver definitions. " alt="" coords="5073,169,5191,196"/>
+<area shape="rect" id="node46" href="$_s_b_c_methods_8h.xhtml" title="include/SBCMethods.h" alt="" coords="4732,169,4897,196"/>
+<area shape="rect" id="node47" href="$_u_s_b_video_8h.xhtml" title="include/USBVideo.h" alt="" coords="5519,95,5665,121"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="UsbVideoCamConfigurationDescriptors" name="UsbVideoCamConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___usb_video_streaming_interface_descriptor.xhtml" title="_UsbVideoStreamingInterface\lDescriptor" alt="" coords="5,5,219,47"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_interface_association_descriptor.xhtml" title="_USBInterfaceAssociation\lDescriptor" alt="" coords="19,71,205,112"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="23,137,201,163"/>
+<area shape="rect" id="node5" href="$struct___usb_video_control_interface_descriptor.xhtml" title="Class&#45;specific USB VideoControl Interface descriptor list. " alt="" coords="16,188,208,229"/>
+<area shape="rect" id="node6" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="8,254,216,281"/>
+<area shape="rect" id="node7" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="23,322,201,349"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="genclk_enable_source" name="genclk_enable_source">
+<area shape="rect" id="node2" href="$group__osc__group.xhtml#ga7a75970ad367896e32f9c44d75329cfc" title="osc_is_ready" alt="" coords="425,27,524,54"/>
+<area shape="rect" id="node3" href="$group__osc__group.xhtml#ga13db594de6701e5e235a88597e348e3a" title="osc_enable" alt="" coords="247,27,335,54"/>
+<area shape="rect" id="node4" href="$group__osc__group.xhtml#gace890435e962b82472d3f918ea7b4c52" title="Wait until the oscillator identified by id is ready. " alt="" coords="235,78,347,104"/>
+<area shape="rect" id="node5" href="$group__pll__group.xhtml#ga6d2b476e97cb089063cb947f9337e647" title="Enable the pll with the default configuration. " alt="" coords="204,128,377,155"/>
+</map>

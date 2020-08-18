@@ -1,0 +1,7 @@
+<map id="x4driver_start_sweep" name="x4driver_start_sweep">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="251,5,349,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="211,56,389,83"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a3178964a9710e20ff04db6ecf4951245" title="Set action. " alt="" coords="223,107,377,133"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#a290bcd409abdffc4999d632d9571e570" title="Sets x4 software action. " alt="" coords="224,158,376,199"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="252,224,348,251"/>
+</map>

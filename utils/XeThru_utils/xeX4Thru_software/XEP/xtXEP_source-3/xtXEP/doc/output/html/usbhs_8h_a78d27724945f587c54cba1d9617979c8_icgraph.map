@@ -1,0 +1,9 @@
+<map id="USBHS_UnFreezeClock" name="USBHS_UnFreezeClock">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="260,5,387,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga214508a8f0f824cdcf40bca9ddac10f6" title="Enable Pull&#45;up, connect. " alt="" coords="247,56,400,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#ga3699059b9b9b52b7e55af6d070a7fe61" title="Initializes the USB HW Access driver. " alt="" coords="264,107,383,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#ga72c29d7c5767f5af8df7ba1603a02619" title="Activate USB Device HW InterfaceEnable USB PeripheralEnable USB ClockEnable transceiver. " alt="" coords="247,157,399,184"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="224,208,423,235"/>
+<area shape="rect" id="node7" href="$group__uhd__group.xhtml#ga9b45418a37c193dbcff7ef17040cfa30" title="Disables the USB host mode. " alt="" coords="237,259,409,285"/>
+<area shape="rect" id="node8" href="$group__uhd__group.xhtml#gac9fdf87a0d813bf3717f1440e60c41d8" title="Enables the IDLE state on the USB line. " alt="" coords="248,309,399,336"/>
+</map>

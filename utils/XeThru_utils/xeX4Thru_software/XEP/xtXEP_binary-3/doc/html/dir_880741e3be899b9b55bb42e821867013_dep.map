@@ -1,0 +1,13 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/common/core" name="src/hal/x4m0x_s70/libraries/libusb/common/core">
+<area shape="rect" id="node1" href="dir_880741e3be899b9b55bb42e821867013.xhtml" title="core" alt="" coords="79,52,151,100"/>
+<area shape="rect" id="node2" href="dir_e0a7526ed6c62ee5f62af9e29af05b15.xhtml" title="host" alt="" coords="5,148,77,196"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000035_000051.xhtml" title="2" alt="" coords="72,131,82,146"/>
+<area shape="rect" id="node3" href="dir_a75a6fe80fd9120ba7dd67a0b33a7bc9.xhtml" title="libchip" alt="" coords="68,340,140,388"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000035_000013.xhtml" title="1" alt="" coords="138,323,147,338"/>
+<area shape="rect" id="node4" href="dir_c46a29a3f6521c422d3477bfa11d561d.xhtml" title="include" alt="" coords="68,244,140,292"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000035_000060.xhtml" title="3" alt="" coords="110,219,119,233"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000051_000013.xhtml" title="4" alt="" coords="75,312,85,327"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000051_000060.xhtml" title="10" alt="" coords="77,217,94,231"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000060_000013.xhtml" title="1" alt="" coords="108,314,117,329"/>
+<area shape="rect" id="clust1" href="dir_76e457bf7c3f660e1321e31261c3eba1.xhtml" title="common" alt="" coords="68,16,161,111"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="process_bytes" name="process_bytes">
+<area shape="rect" id="node2" href="$protocol_8h.xhtml#a403205b32271092745430cf402bb6cc9" title="createSetParameterFileCommand" alt="" coords="160,5,379,32"/>
+<area shape="rect" id="node3" href="$protocol_8h.xhtml#a7ed89a7e281a718ff5875d93a189a759" title="createGetParameterFileCommand" alt="" coords="160,56,379,83"/>
+<area shape="rect" id="node4" href="$protocol_8h.xhtml#a6f7328f25e3f3d473aa94e0ff911fee9" title="createPageWriteCommand" alt="" coords="180,107,359,133"/>
+<area shape="rect" id="node5" href="$protocol_8h.xhtml#a9d81bf04d27f6c07e6a77dcb96d92a6b" title="createX4DriverWriteToSpi\lRegisterCommand" alt="" coords="185,158,353,199"/>
+</map>

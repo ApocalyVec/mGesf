@@ -1,0 +1,5 @@
+<map id="examples/atmel_samg55/src/ASF/common/services/freertos/sam/freertos_usart_serial.c" name="examples/atmel_samg55/src/ASF/common/services/freertos/sam/freertos_usart_serial.c">
+<area shape="rect" id="node3" href="$serial_8h.xhtml" title="Serial Mode management. " alt="" coords="95,131,159,158"/>
+<area shape="rect" id="node4" href="$freertos__usart__serial_8h.xhtml" title="FreeRTOS Peripheral Control API For the USART. " alt="" coords="184,131,335,158"/>
+<area shape="rect" id="node5" href="$freertos__peripheral__control__private_8h.xhtml" title="Generic FreeRTOS peripheral control functions. " alt="" coords="359,124,487,165"/>
+</map>

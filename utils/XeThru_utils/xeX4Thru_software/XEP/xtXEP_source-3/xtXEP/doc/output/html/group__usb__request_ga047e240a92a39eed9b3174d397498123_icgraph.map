@@ -1,0 +1,9 @@
+<map id="USBGenericRequest_GetLength" name="USBGenericRequest_GetLength">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#gab8e4cd12ef0615be5ff405457db9e104" title="Handle the SET_CUR request. " alt="" coords="280,5,491,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga26ee739e084b33db49fdc25819529f10" title="Handle the GET_CUR request. " alt="" coords="280,56,491,83"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga489f97d62376e824385055765a31e17b" title="Handle the SET_CUR request. " alt="" coords="327,107,444,133"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speakerphone.xhtml#gaa2c1c8f41b4dbb0494310c2bd60aafaf" title="Handle the GET_CUR request. " alt="" coords="326,157,445,184"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="282,208,489,235"/>
+<area shape="rect" id="node7" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="541,251,684,293"/>
+<area shape="rect" id="node8" href="$group__usbd__hid.xhtml#ga6a3177814ff14ce51040bd58817d4064" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="277,309,493,336"/>
+</map>

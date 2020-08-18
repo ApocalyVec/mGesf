@@ -1,0 +1,5 @@
+<map id="XDMAC_SoftwareFlushReq" name="XDMAC_SoftwareFlushReq">
+<area shape="rect" id="node2" href="$qspi__dma_8c.xhtml#a3f74a9c30f8d87121341efbe86f7b992" title="Disables a QSPI Rx channel. " alt="" coords="241,5,452,32"/>
+<area shape="rect" id="node3" href="$qspi__dma_8c.xhtml#a475ae8a5f6c8d35f9942611d5512144a" title="Disables a QSPI Tx channel. " alt="" coords="241,56,452,83"/>
+<area shape="rect" id="node4" href="$qspi__dma_8c.xhtml#a3bb12a4d22e8c71f840710b19c769067" title="Disables a QSPI SPI Rx and Tx channels. " alt="" coords="253,107,441,133"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="xtlock_lock" name="xtlock_lock">
+<area shape="rect" id="node2" href="$memorypool_8c.xhtml#a02ccbe9282c2b9e53bb9a66a269c7fa3" title="Take memory block. " alt="" coords="165,5,303,32"/>
+<area shape="rect" id="node3" href="$memorypool_8c.xhtml#a8afae8a96a7f4198bb89ace143868223" title="Free memory block. " alt="" coords="167,56,301,83"/>
+<area shape="rect" id="node4" href="$xep__dispatch_8c.xhtml#a7bad5694c10b470cac80025bd27f6fa9" title="Send message on dispatcher. " alt="" coords="144,107,324,133"/>
+<area shape="rect" id="node5" href="$xtio__flash_8c.xhtml#a4b959a98419bc53f38212b561edb0d07" title="Erases specified flash area. " alt="" coords="171,157,297,184"/>
+<area shape="rect" id="node6" href="$xtio__flash_8c.xhtml#a0f73f9b3594686e4318f0ca195cc38b4" title="Writes data to flash. " alt="" coords="175,208,293,235"/>
+<area shape="rect" id="node7" href="$xtio__flash_8c.xhtml#a69a3f02de1c4e206640015c8d19af4f9" title="stores data in flash. " alt="" coords="173,259,295,285"/>
+<area shape="rect" id="node8" href="$task__hostcom_8c.xhtml#abac971969d3f568fc6db3b8205cc9992" title="task_hostcom" alt="" coords="178,309,290,336"/>
+<area shape="rect" id="node9" href="$xfs_8c.xhtml#a538f8868287ede7b1e971f0ee38e001d" title="xfs_lock" alt="" coords="198,360,270,387"/>
+<area shape="rect" id="node10" href="$xtfile_8c.xhtml#ab6502b729403c595b606e92bf005bd09" title="xtfile_lock" alt="" coords="192,411,276,437"/>
+</map>

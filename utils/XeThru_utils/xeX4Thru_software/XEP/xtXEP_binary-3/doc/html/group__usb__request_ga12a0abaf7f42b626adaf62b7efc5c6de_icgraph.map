@@ -1,0 +1,3 @@
+<map id="USBInterfaceRequest_GetAlternateSetting" name="USBInterfaceRequest_GetAlternateSetting">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="211,13,417,39"/>
+</map>

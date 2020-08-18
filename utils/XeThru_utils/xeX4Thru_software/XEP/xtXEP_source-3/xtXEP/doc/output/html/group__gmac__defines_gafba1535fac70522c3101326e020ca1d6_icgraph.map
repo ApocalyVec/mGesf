@@ -1,0 +1,4 @@
+<map id="GMAC_GetTxStatus" name="GMAC_GetTxStatus">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#gab6c25629834229269058fc2ae0381ce8" title="Process successfully sent packets. " alt="" coords="200,5,404,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga1d32bdcf010875dfcaea4817d8086b82" title="Reset TX queue when errors are detected. " alt="" coords="215,56,389,83"/>
+</map>

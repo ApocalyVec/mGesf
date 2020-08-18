@@ -1,0 +1,4 @@
+<map id="sysclk_get_main_hz" name="sysclk_get_main_hz">
+<area shape="rect" id="node2" href="$group__sysclk__group.xhtml#gae91bb547221cdd42b104342e8f776a28" title="Return the current rate in Hz of the CPU clock. " alt="" coords="212,5,347,32"/>
+<area shape="rect" id="node3" href="$group__sysclk__group.xhtml#ga8ae5a954767dfc4d16ce5ae7928e6edf" title="Retrieves the current rate in Hz of the peripheral clocks. " alt="" coords="195,56,364,83"/>
+</map>

@@ -1,0 +1,47 @@
+<map id="arm_circularRead_q7" name="arm_circularRead_q7">
+<area shape="rect" id="node2" href="$arm__math_8h.xhtml#a0b93d31bb5b5ed214c2b94d8a7744cd2" title="Sum of the squares of the elements of a Q31 vector. " alt="" coords="249,5,373,32"/>
+<area shape="rect" id="node3" href="$arm__math_8h.xhtml#a993c00dd7f661d66bdb6e58426e893aa" title="Sum of the squares of the elements of a floating&#45;point vector. " alt="" coords="251,56,371,83"/>
+<area shape="rect" id="node4" href="$arm__math_8h.xhtml#a7050c04b7515e01a75c38f1abbaf71ba" title="Sum of the squares of the elements of a Q15 vector. " alt="" coords="249,107,373,133"/>
+<area shape="rect" id="node5" href="$arm__math_8h.xhtml#af969c85c5655e3d72d7b99ff188f92c9" title="Sum of the squares of the elements of a Q7 vector. " alt="" coords="253,157,369,184"/>
+<area shape="rect" id="node6" href="$arm__math_8h.xhtml#aebc707ee539020357c25da4c75b52eb7" title="Mean value of a Q7 vector. " alt="" coords="253,208,368,235"/>
+<area shape="rect" id="node7" href="$arm__math_8h.xhtml#ac882495d5f098819fd3939c1ef7795b3" title="Mean value of a Q15 vector. " alt="" coords="249,259,372,285"/>
+<area shape="rect" id="node8" href="$arm__math_8h.xhtml#acf2526d8c2d75e486e8f0b0e31877ad0" title="Mean value of a Q31 vector. " alt="" coords="249,309,372,336"/>
+<area shape="rect" id="node9" href="$arm__math_8h.xhtml#a74ce08c49ab61e57bd50c3a0ca1fdb2b" title="Mean value of a floating&#45;point vector. " alt="" coords="251,360,370,387"/>
+<area shape="rect" id="node10" href="$arm__math_8h.xhtml#a393f26c5a3bfa05624fb8d32232a6d96" title="Variance of the elements of a floating&#45;point vector. " alt="" coords="259,411,362,437"/>
+<area shape="rect" id="node11" href="$arm__math_8h.xhtml#ac02873f1c2cc80adfd799305f0e6465d" title="Variance of the elements of a Q31 vector. " alt="" coords="257,461,364,488"/>
+<area shape="rect" id="node12" href="$arm__math_8h.xhtml#a79dce009ed2de28a125aeb3f19631654" title="Variance of the elements of a Q15 vector. " alt="" coords="257,512,364,539"/>
+<area shape="rect" id="node13" href="$arm__math_8h.xhtml#a0e3ab1b57da32d45388d1fa90d7fd88c" title="Root Mean Square of the elements of a floating&#45;point vector. " alt="" coords="257,563,364,589"/>
+<area shape="rect" id="node14" href="$arm__math_8h.xhtml#ae33015fda23fc44e7ead5e5ed7e8d314" title="Root Mean Square of the elements of a Q31 vector. " alt="" coords="255,613,366,640"/>
+<area shape="rect" id="node15" href="$arm__math_8h.xhtml#af5b836b72dda9e5dfbbd17c7906fd13f" title="Root Mean Square of the elements of a Q15 vector. " alt="" coords="255,664,366,691"/>
+<area shape="rect" id="node16" href="$arm__math_8h.xhtml#a4969b5b5f3d001377bc401a3ee99dfc2" title="Standard deviation of the elements of a floating&#45;point vector. " alt="" coords="259,715,362,741"/>
+<area shape="rect" id="node17" href="$arm__math_8h.xhtml#a39495e74f96116178be085c9dc7742f5" title="Standard deviation of the elements of a Q31 vector. " alt="" coords="257,765,364,792"/>
+<area shape="rect" id="node18" href="$arm__math_8h.xhtml#af9d27afa9928ff28a63cd98ea9218a72" title="Standard deviation of the elements of a Q15 vector. " alt="" coords="257,816,364,843"/>
+<area shape="rect" id="node19" href="$arm__math_8h.xhtml#ae45024c497392cde2ae358a76d435213" title="Floating&#45;point complex magnitude. " alt="" coords="233,867,389,893"/>
+<area shape="rect" id="node20" href="$arm__math_8h.xhtml#a14f82f9230e9d96d5b9774e2fefcb7be" title="Q31 complex magnitude. " alt="" coords="231,917,391,944"/>
+<area shape="rect" id="node21" href="$arm__math_8h.xhtml#a0a4a8f77a6a51d9b3f3b9d729f85b7a4" title="Q15 complex magnitude. " alt="" coords="231,968,391,995"/>
+<area shape="rect" id="node22" href="$arm__math_8h.xhtml#a2b08b5e8001d2c15204639d00893fc70" title="Q15 complex dot product. " alt="" coords="217,1019,405,1045"/>
+<area shape="rect" id="node23" href="$arm__math_8h.xhtml#a5b731a59db062a9ad84562ef68a6c8af" title="Q31 complex dot product. " alt="" coords="217,1069,405,1096"/>
+<area shape="rect" id="node24" href="$arm__math_8h.xhtml#adcfaf567a25eb641da4043eafb9bb076" title="Floating&#45;point complex dot product. " alt="" coords="219,1120,403,1147"/>
+<area shape="rect" id="node25" href="$arm__math_8h.xhtml#a3bd8889dcb45980e1d3e53344df54e85" title="Q15 complex&#45;by&#45;real multiplication. " alt="" coords="215,1171,406,1197"/>
+<area shape="rect" id="node26" href="$arm__math_8h.xhtml#a715e4bb8e945b8ca51ec5237611697ce" title="Q31 complex&#45;by&#45;real multiplication. " alt="" coords="215,1221,406,1248"/>
+<area shape="rect" id="node27" href="$arm__math_8h.xhtml#a9c18616f56cb4d3c0889ce0b339221ca" title="Floating&#45;point complex&#45;by&#45;real multiplication. " alt="" coords="217,1272,404,1299"/>
+<area shape="rect" id="node28" href="$arm__math_8h.xhtml#a1f5f8212a4994882b647f0538a55856c" title="Minimum value of a Q7 vector. " alt="" coords="259,1323,362,1349"/>
+<area shape="rect" id="node29" href="$arm__math_8h.xhtml#ad065e37535ebb726750ac1545cb3fa6f" title="Minimum value of a Q15 vector. " alt="" coords="255,1373,366,1400"/>
+<area shape="rect" id="node30" href="$arm__math_8h.xhtml#ab20faeceb5ff5d2d9dd628c2ecf41303" title="Minimum value of a Q31 vector. " alt="" coords="255,1424,366,1451"/>
+<area shape="rect" id="node31" href="$arm__math_8h.xhtml#af62b1673740fc516ea64daf777b7d74a" title="Minimum value of a floating&#45;point vector. " alt="" coords="257,1475,364,1501"/>
+<area shape="rect" id="node32" href="$arm__math_8h.xhtml#a6afd64d381b5c232de59163ebfe71e35" title="Maximum value of a Q7 vector. " alt="" coords="257,1525,364,1552"/>
+<area shape="rect" id="node33" href="$arm__math_8h.xhtml#ac132856c68f4bf2a056eaad5921c7880" title="Maximum value of a Q15 vector. " alt="" coords="253,1576,368,1603"/>
+<area shape="rect" id="node34" href="$arm__math_8h.xhtml#aff7cbd4e955382def06724cc4cc85795" title="Maximum value of a Q31 vector. " alt="" coords="253,1627,368,1653"/>
+<area shape="rect" id="node35" href="$arm__math_8h.xhtml#a5b89d1b04575aeec494f678695fb87d8" title="Maximum value of a floating&#45;point vector. " alt="" coords="255,1677,366,1704"/>
+<area shape="rect" id="node36" href="$arm__math_8h.xhtml#a67e96abfc9c3e30efb70a2ec9d0fe7e8" title="Q15 complex&#45;by&#45;complex multiplication. " alt="" coords="208,1728,413,1755"/>
+<area shape="rect" id="node37" href="$arm__math_8h.xhtml#a1829e50993a90742de225a0ce4213838" title="Q31 complex&#45;by&#45;complex multiplication. " alt="" coords="208,1779,413,1805"/>
+<area shape="rect" id="node38" href="$arm__math_8h.xhtml#a14b47080054a1ba1250a86805be1ff6b" title="Floating&#45;point complex&#45;by&#45;complex multiplication. " alt="" coords="210,1829,411,1856"/>
+<area shape="rect" id="node39" href="$arm__math_8h.xhtml#a177704107f94564e9abe4daaa36f4554" title="Converts the elements of the floating&#45;point vector to Q31 vector. " alt="" coords="243,1880,378,1907"/>
+<area shape="rect" id="node40" href="$arm__math_8h.xhtml#a215456e35a18db86882e1d3f0d24e1f2" title="Converts the elements of the floating&#45;point vector to Q15 vector. " alt="" coords="243,1931,378,1957"/>
+<area shape="rect" id="node41" href="$arm__math_8h.xhtml#a44a393818cdee8dce80f2d66add25411" title="Converts the elements of the floating&#45;point vector to Q7 vector. " alt="" coords="247,1981,374,2008"/>
+<area shape="rect" id="node42" href="$arm__math_8h.xhtml#a901dede4661365c9e7c630d3eb31c32c" title="Converts the elements of the Q31 vector to Q15 vector. " alt="" coords="245,2032,376,2059"/>
+<area shape="rect" id="node43" href="$arm__math_8h.xhtml#a7f297d1a7d776805395095fdb24a8071" title="Converts the elements of the Q31 vector to Q7 vector. " alt="" coords="249,2083,372,2109"/>
+<area shape="rect" id="node44" href="$arm__math_8h.xhtml#af8b0d2324de273fc430b0e61ad4e9eb2" title="Converts the elements of the Q15 vector to floating&#45;point vector. " alt="" coords="243,2133,378,2160"/>
+<area shape="rect" id="node45" href="$arm__math_8h.xhtml#a7ba2d87366990ad5380439e2b4a4c0a5" title="Converts the elements of the Q15 vector to Q31 vector. " alt="" coords="245,2184,376,2211"/>
+<area shape="rect" id="node46" href="$arm__math_8h.xhtml#a8fb31855ff8cce09c2ec9308f48ded69" title="Converts the elements of the Q15 vector to Q7 vector. " alt="" coords="249,2235,372,2261"/>
+</map>

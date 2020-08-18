@@ -1,0 +1,6 @@
+<map id="xt_selftest_ext_ram_shorts" name="xt_selftest_ext_ram_shorts">
+<area shape="rect" id="node2" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="220,5,331,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1de94d9c6a29f9fa44e498e97edde1cc" title="Returns 1 if one or more PIO of the given Pin instance currently have a high level; otherwise returns..." alt="" coords="239,56,312,83"/>
+<area shape="rect" id="node4" href="$xt__selftest_8c.xhtml#a169f543c42e6ee260b82ee826da12b61" title="xt_selftest_ext_ram\l_mark_faulty_pin" alt="" coords="201,107,349,149"/>
+<area shape="rect" id="node5" href="$xt__selftest_8c.xhtml#a3f51feb7164dcfe9ee44907f0cf2bb9d" title="xt_selftest_ext_ram\l_mark_passed_test" alt="" coords="201,173,349,214"/>
+</map>

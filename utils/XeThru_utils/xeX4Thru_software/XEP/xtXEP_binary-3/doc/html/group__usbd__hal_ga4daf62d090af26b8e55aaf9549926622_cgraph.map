@@ -1,0 +1,14 @@
+<map id="UDPHS_EndpointHandler" name="UDPHS_EndpointHandler">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#abc21e0a5d2ce477178c31b3a3049bd33" title="Gets interrupt status for a given EP. " alt="" coords="245,5,410,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a2d57f0978079a4c218c3c4642bd4faa0" title="Get Endpoint Type. " alt="" coords="256,56,399,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a53c55fa48fbb95b2e0f67b58ca4cde49" title="Check for interrupt types enabled for a given endpoint. " alt="" coords="247,107,408,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#ga118d9d128a56e31f230bee94ac30f91e" title="Transfers a data payload from the current transfer buffer to the endpoint FIFO. " alt="" coords="249,157,405,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a6af2b5fe38366a2ff6922c00f8f4252e" title="Clears register/acknowledge for a given endpoint. " alt="" coords="242,208,413,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#aed77f2f7b0383514691381d53de5605f" title="Disables an interrupt type for a given endpoint. " alt="" coords="236,259,419,285"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#a6b0323c3e931a4c757ca8cbb2987869f" title="Disables interrupt for endpoint. " alt="" coords="250,309,405,336"/>
+<area shape="rect" id="node9" href="$group__usbd__hal.xhtml#ga5e6b01495743675aae106e51aee3d1e3" title="Handles a completed transfer on the given endpoint, invoking the configured callback if any..." alt="" coords="245,360,409,387"/>
+<area shape="rect" id="node10" href="$usbhs_8h.xhtml#a707dc91ebe546e554ca6e64223ef426f" title="Read endpoint&#39;s byte count of the FIFO. " alt="" coords="256,411,399,437"/>
+<area shape="rect" id="node11" href="$group__usbd__hal.xhtml#ga562412b12d966ee5ea983881184d51f6" title="Transfers a data payload from an endpoint FIFO to the current transfer buffer. " alt="" coords="249,461,405,488"/>
+<area shape="rect" id="node12" href="$group__usbd__hal.xhtml#ga51f483eefa9753c15806dfc1cfeb214a" title="Received SETUP packet from endpoint 0 FIFO. " alt="" coords="248,512,407,539"/>
+<area shape="rect" id="node13" href="$group__usbd__interface.xhtml#gab76f94b99aa061efe700867fc400738c" title="Handle the USB setup package received, should be invoked when an endpoint got a setup package as requ..." alt="" coords="243,563,411,589"/>
+</map>

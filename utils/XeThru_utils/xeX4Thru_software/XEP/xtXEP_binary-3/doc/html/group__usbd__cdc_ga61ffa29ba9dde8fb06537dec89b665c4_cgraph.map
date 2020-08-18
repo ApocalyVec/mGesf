@@ -1,0 +1,4 @@
+<map id="CDCDSerial_Initialize" name="CDCDSerial_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga38c0b965385d8d07a36e8149a8f446f2" title="Initializes the USB Device CDC serial port function. " alt="" coords="213,5,393,32"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#ga32163598f16b8f844c8640af789ac0ca" title="USB CDC Serial Port Event Handler. " alt="" coords="208,56,397,83"/>
+</map>

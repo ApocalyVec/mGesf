@@ -1,0 +1,3 @@
+<map id="usart_disable_tx" name="usart_disable_tx">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="171,5,333,32"/>
+</map>

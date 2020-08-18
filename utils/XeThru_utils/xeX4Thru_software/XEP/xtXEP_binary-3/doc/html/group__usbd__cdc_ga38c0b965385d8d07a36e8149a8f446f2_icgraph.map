@@ -1,0 +1,4 @@
+<map id="CDCDSerialPort_Initialize" name="CDCDSerialPort_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga61ffa29ba9dde8fb06537dec89b665c4" title="Initializes the USB Device CDC serial driver &amp; USBD Driver. " alt="" coords="252,5,407,32"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__cdccdc.xhtml#ga2ff92f5d6611f4cc29bc6049b39b443c" title="Initializes the USB device composite device driver. " alt="" coords="233,56,425,83"/>
+</map>

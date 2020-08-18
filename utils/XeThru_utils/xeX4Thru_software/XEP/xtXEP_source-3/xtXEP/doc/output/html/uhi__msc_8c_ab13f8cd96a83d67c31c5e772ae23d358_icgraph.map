@@ -1,0 +1,5 @@
+<map id="uhi_msc_reset_endpoint" name="uhi_msc_reset_endpoint">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a4b8bf30114a15489e5f8b0619a8319ea" title="Checks the CBW packet transfer and launch the next step The next step can be a DATA phase or a CSW pa..." alt="" coords="464,5,605,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a5bde639d16169cbf29a09a0ea37b8765" title="Checks the DATA phase transfer and launch the next step The next step can be a CSW packet or a endpoi..." alt="" coords="232,31,416,57"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#a19a9a79cd89aacd88ca76ea2e27eaecf" title="Checks the CSW packet transfer. " alt="" coords="241,81,407,108"/>
+</map>

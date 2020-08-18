@@ -1,0 +1,4 @@
+<map id="USBD_IsHighSpeed" name="USBD_IsHighSpeed">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga962288f78a55bd84652a388023b53dca" title="Sends the current status of the device to the host. " alt="" coords="206,5,337,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__tran.xhtml#ga495fd4a8918a0c0725382a6165fb6da5" title="Returns the descriptor requested by the host. " alt="" coords="200,57,343,98"/>
+</map>

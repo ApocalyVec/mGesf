@@ -1,0 +1,11 @@
+<map id="USBGenericRequest_GetType" name="USBGenericRequest_GetType">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#ga2b7fde84b4a6cc4bfe50ca02a01c5bb5" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="556,51,767,92"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga17c8f0de49847c1c6fcd8f2ca0ffad64" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="281,47,473,88"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#gad7ef8cec21e04288200d14b5d1960ee6" title="Handles audio&#45;specific USB requests sent by the host. " alt="" coords="271,112,483,153"/>
+<area shape="rect" id="node5" href="$group__usbd__ccid.xhtml#gaa3679fa7dec59d63fc8951434967b5b8" title="SETUP request handler for a CCID device. " alt="" coords="296,178,457,205"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc.xhtml#ga22689d00e906f48f9d99ae975b6a0ebb" title="Handles CDC&#45;specific SETUP requests. " alt="" coords="266,229,487,255"/>
+<area shape="rect" id="node7" href="$group__usbd__cdc.xhtml#gafccee3269ed6e338919f108286973e40" title="Handles CDC&#45;specific SETUP requests. " alt="" coords="261,279,492,306"/>
+<area shape="rect" id="node8" href="$group__usbd__composite__cdccdc.xhtml#ga9ba1f9929b5a8da6905543152693e5a4" title="Handles composite&#45;specific USB requests sent by the host, and forwards standard ones to the USB devic..." alt="" coords="540,305,783,331"/>
+<area shape="rect" id="node9" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="305,381,448,423"/>
+<area shape="rect" id="node10" href="$group__usbd__msd.xhtml#gaa87efba32c907fa095c6f8797d2580db" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="270,447,483,474"/>
+</map>

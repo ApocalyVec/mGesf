@@ -1,0 +1,20 @@
+<map id="USBD_Read" name="USBD_Read">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#ga202e427613710c7dc3cb2cfe3603f624" title="Reads incoming audio data sent by the USB host into the provided buffer. " alt="" coords="172,5,363,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#gab8e4cd12ef0615be5ff405457db9e104" title="Handle the SET_CUR request. " alt="" coords="162,56,373,83"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga82d0f6b436b86043552d1c12a3a577d7" title="Reads incoming audio data sent by the USB host into the provided buffer. " alt="" coords="152,107,383,133"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speakerphone.xhtml#ga489f97d62376e824385055765a31e17b" title="Handle the SET_CUR request. " alt="" coords="209,157,326,184"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__speakerphone.xhtml#gaaf2bd970a33238926d16c0ee97efd5f7" title="Receives data from the host through the audio function (as speaker). " alt="" coords="194,208,341,235"/>
+<area shape="rect" id="node7" href="$group__usbd__audio__speakerphone.xhtml#ga2eb0b892e56d322024c99b95fb71dd42" title="Receives data from the host through the audio function (as speaker). " alt="" coords="171,259,363,285"/>
+<area shape="rect" id="node8" href="$group__usbd__ccid.xhtml#ga7638afdf218235334b871a60e142dc23" title="Reads data from the Data OUT endpoint. " alt="" coords="222,309,313,336"/>
+<area shape="rect" id="node9" href="$group__usbd__cdc.xhtml#ga96f1ea97b11b0f511e9b470ac1c3c6bb" title="Receives data from the host through the virtual COM port created by the CDC device serial driver..." alt="" coords="192,360,343,387"/>
+<area shape="rect" id="node10" href="$group__usbd__cdc.xhtml#ga1f9eb98ba0cfc1cbc1b4ea0559ee0c7e" title="Receives new line coding information from the USB host. " alt="" coords="207,411,328,437"/>
+<area shape="rect" id="node11" href="$group__usbd__cdc.xhtml#ga8999bdf9f9412e4545f777ef2764cca7" title="Receives data from the host through the virtual COM port created by the CDC device serial driver..." alt="" coords="187,461,347,488"/>
+<area shape="rect" id="node12" href="$group__usbd__hid.xhtml#gac6fed5adc3563a9a4fb9bb52986a25a9" title="Callback function when GetReport request data sent to host. " alt="" coords="194,512,341,539"/>
+<area shape="rect" id="node13" href="$group__usbd__hid.xhtml#ga285bfa90562d385afb6ec10421f54de0" title="Reads the requested report from the host. " alt="" coords="178,563,357,589"/>
+<area shape="rect" id="node14" href="$group__usbd__hid.xhtml#ga16be963c9626b50b5f74b52df673f6d4" title="Callback function when interrupt OUT data received from host. " alt="" coords="161,613,373,640"/>
+<area shape="rect" id="node15" href="$group__usbd__hid.xhtml#ga18ed1d60f54db7c0dd38b3db4fcccfa8" title="Start polling interrupt OUT pipe (output report, host to device) if there is. " alt="" coords="431,649,619,690"/>
+<area shape="rect" id="node16" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="667,678,809,719"/>
+<area shape="rect" id="node17" href="$group__usbd__hid.xhtml#ga68d0118b1b2f0697591b41f3031b0284" title="Read raw data through USB interrupt OUT EP. " alt="" coords="194,765,341,792"/>
+<area shape="rect" id="node18" href="$group__usbd__msd.xhtml#gac202c092099685d21ac19320311b1d0f" title="State machine for the MSD device driver. " alt="" coords="189,816,346,843"/>
+<area shape="rect" id="node19" href="$group__usbd__msd.xhtml#ga7e5d6c7f2b4cece7084910e9567508a3" title="Performs a WRITE (10) command on the specified LUN. " alt="" coords="216,867,319,893"/>
+</map>

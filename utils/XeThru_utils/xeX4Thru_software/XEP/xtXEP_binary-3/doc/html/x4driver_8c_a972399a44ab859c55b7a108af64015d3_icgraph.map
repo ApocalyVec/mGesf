@@ -1,0 +1,9 @@
+<map id="x4driver_set_spi_register" name="x4driver_set_spi_register">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a0b4d051505ed04b077d126758967318f" title="Uploads custom 8051 firmware to X4. " alt="" coords="247,5,433,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a421ecb2b885441b8d565301fbd81993d" title="Upload default 8051 firmware to X4. " alt="" coords="493,64,679,105"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a0d9b975a093cd210bda1b58fca408c42" title="Read back embedded 8051 firmware. " alt="" coords="252,122,428,149"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#ac410a664bdf7c4a27e6b26fe27bf9801" title="Sets internal register value. " alt="" coords="259,173,421,215"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#af984a0703695b6ef27a2c76a30e8c992" title="Gets internal register value. " alt="" coords="247,239,433,280"/>
+<area shape="rect" id="node7" href="$x4driver__unittest_8cpp.xhtml#a7c5d404a731b61a0c62e98c893d4f438" title="TEST_F" alt="" coords="307,305,373,331"/>
+<area shape="rect" id="node8" href="$xep__application__mcp__callbacks_8h.xhtml#afaff4cfa6c10aaeb1121a1bf362d81b5" title="onMcpX4DriverSetSpiRegister" alt="" coords="235,355,445,382"/>
+</map>

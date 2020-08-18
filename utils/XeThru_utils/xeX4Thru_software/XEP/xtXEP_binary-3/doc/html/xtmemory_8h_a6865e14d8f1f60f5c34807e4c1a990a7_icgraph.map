@@ -1,0 +1,8 @@
+<map id="xtmemory_malloc_slow" name="xtmemory_malloc_slow">
+<area shape="rect" id="node2" href="$xt__new__delete_8cpp.xhtml#a205ed048fdf5259c2e8e0cb60ee8f719" title="operator new" alt="" coords="271,5,378,32"/>
+<area shape="rect" id="node3" href="$task__hostcom_8c.xhtml#abac971969d3f568fc6db3b8205cc9992" title="task_hostcom" alt="" coords="269,56,381,83"/>
+<area shape="rect" id="node4" href="$xfs_8h.xhtml#acb8c539cd456d3e5789a479ae0642acd" title="Initialize the file system. " alt="" coords="291,107,358,133"/>
+<area shape="rect" id="node5" href="$xthousekeeping_8c.xhtml#a483c7c81860a3c5388e09f21ba1c5749" title="xthousekeeping_init" alt="" coords="250,157,399,184"/>
+<area shape="rect" id="node6" href="$xep__application_8c.xhtml#a145c12b30c377de637fb330f545ba7cb" title="xep_init_memorypoolset\l_default" alt="" coords="235,209,414,250"/>
+<area shape="rect" id="node7" href="$xep__application__mcp__callbacks_8h.xhtml#af618862372201f145df4d98d54819758" title="onMcpX4DriverReadFromSpi\lRegister" alt="" coords="224,274,425,315"/>
+</map>

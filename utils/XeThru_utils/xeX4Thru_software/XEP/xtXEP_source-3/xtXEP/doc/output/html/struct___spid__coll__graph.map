@@ -1,0 +1,5 @@
+<map id="_Spid" name="_Spid">
+<area shape="rect" id="node2" href="$struct___xdmad.xhtml" title="DMA driver instance. " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node3" href="$struct___spid_cmd.xhtml" title="Spi Transfer Request prepared by the application upper layer. " alt="" coords="105,5,191,32"/>
+<area shape="rect" id="node4" href="$struct_spi.xhtml" title="Spi hardware registers. " alt="" coords="285,5,328,32"/>
+</map>

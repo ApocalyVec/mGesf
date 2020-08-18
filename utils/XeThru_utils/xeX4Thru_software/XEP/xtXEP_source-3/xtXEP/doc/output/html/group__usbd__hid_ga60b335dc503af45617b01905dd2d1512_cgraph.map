@@ -1,0 +1,4 @@
+<map id="HIDDFunction_ReportSent" name="HIDDFunction_ReportSent">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="297,5,395,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid.xhtml#ga16be963c9626b50b5f74b52df673f6d4" title="Callback function when interrupt OUT data received from host. " alt="" coords="240,56,452,83"/>
+</map>

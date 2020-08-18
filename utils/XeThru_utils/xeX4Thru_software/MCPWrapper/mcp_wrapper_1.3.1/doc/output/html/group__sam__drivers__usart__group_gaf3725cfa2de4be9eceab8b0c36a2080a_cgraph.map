@@ -1,0 +1,4 @@
+<map id="usart_init_spi_master" name="usart_init_spi_master">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#ga6cb84f0297ddca62d4077f616efa5c5b" title="Reset the USART and disable TX and RX. " alt="" coords="230,5,317,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__usart__group.xhtml#gaae31ff0122d054b1a03f9adfba47995e" title="Calculate a clock divider (CD) for the USART SPI master mode to generate a baud rate as close as poss..." alt="" coords="200,57,347,98"/>
+</map>

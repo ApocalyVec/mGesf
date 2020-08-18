@@ -5,10 +5,9 @@ import numpy as np
 import pymoduleconnector
 import matplotlib.pyplot as plt
 
-try:
+from sys import platform
+if platform == "win32":  # only enable module connector is on windows system, with which the radar is only compatible
     from pymoduleconnector.moduleconnectorwrapper import *
-except ImportError:
-    print('...')
 
 class xeThruX4SensorInterface:
 
@@ -42,7 +41,6 @@ class xeThruX4SensorInterface:
 
             self.frame_history.clear()
             self.clutter = None
-
         except:
             print("Cannot find x4 device, please check connection or reconnect your device")
             raise

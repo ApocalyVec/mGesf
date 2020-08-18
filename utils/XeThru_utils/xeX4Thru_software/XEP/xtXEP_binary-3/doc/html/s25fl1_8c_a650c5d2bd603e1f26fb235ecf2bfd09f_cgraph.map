@@ -1,0 +1,9 @@
+<map id="S25FL1D_ReadQuadIO" name="S25FL1D_ReadQuadIO">
+<area shape="rect" id="node2" href="$qspi__dma_8h.xhtml#a0d664a2d9fdc7a5b276553ef98ebb085" title="Enables a QSPI Rx channel. " alt="" coords="219,5,426,32"/>
+<area shape="rect" id="node3" href="$qspi__dma_8h.xhtml#aa4c44dd6ea57f7d345dc1cea9e764b33" title="Enables a QSPI SPI Rx channel. " alt="" coords="231,56,415,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a8be9db10e4e0f291c0cb537fcc7e3d68" title="Start S25FL1D Memory access with/without data write/read. " alt="" coords="231,107,414,133"/>
+<area shape="rect" id="node5" href="$qspi__dma_8h.xhtml#a4dd4aa5fce406ddb2b215df6397142b8" title="Check if the QSPI driver is busy. " alt="" coords="267,157,378,184"/>
+<area shape="rect" id="node6" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="299,208,347,235"/>
+<area shape="rect" id="node7" href="$qspi__dma_8h.xhtml#a3f74a9c30f8d87121341efbe86f7b992" title="Disables a QSPI Rx channel. " alt="" coords="217,259,428,285"/>
+<area shape="rect" id="node8" href="$qspi__dma_8h.xhtml#a3bb12a4d22e8c71f840710b19c769067" title="Disables a QSPI SPI Rx and Tx channels. " alt="" coords="229,309,417,336"/>
+</map>

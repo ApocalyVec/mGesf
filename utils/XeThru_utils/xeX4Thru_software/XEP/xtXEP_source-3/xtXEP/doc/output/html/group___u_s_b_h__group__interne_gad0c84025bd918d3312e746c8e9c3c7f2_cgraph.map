@@ -1,0 +1,4 @@
+<map id="USBH_dev_get_string" name="USBH_dev_get_string">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="215,5,376,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga2d73340a79aefd4d383d702946479d91" title="Callback used to signal the end of a setup request. " alt="" coords="216,57,375,98"/>
+</map>

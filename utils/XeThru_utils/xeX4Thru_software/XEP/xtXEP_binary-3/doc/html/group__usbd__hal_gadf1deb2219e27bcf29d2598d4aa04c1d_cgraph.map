@@ -1,0 +1,5 @@
+<map id="UDPHS_Read" name="UDPHS_Read">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga3050097643684759b64beda54283f1e4" title="DMA Single transfer. " alt="" coords="176,5,323,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#aaefdcd5f8be021f6ebffcbb4e7630079" title="Enables interrupt for a given endpoint. " alt="" coords="174,56,325,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a6e9251af935e4867afa52cd306e8c699" title="Enables an interrupt type for a given endpoint. " alt="" coords="160,107,339,133"/>
+</map>

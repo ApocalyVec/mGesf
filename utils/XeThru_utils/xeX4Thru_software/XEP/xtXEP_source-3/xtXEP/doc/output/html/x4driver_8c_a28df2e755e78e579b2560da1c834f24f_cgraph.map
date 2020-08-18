@@ -1,0 +1,4 @@
+<map id="x4driver_write_to_spi_register" name="x4driver_write_to_spi_register">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="208,5,307,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="209,56,305,83"/>
+</map>

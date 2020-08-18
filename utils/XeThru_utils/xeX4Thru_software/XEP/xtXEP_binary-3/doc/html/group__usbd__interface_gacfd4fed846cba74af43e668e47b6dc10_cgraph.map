@@ -1,0 +1,4 @@
+<map id="USBD_RemoteWakeUp" name="USBD_RemoteWakeUp">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga72c29d7c5767f5af8df7ba1603a02619" title="Activate USB Device HW InterfaceEnable USB PeripheralEnable USB ClockEnable transceiver. " alt="" coords="244,5,396,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga24f5a47f6815de571752ba22c98073f5" title="Starts a remote wake&#45;up procedure. " alt="" coords="220,56,420,83"/>
+</map>

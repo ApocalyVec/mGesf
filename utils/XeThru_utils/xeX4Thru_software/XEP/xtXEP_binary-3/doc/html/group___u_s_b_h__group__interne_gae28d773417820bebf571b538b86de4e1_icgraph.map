@@ -1,0 +1,5 @@
+<map id="USBH_enumeration_reset" name="USBH_enumeration_reset">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga572eb439f63403cc1f218136d527690c" title="Device enumeration step 1 Reset USB line. " alt="" coords="243,5,435,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga930d75d6d265f7d3bdd399c48f513be1" title="Device enumeration step 3 Reset USB line. " alt="" coords="243,56,435,83"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga87dae241e7c1021902ec4978ba3ae26a" title="Device enumeration step 7 Reset USB line. " alt="" coords="243,107,435,133"/>
+</map>

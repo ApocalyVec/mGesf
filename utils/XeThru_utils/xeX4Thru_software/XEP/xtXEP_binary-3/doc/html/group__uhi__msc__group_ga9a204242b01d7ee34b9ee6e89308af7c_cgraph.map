@@ -1,0 +1,6 @@
+<map id="uhi_msc_scsi_read_10" name="uhi_msc_scsi_read_10">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="301,5,340,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a8be1505361ded3e52f05ea51b17bc334" title="Selects a LUN. " alt="" coords="247,56,394,83"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#ae40b333993e7c9aba64dc65f41ede8c4" title="Sends the CBW packet. " alt="" coords="267,107,374,133"/>
+<area shape="rect" id="node5" href="$uhi__msc_8c.xhtml#a407c06ba56e304a4a8613da3ce032329" title="Decodes the result of scsi READ 10 command. " alt="" coords="219,157,423,184"/>
+</map>

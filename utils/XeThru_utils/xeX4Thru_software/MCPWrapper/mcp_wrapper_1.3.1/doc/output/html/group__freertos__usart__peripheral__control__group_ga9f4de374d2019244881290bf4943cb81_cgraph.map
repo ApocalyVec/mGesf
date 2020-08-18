@@ -1,0 +1,7 @@
+<map id="freertos_usart_serial_read_packet" name="freertos_usart_serial_read_packet">
+<area shape="rect" id="node2" href="$freertos__peripheral__control_8c.xhtml#a2a696bb316c52bd93e25d5e9f6aabeed" title="get_pdc_peripheral\l_details" alt="" coords="211,5,342,47"/>
+<area shape="rect" id="node3" href="$task_8h.xhtml#a85df14f56902e5eadee1b20789aa272d" title="vTaskSetTimeOutState" alt="" coords="199,71,354,98"/>
+<area shape="rect" id="node4" href="$task_8h.xhtml#a0f786f440ae1a3f491a3b1f44a580cf7" title="xTaskCheckForTimeOut" alt="" coords="195,122,358,149"/>
+<area shape="rect" id="node5" href="$freertos__peripheral__control_8c.xhtml#a2e20e0ae4a96bf0746f9e1f21e41e4db" title="freertos_copy_bytes\l_from_pdc_circular_buffer" alt="" coords="192,173,361,215"/>
+<area shape="rect" id="node6" href="$freertos__usart__serial_8c.xhtml#a53cee58d461e19378a8453e89d52424f" title="configure_rx_dma" alt="" coords="215,239,339,266"/>
+</map>

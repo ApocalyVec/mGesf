@@ -1,0 +1,4 @@
+<map id="USBDDriver_Test" name="USBDDriver_Test">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gaab3264faf4fbfa56f0d6db53f806cbc3" title="Certification test for High Speed device. " alt="" coords="185,5,277,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="184,56,279,83"/>
+</map>

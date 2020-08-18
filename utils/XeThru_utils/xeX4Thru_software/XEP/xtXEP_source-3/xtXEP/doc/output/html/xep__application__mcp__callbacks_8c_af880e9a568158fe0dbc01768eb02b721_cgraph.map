@@ -1,0 +1,12 @@
+<map id="onMcpX4DriverInit" name="onMcpX4DriverInit">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a86dbadcb2e415d23600ef1bb31c9dbde" title="Initiates x4driver. " alt="" coords="245,5,343,32"/>
+<area shape="rect" id="node3" href="$x4driver_8h.xhtml#a8bc96b0db173f49cfe59027d9e95f600" title="x4driver_check_configuration" alt="" coords="191,56,397,83"/>
+<area shape="rect" id="node4" href="$x4driver_8h.xhtml#a3d4fbcf15fcf3736ef68613007caca8e" title="x4driver_set_sweep\l_trigger_control" alt="" coords="221,107,367,149"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml#ab0d28c0bbd203c3d66b4e46cf4e7fb5f" title="Gets default radar configuration. " alt="" coords="217,173,371,214"/>
+<area shape="rect" id="node6" href="$x4driver_8h.xhtml#a6c801c9a8b3010ebe47eb1ee881c9503" title="Calibrated frame offset in meters. " alt="" coords="221,238,367,279"/>
+<area shape="rect" id="node7" href="$x4driver_8h.xhtml#aaa39bc07728273218162fc63a0bcb864" title="x4driver_set_tx_power" alt="" coords="212,304,376,331"/>
+<area shape="rect" id="node8" href="$x4driver_8h.xhtml#ab5eb8602c52123f84b4dfee408ef2cc7" title="x4driver_set_prf_div" alt="" coords="219,355,369,381"/>
+<area shape="rect" id="node9" href="$x4driver_8h.xhtml#a3bd645021a42b838c9e3b3ff2f021d50" title="x4driver_set_tx_center\l_frequency" alt="" coords="211,406,377,447"/>
+<area shape="rect" id="node10" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="191,471,397,513"/>
+<area shape="rect" id="node11" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="191,537,397,578"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/host/cdc/uhi_cdc.h" name="src/hal/x4m0x_s70/libraries/libusb/host/cdc/uhi_cdc.h">
+<area shape="rect" id="node3" href="$_c_d_c_requests_8h.xhtml" title="Definitions and classes for USB CDC class requests (mostly for ACM). " alt="" coords="157,95,277,121"/>
+<area shape="rect" id="node4" href="$_u_s_b_requests_8h.xhtml" title="USBRequests.h" alt="" coords="170,169,290,196"/>
+<area shape="rect" id="node5" href="$_u_s_b_h_8h.xhtml" title="Interface of the USB Host Controller (UHC) " alt="" coords="361,169,433,196"/>
+<area shape="rect" id="node6" href="$uhi_8h.xhtml" title="Common API for USB Host Interface. " alt="" coords="402,95,455,121"/>
+</map>

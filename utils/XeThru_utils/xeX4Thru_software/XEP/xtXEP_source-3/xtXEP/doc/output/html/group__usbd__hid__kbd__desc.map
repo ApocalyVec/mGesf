@@ -1,0 +1,5 @@
+<map id="HIDD Keyboard Driver Definitions" name="HIDD Keyboard Driver Definitions">
+<area shape="rect" id="node1" href="$group__usbd__hid__kbd__keys.xhtml" title="This page lists definition for HID keypad keys. " alt="" coords="387,5,515,32"/>
+<area shape="rect" id="node2" href="$group__usbd__hid__kbd__polling.xhtml" title="HID Keyboard Default\l Polling Rates" alt="" coords="372,57,531,98"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__key.xhtml" title="Implement HID Keyboard Function For USB Device. " alt="" coords="5,35,116,61"/>
+</map>

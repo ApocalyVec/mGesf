@@ -1,0 +1,4 @@
+<map id="USBHS_AckInt" name="USBHS_AckInt">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="181,5,308,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga214508a8f0f824cdcf40bca9ddac10f6" title="Enable Pull&#45;up, connect. " alt="" coords="168,56,321,83"/>
+</map>

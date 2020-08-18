@@ -1,0 +1,12 @@
+<map id="QSPI_GetStatus" name="QSPI_GetStatus">
+<area shape="rect" id="node2" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a4788c3a05bb9fd76eb60f37331d8441c" title="Read QSPI RDR register for SPI mode. " alt="" coords="213,43,324,70"/>
+<area shape="rect" id="node3" href="$libraries_2libchip_2source_2qspi_8c.xhtml#aaa891e040401e77f8f68068c6751a558" title="Reads the data received by a SPI peripheral. " alt="" coords="408,43,557,70"/>
+<area shape="rect" id="node4" href="$libraries_2libchip_2source_2qspi_8c.xhtml#aa8e703416d8faf7e6ca68d18c1da6115" title="Reads multiple data received by a SPI peripheral. " alt="" coords="413,94,553,120"/>
+<area shape="rect" id="node5" href="$libraries_2libchip_2source_2qspi_8c.xhtml#af19b4cbed1aa41039bb632daf84a515e" title="Write to QSPI Tx register in SPI mode. " alt="" coords="213,144,324,171"/>
+<area shape="rect" id="node6" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a2e91dc0a09fbf99a27f36836807b1a60" title="Sends a single data through a SPI peripheral. " alt="" coords="408,170,557,196"/>
+<area shape="rect" id="node7" href="$libraries_2libchip_2source_2qspi_8c.xhtml#ade81d33cb14e6aa8701d4824de0656a2" title="Sends multiple data through a SPI peripheral. " alt="" coords="413,234,553,260"/>
+<area shape="rect" id="node8" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a6f2bf0afdcfd71a444a5d3fec654a96e" title="Returns enabled interrupt status. " alt="" coords="177,296,360,323"/>
+<area shape="rect" id="node9" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a0cee5ee97a2b6575ccf9d56d3c5fce64" title="Ends ongoing transfer by releasing CS of QSPI peripheral. " alt="" coords="202,398,335,424"/>
+<area shape="rect" id="node10" href="$qspi__dma_8c.xhtml#a7ec38a13740b2b9ff6f7cb7c2b4e864c" title="QSPI xDMA Tx callback Invoked on QSPi DMA Write done. " alt="" coords="416,372,549,399"/>
+<area shape="rect" id="node11" href="$qspi__dma_8c.xhtml#a9175c4c6f74204330090dfc3d1bfdc6a" title="QSPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="415,435,550,462"/>
+</map>

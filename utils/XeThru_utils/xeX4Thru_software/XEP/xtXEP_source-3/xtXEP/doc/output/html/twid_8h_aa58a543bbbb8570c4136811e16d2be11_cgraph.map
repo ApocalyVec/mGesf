@@ -1,0 +1,16 @@
+<map id="TWID_DmaRead" name="TWID_DmaRead">
+<area shape="rect" id="node2" href="$twi_8h.xhtml#ab3bf1b5df694229af5fae34ca569ab7b" title="Enables the selected interrupts sources on a TWI peripheral. " alt="" coords="220,5,321,32"/>
+<area shape="rect" id="node3" href="$twi_8h.xhtml#a806d1ace472ce5f4e2fe2de6f5a425ff" title="Starts a read operation on the TWI bus with the specified slave, it returns immediately. " alt="" coords="214,56,327,83"/>
+<area shape="rect" id="node4" href="$twid_8c.xhtml#a5e4ba8b79a879cfd2ab220e068062512" title="Initializes a TWI DMA Read channel. " alt="" coords="184,107,357,133"/>
+<area shape="rect" id="node5" href="$twid_8c.xhtml#a0125a71c25953d95a1e0382402a40ad8" title="Configure xDMA read linker list for TWI transfer. " alt="" coords="176,157,365,184"/>
+<area shape="rect" id="node6" href="$group__dmad__functions.xhtml#ga20bc2d5f85c7145a43d7ccd13b067e50" title="Start xDMA transfer. " alt="" coords="191,208,350,235"/>
+<area shape="rect" id="node7" href="$timetick_8h.xhtml#ae626fb68b4503701534936d10ec97067" title="Get Delayed number of tick. " alt="" coords="233,259,309,285"/>
+<area shape="rect" id="node8" href="$group__dmad__functions.xhtml#ga85abf366b35d0d2903f8bbc69b4da242" title="Check if DMA transfer is finished. " alt="" coords="185,309,356,336"/>
+<area shape="rect" id="node9" href="$timetick_8h.xhtml#a125704795ef25b9a4887b18916658f2d" title="Get Delayed number of tick. " alt="" coords="209,360,332,387"/>
+<area shape="rect" id="node10" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga503ef7ef58c0773defd15a82f6336c09" title="SCB_InvalidateDCache\l_by_Addr" alt="" coords="187,411,354,453"/>
+<area shape="rect" id="node11" href="$twi_8h.xhtml#a316b5d5ffbfa49a8d6517a061b92a4a6" title="Get the current status register of the given TWI peripheral. " alt="" coords="213,477,328,504"/>
+<area shape="rect" id="node12" href="$twi_8h.xhtml#ab6f6a89c7dbb1075f904386273252977" title="Sends a STOP condition on the TWI. " alt="" coords="231,528,311,555"/>
+<area shape="rect" id="node13" href="$twi_8h.xhtml#a8b4e96e6ce1126921517147b048fde51" title="Reads a byte from the TWI bus. " alt="" coords="215,579,326,605"/>
+<area shape="rect" id="node14" href="$group__dmad__functions.xhtml#ga6be5cec75618250adb227d7588ae7078" title="Stop DMA transfer. " alt="" coords="192,629,349,656"/>
+<area shape="rect" id="node15" href="$group__dmad__functions.xhtml#ga2a3178c1d2615b7a4d7a0005662cdd89" title="Free the specified xDMA channel. " alt="" coords="193,680,349,707"/>
+</map>

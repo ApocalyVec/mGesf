@@ -1,0 +1,10 @@
+<map id="src/System/task_monitor.h" name="src/System/task_monitor.h">
+<area shape="rect" id="node2" href="$xtio__serial__com_8c.xhtml" title="Implement USB serial communication. " alt="" coords="5,80,173,121"/>
+<area shape="rect" id="node3" href="$task__hostcom_8c.xhtml" title="src/HostCom/task_hostcom.c" alt="" coords="197,87,408,114"/>
+<area shape="rect" id="node4" href="$main_8c.xhtml" title="main() function for Radar Application " alt="" coords="432,87,520,114"/>
+<area shape="rect" id="node5" href="$task__radar_8c.xhtml" title="src/Radar/task_radar.c" alt="" coords="545,87,709,114"/>
+<area shape="rect" id="node6" href="$xtfile_8c.xhtml" title="src/System/File/xtfile.c" alt="" coords="733,87,896,114"/>
+<area shape="rect" id="node7" href="$xthousekeeping_8c.xhtml" title="src/System/Housekeeping\l/xthousekeeping.c" alt="" coords="920,80,1109,121"/>
+<area shape="rect" id="node8" href="$task__monitor_8c.xhtml" title="src/System/task_monitor.c" alt="" coords="1133,87,1325,114"/>
+<area shape="rect" id="node9" href="$xep__application_8c.xhtml" title="src/XEPA/xep_application.c" alt="" coords="1350,87,1541,114"/>
+</map>

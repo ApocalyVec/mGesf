@@ -1,0 +1,5 @@
+<map id="PMC_ConfigureMckWithPlla" name="PMC_ConfigureMckWithPlla">
+<area shape="rect" id="node2" href="$pmc_8c.xhtml#ab1e199de7fe19016f1a2022fe726780e" title="Switch MCK to main clock. " alt="" coords="456,22,659,49"/>
+<area shape="rect" id="node3" href="$pmc_8c.xhtml#a009f9a3d93428949ca9259f4761381a1" title="Configure PLLA clock by giving MUL and DIV. " alt="" coords="259,22,394,49"/>
+<area shape="rect" id="node4" href="$pmc_8c.xhtml#a42c60c846653995b36b8e76330895326" title="Selection of Master Clock. " alt="" coords="245,73,408,99"/>
+</map>

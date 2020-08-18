@@ -1,0 +1,4 @@
+<map id="pmc_enable_pck" name="pmc_enable_pck">
+<area shape="rect" id="node2" href="$group__genclk__group.xhtml#ga0a7af63a4442cae9ef9907778c7c5d9d" title="genclk_enable" alt="" coords="177,5,282,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__flexcom__group.xhtml#gad2900fd33f36b75e9ff5e5b833ba9943" title="Enable the FLEXCOM module. " alt="" coords="173,56,285,83"/>
+</map>

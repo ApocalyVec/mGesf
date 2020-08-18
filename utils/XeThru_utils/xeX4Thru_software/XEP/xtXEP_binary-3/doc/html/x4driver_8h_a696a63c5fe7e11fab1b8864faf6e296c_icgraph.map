@@ -1,0 +1,9 @@
+<map id="x4driver_get_spi_register" name="x4driver_get_spi_register">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a0d9b975a093cd210bda1b58fca408c42" title="Read back embedded 8051 firmware. " alt="" coords="254,5,430,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#ac410a664bdf7c4a27e6b26fe27bf9801" title="Sets internal register value. " alt="" coords="261,57,423,98"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a33cc21cd8eeda4680c7ee2c47cf6e09b" title="Gets reads frame counter from 8051 mailbox requires enable to be set and 8051 SRAM to be program..." alt="" coords="241,123,443,149"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#af984a0703695b6ef27a2c76a30e8c992" title="Gets internal register value. " alt="" coords="249,174,435,215"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a86dbadcb2e415d23600ef1bb31c9dbde" title="Inits x4driver. " alt="" coords="293,240,391,267"/>
+<area shape="rect" id="node7" href="$x4driver__unittest_8cpp.xhtml#a7c5d404a731b61a0c62e98c893d4f438" title="TEST_F" alt="" coords="309,291,375,317"/>
+<area shape="rect" id="node8" href="$xep__application__mcp__callbacks_8h.xhtml#ab1ee8219699e8ad5565777e7962bd09f" title="onMcpX4DriverGetSpiRegister" alt="" coords="236,341,448,368"/>
+</map>

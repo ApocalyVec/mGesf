@@ -1,0 +1,6 @@
+<map id="Clock Management" name="Clock Management">
+<area shape="rect" id="node1" href="$group__pll__group.xhtml" title="This group contains functions and definitions related to configuring and enabling/disabling on&#45;chip P..." alt="" coords="217,5,341,32"/>
+<area shape="rect" id="node3" href="$group__sysclk__group.xhtml" title="See Quick Start Guide for the System Clock Management service (SAMG51). " alt="" coords="188,56,371,83"/>
+<area shape="rect" id="node4" href="$group__osc__group.xhtml" title="This group contains functions and definitions related to configuring and enabling/disabling on&#45;chip o..." alt="" coords="201,107,357,133"/>
+<area shape="rect" id="node5" href="$group__genclk__group.xhtml" title="Generic clocks are configurable clocks which run outside the system clock domain. ..." alt="" coords="188,157,371,184"/>
+</map>

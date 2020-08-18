@@ -1,0 +1,15 @@
+<map id="LowLevelInit" name="LowLevelInit">
+<area shape="rect" id="node2" href="$xt__config_8c.xhtml#a5bcf4b174e202cc282b9c31b779ec82e" title="xt_config_init" alt="" coords="181,5,286,32"/>
+<area shape="rect" id="node3" href="$libraries_2libboard_2resources___x4_m0x_2system__sams70_8c.xhtml#a93f514700ccf00d08dbdcff7f1224eb2" title="Setup the microcontroller system. " alt="" coords="188,56,279,83"/>
+<area shape="rect" id="node4" href="$board__lowlevel_8c.xhtml#a9744d00e2d0a1292c99875113204bcfc" title="Set up a memory region. " alt="" coords="153,107,314,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="201,157,265,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8f5af376adcfaea7f2ddb3ef9b6b2544" title="Instruction Synchronization Barrier. " alt="" coords="205,208,262,235"/>
+<area shape="rect" id="node7" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="363,284,527,311"/>
+<area shape="rect" id="node8" href="$xep__hal_8h.xhtml#a02d431b74bbdd1cc5d4ff79903f7ebd6" title="Initiate LED. " alt="" coords="185,512,282,539"/>
+<area shape="rect" id="node9" href="$xep__hal_8h.xhtml#a3c4b3201bcc90f24579249f3b6297fb3" title="Get reset count. " alt="" coords="161,563,306,589"/>
+<area shape="rect" id="node10" href="$wdt_8h.xhtml#ac9145d17b1cbe9ca58154d330b22d9bf" title="Enable watchdog with given mode. " alt="" coords="183,613,283,640"/>
+<area shape="rect" id="node11" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="381,360,508,387"/>
+<area shape="rect" id="node12" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="383,411,507,437"/>
+<area shape="rect" id="node13" href="$pio__it_8h.xhtml#ad31e05d6debb1e88af6124cd7751af22" title="Initializes the PIO interrupt management logic. " alt="" coords="152,360,315,387"/>
+<area shape="rect" id="node14" href="$group__dmad__functions.xhtml#ga8c7517080f70e93096364e916af6e6f2" title="Initialize xDMA driver instance. " alt="" coords="169,411,297,437"/>
+</map>

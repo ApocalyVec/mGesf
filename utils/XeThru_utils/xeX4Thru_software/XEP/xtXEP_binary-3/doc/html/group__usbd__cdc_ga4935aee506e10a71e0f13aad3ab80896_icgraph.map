@@ -1,0 +1,4 @@
+<map id="CDCDSerialPort_ParseInterfaces" name="CDCDSerialPort_ParseInterfaces">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga2f46147999cac65dacbef7b85dc70dd1" title="Invoked whenever the device is changed by the host. " alt="" coords="285,5,502,32"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__cdccdc.xhtml#ga83d64409b071a9a4a6f316c08731b8c4" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="280,57,507,98"/>
+</map>

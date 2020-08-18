@@ -1,0 +1,8 @@
+<map id="xtio_flash_write" name="xtio_flash_write">
+<area shape="rect" id="node2" href="$xtsemaphore_8h.xhtml#a397a6e9c0a37ad527526e2c8ad9c5c7e" title="Create handle to mutex. " alt="" coords="214,5,321,32"/>
+<area shape="rect" id="node3" href="$xtsemaphore_8h.xhtml#a43f4af132e6f6f5cda6ba0ba20e0895d" title="Lock mutex. " alt="" coords="222,56,313,83"/>
+<area shape="rect" id="node4" href="$flashd_8h.xhtml#aaf0c7fb937ecf006c011ab50928ef921" title="Writes a data buffer in the internal flash. " alt="" coords="211,107,323,133"/>
+<area shape="rect" id="node5" href="$xtio__flash_8c.xhtml#a274458d21783c0dd4b1053430db3402e" title="flash_in_progress_callback" alt="" coords="172,157,363,184"/>
+<area shape="rect" id="node6" href="$startup__same70_8c.xhtml#ab5e09814056d617c521549e542639b7e" title="SysTick_Handler" alt="" coords="204,208,331,235"/>
+<area shape="rect" id="node7" href="$xtsemaphore_8h.xhtml#a06bdc2b347e98a86047a4a29ab698c6c" title="Unlock mutex. " alt="" coords="214,259,321,285"/>
+</map>

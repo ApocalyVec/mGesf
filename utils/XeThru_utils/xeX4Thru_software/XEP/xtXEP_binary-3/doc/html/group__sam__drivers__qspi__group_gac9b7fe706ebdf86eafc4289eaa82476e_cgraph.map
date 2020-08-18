@@ -1,0 +1,11 @@
+<map id="qspi_set_config" name="qspi_set_config">
+<area shape="rect" id="node2" href="$group__sam__drivers__qspi__group.xhtml#ga31cb74b30165e2846ceda94ed0dbf759" title="Set QSPI to Memory mode. " alt="" coords="183,5,363,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__qspi__group.xhtml#ga9e95fa27f0d982b4aaaad181142a50a2" title="Set QSPI to SPI mode (Master mode only). " alt="" coords="201,56,345,83"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__qspi__group.xhtml#ga7e52d7ec0e603a64cd1e933c7ed0ea89" title="Enable waiting RX_EMPTY before transfer starts. " alt="" coords="189,107,356,149"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__qspi__group.xhtml#ga8ca1ef774ade2bb79e4eeccc16c9a4b9" title="Disable waiting RX_EMPTY before transfer starts. " alt="" coords="189,173,357,214"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__qspi__group.xhtml#ga4606b52c80f4bba49dc435501a4c7f9b" title="Set Chip Select Mode. " alt="" coords="174,239,371,265"/>
+<area shape="rect" id="node7" href="$group__sam__drivers__qspi__group.xhtml#ga0880ebeed18b648d870d195869d7bbcb" title="Set the number of data bits transferred. " alt="" coords="177,289,368,316"/>
+<area shape="rect" id="node8" href="$group__sam__drivers__qspi__group.xhtml#gaf02d982ad1a563e7522a116b4cd548eb" title="Set qspi minimum inactive QCS delay. " alt="" coords="173,341,372,382"/>
+<area shape="rect" id="node9" href="$group__sam__drivers__qspi__group.xhtml#ga187cc59e7a64feb10cb09f7529ff7eea" title="Set qspi delay between consecutive transfers. " alt="" coords="184,406,361,447"/>
+<area shape="rect" id="node10" href="$group__sam__drivers__qspi__group.xhtml#gace03a90819597dacca37b4b78a40d382" title="Set qspi clock transfer delay. " alt="" coords="186,472,359,499"/>
+</map>

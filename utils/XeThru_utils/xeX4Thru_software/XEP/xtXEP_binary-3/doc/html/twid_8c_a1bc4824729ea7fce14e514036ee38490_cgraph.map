@@ -1,0 +1,9 @@
+<map id="TWID_Handler" name="TWID_Handler">
+<area shape="rect" id="node2" href="$twi_8h.xhtml#aee8c3520f24c54aedbad6cee6ab2eeaa" title="Returns the current status register of the given TWI peripheral, but masking interrupt sources which ..." alt="" coords="171,5,335,32"/>
+<area shape="rect" id="node3" href="$twi_8h.xhtml#a8b4e96e6ce1126921517147b048fde51" title="Reads a byte from the TWI bus. " alt="" coords="197,56,308,83"/>
+<area shape="rect" id="node4" href="$twi_8h.xhtml#ac976e61b9b9d4488753f960d3df80c63" title="Disables the selected interrupts sources on a TWI peripheral. " alt="" coords="200,107,305,133"/>
+<area shape="rect" id="node5" href="$twi_8h.xhtml#ab3bf1b5df694229af5fae34ca569ab7b" title="Enables the selected interrupts sources on a TWI peripheral. " alt="" coords="202,157,303,184"/>
+<area shape="rect" id="node6" href="$twi_8h.xhtml#ab6f6a89c7dbb1075f904386273252977" title="Sends a STOP condition on the TWI. " alt="" coords="213,208,293,235"/>
+<area shape="rect" id="node7" href="$twi_8h.xhtml#ade1813a089ae27dac920fa1b07d46b94" title="Sends a STOP condition. " alt="" coords="164,259,341,285"/>
+<area shape="rect" id="node8" href="$twi_8h.xhtml#ad728b448499f0b4d4633dfe0cc4a5ee7" title="Sends a byte of data to one of the TWI slaves on the bus. " alt="" coords="197,309,308,336"/>
+</map>

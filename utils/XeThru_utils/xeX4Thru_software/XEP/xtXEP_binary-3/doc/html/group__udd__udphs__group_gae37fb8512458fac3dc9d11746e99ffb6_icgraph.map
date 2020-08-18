@@ -1,0 +1,7 @@
+<map id="udd_sleep_mode" name="udd_sleep_mode">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gaddb14658d468b2cb8f8e044c5221b835" title="if" alt="" coords="258,5,297,32"/>
+<area shape="rect" id="node3" href="$group__udd__udphs__group.xhtml#ga9792d1899ae058e3984d6a622fe2ad42" title="udd_enable" alt="" coords="419,81,515,108"/>
+<area shape="rect" id="node4" href="$group__udd__udphs__group.xhtml#ga7a7c0d9236c922c2af33c6702565a99f" title="udd_attach" alt="" coords="230,107,325,133"/>
+<area shape="rect" id="node5" href="$group__udd__udphs__group.xhtml#ga03e59eaa264f1dbe5a52559311d0520e" title="udd_detach" alt="" coords="229,157,326,184"/>
+<area shape="rect" id="node6" href="$group__udd__udphs__group.xhtml#gac447212e04789282dabee65a23fe2a08" title="udd_send_remotewakeup" alt="" coords="184,208,371,235"/>
+</map>

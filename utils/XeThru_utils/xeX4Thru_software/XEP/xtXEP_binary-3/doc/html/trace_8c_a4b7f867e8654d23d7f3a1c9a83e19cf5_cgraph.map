@@ -1,0 +1,4 @@
+<map id="TRACE_CONFIGURE" name="TRACE_CONFIGURE">
+<area shape="rect" id="node2" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="364,5,475,32"/>
+<area shape="rect" id="node3" href="$dbg__console_8h.xhtml#a7fd93dda53e8b074935d6ece79bc0396" title="Configures an USART peripheral with the specified parameters. " alt="" coords="197,31,316,57"/>
+</map>

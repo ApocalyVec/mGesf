@@ -1,0 +1,6 @@
+<map id="CDCDSerial_RequestHandler" name="CDCDSerial_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga494662f08154675457d9953fbced331a" title="Handles CDC&#45;specific SETUP requests. " alt="" coords="279,5,471,47"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__cdcaud.xhtml#ga8c3816c9ea002bccdb6b27d3ffe6b8e7" title="Handles composite&#45;specific USB requests sent by the host, and forwards standard ones to the USB devic..." alt="" coords="257,71,492,98"/>
+<area shape="rect" id="node4" href="$group__usbd__composite__cdchid.xhtml#ga46e7faa6d6c89af2674263a70d7d2ef4" title="Handles composite&#45;specific USB requests sent by the host, and forwards standard ones to the USB devic..." alt="" coords="260,122,489,149"/>
+<area shape="rect" id="node5" href="$group__usbd__composite__cdcmsd.xhtml#ga6c71fe00bc7822fec2af273fbc9c2ba0" title="Handles CDCMSD&#45;specific USB requests sent by the host, and forwards standard ones to the USB device d..." alt="" coords="261,173,488,199"/>
+</map>

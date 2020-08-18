@@ -1,0 +1,4 @@
+<map id="QSPI_ReadSPI" name="QSPI_ReadSPI">
+<area shape="rect" id="node2" href="$libraries_2libchip_2source_2qspi_8c.xhtml#aaa891e040401e77f8f68068c6751a558" title="Reads the data received by a SPI peripheral. " alt="" coords="164,5,313,32"/>
+<area shape="rect" id="node3" href="$libraries_2libchip_2source_2qspi_8c.xhtml#aa8e703416d8faf7e6ca68d18c1da6115" title="Reads multiple data received by a SPI peripheral. " alt="" coords="169,56,309,83"/>
+</map>

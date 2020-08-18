@@ -1,0 +1,4 @@
+<map id="examples/atmel_samg55/src/ASF/sam/utils/cmsis/samg/samg55/include/samg55.h" name="examples/atmel_samg55/src/ASF/sam/utils/cmsis/samg/samg55/include/samg55.h">
+<area shape="rect" id="node2" href="$startup__samg55_8c.xhtml" title="Startup file for SAMG55. " alt="" coords="5,109,217,180"/>
+<area shape="rect" id="node3" href="$system__samg55_8c.xhtml" title="Provides the low&#45;level initialization functions that called on chip startup. " alt="" coords="241,109,453,180"/>
+</map>

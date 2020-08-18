@@ -1,0 +1,4 @@
+<map id="sysclk_enable_usb" name="sysclk_enable_usb">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="193,5,392,32"/>
+<area shape="rect" id="node3" href="$group__udd__udphs__group.xhtml#ga9792d1899ae058e3984d6a622fe2ad42" title="udd_enable" alt="" coords="245,56,341,83"/>
+</map>

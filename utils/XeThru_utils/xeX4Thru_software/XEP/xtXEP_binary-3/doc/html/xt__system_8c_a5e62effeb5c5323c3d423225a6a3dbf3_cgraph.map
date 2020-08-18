@@ -1,0 +1,4 @@
+<map id="xt_get_reset_reason" name="xt_get_reset_reason">
+<area shape="rect" id="node2" href="$rstc_8h.xhtml#a2433d8df3e724706f0ad99fa937345f8" title="Get the status. " alt="" coords="219,5,346,32"/>
+<area shape="rect" id="node3" href="$xt__system_8c.xhtml#a389bc6b896aa270d8a1e473dd9c32ffc" title="Sets the cause of the coming software reset. " alt="" coords="207,56,359,83"/>
+</map>

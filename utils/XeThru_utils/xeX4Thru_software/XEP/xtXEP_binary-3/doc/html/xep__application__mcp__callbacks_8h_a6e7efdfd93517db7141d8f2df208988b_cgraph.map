@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverGetDacMin" name="onMcpX4DriverGetDacMin">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a032203e8f9460b3b693a5b81fbf1f633" title="x4driver_get_dac_min" alt="" coords="263,5,425,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a90b63c6c0030baa1fd9c1d71b1c23d1a" title="Dispatch message to hostcom asking to reply with int array to host. " alt="" coords="241,57,447,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="241,122,447,163"/>
+</map>

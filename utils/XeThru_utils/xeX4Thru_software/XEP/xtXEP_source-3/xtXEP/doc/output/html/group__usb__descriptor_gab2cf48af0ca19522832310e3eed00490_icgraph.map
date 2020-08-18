@@ -1,0 +1,4 @@
+<map id="USBConfigurationDescriptor_Parse" name="USBConfigurationDescriptor_Parse">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga9a20011d336dec2bd5feb197f0da1c80" title="Configures the device by setting it into the Configured state and initializing all endpoints..." alt="" coords="261,5,391,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__tran.xhtml#ga495fd4a8918a0c0725382a6165fb6da5" title="Returns the descriptor requested by the host. " alt="" coords="255,57,397,98"/>
+</map>

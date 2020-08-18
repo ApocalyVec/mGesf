@@ -1,0 +1,4 @@
+<map id="usart_init_sync_master" name="usart_init_sync_master">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#ga6cb84f0297ddca62d4077f616efa5c5b" title="Reset the USART and disable TX and RX. " alt="" coords="247,5,333,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__usart__group.xhtml#gac6c9d28298b3db2195c7fb3ffe999678" title="Calculate a clock divider for the USART synchronous master modes to generate a baudrate as close as p..." alt="" coords="211,57,369,98"/>
+</map>

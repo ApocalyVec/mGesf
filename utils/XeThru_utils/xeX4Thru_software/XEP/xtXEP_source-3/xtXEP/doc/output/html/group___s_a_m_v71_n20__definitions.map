@@ -1,0 +1,8 @@
+<map id="SAMV71N20 definitions" name="SAMV71N20 definitions">
+<area shape="rect" id="node1" href="$group___s_a_m_v71_n20__api.xhtml" title="SOFTWARE PERIPHERAL API DEFINITION FOR SAMV71N20. " alt="" coords="239,5,409,32"/>
+<area shape="rect" id="node3" href="$group___s_a_m_v71_n20__reg.xhtml" title="Registers Access Definitions" alt="" coords="224,56,424,83"/>
+<area shape="rect" id="node4" href="$group___s_a_m_v71_n20__id.xhtml" title="Peripheral Ids Definitions" alt="" coords="235,107,413,133"/>
+<area shape="rect" id="node5" href="$group___s_a_m_v71_n20__cmsis.xhtml" title="CMSIS Definitions" alt="" coords="257,157,391,184"/>
+<area shape="rect" id="node6" href="$group___s_a_m_v71_n20__base.xhtml" title="Peripheral Base Address\l Definitions" alt="" coords="235,209,413,250"/>
+<area shape="rect" id="node7" href="$group___s_a_m_v71_n20__pio.xhtml" title="Peripheral Pio Definitions" alt="" coords="234,275,414,301"/>
+</map>

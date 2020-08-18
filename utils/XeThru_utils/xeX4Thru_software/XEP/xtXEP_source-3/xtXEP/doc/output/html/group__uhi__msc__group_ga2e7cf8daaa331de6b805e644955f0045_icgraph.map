@@ -1,0 +1,9 @@
+<map id="uhi_msc_is_available" name="uhi_msc_is_available">
+<area shape="rect" id="node2" href="$group__uhi__msc__mem__group.xhtml#ga7cd2809cc43b8d687b32fbdb8d80ea18" title="Gives the number of available LUN. " alt="" coords="238,5,409,32"/>
+<area shape="rect" id="node3" href="$group__uhi__msc__mem__group.xhtml#ga79d9bf4b3d74a04367138617d8056b95" title="Checks and update the status of the LUN. " alt="" coords="234,57,413,98"/>
+<area shape="rect" id="node4" href="$group__uhi__msc__mem__group.xhtml#gafbc0e818125cffa188b4d6fcfa9af019" title="Returns the capacity of the LUN. " alt="" coords="217,123,429,149"/>
+<area shape="rect" id="node5" href="$group__uhi__msc__mem__group.xhtml#ga0ab8e4988ed3c92de5ed5d3f0e6173ed" title="Returns the sector size of the LUN. " alt="" coords="208,173,439,200"/>
+<area shape="rect" id="node6" href="$group__uhi__msc__mem__group.xhtml#ga5cbced218e52f441b7db354bb733f7f5" title="Checks if the LUN is write protected. " alt="" coords="228,224,419,251"/>
+<area shape="rect" id="node7" href="$group__uhi__msc__mem__group.xhtml#gac50e80d8db5c32870c6a86a62bde0da2" title="Reads 512 bytes from the current LUN. " alt="" coords="219,275,427,301"/>
+<area shape="rect" id="node8" href="$group__uhi__msc__mem__group.xhtml#ga319d1a6388e17afd55955abe50898990" title="Writes 512 bytes to the current LUN. " alt="" coords="219,325,428,352"/>
+</map>

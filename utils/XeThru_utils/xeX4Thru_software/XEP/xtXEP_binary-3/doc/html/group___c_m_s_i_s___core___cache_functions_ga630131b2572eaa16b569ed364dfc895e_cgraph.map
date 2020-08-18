@@ -1,0 +1,6 @@
+<map id="SCB_CleanInvalidateDCache_by_Addr" name="SCB_CleanInvalidateDCache_by_Addr">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="282,5,346,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8f5af376adcfaea7f2ddb3ef9b6b2544" title="Instruction Synchronization Barrier. " alt="" coords="285,56,343,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___sys_tick_functions.xhtml#gae4e8f0238527c69f522029b93c8e5b78" title="System Tick Configuration. " alt="" coords="256,107,372,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="420,132,547,159"/>
+</map>

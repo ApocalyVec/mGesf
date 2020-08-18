@@ -1,0 +1,5 @@
+<map id="x4driver_get_dac_min" name="x4driver_get_dac_min">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="256,5,355,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="216,56,395,83"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="257,107,353,133"/>
+</map>

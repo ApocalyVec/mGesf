@@ -1,0 +1,11 @@
+<map id="monitor_task_register" name="monitor_task_register">
+<area shape="rect" id="node2" href="$xtio__serial__com_8c.xhtml#a18a89b2e10b293c135602a32bb07cbba" title="_usb_task_tx" alt="" coords="226,5,331,32"/>
+<area shape="rect" id="node3" href="$xtio__serial__com_8c.xhtml#afdbe66e3a8423057af6855132b1965ee" title="_usb_task_rx" alt="" coords="226,56,331,83"/>
+<area shape="rect" id="node4" href="$xtio__serial__com_8c.xhtml#a0870cbcfb33018b8eb1ce5679d543119" title="_uart_task_tx" alt="" coords="225,107,333,133"/>
+<area shape="rect" id="node5" href="$xtio__serial__com_8c.xhtml#a5e9056b9bb65d42367ec290aea738768" title="_uart_task_rx" alt="" coords="225,157,333,184"/>
+<area shape="rect" id="node6" href="$xtio__serial__com_8c.xhtml#a80336c26c2d516ea5c2e6a50988561be" title="_i2c_task_tx" alt="" coords="229,208,329,235"/>
+<area shape="rect" id="node7" href="$xtio__serial__com_8c.xhtml#aaf5c23358f10ebd26276f2328441d350" title="_i2c_task_rx" alt="" coords="229,259,329,285"/>
+<area shape="rect" id="node8" href="$task__hostcom_8c.xhtml#abac971969d3f568fc6db3b8205cc9992" title="task_hostcom" alt="" coords="223,309,335,336"/>
+<area shape="rect" id="node9" href="$task__radar_8c.xhtml#ab45564b4bfe2b9814424a084ab9a9859" title="task_radar" alt="" coords="233,360,324,387"/>
+<area shape="rect" id="node10" href="$xep__application_8c.xhtml#a0ba95989f534a0adaa0e258fce6d3a0a" title="task_application" alt="" coords="216,411,341,437"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="MSDD_ProcessCommand" name="MSDD_ProcessCommand">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga64df1e5184c755694de288f6c5dc0dc0" title="Processes a SBC command by dispatching it to a subfunction. " alt="" coords="241,5,414,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga6259d674a30286b49d79ffa89b44e809" title="Updates the sense data of a LUN with the given key and codes. " alt="" coords="240,56,415,83"/>
+</map>

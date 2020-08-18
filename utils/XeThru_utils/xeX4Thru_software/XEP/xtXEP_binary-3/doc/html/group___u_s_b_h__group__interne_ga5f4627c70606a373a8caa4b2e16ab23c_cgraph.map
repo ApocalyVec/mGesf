@@ -1,0 +1,5 @@
+<map id="USBH_enumeration_step12" name="USBH_enumeration_step12">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga2b5b29e1ddaf4c35509ac444fa69a157" title="Manage error during device enumeration. " alt="" coords="501,5,688,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="514,68,675,95"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga483261f9e83ef5d888a6a0caf8f7ffe6" title="Device enumeration step 13 Requests a complete Get configuration descriptor. " alt="" coords="253,31,453,57"/>
+</map>

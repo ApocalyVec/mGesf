@@ -1,0 +1,4 @@
+<map id="qspi_read" name="qspi_read">
+<area shape="rect" id="node2" href="$group__sam__drivers__qspi__group.xhtml#gaa06712bc0d9845dc5020d3280eea4408" title="Read QSPI RDR register for SPI mode. " alt="" coords="138,5,247,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__qspi__group.xhtml#gaed4306f75d63f48b9eb56b08f5880d68" title="Write to QSPI Tx register in SPI mode. " alt="" coords="137,56,248,83"/>
+</map>

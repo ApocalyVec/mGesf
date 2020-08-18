@@ -1,0 +1,4 @@
+<map id="sensor_twi_read_reg" name="sensor_twi_read_reg">
+<area shape="rect" id="node2" href="$image__sensor__inf_8c.xhtml#ab51df110598942aefc1c5569465ce27e" title="Read and check sensor product ID. " alt="" coords="219,5,354,32"/>
+<area shape="rect" id="node3" href="$image__sensor__inf_8c.xhtml#ad968a96dc075c36ec3973288821bcbb2" title="read list of registers. " alt="" coords="207,56,367,83"/>
+</map>

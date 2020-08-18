@@ -1,0 +1,7 @@
+<map id="S25FL1D_Read" name="S25FL1D_Read">
+<area shape="rect" id="node2" href="$qspi__dma_8h.xhtml#a0d664a2d9fdc7a5b276553ef98ebb085" title="Enables a QSPI Rx channel. " alt="" coords="173,5,379,32"/>
+<area shape="rect" id="node3" href="$qspi__dma_8h.xhtml#aa4c44dd6ea57f7d345dc1cea9e764b33" title="Enables a QSPI SPI Rx channel. " alt="" coords="184,56,368,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a8be9db10e4e0f291c0cb537fcc7e3d68" title="Start S25FL1D Memory access with/without data write/read. " alt="" coords="185,107,367,133"/>
+<area shape="rect" id="node5" href="$qspi__dma_8h.xhtml#a3f74a9c30f8d87121341efbe86f7b992" title="Disables a QSPI Rx channel. " alt="" coords="171,157,381,184"/>
+<area shape="rect" id="node6" href="$qspi__dma_8h.xhtml#a3bb12a4d22e8c71f840710b19c769067" title="Disables a QSPI SPI Rx and Tx channels. " alt="" coords="182,208,370,235"/>
+</map>

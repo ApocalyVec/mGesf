@@ -1,0 +1,8 @@
+<map id="NVIC_DisableIRQ" name="NVIC_DisableIRQ">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga394f7ce2ca826c0da26284d17ac6524d" title="Get Priority Grouping. " alt="" coords="181,5,367,32"/>
+<area shape="rect" id="node3" href="$afe__dma_8c.xhtml#a68dbdec846e3b92a818ded06727529bd" title="AFE xDMA Rx callback Invoked on AFE DMA reception done. " alt="" coords="229,56,319,83"/>
+<area shape="rect" id="node4" href="$pio__it_8c.xhtml#ad31e05d6debb1e88af6124cd7751af22" title="Initializes the PIO interrupt management logic. " alt="" coords="193,107,355,133"/>
+<area shape="rect" id="node5" href="$spi__dma_8c.xhtml#ac612542f98d1fbf87bbf0e3ea7870cb1" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="225,157,323,184"/>
+<area shape="rect" id="node6" href="$group__usbd__hal.xhtml#gacfe54e3efd82dfd6df3074679402833d" title="USBD_HAL_Disable" alt="" coords="201,208,347,235"/>
+<area shape="rect" id="node7" href="$xtio__uart_8h.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="202,259,346,285"/>
+</map>

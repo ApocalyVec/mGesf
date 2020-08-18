@@ -1,0 +1,5 @@
+<map id="HIDDFunction_SetIdle" name="HIDDFunction_SetIdle">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga7d389e7ee9a599c1eabe2714b683b4ff" title="Return expected report header pointer. " alt="" coords="212,5,393,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="255,56,350,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="253,107,352,133"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="USBDDriver_GetCfgDescriptors" name="USBDDriver_GetCfgDescriptors">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#gaf39ba7b7516aa693368fb4bacebcabb3" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="283,5,500,47"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#ga6435498b62ec6c1d4378563f68767120" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="278,71,505,112"/>
+<area shape="rect" id="node4" href="$group__usbd__composite__cdcaud.xhtml#gae3b857caf03672721667a11656b023ed" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="282,136,501,177"/>
+<area shape="rect" id="node5" href="$group__usbd__composite__cdchid.xhtml#gaae1fea56d3b2b270cf6d04ef55c45227" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="285,201,498,243"/>
+<area shape="rect" id="node6" href="$group__usbd__composite__cdcmsd.xhtml#gaa7ae001e3db16158a74b9d29c1918ac9" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="286,267,497,308"/>
+<area shape="rect" id="node7" href="$group__usbd__composite__cdccdc.xhtml#ga83d64409b071a9a4a6f316c08731b8c4" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="278,332,505,373"/>
+<area shape="rect" id="node8" href="$group__usbd__composite__hidaud.xhtml#ga3964e181a871753372233070c5cb9672" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="284,397,499,439"/>
+<area shape="rect" id="node9" href="$group__usbd__composite__hidmsd.xhtml#gac20bb28b9da0825ad63d42398b530e0d" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="289,463,494,504"/>
+<area shape="rect" id="node10" href="$group__usbd__hid__mouse.xhtml#ga7f4bd2125341fe3e36b15f6f61728ca3" title="Handles configureation changed event. " alt="" coords="278,528,505,569"/>
+<area shape="rect" id="node11" href="$group__usbd__msd.xhtml#gabfb0d71b88e4e5606d3de432127e9d01" title="Invoked when the configuration of the device changes. " alt="" coords="276,593,507,635"/>
+</map>

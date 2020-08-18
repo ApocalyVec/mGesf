@@ -1,0 +1,3 @@
+<map id="UART_IsTxSent" name="UART_IsTxSent">
+<area shape="rect" id="node2" href="$uart_8c.xhtml#a3c87a55c11e78561fcc351c0ecc6489c" title="Sends one packet of data through the specified UART peripheral. " alt="" coords="169,5,283,32"/>
+</map>

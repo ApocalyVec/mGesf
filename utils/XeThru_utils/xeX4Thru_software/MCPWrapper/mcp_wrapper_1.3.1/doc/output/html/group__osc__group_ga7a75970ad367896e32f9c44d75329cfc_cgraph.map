@@ -1,0 +1,4 @@
+<map id="osc_is_ready" name="osc_is_ready">
+<area shape="rect" id="node2" href="$group__sam__drivers__pmc__group.xhtml#ga62611f411b9ab2ad6d2f00f3a6386b40" title="Check if the external 32k Xtal is ready. " alt="" coords="152,5,332,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__pmc__group.xhtml#ga44895850facd3429788967b68105d4fc" title="Check if the MAINCK is ready. " alt="" coords="152,56,332,83"/>
+</map>

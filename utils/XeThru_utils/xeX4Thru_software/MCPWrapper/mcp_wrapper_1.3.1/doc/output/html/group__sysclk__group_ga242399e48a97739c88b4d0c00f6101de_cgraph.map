@@ -1,0 +1,14 @@
+<map id="sysclk_init" name="sysclk_init">
+<area shape="rect" id="node2" href="$system__samg55_8h.xhtml#a38ee6d8de47653fc055f10322c050831" title="Initialize flash. " alt="" coords="171,5,294,32"/>
+<area shape="rect" id="node3" href="$group__osc__group.xhtml#ga13db594de6701e5e235a88597e348e3a" title="osc_enable" alt="" coords="388,81,476,108"/>
+<area shape="rect" id="node4" href="$group__osc__group.xhtml#gace890435e962b82472d3f918ea7b4c52" title="Wait until the oscillator identified by id is ready. " alt="" coords="376,183,488,209"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__pmc__group.xhtml#ga2f3a71843695a5e6efe5873aba666117" title="Switch master clock source selection to slow clock. " alt="" coords="147,157,319,184"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__pmc__group.xhtml#gab7fba210cacac382d9f74a3142ad3e61" title="Switch master clock source selection to main clock. " alt="" coords="137,208,328,235"/>
+<area shape="rect" id="node7" href="$group__pll__group.xhtml#gaf4808844971419dcc305ad41a2104d0a" title="Enable the source of the pll. " alt="" coords="169,107,296,133"/>
+<area shape="rect" id="node8" href="$group__pll__group.xhtml#gac963cb7ae2da65162dc3955129ff846c" title="pll_enable" alt="" coords="193,309,273,336"/>
+<area shape="rect" id="node9" href="$group__pll__group.xhtml#gaa10c871c499867b1db87f9cd1d37ef0f" title="Wait for PLL pll_id to become locked. " alt="" coords="174,360,291,387"/>
+<area shape="rect" id="node10" href="$group__sam__drivers__pmc__group.xhtml#gacdf65ad3a7eb3e950385b58d33aa1290" title="Switch master clock source selection to PLLA clock. " alt="" coords="141,411,324,437"/>
+<area shape="rect" id="node11" href="$system__samg55_8h.xhtml#ae0c36a9591fe6e9c45ecb21a794f0f0f" title="Updates the SystemCoreClock with current core Clock retrieved from cpu registers. ..." alt="" coords="149,461,317,488"/>
+<area shape="rect" id="node12" href="$group__sysclk__group.xhtml#gae91bb547221cdd42b104342e8f776a28" title="Return the current rate in Hz of the CPU clock. " alt="" coords="165,512,300,539"/>
+<area shape="rect" id="node13" href="$group__sam__drivers__efc__group.xhtml#ga7b1c3c24eedff837a898ce28174c1431" title="Perform read sequence. " alt="" coords="141,563,325,589"/>
+</map>

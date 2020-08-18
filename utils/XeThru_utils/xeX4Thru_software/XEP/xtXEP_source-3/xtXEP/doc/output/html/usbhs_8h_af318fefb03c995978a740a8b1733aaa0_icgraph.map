@@ -1,0 +1,5 @@
+<map id="USBHS_AutoSwitchBankEnable" name="USBHS_AutoSwitchBankEnable">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga81935b1ed57f1d4e636df4565de436a5" title="Sends data through a USB endpoint. " alt="" coords="311,5,418,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#gaf17d4fe67932fa6a5dcc05f4c6d611ff" title="Configures an endpoint according to its endpoint Descriptor. " alt="" coords="276,56,453,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#ga1a1fd7ed1af2be8e202879458a6cfda7" title="Sets/Clear/Get the HALT state on the endpoint. " alt="" coords="301,107,428,133"/>
+</map>

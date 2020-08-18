@@ -1,0 +1,11 @@
+<map id="xt_get_operation_mode" name="xt_get_operation_mode">
+<area shape="rect" id="node2" href="$board__memories_8h.xhtml#a72c8120eb2a9e06872355e2cb8b7b775" title="BOARD_ConfigureAndTestSdram" alt="" coords="228,5,457,32"/>
+<area shape="rect" id="node3" href="$xtio__serial__com_8c.xhtml#ae7ac43c7ce3999faa8c92e43bf0f8fb7" title="_i2c_available" alt="" coords="287,56,398,83"/>
+<area shape="rect" id="node4" href="$xtio__serial__com_8c.xhtml#ac8f411a660584db9578fa744183ed83c" title="_usb_available" alt="" coords="285,107,400,133"/>
+<area shape="rect" id="node5" href="$xtio__serial__com_8c.xhtml#a6d6778d56cb80ebddd3a1ef33018f798" title="_usb_task_init" alt="" coords="287,157,399,184"/>
+<area shape="rect" id="node6" href="$xtio__serial__com_8c.xhtml#a8904ed52c6457d6e9fc7d87adf2d78af" title="_uart_task_init" alt="" coords="285,208,400,235"/>
+<area shape="rect" id="node7" href="$main_8c.xhtml#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="315,259,370,285"/>
+<area shape="rect" id="node8" href="$task__radar_8c.xhtml#ab45564b4bfe2b9814424a084ab9a9859" title="task_radar" alt="" coords="297,309,388,336"/>
+<area shape="rect" id="node9" href="$xthousekeeping_8c.xhtml#ad5a7723fb96e5789fa7ecb2554da3b04" title="xthousekeeping_trigger\l_crashdump" alt="" coords="257,361,429,402"/>
+<area shape="rect" id="node10" href="$xep__application_8c.xhtml#a0ba95989f534a0adaa0e258fce6d3a0a" title="task_application" alt="" coords="280,427,405,453"/>
+</map>

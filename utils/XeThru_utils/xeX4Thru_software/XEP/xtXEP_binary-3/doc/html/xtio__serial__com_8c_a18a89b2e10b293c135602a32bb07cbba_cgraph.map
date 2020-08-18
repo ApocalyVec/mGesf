@@ -1,0 +1,8 @@
+<map id="_usb_task_tx" name="_usb_task_tx">
+<area shape="rect" id="node2" href="$task__monitor_8c.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register task to monitor. " alt="" coords="179,5,341,32"/>
+<area shape="rect" id="node3" href="$task__monitor_8c.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Reset counter to indicate that task is alive. " alt="" coords="189,56,331,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#ga804bf63efb2d4420a3bf42984e807e72" title="Returns the current state of the USB device. " alt="" coords="197,107,323,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga630131b2572eaa16b569ed364dfc895e" title="SCB_CleanInvalidateDCache\l_by_Addr" alt="" coords="159,158,361,199"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc.xhtml#ga08a9344113a71e425ad5cba4a9727e8c" title="Sends a data buffer through the virtual COM port created by the CDC device serial driver..." alt="" coords="174,224,346,251"/>
+<area shape="rect" id="node7" href="$xtio__serial__com_8c.xhtml#a207b0f6f3d84f29796b9d0b636af59d9" title="Callback invoked when data has been sent. " alt="" coords="203,275,317,301"/>
+</map>

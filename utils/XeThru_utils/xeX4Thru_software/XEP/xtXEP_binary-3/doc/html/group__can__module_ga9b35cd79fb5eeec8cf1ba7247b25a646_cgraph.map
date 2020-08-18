@@ -1,0 +1,8 @@
+<map id="MCAN_Init" name="MCAN_Init">
+<area shape="rect" id="node2" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="167,5,278,32"/>
+<area shape="rect" id="node3" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="353,31,517,57"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="140,107,305,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="161,157,285,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="191,208,255,235"/>
+<area shape="rect" id="node7" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8f5af376adcfaea7f2ddb3ef9b6b2544" title="Instruction Synchronization Barrier. " alt="" coords="194,259,251,285"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="xthousekeeping_trigger_crashdump" name="xthousekeeping_trigger_crashdump">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a31dcedbddd6f896d0157ce276d449fd4" title="Checks if external memory is enabled. " alt="" coords="509,571,664,612"/>
+<area shape="rect" id="node3" href="$xtfile_8h.xhtml#af4fca7b165fd70a2a4a1398f9d62fbe7" title="Uninitialize the file system. " alt="" coords="296,66,391,93"/>
+<area shape="rect" id="node4" href="$xfs_8c.xhtml#a0f9263257de25f5a132282b680db4622" title="Function to ignore locking mechanism. " alt="" coords="284,117,403,143"/>
+<area shape="rect" id="node5" href="$xfs_8c.xhtml#a827d597e895a84ac2619f1bec910e6a6" title="Gets the size of the largest free section. " alt="" coords="252,167,435,194"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml#a5e62effeb5c5323c3d423225a6a3dbf3" title="Gets the cause of the previous software reset. " alt="" coords="267,218,420,245"/>
+<area shape="rect" id="node7" href="$xep__hal_8h.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="256,269,431,295"/>
+<area shape="rect" id="node8" href="$xep__hal_8h.xhtml#a3c4b3201bcc90f24579249f3b6297fb3" title="Get reset count. " alt="" coords="271,319,416,346"/>
+<area shape="rect" id="node9" href="$xep__hal_8h.xhtml#ac6fbcd6ee86a6cc239db400a2f9560a6" title="Gets the system timer in microseconds. " alt="" coords="254,370,433,397"/>
+<area shape="rect" id="node10" href="$xtmemory_8h.xhtml#a2dad555618641e748aaefde24f170e94" title="Get amount of default heap memory available. " alt="" coords="248,421,439,463"/>
+<area shape="rect" id="node11" href="$xtmemory_8h.xhtml#af78fb7d15faa1f15a6fe9c7649c40e7a" title="Get the default memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="242,487,445,528"/>
+<area shape="rect" id="node12" href="$xtmemory_8h.xhtml#a120dae9f612ca07248261a387247721c" title="Get amount of slow heap memory available. " alt="" coords="231,553,455,579"/>
+<area shape="rect" id="node13" href="$xtmemory_8h.xhtml#a45a4c8bf7fca2d2cc41ac41e8877bee6" title="Get the slow memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="225,603,461,630"/>
+<area shape="rect" id="node14" href="$xtmemory_8h.xhtml#af215d1f4153a20b4fae548227681035b" title="Get amount of fast heap memory available. " alt="" coords="233,654,454,681"/>
+<area shape="rect" id="node15" href="$xtmemory_8h.xhtml#ac619e2caa7125b6211f53d680a9f03fb" title="Get the fast memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="227,705,460,731"/>
+<area shape="rect" id="node16" href="$xep__hal_8h.xhtml#ab218029969f3b92b546b111d1c1e03d0" title="Gets the stack start pointer and depth for specified task. " alt="" coords="255,756,431,797"/>
+<area shape="rect" id="node17" href="$task__monitor_8c.xhtml#a32facc560d3b2b978208dd26df5a5524" title="Get task information. " alt="" coords="261,822,425,849"/>
+<area shape="rect" id="node18" href="$xep__hal_8h.xhtml#a9b086edc4d10515d81e925efba022638" title="Gets the program counter of the specified task. " alt="" coords="253,873,433,915"/>
+<area shape="rect" id="node19" href="$xfs_8c.xhtml#a7b8e251b6d5e10731cd7a9379e67b8be" title="Gets the size of file with given type and identifier. " alt="" coords="293,939,393,966"/>
+<area shape="rect" id="node20" href="$xfs_8c.xhtml#a846fd4b556aae87a84be2435336e17ca" title="Deletes the file with the given type and identifier. " alt="" coords="287,990,399,1017"/>
+<area shape="rect" id="node21" href="$xfs_8c.xhtml#aaa10482aaaf404deb85d1c214c6aaea4" title="Creates a new file. " alt="" coords="287,1041,400,1067"/>
+<area shape="rect" id="node22" href="$xfs_8c.xhtml#a31395d7a15d30dbd0e24e0f6800dccf2" title="Commits the file allocation and file contents to flash. " alt="" coords="283,1091,404,1118"/>
+</map>

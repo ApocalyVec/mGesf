@@ -1,0 +1,8 @@
+<map id="QSPID_EnableQspiRxChannel" name="QSPID_EnableQspiRxChannel">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a65d49aa9e49f2b0ebf01639a1918941e" title="Reads data from the specified address on the serial flash. " alt="" coords="283,5,401,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a8840163f9bd8c203feeeeba16ba8dbde" title="Reads data from the specified address on the serial flash. " alt="" coords="269,56,415,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#afe5e46d0d65395239616923012853fc8" title="Reads data from the specified address on the serial flash. " alt="" coords="267,107,417,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a3863304299f6a83b97043f7fc6468d67" title="Reads data from the specified address on the serial flash. " alt="" coords="263,157,421,184"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#a650c5d2bd603e1f26fb235ecf2bfd09f" title="Reads data from the specified address on the serial flash. " alt="" coords="260,208,424,235"/>
+<area shape="rect" id="node7" href="$xtio__spi_8c.xhtml#a64a60847a947e7e747f90424e2e7fff7" title="xtio_spi_write_read" alt="" coords="271,259,413,285"/>
+</map>

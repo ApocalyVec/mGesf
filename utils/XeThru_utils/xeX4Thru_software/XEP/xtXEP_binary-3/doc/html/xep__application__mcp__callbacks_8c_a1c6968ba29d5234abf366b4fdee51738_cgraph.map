@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverSetFps" name="onMcpX4DriverSetFps">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#af6c32021e202b0dfe0a8b104ebd7a0b6" title="Sets frame rate for frame streaming. " alt="" coords="255,5,382,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="216,57,421,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="216,122,421,163"/>
+</map>

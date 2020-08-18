@@ -1,0 +1,8 @@
+<map id="_AfeConfigureDmaChannels" name="_AfeConfigureDmaChannels">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga8c7517080f70e93096364e916af6e6f2" title="Initialize xDMA driver instance. " alt="" coords="281,5,409,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga2a3178c1d2615b7a4d7a0005662cdd89" title="Free the specified xDMA channel. " alt="" coords="483,132,639,159"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="255,107,435,133"/>
+<area shape="rect" id="node5" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="269,157,421,184"/>
+<area shape="rect" id="node6" href="$afe__dma_8c.xhtml#a68dbdec846e3b92a818ded06727529bd" title="AFE xDMA Rx callback Invoked on AFE DMA reception done. " alt="" coords="300,208,389,235"/>
+<area shape="rect" id="node7" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="255,259,434,285"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="_CCIDDriverConfigurationDescriptors" name="_CCIDDriverConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___c_c_i_d_descriptor.xhtml" title="_CCIDDescriptor" alt="" coords="46,5,173,32"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="20,77,199,104"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="5,128,213,155"/>
+<area shape="rect" id="node5" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="20,179,199,205"/>
+</map>

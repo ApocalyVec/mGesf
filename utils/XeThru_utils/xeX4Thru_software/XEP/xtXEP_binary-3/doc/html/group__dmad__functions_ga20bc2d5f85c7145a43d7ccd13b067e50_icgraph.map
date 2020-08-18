@@ -1,0 +1,14 @@
+<map id="XDMAD_StartTransfer" name="XDMAD_StartTransfer">
+<area shape="rect" id="node2" href="$afe__dma_8c.xhtml#a7fc901cb910a6298837d57892790161c" title="Starts a AFE transfer. " alt="" coords="235,5,350,32"/>
+<area shape="rect" id="node3" href="$dac__dma_8c.xhtml#a06fc7a9dafb44c7434b2f28a79d0b5ca" title="Starts a DAC transfer. " alt="" coords="233,56,352,83"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#ga745dbddddd85ddbe2c71a9df4c3e38af" title="HSMCI DMA R/W. " alt="" coords="217,107,368,133"/>
+<area shape="rect" id="node5" href="$qspi__dma_8c.xhtml#a16f401ef0f29ab14079e0355d7a48005" title="Starts a QSPI read or write operation. " alt="" coords="212,157,373,184"/>
+<area shape="rect" id="node6" href="$qspi__dma_8c.xhtml#ad1458b726cb714996c845b482425a10d" title="Starts a SPI master transfer. " alt="" coords="217,208,368,235"/>
+<area shape="rect" id="node7" href="$spi__dma_8c.xhtml#ae3c774fb7e4bcf2db4e5d9e8891b6abd" title="Starts a SPI master transfer. " alt="" coords="213,259,372,285"/>
+<area shape="rect" id="node8" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="231,309,354,336"/>
+<area shape="rect" id="node9" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="231,360,354,387"/>
+<area shape="rect" id="node10" href="$uart__dma_8c.xhtml#a649abc6e6061e5cbe6450fbba03aa025" title="Starts a UART master transfer. " alt="" coords="225,411,361,437"/>
+<area shape="rect" id="node11" href="$uart__dma_8c.xhtml#abeb5a45998b68ae0ff48b68847c80e7c" title="Starts a UART master transfer. " alt="" coords="230,461,355,488"/>
+<area shape="rect" id="node12" href="$usart__dma_8c.xhtml#a898156572b03a6af7edcb27940d79148" title="Starts a USART master transfer. " alt="" coords="220,512,365,539"/>
+<area shape="rect" id="node13" href="$usart__dma_8c.xhtml#a3cc9923a38b9031b81e01637630712dd" title="Starts a USART master transfer. " alt="" coords="225,563,360,589"/>
+</map>

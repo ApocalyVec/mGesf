@@ -1,0 +1,5 @@
+<map id="USB Stack Host" name="USB Stack Host">
+<area shape="rect" id="node1" href="$group___u_s_b_h__group.xhtml" title="The UHC provides a high&#45;level abstraction of the usb host. " alt="" coords="189,5,337,47"/>
+<area shape="rect" id="node2" href="$group__uhi__group.xhtml" title="The UHI provides a common API for all classes, and this is used by UHC for the main control of USB ho..." alt="" coords="191,71,335,112"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml" title="The UHD driver provides a low&#45;level abstraction of the host controller hardware. " alt="" coords="177,137,348,163"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="NVIC_SetPriority" name="NVIC_SetPriority">
+<area shape="rect" id="node2" href="$startup__sams70_8c.xhtml#a7cecd108fd88dec10ce2e97ad905e4ef" title="Performs the low&#45;level initialization of the chip. " alt="" coords="479,316,577,343"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___sys_tick_functions.xhtml#gae4e8f0238527c69f522029b93c8e5b78" title="System Tick Configuration. " alt="" coords="221,63,337,90"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3387607fd8a1a32cccd77d2ac672dd96" title="Decode Priority. " alt="" coords="451,23,605,50"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga630131b2572eaa16b569ed364dfc895e" title="SCB_CleanInvalidateDCache\l_by_Addr" alt="" coords="427,85,629,126"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga47a0f52794068d076c9147aa3cb8d8a6" title="Get Active Interrupt. " alt="" coords="218,215,341,242"/>
+<area shape="rect" id="node7" href="$afe__dma_8c.xhtml#a7fc901cb910a6298837d57892790161c" title="Starts a AFE transfer. " alt="" coords="222,266,337,292"/>
+<area shape="rect" id="node8" href="$pio__it_8c.xhtml#ad31e05d6debb1e88af6124cd7751af22" title="Initializes the PIO interrupt management logic. " alt="" coords="198,316,361,343"/>
+<area shape="rect" id="node9" href="$spi__dma_8c.xhtml#ae3c774fb7e4bcf2db4e5d9e8891b6abd" title="Starts a SPI master transfer. " alt="" coords="200,367,359,394"/>
+<area shape="rect" id="node10" href="$twid_8c.xhtml#a5a93a963b33545933b831ca77a89c2a2" title="Initializes a TWI driver instance, using the given TWI peripheral. " alt="" coords="457,443,599,470"/>
+<area shape="rect" id="node11" href="$group__dmad__functions.xhtml#ga8c7517080f70e93096364e916af6e6f2" title="Initialize xDMA driver instance. " alt="" coords="215,418,343,444"/>
+<area shape="rect" id="node12" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="180,519,379,546"/>
+<area shape="rect" id="node13" href="$group__udd__udphs__group.xhtml#ga9792d1899ae058e3984d6a622fe2ad42" title="udd_enable" alt="" coords="231,570,327,596"/>
+<area shape="rect" id="node14" href="$xtio__i2c_8h.xhtml#a7b0e666ddfaac918eb931d278b66559c" title="xtio_i2c_init" alt="" coords="231,620,327,647"/>
+<area shape="rect" id="node15" href="$xtio__uart_8h.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="207,671,351,698"/>
+<area shape="rect" id="node16" href="$xtio__usb_8h.xhtml#ac942f9c78a8f96aa6681c98966ce019c" title="xtio_usb_init" alt="" coords="229,722,330,748"/>
+</map>

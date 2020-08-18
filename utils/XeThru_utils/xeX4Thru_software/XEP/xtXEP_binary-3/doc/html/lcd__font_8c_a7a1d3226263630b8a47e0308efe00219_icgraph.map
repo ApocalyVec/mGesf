@@ -1,0 +1,4 @@
+<map id="LCDD_DrawChar" name="LCDD_DrawChar">
+<area shape="rect" id="node2" href="$lcd__draw_8c.xhtml#a86b0adfa0004a0ed3b973d7bf5cb4bef" title="Draws a string inside a LCD buffer, at the given coordinates. " alt="" coords="180,5,315,32"/>
+<area shape="rect" id="node3" href="$lcd__font_8c.xhtml#ae09f189b910c34bc30c072349d2fabfc" title="Draws a string inside a LCD buffer, at the given coordinates. " alt="" coords="185,56,310,83"/>
+</map>

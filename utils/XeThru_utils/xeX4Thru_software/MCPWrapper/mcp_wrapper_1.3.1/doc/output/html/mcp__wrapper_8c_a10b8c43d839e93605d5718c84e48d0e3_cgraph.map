@@ -1,0 +1,4 @@
+<map id="mcpw_set_output_control" name="mcpw_set_output_control">
+<area shape="rect" id="node2" href="$mcp__wrapper_8c.xhtml#af4b6466ee142c75a81c2d0c4e52baa40" title="mcpw_start_send" alt="" coords="271,5,395,32"/>
+<area shape="rect" id="node3" href="$protocol_8c.xhtml#aa19017b32d2c1f125bc5d08ab7e6bedb" title="createSetOutputControlCommand" alt="" coords="224,56,441,83"/>
+</map>

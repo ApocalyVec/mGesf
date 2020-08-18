@@ -1,0 +1,3 @@
+<map id="USBDDriverCallbacks_InterfaceSettingChanged" name="USBDDriverCallbacks_InterfaceSettingChanged">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga69728b150794285ecaf38b5383471965" title="Sets the active setting of the given interface if the configuration supports it; otherwise, the control pipe is STALLed. " alt="" coords="241,13,341,39"/>
+</map>

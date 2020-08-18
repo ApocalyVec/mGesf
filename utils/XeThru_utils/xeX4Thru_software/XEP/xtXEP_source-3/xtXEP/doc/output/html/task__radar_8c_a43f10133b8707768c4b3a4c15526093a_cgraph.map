@@ -1,0 +1,7 @@
+<map id="radar_certification_enter_tx_only_tx_off" name="radar_certification_enter_tx_only_tx_off">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a041e81b6d75f97dbf29f1e9a29353425" title="Will setup x4 in default configuration. " alt="" coords="217,5,383,32"/>
+<area shape="rect" id="node3" href="$x4driver_8h.xhtml#aaa39bc07728273218162fc63a0bcb864" title="x4driver_set_tx_power" alt="" coords="218,56,382,83"/>
+<area shape="rect" id="node4" href="$x4driver_8h.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="211,107,389,133"/>
+<area shape="rect" id="node5" href="$x4driver_8h.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="211,157,389,184"/>
+<area shape="rect" id="node6" href="$xt__system_8c.xhtml#aa19e5f6d86723f910b65cf0aadc2ec58" title="Sets the processor in a deep sleep state. " alt="" coords="243,208,357,235"/>
+</map>

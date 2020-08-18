@@ -1,0 +1,4 @@
+<map id="GetConfiguration" name="GetConfiguration">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga804bf63efb2d4420a3bf42984e807e72" title="Returns the current state of the USB device. " alt="" coords="184,5,309,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="197,56,296,83"/>
+</map>

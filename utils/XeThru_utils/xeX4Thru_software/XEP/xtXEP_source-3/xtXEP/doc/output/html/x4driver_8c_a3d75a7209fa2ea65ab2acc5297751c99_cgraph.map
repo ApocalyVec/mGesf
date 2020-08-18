@@ -1,0 +1,7 @@
+<map id="x4driver_read_frame_normalized" name="x4driver_read_frame_normalized">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="497,18,596,45"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#ab008a9d8a7ab0744ceb00fb2116ad850" title="Reads raw bytes from x4. " alt="" coords="251,38,406,79"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="499,73,595,100"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#a2c00d0525578a4ce31dbd42282e2460d" title="Unpacks and normalizes frame. " alt="" coords="247,155,411,196"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#ad61271bd450a57e7bd4c6883ec8ccca1" title="Unpacks and normalizes down converted frame. " alt="" coords="208,220,449,262"/>
+</map>

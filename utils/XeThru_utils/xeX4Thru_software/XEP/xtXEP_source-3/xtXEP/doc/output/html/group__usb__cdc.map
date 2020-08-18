@@ -1,0 +1,15 @@
+<map id="Usb_cdc" name="Usb_cdc">
+<area shape="rect" id="node1" href="$group__cdc__serial__states.xhtml" title="This page lists the bit map for CDC Serial States. " alt="" coords="153,5,305,32"/>
+<area shape="rect" id="node2" href="$group__usb__cdc__stop.xhtml" title="This section lists Stop Bits for CDC Line Coding. " alt="" coords="151,57,307,98"/>
+<area shape="rect" id="node4" href="$group__usb__cdc__desc__type.xhtml" title="This section lists CDC descriptor types. " alt="" coords="149,123,308,149"/>
+<area shape="rect" id="node5" href="$group__usb__cdc__acm.xhtml" title="This section lists the capabilities of the CDC ACM. " alt="" coords="133,173,325,200"/>
+<area shape="rect" id="node6" href="$group__usb__cdc__if__desc.xhtml" title="This section lists the values for CDC Communication Interface Descriptor. " alt="" coords="135,225,322,266"/>
+<area shape="rect" id="node7" href="$group__usb__cdc__data__if.xhtml" title="This section lists the values for CDC Data Interface Descriptor. " alt="" coords="140,290,317,331"/>
+<area shape="rect" id="node8" href="$group__usb__cdc__parity.xhtml" title="This section lists Parity checkings for CDC Line Coding. " alt="" coords="151,355,307,397"/>
+<area shape="rect" id="node9" href="$group__usb__cdc__request.xhtml" title="This section lists USB CDC Request Codes. " alt="" coords="138,421,319,448"/>
+<area shape="rect" id="node10" href="$group__usb__cdc__desc__subtype.xhtml" title="This section lists CDC descriptor sub types. " alt="" coords="137,472,321,499"/>
+<area shape="rect" id="node11" href="$group__usb__cdc__ctrl__line__state.xhtml" title="This section lists CDC ControlLineState bitmap. " alt="" coords="132,523,325,565"/>
+<area shape="rect" id="node12" href="$group__usb__cdc__ver.xhtml" title="This section list the CDC Spec. " alt="" coords="145,589,312,630"/>
+<area shape="rect" id="node13" href="$group__usb__cdc__descriptor.xhtml" title="This section lists the values for CDC Device Descriptor. " alt="" coords="129,654,328,695"/>
+<area shape="rect" id="node14" href="$group__usb__cdc__cb__man__desc.xhtml" title="This section lists CDC CallManagement Capabilities. " alt="" coords="131,719,326,761"/>
+</map>

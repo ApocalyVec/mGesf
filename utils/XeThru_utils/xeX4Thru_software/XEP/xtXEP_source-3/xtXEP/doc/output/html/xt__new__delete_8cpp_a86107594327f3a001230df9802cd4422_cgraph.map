@@ -1,0 +1,6 @@
+<map id="operator delete" name="operator delete">
+<area shape="rect" id="node2" href="$xtmemory_8h.xhtml#a73b030fe9def6538cd2f1c5ec4448adb" title="Get which memory type the pointer has. " alt="" coords="189,5,331,32"/>
+<area shape="rect" id="node3" href="$xtmemory_8h.xhtml#a7e516b79f5a147905446ff71d1fc98fb" title="Free memory allocated by xtmemory_malloc_default. " alt="" coords="175,56,345,83"/>
+<area shape="rect" id="node4" href="$xtmemory_8h.xhtml#a8ec65d5206617a7838830f17b9cf8583" title="Free memory allocated by xtmemory_malloc_fast. " alt="" coords="185,107,335,133"/>
+<area shape="rect" id="node5" href="$xtmemory_8h.xhtml#a1b0d147f3ba8bc658585e26e12c46a76" title="Free memory allocated by xtmemory_malloc_slow. " alt="" coords="183,157,337,184"/>
+</map>

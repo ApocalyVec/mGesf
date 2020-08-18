@@ -1,0 +1,4 @@
+<map id="pmc_enable_periph_clk" name="pmc_enable_periph_clk">
+<area shape="rect" id="node2" href="$group__sysclk__group.xhtml#ga97354113454b658bf76596b3580cf195" title="Enable a peripheral&#39;s clock. " alt="" coords="212,5,380,47"/>
+<area shape="rect" id="node3" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="215,71,377,98"/>
+</map>

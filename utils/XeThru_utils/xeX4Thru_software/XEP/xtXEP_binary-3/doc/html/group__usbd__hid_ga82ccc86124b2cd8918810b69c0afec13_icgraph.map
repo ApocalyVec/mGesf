@@ -1,0 +1,5 @@
+<map id="HIDDFunction_ParseInterface" name="HIDDFunction_ParseInterface">
+<area shape="rect" id="node2" href="$group__usbd__hid__key.xhtml#ga8756ebb1a6a51b48a6e331ea28808e4b" title="Configure function with expected descriptors and start functionality. " alt="" coords="260,5,495,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__mouse.xhtml#ga7f4bd2125341fe3e36b15f6f61728ca3" title="Handles configureation changed event. " alt="" coords="264,57,491,98"/>
+<area shape="rect" id="node4" href="$group__usbd__hid__tran.xhtml#gaa42cac9f13dfb2f99d409b11e84050e6" title="Handles configureation changed event. " alt="" coords="267,122,488,163"/>
+</map>

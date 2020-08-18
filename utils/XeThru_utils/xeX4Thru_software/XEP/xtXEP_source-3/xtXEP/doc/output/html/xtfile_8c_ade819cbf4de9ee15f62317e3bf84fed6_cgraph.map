@@ -1,0 +1,8 @@
+<map id="xtfile_open" name="xtfile_open">
+<area shape="rect" id="node2" href="$xtfile_8c.xhtml#ab6502b729403c595b606e92bf005bd09" title="xtfile_lock" alt="" coords="183,5,267,32"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#a615248bef74b3021de95c188fcc6504c" title="xtfile_is_open" alt="" coords="353,132,461,159"/>
+<area shape="rect" id="node4" href="$xtfile_8c.xhtml#a5f00b9d0119e29899a5acf83033147e4" title="xtfile_unlock" alt="" coords="175,107,275,133"/>
+<area shape="rect" id="node5" href="$xfs_8c.xhtml#a7b8e251b6d5e10731cd7a9379e67b8be" title="Gets the size of file with given type and identifier. " alt="" coords="175,157,275,184"/>
+<area shape="rect" id="node6" href="$xtfile_8c.xhtml#a3664f1f9f0c2893e041970d9a758cd48" title="xtfile_create_instance" alt="" coords="144,208,305,235"/>
+<area shape="rect" id="node7" href="$xfs_8c.xhtml#afcbd27cc31bf59c4ecf4520a56c871a6" title="Gets a pointer to the file data in flash. " alt="" coords="152,259,297,285"/>
+</map>

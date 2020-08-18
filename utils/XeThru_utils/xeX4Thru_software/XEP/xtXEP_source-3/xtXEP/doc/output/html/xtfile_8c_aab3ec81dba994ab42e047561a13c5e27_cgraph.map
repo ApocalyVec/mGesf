@@ -1,0 +1,9 @@
+<map id="xtfile_create_and_open_empty" name="xtfile_create_and_open_empty">
+<area shape="rect" id="node2" href="$xtfile_8c.xhtml#ab6502b729403c595b606e92bf005bd09" title="xtfile_lock" alt="" coords="263,5,347,32"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#a3664f1f9f0c2893e041970d9a758cd48" title="xtfile_create_instance" alt="" coords="224,56,385,83"/>
+<area shape="rect" id="node4" href="$xtfile_8c.xhtml#a5f00b9d0119e29899a5acf83033147e4" title="xtfile_unlock" alt="" coords="255,107,355,133"/>
+<area shape="rect" id="node5" href="$xfs_8c.xhtml#aaa10482aaaf404deb85d1c214c6aaea4" title="Creates a new file. " alt="" coords="248,157,361,184"/>
+<area shape="rect" id="node6" href="$xtfile_8c.xhtml#a9d7c83d6784b5bef5510b8b8db5bb83d" title="xtfile_free_instance" alt="" coords="232,208,377,235"/>
+<area shape="rect" id="node7" href="$xfs_8c.xhtml#afcbd27cc31bf59c4ecf4520a56c871a6" title="Gets a pointer to the file data in flash. " alt="" coords="232,259,377,285"/>
+<area shape="rect" id="node8" href="$xfs_8c.xhtml#a1944fe2fe57fccee85079970b8f38432" title="Clears the flash area used to store file data. " alt="" coords="253,309,356,336"/>
+</map>

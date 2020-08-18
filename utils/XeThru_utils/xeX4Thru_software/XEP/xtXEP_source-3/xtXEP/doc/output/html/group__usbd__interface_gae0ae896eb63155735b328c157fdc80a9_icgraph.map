@@ -1,0 +1,5 @@
+<map id="USBD_Unhalt" name="USBD_Unhalt">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="167,5,374,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="427,49,569,90"/>
+<area shape="rect" id="node4" href="$group__usbd__hid.xhtml#ga6a3177814ff14ce51040bd58817d4064" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="163,107,379,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="GMACB_WaitPhy" name="GMACB_WaitPhy">
+<area shape="rect" id="node2" href="$gmacb__phy_8c.xhtml#add851348aa8e6c519d4efda3e53d025d" title="Read PHY register. " alt="" coords="180,5,311,32"/>
+<area shape="rect" id="node3" href="$gmacb__phy_8c.xhtml#aba0c6004ff96312d6cd98d4948ec0014" title="Write PHY register Return 1 if successfully, 0 if timeout. " alt="" coords="180,56,311,83"/>
+</map>

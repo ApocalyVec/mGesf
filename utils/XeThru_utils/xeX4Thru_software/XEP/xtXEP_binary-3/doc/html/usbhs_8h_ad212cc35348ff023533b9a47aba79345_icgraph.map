@@ -1,0 +1,4 @@
+<map id="USBHS_HostConfigureDma" name="USBHS_HostConfigureDma">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga39a6506d44760a518b49d004574bc9c9" title="USBH_HAL_PipeOutReady" alt="" coords="252,5,440,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gaba849a4ecb7f5b837541fbccf850da59" title="USBH_HAL_PipeAbort" alt="" coords="265,56,427,83"/>
+</map>

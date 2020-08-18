@@ -1,0 +1,9 @@
+<map id="udd_enable" name="udd_enable">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="488,68,593,94"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="480,245,601,272"/>
+<area shape="rect" id="node4" href="$libraries_2libboard_2resources___x4_m0x_2system__sams70_8c.xhtml#a8372ffe2210c0caee63237271fdec131" title="Enable USB clock. " alt="" coords="149,68,289,94"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="156,118,283,145"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="157,169,281,196"/>
+<area shape="rect" id="node7" href="$group__udd__udphs__group.xhtml#gae37fb8512458fac3dc9d11746e99ffb6" title="Authorize or not the CPU powerdown mode. " alt="" coords="154,220,285,246"/>
+<area shape="rect" id="node8" href="$group__udd__udphs__group.xhtml#ga7a7c0d9236c922c2af33c6702565a99f" title="udd_attach" alt="" coords="337,220,432,246"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="dispatch_send_message" name="dispatch_send_message">
+<area shape="rect" id="node2" href="$xep__dispatch_8c.xhtml#af230fbcbf78ff22c13ca92625a50216d" title="Release message. " alt="" coords="233,5,429,32"/>
+<area shape="rect" id="node3" href="$xtsemaphore_8h.xhtml#a43f4af132e6f6f5cda6ba0ba20e0895d" title="Lock mutex. " alt="" coords="286,56,377,83"/>
+<area shape="rect" id="node4" href="$xtsemaphore_8h.xhtml#a06bdc2b347e98a86047a4a29ab698c6c" title="Unlock mutex. " alt="" coords="278,107,385,133"/>
+</map>

@@ -1,0 +1,27 @@
+<map id="x4driver_set_pif_register" name="x4driver_set_pif_register">
+<area shape="rect" id="node2" href="$task__radar_8c.xhtml#aaf9dce020103065a449faffb7bfdded2" title="_x4driver_test_io_connectivity" alt="" coords="232,5,445,32"/>
+<area shape="rect" id="node3" href="$task__radar_8h.xhtml#a8f5a25ff5bf1da89fd00ffdc10c73151" title="Enter TX only mode. " alt="" coords="761,114,898,155"/>
+<area shape="rect" id="node4" href="$task__radar_8h.xhtml#a43f10133b8707768c4b3a4c15526093a" title="Enter TX only mode, with TX off. " alt="" coords="751,191,908,233"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#a85fef427a42cff60e7bf267da9fd4766" title="_upload_downconversion\l_coeffs" alt="" coords="248,275,429,317"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a03652f4897873d46d0534336df7f29fe" title="Will trigger a radar sweep. " alt="" coords="260,341,417,368"/>
+<area shape="rect" id="node7" href="$x4driver_8c.xhtml#a041e81b6d75f97dbf29f1e9a29353425" title="Will setup x4 in default configuration. " alt="" coords="515,128,681,155"/>
+<area shape="rect" id="node8" href="$x4driver_8c.xhtml#ab008a9d8a7ab0744ceb00fb2116ad850" title="Reads raw bytes from x4. " alt="" coords="261,393,416,434"/>
+<area shape="rect" id="node9" href="$x4driver_8c.xhtml#aad4194e43df4304e629fc595d582d408" title="Setup external osc on X4. " alt="" coords="269,459,408,485"/>
+<area shape="rect" id="node10" href="$x4driver_8c.xhtml#abde766e0d1366c610923ac6df6aff591" title="Enable dvdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="245,509,432,536"/>
+<area shape="rect" id="node11" href="$x4driver_8c.xhtml#a2ed5d880184cddb6899a3ee5789ae282" title="Enable dvdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="245,560,432,587"/>
+<area shape="rect" id="node12" href="$x4driver_8c.xhtml#ac1bde9631df9f305637fd490f6d6034e" title="Enable avdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="245,611,432,637"/>
+<area shape="rect" id="node13" href="$x4driver_8c.xhtml#a6cf76ee14b0f9d6d942771a01b4bc6ab" title="Enable avdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="245,661,432,688"/>
+<area shape="rect" id="node14" href="$x4driver_8c.xhtml#a5db8c4a69efec11c5d537c13e4a94f6f" title="Set frame length in cycles. " alt="" coords="266,107,411,149"/>
+<area shape="rect" id="node15" href="$x4driver_8c.xhtml#a62754f21c23479836bc83d5e96514602" title="Sets Iterations. " alt="" coords="255,712,422,739"/>
+<area shape="rect" id="node16" href="$x4driver_8c.xhtml#a7ac1a5f45b02284571e297c672ca61de" title="Sets pulses per step. " alt="" coords="265,763,413,805"/>
+<area shape="rect" id="node17" href="$x4driver_8c.xhtml#a14e3623f55953194c1660b4fcc5814cf" title="Sets a register segment. " alt="" coords="245,931,432,957"/>
+<area shape="rect" id="node18" href="$x4driver_8c.xhtml#afdda0b27e8cfa0aa286f1cca02524b1a" title="_x4driver_set_rx_ram\l_first_line" alt="" coords="519,835,677,877"/>
+<area shape="rect" id="node19" href="$x4driver_8c.xhtml#ac12013d8875e5974fd3b4703aeeee12f" title="_x4driver_set_rx_ram\l_last_line" alt="" coords="519,905,677,946"/>
+<area shape="rect" id="node20" href="$x4driver_8c.xhtml#aca2f2487a46b5debe6656dd21a816e97" title="x4driver_set_downconversion" alt="" coords="493,977,703,1004"/>
+<area shape="rect" id="node21" href="$x4driver_8c.xhtml#a5b607d8c62783dfffb46c688ec90781e" title="x4driver_set_dac_min" alt="" coords="258,1032,419,1059"/>
+<area shape="rect" id="node22" href="$x4driver_8c.xhtml#aef1600f41584063c096ca246aafdee40" title="x4driver_set_dac_max" alt="" coords="256,1083,421,1109"/>
+<area shape="rect" id="node23" href="$x4driver_8c.xhtml#ac9237ca48bd407ee0efdd38db91a9b4e" title="x4driver_set_rx_wait" alt="" coords="263,1133,414,1160"/>
+<area shape="rect" id="node24" href="$x4driver_8c.xhtml#ab5eb8602c52123f84b4dfee408ef2cc7" title="x4driver_set_prf_div" alt="" coords="264,1184,413,1211"/>
+<area shape="rect" id="node25" href="$x4driver__unittest_8cpp.xhtml#a10059f1dd033fae04d9ab3832f498c04" title="TEST_F" alt="" coords="305,1235,372,1261"/>
+<area shape="rect" id="node26" href="$xep__application__mcp__callbacks_8h.xhtml#a4b8b3538059764feac39d03c54e37e81" title="onMcpX4DriverSetPifRegister" alt="" coords="235,1285,442,1312"/>
+</map>

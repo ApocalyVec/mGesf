@@ -1,0 +1,3 @@
+<map id="sysclk_enable_peripheral_clock" name="sysclk_enable_peripheral_clock">
+<area shape="rect" id="node2" href="$group__sam__drivers__pmc__group.xhtml#gad09de55bb493f4ebdd92305f24f27d62" title="Enable the specified peripheral clock. " alt="" coords="221,13,380,39"/>
+</map>

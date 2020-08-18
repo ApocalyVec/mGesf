@@ -1,0 +1,4 @@
+<map id="RSTC_ProcessorReset" name="RSTC_ProcessorReset">
+<area shape="rect" id="node2" href="$group___s_a_m_e70_j19__cmsis.xhtml#gae7ee340978f5c25f52f0cad1457c6616" title="This is the code that gets called on processor reset. " alt="" coords="222,5,337,32"/>
+<area shape="rect" id="node3" href="$xt__system_8c.xhtml#ace2af126089abe1d676edfc1400d0bf7" title="Triggers a software reset of MCU. " alt="" coords="212,56,347,83"/>
+</map>

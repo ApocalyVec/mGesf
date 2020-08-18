@@ -1,0 +1,4 @@
+<map id="USBHS_GetHostStatus" name="USBHS_GetHostStatus">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="265,5,391,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga170d8082df4bb77da27db090827145ec" title="USBH_HAL_DelayedSuspend" alt="" coords="224,56,432,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="_i2c_task_tx" name="_i2c_task_tx">
+<area shape="rect" id="node2" href="$task__monitor_8c.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register task to monitor. " alt="" coords="163,5,326,32"/>
+<area shape="rect" id="node3" href="$task__monitor_8c.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Reset counter to indicate that task is alive. " alt="" coords="173,56,316,83"/>
+<area shape="rect" id="node4" href="$xtio__i2c_8c.xhtml#a8bc0f7bf628075840b944c9bceefc376" title="xtio_i2c_send" alt="" coords="191,107,299,133"/>
+<area shape="rect" id="node5" href="$xtio__i2c_8c.xhtml#ab20d1bff556234c6446a0f047564d584" title="xtio_i2c_send_completed" alt="" coords="153,157,336,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CCID_SmartCardRequest" name="CCID_SmartCardRequest">
+<area shape="rect" id="node2" href="$group__usbd__ccid.xhtml#ga7638afdf218235334b871a60e142dc23" title="Reads data from the Data OUT endpoint. " alt="" coords="284,5,375,32"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#gad729a100b77824f505c78b0632cfec85" title="Description: CCID Command dispatcher. " alt="" coords="235,56,424,83"/>
+</map>

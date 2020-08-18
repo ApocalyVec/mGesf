@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/CDCMSDDriver.h" name="src/hal/x4m0x_s70/libraries/libusb/include/CDCMSDDriver.h">
+<area shape="rect" id="node2" href="$_u_s_b_requests_8h.xhtml" title="USBRequests.h" alt="" coords="320,244,440,271"/>
+<area shape="rect" id="node3" href="$_c_d_c_descriptors_8h.xhtml" title="Definitions and classes for USB CDC class descriptors. " alt="" coords="23,95,158,121"/>
+<area shape="rect" id="node4" href="$_m_s_descriptors_8h.xhtml" title="MSDescriptors.h" alt="" coords="182,95,309,121"/>
+<area shape="rect" id="node5" href="$_m_s_d_lun_8h.xhtml" title="MSDLun.h" alt="" coords="333,95,419,121"/>
+<area shape="rect" id="node6" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="344,169,416,196"/>
+<area shape="rect" id="node7" href="$_u_s_b_d_driver_8h.xhtml" title="USBDDriver.h" alt="" coords="448,169,557,196"/>
+</map>

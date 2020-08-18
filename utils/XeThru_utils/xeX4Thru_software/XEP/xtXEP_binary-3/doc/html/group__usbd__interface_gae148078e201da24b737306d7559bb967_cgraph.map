@@ -1,0 +1,4 @@
+<map id="USBD_SetConfiguration" name="USBD_SetConfiguration">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga05c8714f0e31ed119a4ab594d687691a" title="Sets the current device configuration. " alt="" coords="228,5,435,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#gaa9aba8ccdad2272b61db48b43466043b" title="Reset endpoints and disable them. " alt="" coords="252,56,411,83"/>
+</map>

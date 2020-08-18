@@ -1,0 +1,7 @@
+<map id="genclk_enable_config" name="genclk_enable_config">
+<area shape="rect" id="node2" href="$group__genclk__group.xhtml#ga266d1d9af46db320b74f015891fc350d" title="genclk_config_defaults" alt="" coords="209,5,363,32"/>
+<area shape="rect" id="node3" href="$group__genclk__group.xhtml#gab3fb066ffd9812df1915794fc27216fb" title="Enable the source clock src used by a generic clock. " alt="" coords="211,56,361,83"/>
+<area shape="rect" id="node4" href="$group__genclk__group.xhtml#gaff2e8e66761e3bba09411d863afbcc50" title="Select a new source clock src in configuration cfg. " alt="" coords="200,107,372,133"/>
+<area shape="rect" id="node5" href="$group__genclk__group.xhtml#gaba61f860039d940d4f57733f4d897d0a" title="genclk_config_set_divider" alt="" coords="201,157,371,184"/>
+<area shape="rect" id="node6" href="$group__genclk__group.xhtml#ga0a7af63a4442cae9ef9907778c7c5d9d" title="genclk_enable" alt="" coords="233,208,339,235"/>
+</map>

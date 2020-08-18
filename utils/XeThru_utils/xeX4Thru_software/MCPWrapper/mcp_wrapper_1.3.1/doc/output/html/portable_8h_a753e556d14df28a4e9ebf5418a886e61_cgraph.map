@@ -1,0 +1,5 @@
+<map id="xPortStartScheduler" name="xPortStartScheduler">
+<area shape="rect" id="node2" href="$port_8c.xhtml#a4649001ea4d29b80759e6eca4bba58eb" title="vPortSetupTimerInterrupt" alt="" coords="192,5,356,32"/>
+<area shape="rect" id="node3" href="$port_8c.xhtml#a6f5cb447f3560f9722f4f117d723184a" title="vPortEnableVFP" alt="" coords="215,56,333,83"/>
+<area shape="rect" id="node4" href="$port_8c.xhtml#a50dd292452ec6c17a611a90c22e19136" title="prvPortStartFirstTask" alt="" coords="202,107,346,133"/>
+</map>

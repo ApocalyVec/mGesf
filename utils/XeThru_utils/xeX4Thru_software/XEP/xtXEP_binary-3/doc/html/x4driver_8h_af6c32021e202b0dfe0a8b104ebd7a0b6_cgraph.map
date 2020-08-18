@@ -1,0 +1,6 @@
+<map id="x4driver_set_fps" name="x4driver_set_fps">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="207,5,305,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a290bcd409abdffc4999d632d9571e570" title="Sets x4 software action. " alt="" coords="180,57,332,98"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a90a52a2383ff206fe1f26c798184a7ad" title="Sets x4 software register value. " alt="" coords="180,122,332,163"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="208,188,304,215"/>
+</map>

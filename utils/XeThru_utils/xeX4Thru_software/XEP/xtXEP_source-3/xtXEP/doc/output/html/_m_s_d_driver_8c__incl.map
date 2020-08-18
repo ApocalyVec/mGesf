@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/device/massstorage/MSDDriver.c" name="src/hal/x4m0x_s70/libraries/libusb/device/massstorage/MSDDriver.c">
+<area shape="rect" id="node2" href="$_m_s_d_driver_8h.xhtml" title="MSDDriver.h" alt="" coords="5,109,107,136"/>
+<area shape="rect" id="node3" href="$_m_s_d_function_8h.xhtml" title="Mass storage function driver definitions. " alt="" coords="41,184,159,211"/>
+<area shape="rect" id="node4" href="$_u_s_b_lib___trace_8h.xhtml" title="USBLib_Trace.h" alt="" coords="181,109,301,136"/>
+<area shape="rect" id="node5" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="348,184,420,211"/>
+<area shape="rect" id="node6" href="$_u_s_b_d___h_a_l_8h.xhtml" title="This file defines functions for USB Device Hardware Access Level. " alt="" coords="377,109,482,136"/>
+<area shape="rect" id="node7" href="$_u_s_b_d_driver_8h.xhtml" title="USBDDriver.h" alt="" coords="507,109,616,136"/>
+</map>

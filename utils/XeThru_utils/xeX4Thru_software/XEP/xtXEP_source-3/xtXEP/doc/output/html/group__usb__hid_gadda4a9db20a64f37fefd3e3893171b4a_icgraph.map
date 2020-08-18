@@ -1,0 +1,4 @@
+<map id="HIDIdleRequest_GetIdleRate" name="HIDIdleRequest_GetIdleRate">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga6a3177814ff14ce51040bd58817d4064" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="252,5,468,32"/>
+<area shape="rect" id="node3" href="$group__usb__hid__protocol__types.xhtml#ga6809221451d2c5d5b2f6acf6fa643b9f" title="HIDProtocolRequest\l_GetProtocol" alt="" coords="286,57,434,98"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="arch_ioport_enable_pin" name="arch_ioport_enable_pin">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#gacdc3b4c6e23bed18c45de856fda5678f" title="Enable an IOPORT pin, based on a pin created with IOPORT_CREATE_PIN(). " alt="" coords="208,5,331,32"/>
+</map>

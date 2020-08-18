@@ -1,0 +1,5 @@
+<map id="Endpoint" name="Endpoint">
+<area shape="rect" id="node2" href="$struct_transfer.xhtml" title="Describes a transfer on a UDP endpoint. " alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node3" href="$struct_mbl_transfer.xhtml" title="Describes Multi Buffer List transfer on a UDP endpoint. " alt="" coords="117,5,211,32"/>
+<area shape="rect" id="node4" href="$struct_transfer_header.xhtml" title="Describes header for UDP endpoint transfer. " alt="" coords="235,5,354,32"/>
+</map>

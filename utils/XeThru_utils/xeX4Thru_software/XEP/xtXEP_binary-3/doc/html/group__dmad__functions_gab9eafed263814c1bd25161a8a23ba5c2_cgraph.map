@@ -1,0 +1,7 @@
+<map id="XDMAD_Handler" name="XDMAD_Handler">
+<area shape="rect" id="node2" href="$group__dmac__functions.xhtml#ga7a2befd294c1f6a6aceb85c128e60d54" title="Get XDMAC global interrupt status. " alt="" coords="217,5,341,32"/>
+<area shape="rect" id="node3" href="$group__dmac__functions.xhtml#gad262380a3acfc2a2a7481bbecfef1d39" title="Get Global channel status of given XDMAC. " alt="" coords="180,56,379,83"/>
+<area shape="rect" id="node4" href="$group__dmac__functions.xhtml#ga26c3a2ed7112a39264a0313a2f4233f0" title="Get masked interrupt status for the relevant channel of given XDMA. " alt="" coords="180,107,379,133"/>
+<area shape="rect" id="node5" href="$group__dmac__functions.xhtml#ga84908cf3af78ef59c373dd4aa7af74a3" title="Get interrupt mask for the relevant channel of given XDMA. " alt="" coords="183,157,375,184"/>
+<area shape="rect" id="node6" href="$group__dmac__functions.xhtml#ga1f9c0fc1111b5f8917921091d69a0cad" title="Get interrupt status for the relevant channel of given XDMA. " alt="" coords="196,208,363,235"/>
+</map>

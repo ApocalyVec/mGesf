@@ -1,0 +1,4 @@
+<map id="USBDCallbacks_RequestReceived" name="USBDCallbacks_RequestReceived">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="288,5,495,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="327,56,455,83"/>
+</map>

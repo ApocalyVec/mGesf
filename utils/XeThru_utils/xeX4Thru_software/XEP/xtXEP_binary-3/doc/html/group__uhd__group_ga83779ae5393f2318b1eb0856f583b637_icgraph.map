@@ -1,0 +1,8 @@
+<map id="USBH_HAL_FreePipe" name="USBH_HAL_FreePipe">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#gae55aefd77abf437b7a6af5fde8b6572e" title="Manage a device plug or unplug on the USB tree. " alt="" coords="216,5,387,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga5946f5d7c3385b5001db37d9455f5c67" title="Device enumeration step 5 Requests the USB device descriptor. " alt="" coords="447,63,639,89"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga4216b2f5091c5b72a41b6092029ad8a4" title="Device enumeration step 9 Send a Set address setup request. " alt="" coords="447,139,639,165"/>
+<area shape="rect" id="node5" href="$group___u_s_b_h__group__interne.xhtml#ga4d0656fe000b76d8a76804d09386f840" title="Device enumeration step 11 Updates USB host pipe with the new USB address. " alt="" coords="443,201,643,228"/>
+<area shape="rect" id="node6" href="$group___u_s_b_h__group__interne.xhtml#gaf236828c0bc344e80fb6dee45dc36b31" title="Device enumeration step 14 Enable USB configuration, if unless one USB interface is supported by UHIs..." alt="" coords="443,252,643,279"/>
+<area shape="rect" id="node7" href="$group___u_s_b_h__group__interne.xhtml#ga2b5b29e1ddaf4c35509ac444fa69a157" title="Manage error during device enumeration. " alt="" coords="208,157,395,184"/>
+</map>

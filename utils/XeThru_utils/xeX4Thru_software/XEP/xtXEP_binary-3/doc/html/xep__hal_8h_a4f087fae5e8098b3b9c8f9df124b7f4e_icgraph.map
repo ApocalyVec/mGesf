@@ -1,0 +1,9 @@
+<map id="xtio_set_direction" name="xtio_set_direction">
+<area shape="rect" id="node2" href="$radar__hal_8h.xhtml#ad63d969948a6bec2a0c98d02c6296446" title="Initiate Radar HAL. " alt="" coords="241,5,349,32"/>
+<area shape="rect" id="node3" href="$xt__selftest_8c.xhtml#aec0f2a19f48773ef1f87400fe6838389" title="xt_selftest_io_connector" alt="" coords="206,56,383,83"/>
+<area shape="rect" id="node4" href="$xt__system_8c.xhtml#a8d576cef4eead3e26b3adf733cd487c2" title="Gets the submode of the module for certification. " alt="" coords="223,107,366,149"/>
+<area shape="rect" id="node5" href="$xt__system_8c.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="207,173,382,200"/>
+<area shape="rect" id="node6" href="$task__radar_8c.xhtml#a4fee3ee4025e6d4e8dc667598f8bc27f" title="x4driver_enable_ISR" alt="" coords="219,224,370,251"/>
+<area shape="rect" id="node7" href="$task__radar_8c.xhtml#aaf9dce020103065a449faffb7bfdded2" title="_x4driver_test_io_connectivity" alt="" coords="188,275,401,301"/>
+<area shape="rect" id="node8" href="$xep__application__mcp__callbacks_8h.xhtml#a8850c282d398f5566ab9c2d486e96aeb" title="onMcpSetIOPinControl" alt="" coords="213,325,377,352"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="HSMCI_DisableIt" name="HSMCI_DisableIt">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#gacddd87e745fbdbff2826b44c188b867f" title="Initialize MCI driver. " alt="" coords="195,5,277,32"/>
+<area shape="rect" id="node3" href="$group__mcid__functions.xhtml#ga8b24d6b7cbfd7240dc23dbd4c6759975" title="Process pending events on the given MCI driver. " alt="" coords="180,56,292,83"/>
+</map>

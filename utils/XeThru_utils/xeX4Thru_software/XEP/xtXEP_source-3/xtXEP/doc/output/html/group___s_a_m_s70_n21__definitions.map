@@ -1,0 +1,8 @@
+<map id="SAMS70N21 definitions" name="SAMS70N21 definitions">
+<area shape="rect" id="node1" href="$group___s_a_m_s70_n21__pio.xhtml" title="Peripheral Pio Definitions" alt="" coords="234,5,414,32"/>
+<area shape="rect" id="node2" href="$group___s_a_m_s70_n21__id.xhtml" title="Peripheral Ids Definitions" alt="" coords="235,56,413,83"/>
+<area shape="rect" id="node3" href="$group___s_a_m_s70_n21__reg.xhtml" title="Registers Access Definitions" alt="" coords="224,107,424,133"/>
+<area shape="rect" id="node4" href="$group___s_a_m_s70_n21__base.xhtml" title="Peripheral Base Address\l Definitions" alt="" coords="235,158,413,199"/>
+<area shape="rect" id="node5" href="$group___s_a_m_s70_n21__api.xhtml" title="SOFTWARE PERIPHERAL API DEFINITION FOR SAMS70N21. " alt="" coords="239,224,409,251"/>
+<area shape="rect" id="node6" href="$group___s_a_m_s70_n21__cmsis.xhtml" title="CMSIS Definitions" alt="" coords="257,275,391,301"/>
+</map>

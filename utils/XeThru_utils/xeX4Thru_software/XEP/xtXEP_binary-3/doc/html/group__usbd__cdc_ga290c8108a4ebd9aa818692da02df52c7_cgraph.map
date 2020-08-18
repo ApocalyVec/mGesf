@@ -1,0 +1,3 @@
+<map id="CDCDSerial_GetControlLineState" name="CDCDSerial_GetControlLineState">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga777f3bd5a1512c7ef3c765e606617a3d" title="Returns the current control line state of the RS&#45;232 line. " alt="" coords="252,5,451,47"/>
+</map>

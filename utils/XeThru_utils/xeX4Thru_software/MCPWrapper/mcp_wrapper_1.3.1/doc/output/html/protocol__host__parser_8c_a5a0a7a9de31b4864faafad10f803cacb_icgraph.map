@@ -1,0 +1,14 @@
+<map id="bytes_to_uint32" name="bytes_to_uint32">
+<area shape="rect" id="node2" href="$protocol__host__parser_8h.xhtml#ab42e614cd70a7fccebc588a0a76d6a5f" title="parse_error" alt="" coords="224,55,311,82"/>
+<area shape="rect" id="node3" href="$protocol__host__parser_8h.xhtml#a4dc0786463a2d56827181aa2df7eb5cd" title="parse_reply" alt="" coords="423,18,513,44"/>
+<area shape="rect" id="node4" href="$protocol__host__parser_8h.xhtml#a83f756678f447cc05bf25b980ad960e9" title="parse_pong" alt="" coords="423,94,513,120"/>
+<area shape="rect" id="node5" href="$protocol__host__parser_8h.xhtml#ad924540c85994179fc947cd380114366" title="parse_presence_movinglist" alt="" coords="178,156,357,183"/>
+<area shape="rect" id="node6" href="$protocol__host__parser_8h.xhtml#a64a723819df191ca88b9817334617f00" title="parse_appdata" alt="" coords="415,334,521,360"/>
+<area shape="rect" id="node7" href="$protocol__host__parser_8h.xhtml#a43f3732f9f5adc9b7fe409391edb9749" title="parse_presence_single" alt="" coords="190,258,345,284"/>
+<area shape="rect" id="node8" href="$protocol__host__parser_8h.xhtml#a49dc96ded8bdab7fa0c66df331f7dce3" title="parse_baseband_iq" alt="" coords="200,308,335,335"/>
+<area shape="rect" id="node9" href="$protocol__host__parser_8h.xhtml#a7203ea3951462b2d1b41d65f67e8615a" title="parse_baseband_ap" alt="" coords="198,359,337,386"/>
+<area shape="rect" id="node10" href="$protocol__host__parser_8h.xhtml#a1d7a9c5ebdff244e0aeda763a574f2c6" title="parse_sleep_status" alt="" coords="200,410,335,436"/>
+<area shape="rect" id="node11" href="$protocol__host__parser_8h.xhtml#aa5664de178367c7faa1ee945dbc71761" title="parse_respiration_status" alt="" coords="185,460,349,487"/>
+<area shape="rect" id="node12" href="$protocol__host__parser_8h.xhtml#a8d71237f11a46b84563dd3552ac10f01" title="parse_respiration_movinglist" alt="" coords="175,511,360,538"/>
+<area shape="rect" id="node13" href="$protocol__host__parser_8h.xhtml#a29fc9ab5dcf4f3fbe947c31370311945" title="parse_respiration_detectionlist" alt="" coords="168,562,367,588"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="AUDDSpeakerPhone_ParseInterfaces" name="AUDDSpeakerPhone_ParseInterfaces">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#gacdc1729fd19bf2030d6dc5a8dcc9bfde" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="312,5,556,47"/>
+<area shape="rect" id="node3" href="$group__usbd__aud__fun.xhtml#ga702017449448c2a930ef05e9e48e7fe7" title="Configure function with expected descriptors and start functionality. " alt="" coords="343,71,525,98"/>
+</map>

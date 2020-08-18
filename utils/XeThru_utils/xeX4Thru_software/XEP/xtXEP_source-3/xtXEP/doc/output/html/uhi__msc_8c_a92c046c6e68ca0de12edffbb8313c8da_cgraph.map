@@ -1,0 +1,5 @@
+<map id="uhi_msc_scsi_read_capacity_done" name="uhi_msc_scsi_read_capacity_done">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a5b7c8255c93b911718d79f7bd85e7de1" title="Sends the CBW packet of the scsi REQUESRT SENSE command Called by TEST UNIT READY and READ CAPACITY c..." alt="" coords="315,5,477,47"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#ac40e773aee2d5201f82d515b4ce33cf6" title="Decodes the scsi sense code after a scsi READ CAPACITY command failed. " alt="" coords="295,71,497,112"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#ac2d95d78563f49c06a2b31e6e2c2f9b6" title="Sends the CBW packet of the scsi MODE SENSE 6 command This function returns the write&#45;protected mode..." alt="" coords="295,137,497,163"/>
+</map>

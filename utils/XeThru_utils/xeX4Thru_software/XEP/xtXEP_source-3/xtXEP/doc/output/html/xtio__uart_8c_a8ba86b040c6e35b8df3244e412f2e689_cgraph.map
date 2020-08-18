@@ -1,0 +1,17 @@
+<map id="xtio_uart_configure" name="xtio_uart_configure">
+<area shape="rect" id="node2" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="247,5,358,32"/>
+<area shape="rect" id="node3" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="457,56,621,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga260fba04ac8346855c57f091d4ee1e71" title="Disable External Interrupt. " alt="" coords="239,107,367,133"/>
+<area shape="rect" id="node5" href="$group__dmad__functions.xhtml#ga6be5cec75618250adb227d7588ae7078" title="Stop DMA transfer. " alt="" coords="224,157,381,184"/>
+<area shape="rect" id="node6" href="$group__dmad__functions.xhtml#ga2a3178c1d2615b7a4d7a0005662cdd89" title="Free the specified xDMA channel. " alt="" coords="225,208,381,235"/>
+<area shape="rect" id="node7" href="$usart_8h.xhtml#a8ff26bcf6b452fb6a979d47b4bbb0bd8" title="Disable interrupt. " alt="" coords="239,259,366,285"/>
+<area shape="rect" id="node8" href="$usart__dma_8h.xhtml#a3327e28c21222fe643b4533c203976f0" title="Initializes the USARTDma structure and the corresponding USART &amp; DMA . " alt="" coords="231,309,374,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="456,335,621,361"/>
+<area shape="rect" id="node10" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="239,411,366,437"/>
+<area shape="rect" id="node11" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="241,461,365,488"/>
+<area shape="rect" id="node12" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="213,512,393,539"/>
+<area shape="rect" id="node13" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="227,563,379,589"/>
+<area shape="rect" id="node14" href="$xtio__uart_8c.xhtml#aa4ab476877d0daadcb63078ea0ab195b" title="USART0_DMA_RX_Handler" alt="" coords="208,613,397,640"/>
+<area shape="rect" id="node15" href="$group__dmac__functions.xhtml#gadb74809f07d54268d7366c6354f4226a" title="Enables XDMAC global interrupt. " alt="" coords="234,664,371,691"/>
+<area shape="rect" id="node16" href="$xdma__hardware__interface_8h.xhtml#a1c7e741165685b3e072aa75e4cfb1034" title="Get peripheral identifier coded for hardware handshaking interface. " alt="" coords="197,715,408,741"/>
+</map>

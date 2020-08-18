@@ -1,0 +1,10 @@
+<map id="S25FL1D_MemoryAccess" name="S25FL1D_MemoryAccess">
+<area shape="rect" id="node2" href="$qspi_8h.xhtml#a399520c124a1931a313645b5011888db" title="Sends an instruction over QSPI and configures other related address like Addr , Frame and synchronise..." alt="" coords="236,5,415,32"/>
+<area shape="rect" id="node3" href="$qspi__dma_8h.xhtml#a16f401ef0f29ab14079e0355d7a48005" title="Starts a QSPI read or write operation. " alt="" coords="245,56,406,83"/>
+<area shape="rect" id="node4" href="$qspi_8h.xhtml#a61a250e1df8fc3d9823aa8d0af159cff" title="Writes or reads the QSPI memory (0x80000000) to transmit or receive data from Flash memory..." alt="" coords="249,107,402,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a74c6fab422307adf867416d98add8949" title="Memory_Align" alt="" coords="269,157,381,184"/>
+<area shape="rect" id="node6" href="$qspi__dma_8h.xhtml#ad1458b726cb714996c845b482425a10d" title="Starts a SPI master transfer. " alt="" coords="250,208,401,235"/>
+<area shape="rect" id="node7" href="$qspi_8h.xhtml#ade81d33cb14e6aa8701d4824de0656a2" title="Sends multiple data through a SPI peripheral. " alt="" coords="255,259,395,285"/>
+<area shape="rect" id="node8" href="$qspi_8h.xhtml#a0cee5ee97a2b6575ccf9d56d3c5fce64" title="Ends ongoing transfer by releasing CS of QSPI peripheral. " alt="" coords="259,309,392,336"/>
+<area shape="rect" id="node9" href="$qspi_8h.xhtml#aa8e703416d8faf7e6ca68d18c1da6115" title="Reads multiple data received by a SPI peripheral. " alt="" coords="255,360,395,387"/>
+</map>

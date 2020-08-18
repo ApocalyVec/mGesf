@@ -1,0 +1,8 @@
+<map id="RDRtoPCSlotStatus" name="RDRtoPCSlotStatus">
+<area shape="rect" id="node2" href="$group__usbd__ccid.xhtml#gaaa2098326671145c17cdaa260cf55b70" title="Command Pipe, Bulk&#45;OUT Messages Power Off Command &#45; Set the ICC in an inactive state Return the slot ..." alt="" coords="207,5,358,32"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#ga2150a65088f42962a1489cffeacd1ccd" title="Command Pipe, Bulk&#45;OUT Messages Get slot status. " alt="" coords="199,56,367,83"/>
+<area shape="rect" id="node4" href="$group__usbd__ccid.xhtml#ga3d61bdee8d65391c336dcc0e58976168" title="Command Pipe, Bulk&#45;OUT Messages This command stops or restarts the clock. " alt="" coords="216,107,349,133"/>
+<area shape="rect" id="node5" href="$group__usbd__ccid.xhtml#gaab26ddc860e13d6385bcb9ca2e67a17b" title="Command Pipe, Bulk&#45;OUT Messages This command changes the parameters used to perform the transportatio..." alt="" coords="219,157,347,184"/>
+<area shape="rect" id="node6" href="$group__usbd__ccid.xhtml#ga591c5915bc56ab0dc5510ef432016bb2" title="Command Pipe, Bulk&#45;OUT Messages This command is used to manage motorized type CCID functionality..." alt="" coords="208,208,357,235"/>
+<area shape="rect" id="node7" href="$group__usbd__ccid.xhtml#gafe40243ca666a07b8dbe5eeac1f096b1" title="Command Pipe, Bulk&#45;OUT Messages This command is used with the Control pipe Abort request to tell the ..." alt="" coords="227,259,339,285"/>
+</map>

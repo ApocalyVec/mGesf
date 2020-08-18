@@ -1,0 +1,7 @@
+<map id="efc_write_fmr" name="efc_write_fmr">
+<area shape="rect" id="node2" href="$group__sam__drivers__efc__group.xhtml#ga4388e032f274942c2e1c59ad87dd7e6d" title="Initialize the EFC controller. " alt="" coords="214,5,277,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__efc__group.xhtml#gac1a5521f329d65b0dc260e53be5e4d0b" title="Enable the flash ready interrupt. " alt="" coords="162,56,329,83"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__efc__group.xhtml#gaa93a0ef4163a379c7cb82a034e6efe53" title="Disable the flash ready interrupt. " alt="" coords="161,107,330,133"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__efc__group.xhtml#ga7a18fdc2e202f2ce5337f0e0a4f6eecd" title="Set flash access mode. " alt="" coords="152,157,339,184"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__efc__group.xhtml#gad128919fd18ca8f30155820220012deb" title="Set flash wait state. " alt="" coords="180,208,311,235"/>
+</map>

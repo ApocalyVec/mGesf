@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$group__sysclk__group.xhtml#ga242399e48a97739c88b4d0c00f6101de" title="Initialize the synchronous clock system. " alt="" coords="133,5,217,32"/>
+<area shape="rect" id="node3" href="$group__group__common__boards.xhtml#ga916f2adc2080b4fe88034086d107a8dc" title="This function initializes the board target resources. " alt="" coords="135,56,214,83"/>
+<area shape="rect" id="node4" href="$main_8c.xhtml#a33c8c1bb4e41b6192b554fdf9e70b3b9" title="Configure the console UART. " alt="" coords="111,107,238,133"/>
+<area shape="rect" id="node5" href="$main_8c.xhtml#a63d72e300659658b1f257be9cfa7e75e" title="This task, when activated, make LED blink at a fixed rate. " alt="" coords="139,157,210,184"/>
+<area shape="rect" id="node6" href="$task__xethru_8c.xhtml#a76190ce03715163953152235db3d3b6c" title="task_xethru_init" alt="" coords="117,208,232,235"/>
+<area shape="rect" id="node7" href="$task_8h.xhtml#aaf9dca1065c60abdeb309d56ab7293cb" title="vTaskStartScheduler" alt="" coords="104,259,245,285"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="MSDFunction_Reset" name="MSDFunction_Reset">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga462b4263f13e5235a2bedceeaece01cb" title="Initializes the MSD driver and the associated USB driver. " alt="" coords="225,5,388,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#gafb1268e0849907894c708ccc4ab46fee" title="Invoked when the configuration of the device changes. " alt="" coords="220,56,393,83"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#gaa87efba32c907fa095c6f8797d2580db" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="200,107,413,133"/>
+</map>

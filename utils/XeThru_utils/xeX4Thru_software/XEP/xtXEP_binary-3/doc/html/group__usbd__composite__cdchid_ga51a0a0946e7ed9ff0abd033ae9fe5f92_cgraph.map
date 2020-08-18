@@ -1,0 +1,5 @@
+<map id="CDCHIDDDriver_RemoteWakeUp" name="CDCHIDDDriver_RemoteWakeUp">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="325,5,453,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga0907be664b7193af543d1032c6de8606" title="Test if RemoteWakeUP feature is enabled. " alt="" coords="281,57,496,98"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gacfd4fed846cba74af43e668e47b6dc10" title="Starts a remote wake&#45;up procedure. " alt="" coords="305,123,472,149"/>
+</map>

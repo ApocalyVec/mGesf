@@ -1,0 +1,5 @@
+<map id="USBEndpointDescriptor_GetNumber" name="USBEndpointDescriptor_GetNumber">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gaf17d4fe67932fa6a5dcc05f4c6d611ff" title="Configures an endpoint according to its endpoint Descriptor. " alt="" coords="225,56,403,83"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="451,5,584,32"/>
+<area shape="rect" id="node4" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="632,56,739,83"/>
+</map>

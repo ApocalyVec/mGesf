@@ -1,0 +1,12 @@
+<map id="_HidAuddDriverConfigurationDescriptors" name="_HidAuddDriverConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___h_i_d_descriptor1.xhtml" title="_HIDDescriptor1" alt="" coords="65,24,192,51"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_interface_association_descriptor.xhtml" title="_USBInterfaceAssociation\lDescriptor" alt="" coords="35,75,222,117"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="39,141,218,168"/>
+<area shape="rect" id="node5" href="$struct___a_u_d_format_type_one_descriptor1.xhtml" title="Format type I descriptor with one discrete sampling frequency. " alt="" coords="13,192,245,219"/>
+<area shape="rect" id="node6" href="$struct___a_u_d_streaming_interface_descriptor.xhtml" title="_AUDStreamingInterfaceDescriptor" alt="" coords="5,243,252,269"/>
+<area shape="rect" id="node7" href="$struct___a_u_d_endpoint_descriptor.xhtml" title="_AUDEndpointDescriptor" alt="" coords="39,293,219,320"/>
+<area shape="rect" id="node8" href="$struct___a_u_d_d_speaker_driver_audio_control_descriptors.xhtml" title="List of descriptors for detailing the audio control interface of a device using a USB audio speaker d..." alt="" coords="8,345,249,386"/>
+<area shape="rect" id="node9" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="25,411,233,437"/>
+<area shape="rect" id="node10" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="39,480,218,507"/>
+<area shape="rect" id="node11" href="$struct___a_u_d_data_endpoint_descriptor.xhtml" title="_AUDDataEndpointDescriptor" alt="" coords="23,531,234,557"/>
+</map>

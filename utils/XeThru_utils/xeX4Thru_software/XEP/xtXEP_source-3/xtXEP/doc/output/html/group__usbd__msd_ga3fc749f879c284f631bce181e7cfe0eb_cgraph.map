@@ -1,0 +1,5 @@
+<map id="MSDDriver_RequestHandler" name="MSDDriver_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="553,5,681,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#gaa87efba32c907fa095c6f8797d2580db" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="252,31,465,57"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="513,68,720,95"/>
+</map>

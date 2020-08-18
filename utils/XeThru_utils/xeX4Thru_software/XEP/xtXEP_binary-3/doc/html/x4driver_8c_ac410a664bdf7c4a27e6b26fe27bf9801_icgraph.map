@@ -1,0 +1,6 @@
+<map id="_x4driver_set_internal_register" name="_x4driver_set_internal_register">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a290bcd409abdffc4999d632d9571e570" title="Sets x4 software action. " alt="" coords="229,5,381,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a90a52a2383ff206fe1f26c798184a7ad" title="Sets x4 software register value. " alt="" coords="229,71,381,112"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="216,137,395,163"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#ab8fa9b7aaf1038fabf6faae517258a1a" title="Sets XIF register value. " alt="" coords="217,187,394,214"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="QSPID_EnableSpiChannel" name="QSPID_EnableSpiChannel">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="237,5,417,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="251,56,403,83"/>
+<area shape="rect" id="node4" href="$qspi__dma_8c.xhtml#a63083abbd1516f582a6fce26cc454c79" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="271,107,384,133"/>
+<area shape="rect" id="node5" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="238,157,417,184"/>
+</map>

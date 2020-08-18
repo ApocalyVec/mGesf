@@ -1,0 +1,8 @@
+<map id="USBD_HAL_ResetEPs" name="USBD_HAL_ResetEPs">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#gab0cb2fc73b21c62122cdcf32cdf82fb0" title="Invoked whenever the active setting of an interface is changed by the host. " alt="" coords="212,5,451,47"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#gada2cefdc8bad66438b5bf9f6ccc299d9" title="Close the stream. " alt="" coords="256,71,407,98"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gad1bf93dee935f232cc0acae8cac8f264" title="Handle the USB reset event, should be invoked whenever HW found USB reset signal on bus..." alt="" coords="255,173,407,199"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="499,122,632,149"/>
+<area shape="rect" id="node6" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="680,173,787,199"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gae148078e201da24b737306d7559bb967" title="Sets the current device configuration. " alt="" coords="244,274,419,301"/>
+</map>

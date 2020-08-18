@@ -1,0 +1,4 @@
+<map id="AUDDFunction_InterfaceSettingChangedHandler" name="AUDDFunction_InterfaceSettingChangedHandler">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdcaud.xhtml#ga4788fd10d3fdab455dc217c426d98e89" title="Invoked whenever the active setting of an interface is changed by the host. " alt="" coords="276,5,512,47"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidaud.xhtml#ga2fee35c28a74536953410a3568c33ea6" title="Invoked whenever the active setting of an interface is changed by the host. " alt="" coords="279,71,509,112"/>
+</map>

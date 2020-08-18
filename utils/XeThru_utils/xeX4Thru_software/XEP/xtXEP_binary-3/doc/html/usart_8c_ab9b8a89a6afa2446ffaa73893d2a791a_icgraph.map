@@ -1,0 +1,3 @@
+<map id="USART_SetReceiverEnabled" name="USART_SetReceiverEnabled">
+<area shape="rect" id="node2" href="$usart__dma_8c.xhtml#a7714e0765368904f8f43f1fc0ccb63fd" title="This function initialize the appropriate DMA channel for Rx channel of USART. " alt="" coords="251,5,449,32"/>
+</map>

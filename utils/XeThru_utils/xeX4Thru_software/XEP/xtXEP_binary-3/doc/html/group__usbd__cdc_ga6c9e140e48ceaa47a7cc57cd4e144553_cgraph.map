@@ -1,0 +1,4 @@
+<map id="CDCDEEMPort_ParseInterfaces" name="CDCDEEMPort_ParseInterfaces">
+<area shape="rect" id="node2" href="$group__usb__descriptor.xhtml#gac720e8b7e3cec002c16397a66f5e03b1" title="Parses the given descriptor list via customized function. " alt="" coords="272,5,437,47"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#gae577f8bd58f037ee1e8cc9c20d4413e0" title="Parse descriptors: Interface, Bulk IN/OUT, Interrupt IN. " alt="" coords="287,71,422,98"/>
+</map>

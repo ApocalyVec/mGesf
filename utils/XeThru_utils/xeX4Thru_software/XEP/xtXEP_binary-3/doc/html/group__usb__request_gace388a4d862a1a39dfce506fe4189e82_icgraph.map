@@ -1,0 +1,12 @@
+<map id="USBGenericRequest_GetRequest" name="USBGenericRequest_GetRequest">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#ga2b7fde84b4a6cc4bfe50ca02a01c5bb5" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="579,47,789,88"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga17c8f0de49847c1c6fcd8f2ca0ffad64" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="588,121,780,163"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#gad7ef8cec21e04288200d14b5d1960ee6" title="Handles audio&#45;specific USB requests sent by the host. " alt="" coords="293,47,505,88"/>
+<area shape="rect" id="node5" href="$group__usbd__ccid.xhtml#gaa3679fa7dec59d63fc8951434967b5b8" title="SETUP request handler for a CCID device. " alt="" coords="603,205,765,231"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc.xhtml#ga22689d00e906f48f9d99ae975b6a0ebb" title="Handles CDC&#45;specific SETUP requests. " alt="" coords="289,467,510,494"/>
+<area shape="rect" id="node7" href="$group__usbd__cdc.xhtml#gafccee3269ed6e338919f108286973e40" title="Handles CDC&#45;specific SETUP requests. " alt="" coords="284,315,515,342"/>
+<area shape="rect" id="node8" href="$group__usbd__composite__cdccdc.xhtml#ga9ba1f9929b5a8da6905543152693e5a4" title="Handles composite&#45;specific USB requests sent by the host, and forwards standard ones to the USB devic..." alt="" coords="563,265,805,291"/>
+<area shape="rect" id="node9" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="296,214,503,241"/>
+<area shape="rect" id="node10" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="613,324,755,365"/>
+<area shape="rect" id="node11" href="$group__usbd__msd.xhtml#gaa87efba32c907fa095c6f8797d2580db" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="577,407,791,434"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="HIDMSDDriver_RequestHandler" name="HIDMSDDriver_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="585,54,713,81"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__key.xhtml#gae283b3485bee22fa5b4baeea5209b570" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="275,29,497,56"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#gaa87efba32c907fa095c6f8797d2580db" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="279,80,493,106"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="545,117,752,144"/>
+</map>

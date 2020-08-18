@@ -1,0 +1,8 @@
+<map id="uxTaskGetNumberOfTasks" name="uxTaskGetNumberOfTasks">
+<area shape="rect" id="node2" href="$task_8h.xhtml#a094a608b1b19b9d3cb41254661653ec2" title="vTaskList" alt="" coords="273,5,349,32"/>
+<area shape="rect" id="node3" href="$tasks_8c.xhtml#a084d232640bd1d04bcac0b8784417015" title="vTaskSuspendAll" alt="" coords="251,56,372,83"/>
+<area shape="rect" id="node4" href="$tasks_8c.xhtml#ab173f313b22f1a57dfceb98cb01b0508" title="xTaskResumeAll" alt="" coords="251,107,371,133"/>
+<area shape="rect" id="node5" href="$task_8h.xhtml#ac34910d5eac69f0538ee218e527663a7" title="vTaskGetRunTimeStats" alt="" coords="232,157,391,184"/>
+<area shape="rect" id="node6" href="$task_8h.xhtml#ab9efbfbcd061ffbdce03badeb3cd3e90" title="vTaskStartTrace" alt="" coords="254,208,369,235"/>
+<area shape="rect" id="node7" href="$task_8h.xhtml#afb02a17b00744a171ae95708caa5d4e1" title="ulTaskEndTrace" alt="" coords="254,259,369,285"/>
+</map>

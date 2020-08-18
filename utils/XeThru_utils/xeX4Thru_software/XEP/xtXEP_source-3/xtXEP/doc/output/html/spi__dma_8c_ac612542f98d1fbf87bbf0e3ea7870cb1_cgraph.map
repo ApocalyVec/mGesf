@@ -1,0 +1,9 @@
+<map id="SPID_Rx_Cb" name="SPID_Rx_Cb">
+<area shape="rect" id="node2" href="$spi_8h.xhtml#aa8212f6819071a9ca247a0236b109e98" title="Disables a SPI peripheral. " alt="" coords="188,5,284,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="153,56,319,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga260fba04ac8346855c57f091d4ee1e71" title="Disable External Interrupt. " alt="" coords="172,107,300,133"/>
+<area shape="rect" id="node5" href="$pmc_8h.xhtml#a2bb6755e2bf15a75e193cb6510064fa4" title="Disables the clock of a peripheral. " alt="" coords="152,157,320,184"/>
+<area shape="rect" id="node6" href="$spi_8h.xhtml#afec585b57cc1c95453808449f5d74fcd" title="Configures SPI to release last used CS line. " alt="" coords="178,208,294,235"/>
+<area shape="rect" id="node7" href="$group__dmad__functions.xhtml#ga2a3178c1d2615b7a4d7a0005662cdd89" title="Free the specified xDMA channel. " alt="" coords="158,259,314,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga503ef7ef58c0773defd15a82f6336c09" title="SCB_InvalidateDCache\l_by_Addr" alt="" coords="153,310,319,351"/>
+</map>

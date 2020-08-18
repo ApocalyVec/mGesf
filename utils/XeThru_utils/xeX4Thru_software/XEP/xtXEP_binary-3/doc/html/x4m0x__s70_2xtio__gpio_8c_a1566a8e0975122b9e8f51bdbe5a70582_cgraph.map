@@ -1,0 +1,4 @@
+<map id="xtio_irq_init" name="xtio_irq_init">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a4ed9b32000d3b15c46ffd748f32ed44d" title="Default interrupt handler for unused IRQs. " alt="" coords="164,5,295,32"/>
+<area shape="rect" id="node3" href="$pio__it_8h.xhtml#ad31e05d6debb1e88af6124cd7751af22" title="Initializes the PIO interrupt management logic. " alt="" coords="148,56,311,83"/>
+</map>

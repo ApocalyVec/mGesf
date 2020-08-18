@@ -1,0 +1,10 @@
+<map id="TWID_Read" name="TWID_Read">
+<area shape="rect" id="node2" href="$twi_8h.xhtml#ab3bf1b5df694229af5fae34ca569ab7b" title="Enables the selected interrupts sources on a TWI peripheral. " alt="" coords="175,5,276,32"/>
+<area shape="rect" id="node3" href="$twi_8h.xhtml#a806d1ace472ce5f4e2fe2de6f5a425ff" title="Starts a read operation on the TWI bus with the specified slave, it returns immediately. " alt="" coords="169,56,282,83"/>
+<area shape="rect" id="node4" href="$twi_8h.xhtml#ab6f6a89c7dbb1075f904386273252977" title="Sends a STOP condition on the TWI. " alt="" coords="185,107,265,133"/>
+<area shape="rect" id="node5" href="$timetick_8h.xhtml#ae626fb68b4503701534936d10ec97067" title="Get Delayed number of tick. " alt="" coords="187,157,263,184"/>
+<area shape="rect" id="node6" href="$twi_8h.xhtml#a2bb399b4984df2fdaabf741326636de2" title="Check if a byte have been received from TWI. " alt="" coords="158,208,293,235"/>
+<area shape="rect" id="node7" href="$timetick_8h.xhtml#a125704795ef25b9a4887b18916658f2d" title="Get Delayed number of tick. " alt="" coords="164,259,287,285"/>
+<area shape="rect" id="node8" href="$twi_8h.xhtml#a8b4e96e6ce1126921517147b048fde51" title="Reads a byte from the TWI bus. " alt="" coords="170,309,281,336"/>
+<area shape="rect" id="node9" href="$twi_8h.xhtml#a8d8a0d10a7d128428c350f7337191fbd" title="Check if current transmission is completed. " alt="" coords="144,360,307,387"/>
+</map>

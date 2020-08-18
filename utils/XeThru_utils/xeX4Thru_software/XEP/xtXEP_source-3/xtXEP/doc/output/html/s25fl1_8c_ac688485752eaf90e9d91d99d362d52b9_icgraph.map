@@ -1,0 +1,7 @@
+<map id="S25FL1D_EnableWrite" name="S25FL1D_EnableWrite">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a0a4a002ffca545ddb295efab00a4ab53" title="Writes the given value in the status register of the serial flash device. " alt="" coords="224,5,383,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#afb88d105142c2a47764cc9fba6012d60" title="Erases all the content of the memory chip. " alt="" coords="228,56,379,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#aee7639f2487a57e818d095f9aa7a2775" title="Erases the specified block of the serial firmware dataflash. " alt="" coords="221,107,385,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a3e17d8be015b8eddc6c4c81ec2310c79" title="Erases the specified 64KB block of the serial firmware dataflash. " alt="" coords="213,157,393,184"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#a6e299269e367ae9838e0698dbe750e10" title="Writes data at the specified address on the serial firmware dataflash. " alt="" coords="245,208,362,235"/>
+</map>

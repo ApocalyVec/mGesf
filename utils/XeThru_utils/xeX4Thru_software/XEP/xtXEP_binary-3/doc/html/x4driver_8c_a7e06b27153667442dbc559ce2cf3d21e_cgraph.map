@@ -1,0 +1,5 @@
+<map id="x4driver_get_pif_segment" name="x4driver_get_pif_segment">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="280,5,379,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="240,56,419,83"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="281,107,377,133"/>
+</map>

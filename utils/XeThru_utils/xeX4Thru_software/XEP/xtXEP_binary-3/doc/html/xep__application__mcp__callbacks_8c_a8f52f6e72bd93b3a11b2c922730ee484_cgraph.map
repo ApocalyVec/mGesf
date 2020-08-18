@@ -1,0 +1,7 @@
+<map id="onMcpStartBootloader" name="onMcpStartBootloader">
+<area shape="rect" id="node2" href="$xep__dispatch__messages_8h.xhtml#a6e262ca0c38ec62ef4f097a1cbab9c36" title="Dispatch message to hostcom asking to send string to host. " alt="" coords="220,5,425,47"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="220,71,425,112"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="220,136,425,177"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml#a8e58faffa8a7b0934ca76bc1fa5ef6fa" title="Causes the calling task to wait and yields to another task. " alt="" coords="289,202,356,229"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml#ace2af126089abe1d676edfc1400d0bf7" title="Triggers a software reset of MCU. " alt="" coords="255,253,390,279"/>
+</map>

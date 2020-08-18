@@ -1,0 +1,6 @@
+<map id="USBH_HAL_GetFrameNum" name="USBH_HAL_GetFrameNum">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__internal.xhtml#gab2e5918509ca2fa9edf6ef88a8dc62ce" title="Update the transfer endpoint IN (RX) Valid the reception of the previous transfer. " alt="" coords="248,5,389,32"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group__internal.xhtml#ga5bfc8e7c676500af3faadcf847e13c81" title="Manage the end of RX transfer. " alt="" coords="437,5,588,32"/>
+<area shape="rect" id="node4" href="$group__uhi__cdc__group__internal.xhtml#ga19464aec764d1d849bd81da0a1f70a0e" title="Update the transfer endpoint OUT (TX) Start a new transfer on endpoint OUT, if a data must be send an..." alt="" coords="248,107,389,133"/>
+<area shape="rect" id="node5" href="$group__uhi__cdc__group__internal.xhtml#ga2d752930f3947081262a5ac64f05ac41" title="Manage the end of TX transfer. " alt="" coords="449,107,576,133"/>
+</map>

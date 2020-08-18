@@ -1,0 +1,5 @@
+<map id="UHI for Human Interface Device Mouse Class" name="UHI for Human Interface Device Mouse Class">
+<area shape="rect" id="node1" href="$group__uhi__group.xhtml" title="The UHI provides a common API for all classes, and this is used by UHC for the main control of USB ho..." alt="" coords="5,39,149,80"/>
+<area shape="rect" id="node2" href="$group__uhi__hid__mouse__group__uhc.xhtml" title="Define and functions required by UHC. " alt="" coords="437,5,575,47"/>
+<area shape="rect" id="node4" href="$group__uhi__hid__mouse__group__internal.xhtml" title="Class internal implementation. " alt="" coords="423,71,589,112"/>
+</map>

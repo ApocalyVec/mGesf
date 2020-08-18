@@ -1,0 +1,10 @@
+<map id="MCID_Init" name="MCID_Init">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#gaf3888b57bf46a3d153daa692d739f346" title="Enable MCI peripheral access clock. " alt="" coords="178,5,314,32"/>
+<area shape="rect" id="node3" href="$group__hsmci__functions.xhtml#ga273099b0076489b4216672fb85d8a813" title="Disable one or more interrupt sources of MCI peripheral. " alt="" coords="183,56,309,83"/>
+<area shape="rect" id="node4" href="$group__hsmci__functions.xhtml#ga6668e349edf32e148bfd5fcf45b1eccc" title="Configure the Data Timeout. " alt="" coords="156,107,336,133"/>
+<area shape="rect" id="node5" href="$group__hsmci__functions.xhtml#ga75c6f68a1b67b73c8b80482b5cc17c45" title="Configure the Completion Signal Timeout. " alt="" coords="135,157,357,184"/>
+<area shape="rect" id="node6" href="$group__hsmci__functions.xhtml#gaf51e5a4c668bd49302fbab8329215445" title="Configures a MCI peripheral as specified. " alt="" coords="163,208,329,235"/>
+<area shape="rect" id="node7" href="$group__hsmci__functions.xhtml#ga2c391b7420eb0660c30b87510a862770" title="Enable Multi&#45;Media Interface. " alt="" coords="189,259,303,285"/>
+<area shape="rect" id="node8" href="$group__hsmci__functions.xhtml#gae212bc49645bc7b10e0f46159737f874" title="Configure the HSMCI. " alt="" coords="180,309,312,336"/>
+<area shape="rect" id="node9" href="$group__hsmci__functions.xhtml#gaf2f9c4d2b276027b3c238530ed107308" title="Enable the HSMCI DMA. " alt="" coords="173,360,319,387"/>
+</map>

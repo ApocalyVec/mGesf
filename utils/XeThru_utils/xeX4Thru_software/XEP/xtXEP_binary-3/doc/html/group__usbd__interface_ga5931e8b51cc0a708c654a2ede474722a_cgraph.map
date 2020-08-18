@@ -1,0 +1,4 @@
+<map id="USBD_ResumeHandler" name="USBD_ResumeHandler">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga72c29d7c5767f5af8df7ba1603a02619" title="Activate USB Device HW InterfaceEnable USB PeripheralEnable USB ClockEnable transceiver. " alt="" coords="239,5,391,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gac077464ce6090a99a999031ee2b43abc" title="Invoked when the USB device leaves the Suspended state. " alt="" coords="221,56,408,83"/>
+</map>

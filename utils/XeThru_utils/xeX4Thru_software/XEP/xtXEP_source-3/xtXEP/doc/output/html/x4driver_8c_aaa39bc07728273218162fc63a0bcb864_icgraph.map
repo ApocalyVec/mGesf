@@ -1,0 +1,10 @@
+<map id="x4driver_set_tx_power" name="x4driver_set_tx_power">
+<area shape="rect" id="node2" href="$task__radar_8c.xhtml#ab45564b4bfe2b9814424a084ab9a9859" title="task_radar" alt="" coords="667,162,757,188"/>
+<area shape="rect" id="node3" href="$task__radar_8h.xhtml#a8f5a25ff5bf1da89fd00ffdc10c73151" title="Enter TX only mode. " alt="" coords="245,154,382,196"/>
+<area shape="rect" id="node4" href="$task__radar_8c.xhtml#a777b1becbbecb18522cf2c6dc047532b" title="radar_certification\l_handler" alt="" coords="469,154,607,196"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#ade8de22b982f74c728af66c33bcf42e2" title="onMcpSystemRunTest" alt="" coords="457,96,619,123"/>
+<area shape="rect" id="node6" href="$task__radar_8h.xhtml#a43f10133b8707768c4b3a4c15526093a" title="Enter TX only mode, with TX off. " alt="" coords="235,89,392,130"/>
+<area shape="rect" id="node7" href="$task__radar_8c.xhtml#a1f0b2f52d809a8141147add6eaa0279a" title="read_and_send_radar\l_frame" alt="" coords="457,241,619,282"/>
+<area shape="rect" id="node8" href="$xep__application__mcp__callbacks_8h.xhtml#af880e9a568158fe0dbc01768eb02b721" title="onMcpX4DriverInit" alt="" coords="245,322,382,348"/>
+<area shape="rect" id="node9" href="$xep__application__mcp__callbacks_8h.xhtml#a2feea8db577f360255e5642a40a2278b" title="onMcpX4DriverSetTxPower" alt="" coords="217,372,409,399"/>
+</map>

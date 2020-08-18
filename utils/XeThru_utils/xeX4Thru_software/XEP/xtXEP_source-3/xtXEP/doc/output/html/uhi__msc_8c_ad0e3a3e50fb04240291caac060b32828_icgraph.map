@@ -1,0 +1,5 @@
+<map id="uhi_msc_csw_wait" name="uhi_msc_csw_wait">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a4b8bf30114a15489e5f8b0619a8319ea" title="Checks the CBW packet transfer and launch the next step The next step can be a DATA phase or a CSW pa..." alt="" coords="636,5,777,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a5bde639d16169cbf29a09a0ea37b8765" title="Checks the DATA phase transfer and launch the next step The next step can be a CSW packet or a endpoi..." alt="" coords="404,31,588,57"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#abd0709d787a564ddd9125804f32d4e68" title="Manages the end of RESET ENDPOINT request after a DATA or CSW packet. " alt="" coords="191,82,356,123"/>
+</map>

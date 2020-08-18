@@ -1,0 +1,6 @@
+<map id="src/hal/x4m0x_s70/startup_sams70.c" name="src/hal/x4m0x_s70/startup_sams70.c">
+<area shape="rect" id="node2" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node3" href="$sams70_8h.xhtml" title="sams70.h" alt="" coords="101,95,186,121"/>
+<area shape="rect" id="node5" href="$board__memories_8h.xhtml" title="Interface for memories configuration on board. " alt="" coords="300,95,443,121"/>
+<area shape="rect" id="node8" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="671,95,754,121"/>
+</map>

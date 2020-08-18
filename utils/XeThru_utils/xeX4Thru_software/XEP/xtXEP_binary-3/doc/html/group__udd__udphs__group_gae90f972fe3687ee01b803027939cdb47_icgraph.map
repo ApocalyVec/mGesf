@@ -1,0 +1,20 @@
+<map id="if" name="if">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga4dade176be1ff02c5dfb6371d873b5ed" title="Send a frame split into buffers. " alt="" coords="142,5,273,32"/>
+<area shape="rect" id="node3" href="$group__can__module.xhtml#gaa6911926348cdcfd85d9931096fafecc" title="Get Rx buffer. " alt="" coords="122,56,293,83"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#ga745dbddddd85ddbe2c71a9df4c3e38af" title="HSMCI DMA R/W. " alt="" coords="132,107,283,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#gada855d5452052e08f36853a81e3b016d" title="Sends data through a USB endpoint. " alt="" coords="149,157,265,184"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#gadbb4c8a840d3ff539be6fa5fa9f4a4e0" title="Sends the requested USB descriptor to the host if available, or STALLs the request. " alt="" coords="152,208,263,235"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gadfce99fba013d30648e7a058c7fa6799" title="Returns configuration descriptor list. " alt="" coords="96,259,319,285"/>
+<area shape="rect" id="node8" href="$group__usbd__hal.xhtml#gaedece2a858b9ec25badf17f20ef8a7a7" title="Sends data through a USB endpoint. " alt="" coords="159,309,256,336"/>
+<area shape="rect" id="node9" href="$group__usbd__msd.xhtml#ga114a8851b201e26f5cda18ee7077d6ef" title="Performs a MODE SENSE (6) command. " alt="" coords="138,360,277,387"/>
+<area shape="rect" id="node10" href="$group__uhi__msc__group.xhtml#ga9a204242b01d7ee34b9ee6e89308af7c" title="Reads a LUN data section to RAM buffer Note: The sector size used to define the data section is the s..." alt="" coords="125,411,290,437"/>
+<area shape="rect" id="node11" href="$group__uhi__msc__mem__group.xhtml#gac50e80d8db5c32870c6a86a62bde0da2" title="Reads 512 bytes from the current LUN. " alt="" coords="371,449,579,476"/>
+<area shape="rect" id="node12" href="$group__uhi__msc__group.xhtml#ga75da7088270a7c90424b0530acda9001" title="Writes a RAM buffer in a LUN data section Note: The sector size used to define the data section is th..." alt="" coords="124,512,291,539"/>
+<area shape="rect" id="node13" href="$group__uhi__msc__mem__group.xhtml#ga319d1a6388e17afd55955abe50898990" title="Writes 512 bytes to the current LUN. " alt="" coords="371,525,580,552"/>
+<area shape="rect" id="node14" href="$uhi__msc_8c.xhtml#afe6c668f44a651c4e81fd30c0ace7ce4" title="Decodes the scsi sense code after an error on TEST UNIT READY command. " alt="" coords="123,614,292,655"/>
+<area shape="rect" id="node15" href="$group__uhi__msc__mem__group.xhtml#gafbc0e818125cffa188b4d6fcfa9af019" title="Returns the capacity of the LUN. " alt="" coords="101,680,313,707"/>
+<area shape="rect" id="node16" href="$group__uhi__msc__mem__group.xhtml#ga0ab8e4988ed3c92de5ed5d3f0e6173ed" title="Returns the sector size of the LUN. " alt="" coords="92,731,323,757"/>
+<area shape="rect" id="node17" href="$group__uhi__msc__mem__group.xhtml#ga5cbced218e52f441b7db354bb733f7f5" title="Checks if the LUN is write protected. " alt="" coords="112,781,303,808"/>
+<area shape="rect" id="node18" href="$task__hostcom_8c.xhtml#a0f5ebca55fdae14c22971c756ac7ac30" title="process_dispatch_message\l_hostcom_send" alt="" coords="108,833,307,874"/>
+<area shape="rect" id="node19" href="$xep__application_8c.xhtml#a038116ea60c2b708d4ab52b0eff00379" title="Process dispatch messages. " alt="" coords="126,898,289,939"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="AUDDSpeakerPhone_SetCUR" name="AUDDSpeakerPhone_SetCUR">
+<area shape="rect" id="node2" href="$group__usb__audio.xhtml#ga863624d52f113876d03aff007a9aa513" title="Returns the ID of the interface targeted by an USB audio request. " alt="" coords="270,5,507,32"/>
+<area shape="rect" id="node3" href="$group__usb__audio.xhtml#ga545a0d7559049a5ac86b37a9d47943dc" title="Returns the ID of the unit or terminal targeted by an USB audio request. " alt="" coords="280,56,497,83"/>
+<area shape="rect" id="node4" href="$group__usb__request.xhtml#ga047e240a92a39eed9b3174d397498123" title="Returns the expected length of the data phase following a request. " alt="" coords="277,107,501,133"/>
+<area shape="rect" id="node5" href="$group__usb__audio.xhtml#ga47557d2c62372574f370291ed4526b12" title="Returns the channel number of a Feature unit which should be altered by the given request..." alt="" coords="301,158,477,199"/>
+<area shape="rect" id="node6" href="$group__usb__audio.xhtml#gab4526a49dffcbfd21863db0da8793572" title="Returns the control selector value indicating the target of a Feature Unit request. " alt="" coords="301,223,477,265"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gaa786fa9bbfd3c2f64b5f486e537ffebb" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="339,289,438,316"/>
+<area shape="rect" id="node8" href="$group__usbd__audio__speakerphone.xhtml#ga1452577f1640fb13310e25c3f89d451e" title="Callback triggered after the new mute status of a channel has been read by AUDDSpeakerPhoneDriver_Set..." alt="" coords="264,340,513,367"/>
+<area shape="rect" id="node9" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="341,391,436,417"/>
+</map>

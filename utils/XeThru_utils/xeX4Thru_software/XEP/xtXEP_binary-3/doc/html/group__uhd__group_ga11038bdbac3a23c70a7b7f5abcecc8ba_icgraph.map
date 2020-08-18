@@ -1,0 +1,16 @@
+<map id="USBH_HAL_SetupReq" name="USBH_HAL_SetupReq">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__internal.xhtml#ga1e2a4888266cef7dfe80c8e2b801a3d2" title="Changes the port configuration. " alt="" coords="249,5,380,32"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group__internal.xhtml#ga6514d4bd06546b5ad90822cddd70e92a" title="Sends a control line command on the port. " alt="" coords="238,56,391,83"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga5946f5d7c3385b5001db37d9455f5c67" title="Device enumeration step 5 Requests the USB device descriptor. " alt="" coords="219,107,411,133"/>
+<area shape="rect" id="node5" href="$group___u_s_b_h__group__interne.xhtml#ga4216b2f5091c5b72a41b6092029ad8a4" title="Device enumeration step 9 Send a Set address setup request. " alt="" coords="219,157,411,184"/>
+<area shape="rect" id="node6" href="$group___u_s_b_h__group__interne.xhtml#ga4d0656fe000b76d8a76804d09386f840" title="Device enumeration step 11 Updates USB host pipe with the new USB address. " alt="" coords="1207,233,1407,260"/>
+<area shape="rect" id="node7" href="$group___u_s_b_h__group__interne.xhtml#ga5f4627c70606a373a8caa4b2e16ab23c" title="Device enumeration step 12 Requests the first USB structure of the USB configuration descriptor..." alt="" coords="959,259,1159,285"/>
+<area shape="rect" id="node8" href="$group___u_s_b_h__group__interne.xhtml#ga483261f9e83ef5d888a6a0caf8f7ffe6" title="Device enumeration step 13 Requests a complete Get configuration descriptor. " alt="" coords="711,309,911,336"/>
+<area shape="rect" id="node9" href="$group___u_s_b_h__group__interne.xhtml#gaf236828c0bc344e80fb6dee45dc36b31" title="Device enumeration step 14 Enable USB configuration, if unless one USB interface is supported by UHIs..." alt="" coords="463,360,663,387"/>
+<area shape="rect" id="node10" href="$group___u_s_b_h__group__interne.xhtml#ga68f29658cb41fc38bbe5461cfc253812" title="Device enumeration step 15 Enables UHI interfaces. " alt="" coords="215,411,415,437"/>
+<area shape="rect" id="node11" href="$group___u_s_b_h__group__interne.xhtml#ga0cdbdeca42fcc7e8a21be55261ac0b7c" title="Enables or disables the remote wakeup feature of all devices connected. " alt="" coords="233,461,396,488"/>
+<area shape="rect" id="node12" href="$group___u_s_b_h__group.xhtml#gad0c84025bd918d3312e746c8e9c3c7f2" title="Gets a USB string from a USB device. " alt="" coords="234,512,395,539"/>
+<area shape="rect" id="node13" href="$group___u_s_b_h__group.xhtml#ga616e65ce94318050363cf1c955d556f8" title="Tests if the device supports the USB high speed This function can wait the end of a setup request and..." alt="" coords="221,563,408,605"/>
+<area shape="rect" id="node14" href="$uhi__msc_8c.xhtml#a2d68b5753505b5c2af730ddeb0a11755" title="Step 1 of the initialization of a USB MSC device Sends the setup request GET_MAX_LUN. " alt="" coords="231,629,399,656"/>
+<area shape="rect" id="node15" href="$uhi__msc_8c.xhtml#ab13f8cd96a83d67c31c5e772ae23d358" title="Sends a setup request RESET ENDPOINT Used after a STALL received during a scsi command. " alt="" coords="225,680,404,707"/>
+</map>

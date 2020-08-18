@@ -1,0 +1,4 @@
+<map id="CDCDEEMPort_RequestHandler" name="CDCDEEMPort_RequestHandler">
+<area shape="rect" id="node2" href="$group__usb__request.xhtml#ga5c2f01b3ad2dbd22cce9b97aa27ca975" title="Returns the type of the given request. " alt="" coords="286,5,494,32"/>
+<area shape="rect" id="node3" href="$group__usb__request.xhtml#gace388a4d862a1a39dfce506fe4189e82" title="Returns the request code of the given request. " alt="" coords="275,56,505,83"/>
+</map>

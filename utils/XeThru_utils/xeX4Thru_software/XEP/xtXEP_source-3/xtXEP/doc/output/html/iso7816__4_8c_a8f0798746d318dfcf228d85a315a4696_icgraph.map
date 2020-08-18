@@ -1,0 +1,3 @@
+<map id="ISO7816_RestartClock" name="ISO7816_RestartClock">
+<area shape="rect" id="node2" href="$group__usbd__ccid.xhtml#ga3d61bdee8d65391c336dcc0e58976168" title="Command Pipe, Bulk&#45;OUT Messages This command stops or restarts the clock. " alt="" coords="216,5,349,32"/>
+</map>

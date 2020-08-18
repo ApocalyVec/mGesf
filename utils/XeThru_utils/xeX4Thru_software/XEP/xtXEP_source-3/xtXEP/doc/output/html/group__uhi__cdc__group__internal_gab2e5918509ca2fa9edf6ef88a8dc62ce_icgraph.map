@@ -1,0 +1,6 @@
+<map id="uhi_cdc_rx_update" name="uhi_cdc_rx_update">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__uhc.xhtml#gadbcfeecd8daa9af05daafe35d2835e18" title="uhi_cdc_sof" alt="" coords="222,5,318,32"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group__internal.xhtml#ga5bfc8e7c676500af3faadcf847e13c81" title="Manage the end of RX transfer. " alt="" coords="195,56,345,83"/>
+<area shape="rect" id="node4" href="$group__uhi__cdc__group.xhtml#ga858b00699362740d4510094a6b937290" title="Waits and gets a value on CDC line. " alt="" coords="217,107,323,133"/>
+<area shape="rect" id="node5" href="$group__uhi__cdc__group.xhtml#ga87e4110efd9fa4385db14a08bb03e0cc" title="Reads a RAM buffer on CDC line. " alt="" coords="203,157,337,184"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="x4driver_set_pif_segment" name="x4driver_set_pif_segment">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a636ce8e277a30e9a8d24a5f05a034782" title="x4driver_set_dac_step" alt="" coords="262,5,427,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#afdda0b27e8cfa0aa286f1cca02524b1a" title="_x4driver_set_rx_ram\l_first_line" alt="" coords="265,57,424,98"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#ac12013d8875e5974fd3b4703aeeee12f" title="_x4driver_set_rx_ram\l_last_line" alt="" coords="265,122,424,163"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#aca2f2487a46b5debe6656dd21a816e97" title="x4driver_set_downconversion" alt="" coords="240,188,449,215"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a3bd645021a42b838c9e3b3ff2f021d50" title="x4driver_set_tx_center\l_frequency" alt="" coords="261,239,428,281"/>
+<area shape="rect" id="node7" href="$x4driver_8c.xhtml#aaa39bc07728273218162fc63a0bcb864" title="x4driver_set_tx_power" alt="" coords="263,305,427,332"/>
+</map>

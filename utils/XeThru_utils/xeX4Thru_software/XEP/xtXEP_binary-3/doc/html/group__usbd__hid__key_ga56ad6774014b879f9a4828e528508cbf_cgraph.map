@@ -1,0 +1,5 @@
+<map id="HIDDKeyboard_Initialize" name="HIDDKeyboard_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga4c81e5b2479a8cf7d633e5c3a09f8cf9" title="Initialize a report. " alt="" coords="231,5,438,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__key.xhtml#ga203326cffce4599e0e03c21769a996d7" title="Callback invoked when an output report has been received from the host. " alt="" coords="225,56,444,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid.xhtml#gae22cdb376ad0da9d9e0cc9c33c276039" title="Initialize the USB Device HID function, for general HID device support. " alt="" coords="251,107,418,133"/>
+</map>

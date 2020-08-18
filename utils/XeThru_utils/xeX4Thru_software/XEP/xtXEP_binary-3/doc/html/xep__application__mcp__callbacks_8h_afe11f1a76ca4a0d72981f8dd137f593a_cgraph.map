@@ -1,0 +1,7 @@
+<map id="onMcpGetCrashDump" name="onMcpGetCrashDump">
+<area shape="rect" id="node2" href="$xtfile_8h.xhtml#ade819cbf4de9ee15f62317e3bf84fed6" title="Opens an existing file with given type and identifier. " alt="" coords="273,5,364,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="216,57,421,98"/>
+<area shape="rect" id="node4" href="$xtfile_8h.xhtml#a60f5bc8f5e3c8f0e61a4c41d05c15556" title="Gets the pointer and size of the content of the file. " alt="" coords="257,123,381,149"/>
+<area shape="rect" id="node5" href="$xtfile_8h.xhtml#ab3f02b575f459d00a3005fed712dcace" title="Closes an open file. " alt="" coords="273,173,365,200"/>
+<area shape="rect" id="node6" href="$xep__dispatch__messages_8h.xhtml#a22a2633c98e35bd1a0e5fd8687de3adf" title="Dispatch message to hostcom asking to reply with byte array to host. " alt="" coords="216,225,421,266"/>
+</map>

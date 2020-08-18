@@ -1,0 +1,4 @@
+<map id="USBH_HAL_GetPipe" name="USBH_HAL_GetPipe">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga1d4a9f98194cb255b2fcb6cdf8d83fb8" title="Allows to receive or send data on an endpoint. " alt="" coords="210,5,389,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga410423649d19fc0282fe5012f3455b31" title="Aborts an on&#45;going transfer on an endpoint. " alt="" coords="204,56,395,83"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="USBD_RemoteWakeUp" name="USBD_RemoteWakeUp">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdchid.xhtml#ga51a0a0946e7ed9ff0abd033ae9fe5f92" title="Starts a remote wake&#45;up sequence if the host has explicitely enabled it by sending the appropriate SE..." alt="" coords="227,5,455,32"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidmsd.xhtml#ga69267a20e9ee74f7e526790c14e62d3a" title="Starts a remote wake&#45;up sequence if the host has explicitly enabled it by sending the appropriate SET..." alt="" coords="231,56,451,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid__key.xhtml#ga3c4a5834758595c2295efd954ad1bb87" title="Starts a remote wake&#45;up sequence if the host has explicitely enabled it by sending the appropriate SE..." alt="" coords="231,107,452,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hid__mouse.xhtml#ga2da268767dbdbaa0149d36d602f00d2c" title="Starts a remote wake&#45;up sequence if the host has explicitely enabled it by sending the appropriate SE..." alt="" coords="220,157,463,184"/>
+<area shape="rect" id="node6" href="$group__usbd__hid__tran.xhtml#ga6831b005f189a9c8dbc077bf8f700ca1" title="Starts a remote wake&#45;up sequence if the host has explicitely enabled it by sending the appropriate SE..." alt="" coords="270,209,413,250"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="AUDDSpeakerPhoneDriver_Initialize" name="AUDDSpeakerPhoneDriver_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="259,5,387,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga11868145aba27b8ca63ab6395439cb0d" title="Initializes a USBDDriver instance with a list of descriptors. " alt="" coords="245,56,401,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#ga1fd3982402055e37aa879c199e0b7fee" title="Initializes the USB driver. " alt="" coords="280,107,367,133"/>
+</map>

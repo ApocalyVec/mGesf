@@ -1,0 +1,4 @@
+<map id="QSPI_MultiReadSPI" name="QSPI_MultiReadSPI">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a1a915b35968bc2e31ab4fe5e38a76708" title="Start S25FL1D Send command with/without data write/read. " alt="" coords="193,5,380,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a8be9db10e4e0f291c0cb537fcc7e3d68" title="Start S25FL1D Memory access with/without data write/read. " alt="" coords="195,56,378,83"/>
+</map>

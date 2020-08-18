@@ -1,0 +1,4 @@
+<map id="osc_disable" name="osc_disable">
+<area shape="rect" id="node2" href="$group__sam__drivers__pmc__group.xhtml#ga22da673e4e4efb59981693bdaf96b218" title="Disable the internal fast RC. " alt="" coords="144,5,307,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__pmc__group.xhtml#gacb73b3a585abfdd6b02b82850adb97eb" title="Disable the external Xtal. " alt="" coords="150,56,301,83"/>
+</map>

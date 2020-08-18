@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/MSDescriptors.h" name="src/hal/x4m0x_s70/libraries/libusb/include/MSDescriptors.h">
+<area shape="rect" id="node2" href="$libraries_2libusb_2common_2massstorage_2_u_s_b_d_driver_descriptors_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/common/massstorage\l/USBDDriverDescriptors.c" alt="" coords="5,95,217,151"/>
+<area shape="rect" id="node3" href="$_m_s_d_function_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/massstorage\l/MSDFunction.c" alt="" coords="241,95,437,151"/>
+<area shape="rect" id="node4" href="$uhi__msc_8h.xhtml" title="USB host driver for Mass Storage Class interface. " alt="" coords="462,102,657,143"/>
+<area shape="rect" id="node5" href="$_c_d_c_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCMSDDriver.h" alt="" coords="681,102,904,143"/>
+<area shape="rect" id="node6" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="843,199,1038,240"/>
+<area shape="rect" id="node7" href="$_h_i_d_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDMSDDriver.h" alt="" coords="978,102,1197,143"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="onMcpSetBaudrate" name="onMcpSetBaudrate">
+<area shape="rect" id="node2" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="199,5,404,47"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a8e58faffa8a7b0934ca76bc1fa5ef6fa" title="Causes the calling task to wait and yields to another task. " alt="" coords="268,71,335,98"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a75257f6264fe4bb32722e8eccd519680" title="Configures UART module with the specified baudrate. " alt="" coords="216,122,387,149"/>
+</map>

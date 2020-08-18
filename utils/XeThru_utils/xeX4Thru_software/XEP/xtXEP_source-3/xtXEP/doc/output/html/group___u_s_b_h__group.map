@@ -1,0 +1,7 @@
+<map id="USB host Controller (UHC)" name="USB host Controller (UHC)">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml" title="Internal implementation. " alt="" coords="373,5,545,32"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__basic__use__case__setup__code.xhtml" title="Common example code for all USB hosts. " alt="" coords="375,57,543,98"/>
+<area shape="rect" id="node5" href="$group___u_s_b_h__basic__use__case__setup__prereq.xhtml" title="Common prerequisites for all USB hosts. " alt="" coords="379,122,540,163"/>
+<area shape="rect" id="node6" href="$group___u_s_b_h__basic__use__case__setup__flow.xhtml" title="Common workflow for all USB devices. " alt="" coords="378,187,541,229"/>
+<area shape="rect" id="node3" href="$group__usb__host__group.xhtml" title="This module includes USB Stack Host implementation. " alt="" coords="5,97,129,124"/>
+</map>

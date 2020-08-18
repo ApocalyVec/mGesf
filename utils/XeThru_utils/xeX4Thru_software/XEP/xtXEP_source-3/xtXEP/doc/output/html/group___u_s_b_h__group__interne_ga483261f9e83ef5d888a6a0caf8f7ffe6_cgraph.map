@@ -1,0 +1,6 @@
+<map id="USBH_enumeration_step13" name="USBH_enumeration_step13">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga2b5b29e1ddaf4c35509ac444fa69a157" title="Manage error during device enumeration. " alt="" coords="501,137,688,163"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga85036d02a8ba359ad946070bbc8a4080" title="Enters a specific device in USB suspend mode Suspend the USB line or a port on USB hub..." alt="" coords="736,86,947,113"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="514,35,675,62"/>
+<area shape="rect" id="node5" href="$group___u_s_b_h__group__interne.xhtml#gaf236828c0bc344e80fb6dee45dc36b31" title="Device enumeration step 14 Enable USB configuration, if unless one USB interface is supported by UHIs..." alt="" coords="253,86,453,113"/>
+</map>

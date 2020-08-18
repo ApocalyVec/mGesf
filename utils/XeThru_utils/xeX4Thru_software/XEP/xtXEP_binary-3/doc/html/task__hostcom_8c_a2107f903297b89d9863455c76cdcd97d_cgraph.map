@@ -1,0 +1,4 @@
+<map id="mcp_handle_protocol_packet" name="mcp_handle_protocol_packet">
+<area shape="rect" id="node2" href="$xep__dispatch_8h.xhtml#a715a18422cf4fa2c4d58b951770d25c7" title="Request a memoryblock from the dispatch memory poolset. " alt="" coords="217,5,387,47"/>
+<area shape="rect" id="node3" href="$xep__dispatch_8h.xhtml#a7bad5694c10b470cac80025bd27f6fa9" title="Send message on dispatcher. " alt="" coords="212,71,392,98"/>
+</map>

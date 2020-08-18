@@ -1,0 +1,5 @@
+<map id="USBD_HAL_Suspend" name="USBD_HAL_Suspend">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga522cddda5972d92b3c974e6fc8c58956" title="Handle the USB suspend event, should be invoked whenever HW reports a suspend signal. " alt="" coords="209,56,383,83"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="431,5,564,32"/>
+<area shape="rect" id="node4" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="612,56,719,83"/>
+</map>

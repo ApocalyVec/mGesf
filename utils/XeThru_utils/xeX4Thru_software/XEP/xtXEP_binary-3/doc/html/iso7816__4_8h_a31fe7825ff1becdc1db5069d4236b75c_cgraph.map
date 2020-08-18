@@ -1,0 +1,4 @@
+<map id="ISO7816_Init" name="ISO7816_Init">
+<area shape="rect" id="node2" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="156,5,320,32"/>
+<area shape="rect" id="node3" href="$usart_8h.xhtml#a6280c3578315c2a06e1857b7dca0c1be" title="Configures an USART peripheral with the specified parameters. " alt="" coords="172,56,304,83"/>
+</map>

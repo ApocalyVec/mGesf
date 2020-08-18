@@ -1,0 +1,8 @@
+<map id="uhi_msc_mem_read_10_ram" name="uhi_msc_mem_read_10_ram">
+<area shape="rect" id="node2" href="$group__uhi__msc__group.xhtml#ga2e7cf8daaa331de6b805e644955f0045" title="Tests if the interface UHI Mass Storage is available The UHI Mass Storage can be busy during the enum..." alt="" coords="286,5,441,32"/>
+<area shape="rect" id="node3" href="$group__uhi__msc__group.xhtml#gae6006f5e44ec6833a9da65d1ede96bfc" title="Gives information about a LUN. " alt="" coords="280,56,447,83"/>
+<area shape="rect" id="node4" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="513,165,552,192"/>
+<area shape="rect" id="node5" href="$uhi__msc__mem_8c.xhtml#a4f7fb6cf8a5de35064cf3e51f0ead690" title="Translates the LUN status from UHI MSC to CTRL ACCESS module. " alt="" coords="273,158,453,199"/>
+<area shape="rect" id="node6" href="$group__uhi__msc__group.xhtml#ga9a204242b01d7ee34b9ee6e89308af7c" title="Reads a LUN data section to RAM buffer Note: The sector size used to define the data section is the s..." alt="" coords="281,224,446,251"/>
+<area shape="rect" id="node7" href="$uhi__msc__mem_8c.xhtml#a14859935c7111906d25a6c4dda7ad37f" title="Callback to update volatile variable used by pooling. " alt="" coords="261,275,465,301"/>
+</map>

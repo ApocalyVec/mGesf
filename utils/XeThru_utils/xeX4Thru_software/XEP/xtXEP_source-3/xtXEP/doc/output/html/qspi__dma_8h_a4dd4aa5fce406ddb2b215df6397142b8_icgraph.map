@@ -1,0 +1,7 @@
+<map id="QSPID_IsBusy" name="QSPID_IsBusy">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#acae5393b56a4415eb9a29f9b53df8bf9" title="Wait for transfer to finish calling the SPI driver ISR. " alt="" coords="183,5,309,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a8840163f9bd8c203feeeeba16ba8dbde" title="Reads data from the specified address on the serial flash. " alt="" coords="173,56,319,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#afe5e46d0d65395239616923012853fc8" title="Reads data from the specified address on the serial flash. " alt="" coords="171,107,321,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a3863304299f6a83b97043f7fc6468d67" title="Reads data from the specified address on the serial flash. " alt="" coords="167,157,325,184"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#a650c5d2bd603e1f26fb235ecf2bfd09f" title="Reads data from the specified address on the serial flash. " alt="" coords="164,208,328,235"/>
+</map>

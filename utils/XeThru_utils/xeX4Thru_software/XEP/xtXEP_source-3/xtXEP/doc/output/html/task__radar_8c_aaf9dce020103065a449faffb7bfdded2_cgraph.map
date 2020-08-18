@@ -1,0 +1,8 @@
+<map id="_x4driver_test_io_connectivity" name="_x4driver_test_io_connectivity">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a7fc787dfe17335b3f6eab3f9db8d2998" title="Access function for X4Driver to get the pin combinations to test. " alt="" coords="267,5,460,47"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a4f087fae5e8098b3b9c8f9df124b7f4e" title="Set direction of specified IO pin. " alt="" coords="296,71,431,98"/>
+<area shape="rect" id="node4" href="$x4driver_8h.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="274,122,453,149"/>
+<area shape="rect" id="node5" href="$x4driver_8h.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="274,173,453,199"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml#a984c6d05372bfd34dc338a85d21dc81a" title="Get level of specified IO pin. " alt="" coords="309,223,418,250"/>
+<area shape="rect" id="node7" href="$xep__hal_8h.xhtml#af6b80e97e26108da85bc193be8ee57ed" title="Access function for X4Driver to mark a faulty pin. " alt="" coords="267,275,460,316"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="USBHS_IsHostPipeEnable" name="USBHS_IsHostPipeEnable">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gad9e15307f67bf17a172ce88dc52ff6a3" title="Configures and enables a control endpoint 0. " alt="" coords="240,5,475,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga8da03709234cba062389fcaee2c62f8b" title="Configures and enables an endpoint. " alt="" coords="263,56,451,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="280,107,435,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga1ddb6a33201674d513c4ad9c5de79e93" title="USBH_HAL_PhaseControlSetup" alt="" coords="246,157,469,184"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#ga38980ecff58f484bbb915b6efe6136b1" title="USBH_HAL_GetPipe" alt="" coords="282,208,433,235"/>
+</map>

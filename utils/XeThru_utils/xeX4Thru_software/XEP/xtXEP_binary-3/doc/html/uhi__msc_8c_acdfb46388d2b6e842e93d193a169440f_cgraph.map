@@ -1,0 +1,5 @@
+<map id="uhi_msc_scsi_test_unit_ready_done" name="uhi_msc_scsi_test_unit_ready_done">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a5b7c8255c93b911718d79f7bd85e7de1" title="Sends the CBW packet of the scsi REQUESRT SENSE command Called by TEST UNIT READY and READ CAPACITY c..." alt="" coords="243,5,405,47"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#afe6c668f44a651c4e81fd30c0ace7ce4" title="Decodes the scsi sense code after an error on TEST UNIT READY command. " alt="" coords="239,71,409,112"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#ac2339d091ff134f06cf5f9cbb0185cb3" title="Sends the CBW packet of the scsi READ CAPACITY command. " alt="" coords="223,137,425,163"/>
+</map>

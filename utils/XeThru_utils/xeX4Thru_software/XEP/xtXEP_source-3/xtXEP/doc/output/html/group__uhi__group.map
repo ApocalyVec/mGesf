@@ -1,0 +1,6 @@
+<map id="USB Host Interface (UHI)" name="USB Host Interface (UHI)">
+<area shape="rect" id="node1" href="$group__uhi__msc__group.xhtml" title="Common APIs used by high level application to use this USB host class. " alt="" coords="379,5,537,47"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group.xhtml" title="Common APIs used by high level application to use this USB host class. " alt="" coords="373,71,543,112"/>
+<area shape="rect" id="node5" href="$group__uhi__hid__mouse__group.xhtml" title="Common APIs used by high level application to use this USB host class. " alt="" coords="369,136,547,177"/>
+<area shape="rect" id="node4" href="$group__usb__host__group.xhtml" title="This module includes USB Stack Host implementation. " alt="" coords="5,78,129,105"/>
+</map>

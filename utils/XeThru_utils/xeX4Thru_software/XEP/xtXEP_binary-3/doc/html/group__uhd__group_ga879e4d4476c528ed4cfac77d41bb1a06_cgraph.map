@@ -1,0 +1,4 @@
+<map id="USBH_HAL_DelayedResume" name="USBH_HAL_DelayedResume">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a32c56acaace52b440a308d9bce8cafff" title="Gets USB host interrupt status. " alt="" coords="256,5,480,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga8793c42aa4012a8bb24364f4243b4bff" title="Notify that a resume bus occurs A resume can occur after a downstream or an upstream resume..." alt="" coords="289,56,447,83"/>
+</map>

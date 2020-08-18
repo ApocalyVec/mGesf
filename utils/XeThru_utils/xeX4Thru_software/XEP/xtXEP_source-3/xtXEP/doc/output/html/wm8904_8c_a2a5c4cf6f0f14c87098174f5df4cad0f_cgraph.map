@@ -1,0 +1,5 @@
+<map id="WM8904_Init" name="WM8904_Init">
+<area shape="rect" id="node2" href="$wm8904_8c.xhtml#a5307d44ff69048347e00b469b9ac6a92" title="Write data to WM8904 Register. " alt="" coords="156,5,271,32"/>
+<area shape="rect" id="node3" href="$wm8904_8c.xhtml#ad6e77da6ab43aae0962183aa6bcd4700" title="Read data from WM8904 Register. " alt="" coords="156,56,271,83"/>
+<area shape="rect" id="node4" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="189,107,237,133"/>
+</map>

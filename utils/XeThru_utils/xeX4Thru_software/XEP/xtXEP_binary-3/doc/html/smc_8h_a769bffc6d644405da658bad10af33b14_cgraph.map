@@ -1,0 +1,6 @@
+<map id="SMC_ECC_GetEccParity" name="SMC_ECC_GetEccParity">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#a262b7a457a7f95e8403744c0c47d8fc2" title="Get ECC correction type. " alt="" coords="237,5,445,32"/>
+<area shape="rect" id="node3" href="$smc_8c.xhtml#aa77e585aa9242fea7c9eea721b6e702a" title="Get 32&#45;bit ECC code for 16&#45;bit data path NAND flash. " alt="" coords="224,56,457,83"/>
+<area shape="rect" id="node4" href="$smc_8c.xhtml#ad60c8dabec3a5c475dc37bf2d03581c3" title="Get 24&#45;bit ECC code for 8&#45;bit data path NAND flash. " alt="" coords="231,107,450,133"/>
+<area shape="rect" id="node5" href="$smc_8c.xhtml#a98eda6914d1412bf64354322ce274973" title="Get 24&#45;bit ECC code for 8&#45;bit data path NAND flash. " alt="" coords="231,157,450,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="USBHS_HostPipeIntDisable" name="USBHS_HostPipeIntDisable">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gafba473f1b723cdb9500b91ec7fad0207" title="USBH_HAL_PipeInReceived" alt="" coords="249,5,444,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gaa29c0122543b5f5faf600eee68474615" title="USBH_HAL_PipeInterrupt" alt="" coords="492,31,675,57"/>
+</map>

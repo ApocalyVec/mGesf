@@ -1,0 +1,9 @@
+<map id="task_hostcom_init" name="task_hostcom_init">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a31dcedbddd6f896d0157ce276d449fd4" title="Checks if external memory is enabled. " alt="" coords="451,12,606,53"/>
+<area shape="rect" id="node3" href="$xtmemory_8h.xhtml#ac094f55ba76fe2ae6e6b584f62ede7e0" title="Allocate memory from default location. " alt="" coords="435,124,623,151"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a143e7abdc640864b988cc34a2d53fd81" title="Initiate serial communication &#45; USB if available, otherwise UART. " alt="" coords="216,95,363,122"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml#ae1d90c71870adfe51d508b4661ba2b78" title="Send a data buffer to host through a serial port &#45; USB or UART. " alt="" coords="230,146,349,172"/>
+<area shape="rect" id="node6" href="$task__hostcom_8c.xhtml#abac971969d3f568fc6db3b8205cc9992" title="task_hostcom" alt="" coords="233,44,345,71"/>
+<area shape="rect" id="node7" href="$xep__hal_8h.xhtml#a875308939bcbe311557d0e0fb97f9b7d" title="Initiate debug serial communication. " alt="" coords="192,247,387,274"/>
+<area shape="rect" id="node8" href="$xep__hal_8h.xhtml#a58295d828f76f664dffe8a080a2ab8b6" title="Send a data buffer to host through debug interface. " alt="" coords="207,298,372,324"/>
+</map>

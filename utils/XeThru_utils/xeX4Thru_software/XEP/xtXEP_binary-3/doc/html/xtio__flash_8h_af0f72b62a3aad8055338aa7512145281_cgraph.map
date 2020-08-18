@@ -1,0 +1,6 @@
+<map id="xtio_flash_store_hw_data" name="xtio_flash_store_hw_data">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="284,5,389,32"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="276,56,397,83"/>
+<area shape="rect" id="node4" href="$efc_8h.xhtml#a89ced3586649e7455882295657f7c11a" title="Performs the given command and wait until its completion (or an error). " alt="" coords="251,107,422,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga696fadbf7b9cc71dad42fab61873a40d" title="SCB_CleanDCache_by_Addr" alt="" coords="236,157,437,184"/>
+</map>

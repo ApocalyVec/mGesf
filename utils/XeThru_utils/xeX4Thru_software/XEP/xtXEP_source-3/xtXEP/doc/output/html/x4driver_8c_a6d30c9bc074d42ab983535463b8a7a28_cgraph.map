@@ -1,0 +1,11 @@
+<map id="x4driver_set_dac_auto" name="x4driver_set_dac_auto">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a3ae283684d1a23d89a56d93971139bb6" title="x4driver_get_fps" alt="" coords="447,25,573,52"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a3d4fbcf15fcf3736ef68613007caca8e" title="x4driver_set_sweep\l_trigger_control" alt="" coords="236,44,383,86"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#af6c32021e202b0dfe0a8b104ebd7a0b6" title="Sets frame rate for frame streaming. " alt="" coords="447,80,573,106"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#a195e6ef022545ebaba1dbc492cac6244" title="x4driver_get_frame\l_bin_count" alt="" coords="236,162,383,203"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a03652f4897873d46d0534336df7f29fe" title="Will trigger a radar sweep. " alt="" coords="231,228,388,254"/>
+<area shape="rect" id="node7" href="$x4driver_8c.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="220,278,399,305"/>
+<area shape="rect" id="node8" href="$x4driver_8c.xhtml#a3d75a7209fa2ea65ab2acc5297751c99" title="Reads frame and normalizes that frame. " alt="" coords="232,330,387,371"/>
+<area shape="rect" id="node9" href="$x4driver_8c.xhtml#a5b607d8c62783dfffb46c688ec90781e" title="x4driver_set_dac_min" alt="" coords="229,396,390,422"/>
+<area shape="rect" id="node10" href="$x4driver_8c.xhtml#aef1600f41584063c096ca246aafdee40" title="x4driver_set_dac_max" alt="" coords="227,446,392,473"/>
+</map>

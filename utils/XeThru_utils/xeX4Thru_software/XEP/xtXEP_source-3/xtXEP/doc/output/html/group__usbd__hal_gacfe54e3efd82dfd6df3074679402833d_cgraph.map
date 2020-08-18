@@ -1,0 +1,5 @@
+<map id="USBD_HAL_Disable" name="USBD_HAL_Disable">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a271a9d7a4f68db5bfab4401f8e67d347" title="Enables or disables USB. " alt="" coords="211,5,355,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="200,56,365,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga260fba04ac8346855c57f091d4ee1e71" title="Disable External Interrupt. " alt="" coords="219,107,347,133"/>
+</map>

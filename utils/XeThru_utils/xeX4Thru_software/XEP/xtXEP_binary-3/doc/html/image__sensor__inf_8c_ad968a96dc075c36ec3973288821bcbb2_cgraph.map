@@ -1,0 +1,3 @@
+<map id="sensor_twi_read_regs" name="sensor_twi_read_regs">
+<area shape="rect" id="node2" href="$image__sensor__inf_8c.xhtml#abe9e6dc18918dcc4f76a7316ebdb44c4" title="Read value from a register in an dedicated sensor device. " alt="" coords="213,5,367,32"/>
+</map>

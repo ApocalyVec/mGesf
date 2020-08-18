@@ -1,0 +1,6 @@
+<map id="prvUnlockQueue" name="prvUnlockQueue">
+<area shape="rect" id="node2" href="$queue_8c.xhtml#a637daee588a12cec8db050f7ef3f7fa3" title="xQueueCreateMutex" alt="" coords="404,27,545,54"/>
+<area shape="rect" id="node3" href="$queue_8c.xhtml#a1ff8f61508bc9c0fa0abc44750fc1981" title="xQueueGenericSend" alt="" coords="191,27,334,54"/>
+<area shape="rect" id="node4" href="$queue_8c.xhtml#a0424dce690a6a65558f16cc229b767bf" title="xQueueGenericReceive" alt="" coords="184,78,341,104"/>
+<area shape="rect" id="node5" href="$queue_8c.xhtml#ab257893a91f0fba462405b19614cb405" title="xQueueIsQueueFullFromISR" alt="" coords="169,128,356,155"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="USBHS_HostGetAddr" name="USBHS_HostGetAddr">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="724,37,879,64"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga1ddb6a33201674d513c4ad9c5de79e93" title="USBH_HAL_PhaseControlSetup" alt="" coords="212,62,435,89"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#gafb1043e05189c04ded956208eea3e2b5" title="USBH_HAL_ControlReqEnd" alt="" coords="483,62,676,89"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#gadc3093c163c3229d9343cb5f2f6ef8dd" title="USBH_HAL_PhaseDataIn" alt="" coords="233,164,414,190"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#ga74ceb21eb2c7ef68d5fe6f02ea7beb58" title="USBH_HAL_PhaseDataOut" alt="" coords="227,214,420,241"/>
+<area shape="rect" id="node7" href="$group__uhd__group.xhtml#ga38980ecff58f484bbb915b6efe6136b1" title="USBH_HAL_GetPipe" alt="" coords="248,265,399,292"/>
+<area shape="rect" id="node8" href="$group__uhd__group.xhtml#gaf8e9ff0a2565377088b95ef2b31787de" title="USBH_HAL_PipeXfrEnd" alt="" coords="239,316,407,342"/>
+</map>

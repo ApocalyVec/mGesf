@@ -1,0 +1,5 @@
+<map id="_configureTxDma" name="_configureTxDma">
+<area shape="rect" id="node2" href="$xdma__hardware__interface_8h.xhtml#a1c7e741165685b3e072aa75e4cfb1034" title="Get peripheral identifier coded for hardware handshaking interface. " alt="" coords="187,5,397,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga696fadbf7b9cc71dad42fab61873a40d" title="SCB_CleanDCache_by_Addr" alt="" coords="191,56,393,83"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#ga075cce3b88af1fff5064218720811fc0" title="Configure DMA for a single transfer. " alt="" coords="198,107,386,133"/>
+</map>

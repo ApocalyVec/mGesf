@@ -1,0 +1,4 @@
+<map id="xethru_usart_tx_task" name="xethru_usart_tx_task">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga4f47ec231efeccf8f159c5a14124d0ff" title="Initiate a completely asynchronous multi&#45;byte write operation on a USART peripheral. " alt="" coords="197,5,332,47"/>
+<area shape="rect" id="node3" href="$task_8h.xhtml#a3fc5adc340b17cb07c12ffa90d7bb8f3" title="vTaskDelay" alt="" coords="221,71,309,98"/>
+</map>

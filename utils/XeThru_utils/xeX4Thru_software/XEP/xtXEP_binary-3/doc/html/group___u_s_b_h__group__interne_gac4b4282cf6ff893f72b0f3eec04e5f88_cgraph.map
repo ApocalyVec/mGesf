@@ -1,0 +1,5 @@
+<map id="USBH_enumeration_step6" name="USBH_enumeration_step6">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga2b5b29e1ddaf4c35509ac444fa69a157" title="Manage error during device enumeration. " alt="" coords="248,5,435,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#gaaeb6a2996975d8fe4a245e6ff0ec66f2" title="Enable a internal timeout on SOF events. " alt="" coords="258,57,425,98"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga87dae241e7c1021902ec4978ba3ae26a" title="Device enumeration step 7 Reset USB line. " alt="" coords="245,123,437,149"/>
+</map>

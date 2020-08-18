@@ -1,0 +1,5 @@
+<map id="USBH_enumeration_step10" name="USBH_enumeration_step10">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga2b5b29e1ddaf4c35509ac444fa69a157" title="Manage error during device enumeration. " alt="" coords="501,33,688,60"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#gaaeb6a2996975d8fe4a245e6ff0ec66f2" title="Enable a internal timeout on SOF events. " alt="" coords="270,26,437,67"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga4d0656fe000b76d8a76804d09386f840" title="Device enumeration step 11 Updates USB host pipe with the new USB address. " alt="" coords="253,92,453,118"/>
+</map>

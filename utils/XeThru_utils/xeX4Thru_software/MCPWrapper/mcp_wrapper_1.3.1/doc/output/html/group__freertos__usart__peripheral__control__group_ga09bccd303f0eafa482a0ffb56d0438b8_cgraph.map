@@ -1,0 +1,22 @@
+<map id="freertos_usart_serial_init" name="freertos_usart_serial_init">
+<area shape="rect" id="node2" href="$freertos__peripheral__control_8c.xhtml#a2a696bb316c52bd93e25d5e9f6aabeed" title="get_pdc_peripheral\l_details" alt="" coords="261,5,391,47"/>
+<area shape="rect" id="node3" href="$freertos__peripheral__control_8c.xhtml#a69a0cf240b4b6bf3f9128b68a8f2cbaa" title="check_requested_operating_mode" alt="" coords="216,71,436,98"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__usart__group.xhtml#gaf12c50dd99d9b0e3e3719e840e05aaf6" title="Disable USART transmitter. " alt="" coords="267,122,385,149"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__usart__group.xhtml#gad9c333a3706f3bfad6f9b74f30495879" title="Disable USART receiver. " alt="" coords="267,173,385,199"/>
+<area shape="rect" id="node6" href="$group__asfdoc__sam__drivers__pdc__group.xhtml#ga2cb32e92dc393fd7031cb3a2983a12a5" title="Disable PDC transfers (TX and/or RX). " alt="" coords="255,223,397,250"/>
+<area shape="rect" id="node7" href="$group__sam__drivers__flexcom__group.xhtml#gad2900fd33f36b75e9ff5e5b833ba9943" title="Enable the FLEXCOM module. " alt="" coords="270,274,382,301"/>
+<area shape="rect" id="node8" href="$group__sam__drivers__flexcom__group.xhtml#ga9c5585af21feb7255c56d8aaa80d7141" title="Set the FLEXCOM opration mode. " alt="" coords="253,325,399,351"/>
+<area shape="rect" id="node9" href="$group__sam__drivers__pmc__group.xhtml#gad09de55bb493f4ebdd92305f24f27d62" title="Enable the specified peripheral clock. " alt="" coords="247,375,405,402"/>
+<area shape="rect" id="node10" href="$group__sam__drivers__usart__group.xhtml#gaeef2121bcab41f9850e58c59fdc34d10" title="Configure USART to work in RS232 mode. " alt="" coords="269,426,383,453"/>
+<area shape="rect" id="node11" href="$group__sysclk__group.xhtml#gae91bb547221cdd42b104342e8f776a28" title="Return the current rate in Hz of the CPU clock. " alt="" coords="259,477,393,503"/>
+<area shape="rect" id="node12" href="$group__sam__drivers__usart__group.xhtml#gaa3a3c3eb673f70359570302dcf1a5b6a" title="Disable USART interrupts. " alt="" coords="249,527,403,554"/>
+<area shape="rect" id="node13" href="$freertos__peripheral__control_8c.xhtml#a6bc9867548cfff6203897bc5c1a59939" title="create_peripheral_control\l_semaphores" alt="" coords="243,579,409,620"/>
+<area shape="rect" id="node14" href="$group__sam__drivers__usart__group.xhtml#ga6c93002d564e25a12975a7f0c6c1564b" title="Configure the receive timeout register. " alt="" coords="254,645,398,671"/>
+<area shape="rect" id="node15" href="$group__sam__drivers__usart__group.xhtml#ga21b61657bfa8bc395dd4c5f05f531788" title="Start waiting for a character before clocking the timeout count. " alt="" coords="250,695,402,722"/>
+<area shape="rect" id="node16" href="$group__asfdoc__sam__drivers__pdc__group.xhtml#ga8cbc8c88b0b1d636ff9f0b5b42fbd9e8" title="Configure PDC for data receive. " alt="" coords="283,746,369,773"/>
+<area shape="rect" id="node17" href="$group__sam__drivers__usart__group.xhtml#ga33c4b214e790bf6b04c8867dd66c3336" title="Enable USART interrupts. " alt="" coords="251,797,401,823"/>
+<area shape="rect" id="node18" href="$group__asfdoc__sam__drivers__pdc__group.xhtml#gadb600d48347212bcf1d0229951b036cd" title="Enable PDC transfers (TX and/or RX). " alt="" coords="257,847,395,874"/>
+<area shape="rect" id="node19" href="$freertos__peripheral__control_8c.xhtml#a7484251dfa9f4e29252315a2bacd051b" title="configure_interrupt\l_controller" alt="" coords="262,899,390,940"/>
+<area shape="rect" id="node20" href="$group__sam__drivers__usart__group.xhtml#ga1c3a4036f8b9b21f833a641b07b84f6c" title="Enable USART transmitter. " alt="" coords="269,965,383,991"/>
+<area shape="rect" id="node21" href="$group__sam__drivers__usart__group.xhtml#ga7fd617322d666621fee15501ae0de7c7" title="Enable USART receiver. " alt="" coords="269,1015,383,1042"/>
+</map>

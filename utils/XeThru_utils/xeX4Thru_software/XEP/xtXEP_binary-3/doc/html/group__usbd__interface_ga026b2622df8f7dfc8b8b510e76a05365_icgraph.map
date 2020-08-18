@@ -1,0 +1,4 @@
+<map id="USBD_ConfigureEndpoint" name="USBD_ConfigureEndpoint">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gad1bf93dee935f232cc0acae8cac8f264" title="Handle the USB reset event, should be invoked whenever HW found USB reset signal on bus..." alt="" coords="237,5,389,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga9a20011d336dec2bd5feb197f0da1c80" title="Configures the device by setting it into the Configured state and initializing all endpoints..." alt="" coords="249,56,378,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="S25FL1D_WriteStatus" name="S25FL1D_WriteStatus">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a844d03d4455661877b4cd85d753cc03a" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="212,5,367,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a203cdd2db6776cf3b6884d2dd6817cdf" title="Unprotected the contents of the serial flash device. " alt="" coords="214,56,365,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#ae1170240dc2ab7b96831e4bc91359f22" title="Unprotected the contents of the serial flash device. " alt="" coords="223,107,355,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="uhi_msc_scsi_request_sense" name="uhi_msc_scsi_request_sense">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ae40b333993e7c9aba64dc65f41ede8c4" title="Sends the CBW packet. " alt="" coords="244,5,351,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#aca1a4aa679e214a57d8632357fa58fd7" title="Decodes the result of scsi REQUEST SENSE command. " alt="" coords="216,57,379,98"/>
+</map>

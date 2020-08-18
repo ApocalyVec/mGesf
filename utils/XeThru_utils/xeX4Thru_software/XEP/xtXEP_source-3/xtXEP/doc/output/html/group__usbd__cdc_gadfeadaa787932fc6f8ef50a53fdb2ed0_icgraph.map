@@ -1,0 +1,5 @@
+<map id="_FlushUsbTxBuffers" name="_FlushUsbTxBuffers">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga127cc185c908343e2c059c61cf6f20b6" title="_UsbTxBufferPeek" alt="" coords="207,5,344,32"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#gab841b1a9dc617afc102ab5badd8ee656" title="_UsbDataSent" alt="" coords="218,56,333,83"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#ga1a69b4eba25b161f947805f21e00e1af" title="Sends a data buffer through the virtual COM port created by the CDC device serial driver..." alt="" coords="200,107,351,133"/>
+</map>

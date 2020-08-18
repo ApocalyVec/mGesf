@@ -1,0 +1,7 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/CDCDSerialDriver.h" name="src/hal/x4m0x_s70/libraries/libusb/include/CDCDSerialDriver.h">
+<area shape="rect" id="node3" href="$_u_s_b_requests_8h.xhtml" title="USBRequests.h" alt="" coords="117,169,237,196"/>
+<area shape="rect" id="node4" href="$_c_d_c_requests_8h.xhtml" title="Definitions and classes for USB CDC class requests (mostly for ACM). " alt="" coords="29,95,149,121"/>
+<area shape="rect" id="node5" href="$_c_d_c_descriptors_8h.xhtml" title="Definitions and classes for USB CDC class descriptors. " alt="" coords="312,169,447,196"/>
+<area shape="rect" id="node6" href="$_c_d_c_notifications_8h.xhtml" title="Definitions and methods for USB CDC Notifications. " alt="" coords="472,169,613,196"/>
+<area shape="rect" id="node7" href="$_c_d_c_d_serial_8h.xhtml" title="Single CDC Serial Port Function for USB device &amp; composite driver. " alt="" coords="224,95,332,121"/>
+</map>

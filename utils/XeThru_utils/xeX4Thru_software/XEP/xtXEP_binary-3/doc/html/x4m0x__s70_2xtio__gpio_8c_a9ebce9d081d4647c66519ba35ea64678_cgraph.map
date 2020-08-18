@@ -1,0 +1,5 @@
+<map id="enable_io_irq" name="enable_io_irq">
+<area shape="rect" id="node2" href="$pio__it_8h.xhtml#a07463cb19ee17ef2afdd2f31def188c5" title="Disables a given interrupt source, with no added side effects. " alt="" coords="167,5,272,32"/>
+<area shape="rect" id="node3" href="$pio__it_8h.xhtml#a8be1f7591a811aec725670a92ffb6a31" title="Configures a PIO or a group of PIO to generate an interrupt on status change. " alt="" coords="160,56,279,83"/>
+<area shape="rect" id="node4" href="$pio__it_8h.xhtml#a5e0833554c742d41b5f3376e53dc61e5" title="Enables the given interrupt source if it has been configured. " alt="" coords="169,107,270,133"/>
+</map>

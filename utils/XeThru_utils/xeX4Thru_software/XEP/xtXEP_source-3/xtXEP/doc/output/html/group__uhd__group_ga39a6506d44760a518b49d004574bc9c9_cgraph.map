@@ -1,0 +1,19 @@
+<map id="USBH_HAL_PipeOutReady" name="USBH_HAL_PipeOutReady">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#ac13debb9eb4e51de70e9086d6264ee88" title="Gets USB host interrupt status. " alt="" coords="279,5,435,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a97e601451758556ee0591fae627974d8" title="Gets USB host interrupt status. " alt="" coords="257,56,457,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a32c56acaace52b440a308d9bce8cafff" title="Gets USB host interrupt status. " alt="" coords="245,107,469,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#acd60bcdb7e5420ac4cfb8b457838f9ba" title="Gets USB host interrupt status. " alt="" coords="247,157,467,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a7e40c3d1763e18ec62b55c48edadedde" title="Gets USB host interrupt status. " alt="" coords="274,208,439,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a568fb6f40affb306e060461fe065a516" title="Gets USB host interrupt status. " alt="" coords="265,259,449,285"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#a7b7dcd419b41dc75bdf1ed56fea79075" title="Sets USBHS&#39;s DMA Buffer addresse. " alt="" coords="252,309,461,336"/>
+<area shape="rect" id="node9" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="304,360,409,387"/>
+<area shape="rect" id="node10" href="$usbhs_8h.xhtml#a867c067ec59082580389661c677469ea" title="Get Dma Status. " alt="" coords="242,411,471,437"/>
+<area shape="rect" id="node11" href="$usbhs_8h.xhtml#aedba0b8562b6d4aa35096f3db61f18c6" title="Gets USB host interrupt status. " alt="" coords="287,461,427,488"/>
+<area shape="rect" id="node12" href="$usbhs_8h.xhtml#a0a8e28b882f4abf73c473980d36c7e06" title="Gets USB host interrupt status. " alt="" coords="241,512,472,539"/>
+<area shape="rect" id="node13" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga1b741def9e3b2ca97dc9ea49b8ce505c" title="Clean &amp; Invalidate D&#45;Cache. " alt="" coords="255,563,458,589"/>
+<area shape="rect" id="node14" href="$usbhs_8h.xhtml#ad212cc35348ff023533b9a47aba79345" title="Setup the USBHS DMA. " alt="" coords="257,613,456,640"/>
+<area shape="rect" id="node15" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="296,664,417,691"/>
+<area shape="rect" id="node16" href="$usbhs_8h.xhtml#ae752afec4dfecc9565eaa4242ce9233f" title="Gets USB host interrupt status. " alt="" coords="249,715,464,741"/>
+<area shape="rect" id="node17" href="$usbhs_8h.xhtml#aadbfa6cd7ed91815f4a40b2a92c6d9eb" title="Gets USB host interrupt status. " alt="" coords="257,765,456,792"/>
+<area shape="rect" id="node18" href="$group__uhd__group.xhtml#gaf8e9ff0a2565377088b95ef2b31787de" title="USBH_HAL_PipeXfrEnd" alt="" coords="273,816,441,843"/>
+</map>

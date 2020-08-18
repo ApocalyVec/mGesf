@@ -1,0 +1,4 @@
+<map id="AUDDFunction_RequestHandler" name="AUDDFunction_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdcaud.xhtml#ga8c3816c9ea002bccdb6b27d3ffe6b8e7" title="Handles composite&#45;specific USB requests sent by the host, and forwards standard ones to the USB devic..." alt="" coords="276,5,511,32"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidaud.xhtml#ga67e086f6cca282dfb9ee1c4f53a2d670" title="Handles composite&#45;specific USB requests sent by the host, and forwards standard ones to the USB devic..." alt="" coords="278,56,509,83"/>
+</map>

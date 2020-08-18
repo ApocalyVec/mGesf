@@ -1,0 +1,7 @@
+<map id="HIDDMouseDriver_Initialize" name="HIDDMouseDriver_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="286,5,414,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid.xhtml#ga4c81e5b2479a8cf7d633e5c3a09f8cf9" title="Initialize a report. " alt="" coords="247,56,453,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#ga11868145aba27b8ca63ab6395439cb0d" title="Initializes a USBDDriver instance with a list of descriptors. " alt="" coords="272,107,428,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hid.xhtml#gae22cdb376ad0da9d9e0cc9c33c276039" title="Initialize the USB Device HID function, for general HID device support. " alt="" coords="267,157,433,184"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga1fd3982402055e37aa879c199e0b7fee" title="Initializes the USB driver. " alt="" coords="307,208,393,235"/>
+</map>

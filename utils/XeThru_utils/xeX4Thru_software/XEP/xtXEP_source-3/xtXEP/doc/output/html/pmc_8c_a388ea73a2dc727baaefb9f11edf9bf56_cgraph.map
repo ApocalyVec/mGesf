@@ -1,0 +1,5 @@
+<map id="PMC_DisableAllClocks" name="PMC_DisableAllClocks">
+<area shape="rect" id="node2" href="$pmc_8c.xhtml#ab1e199de7fe19016f1a2022fe726780e" title="Switch MCK to main clock. " alt="" coords="213,5,416,32"/>
+<area shape="rect" id="node3" href="$pmc_8c.xhtml#af88b1696ff366be7d6ea4f4f43ffbe4d" title="Switch MCK to slow clock. " alt="" coords="214,56,415,83"/>
+<area shape="rect" id="node4" href="$pmc_8c.xhtml#a9c5caa48f71136fd064db7ed4b36549c" title="Disable all the periph clock via PMC. " alt="" coords="219,107,410,133"/>
+</map>

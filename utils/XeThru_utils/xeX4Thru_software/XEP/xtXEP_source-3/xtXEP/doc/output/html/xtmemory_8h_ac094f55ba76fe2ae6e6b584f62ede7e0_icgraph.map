@@ -1,0 +1,14 @@
+<map id="xtmemory_malloc_default" name="xtmemory_malloc_default">
+<area shape="rect" id="node2" href="$xtio__flash_8c.xhtml#a69a3f02de1c4e206640015c8d19af4f9" title="stores data in flash. " alt="" coords="265,5,388,32"/>
+<area shape="rect" id="node3" href="$xtio__i2c_8h.xhtml#a7b0e666ddfaac918eb931d278b66559c" title="xtio_i2c_init" alt="" coords="279,56,375,83"/>
+<area shape="rect" id="node4" href="$xtio__uart_8h.xhtml#ab26f4e038cc21215960e4e8957c041be" title="xtio_uart_init" alt="" coords="275,107,379,133"/>
+<area shape="rect" id="node5" href="$xt__new__delete_8cpp.xhtml#a205ed048fdf5259c2e8e0cb60ee8f719" title="operator new" alt="" coords="482,259,589,285"/>
+<area shape="rect" id="node6" href="$task__hostcom_8h.xhtml#a6c9b12d865c55daa244e191b2efb7ca1" title="task_hostcom_init" alt="" coords="659,233,797,260"/>
+<area shape="rect" id="node7" href="$task__hostcom_8c.xhtml#abac971969d3f568fc6db3b8205cc9992" title="task_hostcom" alt="" coords="479,309,591,336"/>
+<area shape="rect" id="node8" href="$task__radar_8h.xhtml#a8e1bd6586c853a5ad3fd6df6c3b930bf" title="Initialize Radar task. " alt="" coords="269,512,385,539"/>
+<area shape="rect" id="node9" href="$task__monitor_8h.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register a task to the monitor system. " alt="" coords="245,360,408,387"/>
+<area shape="rect" id="node10" href="$xtmemory__xep_8c.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="241,259,412,285"/>
+<area shape="rect" id="node11" href="$xtmemory__xep_8c.xhtml#a074cb46fba954fb164b67e59ea69efb2" title="Allocate memory from fast location. " alt="" coords="243,411,411,437"/>
+<area shape="rect" id="node12" href="$xep__application_8h.xhtml#a6b62d4598b48167a0a9ca6e6896b2fff" title="Initialize Application task. " alt="" coords="460,436,611,463"/>
+<area shape="rect" id="node13" href="$xep__application_8h.xhtml#a5bb46ff10029dcede1e47eefdaa5732f" title="Initialize module application instance. " alt="" coords="291,563,362,589"/>
+</map>

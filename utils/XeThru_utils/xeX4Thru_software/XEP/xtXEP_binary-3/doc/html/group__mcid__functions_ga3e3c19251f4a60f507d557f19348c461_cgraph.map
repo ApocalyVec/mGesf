@@ -1,0 +1,6 @@
+<map id="_MciDMAPrepare" name="_MciDMAPrepare">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="184,5,364,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="198,56,350,83"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#ga1385fba752fa1979cd553e33c91115d7" title="hsmci_callback" alt="" coords="215,107,333,133"/>
+<area shape="rect" id="node5" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="185,157,363,184"/>
+</map>

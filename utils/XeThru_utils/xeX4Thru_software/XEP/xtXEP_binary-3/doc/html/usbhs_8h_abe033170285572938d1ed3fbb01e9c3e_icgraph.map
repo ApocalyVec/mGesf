@@ -1,0 +1,5 @@
+<map id="USBHS_HostPipeIntEnable" name="USBHS_HostPipeIntEnable">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gad9e15307f67bf17a172ce88dc52ff6a3" title="Configures and enables a control endpoint 0. " alt="" coords="245,5,480,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga8da03709234cba062389fcaee2c62f8b" title="Configures and enables an endpoint. " alt="" coords="269,56,457,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga1d4a9f98194cb255b2fcb6cdf8d83fb8" title="Allows to receive or send data on an endpoint. " alt="" coords="273,107,452,133"/>
+</map>

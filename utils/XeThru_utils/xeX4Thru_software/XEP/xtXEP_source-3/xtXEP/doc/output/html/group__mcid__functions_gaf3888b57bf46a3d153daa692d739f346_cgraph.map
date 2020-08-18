@@ -1,0 +1,4 @@
+<map id="_PeripheralEnable" name="_PeripheralEnable">
+<area shape="rect" id="node2" href="$pmc_8h.xhtml#a13d9ea02189cb126f06a7d9c7241314a" title="Get Periph Status for the given peripheral ID. " alt="" coords="192,5,351,32"/>
+<area shape="rect" id="node3" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="189,56,353,83"/>
+</map>

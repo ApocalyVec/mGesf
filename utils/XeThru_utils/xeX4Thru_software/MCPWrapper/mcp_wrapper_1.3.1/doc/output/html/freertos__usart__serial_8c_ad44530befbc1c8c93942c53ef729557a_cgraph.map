@@ -1,0 +1,23 @@
+<map id="local_usart_handler" name="local_usart_handler">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#gadedd154647a6401b9feab44a0620fea1" title="Get current status. " alt="" coords="213,5,332,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__usart__group.xhtml#gaf2a63720ac25579075bf9191c601c7ea" title="Read USART interrupt mask. " alt="" coords="188,56,357,83"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__usart__group.xhtml#gaa3a3c3eb673f70359570302dcf1a5b6a" title="Disable USART interrupts. " alt="" coords="405,132,559,159"/>
+<area shape="rect" id="node5" href="$freertos__usart__serial_8c.xhtml#a53cee58d461e19378a8453e89d52424f" title="configure_rx_dma" alt="" coords="211,157,335,184"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__usart__group.xhtml#ga21b61657bfa8bc395dd4c5f05f531788" title="Start waiting for a character before clocking the timeout count. " alt="" coords="197,208,349,235"/>
+<area shape="rect" id="node7" href="$group__sam__drivers__usart__group.xhtml#ga4e19efeb524c1fba4b962e72283dcc11" title="Reset status bits (PARE, OVER, MANERR, UNRE and PXBRK in US_CSR). " alt="" coords="207,259,338,285"/>
+<area shape="rect" id="node8" href="$group___s_a_m_g55_g19__cmsis.xhtml#ga6fa7b2ff2f5ea1ada449701de69740b8" title="FLEXCOM0_Handler" alt="" coords="202,309,343,336"/>
+<area shape="rect" id="node9" href="$group___s_a_m_g55_g19__cmsis.xhtml#gab0d701b336b33466d9b93ae91719d065" title="FLEXCOM1_Handler" alt="" coords="202,360,343,387"/>
+<area shape="rect" id="node10" href="$group___s_a_m_g55_g19__cmsis.xhtml#ga51d2dedfea8413b19e4df385814f8f2f" title="FLEXCOM2_Handler" alt="" coords="202,411,343,437"/>
+<area shape="rect" id="node11" href="$group___s_a_m_g55_g19__cmsis.xhtml#ga96c72159358bb1a33d7f4204ff92dfca" title="FLEXCOM3_Handler" alt="" coords="202,461,343,488"/>
+<area shape="rect" id="node12" href="$group___s_a_m_g55_g19__cmsis.xhtml#gaee06bddb830387c1d55203e590d19bc5" title="FLEXCOM4_Handler" alt="" coords="202,512,343,539"/>
+<area shape="rect" id="node13" href="$group___s_a_m_g55_g19__cmsis.xhtml#gadd2684a2421766f0308dbfae60b9aec6" title="FLEXCOM5_Handler" alt="" coords="202,563,343,589"/>
+<area shape="rect" id="node14" href="$group___s_a_m_g55_g19__cmsis.xhtml#ga09c085816df974d39c6559ef595af9fa" title="FLEXCOM6_Handler" alt="" coords="202,613,343,640"/>
+<area shape="rect" id="node15" href="$group___s_a_m_g55_j19__cmsis.xhtml#ga184f75b0f3b07788b9dde5a2c7cc6cd0" title="FLEXCOM7_Handler" alt="" coords="202,664,343,691"/>
+<area shape="rect" id="node16" href="$group___s_a_m_g55_g18__cmsis.xhtml#gaa2d1b90cebab6c82cf77533691d52483" title="USART0_Handler" alt="" coords="211,715,334,741"/>
+<area shape="rect" id="node17" href="$group___s_a_m_g55_g18__cmsis.xhtml#ga89d1f7ca6d3e03bd3da5e1c64a2d63a3" title="USART1_Handler" alt="" coords="211,765,334,792"/>
+<area shape="rect" id="node18" href="$group___s_a_m_g55_g18__cmsis.xhtml#ga9cdfc4b7e9c04496ed8c4675e567e24c" title="USART2_Handler" alt="" coords="211,816,334,843"/>
+<area shape="rect" id="node19" href="$group___s_a_m_g55_g18__cmsis.xhtml#ga9dc5cff7a328a5d2f2ab275325e6acca" title="USART3_Handler" alt="" coords="211,867,334,893"/>
+<area shape="rect" id="node20" href="$group___s_a_m_g55_g18__cmsis.xhtml#ga43cefeb65a1dd67ee5962862dede81bf" title="USART4_Handler" alt="" coords="211,917,334,944"/>
+<area shape="rect" id="node21" href="$group___s_a_m_g55_g18__cmsis.xhtml#ga490a25ee23c1570269536ca70b108a0f" title="USART5_Handler" alt="" coords="211,968,334,995"/>
+<area shape="rect" id="node22" href="$group___s_a_m_g55_g18__cmsis.xhtml#ga2f5c380683c929ef23c7ec0c5e2aab45" title="USART6_Handler" alt="" coords="211,1019,334,1045"/>
+</map>

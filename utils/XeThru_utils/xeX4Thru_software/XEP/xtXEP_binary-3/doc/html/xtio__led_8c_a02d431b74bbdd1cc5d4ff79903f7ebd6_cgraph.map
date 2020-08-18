@@ -1,0 +1,4 @@
+<map id="xtio_led_init" name="xtio_led_init">
+<area shape="rect" id="node2" href="$xtio__led_8c.xhtml#a995cb92de692758ac4878c775210658b" title="xtio_decode_led_id" alt="" coords="151,5,293,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="167,56,277,83"/>
+</map>

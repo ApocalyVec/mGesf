@@ -1,0 +1,5 @@
+<map id="HIDProtocolRequest_GetProtocol" name="HIDProtocolRequest_GetProtocol">
+<area shape="rect" id="node2" href="$group__usb__request.xhtml#ga4eb32bff86dfd66c3ae0e9c1e3fd09e6" title="Returns the wValue field of the given request. " alt="" coords="449,24,664,50"/>
+<area shape="rect" id="node3" href="$group__usb__hid__protocol__types.xhtml#ga6834fb90cfe01b6f8ec868e3ade677c3" title="Indicates the ID of the report targeted by a SET_IDLE or GET_IDLE request. " alt="" coords="201,24,401,50"/>
+<area shape="rect" id="node4" href="$group__usb__hid__protocol__types.xhtml#gadda4a9db20a64f37fefd3e3893171b4a" title="Retrieves the Idle rate (in milliseconds) indicated by a SET_IDLE request. " alt="" coords="202,74,401,101"/>
+</map>

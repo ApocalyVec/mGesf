@@ -1,0 +1,9 @@
+<map id="USB HID Report" name="USB HID Report">
+<area shape="rect" id="node3" href="$group__usb__hid__main.xhtml" title="This section lists the Main Item Tags defined for HID device. " alt="" coords="303,5,447,32"/>
+<area shape="rect" id="node4" href="$group__usb__hid__global.xhtml" title="This section lists HID Global Items. " alt="" coords="311,56,440,83"/>
+<area shape="rect" id="node5" href="$group__usb__hid__item.xhtml" title="HID Items Definitions" alt="" coords="297,107,453,133"/>
+<area shape="rect" id="node6" href="$group__usb__hid__collection.xhtml" title="This section lists definitions for HID Collection Items. " alt="" coords="300,157,451,184"/>
+<area shape="rect" id="node7" href="$group__usb__hid__data.xhtml" title="This section lists definitions for HID Input, Output and Feature items that are used to create the da..." alt="" coords="305,209,446,250"/>
+<area shape="rect" id="node8" href="$group__usb__hid__local.xhtml" title="This section lists definitions for HID Local Items. " alt="" coords="314,275,437,301"/>
+<area shape="rect" id="node2" href="$group__usb__hid.xhtml" title="Usb_hid" alt="" coords="5,132,79,159"/>
+</map>

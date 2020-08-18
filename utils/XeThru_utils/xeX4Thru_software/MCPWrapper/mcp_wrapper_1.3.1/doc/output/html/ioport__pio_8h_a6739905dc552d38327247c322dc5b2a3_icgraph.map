@@ -1,0 +1,5 @@
+<map id="arch_ioport_set_port_mode" name="arch_ioport_set_port_mode">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#ga5650eb09b10e7c16af9af69a65357484" title="Set multiple pin modes in a single IOPORT port, such as pull&#45;up, pull&#45;down, etc. " alt="" coords="246,5,393,32"/>
+<area shape="rect" id="node3" href="$group__ioport__group.xhtml#gaacdfb479db1cdc22d8eabd2f1198213c" title="Reset multiple pin modes in a specified IOPORT port to defaults. " alt="" coords="240,56,399,83"/>
+<area shape="rect" id="node4" href="$ioport__pio_8h.xhtml#aac4ba5127f61519fb2f981ebefaa85bb" title="arch_ioport_set_pin_mode" alt="" coords="232,107,407,133"/>
+</map>

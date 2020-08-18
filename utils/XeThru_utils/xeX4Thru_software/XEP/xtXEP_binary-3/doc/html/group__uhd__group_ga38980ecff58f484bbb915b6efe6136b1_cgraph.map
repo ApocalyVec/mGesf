@@ -1,0 +1,5 @@
+<map id="USBH_HAL_GetPipe" name="USBH_HAL_GetPipe">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#aca1a73918c77f0aaa82395b55d760ae8" title="Gets USB host interrupt status. " alt="" coords="204,5,391,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a963fd2f0eab05393ff85e14bfd909021" title="USBHS_HostGetAddr" alt="" coords="218,56,377,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#afc5b9450b58a00b6b0080285a6296595" title="USBHS_GetPipeEpAddr" alt="" coords="211,107,383,133"/>
+</map>

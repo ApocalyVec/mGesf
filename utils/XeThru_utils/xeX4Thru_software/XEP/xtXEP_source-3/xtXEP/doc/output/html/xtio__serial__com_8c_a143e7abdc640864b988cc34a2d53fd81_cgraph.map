@@ -1,0 +1,8 @@
+<map id="xtio_serial_com_init" name="xtio_serial_com_init">
+<area shape="rect" id="node2" href="$xtio__serial__com_8c.xhtml#ac8f411a660584db9578fa744183ed83c" title="_usb_available" alt="" coords="207,5,321,32"/>
+<area shape="rect" id="node3" href="$xtio__serial__com_8c.xhtml#a6d6778d56cb80ebddd3a1ef33018f798" title="_usb_task_init" alt="" coords="208,56,320,83"/>
+<area shape="rect" id="node4" href="$xtio__serial__com_8c.xhtml#a37379f651da7007ea4f9258ced020d8f" title="_usb_task_deinit" alt="" coords="200,107,328,133"/>
+<area shape="rect" id="node5" href="$xtio__serial__com_8c.xhtml#ae7ac43c7ce3999faa8c92e43bf0f8fb7" title="_i2c_available" alt="" coords="209,157,319,184"/>
+<area shape="rect" id="node6" href="$xtio__serial__com_8c.xhtml#a4b464118913ae197de4ceddfb239ffe3" title="_i2c_task_init" alt="" coords="211,208,317,235"/>
+<area shape="rect" id="node7" href="$xtio__serial__com_8c.xhtml#a8904ed52c6457d6e9fc7d87adf2d78af" title="_uart_task_init" alt="" coords="207,259,321,285"/>
+</map>

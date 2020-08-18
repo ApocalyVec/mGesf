@@ -1,0 +1,8 @@
+<map id="AUDDSpeakerDriver_Initialize" name="AUDDSpeakerDriver_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="306,5,434,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga08ddc53d41957a6a3432a2d48a5b151e" title="Initialize AUDDStream instance. " alt="" coords="264,57,476,98"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speaker.xhtml#ga859ba8c5d460fb9546b7125d921f7c02" title="Callback triggerred after the mute or volume status of the channel has been changed. " alt="" coords="265,123,475,149"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speakerphone.xhtml#ga00b3f4d58344739d4fd1877d7cf46e79" title="Initialize AUDDSpeakerPhone instance. " alt="" coords="264,173,476,200"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga11868145aba27b8ca63ab6395439cb0d" title="Initializes a USBDDriver instance with a list of descriptors. " alt="" coords="292,224,448,251"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#ga1fd3982402055e37aa879c199e0b7fee" title="Initializes the USB driver. " alt="" coords="327,275,413,301"/>
+</map>

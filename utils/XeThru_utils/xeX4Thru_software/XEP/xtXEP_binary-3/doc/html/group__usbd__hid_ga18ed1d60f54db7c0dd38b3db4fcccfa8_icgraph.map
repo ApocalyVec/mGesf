@@ -1,0 +1,6 @@
+<map id="HIDDFunction_StartPollingOutputs" name="HIDDFunction_StartPollingOutputs">
+<area shape="rect" id="node2" href="$group__usbd__hid__key.xhtml#ga8756ebb1a6a51b48a6e331ea28808e4b" title="Configure function with expected descriptors and start functionality. " alt="" coords="241,5,476,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid.xhtml#ga6a3177814ff14ce51040bd58817d4064" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="251,56,467,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="524,74,667,115"/>
+<area shape="rect" id="node5" href="$group__usbd__hid__tran.xhtml#gaa42cac9f13dfb2f99d409b11e84050e6" title="Handles configureation changed event. " alt="" coords="248,158,469,199"/>
+</map>

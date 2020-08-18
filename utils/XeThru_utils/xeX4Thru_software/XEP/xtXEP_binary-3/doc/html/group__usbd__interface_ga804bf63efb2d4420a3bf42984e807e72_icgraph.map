@@ -1,0 +1,7 @@
+<map id="USBD_GetState" name="USBD_GetState">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga9d470d7bee3682fff6c69b1a758eba21" title="Sends the current configuration number to the host. " alt="" coords="213,5,344,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="212,56,345,83"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#ga33a2494c76dcc7335a458c79e46975d9" title="State machine for the MSD driver. " alt="" coords="179,107,379,133"/>
+<area shape="rect" id="node5" href="$xtio__serial__com_8c.xhtml#a18a89b2e10b293c135602a32bb07cbba" title="_usb_task_tx" alt="" coords="226,157,331,184"/>
+<area shape="rect" id="node6" href="$xtio__serial__com_8c.xhtml#afdbe66e3a8423057af6855132b1965ee" title="_usb_task_rx" alt="" coords="226,208,331,235"/>
+</map>

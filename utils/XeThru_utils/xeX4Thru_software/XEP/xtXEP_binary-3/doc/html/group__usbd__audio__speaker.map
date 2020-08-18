@@ -1,0 +1,8 @@
+<map id="Usbd_audio_speaker" name="Usbd_audio_speaker">
+<area shape="rect" id="node1" href="$group__usbd__audio__ch.xhtml" title="This page lists codes for USB Audio Speaker channel numbers. " alt="" coords="428,7,623,48"/>
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml" title="Implement speaker phone function that combine 1 AC interface, 1 AS interface for speaker and 1 AS int..." alt="" coords="428,73,623,99"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidaud.xhtml" title="Usbd_composite_hidaud" alt="" coords="436,162,615,189"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speaker__if.xhtml" title="This page lists the interface numbers for USB Audio Speaker device. " alt="" coords="428,213,623,255"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__entity.xhtml" title="This page lists the entity IDs for USB Audio Speaker device. " alt="" coords="428,279,623,320"/>
+<area shape="rect" id="node7" href="$group__usbd__composite__cdcaud.xhtml" title="Usbd_composite_cdcaud" alt="" coords="434,347,617,374"/>
+</map>

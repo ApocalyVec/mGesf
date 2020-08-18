@@ -1,0 +1,7 @@
+<map id="usart_init_rs232" name="usart_init_rs232">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="176,5,339,32"/>
+<area shape="rect" id="node3" href="$uart__serial_8h.xhtml#a9b7530c23e7cf03a4542e50d276f677f" title="Initializes the Usart in master mode. " alt="" coords="201,56,314,83"/>
+<area shape="rect" id="node4" href="$group__group__sam__drivers__usart.xhtml#ga8ea87f1c2b00747e7a5de5b36aa0cc71" title="Configure USART to work in hardware handshaking mode. " alt="" coords="168,107,347,133"/>
+<area shape="rect" id="node5" href="$group__group__sam__drivers__usart.xhtml#ga7265d736a562d24e880c0c5e10c41a48" title="Configure USART to work in RS485 mode. " alt="" coords="200,157,315,184"/>
+<area shape="rect" id="node6" href="$group__group__sam__drivers__usart.xhtml#ga952a5fffe9547e48e5d1c74230786d78" title="Configure USART to work in IrDA mode. " alt="" coords="206,208,309,235"/>
+</map>

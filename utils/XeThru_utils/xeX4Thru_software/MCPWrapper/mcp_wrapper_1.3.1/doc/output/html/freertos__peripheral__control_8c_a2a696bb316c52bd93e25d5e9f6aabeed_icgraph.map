@@ -1,0 +1,5 @@
+<map id="get_pdc_peripheral_details" name="get_pdc_peripheral_details">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="184,5,347,32"/>
+<area shape="rect" id="node3" href="$group__freertos__usart__peripheral__control__group.xhtml#ga4f47ec231efeccf8f159c5a14124d0ff" title="Initiate a completely asynchronous multi&#45;byte write operation on a USART peripheral. " alt="" coords="198,57,333,98"/>
+<area shape="rect" id="node4" href="$group__freertos__usart__peripheral__control__group.xhtml#ga9f4de374d2019244881290bf4943cb81" title="Initiate a completely multi&#45;byte read operation on a USART peripheral. " alt="" coords="196,122,335,163"/>
+</map>

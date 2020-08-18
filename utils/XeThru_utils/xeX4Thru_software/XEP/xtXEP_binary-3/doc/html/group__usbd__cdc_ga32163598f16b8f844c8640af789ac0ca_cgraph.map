@@ -1,0 +1,4 @@
+<map id="CDCDSerial_EventHandler" name="CDCDSerial_EventHandler">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#gac087ca8a6a24c114b50a06f29c50378e" title="Invoked when the CDC ControlLineState is changed. " alt="" coords="243,5,453,47"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#ga7cf34e00ae22edc47abacdb3e67a32c2" title="Invoked when the CDC LineCoding is requested to changed. " alt="" coords="250,71,446,112"/>
+</map>

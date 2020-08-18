@@ -1,0 +1,10 @@
+<map id="USBH_HAL_DelayedSuspend" name="USBH_HAL_DelayedSuspend">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a23bc7c30ae1779f56b28b82cf5153866" title="Enable or disable USB address. " alt="" coords="275,5,440,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#ace4d57215e8268e1e934fa376da56c83" title="Gets USB host interrupt status. " alt="" coords="261,56,453,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a40267eb93445cc78fe9b243d25622f9c" title="Gets USB host interrupt status. " alt="" coords="272,107,443,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#a8b5061d7281a8104020962d8b6291da1" title="Sets USB host disable the Generation of Start of Frame. " alt="" coords="283,157,432,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#aab0688b661054b73b5c9fe45e59ea015" title="Gets USB host interrupt status. " alt="" coords="267,208,448,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a7ac646519dfb6c319d8a60f08b5e4c29" title="Gets USB host interrupt status. " alt="" coords="275,259,440,285"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#a07183fee11fbf4c00401b455bdfed9dd" title=" USBHS_CTRL " alt="" coords="281,309,433,336"/>
+<area shape="rect" id="node9" href="$group__uhd__group.xhtml#ga5d9360ec239feb3ede5e4a0223d3c6e2" title="Manages the sleep mode following the USBHS state. " alt="" coords="292,360,423,387"/>
+</map>

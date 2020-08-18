@@ -1,0 +1,10 @@
+<map id="__DMB" name="__DMB">
+<area shape="rect" id="node2" href="$board__memories_8h.xhtml#a0e0e3f4ee2328faeb9f45c5fc591f8de" title="Configures the EBI for SDRAM (IS42S16100E&#45;7B) access. " alt="" coords="120,5,299,32"/>
+<area shape="rect" id="node3" href="$exceptions_8c.xhtml#aeafbdf3066c39ff86ed2a3a5d8414d48" title="If Other Faults are enabled then HardFault error will look for those errors to give more detail about..." alt="" coords="142,56,277,83"/>
+<area shape="rect" id="node4" href="$group___s_a_m_e70_j19__cmsis.xhtml#ga2bffc10d5bd4106753b7c30e86903bea" title="Default HardFault interrupt handler. " alt="" coords="347,81,487,108"/>
+<area shape="rect" id="node5" href="$group___s_a_m_e70_j19__cmsis.xhtml#ga3150f74512510287a942624aa9b44cc5" title="Default MemManage interrupt handler. " alt="" coords="128,157,291,184"/>
+<area shape="rect" id="node6" href="$group___s_a_m_e70_j19__cmsis.xhtml#ga850cefb17a977292ae5eb4cafa9976c3" title="Default BusFault interrupt handler. " alt="" coords="143,208,276,235"/>
+<area shape="rect" id="node7" href="$group___s_a_m_e70_j19__cmsis.xhtml#ga1d98923de2ed6b7309b66f9ba2971647" title="Default UsageFault interrupt handler. " alt="" coords="134,259,285,285"/>
+<area shape="rect" id="node8" href="$utility_8h.xhtml#a2d663455964e6e395031eda3bb8c5b61" title="get_lock" alt="" coords="172,309,247,336"/>
+<area shape="rect" id="node9" href="$utility_8h.xhtml#ae51c4a64a384b422b0aee263de9e73d1" title="free_lock" alt="" coords="170,360,249,387"/>
+</map>

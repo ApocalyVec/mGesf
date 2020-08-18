@@ -1,0 +1,13 @@
+<map id="vListRemove" name="vListRemove">
+<area shape="rect" id="node2" href="$croutine_8h.xhtml#ab079c8617df3a965355be09a08a31342" title="vCoRoutineAddToDelayedList" alt="" coords="161,5,353,32"/>
+<area shape="rect" id="node3" href="$croutine_8c.xhtml#a9f93b2dc51b9304e5d39091cb272d761" title="prvCheckPendingReadyList" alt="" coords="167,56,347,83"/>
+<area shape="rect" id="node4" href="$croutine_8c.xhtml#ad2a4bb12a7662f26acca88b343e4c0fe" title="prvCheckDelayedList" alt="" coords="186,107,329,133"/>
+<area shape="rect" id="node5" href="$croutine_8h.xhtml#a9d3b6fc4612f417a42fc92f072a19686" title="xCoRoutineRemoveFromEventList" alt="" coords="148,157,367,184"/>
+<area shape="rect" id="node6" href="$tasks_8c.xhtml#a1ceb56c5c7ff2581a5ea837db4f721c1" title="prvInitialiseTaskLists" alt="" coords="669,259,811,285"/>
+<area shape="rect" id="node7" href="$tasks_8c.xhtml#ab173f313b22f1a57dfceb98cb01b0508" title="xTaskResumeAll" alt="" coords="438,335,558,361"/>
+<area shape="rect" id="node8" href="$tasks_8c.xhtml#a903096c962a2bc907f4b902a7d42302a" title="prvCheckTasksWaitingTermination" alt="" coords="629,411,851,437"/>
+<area shape="rect" id="node9" href="$tasks_8c.xhtml#a1fa96a475aac1442de1fa279810e9723" title="vTaskIncrementTick" alt="" coords="189,360,325,387"/>
+<area shape="rect" id="node10" href="$tasks_8c.xhtml#a2d5845c73b2a52b45aadd74a7b539bc8" title="vTaskPlaceOnEventList" alt="" coords="178,411,337,437"/>
+<area shape="rect" id="node11" href="$tasks_8c.xhtml#a981b9243e998fe9974993e48b4b2aa12" title="xTaskRemoveFromEventList" alt="" coords="164,461,351,488"/>
+<area shape="rect" id="node12" href="$tasks_8c.xhtml#ad9f111cb55638c317ba63e83bfd416ec" title="prvAllocateTCBAndStack" alt="" coords="415,259,581,285"/>
+</map>

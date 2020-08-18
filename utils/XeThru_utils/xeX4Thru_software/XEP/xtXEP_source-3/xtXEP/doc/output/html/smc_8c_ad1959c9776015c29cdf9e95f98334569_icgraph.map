@@ -1,0 +1,4 @@
+<map id="CountBitsInByte" name="CountBitsInByte">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#a4e8c67cfa227eaa3bb2147755c0cee59" title="Counts and return the number of bits set to &#39;1&#39; in the given hsiao code. " alt="" coords="209,5,337,32"/>
+<area shape="rect" id="node3" href="$smc_8c.xhtml#a37e65f5e7c65e85ee841c5c779018ad0" title="verifies 4&#45;bytes hsiao codes for a data block whose size is a page Size word. " alt="" coords="177,57,369,98"/>
+</map>

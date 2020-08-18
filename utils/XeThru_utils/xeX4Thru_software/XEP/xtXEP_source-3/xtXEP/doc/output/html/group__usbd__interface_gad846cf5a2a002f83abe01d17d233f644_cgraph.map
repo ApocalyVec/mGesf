@@ -1,0 +1,3 @@
+<map id="USBD_Stall" name="USBD_Stall">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gad95d239687843031e2af3aac51ba33ad" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake except se..." alt="" coords="148,5,276,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SysTick_Handler" name="SysTick_Handler">
+<area shape="rect" id="node2" href="$xtio__flash_8c.xhtml#a4b959a98419bc53f38212b561edb0d07" title="Erases specified flash area. " alt="" coords="180,5,305,32"/>
+<area shape="rect" id="node3" href="$xtio__flash_8c.xhtml#a0f73f9b3594686e4318f0ca195cc38b4" title="Writes data to flash. " alt="" coords="183,56,302,83"/>
+<area shape="rect" id="node4" href="$xtio__flash_8c.xhtml#a69a3f02de1c4e206640015c8d19af4f9" title="stores data in flash. " alt="" coords="181,107,304,133"/>
+</map>

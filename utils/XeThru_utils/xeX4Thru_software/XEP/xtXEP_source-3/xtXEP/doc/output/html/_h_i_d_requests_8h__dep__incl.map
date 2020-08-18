@@ -1,0 +1,9 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/HIDRequests.h" name="src/hal/x4m0x_s70/libraries/libusb/include/HIDRequests.h">
+<area shape="rect" id="node2" href="$_h_i_d_idle_request_8c.xhtml" title="Title: HIDIdleRequest implementation. " alt="" coords="5,95,264,136"/>
+<area shape="rect" id="node3" href="$_h_i_d_report_request_8c.xhtml" title="Title: HIDReportRequest implementation. " alt="" coords="288,95,565,136"/>
+<area shape="rect" id="node4" href="$_h_i_d_d_keyboard_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboard.c" alt="" coords="493,184,688,240"/>
+<area shape="rect" id="node5" href="$_h_i_d_d_keyboard_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboardDriver.c" alt="" coords="712,184,907,240"/>
+<area shape="rect" id="node6" href="$_h_i_d_d_function_8h.xhtml" title="Definitions used for general HID support. " alt="" coords="691,95,906,136"/>
+<area shape="rect" id="node7" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="953,191,1148,233"/>
+<area shape="rect" id="node8" href="$_h_i_d_d_mouse_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDDMouseDriver.h" alt="" coords="931,95,1171,136"/>
+</map>

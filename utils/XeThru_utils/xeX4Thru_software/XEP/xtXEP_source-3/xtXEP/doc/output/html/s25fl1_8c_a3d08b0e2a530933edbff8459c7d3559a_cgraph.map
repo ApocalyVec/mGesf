@@ -1,0 +1,8 @@
+<map id="S25FL1D_EnableWrap" name="S25FL1D_EnableWrap">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a300f42045ccdeb44839f77a260052bcb" title="Reads and returns the status register of the serial flash. " alt="" coords="233,5,399,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a1a915b35968bc2e31ab4fe5e38a76708" title="Start S25FL1D Send command with/without data write/read. " alt="" coords="467,107,653,133"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a9b0aa9019b14539aff1e68cc10576d19" title="Reads and returns the status register of the serial flash. " alt="" coords="233,107,399,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#aad42fe1199e1d1cb5b1c3d509dbe9801" title="Reads and returns the status register of the serial flash. " alt="" coords="233,157,399,184"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#a594058ed761d8012b697ece88b70e1e2" title="Writes the given value in the status register of the serial flash device. " alt="" coords="213,208,419,235"/>
+<area shape="rect" id="node7" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="292,259,340,285"/>
+</map>

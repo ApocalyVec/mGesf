@@ -1,0 +1,8 @@
+<map id="AUDDSpeakerPhoneDriver_RequestHandler" name="AUDDSpeakerPhoneDriver_RequestHandler">
+<area shape="rect" id="node2" href="$group__usb__request.xhtml#ga5c2f01b3ad2dbd22cce9b97aa27ca975" title="Returns the type of the given request. " alt="" coords="247,5,455,32"/>
+<area shape="rect" id="node3" href="$group__usb__request.xhtml#gace388a4d862a1a39dfce506fe4189e82" title="Returns the request code of the given request. " alt="" coords="504,81,735,108"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#gab8e4cd12ef0615be5ff405457db9e104" title="Handle the SET_CUR request. " alt="" coords="245,157,456,184"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="572,183,667,209"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__speakerphone.xhtml#ga26ee739e084b33db49fdc25819529f10" title="Handle the GET_CUR request. " alt="" coords="245,259,456,285"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="247,107,454,133"/>
+</map>

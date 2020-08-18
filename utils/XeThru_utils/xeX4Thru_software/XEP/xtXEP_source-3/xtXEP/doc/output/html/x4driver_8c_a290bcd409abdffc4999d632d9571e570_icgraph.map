@@ -1,0 +1,7 @@
+<map id="_x4driver_set_x4_sw_action" name="_x4driver_set_x4_sw_action">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a03652f4897873d46d0534336df7f29fe" title="Will trigger a radar sweep. " alt="" coords="228,5,385,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#ab008a9d8a7ab0744ceb00fb2116ad850" title="Reads raw bytes from x4. " alt="" coords="456,74,611,115"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a33cc21cd8eeda4680c7ee2c47cf6e09b" title="Gets reads frame counter from 8051 mailbox requires enable to be set and 8051 SRAM to be program..." alt="" coords="205,107,408,133"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#af6c32021e202b0dfe0a8b104ebd7a0b6" title="Sets frame rate for frame streaming. " alt="" coords="243,157,370,184"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a67278d41c995150400eb611c28a135d0" title="x4driver_set_frame\l_trigger_period" alt="" coords="234,209,379,250"/>
+</map>

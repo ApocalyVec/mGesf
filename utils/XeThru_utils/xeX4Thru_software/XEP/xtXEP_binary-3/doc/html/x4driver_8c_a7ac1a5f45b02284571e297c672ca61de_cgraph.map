@@ -1,0 +1,6 @@
+<map id="x4driver_set_pulses_per_step" name="x4driver_set_pulses_per_step">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="241,5,340,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="201,56,380,83"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a730b2e0db87e3f26370dbc5cf019cf82" title="Updates normalization constants. " alt="" coords="207,107,375,149"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="243,173,339,200"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="NVIC_GetActive" name="NVIC_GetActive">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="176,5,303,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga1cbaf8e6abd4aa4885828e7f24fcfeb4" title="Get Interrupt Priority. " alt="" coords="176,56,303,83"/>
+</map>

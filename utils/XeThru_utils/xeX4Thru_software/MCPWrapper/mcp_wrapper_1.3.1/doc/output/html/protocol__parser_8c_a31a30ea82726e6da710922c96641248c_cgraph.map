@@ -1,0 +1,5 @@
+<map id="mcpParseMessage" name="mcpParseMessage">
+<area shape="rect" id="node2" href="$protocol__parser_8c.xhtml#aaaa16196223a04a12b0f3b39622c63df" title="extract_byte" alt="" coords="193,5,287,32"/>
+<area shape="rect" id="node3" href="$protocol__parser_8c.xhtml#a4c465c1e51957d9f130f76b9be359631" title="extract_uint32" alt="" coords="188,56,292,83"/>
+<area shape="rect" id="node4" href="$protocol__parser_8c.xhtml#ae4917b0e68e6ccbaa864db9d6af8fb7a" title="extract_float" alt="" coords="193,107,287,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="_module_ui_led_set_color" name="_module_ui_led_set_color">
+<area shape="rect" id="node2" href="$module__ui_8c.xhtml#a54f86bf93a9a46ab61ff08b7e535e9a0" title="Set the module LED color. " alt="" coords="201,5,380,32"/>
+<area shape="rect" id="node3" href="$module__ui_8c.xhtml#adc23507e74f39161ab6ddc3019ee1672" title="LED override to force LED behaviour and block further changes. " alt="" coords="204,57,377,98"/>
+</map>

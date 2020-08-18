@@ -1,0 +1,4 @@
+<map id="AUDDSpeakerDriver_InterfaceSettingChangedHandler" name="AUDDSpeakerDriver_InterfaceSettingChangedHandler">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#gaaf08e0bbd9cb21702977905e45cb736a" title="Close the stream. " alt="" coords="268,5,512,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speaker.xhtml#gae0a73c728533c8f071af6de1ad52976b" title="Invoked when an audio streaming interface setting changed. " alt="" coords="287,57,493,98"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="MSDFunction_Configure" name="MSDFunction_Configure">
+<area shape="rect" id="node2" href="$group__usb__descriptor.xhtml#gac720e8b7e3cec002c16397a66f5e03b1" title="Parses the given descriptor list via customized function. " alt="" coords="227,5,392,47"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga63d1031361c1e8a4db44d5bb9e0c309c" title="Resets the state of the MSD driver. " alt="" coords="236,71,383,98"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="QSPID_DisableSpiChannel" name="QSPID_DisableSpiChannel">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a3e17d8be015b8eddc6c4c81ec2310c79" title="Erases the specified 64KB block of the serial firmware dataflash. " alt="" coords="241,5,421,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a6e299269e367ae9838e0698dbe750e10" title="Writes data at the specified address on the serial firmware dataflash. " alt="" coords="273,56,390,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a65d49aa9e49f2b0ebf01639a1918941e" title="Reads data from the specified address on the serial flash. " alt="" coords="273,107,390,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a8840163f9bd8c203feeeeba16ba8dbde" title="Reads data from the specified address on the serial flash. " alt="" coords="258,157,405,184"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#afe5e46d0d65395239616923012853fc8" title="Reads data from the specified address on the serial flash. " alt="" coords="256,208,407,235"/>
+<area shape="rect" id="node7" href="$s25fl1_8c.xhtml#a3863304299f6a83b97043f7fc6468d67" title="Reads data from the specified address on the serial flash. " alt="" coords="252,259,411,285"/>
+<area shape="rect" id="node8" href="$s25fl1_8c.xhtml#a650c5d2bd603e1f26fb235ecf2bfd09f" title="Reads data from the specified address on the serial flash. " alt="" coords="249,309,413,336"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="USBD_HAL_RemoteWakeUp" name="USBD_HAL_RemoteWakeUp">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gacfd4fed846cba74af43e668e47b6dc10" title="Starts a remote wake&#45;up procedure. " alt="" coords="253,5,420,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="270,56,403,83"/>
+<area shape="rect" id="node4" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="468,81,575,108"/>
+</map>

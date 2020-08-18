@@ -1,0 +1,4 @@
+<map id="Usb_msd" name="Usb_msd">
+<area shape="rect" id="node2" href="$group__usbd__ms__device__codes.xhtml" title="This page lists the class, subclass &amp; protocol codes used by a device with a Mass Storage driver..." alt="" coords="143,5,273,32"/>
+<area shape="rect" id="node3" href="$group__usb__ms__interface__code.xhtml" title="This page lists the available class, subclass &amp; protocol codes for a Mass Storage interface..." alt="" coords="136,56,280,83"/>
+</map>

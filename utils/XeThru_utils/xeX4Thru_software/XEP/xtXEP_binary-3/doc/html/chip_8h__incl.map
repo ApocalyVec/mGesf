@@ -1,0 +1,32 @@
+<map id="src/hal/x4m0x_s70/libraries/libchip/chip.h" name="src/hal/x4m0x_s70/libraries/libchip/chip.h">
+<area shape="rect" id="node2" href="$compiler_8h.xhtml" title="compiler.h" alt="" coords="5,102,93,129"/>
+<area shape="rect" id="node3" href="$trace_8h.xhtml" title="trace.h" alt="" coords="117,102,184,129"/>
+<area shape="rect" id="node4" href="$pio_8h.xhtml" title="pio.h" alt="" coords="207,184,260,211"/>
+<area shape="rect" id="node5" href="$acc_8h.xhtml" title="include/acc.h" alt="" coords="283,102,389,129"/>
+<area shape="rect" id="node6" href="$aes_8h.xhtml" title="include/aes.h" alt="" coords="413,102,520,129"/>
+<area shape="rect" id="node7" href="$afec_8h.xhtml" title="include/afec.h" alt="" coords="545,102,655,129"/>
+<area shape="rect" id="node8" href="$efc_8h.xhtml" title="include/efc.h" alt="" coords="679,102,782,129"/>
+<area shape="rect" id="node9" href="$pio__it_8h.xhtml" title="include/pio_it.h" alt="" coords="807,102,924,129"/>
+<area shape="rect" id="node10" href="$rstc_8h.xhtml" title="include/rstc.h" alt="" coords="948,102,1055,129"/>
+<area shape="rect" id="node11" href="$mpu_8h.xhtml" title="include/mpu.h" alt="" coords="1079,102,1191,129"/>
+<area shape="rect" id="node12" href="$exceptions_8h.xhtml" title="Interface for default exception handlers. " alt="" coords="1215,102,1367,129"/>
+<area shape="rect" id="node13" href="$pio__capture_8h.xhtml" title="include/pio_capture.h" alt="" coords="1391,102,1550,129"/>
+<area shape="rect" id="node14" href="$rtc_8h.xhtml" title="Interface for Real Time Clock (RTC) controller. " alt="" coords="1574,102,1674,129"/>
+<area shape="rect" id="node15" href="$rtt_8h.xhtml" title="include/rtt.h" alt="" coords="1699,102,1797,129"/>
+<area shape="rect" id="node16" href="$tc_8h.xhtml" title="include/tc.h" alt="" coords="1822,102,1917,129"/>
+<area shape="rect" id="node17" href="$timetick_8h.xhtml" title="include/timetick.h" alt="" coords="1941,102,2075,129"/>
+<area shape="rect" id="node18" href="$flashd_8h.xhtml" title="The flash driver provides the unified interface for flash program operations. " alt="" coords="2099,102,2221,129"/>
+<area shape="rect" id="node19" href="$pmc_8h.xhtml" title="include/pmc.h" alt="" coords="2245,102,2355,129"/>
+<area shape="rect" id="node20" href="$supc_8h.xhtml" title="include/supc.h" alt="" coords="2379,102,2493,129"/>
+<area shape="rect" id="node21" href="$usart_8h.xhtml" title="include/usart.h" alt="" coords="2517,102,2633,129"/>
+<area shape="rect" id="node22" href="$sdramc_8h.xhtml" title="Definitions and function prototype for SDRAMC. " alt="" coords="2657,102,2788,129"/>
+<area shape="rect" id="node23" href="$wdt_8h.xhtml" title="include/wdt.h" alt="" coords="2811,102,2917,129"/>
+<area shape="rect" id="node24" href="$qspi_8h.xhtml" title="Interface for Serial Peripheral Interface (SPI) controller. " alt="" coords="2941,102,3051,129"/>
+<area shape="rect" id="node25" href="$xdmac_8h.xhtml" title="include/xdmac.h" alt="" coords="3075,102,3202,129"/>
+<area shape="rect" id="node26" href="$xdma__hardware__interface_8h.xhtml" title="include/xdma_hardware\l_interface.h" alt="" coords="3227,95,3400,136"/>
+<area shape="rect" id="node27" href="$xdmad_8h.xhtml" title="include/xdmad.h" alt="" coords="3425,102,3551,129"/>
+<area shape="rect" id="node28" href="$qspi__dma_8h.xhtml" title="Implementation of SPI driver, transfer data through DMA. " alt="" coords="3575,102,3721,129"/>
+<area shape="rect" id="node29" href="$usart__dma_8h.xhtml" title="Implementation of USART driver, transfer data through DMA. " alt="" coords="3745,102,3897,129"/>
+<area shape="rect" id="node30" href="$usbhs_8h.xhtml" title="include/usbhs.h" alt="" coords="3922,102,4043,129"/>
+<area shape="rect" id="node31" href="$twi_8h.xhtml" title="Interface for configuration the Two Wire Interface (TWI) peripheral. " alt="" coords="4067,102,4167,129"/>
+</map>

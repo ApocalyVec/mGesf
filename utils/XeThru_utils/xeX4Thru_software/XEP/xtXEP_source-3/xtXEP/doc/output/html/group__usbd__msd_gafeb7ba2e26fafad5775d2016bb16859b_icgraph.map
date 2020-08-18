@@ -1,0 +1,4 @@
+<map id="MED_GetMappedAddress" name="MED_GetMappedAddress">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga7e5d6c7f2b4cece7084910e9567508a3" title="Performs a WRITE (10) command on the specified LUN. " alt="" coords="237,5,340,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#gabc88802a5167eed1f5955df898b6c6bb" title="Performs a READ (10) command on specified LUN. " alt="" coords="237,56,340,83"/>
+</map>

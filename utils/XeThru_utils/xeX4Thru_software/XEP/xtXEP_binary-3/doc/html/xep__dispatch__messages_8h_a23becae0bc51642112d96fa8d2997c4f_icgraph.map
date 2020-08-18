@@ -1,0 +1,5 @@
+<map id="dispatch_message_hostcom_send_reply_float" name="dispatch_message_hostcom_send_reply_float">
+<area shape="rect" id="node2" href="$xep__application__mcp__callbacks_8h.xhtml#a517a6a5e38e78fe052aee8b47822d6ed" title="onMcpX4DriverGetFps" alt="" coords="283,5,445,32"/>
+<area shape="rect" id="node3" href="$xep__application__mcp__callbacks_8h.xhtml#af51dbd5d964702e184cdde97fccc4f40" title="onMcpX4DriverGetFrameArea" alt="" coords="259,56,469,83"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#a47560a41123b4f6b65fed7233f6e8473" title="onMcpX4DriverGetFrameArea\lOffset" alt="" coords="259,107,469,149"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="GMAC_EnableIt" name="GMAC_EnableIt">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga418589cbbef19de6084670d572b6ae27" title="Initialize necessary allocated buffer lists for GMAC Driver to transfer data. " alt="" coords="183,5,329,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga3ea0884def476f9698f1cdbae6b6f3e2" title="Registers pRxCb callback. " alt="" coords="172,56,340,83"/>
+</map>

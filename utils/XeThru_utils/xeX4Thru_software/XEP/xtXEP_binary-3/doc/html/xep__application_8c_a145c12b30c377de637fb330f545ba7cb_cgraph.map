@@ -1,0 +1,5 @@
+<map id="xep_init_memorypoolset_default" name="xep_init_memorypoolset_default">
+<area shape="rect" id="node2" href="$memorypool_8h.xhtml#afaecaf877433c04746ddb6c114499190" title="Get size needed for memory pool. " alt="" coords="241,5,465,32"/>
+<area shape="rect" id="node3" href="$xtmemory_8h.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="268,56,439,83"/>
+<area shape="rect" id="node4" href="$memorypoolset_8h.xhtml#a0286bc57cfca49a6b23417bfa6cd8501" title="Add memory pool. " alt="" coords="232,107,475,133"/>
+</map>

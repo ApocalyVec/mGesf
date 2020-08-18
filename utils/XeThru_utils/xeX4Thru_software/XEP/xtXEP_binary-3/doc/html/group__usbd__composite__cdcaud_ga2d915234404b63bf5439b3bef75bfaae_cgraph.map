@@ -1,0 +1,7 @@
+<map id="CDCAUDDDriver_Initialize" name="CDCAUDDDriver_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="261,5,389,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga11868145aba27b8ca63ab6395439cb0d" title="Initializes a USBDDriver instance with a list of descriptors. " alt="" coords="247,56,403,83"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#ga61ffa29ba9dde8fb06537dec89b665c4" title="Initializes the USB Device CDC serial driver &amp; USBD Driver. " alt="" coords="247,107,402,133"/>
+<area shape="rect" id="node5" href="$group__usbd__aud__fun.xhtml#gafe0d2176139fc21ee46d2b87c9269b96" title="Initializes an USB audio speaker device driver, as well as the underlying USB controller. " alt="" coords="239,157,411,184"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga1fd3982402055e37aa879c199e0b7fee" title="Initializes the USB driver. " alt="" coords="281,208,368,235"/>
+</map>

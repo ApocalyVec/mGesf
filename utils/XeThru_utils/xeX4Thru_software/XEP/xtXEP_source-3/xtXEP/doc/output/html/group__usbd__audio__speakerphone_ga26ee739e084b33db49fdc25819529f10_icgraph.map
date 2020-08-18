@@ -1,0 +1,3 @@
+<map id="AUDDSpeakerPhone_GetCUR" name="AUDDSpeakerPhone_GetCUR">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga17c8f0de49847c1c6fcd8f2ca0ffad64" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="264,5,456,47"/>
+</map>

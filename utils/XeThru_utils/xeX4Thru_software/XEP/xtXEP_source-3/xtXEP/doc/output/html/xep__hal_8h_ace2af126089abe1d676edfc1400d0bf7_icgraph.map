@@ -1,0 +1,7 @@
+<map id="xt_software_reset" name="xt_software_reset">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#a362d4391cf2e203a9ed7b1dbbfe65f25" title="Triggers a crashdump and reset of module. " alt="" coords="235,5,360,32"/>
+<area shape="rect" id="node3" href="$xthousekeeping_8c.xhtml#a992dd5dce07dd564e492d3a3c021d6ad" title="Function to check if safe mode is entered. " alt="" coords="188,56,407,83"/>
+<area shape="rect" id="node4" href="$task__monitor_8c.xhtml#ad45490893a79383d6cd047fa3e4c3638" title="task_monitor" alt="" coords="244,107,351,133"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#af7cff88ca2e2e7bf89b8616a868e2cda" title="onMcpModuleReset" alt="" coords="225,157,370,184"/>
+<area shape="rect" id="node6" href="$xep__application__mcp__callbacks_8h.xhtml#a8f52f6e72bd93b3a11b2c922730ee484" title="onMcpStartBootloader" alt="" coords="214,208,381,235"/>
+</map>

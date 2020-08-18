@@ -1,0 +1,21 @@
+<map id="task_radar" name="task_radar">
+<area shape="rect" id="node2" href="$xtmemory_8h.xhtml#a7e516b79f5a147905446ff71d1fc98fb" title="Free memory allocated by xtmemory_malloc_default. " alt="" coords="165,5,336,32"/>
+<area shape="rect" id="node3" href="$task__monitor_8c.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register task to monitor. " alt="" coords="169,56,332,83"/>
+<area shape="rect" id="node4" href="$x4driver_8h.xhtml#a56631da6259f3784165d78d00e5b0f80" title="Set enable for X4. " alt="" coords="175,107,326,133"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml#a7d0980e5e1fb4f42a5d10102c91609f4" title="Delays the execution for the specified number of microseconds. " alt="" coords="202,157,299,184"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml#ab0d28c0bbd203c3d66b4e46cf4e7fb5f" title="Gets default radar configuration. " alt="" coords="410,213,565,254"/>
+<area shape="rect" id="node7" href="$x4driver_8h.xhtml#a86dbadcb2e415d23600ef1bb31c9dbde" title="Initiates x4driver. " alt="" coords="201,492,300,519"/>
+<area shape="rect" id="node8" href="$xep__hal_8h.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="163,543,338,569"/>
+<area shape="rect" id="node9" href="$task__radar_8c.xhtml#aaf9dce020103065a449faffb7bfdded2" title="_x4driver_test_io_connectivity" alt="" coords="144,593,357,620"/>
+<area shape="rect" id="node10" href="$x4driver_8h.xhtml#a8bc96b0db173f49cfe59027d9e95f600" title="x4driver_check_configuration" alt="" coords="147,644,354,671"/>
+<area shape="rect" id="node11" href="$x4driver_8h.xhtml#a3d4fbcf15fcf3736ef68613007caca8e" title="x4driver_set_sweep\l_trigger_control" alt="" coords="177,695,324,737"/>
+<area shape="rect" id="node12" href="$x4driver_8h.xhtml#a6c801c9a8b3010ebe47eb1ee881c9503" title="Calibrated frame offset in meters. " alt="" coords="415,299,560,341"/>
+<area shape="rect" id="node13" href="$x4driver_8h.xhtml#aaa39bc07728273218162fc63a0bcb864" title="x4driver_set_tx_power" alt="" coords="405,383,569,409"/>
+<area shape="rect" id="node14" href="$x4driver_8h.xhtml#ab5eb8602c52123f84b4dfee408ef2cc7" title="x4driver_set_prf_div" alt="" coords="176,761,325,788"/>
+<area shape="rect" id="node15" href="$x4driver_8h.xhtml#a3bd645021a42b838c9e3b3ff2f021d50" title="x4driver_set_tx_center\l_frequency" alt="" coords="167,813,334,854"/>
+<area shape="rect" id="node16" href="$task__monitor_8c.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Reset counter to indicate that task is alive. " alt="" coords="179,879,322,905"/>
+<area shape="rect" id="node17" href="$task__radar_8c.xhtml#a777b1becbbecb18522cf2c6dc047532b" title="radar_certification\l_handler" alt="" coords="182,310,319,351"/>
+<area shape="rect" id="node18" href="$task__radar_8c.xhtml#a1f0b2f52d809a8141147add6eaa0279a" title="read_and_send_radar\l_frame" alt="" coords="170,375,331,417"/>
+<area shape="rect" id="node19" href="$x4driver_8h.xhtml#a03652f4897873d46d0534336df7f29fe" title="Will trigger a radar sweep. " alt="" coords="172,929,329,956"/>
+<area shape="rect" id="node20" href="$x4driver_8h.xhtml#af07f7d2f1758a60257ab9df3426c9a37" title="Action timer callback. " alt="" coords="179,981,322,1022"/>
+</map>

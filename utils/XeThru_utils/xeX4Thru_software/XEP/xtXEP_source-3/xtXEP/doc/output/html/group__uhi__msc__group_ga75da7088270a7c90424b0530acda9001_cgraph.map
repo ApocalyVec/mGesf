@@ -1,0 +1,6 @@
+<map id="uhi_msc_scsi_write_10" name="uhi_msc_scsi_write_10">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="274,5,313,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a8be1505361ded3e52f05ea51b17bc334" title="Selects a LUN. " alt="" coords="220,56,367,83"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#ae40b333993e7c9aba64dc65f41ede8c4" title="Sends the CBW packet. " alt="" coords="240,107,347,133"/>
+<area shape="rect" id="node5" href="$uhi__msc_8c.xhtml#a64454d94daa661f64493869cff34f1af" title="Decodes the result of scsi WRITE 10 command. " alt="" coords="222,158,365,199"/>
+</map>

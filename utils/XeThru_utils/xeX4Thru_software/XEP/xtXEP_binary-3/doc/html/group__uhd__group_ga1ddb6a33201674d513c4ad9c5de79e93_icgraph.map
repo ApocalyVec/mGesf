@@ -1,0 +1,4 @@
+<map id="USBH_HAL_PhaseControlSetup" name="USBH_HAL_PhaseControlSetup">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="292,5,453,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gafb1043e05189c04ded956208eea3e2b5" title="USBH_HAL_ControlReqEnd" alt="" coords="276,56,469,83"/>
+</map>

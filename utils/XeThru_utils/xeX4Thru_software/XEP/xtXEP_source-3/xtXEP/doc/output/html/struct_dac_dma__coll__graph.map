@@ -1,0 +1,5 @@
+<map id="DacDma" name="DacDma">
+<area shape="rect" id="node2" href="$struct___xdmad.xhtml" title="DMA driver instance. " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node3" href="$struct_dac_cmd.xhtml" title="Dac Transfer Request prepared by the application upper layer. " alt="" coords="104,5,181,32"/>
+<area shape="rect" id="node4" href="$struct_dacc.xhtml" title="Dacc hardware registers. " alt="" coords="274,5,329,32"/>
+</map>

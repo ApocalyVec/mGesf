@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['nonmaskableint_5firqn',['NonMaskableInt_IRQn',['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30',1,'NonMaskableInt_IRQn():&#160;samg55g18.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30',1,'NonMaskableInt_IRQn():&#160;samg55g19.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30',1,'NonMaskableInt_IRQn():&#160;samg55j18.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30',1,'NonMaskableInt_IRQn():&#160;samg55j19.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30',1,'NonMaskableInt_IRQn():&#160;samg55n19.h']]],
+  ['not_5fsupported',['NOT_SUPPORTED',['../group__freertos__service__group.xhtml#ggafa87234f31b645f304545b3def15582ca9bf1138c8c1f4519e5b814514b750ca3',1,'freertos_peripheral_control.h']]],
+  ['number_5fof_5fmessage_5fids',['NUMBER_OF_MESSAGE_IDS',['../xtserial__definitions_8h.xhtml#a1b6125d85b599c036810f1018241c876a7364826bca3f73834d25be0a72b1e5b8',1,'xtserial_definitions.h']]]
+];

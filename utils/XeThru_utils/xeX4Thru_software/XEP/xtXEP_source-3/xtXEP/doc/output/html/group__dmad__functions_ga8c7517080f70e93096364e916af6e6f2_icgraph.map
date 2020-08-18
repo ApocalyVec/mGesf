@@ -1,0 +1,10 @@
+<map id="XDMAD_Initialize" name="XDMAD_Initialize">
+<area shape="rect" id="node2" href="$startup__sams70_8c.xhtml#a7cecd108fd88dec10ce2e97ad905e4ef" title="Performs the low&#45;level initialization of the chip. " alt="" coords="237,5,336,32"/>
+<area shape="rect" id="node3" href="$afe__dma_8c.xhtml#accc7edd40048cf4c851c6b7d7680f008" title="Configure the DMA Channels: 0 RX. " alt="" coords="186,56,387,83"/>
+<area shape="rect" id="node4" href="$dac__dma_8c.xhtml#a099e74bad2749ffafa6f3861e5e57456" title="Configure the DMA Channels: 0 RX. " alt="" coords="184,107,389,133"/>
+<area shape="rect" id="node5" href="$qspi__dma_8c.xhtml#a74e450e06e878d1f179a16359cc23485" title="Initializes the pQspidma structure and the corresponding QSPI &amp; DMA . " alt="" coords="221,157,352,184"/>
+<area shape="rect" id="node6" href="$spi__dma_8c.xhtml#abdde34d0acc2327d589c8fad97aa0e0f" title="Configure the DMA Channels: 0 RX, 1 TX. " alt="" coords="181,208,392,235"/>
+<area shape="rect" id="node7" href="$twid_8c.xhtml#a5a93a963b33545933b831ca77a89c2a2" title="Initializes a TWI driver instance, using the given TWI peripheral. " alt="" coords="215,259,358,285"/>
+<area shape="rect" id="node8" href="$uart__dma_8c.xhtml#a8b463d15a44a1b7058c8d1f259c84fcf" title="Initializes the UartDma structure and the corresponding UART &amp; DMA . " alt="" coords="220,309,353,336"/>
+<area shape="rect" id="node9" href="$usart__dma_8c.xhtml#a0f760ac1d4ebf29b670399b45ba1ee33" title="Initializes the USARTDma structure and the corresponding USART &amp; DMA . " alt="" coords="215,360,358,387"/>
+</map>

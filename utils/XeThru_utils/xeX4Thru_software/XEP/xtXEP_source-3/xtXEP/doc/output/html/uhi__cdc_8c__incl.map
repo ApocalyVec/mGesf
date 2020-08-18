@@ -1,0 +1,7 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/host/cdc/uhi_cdc.c" name="src/hal/x4m0x_s70/libraries/libusb/host/cdc/uhi_cdc.c">
+<area shape="rect" id="node3" href="$_u_s_b_h_driver_8h.xhtml" title="Common API for USB Host Drivers (UHD) " alt="" coords="65,244,174,271"/>
+<area shape="rect" id="node4" href="$_u_s_b_descriptors_8h.xhtml" title="USBDescriptors.h" alt="" coords="5,319,140,345"/>
+<area shape="rect" id="node5" href="$_u_s_b_h_8h.xhtml" title="Interface of the USB Host Controller (UHC) " alt="" coords="267,169,339,196"/>
+<area shape="rect" id="node6" href="$_c_d_c_descriptors_8h.xhtml" title="Definitions and classes for USB CDC class descriptors. " alt="" coords="273,95,408,121"/>
+<area shape="rect" id="node7" href="$uhi__cdc_8h.xhtml" title="USB host driver for Communication Device Class interface. " alt="" coords="166,95,249,121"/>
+</map>

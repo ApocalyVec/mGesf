@@ -1,0 +1,4 @@
+<map id="DBG_Configure" name="DBG_Configure">
+<area shape="rect" id="node2" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="172,5,283,32"/>
+<area shape="rect" id="node3" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="331,31,495,57"/>
+</map>

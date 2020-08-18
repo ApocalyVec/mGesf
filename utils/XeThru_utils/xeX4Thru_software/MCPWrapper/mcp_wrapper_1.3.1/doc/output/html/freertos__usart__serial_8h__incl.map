@@ -1,0 +1,6 @@
+<map id="examples/atmel_samg55/src/ASF/common/services/freertos/sam/freertos_usart_serial.h" name="examples/atmel_samg55/src/ASF/common/services/freertos/sam/freertos_usart_serial.h">
+<area shape="rect" id="node2" href="$_free_r_t_o_s_8h.xhtml" title="FreeRTOS.h" alt="" coords="5,213,100,240"/>
+<area shape="rect" id="node3" href="$task_8h.xhtml" title="task.h" alt="" coords="53,131,111,158"/>
+<area shape="rect" id="node4" href="$semphr_8h.xhtml" title="semphr.h" alt="" coords="212,213,288,240"/>
+<area shape="rect" id="node5" href="$freertos__peripheral__control_8h.xhtml" title="FreeRTOS Peripheral Control API Functions. " alt="" coords="135,124,263,165"/>
+</map>

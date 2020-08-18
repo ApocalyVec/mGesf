@@ -1,0 +1,6 @@
+<map id="PMC_IsPeriphEnabled" name="PMC_IsPeriphEnabled">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#gaf3888b57bf46a3d153daa692d739f346" title="Enable MCI peripheral access clock. " alt="" coords="253,5,389,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="231,56,410,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#ga738c63d27bd4c464410b95c7aea8126b" title="Enables the clock of the UDP peripheral. " alt="" coords="221,107,420,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#gaa50e34166752f405f9fc09d5c9ac3273" title="Enables the clock of the UDP peripheral. " alt="" coords="212,157,429,184"/>
+</map>

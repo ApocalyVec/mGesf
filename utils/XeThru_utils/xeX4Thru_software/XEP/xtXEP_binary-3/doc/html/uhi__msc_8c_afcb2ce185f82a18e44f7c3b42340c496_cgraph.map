@@ -1,0 +1,4 @@
+<map id="uhi_msc_scsi_inquiry" name="uhi_msc_scsi_inquiry">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ae40b333993e7c9aba64dc65f41ede8c4" title="Sends the CBW packet. " alt="" coords="252,5,359,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#aaa5cbc056bcc00f650fda1f1c111c7cd" title="Call the callback at the end of scsi INQUIRY command. " alt="" coords="208,56,403,83"/>
+</map>

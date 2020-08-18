@@ -1,0 +1,5 @@
+<map id="SMC_NFC_SendCommand" name="SMC_NFC_SendCommand">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#a5ab724f8c07842edac07a994f4cd35e0" title="Clear the corresponding interrupt flag. " alt="" coords="287,5,427,32"/>
+<area shape="rect" id="node3" href="$smc_8c.xhtml#ad7aaf9e2f36b7f6eb6660973a666d340" title="Check if the host controller is busy. " alt="" coords="275,56,438,83"/>
+<area shape="rect" id="node4" href="$smc_8c.xhtml#aa44b0a4952cd572d0d0ede329e91ecc6" title="Wait for NFC command has done. " alt="" coords="244,107,469,133"/>
+</map>

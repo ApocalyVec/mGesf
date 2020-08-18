@@ -1,0 +1,4 @@
+<map id="freertos_obtain_peripheral_access_mutex" name="freertos_obtain_peripheral_access_mutex">
+<area shape="rect" id="node2" href="$task_8h.xhtml#a85df14f56902e5eadee1b20789aa272d" title="vTaskSetTimeOutState" alt="" coords="228,5,383,32"/>
+<area shape="rect" id="node3" href="$task_8h.xhtml#a0f786f440ae1a3f491a3b1f44a580cf7" title="xTaskCheckForTimeOut" alt="" coords="224,56,387,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="portTASK_FUNCTION" name="portTASK_FUNCTION">
+<area shape="rect" id="node2" href="$tasks_8c.xhtml#a903096c962a2bc907f4b902a7d42302a" title="prvCheckTasksWaitingTermination" alt="" coords="203,5,424,32"/>
+<area shape="rect" id="node3" href="$main_8c.xhtml#a97fd430f36f8b065226e2bff9bad1de5" title="This function is called by FreeRTOS idle task. " alt="" coords="243,56,384,83"/>
+</map>

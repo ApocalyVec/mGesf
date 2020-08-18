@@ -1,0 +1,4 @@
+<map id="USBH_dev_is_high_speed_support" name="USBH_dev_is_high_speed_support">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="240,5,401,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga2d73340a79aefd4d383d702946479d91" title="Callback used to signal the end of a setup request. " alt="" coords="241,57,400,98"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="USBD_Halt" name="USBD_Halt">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="151,5,357,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga1ef15a39c9d18bb5b326548c04711108" title="Post&#45;processes a command given the case identified during the pre&#45;processing step. " alt="" coords="147,56,361,83"/>
+</map>

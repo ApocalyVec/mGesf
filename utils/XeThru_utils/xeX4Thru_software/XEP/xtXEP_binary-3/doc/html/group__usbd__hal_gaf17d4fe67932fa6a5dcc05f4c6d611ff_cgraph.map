@@ -1,0 +1,15 @@
+<map id="USBD_HAL_ConfigureEP" name="USBD_HAL_ConfigureEP">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a23bc7c30ae1779f56b28b82cf5153866" title="Enable or disable USB address. " alt="" coords="259,5,425,32"/>
+<area shape="rect" id="node3" href="$group__usb__descriptor.xhtml#ga13a7c1d2365ab7e0d6a8f70681b1a018" title="Returns the number of an endpoint given its descriptor. " alt="" coords="256,57,428,98"/>
+<area shape="rect" id="node4" href="$group__usb__descriptor.xhtml#ga4bff8a54ec871a1e3a4008ce41219ea9" title="Returns the type of an endpoint given its descriptor. " alt="" coords="256,122,428,163"/>
+<area shape="rect" id="node5" href="$group__usb__descriptor.xhtml#ga4be14e7e4e819fbc63530cf1eb32efd1" title="Returns the direction of an endpoint given its descriptor. " alt="" coords="256,187,428,229"/>
+<area shape="rect" id="node6" href="$group__usb__descriptor.xhtml#gad78fdcaf97fc4069be7995caccb1e9ca" title="Returns the maximum size of a packet (in bytes) on an endpoint given its descriptor. " alt="" coords="256,253,428,294"/>
+<area shape="rect" id="node7" href="$group__usbd__hal.xhtml#ga5e6b01495743675aae106e51aee3d1e3" title="Handles a completed transfer on the given endpoint, invoking the configured callback if any..." alt="" coords="260,319,424,345"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#aaefdcd5f8be021f6ebffcbb4e7630079" title="Enables interrupt for a given endpoint. " alt="" coords="267,369,417,396"/>
+<area shape="rect" id="node9" href="$usbhs_8h.xhtml#a23400301b1f5ce8e97834db2a2a2cc1b" title="Set Endpoints configuration Bank size, type and direction. " alt="" coords="262,420,422,447"/>
+<area shape="rect" id="node10" href="$usbhs_8h.xhtml#a95e89705c54999e79a3a53b6505e95e6" title="Allocate Endpoint memory. " alt="" coords="253,471,431,497"/>
+<area shape="rect" id="node11" href="$usbhs_8h.xhtml#aafe79c1addd8c03522a0228ae4b6dae3" title="Enables or disables endpoint. " alt="" coords="275,521,409,548"/>
+<area shape="rect" id="node12" href="$usbhs_8h.xhtml#a6e9251af935e4867afa52cd306e8c699" title="Enables an interrupt type for a given endpoint. " alt="" coords="253,572,431,599"/>
+<area shape="rect" id="node13" href="$usbhs_8h.xhtml#a3b1095cf2511e7d84ba5e9f47f017c0e" title="Sets ISO endpoint&#39;s Number of Transfer for High Speed. " alt="" coords="267,623,417,649"/>
+<area shape="rect" id="node14" href="$usbhs_8h.xhtml#af318fefb03c995978a740a8b1733aaa0" title="Enable or disable Auto switch of banks. " alt="" coords="231,673,453,700"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="udd_ctrl_stall_data" name="udd_ctrl_stall_data">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#ga80494c67ce9cbd4ee8eb5e7fa5c19cd6" title="Managed reception of SETUP packet on control endpoint. " alt="" coords="196,5,373,32"/>
+<area shape="rect" id="node3" href="$group__udd__udphs__group.xhtml#ga0a56388130817f0cd070dba04842740f" title="Managed reception of OUT packet on control endpoint. " alt="" coords="203,56,366,83"/>
+</map>

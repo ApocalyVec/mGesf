@@ -1,0 +1,5 @@
+<map id="USBHS_GetPipeEpAddr" name="USBHS_GetPipeEpAddr">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="232,5,387,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga38980ecff58f484bbb915b6efe6136b1" title="USBH_HAL_GetPipe" alt="" coords="234,56,385,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#gaf8e9ff0a2565377088b95ef2b31787de" title="USBH_HAL_PipeXfrEnd" alt="" coords="225,107,393,133"/>
+</map>

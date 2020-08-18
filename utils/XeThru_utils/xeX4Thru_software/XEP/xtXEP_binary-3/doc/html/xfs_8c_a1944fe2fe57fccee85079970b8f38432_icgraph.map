@@ -1,0 +1,5 @@
+<map id="xfs_clear_file" name="xfs_clear_file">
+<area shape="rect" id="node2" href="$xfs_8h.xhtml#a31395d7a15d30dbd0e24e0f6800dccf2" title="Commits the file allocation and file contents to flash. " alt="" coords="181,5,302,32"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#aab3ec81dba994ab42e047561a13c5e27" title="Creates and opens a new file with given type and identifiers with an empty content of given size..." alt="" coords="156,57,327,98"/>
+<area shape="rect" id="node4" href="$xtfile_8c.xhtml#ac05fab0f49744c5d44341417604533d8" title="Clears the entire file contents. " alt="" coords="196,123,287,149"/>
+</map>

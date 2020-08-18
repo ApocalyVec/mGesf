@@ -1,0 +1,14 @@
+<map id="mcpw_demo_upgrade_x4m300" name="mcpw_demo_upgrade_x4m300">
+<area shape="rect" id="node2" href="$_linux_module_io_factory_8cpp.xhtml#a0bea45311175fcfdbcffa666d570dc48" title="createModuleIo" alt="" coords="283,5,394,32"/>
+<area shape="rect" id="node3" href="$class_module_io.xhtml#a882e474a2b69d8c6ca6b8fc3b7e22242" title="ModuleIo::open" alt="" coords="283,56,394,83"/>
+<area shape="rect" id="node4" href="$mcp__wrapper_8c.xhtml#a8efb91e9c3d5560175665b4d761dc3c1" title="mcpw_get_instance_size" alt="" coords="255,107,423,133"/>
+<area shape="rect" id="node5" href="$mcp__wrapper_8c.xhtml#a084d5ccbec6eb410307e89841bd01dde" title="mcpw_init" alt="" coords="299,157,379,184"/>
+<area shape="rect" id="node6" href="$main_8cpp.xhtml#aaee208ebf2b292e2ee902fc38f03e6d3" title="[MCPW Platform Methods] " alt="" coords="273,208,404,235"/>
+<area shape="rect" id="node7" href="$main_8cpp.xhtml#a52b9d69168805fb3152bb63f74bd4bde" title="mcpw_wait_for_response" alt="" coords="255,259,422,285"/>
+<area shape="rect" id="node8" href="$main_8cpp.xhtml#a096853bdfdec199c03de9b0933397a3c" title="mcpw_response_ready" alt="" coords="261,309,416,336"/>
+<area shape="rect" id="node9" href="$main_8cpp.xhtml#a0961e6647507bdf05de36c253e814ed5" title="mcpw_delay" alt="" coords="291,360,386,387"/>
+<area shape="rect" id="node10" href="$main_8cpp.xhtml#a0eca39bc48d609c0c32226c919cc5cd3" title="readThreadMethod" alt="" coords="274,411,403,437"/>
+<area shape="rect" id="node11" href="$mcp__wrapper_8c.xhtml#a536f04f2d9c7db14ffe361620d4d158a" title="mcpw_set_sensor_mode" alt="" coords="255,461,422,488"/>
+<area shape="rect" id="node12" href="$mcp__wrapper_8c.xhtml#a801e1df2def7e7aff114711ac09c16be" title="mcpw_get_systeminfo" alt="" coords="263,512,414,539"/>
+<area shape="rect" id="node13" href="$mcp__wrapper_8c.xhtml#a76a5284810b882ecb356ef688c35cdb9" title="mcpw_firmware_upgrade" alt="" coords="257,563,421,589"/>
+</map>

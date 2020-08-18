@@ -1,0 +1,10 @@
+<map id="USARTD_EnableTxChannels" name="USARTD_EnableTxChannels">
+<area shape="rect" id="node2" href="$usart_8h.xhtml#a18a00bc79be656904ce8c7043f4c6d19" title="Enables or disables the transmitter of an USART peripheral. " alt="" coords="251,5,467,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="269,56,449,83"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="283,107,435,133"/>
+<area shape="rect" id="node5" href="$usart__dma_8c.xhtml#a90f30409b8b9bd5cf2b4e7eea6d59fde" title="USART xDMA Rx callback Invoked on USART DMA reception done. " alt="" coords="299,157,418,184"/>
+<area shape="rect" id="node6" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="269,208,448,235"/>
+<area shape="rect" id="node7" href="$usart__dma_8c.xhtml#a9c980b56e34d2c15f6b0f179b0086313" title="Configure the USART tx DMA source with Linker List mode. " alt="" coords="292,259,425,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga47a0f52794068d076c9147aa3cb8d8a6" title="Get Active Interrupt. " alt="" coords="297,309,420,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="297,360,421,387"/>
+</map>

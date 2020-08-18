@@ -1,0 +1,4 @@
+<map id="AUDD_GetCtlStream" name="AUDD_GetCtlStream">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga489f97d62376e824385055765a31e17b" title="Handle the SET_CUR request. " alt="" coords="210,5,327,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#gaa2c1c8f41b4dbb0494310c2bd60aafaf" title="Handle the GET_CUR request. " alt="" coords="209,56,328,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverSetPulsesPerStep" name="onMcpX4DriverSetPulsesPerStep">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a7ac1a5f45b02284571e297c672ca61de" title="Sets pulses per step. " alt="" coords="314,5,462,47"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="285,71,491,112"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="285,136,491,177"/>
+</map>

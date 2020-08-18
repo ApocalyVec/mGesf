@@ -1,0 +1,8 @@
+<map id="GetTicks" name="GetTicks">
+<area shape="rect" id="node2" href="$twid_8c.xhtml#a13f06b4cc25a29302d3c932e82136599" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="145,5,236,32"/>
+<area shape="rect" id="node3" href="$twid_8c.xhtml#a67c6f278372fcb213e7848929db89d3f" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="145,56,236,83"/>
+<area shape="rect" id="node4" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="129,107,252,133"/>
+<area shape="rect" id="node5" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="129,157,252,184"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc.xhtml#gab841b1a9dc617afc102ab5badd8ee656" title="_UsbDataSent" alt="" coords="133,208,248,235"/>
+<area shape="rect" id="node7" href="$group__usbd__cdc.xhtml#gadfeadaa787932fc6f8ef50a53fdb2ed0" title="_FlushUsbTxBuffers" alt="" coords="300,208,447,235"/>
+</map>

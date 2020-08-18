@@ -1,0 +1,8 @@
+<map id="USBH_HAL_PipeAbort" name="USBH_HAL_PipeAbort">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#af0f50fcf9d7a16354a3a3a1b22140a4c" title="Gets USB host interrupt status. " alt="" coords="244,5,412,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#aa347527d17e6ee48869cabe3344f0b8e" title="Gets USB host interrupt status. " alt="" coords="229,56,427,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#acd60bcdb7e5420ac4cfb8b457838f9ba" title="Gets USB host interrupt status. " alt="" coords="218,107,438,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#a32c56acaace52b440a308d9bce8cafff" title="Gets USB host interrupt status. " alt="" coords="216,157,440,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#ad212cc35348ff023533b9a47aba79345" title="Setup the USBHS DMA. " alt="" coords="229,208,427,235"/>
+<area shape="rect" id="node7" href="$group__uhd__group.xhtml#gaf8e9ff0a2565377088b95ef2b31787de" title="USBH_HAL_PipeXfrEnd" alt="" coords="244,259,412,285"/>
+</map>

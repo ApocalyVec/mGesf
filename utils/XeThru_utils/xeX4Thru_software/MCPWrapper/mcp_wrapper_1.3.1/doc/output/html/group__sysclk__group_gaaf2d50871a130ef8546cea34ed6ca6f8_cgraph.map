@@ -1,0 +1,9 @@
+<map id="sysclk_set_source" name="sysclk_set_source">
+<area shape="rect" id="node2" href="$group__sam__drivers__pmc__group.xhtml#ga5c765cb31e5915b5708079d7b59332b3" title="Set the source of the MCK. " alt="" coords="193,5,343,32"/>
+<area shape="rect" id="node3" href="$system__samg55_8h.xhtml#ae0c36a9591fe6e9c45ecb21a794f0f0f" title="Updates the SystemCoreClock with current core Clock retrieved from cpu registers. ..." alt="" coords="184,56,352,83"/>
+<area shape="rect" id="node4" href="$group__sysclk__group.xhtml#ga8372ffe2210c0caee63237271fdec131" title="sysclk_enable_usb" alt="" coords="201,107,335,133"/>
+<area shape="rect" id="node5" href="$group__pll__group.xhtml#gaf4808844971419dcc305ad41a2104d0a" title="Enable the source of the pll. " alt="" coords="205,157,331,184"/>
+<area shape="rect" id="node6" href="$group__pll__group.xhtml#gac963cb7ae2da65162dc3955129ff846c" title="pll_enable" alt="" coords="228,208,308,235"/>
+<area shape="rect" id="node7" href="$group__pll__group.xhtml#gaa10c871c499867b1db87f9cd1d37ef0f" title="Wait for PLL pll_id to become locked. " alt="" coords="209,259,327,285"/>
+<area shape="rect" id="node8" href="$group__sysclk__group.xhtml#gad110a0837c9e910d788b9b73fd3d92dd" title="sysclk_disable_usb" alt="" coords="200,309,336,336"/>
+</map>

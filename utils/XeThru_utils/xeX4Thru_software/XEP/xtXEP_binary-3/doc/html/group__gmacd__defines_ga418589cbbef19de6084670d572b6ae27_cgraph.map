@@ -1,0 +1,9 @@
+<map id="GMACD_InitTransfer" name="GMACD_InitTransfer">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#gab9a3c958b148a17ac3bff5cbc107b3bc" title="Setup DMA configuration register. " alt="" coords="221,5,381,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga0f4f9a29244618764ca63fb4c2ca058c" title="Disable RX &amp; reset registers and descriptor list. " alt="" coords="237,56,365,83"/>
+<area shape="rect" id="node4" href="$group__gmac__defines.xhtml#ga3caa9d3dc5ec1e3e32e9e017702ef51e" title="Enable/Disable GMAC receive. " alt="" coords="453,95,611,121"/>
+<area shape="rect" id="node5" href="$group__gmacd__defines.xhtml#gaa4fcf5f239a30ef23cc9ba6b40054117" title="Disable TX &amp; reset registers and descriptor list. " alt="" coords="237,157,364,184"/>
+<area shape="rect" id="node6" href="$group__gmac__defines.xhtml#ga43e952eb0a8ec8d8131ac69b6a30842d" title="Enable/Disable GMAC transmit. " alt="" coords="449,171,615,197"/>
+<area shape="rect" id="node7" href="$group__gmac__defines.xhtml#gaf6fe272b7c94b53548c728c9b336cc5e" title="Enable/Disable statistics registers writing. " alt="" coords="200,259,401,285"/>
+<area shape="rect" id="node8" href="$group__gmac__defines.xhtml#ga7ada4663e83402d9ca6da62f166e115f" title="Enable interrupt(s). " alt="" coords="241,309,360,336"/>
+</map>

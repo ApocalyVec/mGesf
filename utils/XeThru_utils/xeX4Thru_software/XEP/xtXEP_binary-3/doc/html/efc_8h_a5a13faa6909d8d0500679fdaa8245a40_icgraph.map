@@ -1,0 +1,4 @@
+<map id="EFC_GetResult" name="EFC_GetResult">
+<area shape="rect" id="node2" href="$flashd_8c.xhtml#a0e4b85a84bb516ced1e39bd110ebce7d" title="Returns the number of locked regions inside the given address range. " alt="" coords="181,5,317,32"/>
+<area shape="rect" id="node3" href="$flashd_8c.xhtml#a1ff2939b103369d0a692d2e30b526e0c" title="Check if the given GPNVM bit is set or not. " alt="" coords="168,56,329,83"/>
+</map>

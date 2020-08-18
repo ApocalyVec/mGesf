@@ -1,0 +1,8 @@
+<map id="xep_init" name="xep_init">
+<area shape="rect" id="node2" href="$xep__dispatch_8h.xhtml#a03c9c7c002d4ab6c9e05ec59c6027378" title="Get size of dispatch struct. " alt="" coords="147,5,345,32"/>
+<area shape="rect" id="node3" href="$xtmemory_8h.xhtml#ac094f55ba76fe2ae6e6b584f62ede7e0" title="Allocate memory from default location. " alt="" coords="152,56,340,83"/>
+<area shape="rect" id="node4" href="$xep__dispatch_8h.xhtml#a798c82ddd018ae2bb35f86cd6b92441b" title="Create dispatch. " alt="" coords="184,107,308,133"/>
+<area shape="rect" id="node5" href="$xep__dispatch_8h.xhtml#af76139b0d9cdce00e42b5b18bd8df714" title="Configure which notify value the dispatcher should use to notify tasks. " alt="" coords="173,158,319,199"/>
+<area shape="rect" id="node6" href="$memorypoolset_8h.xhtml#ab451f5ec40da31efb9453b2689a1ad98" title="Get size needed for memory pool set structure. " alt="" coords="124,224,368,251"/>
+<area shape="rect" id="node7" href="$memorypoolset_8h.xhtml#a39b88a970765c27734129679a999960b" title="Create memory pool set. " alt="" coords="161,275,331,301"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="MCAN_ClearMessageStoredToRxFifo1" name="MCAN_ClearMessageStoredToRxFifo1">
+<area shape="rect" id="node2" href="$group__can__module.xhtml#ga9b35cd79fb5eeec8cf1ba7247b25a646" title="Initializes the MCAN hardware for giving peripheral. " alt="" coords="338,5,425,32"/>
+<area shape="rect" id="node3" href="$group__can__module.xhtml#gac443cf440414e78292b1db93763baaf2" title="Enables a FUTURE switch to FD mode (tx &amp; rx payloads up to 64 bytes) but transmits WITHOUT bit rate s..." alt="" coords="309,56,454,83"/>
+<area shape="rect" id="node4" href="$group__can__module.xhtml#ga70121d88d13dc887de45ec346a080efb" title="Enables a FUTURE switch to FD mode (tx &amp; rx payloads up to 64 bytes) and transmits WITH bit rate swit..." alt="" coords="287,107,476,149"/>
+<area shape="rect" id="node5" href="$group__can__module.xhtml#gaf7258e6de240c101aa46f33a26c87615" title="Initializes MCAN queue for TX INIT must be set &#45; so this should be called between MCAN_Init() and MCA..." alt="" coords="310,173,453,200"/>
+<area shape="rect" id="node6" href="$group__can__module.xhtml#ga97adc21dfdf714818018ae78b51bf02e" title="Initializes the MCAN in loop back mode. " alt="" coords="307,224,455,251"/>
+<area shape="rect" id="node7" href="$group__can__module.xhtml#ga712fa4d48e3fd1365a08a91cd3932104" title="Enable MCAN peripheral. " alt="" coords="326,275,437,301"/>
+<area shape="rect" id="node8" href="$group__can__module.xhtml#gac2744eec323b9b5ba844c433362d0501" title="Requests switch to Iso11898&#45;1 (standard / classic) mode (tx &amp; rx payloads up to 8 bytes)..." alt="" coords="285,325,477,352"/>
+<area shape="rect" id="node9" href="$group__can__module.xhtml#ga3cab9ee5985894d07f48d0d5edee6ab4" title="Requests switch to FD mode (tx &amp; rx payloads up to 64 bytes) but transmits WITHOUT bit rate switching..." alt="" coords="314,376,449,403"/>
+<area shape="rect" id="node10" href="$group__can__module.xhtml#gaa1d5fa926fb534c0dea67923865fb356" title="Request switch to FD mode (tx &amp; rx payloads up to 64 bytes) and transmits WITH bit rate switching..." alt="" coords="271,427,492,453"/>
+<area shape="rect" id="node11" href="$group__can__module.xhtml#gac00448534ba8dbcf25329259d2312c10" title="Switch on loop back mode. " alt="" coords="308,477,455,504"/>
+<area shape="rect" id="node12" href="$group__can__module.xhtml#ga7e36eef54b4e8a426a10c540de9457be" title="Switch off loop back mode. " alt="" coords="308,528,455,555"/>
+<area shape="rect" id="node13" href="$group__can__module.xhtml#ga51d74c9a24d0321d3a0846422f95c70a" title="Enable message line and message stored to Dedicated Receive Buffer Interrupt Line. " alt="" coords="274,579,489,621"/>
+<area shape="rect" id="node14" href="$group__can__module.xhtml#ga7188d34f789a5ba22b48cb650320c12e" title="Configures a Dedicated TX Buffer. " alt="" coords="288,645,475,672"/>
+<area shape="rect" id="node15" href="$group__can__module.xhtml#gab682df72e52163a4bbd6f89fe25a2459" title="Send Tx buffer. " alt="" coords="292,696,471,723"/>
+<area shape="rect" id="node16" href="$group__can__module.xhtml#gace77a1a2cb9ad1ae872ce9d6a163f732" title="Adds Message to TX Fifo / Queue. " alt="" coords="306,747,457,773"/>
+<area shape="rect" id="node17" href="$group__can__module.xhtml#gaee6e3a1e95ef603e33da5421167ad776" title="Check if data transmitted from buffer/fifo/queue. " alt="" coords="312,797,451,824"/>
+<area shape="rect" id="node18" href="$group__can__module.xhtml#ga6e83faedb469981e30a552ab125ad181" title="Configure RX Buffer Filter ID must match exactly for a RX Buffer Filter. " alt="" coords="286,848,477,875"/>
+<area shape="rect" id="node19" href="$group__can__module.xhtml#ga1c6df6cc059e7246465ae919dc6dd995" title="Configure Classic Filter Classic Filters direct accepted messages to a FIFO &amp; include both a ID and a..." alt="" coords="283,899,480,925"/>
+<area shape="rect" id="node20" href="$group__can__module.xhtml#ga6d84b91cbb497467aedb98b53af1db45" title="check if data received into buffer " alt="" coords="268,949,495,976"/>
+<area shape="rect" id="node21" href="$group__can__module.xhtml#gaa6911926348cdcfd85d9931096fafecc" title="Get Rx buffer. " alt="" coords="296,1000,467,1027"/>
+<area shape="rect" id="node22" href="$group__can__module.xhtml#ga3c0b98bcf7b3c0520d70431cc72788cc" title="Get from the receive FIFO and place in a application mailbox. " alt="" coords="299,1051,464,1077"/>
+</map>

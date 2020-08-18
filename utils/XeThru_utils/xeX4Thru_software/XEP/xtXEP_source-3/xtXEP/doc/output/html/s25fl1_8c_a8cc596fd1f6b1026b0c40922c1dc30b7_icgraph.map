@@ -1,0 +1,7 @@
+<map id="S25FL1D_ReadStatus" name="S25FL1D_ReadStatus">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a4c6fd4ef041626a21913d696dc98b2e0" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="212,5,447,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#adcd9d89815104978796ebe1981059a16" title="Issue &#39;CContinuous Read Mode&#39; command, the device can return to normal SPI command mode..." alt="" coords="221,56,438,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a203cdd2db6776cf3b6884d2dd6817cdf" title="Unprotected the contents of the serial flash device. " alt="" coords="254,107,405,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#ae1170240dc2ab7b96831e4bc91359f22" title="Unprotected the contents of the serial flash device. " alt="" coords="263,157,395,184"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#a3e17d8be015b8eddc6c4c81ec2310c79" title="Erases the specified 64KB block of the serial firmware dataflash. " alt="" coords="239,208,419,235"/>
+</map>

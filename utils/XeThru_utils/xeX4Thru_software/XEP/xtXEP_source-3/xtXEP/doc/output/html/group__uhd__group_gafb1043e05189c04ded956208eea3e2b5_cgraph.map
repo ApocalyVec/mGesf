@@ -1,0 +1,7 @@
+<map id="USBH_HAL_ControlReqEnd" name="USBH_HAL_ControlReqEnd">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="305,5,411,32"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="297,56,419,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a963fd2f0eab05393ff85e14bfd909021" title="USBHS_HostGetAddr" alt="" coords="517,132,676,159"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga1ddb6a33201674d513c4ad9c5de79e93" title="USBH_HAL_PhaseControlSetup" alt="" coords="247,157,469,184"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#ga108d6958efd3c7337897ae40963e3f58" title="Enables the suspend state on the USB line. " alt="" coords="280,208,436,235"/>
+</map>

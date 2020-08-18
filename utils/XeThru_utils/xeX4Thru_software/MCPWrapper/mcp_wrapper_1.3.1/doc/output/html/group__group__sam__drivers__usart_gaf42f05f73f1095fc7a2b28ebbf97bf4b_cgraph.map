@@ -1,0 +1,7 @@
+<map id="usart_init_spi_slave" name="usart_init_spi_slave">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#ga6cb84f0297ddca62d4077f616efa5c5b" title="Reset the USART and disable TX and RX. " alt="" coords="232,5,319,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__usart__group.xhtml#ga4740fd3e308857e7d074802e08db1cbe" title="Select the SCK pin as the source of baudrate for the USART SPI slave mode. " alt="" coords="207,57,343,98"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__usart__group.xhtml#gaafe097c01c082b270c1057722d524f5b" title="Calculate a clock divider(CD) and a fractional part (FP) for the USART asynchronous modes to generate..." alt="" coords="188,123,363,149"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__usart__group.xhtml#ga7fd617322d666621fee15501ae0de7c7" title="Enable USART receiver. " alt="" coords="218,173,333,200"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__usart__group.xhtml#ga1c3a4036f8b9b21f833a641b07b84f6c" title="Enable USART transmitter. " alt="" coords="218,224,333,251"/>
+</map>

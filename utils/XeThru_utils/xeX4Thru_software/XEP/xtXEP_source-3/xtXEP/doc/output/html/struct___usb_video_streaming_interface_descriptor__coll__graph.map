@@ -1,0 +1,4 @@
+<map id="_UsbVideoStreamingInterfaceDescriptor" name="_UsbVideoStreamingInterfaceDescriptor">
+<area shape="rect" id="node2" href="$struct___usb_video_format_descriptor.xhtml" title="USB Video Format with 1 frame, 1 compression, without STI. " alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node3" href="$struct___usb_video_input_header_descriptor1.xhtml" title="Input header descriptor (with 1 format) " alt="" coords="232,5,475,32"/>
+</map>

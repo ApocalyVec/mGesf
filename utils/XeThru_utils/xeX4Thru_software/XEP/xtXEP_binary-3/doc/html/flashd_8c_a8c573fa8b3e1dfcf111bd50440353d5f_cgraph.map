@@ -1,0 +1,4 @@
+<map id="ComputeLockRange" name="ComputeLockRange">
+<area shape="rect" id="node2" href="$efc_8h.xhtml#a170fa534d132c75b2851f0a42f7b71b0" title="Translates the given address page and offset values. " alt="" coords="205,5,367,32"/>
+<area shape="rect" id="node3" href="$efc_8h.xhtml#a50ce7469847193013d20ad0a928bd953" title="Computes the address of a flash access given the page and offset. " alt="" coords="204,56,368,83"/>
+</map>

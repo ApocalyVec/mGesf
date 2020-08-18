@@ -1,0 +1,5 @@
+<map id="uhi_cdc_write_buf" name="uhi_cdc_write_buf">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__internal.xhtml#ga6fe796ae4cca0fa45d96c36fb8aec5e7" title="Returns a port structure information. " alt="" coords="188,5,319,32"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="201,56,306,83"/>
+<area shape="rect" id="node4" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="193,107,314,133"/>
+</map>

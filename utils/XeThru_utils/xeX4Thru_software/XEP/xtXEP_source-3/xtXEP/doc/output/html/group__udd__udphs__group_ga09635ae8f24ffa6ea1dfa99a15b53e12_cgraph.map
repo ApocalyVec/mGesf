@@ -1,0 +1,4 @@
+<map id="udd_reset_ep_ctrl" name="udd_reset_ep_ctrl">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="197,5,303,32"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="189,56,311,83"/>
+</map>

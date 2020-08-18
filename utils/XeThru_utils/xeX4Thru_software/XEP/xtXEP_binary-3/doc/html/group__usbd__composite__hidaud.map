@@ -1,0 +1,6 @@
+<map id="Usbd_composite_hidaud" name="Usbd_composite_hidaud">
+<area shape="rect" id="node1" href="$group__usbd__audio__speakerphone.xhtml" title="Implement speaker phone function that combine 1 AC interface, 1 AS interface for speaker and 1 AS int..." alt="" coords="455,27,649,53"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speaker.xhtml" title="Usbd_audio_speaker" alt="" coords="475,131,629,157"/>
+<area shape="rect" id="node4" href="$group__usbd__composite__cdcaud.xhtml" title="Usbd_composite_cdcaud" alt="" coords="461,205,643,232"/>
+<area shape="rect" id="node5" href="$group__usbd__hid__aud__desc.xhtml" title="USB HID(Keyboard) \l+ AUD(Speaker) Definitions" alt="" coords="452,257,652,298"/>
+</map>

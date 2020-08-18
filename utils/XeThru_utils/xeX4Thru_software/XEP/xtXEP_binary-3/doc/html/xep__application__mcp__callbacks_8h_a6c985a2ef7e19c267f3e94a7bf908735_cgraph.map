@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverSetFrameArea" name="onMcpX4DriverSetFrameArea">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a59bb6ec7d08888223c01bffa2aedcf50" title="Set frame area zone Assume air as transmitter medium. " alt="" coords="276,5,457,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="264,57,469,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="264,122,469,163"/>
+</map>

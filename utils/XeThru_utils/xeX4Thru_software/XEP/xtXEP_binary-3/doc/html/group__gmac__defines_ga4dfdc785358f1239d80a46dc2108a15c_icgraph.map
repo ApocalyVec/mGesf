@@ -1,0 +1,4 @@
+<map id="GMAC_NetworkControl" name="GMAC_NetworkControl">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga8706caf686e1d073851111db1ba2663c" title="Initialize the GMAC with the Gmac controller address. " alt="" coords="228,5,325,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#gaede5219eb9101a760ecb266722825318" title="Reset TX &amp; RX queue &amp; statistics. " alt="" coords="220,56,333,83"/>
+</map>

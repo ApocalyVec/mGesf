@@ -1,0 +1,11 @@
+<map id="xtio_i2c_init" name="xtio_i2c_init">
+<area shape="rect" id="node2" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="188,5,299,32"/>
+<area shape="rect" id="node3" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="385,31,549,57"/>
+<area shape="rect" id="node4" href="$xtmemory_8h.xhtml#ac094f55ba76fe2ae6e6b584f62ede7e0" title="Allocate memory from default location. " alt="" coords="149,107,337,133"/>
+<area shape="rect" id="node5" href="$twi_8h.xhtml#adf540599d435de6b06ddc35427a17fed" title="Configures a TWI peripheral to operate in slave mode. " alt="" coords="170,157,317,184"/>
+<area shape="rect" id="node6" href="$twi_8h.xhtml#a8b4e96e6ce1126921517147b048fde51" title="Reads a byte from the TWI bus. " alt="" coords="188,208,299,235"/>
+<area shape="rect" id="node7" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="161,259,326,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="180,309,307,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="181,360,305,387"/>
+<area shape="rect" id="node10" href="$twi_8h.xhtml#ab3bf1b5df694229af5fae34ca569ab7b" title="Enables the selected interrupts sources on a TWI peripheral. " alt="" coords="193,411,294,437"/>
+</map>

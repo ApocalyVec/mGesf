@@ -1,0 +1,3 @@
+<map id="SMC_NFC_Wait_CommandDone" name="SMC_NFC_Wait_CommandDone">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#a3faeb0e934e8487ab6af1b2c0384ae61" title="Check the STATUS and set the corresponding interrupt flag. " alt="" coords="279,5,387,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="USBHS_EnableDMAIntEP" name="USBHS_EnableDMAIntEP">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga3050097643684759b64beda54283f1e4" title="DMA Single transfer. " alt="" coords="244,5,391,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga8ebf6dcf09581aa66fbfc89862516e60" title="Special write function. " alt="" coords="235,56,400,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#ga1a1fd7ed1af2be8e202879458a6cfda7" title="Sets/Clear/Get the HALT state on the endpoint. " alt="" coords="254,107,381,133"/>
+</map>

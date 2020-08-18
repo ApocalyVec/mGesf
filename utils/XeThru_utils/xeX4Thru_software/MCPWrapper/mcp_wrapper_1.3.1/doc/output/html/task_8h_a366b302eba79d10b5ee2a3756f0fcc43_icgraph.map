@@ -1,0 +1,9 @@
+<map id="vTaskSuspendAll" name="vTaskSuspendAll">
+<area shape="rect" id="node2" href="$heap__3_8c.xhtml#a0379669d07d76cc81e3028123113b271" title="pvPortMalloc" alt="" coords="237,5,333,32"/>
+<area shape="rect" id="node3" href="$heap__3_8c.xhtml#a1e7cea2fd1bc894ea3b5f5e8179d259b" title="vPortFree" alt="" coords="247,56,324,83"/>
+<area shape="rect" id="node4" href="$queue_8c.xhtml#a1ff8f61508bc9c0fa0abc44750fc1981" title="xQueueGenericSend" alt="" coords="214,107,357,133"/>
+<area shape="rect" id="node5" href="$queue_8c.xhtml#a0424dce690a6a65558f16cc229b767bf" title="xQueueGenericReceive" alt="" coords="207,157,364,184"/>
+<area shape="rect" id="node6" href="$tasks_8c.xhtml#a1ceb56c5c7ff2581a5ea837db4f721c1" title="prvInitialiseTaskLists" alt="" coords="215,208,356,235"/>
+<area shape="rect" id="node7" href="$tasks_8c.xhtml#a192988eef7c43ec387493f4a29df4ce7" title="uxTaskGetNumberOfTasks" alt="" coords="196,259,375,285"/>
+<area shape="rect" id="node8" href="$tasks_8c.xhtml#a903096c962a2bc907f4b902a7d42302a" title="prvCheckTasksWaitingTermination" alt="" coords="175,309,396,336"/>
+</map>

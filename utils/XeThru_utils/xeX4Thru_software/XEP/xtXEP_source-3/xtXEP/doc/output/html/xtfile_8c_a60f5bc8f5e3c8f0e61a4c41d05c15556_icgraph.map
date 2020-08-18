@@ -1,0 +1,5 @@
+<map id="xtfile_get_buffer" name="xtfile_get_buffer">
+<area shape="rect" id="node2" href="$xep__application__mcp__callbacks_8h.xhtml#afe11f1a76ca4a0d72981f8dd137f593a" title="onMcpGetCrashDump" alt="" coords="177,5,340,32"/>
+<area shape="rect" id="node3" href="$xep__application__mcp__callbacks_8h.xhtml#ac36d2bcd79441aff3856363c98b822ad" title="onMcpSetFileData" alt="" coords="190,56,327,83"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#ad862bf24dc31d741e7fa5a9ade1c9f39" title="onMcpGetFileData" alt="" coords="189,107,328,133"/>
+</map>

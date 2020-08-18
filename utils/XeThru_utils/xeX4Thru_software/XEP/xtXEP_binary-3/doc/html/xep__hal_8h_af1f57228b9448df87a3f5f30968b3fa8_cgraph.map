@@ -1,0 +1,6 @@
+<map id="xt_get_operation_mode" name="xt_get_operation_mode">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#ac1b1f4d4aeef95ca21470d9b67aa2baa" title="Checks whether or not certification mode is enabled. " alt="" coords="228,5,423,32"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a4f087fae5e8098b3b9c8f9df124b7f4e" title="Set direction of specified IO pin. " alt="" coords="258,56,393,83"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a9c169f60838175920c2f9ab467d020c1" title="Set mode for specified IO pin. " alt="" coords="254,107,397,133"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml#a984c6d05372bfd34dc338a85d21dc81a" title="Get level of specified IO pin. " alt="" coords="271,157,380,184"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="vTaskDelay" name="vTaskDelay">
+<area shape="rect" id="node2" href="$tasks_8c.xhtml#a1ceb56c5c7ff2581a5ea837db4f721c1" title="prvInitialiseTaskLists" alt="" coords="145,5,286,32"/>
+<area shape="rect" id="node3" href="$main_8c.xhtml#a63d72e300659658b1f257be9cfa7e75e" title="This task, when activated, make LED blink at a fixed rate. " alt="" coords="180,56,251,83"/>
+<area shape="rect" id="node4" href="$task__xethru_8c.xhtml#a0961e6647507bdf05de36c253e814ed5" title="mcpw_delay" alt="" coords="168,107,263,133"/>
+<area shape="rect" id="node5" href="$task__xethru_8c.xhtml#a06f1ac139b4394bb6f267fdcbec56add" title="xethru_usart_tx_task" alt="" coords="143,157,287,184"/>
+<area shape="rect" id="node6" href="$task__xethru_8c.xhtml#ae9875b2314666b540f1ce5e410710129" title="mcpw_demo_x2m200" alt="" coords="533,233,681,260"/>
+<area shape="rect" id="node7" href="$task__xethru_8c.xhtml#a54c65348b306e1067cb83cfd0b41cfe6" title="mcpw_demo_x4m300" alt="" coords="337,259,485,285"/>
+<area shape="rect" id="node8" href="$task__xethru_8c.xhtml#a4d700c7ee4beaac0a8a4c95c11e5c673" title="mcpw_demo_x4m200" alt="" coords="141,309,289,336"/>
+<area shape="rect" id="node9" href="$task__xethru_8c.xhtml#ab838415e708ffc71189fcdceb057dac5" title="xethru_task" alt="" coords="366,335,457,361"/>
+</map>

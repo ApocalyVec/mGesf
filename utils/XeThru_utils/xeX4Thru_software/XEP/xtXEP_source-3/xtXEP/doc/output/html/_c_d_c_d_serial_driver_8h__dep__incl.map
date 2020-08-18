@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/CDCDSerialDriver.h" name="src/hal/x4m0x_s70/libraries/libusb/include/CDCDSerialDriver.h">
+<area shape="rect" id="node2" href="$_c_d_c_d_serial_driver_8c.xhtml" title="Title: CDCDSerialDriver implementation. " alt="" coords="5,95,200,151"/>
+<area shape="rect" id="node3" href="$_c_d_c_d_serial_driver___callbacks_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/cdc&#45;serial\l/CDCDSerialDriver_Callbacks.c" alt="" coords="224,95,440,151"/>
+<area shape="rect" id="node4" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="464,102,659,143"/>
+<area shape="rect" id="node5" href="$_u_s_b_d_driver_descriptors_8c.xhtml" title="src/hal/x4m0x_s70/USBDDriver\lDescriptors.c" alt="" coords="683,102,904,143"/>
+<area shape="rect" id="node6" href="$xtio__serial__com_8c.xhtml" title="Implement USB serial communication. " alt="" coords="928,102,1096,143"/>
+<area shape="rect" id="node7" href="$xtio__usb_8c.xhtml" title="Implementation of USB CDC functions for X4M0x boards with Atmel SAM S70 MCU. " alt="" coords="1120,102,1288,143"/>
+</map>

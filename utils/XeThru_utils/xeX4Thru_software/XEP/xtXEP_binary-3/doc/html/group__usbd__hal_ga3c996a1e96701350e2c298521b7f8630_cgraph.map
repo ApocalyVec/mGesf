@@ -1,0 +1,7 @@
+<map id="USBD_HAL_Test" name="USBD_HAL_Test">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a1e6f755e0017750683a52c6d2640ce9b" title="Disables interrupt for endpoint. " alt="" coords="199,5,337,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a526a6421c946527e98a5cd7a426f5254" title="Disable/Enables Test mode. " alt="" coords="179,56,357,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a95e89705c54999e79a3a53b6505e95e6" title="Allocate Endpoint memory. " alt="" coords="179,107,357,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#aafe79c1addd8c03522a0228ae4b6dae3" title="Enables or disables endpoint. " alt="" coords="201,157,335,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a7e969e0c7fb49b1d25dd4e97afe3b0f7" title="Sets/Raise register for a given endpoint. " alt="" coords="197,208,339,235"/>
+</map>

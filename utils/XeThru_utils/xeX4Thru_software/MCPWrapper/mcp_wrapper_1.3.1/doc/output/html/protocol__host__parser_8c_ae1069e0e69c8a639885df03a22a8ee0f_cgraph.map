@@ -1,0 +1,10 @@
+<map id="parse_appdata" name="parse_appdata">
+<area shape="rect" id="node2" href="$protocol__host__parser_8c.xhtml#a5a0a7a9de31b4864faafad10f803cacb" title="bytes_to_uint32" alt="" coords="393,173,508,200"/>
+<area shape="rect" id="node3" href="$protocol__host__parser_8c.xhtml#aa5664de178367c7faa1ee945dbc71761" title="parse_respiration_status" alt="" coords="171,46,335,73"/>
+<area shape="rect" id="node4" href="$protocol__host__parser_8c.xhtml#a1d7a9c5ebdff244e0aeda763a574f2c6" title="parse_sleep_status" alt="" coords="185,97,320,124"/>
+<area shape="rect" id="node5" href="$protocol__host__parser_8c.xhtml#a7203ea3951462b2d1b41d65f67e8615a" title="parse_baseband_ap" alt="" coords="183,148,322,174"/>
+<area shape="rect" id="node6" href="$protocol__host__parser_8c.xhtml#a49dc96ded8bdab7fa0c66df331f7dce3" title="parse_baseband_iq" alt="" coords="185,198,320,225"/>
+<area shape="rect" id="node7" href="$protocol__host__parser_8c.xhtml#ae5dd91a3fada2d831133de8ee8be2712" title="parse_presence_single" alt="" coords="175,249,330,276"/>
+<area shape="rect" id="node8" href="$protocol__host__parser_8c.xhtml#ad924540c85994179fc947cd380114366" title="parse_presence_movinglist" alt="" coords="163,300,342,326"/>
+<area shape="rect" id="node9" href="$protocol__host__parser_8c.xhtml#a8d71237f11a46b84563dd3552ac10f01" title="parse_respiration_movinglist" alt="" coords="160,350,345,377"/>
+</map>

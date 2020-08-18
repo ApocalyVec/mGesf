@@ -1,0 +1,7 @@
+<map id="DBG_PutChar" name="DBG_PutChar">
+<area shape="rect" id="node2" href="$dbg__console_8c.xhtml#a9fb3a4c8d4eb60a7b43a57477c8d8c5c" title="Displays the content of the given buffer on the UART0. " alt="" coords="163,5,312,32"/>
+<area shape="rect" id="node3" href="$dbg__console_8c.xhtml#a807d59a58a4312efa7ef1c445107c256" title="Reads an integer. " alt="" coords="174,56,301,83"/>
+<area shape="rect" id="node4" href="$dbg__console_8c.xhtml#af9bb27367f558fe5135b7f59a134f074" title="Reads an hexadecimal number. " alt="" coords="172,107,303,133"/>
+<area shape="rect" id="node5" href="$dbg__console_8c.xhtml#addff62e507194a8602e3bd3e93532917" title="puts" alt="" coords="212,157,263,184"/>
+<area shape="rect" id="node6" href="$dbg__console_8c.xhtml#a4c525b3c7f5f90a659cacb562a248c20" title="gets" alt="" coords="212,208,263,235"/>
+</map>

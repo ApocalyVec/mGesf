@@ -1,0 +1,5 @@
+<map id="GMAC_ClearTxStatus" name="GMAC_ClearTxStatus">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#gab6c25629834229269058fc2ae0381ce8" title="Process successfully sent packets. " alt="" coords="211,5,415,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga1d32bdcf010875dfcaea4817d8086b82" title="Reset TX queue when errors are detected. " alt="" coords="226,56,399,83"/>
+<area shape="rect" id="node4" href="$group__gmacd__defines.xhtml#ga8706caf686e1d073851111db1ba2663c" title="Initialize the GMAC with the Gmac controller address. " alt="" coords="264,107,361,133"/>
+</map>

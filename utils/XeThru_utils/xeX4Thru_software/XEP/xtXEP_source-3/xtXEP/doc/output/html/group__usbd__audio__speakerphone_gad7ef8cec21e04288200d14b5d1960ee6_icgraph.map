@@ -1,0 +1,4 @@
+<map id="AUDDSpeakerPhone_RequestHandler" name="AUDDSpeakerPhone_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#ga2b7fde84b4a6cc4bfe50ca02a01c5bb5" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="271,5,482,47"/>
+<area shape="rect" id="node3" href="$group__usbd__aud__fun.xhtml#ga14668ec110cf3c7389d5aa81502e995e" title="Handles AUDIO&#45;specific USB requests sent by the host. " alt="" coords="265,71,488,98"/>
+</map>

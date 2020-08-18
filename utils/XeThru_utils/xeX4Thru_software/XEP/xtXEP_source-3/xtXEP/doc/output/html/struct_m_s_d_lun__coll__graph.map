@@ -1,0 +1,6 @@
+<map id="MSDLun" name="MSDLun">
+<area shape="rect" id="node2" href="$struct_s_b_c_request_sense_data.xhtml" title="SBCRequestSenseData" alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node3" href="$struct___s_b_c_inquiry_data.xhtml" title="_SBCInquiryData" alt="" coords="201,5,330,32"/>
+<area shape="rect" id="node4" href="$struct___m_s_d_i_o_fifo.xhtml" title="FIFO buffer for READ/WRITE (disk) operation of a mass storage device. " alt="" coords="355,5,448,32"/>
+<area shape="rect" id="node5" href="$struct_s_b_c_read_capacity10_data.xhtml" title="SBCReadCapacity10Data" alt="" coords="473,5,655,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="USBD_HAL_SetConfiguration" name="USBD_HAL_SetConfiguration">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gae148078e201da24b737306d7559bb967" title="Sets the current device configuration. " alt="" coords="260,5,435,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="281,56,414,83"/>
+<area shape="rect" id="node4" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="483,81,589,108"/>
+</map>

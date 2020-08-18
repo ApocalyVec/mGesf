@@ -1,0 +1,4 @@
+<map id="qspi_set_instruction_frame" name="qspi_set_instruction_frame">
+<area shape="rect" id="node2" href="$group__sam__drivers__qspi__group.xhtml#ga7b134660d53e8e550db5e98d21706e56" title="Send instruction over QSPI with data. " alt="" coords="230,5,373,47"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__qspi__group.xhtml#gae5bf717b6b8987d76f6d9559c805e020" title="Writes or reads the QSPI memory (0x80000000) to trasmit or receive data from Flash memory..." alt="" coords="203,71,400,98"/>
+</map>

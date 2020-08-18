@@ -1,0 +1,13 @@
+<map id="__disable_irq" name="__disable_irq">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga5fe64567d5bf0a81c118374e9a3a4598" title="Get Control Register. " alt="" coords="157,5,283,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga558df7eeb0a34765e0b54d9853d08484" title="Set Control Register. " alt="" coords="158,56,282,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga2c18685a915eb9b7513a907c2b866636" title="Get IPSR Register. " alt="" coords="174,107,266,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#gaf082254959c727c663f2334021f1a98a" title="Get APSR Register. " alt="" coords="171,157,269,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga94c675a736d4754a5f73d8748b24aa11" title="Get xPSR Register. " alt="" coords="172,208,268,235"/>
+<area shape="rect" id="node7" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga0c569cbb49336f8d638686f9103047aa" title="Get Process Stack Pointer. " alt="" coords="175,259,265,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#gab145e35dbaf6868d3a17a8ad360fe379" title="Set Process Stack Pointer. " alt="" coords="176,309,264,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#gac5267c10c9b15b5349eea0a959ea014c" title="Get Main Stack Pointer. " alt="" coords="174,360,266,387"/>
+<area shape="rect" id="node10" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga1ff33c0b5ed0e687dd7967a1dd283d5f" title="Set Main Stack Pointer. " alt="" coords="175,411,265,437"/>
+<area shape="rect" id="node11" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#gac9e3a67ff722261b89c77ebe49b6f9a7" title="Get Priority Mask. " alt="" coords="160,461,280,488"/>
+<area shape="rect" id="node12" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga42e74e3fffe1a2d93db1de04d9260929" title="Set Priority Mask. " alt="" coords="161,512,279,539"/>
+</map>

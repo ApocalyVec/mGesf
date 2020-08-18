@@ -1,0 +1,12 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/CDCDescriptors.h" name="src/hal/x4m0x_s70/libraries/libusb/include/CDCDescriptors.h">
+<area shape="rect" id="node2" href="$_c_d_c_d_e_e_m_port_8c.xhtml" title="Implementation of the CDCDEEMPort class methods. " alt="" coords="5,102,280,143"/>
+<area shape="rect" id="node3" href="$_c_d_c_d_serial_port_8c.xhtml" title="Implementation of the CDCDSerialPort class methods. " alt="" coords="304,95,499,151"/>
+<area shape="rect" id="node4" href="$uhi__cdc_8c.xhtml" title="USB host Communication Device Class interface. " alt="" coords="523,102,717,143"/>
+<area shape="rect" id="node5" href="$_c_d_c_a_u_d_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCAUDDDriver.h" alt="" coords="741,102,973,143"/>
+<area shape="rect" id="node6" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="1453,199,1648,240"/>
+<area shape="rect" id="node7" href="$_c_d_c_d_e_e_m_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCDEEMDriver.h" alt="" coords="1049,102,1279,143"/>
+<area shape="rect" id="node8" href="$_c_d_c_d_serial_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCDSerialDriver.h" alt="" coords="1303,102,1542,143"/>
+<area shape="rect" id="node9" href="$_c_d_c_h_i_d_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCHIDDDriver.h" alt="" coords="1567,102,1793,143"/>
+<area shape="rect" id="node10" href="$_c_d_c_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCMSDDriver.h" alt="" coords="1818,102,2041,143"/>
+<area shape="rect" id="node11" href="$_d_u_a_l_c_d_c_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/DUALCDCDDriver.h" alt="" coords="2065,102,2303,143"/>
+</map>

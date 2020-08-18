@@ -1,0 +1,4 @@
+<map id="USBHS_DetachUsb" name="USBHS_DetachUsb">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga214508a8f0f824cdcf40bca9ddac10f6" title="Enable Pull&#45;up, connect. " alt="" coords="209,5,362,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#gaded744daaee15b55f41fb2175f343b69" title="Disable Pull&#45;up, disconnect. " alt="" coords="200,56,371,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="pll_enable_source" name="pll_enable_source">
+<area shape="rect" id="node2" href="$group__osc__group.xhtml#ga13db594de6701e5e235a88597e348e3a" title="osc_enable" alt="" coords="192,5,280,32"/>
+<area shape="rect" id="node3" href="$group__osc__group.xhtml#gace890435e962b82472d3f918ea7b4c52" title="Wait until the oscillator identified by id is ready. " alt="" coords="180,56,292,83"/>
+</map>

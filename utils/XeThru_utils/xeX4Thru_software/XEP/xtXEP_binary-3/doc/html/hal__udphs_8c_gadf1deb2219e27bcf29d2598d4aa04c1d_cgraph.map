@@ -1,0 +1,42 @@
+<map id="UDPHS_Read" name="UDPHS_Read">
+<area shape="rect" id="node2" href="$hal__udphs_8c.xhtml#ga3050097643684759b64beda54283f1e4" title="DMA Single transfer. " alt="" coords="469,1905,615,1931"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="204,993,337,1019"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#ga5931e8b51cc0a708c654a2ede474722a" title="Handle the USB resume event, should be invoked whenever HW reports a resume signal. " alt="" coords="458,283,626,310"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#ga72c29d7c5767f5af8df7ba1603a02619" title="Activate USB Device HW InterfaceEnable USB PeripheralEnable USB ClockEnable transceiver. " alt="" coords="718,334,870,361"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga522cddda5972d92b3c974e6fc8c58956" title="Handle the USB suspend event, should be invoked whenever HW reports a suspend signal. " alt="" coords="455,435,629,462"/>
+<area shape="rect" id="node7" href="$group__usbd__hal.xhtml#gab80a4355417d88e290c88c233d5d435b" title="Suspend USB Device HW Interface. " alt="" coords="716,435,872,462"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#gad1bf93dee935f232cc0acae8cac8f264" title="Handle the USB reset event, should be invoked whenever HW found USB reset signal on bus..." alt="" coords="466,486,618,513"/>
+<area shape="rect" id="node9" href="$group__usbd__hal.xhtml#gaa9aba8ccdad2272b61db48b43466043b" title="Reset endpoints and disable them. " alt="" coords="715,1297,873,1323"/>
+<area shape="rect" id="node10" href="$group__usbd__hal.xhtml#ga5e6b01495743675aae106e51aee3d1e3" title="Handles a completed transfer on the given endpoint, invoking the configured callback if any..." alt="" coords="937,1601,1101,1627"/>
+<area shape="rect" id="node11" href="$group__usbd__hal.xhtml#gaac15d66e72d7daa9d05116370a36aa91" title="Cancel pending READ/WRITE. " alt="" coords="465,1550,619,1577"/>
+<area shape="rect" id="node12" href="$group__usbd__hal.xhtml#gaf17d4fe67932fa6a5dcc05f4c6d611ff" title="Configures an endpoint according to its endpoint Descriptor. " alt="" coords="705,993,883,1019"/>
+<area shape="rect" id="node13" href="$group__usb__descriptor.xhtml#ga13a7c1d2365ab7e0d6a8f70681b1a018" title="Returns the number of an endpoint given its descriptor. " alt="" coords="933,892,1105,933"/>
+<area shape="rect" id="node14" href="$group__usb__descriptor.xhtml#ga4bff8a54ec871a1e3a4008ce41219ea9" title="Returns the type of an endpoint given its descriptor. " alt="" coords="933,979,1105,1020"/>
+<area shape="rect" id="node15" href="$group__usb__descriptor.xhtml#ga4be14e7e4e819fbc63530cf1eb32efd1" title="Returns the direction of an endpoint given its descriptor. " alt="" coords="933,1044,1105,1085"/>
+<area shape="rect" id="node16" href="$group__usb__descriptor.xhtml#gad78fdcaf97fc4069be7995caccb1e9ca" title="Returns the maximum size of a packet (in bytes) on an endpoint given its descriptor. " alt="" coords="933,827,1105,868"/>
+<area shape="rect" id="node17" href="$group__usbd__hal.xhtml#gafcb94bdd4c0ea327621a187814ab4f9f" title="Set callback for a USB endpoint for transfer (read/write). " alt="" coords="429,385,655,411"/>
+<area shape="rect" id="node18" href="$group__usbd__hal.xhtml#ga62263446ee46cfc2ca48856e446f1a79" title="Configure an endpoint to use multi&#45;buffer&#45;list transfer mode. " alt="" coords="437,537,647,563"/>
+<area shape="rect" id="node19" href="$group__usbd__hal.xhtml#gab8293616e390cb94e93529673367acb4" title="Sends data through a USB endpoint. " alt="" coords="477,587,607,614"/>
+<area shape="rect" id="node20" href="$group__usbd__hal.xhtml#ga1c6c76201a5c49c7e40c60c8dbdeae68" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="477,638,607,665"/>
+<area shape="rect" id="node21" href="$group__usbd__hal.xhtml#ga214508a8f0f824cdcf40bca9ddac10f6" title="Enable Pull&#45;up, connect. " alt="" coords="465,1499,619,1526"/>
+<area shape="rect" id="node22" href="$group__usbd__hal.xhtml#gaded744daaee15b55f41fb2175f343b69" title="Disable Pull&#45;up, disconnect. " alt="" coords="457,689,627,715"/>
+<area shape="rect" id="node23" href="$group__usbd__hal.xhtml#ga24f5a47f6815de571752ba22c98073f5" title="Starts a remote wake&#45;up procedure. " alt="" coords="442,1145,642,1171"/>
+<area shape="rect" id="node24" href="$group__usbd__hal.xhtml#gac8a317bd985d2ab3d3b82d093015379e" title="Sets the device address to the given value. " alt="" coords="455,1195,629,1222"/>
+<area shape="rect" id="node25" href="$group__usbd__hal.xhtml#ga05c8714f0e31ed119a4ab594d687691a" title="Sets the current device configuration. " alt="" coords="439,1246,645,1273"/>
+<area shape="rect" id="node26" href="$group__usbd__hal.xhtml#ga3699059b9b9b52b7e55af6d070a7fe61" title="Initializes the USB HW Access driver. " alt="" coords="483,1297,601,1323"/>
+<area shape="rect" id="node27" href="$group__usbd__hal.xhtml#gad95d239687843031e2af3aac51ba33ad" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake except se..." alt="" coords="478,1347,606,1374"/>
+<area shape="rect" id="node28" href="$group__usbd__hal.xhtml#ga1a1fd7ed1af2be8e202879458a6cfda7" title="Sets/Clear/Get the HALT state on the endpoint. " alt="" coords="479,1601,605,1627"/>
+<area shape="rect" id="node29" href="$group__usbd__hal.xhtml#ga946b2d10dfc497b6b24e602be6f3bd05" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="452,1398,632,1425"/>
+<area shape="rect" id="node30" href="$group__usbd__hal.xhtml#ga3c996a1e96701350e2c298521b7f8630" title="Certification test for High Speed device. " alt="" coords="479,1449,605,1475"/>
+<area shape="rect" id="node31" href="$hal__udphs_8c.xhtml#ga5e6f054068ed99c861c50f2eeeb30216" title="Endpoint DMA interrupt handler. " alt="" coords="192,1854,349,1881"/>
+<area shape="rect" id="node32" href="$hal__udphs_8c.xhtml#ga4daf62d090af26b8e55aaf9549926622" title="Endpoint interrupt handler. " alt="" coords="703,1803,885,1830"/>
+<area shape="rect" id="node33" href="$hal__udphs_8c.xhtml#gada855d5452052e08f36853a81e3b016d" title="Sends data through a USB endpoint. " alt="" coords="213,2006,329,2033"/>
+<area shape="rect" id="node34" href="$hal__udphs_8c.xhtml#ga81935b1ed57f1d4e636df4565de436a5" title="Sends data through a USB endpoint. " alt="" coords="217,1955,324,1982"/>
+<area shape="rect" id="node35" href="$group__usbd__hal.xhtml#ga8ebf6dcf09581aa66fbfc89862516e60" title="Special write function. " alt="" coords="188,2107,353,2134"/>
+<area shape="rect" id="node36" href="$group__usbd__hal.xhtml#gaa50e34166752f405f9fc09d5c9ac3273" title="Enables the clock of the UDP peripheral. " alt="" coords="162,2158,379,2185"/>
+<area shape="rect" id="node37" href="$group__usbd__hal.xhtml#gaeeb6aaee5582dc68d5dbad6b11004f28" title="Disables the UDP peripheral clock. " alt="" coords="160,2209,381,2235"/>
+<area shape="rect" id="node38" href="$group__usbd__hal.xhtml#ga16cac88056411dc32b41839645ebc827" title="Enables the 480MHz USB clock. " alt="" coords="181,2259,360,2286"/>
+<area shape="rect" id="node39" href="$group__usbd__hal.xhtml#gade7d4276b337c9076acbd10a94a27ce0" title="Enables the BIAS. " alt="" coords="196,2310,345,2337"/>
+<area shape="rect" id="node40" href="$group__usbd__hal.xhtml#ga272a43243eed36047de454c2259d8910" title="Disables the 480MHz USB clock. " alt="" coords="179,2361,362,2387"/>
+<area shape="rect" id="node41" href="$group__usbd__hal.xhtml#gacaa5bb3f65deea4b87c97f03b48eddbf" title="Disables the BIAS. " alt="" coords="194,2411,347,2438"/>
+</map>

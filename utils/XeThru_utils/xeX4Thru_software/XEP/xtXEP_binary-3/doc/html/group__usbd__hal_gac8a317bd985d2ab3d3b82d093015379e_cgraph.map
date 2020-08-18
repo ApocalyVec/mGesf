@@ -1,0 +1,4 @@
+<map id="USBD_HAL_SetAddress" name="USBD_HAL_SetAddress">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#af28587f66d68df1900ea52afc944f74c" title="Configure USB address and enable or disable it. " alt="" coords="238,5,389,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#ae12eb708d1efa8847725bfbef153b21f" title="Enable or disable USB address. " alt="" coords="228,56,399,83"/>
+</map>

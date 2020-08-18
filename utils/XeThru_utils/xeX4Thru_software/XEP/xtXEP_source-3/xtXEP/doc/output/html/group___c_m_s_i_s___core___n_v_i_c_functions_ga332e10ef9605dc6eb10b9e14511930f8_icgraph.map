@@ -1,0 +1,18 @@
+<map id="NVIC_ClearPendingIRQ" name="NVIC_ClearPendingIRQ">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga394f7ce2ca826c0da26284d17ac6524d" title="Get Priority Grouping. " alt="" coords="219,5,404,32"/>
+<area shape="rect" id="node3" href="$afe__dma_8c.xhtml#a68dbdec846e3b92a818ded06727529bd" title="AFE xDMA Rx callback Invoked on AFE DMA reception done. " alt="" coords="267,56,356,83"/>
+<area shape="rect" id="node4" href="$afe__dma_8c.xhtml#a7fc901cb910a6298837d57892790161c" title="Starts a AFE transfer. " alt="" coords="254,107,369,133"/>
+<area shape="rect" id="node5" href="$group__can__module.xhtml#ga9b35cd79fb5eeec8cf1ba7247b25a646" title="Initializes the MCAN hardware for giving peripheral. " alt="" coords="268,157,355,184"/>
+<area shape="rect" id="node6" href="$pio__it_8c.xhtml#ad31e05d6debb1e88af6124cd7751af22" title="Initializes the PIO interrupt management logic. " alt="" coords="230,208,393,235"/>
+<area shape="rect" id="node7" href="$spi__dma_8c.xhtml#ac612542f98d1fbf87bbf0e3ea7870cb1" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="262,259,361,285"/>
+<area shape="rect" id="node8" href="$spi__dma_8c.xhtml#ae3c774fb7e4bcf2db4e5d9e8891b6abd" title="Starts a SPI master transfer. " alt="" coords="232,309,391,336"/>
+<area shape="rect" id="node9" href="$twid_8c.xhtml#a5a93a963b33545933b831ca77a89c2a2" title="Initializes a TWI driver instance, using the given TWI peripheral. " alt="" coords="452,373,595,400"/>
+<area shape="rect" id="node10" href="$uart__dma_8c.xhtml#a8b463d15a44a1b7058c8d1f259c84fcf" title="Initializes the UartDma structure and the corresponding UART &amp; DMA . " alt="" coords="457,449,590,476"/>
+<area shape="rect" id="node11" href="$usart__dma_8c.xhtml#a0f760ac1d4ebf29b670399b45ba1ee33" title="Initializes the USARTDma structure and the corresponding USART &amp; DMA . " alt="" coords="452,512,595,539"/>
+<area shape="rect" id="node12" href="$xtio__uart_8h.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="643,537,787,564"/>
+<area shape="rect" id="node13" href="$group__dmad__functions.xhtml#ga8c7517080f70e93096364e916af6e6f2" title="Initialize xDMA driver instance. " alt="" coords="247,411,375,437"/>
+<area shape="rect" id="node14" href="$group__usbd__hal.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="248,613,375,640"/>
+<area shape="rect" id="node15" href="$group__usbd__hal.xhtml#ga3699059b9b9b52b7e55af6d070a7fe61" title="Initializes the USB HW Access driver. " alt="" coords="252,664,371,691"/>
+<area shape="rect" id="node16" href="$group__usbd__hal.xhtml#gacfe54e3efd82dfd6df3074679402833d" title="USBD_HAL_Disable" alt="" coords="238,715,385,741"/>
+<area shape="rect" id="node17" href="$xtio__i2c_8h.xhtml#a7b0e666ddfaac918eb931d278b66559c" title="xtio_i2c_init" alt="" coords="263,765,359,792"/>
+</map>

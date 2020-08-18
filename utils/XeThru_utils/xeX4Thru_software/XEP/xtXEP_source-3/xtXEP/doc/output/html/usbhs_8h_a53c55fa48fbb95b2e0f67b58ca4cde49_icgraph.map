@@ -1,0 +1,4 @@
+<map id="USBHS_IsEpIntEnable" name="USBHS_IsEpIntEnable">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga4daf62d090af26b8e55aaf9549926622" title="Endpoint interrupt handler. " alt="" coords="215,5,397,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga1a1fd7ed1af2be8e202879458a6cfda7" title="Sets/Clear/Get the HALT state on the endpoint. " alt="" coords="243,56,369,83"/>
+</map>

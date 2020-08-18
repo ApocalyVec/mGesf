@@ -1,0 +1,5 @@
+<map id="SysTick_Config" name="SysTick_Config">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3387607fd8a1a32cccd77d2ac672dd96" title="Decode Priority. " alt="" coords="194,5,347,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga630131b2572eaa16b569ed364dfc895e" title="SCB_CleanInvalidateDCache\l_by_Addr" alt="" coords="169,57,372,98"/>
+<area shape="rect" id="node4" href="$timetick_8c.xhtml#aa2dae3f4bc7d890535afc5bc707feacc" title="Configures the System Timer. " alt="" coords="198,123,343,149"/>
+</map>

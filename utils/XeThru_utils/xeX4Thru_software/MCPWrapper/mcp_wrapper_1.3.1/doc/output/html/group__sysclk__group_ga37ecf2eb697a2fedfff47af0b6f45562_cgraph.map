@@ -1,0 +1,4 @@
+<map id="sysclk_set_prescalers" name="sysclk_set_prescalers">
+<area shape="rect" id="node2" href="$group__sam__drivers__pmc__group.xhtml#ga9f1d415fc4e96a8ac144e6ea44c426eb" title="Set the prescaler of the MCK. " alt="" coords="207,5,371,32"/>
+<area shape="rect" id="node3" href="$system__samg55_8h.xhtml#ae0c36a9591fe6e9c45ecb21a794f0f0f" title="Updates the SystemCoreClock with current core Clock retrieved from cpu registers. ..." alt="" coords="205,56,373,83"/>
+</map>

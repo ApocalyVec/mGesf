@@ -1,0 +1,6 @@
+<map id="xt_delay_us" name="xt_delay_us">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#a8d576cef4eead3e26b3adf733cd487c2" title="Gets the submode of the module for certification. " alt="" coords="172,5,315,47"/>
+<area shape="rect" id="node3" href="$xtio__spi_8c.xhtml#a64a60847a947e7e747f90424e2e7fff7" title="xtio_spi_write_read" alt="" coords="172,71,315,98"/>
+<area shape="rect" id="node4" href="$task__radar_8c.xhtml#a3daa8e1e64e92bf7c33923c8b5c69db9" title="x4driver_callback_wait_us" alt="" coords="151,122,336,149"/>
+<area shape="rect" id="node5" href="$task__radar_8c.xhtml#ab45564b4bfe2b9814424a084ab9a9859" title="task_radar" alt="" coords="198,173,289,199"/>
+</map>

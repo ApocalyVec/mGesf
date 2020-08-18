@@ -1,0 +1,11 @@
+<map id="USBH_enumeration_error" name="USBH_enumeration_error">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga5946f5d7c3385b5001db37d9455f5c67" title="Device enumeration step 5 Requests the USB device descriptor. " alt="" coords="492,22,684,49"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#gac4b4282cf6ff893f72b0f3eec04e5f88" title="Device enumeration step 6 End of Get device descriptor request. " alt="" coords="244,47,436,74"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga4216b2f5091c5b72a41b6092029ad8a4" title="Device enumeration step 9 Send a Set address setup request. " alt="" coords="1728,123,1920,150"/>
+<area shape="rect" id="node5" href="$group___u_s_b_h__group__interne.xhtml#ga447f43d02c344a764a67aa86b467aab0" title="Device enumeration step 10 End of Set address request. " alt="" coords="1480,149,1680,175"/>
+<area shape="rect" id="node6" href="$group___u_s_b_h__group__interne.xhtml#ga4d0656fe000b76d8a76804d09386f840" title="Device enumeration step 11 Updates USB host pipe with the new USB address. " alt="" coords="1232,199,1432,226"/>
+<area shape="rect" id="node7" href="$group___u_s_b_h__group__interne.xhtml#ga5f4627c70606a373a8caa4b2e16ab23c" title="Device enumeration step 12 Requests the first USB structure of the USB configuration descriptor..." alt="" coords="984,250,1184,277"/>
+<area shape="rect" id="node8" href="$group___u_s_b_h__group__interne.xhtml#ga483261f9e83ef5d888a6a0caf8f7ffe6" title="Device enumeration step 13 Requests a complete Get configuration descriptor. " alt="" coords="736,301,936,327"/>
+<area shape="rect" id="node9" href="$group___u_s_b_h__group__interne.xhtml#gaf236828c0bc344e80fb6dee45dc36b31" title="Device enumeration step 14 Enable USB configuration, if unless one USB interface is supported by UHIs..." alt="" coords="488,351,688,378"/>
+<area shape="rect" id="node10" href="$group___u_s_b_h__group__interne.xhtml#ga68f29658cb41fc38bbe5461cfc253812" title="Device enumeration step 15 Enables UHI interfaces. " alt="" coords="240,402,440,429"/>
+</map>

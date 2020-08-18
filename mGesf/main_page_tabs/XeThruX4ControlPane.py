@@ -29,7 +29,6 @@ class XeThruX4ControlPane(QWidget):
         self.Xe4Thru_worker.signal_data.connect(self.control_process_xethru_data)
 
         # default range
-
         self.range_min = 0
         self.range_max = 0.4
 
@@ -281,6 +280,6 @@ class XeThruX4ControlPane(QWidget):
             xsamples = list(range(data_dict['frame'].shape[0]))
             rf_frame = data_dict['frame']
             # clutter_free = self.Xe4Thru_worker.xeThruX4Sensor_interface.read_clutter_removal_frame(rf_frame, 0.5)
-            baseband = xep_rf_frame_downconversion(rf_frame, self.Xe4Thru_worker.xeThruX4Sensor_interface.center_frequency)
+            baseband = xep_rf_frame_downconversion(rf_frame, self.Xe4Thru_worker.center_frequency)
             self.rf_curve.setData(xsamples, rf_frame)
             self.baseband_curve.setData(xsamples, baseband)

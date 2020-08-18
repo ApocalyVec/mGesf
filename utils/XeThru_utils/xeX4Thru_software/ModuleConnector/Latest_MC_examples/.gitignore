@@ -1,0 +1,13 @@
+# Blacklist files/folders in same directory as the .gitignore file
+/python/__pycache__
+/.vscode
+*.log
+*.png
+/include
+/lib64
+/CPP/*.dll
+/CPP/*.a
+/CPP/*.exe
+
+# Whitelist some files
+# !

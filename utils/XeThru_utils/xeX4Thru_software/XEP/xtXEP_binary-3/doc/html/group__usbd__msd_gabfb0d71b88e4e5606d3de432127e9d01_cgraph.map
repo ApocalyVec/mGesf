@@ -1,0 +1,5 @@
+<map id="MSDDriver_ConfigurationChangeHandler" name="MSDDriver_ConfigurationChangeHandler">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="331,5,459,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gadfce99fba013d30648e7a058c7fa6799" title="Returns configuration descriptor list. " alt="" coords="284,56,507,83"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#gafb1268e0849907894c708ccc4ab46fee" title="Invoked when the configuration of the device changes. " alt="" coords="309,107,482,133"/>
+</map>

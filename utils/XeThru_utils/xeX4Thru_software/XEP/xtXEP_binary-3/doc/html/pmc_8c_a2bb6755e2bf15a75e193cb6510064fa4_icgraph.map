@@ -1,0 +1,7 @@
+<map id="PMC_DisablePeripheral" name="PMC_DisablePeripheral">
+<area shape="rect" id="node2" href="$spi__dma_8c.xhtml#ac612542f98d1fbf87bbf0e3ea7870cb1" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="283,5,381,32"/>
+<area shape="rect" id="node3" href="$spi__dma_8c.xhtml#a36e110a3cda7abf52985f30626c47b5f" title="Configures the parameters for the device corresponding to the cs value. " alt="" coords="263,56,401,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga9b45418a37c193dbcff7ef17040cfa30" title="Disables the USB host mode. " alt="" coords="246,107,418,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#ga41f4f97292c90b1e6fc3f2e36434d42e" title="Disables the UDP peripheral clock. " alt="" coords="231,157,433,184"/>
+<area shape="rect" id="node6" href="$group__usbd__hal.xhtml#gaeeb6aaee5582dc68d5dbad6b11004f28" title="Disables the UDP peripheral clock. " alt="" coords="221,208,443,235"/>
+</map>

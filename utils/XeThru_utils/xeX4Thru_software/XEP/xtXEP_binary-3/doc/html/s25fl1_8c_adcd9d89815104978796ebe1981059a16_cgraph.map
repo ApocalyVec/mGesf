@@ -1,0 +1,4 @@
+<map id="S25FL1D_ContReadModeReset" name="S25FL1D_ContReadModeReset">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a8cc596fd1f6b1026b0c40922c1dc30b7" title="Reads and returns the status register of the serial flash. " alt="" coords="271,5,429,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a1a915b35968bc2e31ab4fe5e38a76708" title="Start S25FL1D Send command with/without data write/read. " alt="" coords="477,31,664,57"/>
+</map>

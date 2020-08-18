@@ -1,0 +1,5 @@
+<map id="AfeDma" name="AfeDma">
+<area shape="rect" id="node2" href="$struct_afec.xhtml" title="Afec hardware registers. " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node3" href="$struct___xdmad.xhtml" title="DMA driver instance. " alt="" coords="80,5,155,32"/>
+<area shape="rect" id="node4" href="$struct_afe_cmd.xhtml" title="Spi Transfer Request prepared by the application upper layer. " alt="" coords="179,5,253,32"/>
+</map>
