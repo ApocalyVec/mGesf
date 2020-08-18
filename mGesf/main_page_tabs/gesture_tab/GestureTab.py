@@ -17,17 +17,14 @@ class GestureTab(QWidget):
     """
     """
 
-    def __init__(self, mmw_worker: workers, *args, **kwargs):
+    def __init__(self, mmw_worker: workers, leap_worker: workers, xethrux4_worker: workers, *args, **kwargs):
         super().__init__()
         # #################### create layout #################################
 
         self.will_recording_radar = False
         self.will_recording_leap = False
         self.will_recording_UWB = False
-
-        self.is_recording_radar = False
-        self.is_recording_leap = False
-        self.is_recording_UWB = False
+        self.will_recording_xethrux4 = False
 
         # -------------------- First class --------------------
         # main page
@@ -50,17 +47,17 @@ class GestureTab(QWidget):
         self.radar_runtime_block = init_container(parent=self.runtime_block, vertical=True)
         self.leap_runtime_block = init_container(parent=self.runtime_block, vertical=True)
         self.uwb_runtime_block = init_container(parent=self.runtime_block, vertical=True)
+        self.xethrux4_runtime_block = init_container(parent=self.runtime_block, vertical=True)
 
         # -------------------- fourth class -------------------
         #       1-1. radar runtime block
         #           1-1-1. radar runtime graph
         #           1-1-2. radar checkbox
-        self.doppler_display = QGraphicsPixmapItem()
+        self.mmw_doppler_display = QGraphicsPixmapItem()
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Radar",
-                                                      graph=self.doppler_display)
+                                                      graph=self.mmw_doppler_display)
         self.radar_record_checkbox = init_checkBox(parent=self.radar_runtime_block, function=self.radar_clickBox)
         mmw_worker.signal_mmw_gesture_tab.connect(self.display_mmw_data)
-
 
         # -------------------- fourth class -------------------
         #       1-1. leap runtime block
@@ -71,13 +68,23 @@ class GestureTab(QWidget):
                                                      graph=None)
         self.leap_record_checkbox = init_checkBox(parent=self.leap_runtime_block, function=self.radar_clickBox)
 
-        # -------------------- fourth class -------------------
+        # -------------------- fifth class -------------------
         #       1-1. UWB runtime block
         #           1-1-1. UWB runtime graph
         #           1-1-2. UWB checkbox
         self.UWB_runtime_view = self.init_spec_view(parent=self.uwb_runtime_block, label="UWB",
                                                     graph=None)
         self.UWB_record_checkbox = init_checkBox(parent=self.uwb_runtime_block, function=self.UWB_clickBox)
+
+        # -------------------- sixth class -------------------
+        #       1-1. xeThruX4 runtime block
+        #           1-1-1. xeThruX4 runtime graph
+        #           1-1-2. xeThruX4 checkbox
+        xethrux4_worker.signal_data.connect(self.display_xethrux4_data)
+        self.xethrux4_ir_spectrogram_display = QGraphicsPixmapItem()
+        self.xethrux4_runtime_view = self.init_spec_view(parent=self.xethrux4_runtime_block, label="XeThruX4",
+                                                         graph=self.xethrux4_ir_spectrogram_display)
+        self.xethrux4_record_checkbox = init_checkBox(parent=self.xethrux4_runtime_block, function=self.UWB_clickBox)
 
         # -------------------- third class --------------------
         #   1. ITD block
@@ -148,6 +155,20 @@ class GestureTab(QWidget):
             self.will_recording_UWB = False
             # self.message.setText(config.UWB_box_unchecked)
 
+    def xethrux4_clickBox(self, state):
+        if state == QtCore.Qt.Checked:
+            self.will_recording_xethrux4 = True
+            # self.message.setText(config.UWB_box_checked)
+        else:
+            self.will_recording_xethrux4 = False
+            # self.message.setText(config.UWB_box_unchecked)
+
+    def display_xethrux4_data(self, data_dict):
+        ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
+        ir_qpixmap = QPixmap(ir_heatmap_qim)
+        ir_qpixmap = ir_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
+
     def display_mmw_data(self, data_dict):
         """
         Process the emitted mmWave data
@@ -162,7 +183,7 @@ class GestureTab(QWidget):
         doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
         doppler_qpixmap = QPixmap(doppler_heatmap_qim)
         doppler_qpixmap = doppler_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        self.doppler_display.setPixmap(doppler_qpixmap)
+        self.mmw_doppler_display.setPixmap(doppler_qpixmap)
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}

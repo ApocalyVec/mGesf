@@ -1,6 +1,7 @@
 import serial
 import time
 import numpy as np
+from collections import deque
 
 import pymoduleconnector
 import matplotlib.pyplot as plt
@@ -24,8 +25,8 @@ class xeThruX4SensorInterface:
         # sampling rate
         self.fs = 23.328e9
         # data buffer
-        self.frame_history = []
-        self.clutter_removal_frame_history = []
+        self.frame_history = deque(maxlen=200)
+        self.clutter_removal_frame_history = deque(maxlen=200)
         self.clutter = None
 
         self.connected = False

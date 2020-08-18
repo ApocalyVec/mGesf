@@ -1,4 +1,6 @@
 import time
+from collections import deque
+
 import numpy as np
 
 from PyQt5.QtCore import pyqtSignal, QObject
@@ -274,15 +276,20 @@ class Xe4ThruWorker(QObject):
         self._is_running = False
 
         self.center_frequency = 3  # default value
+        if xeThruX4Sensor_interface is None:  # add ir spectrogram buffer if no interface is connected
+            self.frame_buffer = deque(maxlen=200)
 
     @pg.QtCore.pyqtSlot()
     def xe4thru_process_on_tick(self):
         if self._is_running:
             if self.xeThruX4Sensor_interface:
                 frame = self.xeThruX4Sensor_interface.read_frame()
+                ir_spectrogram = self.xeThruX4Sensor_interface.frame_history
             else:
                 frame = sim_xe4thru()
-            data_dict = {'frame': frame}
+                self.frame_buffer.append(frame)
+                ir_spectrogram = self.frame_buffer
+            data_dict = {'frame': frame, 'ir_spectrogram': np.array(list(ir_spectrogram))}
             self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 
 
@@ -295,6 +302,8 @@ class Xe4ThruWorker(QObject):
             self.xeThruX4Sensor_interface.clear_xep_buffer()
         else:  # simulation mode
             print('Start Simulating Xe4Thru data')
+
+        self.ir_spectrogram = list()  # reset spectrogram
         self.center_frequency = center_frequency
         self._is_running = True
 
