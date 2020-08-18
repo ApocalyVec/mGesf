@@ -1,0 +1,4 @@
+<map id="mcpw_mcp_handle_protocol_packet" name="mcpw_mcp_handle_protocol_packet">
+<area shape="rect" id="node2" href="$protocol__host__parser_8c.xhtml#ad3ce718b8ca0c78bbf94f3e9cf57070d" title="parse" alt="" coords="296,5,351,32"/>
+<area shape="rect" id="node3" href="$mcp__wrapper_8c.xhtml#a5db9ea0e17c8a6831144a6ce0aee7a09" title="parse_bootloader_packet" alt="" coords="240,56,407,83"/>
+</map>

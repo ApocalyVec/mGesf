@@ -1,0 +1,8 @@
+<map id="UDPHS_Write" name="UDPHS_Write">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#af318fefb03c995978a740a8b1733aaa0" title="Enable or disable Auto switch of banks. " alt="" coords="160,5,383,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga696fadbf7b9cc71dad42fab61873a40d" title="SCB_CleanDCache_by_Addr" alt="" coords="171,56,372,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#ga3050097643684759b64beda54283f1e4" title="DMA Single transfer. " alt="" coords="198,107,345,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#aa8d5c4b9a4a142b1c587fcfaa7532596" title="Check if given endpoint&#39;s bank is free. " alt="" coords="199,157,344,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#aaefdcd5f8be021f6ebffcbb4e7630079" title="Enables interrupt for a given endpoint. " alt="" coords="196,208,347,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a6e9251af935e4867afa52cd306e8c699" title="Enables an interrupt type for a given endpoint. " alt="" coords="182,259,361,285"/>
+</map>

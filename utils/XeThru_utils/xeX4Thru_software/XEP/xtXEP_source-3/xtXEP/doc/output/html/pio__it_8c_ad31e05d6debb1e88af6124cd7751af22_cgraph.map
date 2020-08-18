@@ -1,0 +1,7 @@
+<map id="PIO_InitializeInterrupts" name="PIO_InitializeInterrupts">
+<area shape="rect" id="node2" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="217,5,381,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga260fba04ac8346855c57f091d4ee1e71" title="Disable External Interrupt. " alt="" coords="235,56,363,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="216,107,381,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="235,157,362,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="237,208,361,235"/>
+</map>

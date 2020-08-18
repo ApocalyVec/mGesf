@@ -1,0 +1,5 @@
+<map id="onMcpFindAllFiles" name="onMcpFindAllFiles">
+<area shape="rect" id="node2" href="$xtfile_8h.xhtml#a2f9dc3b775b769f40625a1958e20d98f" title="Finds all files and stores the type and identifier of each file in the given buffers. " alt="" coords="219,5,354,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="184,57,389,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a90b63c6c0030baa1fd9c1d71b1c23d1a" title="Dispatch message to hostcom asking to reply with int array to host. " alt="" coords="184,122,389,163"/>
+</map>

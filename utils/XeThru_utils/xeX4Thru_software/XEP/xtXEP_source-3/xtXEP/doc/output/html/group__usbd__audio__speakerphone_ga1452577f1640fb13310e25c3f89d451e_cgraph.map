@@ -1,0 +1,4 @@
+<map id="AUDDSpeakerPhone_MuteReceived" name="AUDDSpeakerPhone_MuteReceived">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga1d2959223d1e73d2971e112669b46bbd" title="Invoked when an audio channel get muted or unmuted. " alt="" coords="303,5,495,47"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="349,71,448,98"/>
+</map>

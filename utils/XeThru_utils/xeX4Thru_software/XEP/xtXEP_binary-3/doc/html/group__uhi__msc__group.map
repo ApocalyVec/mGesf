@@ -1,0 +1,6 @@
+<map id="UHI for Mass Storage Class" name="UHI for Mass Storage Class">
+<area shape="rect" id="node2" href="$group__uhi__msc__group__internal.xhtml" title="Class internal implementation. " alt="" coords="408,5,575,47"/>
+<area shape="rect" id="node4" href="$group__uhi__msc__mem__group.xhtml" title="Layer added on UHI MSC interface to allow the usage of control access module. " alt="" coords="404,70,579,126"/>
+<area shape="rect" id="node5" href="$group__uhi__msc__group__uhc.xhtml" title="Define and functions required by UHC. " alt="" coords="422,149,561,191"/>
+<area shape="rect" id="node3" href="$group__uhi__group.xhtml" title="The UHI provides a common API for all classes, and this is used by UHC for the main control of USB ho..." alt="" coords="5,77,149,119"/>
+</map>

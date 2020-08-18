@@ -1,0 +1,11 @@
+<map id="onMcpSystemRunTest" name="onMcpSystemRunTest">
+<area shape="rect" id="node2" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="215,5,420,47"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a8e58faffa8a7b0934ca76bc1fa5ef6fa" title="Causes the calling task to wait and yields to another task. " alt="" coords="284,71,351,98"/>
+<area shape="rect" id="node4" href="$module__ui_8h.xhtml#adc23507e74f39161ab6ddc3019ee1672" title="LED override to force LED behaviour and block further changes. " alt="" coords="231,123,404,164"/>
+<area shape="rect" id="node5" href="$task__radar_8c.xhtml#a8f5a25ff5bf1da89fd00ffdc10c73151" title="Enter TX only mode. " alt="" coords="249,188,386,229"/>
+<area shape="rect" id="node6" href="$x4driver_8h.xhtml#aaa39bc07728273218162fc63a0bcb864" title="x4driver_set_tx_power" alt="" coords="468,254,632,281"/>
+<area shape="rect" id="node7" href="$task__radar_8c.xhtml#a43f10133b8707768c4b3a4c15526093a" title="Enter TX only mode, with TX off. " alt="" coords="239,305,396,347"/>
+<area shape="rect" id="node8" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="215,371,420,412"/>
+<area shape="rect" id="node9" href="$xep__hal_8h.xhtml#a23a7563c734f3b439d1d26f0598fafe7" title="Performs the specified selftest. " alt="" coords="259,437,375,463"/>
+<area shape="rect" id="node10" href="$xep__dispatch__messages_8h.xhtml#a22a2633c98e35bd1a0e5fd8687de3adf" title="Dispatch message to hostcom asking to reply with byte array to host. " alt="" coords="215,488,420,529"/>
+</map>

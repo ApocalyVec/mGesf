@@ -1,0 +1,5 @@
+<map id="QSPI_SendCommand" name="QSPI_SendCommand">
+<area shape="rect" id="node2" href="$libraries_2libchip_2source_2qspi_8c.xhtml#ae03b55a11d8a50d01e87f7398caa413c" title="Configures a instruction address for QSPI in QSPI mode. " alt="" coords="217,5,351,32"/>
+<area shape="rect" id="node3" href="$libraries_2libchip_2source_2qspi_8c.xhtml#afde5ea34d85fcecb4a538250325d3c6c" title="Configures instruction register with a given command for QSPI. " alt="" coords="232,56,336,83"/>
+<area shape="rect" id="node4" href="$libraries_2libchip_2source_2qspi_8c.xhtml#ab6228d04866fe8947d7fafd5d04b65cf" title="Configures instruction frame register of QSPI. " alt="" coords="212,107,356,133"/>
+</map>

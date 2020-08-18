@@ -1,0 +1,5 @@
+<map id="USARTD_DisableRxChannels" name="USARTD_DisableRxChannels">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga6be5cec75618250adb227d7588ae7078" title="Stop DMA transfer. " alt="" coords="256,5,413,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="259,56,411,83"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#ga2a3178c1d2615b7a4d7a0005662cdd89" title="Free the specified xDMA channel. " alt="" coords="257,107,413,133"/>
+</map>

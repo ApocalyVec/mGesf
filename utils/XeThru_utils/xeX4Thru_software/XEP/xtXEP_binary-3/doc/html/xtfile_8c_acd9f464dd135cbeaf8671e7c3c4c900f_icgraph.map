@@ -1,0 +1,5 @@
+<map id="xtfile_get_handle" name="xtfile_get_handle">
+<area shape="rect" id="node2" href="$xep__application__mcp__callbacks_8h.xhtml#a912390dfebebae9c877ca3fd58f9a252" title="onMcpCommitFile" alt="" coords="186,5,321,32"/>
+<area shape="rect" id="node3" href="$xep__application__mcp__callbacks_8h.xhtml#ac36d2bcd79441aff3856363c98b822ad" title="onMcpSetFileData" alt="" coords="185,56,322,83"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#ad862bf24dc31d741e7fa5a9ade1c9f39" title="onMcpGetFileData" alt="" coords="184,107,323,133"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="HIDDKeyboard_ConfigureFunction" name="HIDDKeyboard_ConfigureFunction">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdchid.xhtml#gaae1fea56d3b2b270cf6d04ef55c45227" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="292,5,505,47"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidaud.xhtml#ga3964e181a871753372233070c5cb9672" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="291,71,506,112"/>
+<area shape="rect" id="node4" href="$group__usbd__composite__hidmsd.xhtml#gac20bb28b9da0825ad63d42398b530e0d" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="296,136,501,177"/>
+<area shape="rect" id="node5" href="$group__usbd__hid__key.xhtml#ga7147c21b165fd52ac5769ac948cf659a" title="Handles configureation changed event. " alt="" coords="288,201,509,243"/>
+</map>

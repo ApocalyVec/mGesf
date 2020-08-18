@@ -1,0 +1,6 @@
+<map id="pll_enable_config_defaults" name="pll_enable_config_defaults">
+<area shape="rect" id="node2" href="$group__pll__group.xhtml#ga3d87845545ede586b91f8427f5594685" title="pll_is_locked" alt="" coords="241,5,339,32"/>
+<area shape="rect" id="node3" href="$group__pll__group.xhtml#gaf4808844971419dcc305ad41a2104d0a" title="Enable the source of the pll. " alt="" coords="227,56,353,83"/>
+<area shape="rect" id="node4" href="$group__pll__group.xhtml#ga084e2aa7e13f6de6b87cb9722a24a9dd" title="pll_config_init" alt="" coords="240,107,340,133"/>
+<area shape="rect" id="node5" href="$group__pll__group.xhtml#gac963cb7ae2da65162dc3955129ff846c" title="pll_enable" alt="" coords="250,157,330,184"/>
+</map>

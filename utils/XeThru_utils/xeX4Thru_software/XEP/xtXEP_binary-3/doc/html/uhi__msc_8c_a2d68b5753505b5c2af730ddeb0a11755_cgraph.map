@@ -1,0 +1,4 @@
+<map id="uhi_msc_enable_step1" name="uhi_msc_enable_step1">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="225,5,386,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a291983a87ab06a4d4aa77896e5cd9fd3" title="Step 2 of the initialization of a USB MSC device Decode the setup request GET_MAX_LUN and allocs LUN ..." alt="" coords="221,56,389,83"/>
+</map>

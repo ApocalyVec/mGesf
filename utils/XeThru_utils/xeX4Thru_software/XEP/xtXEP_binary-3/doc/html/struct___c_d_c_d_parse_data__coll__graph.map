@@ -1,0 +1,5 @@
+<map id="_CDCDParseData" name="_CDCDParseData">
+<area shape="rect" id="node2" href="$struct___c_d_c_d_serial_port.xhtml" title="Struct for USB CDC virtual COM serial port function. " alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="159,5,338,32"/>
+<area shape="rect" id="node4" href="$struct___c_d_c_d_e_e_m_port.xhtml" title="Struct for USB CDC EEM port function. " alt="" coords="362,5,482,32"/>
+</map>

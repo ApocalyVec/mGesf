@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/HIDDFunction.h" name="src/hal/x4m0x_s70/libraries/libusb/include/HIDDFunction.h">
+<area shape="rect" id="node2" href="$_h_i_d_d_keyboard_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboard.c" alt="" coords="5,95,200,151"/>
+<area shape="rect" id="node3" href="$_h_i_d_d_keyboard_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboardDriver.c" alt="" coords="224,95,419,151"/>
+<area shape="rect" id="node4" href="$_h_i_d_d_mouse_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;mouse\l/HIDDMouseDriver.c" alt="" coords="443,95,637,151"/>
+<area shape="rect" id="node5" href="$_h_i_d_d_function_8c.xhtml" title="Implementation of the HIDDFunction class methods. " alt="" coords="661,95,856,151"/>
+<area shape="rect" id="node6" href="$_h_i_d_d_transfer_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;transfer\l/HIDDTransferDriver.c" alt="" coords="880,95,1075,151"/>
+<area shape="rect" id="node7" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="1099,102,1293,143"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="osc_enable" name="osc_enable">
+<area shape="rect" id="node2" href="$group__sam__drivers__pmc__group.xhtml#gaf0bfe7345422ac59a95b4df85ed5c140" title="Switch slow clock source selection to external 32k (Xtal or Bypass). " alt="" coords="165,5,305,47"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__pmc__group.xhtml#ga99fe80ceb242a783b01fa3e68d75f4e6" title="Switch main clock source selection to internal fast RC. " alt="" coords="155,71,314,112"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__pmc__group.xhtml#ga14a6910f902d5838ac1efdb29d933c45" title="Switch main clock source selection to external Xtal/Bypass. " alt="" coords="141,137,328,163"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="USBD_Write" name="USBD_Write">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gafcb94bdd4c0ea327621a187814ab4f9f" title="Set callback for a USB endpoint for transfer (read/write). " alt="" coords="152,5,377,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#gab8293616e390cb94e93529673367acb4" title="Sends data through a USB endpoint. " alt="" coords="199,56,330,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#ga57e97248d68838ee318ebeb26a85edaa" title="Transfers a data payload from the current tranfer buffer to the endpoint FIFO. " alt="" coords="199,107,330,133"/>
+</map>

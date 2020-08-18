@@ -1,0 +1,5 @@
+<map id="MSDFunction_RequestHandler" name="MSDFunction_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdcmsd.xhtml#ga6c71fe00bc7822fec2af273fbc9c2ba0" title="Handles CDCMSD&#45;specific USB requests sent by the host, and forwards standard ones to the USB device d..." alt="" coords="267,5,493,32"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidmsd.xhtml#gaf9106ca177574016a8fce5ba4644e003" title="Handles HIDMSD&#45;specific USB requests sent by the host, and forwards standard ones to the USB device d..." alt="" coords="269,56,491,83"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#ga3fc749f879c284f631bce181e7cfe0eb" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="281,107,479,133"/>
+</map>

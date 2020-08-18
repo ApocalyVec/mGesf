@@ -1,0 +1,9 @@
+<map id="MCID_IOCtrl" name="MCID_IOCtrl">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#gae956aa6961d961be8d3791413d81497f" title="Check if the command is finished. " alt="" coords="151,5,323,32"/>
+<area shape="rect" id="node3" href="$group__mcid__functions.xhtml#ga03c7b7af1b4abf00f759b0a47c476baf" title="Reset MCID and disable HW. " alt="" coords="188,56,285,83"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#gaa42ae91258675d685937a68c69b2afdf" title="Cancel pending SD/MMC command. " alt="" coords="371,81,505,108"/>
+<area shape="rect" id="node5" href="$group__mcid__functions.xhtml#gad24376de77629465ea53e102cf4d2f38" title="Configure the MCI CLKDIV in the MCI_MR register. " alt="" coords="179,157,294,184"/>
+<area shape="rect" id="node6" href="$group__hsmci__functions.xhtml#ga9365f2817b47644f8c0f325a915fb141" title="Enable/Disable High&#45;Speed mode for MCI. " alt="" coords="171,208,302,235"/>
+<area shape="rect" id="node7" href="$group__hsmci__functions.xhtml#gad4ba27f7339c9558b66aef5d9ebf6cab" title="Check if High&#45;speed mode is enabled on MCI. " alt="" coords="162,259,311,285"/>
+<area shape="rect" id="node8" href="$group__hsmci__functions.xhtml#ga402f687cf0393baac08390e517e84033" title="Set bus width of MCI. " alt="" coords="161,309,313,336"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="USBHS_DisableInt" name="USBHS_DisableInt">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="192,5,319,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga3c996a1e96701350e2c298521b7f8630" title="Certification test for High Speed device. " alt="" coords="193,56,318,83"/>
+</map>

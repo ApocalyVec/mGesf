@@ -1,0 +1,5 @@
+<map id="_ILI9488_dma" name="_ILI9488_dma">
+<area shape="rect" id="node2" href="$struct___xdmad_cfg.xhtml" title="_XdmadCfg" alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node3" href="$struct___xdmad.xhtml" title="DMA driver instance. " alt="" coords="130,5,205,32"/>
+<area shape="rect" id="node4" href="$struct_spi.xhtml" title="Spi hardware registers. " alt="" coords="229,5,271,32"/>
+</map>

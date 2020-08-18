@@ -1,0 +1,16 @@
+<map id="USBHS_HostDisablePipeIntType" name="USBHS_HostDisablePipeIntType">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga1d4a9f98194cb255b2fcb6cdf8d83fb8" title="Allows to receive or send data on an endpoint. " alt="" coords="299,5,478,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga879e4d4476c528ed4cfac77d41bb1a06" title="USBH_HAL_DelayedResume" alt="" coords="287,107,490,133"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga12b21dabf5465ef92208084d4f336186" title="USBH_HAL_ManageSof" alt="" coords="569,107,741,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga85b92a3f7bc4357fae366d2f7a1c595b" title="USBH_HAL_ControlInterrupt" alt="" coords="809,461,1011,488"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#ga1ddb6a33201674d513c4ad9c5de79e93" title="USBH_HAL_PhaseControlSetup" alt="" coords="277,664,500,691"/>
+<area shape="rect" id="node7" href="$group__uhd__group.xhtml#gad1f5aedd5277d055c4c23a9a185fb7e6" title="USBH_HAL_PhaseDataInStart" alt="" coords="548,411,761,437"/>
+<area shape="rect" id="node8" href="$group__uhd__group.xhtml#gadc3093c163c3229d9343cb5f2f6ef8dd" title="USBH_HAL_PhaseDataIn" alt="" coords="564,461,745,488"/>
+<area shape="rect" id="node9" href="$group__uhd__group.xhtml#ga9fcd1bf925a9ad0692672d08f3da3427" title="USBH_HAL_InZLP" alt="" coords="321,563,457,589"/>
+<area shape="rect" id="node10" href="$group__uhd__group.xhtml#ga74ceb21eb2c7ef68d5fe6f02ea7beb58" title="USBH_HAL_PhaseDataOut" alt="" coords="558,563,751,589"/>
+<area shape="rect" id="node11" href="$group__uhd__group.xhtml#ga5d07dff59bfb3f4de2343ae894fdac03" title="USBH_HAL_OutZLP" alt="" coords="315,512,463,539"/>
+<area shape="rect" id="node12" href="$group__uhd__group.xhtml#gafba473f1b723cdb9500b91ec7fad0207" title="USBH_HAL_PipeInReceived" alt="" coords="291,259,486,285"/>
+<area shape="rect" id="node13" href="$group__uhd__group.xhtml#gaa29c0122543b5f5faf600eee68474615" title="USBH_HAL_PipeInterrupt" alt="" coords="563,233,746,260"/>
+<area shape="rect" id="node14" href="$group__uhd__group.xhtml#ga39a6506d44760a518b49d004574bc9c9" title="USBH_HAL_PipeOutReady" alt="" coords="295,309,483,336"/>
+<area shape="rect" id="node15" href="$group__uhd__group.xhtml#gaba849a4ecb7f5b837541fbccf850da59" title="USBH_HAL_PipeAbort" alt="" coords="307,157,470,184"/>
+</map>

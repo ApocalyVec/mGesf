@@ -1,0 +1,7 @@
+<map id="Usbd_cdc" name="Usbd_cdc">
+<area shape="rect" id="node1" href="$group__usbd__cdc__eem__desc.xhtml" title="USB Device EEM Port\l Descriptor Values" alt="" coords="141,5,300,47"/>
+<area shape="rect" id="node2" href="$group__usbd__cdc__if.xhtml" title="USB Device CDC EEM\l Interface IDs" alt="" coords="141,71,301,112"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc__serial__desc.xhtml" title="USB Device Serial Port\l Descriptor Values" alt="" coords="137,136,304,177"/>
+<area shape="rect" id="node5" href="$group__usbd__cdc__serial__device__ids.xhtml" title="This page lists the IDs used in the CDC Serial Device Descriptor. " alt="" coords="140,202,301,229"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc__serial__events.xhtml" title="USB Device Serial Port\l Events" alt="" coords="137,253,304,295"/>
+</map>

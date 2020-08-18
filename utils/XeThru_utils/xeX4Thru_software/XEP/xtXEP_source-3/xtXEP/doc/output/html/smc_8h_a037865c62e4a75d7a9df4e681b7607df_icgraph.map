@@ -1,0 +1,5 @@
+<map id="SMC_ECC_GetValue" name="SMC_ECC_GetValue">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#a98eda6914d1412bf64354322ce274973" title="Get 24&#45;bit ECC code for 8&#45;bit data path NAND flash. " alt="" coords="210,5,429,32"/>
+<area shape="rect" id="node3" href="$smc_8c.xhtml#ad60c8dabec3a5c475dc37bf2d03581c3" title="Get 24&#45;bit ECC code for 8&#45;bit data path NAND flash. " alt="" coords="210,56,429,83"/>
+<area shape="rect" id="node4" href="$smc_8c.xhtml#aa77e585aa9242fea7c9eea721b6e702a" title="Get 32&#45;bit ECC code for 16&#45;bit data path NAND flash. " alt="" coords="203,107,436,133"/>
+</map>

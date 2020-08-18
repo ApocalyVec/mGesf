@@ -1,0 +1,5 @@
+<map id="CDCDSerialPort_Write" name="CDCDSerialPort_Write">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#af11bea4c155867153ce6a0ae7700d671" title="Get Endpoint Size. " alt="" coords="215,5,358,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="408,81,507,108"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#ga5ed7e9a484cc297f7a1462a6beeebe9c" title="Callback function for USBD_Write to send a zero&#45;length packet. " alt="" coords="213,107,360,133"/>
+</map>

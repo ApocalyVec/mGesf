@@ -1,0 +1,5 @@
+<map id="USBD_IsHalted" name="USBD_IsHalted">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga6a3177814ff14ce51040bd58817d4064" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="172,5,388,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="436,23,579,65"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#gac202c092099685d21ac19320311b1d0f" title="State machine for the MSD device driver. " alt="" coords="201,107,359,133"/>
+</map>

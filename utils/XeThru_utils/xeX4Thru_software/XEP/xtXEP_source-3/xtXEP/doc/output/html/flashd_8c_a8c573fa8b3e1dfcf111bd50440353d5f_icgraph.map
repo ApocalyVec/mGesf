@@ -1,0 +1,4 @@
+<map id="ComputeLockRange" name="ComputeLockRange">
+<area shape="rect" id="node2" href="$flashd_8c.xhtml#a29e89431146b26ca80a4926ad20e4b0a" title="Locks all the regions in the given address range. " alt="" coords="211,5,321,32"/>
+<area shape="rect" id="node3" href="$flashd_8c.xhtml#a964a05cff2bc8f9d6477f4cf70f253d9" title="Unlocks all the regions in the given address range. " alt="" coords="204,56,328,83"/>
+</map>

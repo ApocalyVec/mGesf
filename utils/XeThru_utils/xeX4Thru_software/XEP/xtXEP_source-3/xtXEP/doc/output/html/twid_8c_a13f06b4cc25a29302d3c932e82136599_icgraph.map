@@ -1,0 +1,5 @@
+<map id="TWID_Read" name="TWID_Read">
+<area shape="rect" id="node2" href="$cs2100_8c.xhtml#a16e288e113d69ed1763ad12111a1b125" title="Read data from CS2100 Register. " alt="" coords="165,5,276,32"/>
+<area shape="rect" id="node3" href="$image__sensor__inf_8c.xhtml#abe9e6dc18918dcc4f76a7316ebdb44c4" title="Read value from a register in an dedicated sensor device. " alt="" coords="144,56,297,83"/>
+<area shape="rect" id="node4" href="$wm8904_8c.xhtml#ad6e77da6ab43aae0962183aa6bcd4700" title="Read data from WM8904 Register. " alt="" coords="163,107,278,133"/>
+</map>

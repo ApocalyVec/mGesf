@@ -1,0 +1,8 @@
+<map id="xtio_usb_init" name="xtio_usb_init">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="187,5,314,32"/>
+<area shape="rect" id="node3" href="$xtio__usb_8c.xhtml#a963822fd2da932f8a088af4b8069c540" title="Configure USBHS settings for USB device. " alt="" coords="183,56,319,83"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#ga191a619ddb7cfdac13b7d8f04349e3ef" title="Initializes the USB Device CDC serial driver &amp; USBD Driver. " alt="" coords="155,107,347,133"/>
+<area shape="rect" id="node5" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="198,157,303,184"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga71b9264662d74666e4b058984e3346e5" title="Connects the pull&#45;up on the D+ line of the USB. " alt="" coords="191,208,311,235"/>
+<area shape="rect" id="node7" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="190,259,311,285"/>
+</map>

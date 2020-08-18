@@ -1,0 +1,6 @@
+<map id="GMACB_ReadPhy" name="GMACB_ReadPhy">
+<area shape="rect" id="node2" href="$gmacb__phy_8c.xhtml#ae51ab44e9f86bac91bc556a27ce6ffd0" title="Find a valid PHY Address (from 0 to 31). " alt="" coords="194,5,349,32"/>
+<area shape="rect" id="node3" href="$gmacb__phy_8c.xhtml#aced88b292369024663d7391ee02d2539" title="Dump all the useful registers. " alt="" coords="184,56,359,83"/>
+<area shape="rect" id="node4" href="$gmacb__phy_8c.xhtml#aa2c6c693eb5de616072181df0ae32374" title="Issue a Auto Negotiation of the PHY. " alt="" coords="407,81,577,108"/>
+<area shape="rect" id="node5" href="$gmacb__phy_8c.xhtml#a9ba3ad1335880787330bf3c859c5b32e" title="Issue a SW reset to reset all registers of the PHY. " alt="" coords="204,157,339,184"/>
+</map>

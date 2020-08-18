@@ -1,0 +1,4 @@
+<map id="HardFault_reason" name="HardFault_reason">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8f5af376adcfaea7f2ddb3ef9b6b2544" title="Instruction Synchronization Barrier. " alt="" coords="193,5,250,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#gabf4161df67564feda90581aa4917a515" title="Data Memory Barrier. " alt="" coords="188,56,255,83"/>
+</map>

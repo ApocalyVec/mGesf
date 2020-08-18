@@ -1,0 +1,5 @@
+<map id="DBG_GetChar" name="DBG_GetChar">
+<area shape="rect" id="node2" href="$dbg__console_8c.xhtml#a807d59a58a4312efa7ef1c445107c256" title="Reads an integer. " alt="" coords="166,5,293,32"/>
+<area shape="rect" id="node3" href="$dbg__console_8c.xhtml#af9bb27367f558fe5135b7f59a134f074" title="Reads an hexadecimal number. " alt="" coords="164,56,295,83"/>
+<area shape="rect" id="node4" href="$dbg__console_8c.xhtml#a4c525b3c7f5f90a659cacb562a248c20" title="gets" alt="" coords="204,107,255,133"/>
+</map>

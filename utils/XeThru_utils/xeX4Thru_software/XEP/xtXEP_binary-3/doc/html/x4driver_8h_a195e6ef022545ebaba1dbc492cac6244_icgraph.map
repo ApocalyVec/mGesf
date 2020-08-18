@@ -1,0 +1,5 @@
+<map id="x4driver_get_frame_bin_count" name="x4driver_get_frame_bin_count">
+<area shape="rect" id="node2" href="$task__radar_8c.xhtml#a1f0b2f52d809a8141147add6eaa0279a" title="read_and_send_radar\l_frame" alt="" coords="220,5,381,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a6d30c9bc074d42ab983535463b8a7a28" title="x4driver_set_dac_auto" alt="" coords="217,71,384,98"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#a4c2a9862bbc990f4ee126ba67c8def72" title="onMcpX4DriverGetFrameBin\lCount" alt="" coords="200,123,401,164"/>
+</map>

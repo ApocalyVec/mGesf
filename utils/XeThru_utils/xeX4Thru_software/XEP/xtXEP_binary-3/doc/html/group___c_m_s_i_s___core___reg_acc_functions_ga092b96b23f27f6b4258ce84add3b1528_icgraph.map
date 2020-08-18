@@ -1,0 +1,5 @@
+<map id="__disable_irq" name="__disable_irq">
+<area shape="rect" id="node2" href="$mpu_8c.xhtml#aaa88b8f32a6a4c83d2ddc9a287d82ef2" title="Update MPU regions. " alt="" coords="157,5,312,32"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#gab841b1a9dc617afc102ab5badd8ee656" title="_UsbDataSent" alt="" coords="177,56,292,83"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#gadfeadaa787932fc6f8ef50a53fdb2ed0" title="_FlushUsbTxBuffers" alt="" coords="360,56,507,83"/>
+</map>

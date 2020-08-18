@@ -1,0 +1,27 @@
+<map id="src/hal/x4m0x_s70/libraries/libboard/REMOVE_board_e70_xpld.h" name="src/hal/x4m0x_s70/libraries/libboard/REMOVE_board_e70_xpld.h">
+<area shape="rect" id="node2" href="$chip_8h.xhtml" title="chip.h" alt="" coords="1529,184,1589,211"/>
+<area shape="rect" id="node5" href="$led_8h.xhtml" title="include/led.h" alt="" coords="595,102,697,129"/>
+<area shape="rect" id="node6" href="$gmii_8h.xhtml" title="include/gmii.h" alt="" coords="721,102,832,129"/>
+<area shape="rect" id="node7" href="$gmacb__phy_8h.xhtml" title="include/gmacb_phy.h" alt="" coords="857,102,1011,129"/>
+<area shape="rect" id="node8" href="$dbg__console_8h.xhtml" title="Include function prototype for the UART console. " alt="" coords="1035,102,1198,129"/>
+<area shape="rect" id="node9" href="$bmp_8h.xhtml" title="include/bmp.h" alt="" coords="1222,102,1334,129"/>
+<area shape="rect" id="node10" href="$lcdd_8h.xhtml" title="Interface for LCD driver. " alt="" coords="1358,102,1467,129"/>
+<area shape="rect" id="node11" href="$ili9488_8h.xhtml" title="Interface of ILI9488 driver. " alt="" coords="1492,102,1616,129"/>
+<area shape="rect" id="node12" href="$ili9488__reg_8h.xhtml" title="include/ili9488_reg.h" alt="" coords="1641,102,1793,129"/>
+<area shape="rect" id="node13" href="$ili9488__spi_8h.xhtml" title="Interface of ILI9488 driver. " alt="" coords="1817,102,1966,129"/>
+<area shape="rect" id="node14" href="$ili9488__ebi_8h.xhtml" title="Interface of ILI9488 driver. " alt="" coords="1991,102,2141,129"/>
+<area shape="rect" id="node15" href="$ili9488__dma_8h.xhtml" title="Interface of ILI9488 driver. " alt="" coords="2166,102,2326,129"/>
+<area shape="rect" id="node16" href="$ili9488__spi__dma_8h.xhtml" title="Interface of ILI9488 DMA driver. " alt="" coords="2351,95,2488,136"/>
+<area shape="rect" id="node17" href="$ili9488__ebi__dma_8h.xhtml" title="Interface of ILI9488 driver. " alt="" coords="2513,95,2651,136"/>
+<area shape="rect" id="node18" href="$frame__buffer_8h.xhtml" title="Interface of frame buffer driver. " alt="" coords="2676,102,2840,129"/>
+<area shape="rect" id="node19" href="$lcd__color_8h.xhtml" title="RGB 24&#45;bits color table definition. " alt="" coords="2865,102,3003,129"/>
+<area shape="rect" id="node20" href="$lcd__draw_8h.xhtml" title="Interface for draw function on LCD. " alt="" coords="4127,102,4264,129"/>
+<area shape="rect" id="node21" href="$lcd__gimp__image_8h.xhtml" title="lcd_gimp_image.h" alt="" coords="3574,184,3713,211"/>
+<area shape="rect" id="node22" href="$lcd__font10x14_8h.xhtml" title="Font 10x14 table definition. " alt="" coords="3129,102,3301,129"/>
+<area shape="rect" id="node23" href="$lcd__font_8h.xhtml" title="Interface for draw font on LCD. " alt="" coords="3326,102,3459,129"/>
+<area shape="rect" id="node24" href="$rtc__calib_8h.xhtml" title="Interface for Real Time Clock calibration (RTC) . " alt="" coords="3483,102,3619,129"/>
+<area shape="rect" id="node25" href="$cs2100_8h.xhtml" title="Implementation WM8904 driver. " alt="" coords="3643,102,3772,129"/>
+<area shape="rect" id="node26" href="$s25fl1_8h.xhtml" title="Interface for the S25fl1 Serial Flash driver. " alt="" coords="3796,102,3917,129"/>
+<area shape="rect" id="node27" href="$image__sensor__inf_8h.xhtml" title="include/image_sensor\l_inf.h" alt="" coords="3941,95,4103,136"/>
+<area shape="rect" id="node28" href="$iso7816__4_8h.xhtml" title="include/iso7816_4.h" alt="" coords="5,102,153,129"/>
+</map>

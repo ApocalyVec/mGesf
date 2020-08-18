@@ -1,0 +1,6 @@
+<map id="_HidMsdDriverConfigurationDescriptors" name="_HidMsdDriverConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___h_i_d_descriptor1.xhtml" title="_HIDDescriptor1" alt="" coords="46,5,173,32"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="20,92,199,119"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="5,143,213,169"/>
+<area shape="rect" id="node5" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="20,201,199,228"/>
+</map>

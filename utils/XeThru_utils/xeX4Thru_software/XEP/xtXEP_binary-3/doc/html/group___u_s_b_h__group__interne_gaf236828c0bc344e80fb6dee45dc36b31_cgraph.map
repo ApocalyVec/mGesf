@@ -1,0 +1,7 @@
+<map id="USBH_enumeration_step14" name="USBH_enumeration_step14">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga2b5b29e1ddaf4c35509ac444fa69a157" title="Manage error during device enumeration. " alt="" coords="501,37,688,64"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="764,5,919,32"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga85036d02a8ba359ad946070bbc8a4080" title="Enters a specific device in USB suspend mode Suspend the USB line or a port on USB hub..." alt="" coords="736,100,947,127"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="514,113,675,140"/>
+<area shape="rect" id="node6" href="$group___u_s_b_h__group__interne.xhtml#ga68f29658cb41fc38bbe5461cfc253812" title="Device enumeration step 15 Enables UHI interfaces. " alt="" coords="253,75,453,101"/>
+</map>

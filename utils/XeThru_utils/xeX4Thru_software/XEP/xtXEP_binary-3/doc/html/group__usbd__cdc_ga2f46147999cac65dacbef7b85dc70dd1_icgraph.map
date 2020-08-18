@@ -1,0 +1,6 @@
+<map id="CDCDSerial_ConfigureFunction" name="CDCDSerial_ConfigureFunction">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga6435498b62ec6c1d4378563f68767120" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="271,5,497,47"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__cdcaud.xhtml#gae3b857caf03672721667a11656b023ed" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="275,71,493,112"/>
+<area shape="rect" id="node4" href="$group__usbd__composite__cdchid.xhtml#gaae1fea56d3b2b270cf6d04ef55c45227" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="277,136,491,177"/>
+<area shape="rect" id="node5" href="$group__usbd__composite__cdcmsd.xhtml#gaa7ae001e3db16158a74b9d29c1918ac9" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="279,201,489,243"/>
+</map>

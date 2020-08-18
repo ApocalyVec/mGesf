@@ -1,0 +1,4 @@
+<map id="ISO7816_warm_reset" name="ISO7816_warm_reset">
+<area shape="rect" id="node2" href="$iso7816__4_8c.xhtml#af4e4648dfca0ef0ed81f36ea040b5586" title="Iso 7816 ICC power off. " alt="" coords="212,5,368,32"/>
+<area shape="rect" id="node3" href="$iso7816__4_8c.xhtml#a5fc5b5b36f1800193f453fb3226ff5fe" title="Iso 7816 ICC power on. " alt="" coords="212,56,368,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="createGetNoiseMapControlCommand" name="createGetNoiseMapControlCommand">
+<area shape="rect" id="node2" href="$protocol_8c.xhtml#a3de1158ac59e288305dd2a83c23c8bcf" title="packet_start" alt="" coords="235,5,329,32"/>
+<area shape="rect" id="node3" href="$protocol_8c.xhtml#aefcdbf5141d1639e3d6aea7a577b09a5" title="process_byte" alt="" coords="232,56,332,83"/>
+<area shape="rect" id="node4" href="$protocol_8c.xhtml#aa411de769b16d0e990fed401be284798" title="packet_end" alt="" coords="237,107,327,133"/>
+</map>

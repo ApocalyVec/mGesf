@@ -1,0 +1,13 @@
+<map id="Defines and Type Definitions" name="Defines and Type Definitions">
+<area shape="rect" id="node1" href="$group___c_m_s_i_s___t_p_i.xhtml" title="Type definitions for the Trace Port Interface (TPI) " alt="" coords="276,5,421,47"/>
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___c_o_r_e.xhtml" title="Core Register type definitions. " alt="" coords="277,71,420,112"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s__core__base.xhtml" title="Definitions for base addresses, unions, and structures. " alt="" coords="287,137,410,163"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___sys_tick.xhtml" title="Type definitions for the System Timer Registers. " alt="" coords="277,188,420,229"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___n_v_i_c.xhtml" title="Type definitions for the NVIC Registers. " alt="" coords="255,253,443,295"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___s_cn_s_c_b.xhtml" title="Type definitions for the System Control and ID Register not in the SCB. " alt="" coords="272,319,425,360"/>
+<area shape="rect" id="node7" href="$group___c_m_s_i_s___s_c_b.xhtml" title="Type definitions for the System Control Block Registers. " alt="" coords="269,384,428,425"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___d_w_t.xhtml" title="Type definitions for the Data Watchpoint and Trace (DWT) " alt="" coords="271,449,426,491"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core_debug.xhtml" title="Cortex&#45;M0 Core Debug Registers (DCB registers, SHCSR, and DFSR) are only accessible over DAP and not ..." alt="" coords="269,515,429,556"/>
+<area shape="rect" id="node10" href="$group___c_m_s_i_s___i_t_m.xhtml" title="Type definitions for the Instrumentation Trace Macrocell (ITM) " alt="" coords="268,580,429,621"/>
+<area shape="rect" id="node12" href="$group___c_m_s_i_s__core__bitfield.xhtml" title="Macros for use with bit field definitions (xxx_Pos, xxx_Msk). " alt="" coords="271,645,426,687"/>
+</map>

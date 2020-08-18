@@ -1,0 +1,7 @@
+<map id="_uart_task_init" name="_uart_task_init">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="168,5,343,32"/>
+<area shape="rect" id="node3" href="$xtio__uart_8c.xhtml#ab26f4e038cc21215960e4e8957c041be" title="xtio_uart_init" alt="" coords="203,56,307,83"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a75257f6264fe4bb32722e8eccd519680" title="Configures UART module with the specified baudrate. " alt="" coords="391,132,561,159"/>
+<area shape="rect" id="node5" href="$xtio__serial__com_8c.xhtml#a5e9056b9bb65d42367ec290aea738768" title="_uart_task_rx" alt="" coords="201,157,309,184"/>
+<area shape="rect" id="node6" href="$xtio__serial__com_8c.xhtml#a0870cbcfb33018b8eb1ce5679d543119" title="_uart_task_tx" alt="" coords="201,208,309,235"/>
+</map>

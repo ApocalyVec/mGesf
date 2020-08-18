@@ -1,0 +1,5 @@
+<map id="arch_ioport_disable_pin" name="arch_ioport_disable_pin">
+<area shape="rect" id="node2" href="$ioport__pio_8h.xhtml#af570c68f452d88cc2643b2e9edf1c3ad" title="arch_ioport_disable_port" alt="" coords="214,5,377,32"/>
+<area shape="rect" id="node3" href="$ioport__pio_8h.xhtml#a17ab9c7be3b9b2674e7668b6a083d191" title="arch_ioport_pin_to\l_port_id" alt="" coords="231,57,359,98"/>
+<area shape="rect" id="node4" href="$ioport__pio_8h.xhtml#a69fd7bdfb41664b749080e509798165e" title="arch_ioport_pin_to_mask" alt="" coords="212,123,379,149"/>
+</map>

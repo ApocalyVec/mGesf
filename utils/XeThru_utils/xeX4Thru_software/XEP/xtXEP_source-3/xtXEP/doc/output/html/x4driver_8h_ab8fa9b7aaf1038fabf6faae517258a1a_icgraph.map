@@ -1,0 +1,5 @@
+<map id="x4driver_set_xif_register" name="x4driver_set_xif_register">
+<area shape="rect" id="node2" href="$task__radar_8c.xhtml#a777b1becbbecb18522cf2c6dc047532b" title="radar_certification\l_handler" alt="" coords="485,5,623,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a041e81b6d75f97dbf29f1e9a29353425" title="Will setup x4 in default configuration. " alt="" coords="251,38,417,65"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#ab7cec7458dba6ab3ced50a3ecdc9377d" title="onMcpX4DriverSetXifRegister" alt="" coords="231,89,437,115"/>
+</map>

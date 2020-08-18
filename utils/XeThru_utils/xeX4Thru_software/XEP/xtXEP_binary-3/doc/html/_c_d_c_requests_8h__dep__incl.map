@@ -1,0 +1,10 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/CDCRequests.h" name="src/hal/x4m0x_s70/libraries/libusb/include/CDCRequests.h">
+<area shape="rect" id="node2" href="$_c_d_c_line_coding_8c.xhtml" title="Implementation of the CDCLineCoding class. " alt="" coords="5,102,268,143"/>
+<area shape="rect" id="node3" href="$_c_d_c_set_control_line_state_request_8c.xhtml" title="Implementation of the CDCSetControlLineStateRequest class. " alt="" coords="293,95,543,151"/>
+<area shape="rect" id="node4" href="$uhi__cdc_8h.xhtml" title="USB host driver for Communication Device Class interface. " alt="" coords="567,102,762,143"/>
+<area shape="rect" id="node5" href="$_c_d_c_d_e_e_m_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCDEEMDriver.h" alt="" coords="787,102,1017,143"/>
+<area shape="rect" id="node6" href="$_c_d_c_d_e_e_m_port_8h.xhtml" title="Definition of a class for implementing a USB device CDC EEM function. " alt="" coords="1042,102,1261,143"/>
+<area shape="rect" id="node7" href="$_c_d_c_d_serial_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCDSerialDriver.h" alt="" coords="1285,102,1524,143"/>
+<area shape="rect" id="node8" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="1465,199,1659,240"/>
+<area shape="rect" id="node9" href="$_c_d_c_d_serial_port_8h.xhtml" title="Definition of a class for implementing a USB device CDC serial port function. " alt="" coords="1600,102,1828,143"/>
+</map>

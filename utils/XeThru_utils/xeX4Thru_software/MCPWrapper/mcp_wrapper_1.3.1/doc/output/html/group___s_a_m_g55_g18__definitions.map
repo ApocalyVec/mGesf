@@ -1,0 +1,8 @@
+<map id="SAMG55G18 definitions" name="SAMG55G18 definitions">
+<area shape="rect" id="node1" href="$group___s_a_m_g55_g18__reg.xhtml" title="Registers Access Definitions" alt="" coords="215,5,404,32"/>
+<area shape="rect" id="node2" href="$group___s_a_m_g55_g18__api.xhtml" title="SOFTWARE PERIPHERAL API DEFINITION FOR SAMG55G18. " alt="" coords="230,56,389,83"/>
+<area shape="rect" id="node3" href="$group___s_a_m_g55_g18__id.xhtml" title="Peripheral Ids Definitions" alt="" coords="227,107,392,133"/>
+<area shape="rect" id="node4" href="$group___s_a_m_g55_g18__base.xhtml" title="Peripheral Base Address\l Definitions" alt="" coords="226,158,393,199"/>
+<area shape="rect" id="node5" href="$group___s_a_m_g55_g18__cmsis.xhtml" title="CMSIS Definitions" alt="" coords="246,224,373,251"/>
+<area shape="rect" id="node6" href="$group___s_a_m_g55_g18__pio.xhtml" title="Peripheral Pio Definitions" alt="" coords="226,275,393,301"/>
+</map>

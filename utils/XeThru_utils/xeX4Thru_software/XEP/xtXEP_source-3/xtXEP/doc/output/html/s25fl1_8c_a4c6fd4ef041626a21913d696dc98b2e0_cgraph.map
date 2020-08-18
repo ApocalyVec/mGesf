@@ -1,0 +1,7 @@
+<map id="S25FL1D_SetReadLatencyControl" name="S25FL1D_SetReadLatencyControl">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a8cc596fd1f6b1026b0c40922c1dc30b7" title="Reads and returns the status register of the serial flash. " alt="" coords="311,5,470,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a9b0aa9019b14539aff1e68cc10576d19" title="Reads and returns the status register of the serial flash. " alt="" coords="307,56,474,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#aad42fe1199e1d1cb5b1c3d509dbe9801" title="Reads and returns the status register of the serial flash. " alt="" coords="307,107,474,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a594058ed761d8012b697ece88b70e1e2" title="Writes the given value in the status register of the serial flash device. " alt="" coords="288,157,493,184"/>
+<area shape="rect" id="node6" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="367,208,415,235"/>
+</map>

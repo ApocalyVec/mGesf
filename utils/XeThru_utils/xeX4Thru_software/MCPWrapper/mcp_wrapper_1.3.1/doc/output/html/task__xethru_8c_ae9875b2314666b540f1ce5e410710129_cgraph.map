@@ -1,0 +1,12 @@
+<map id="mcpw_demo_x2m200" name="mcpw_demo_x2m200">
+<area shape="rect" id="node2" href="$task__xethru_8c.xhtml#ab7b621e6b0a11ab7647762d91f554793" title="mcpw_on_host_parser\l_sleep" alt="" coords="201,5,353,47"/>
+<area shape="rect" id="node3" href="$task__xethru_8c.xhtml#a539e9c99b70d1c9933dfae0ce672acc0" title="mcpw_on_host_parser\l_respiration" alt="" coords="201,71,353,112"/>
+<area shape="rect" id="node4" href="$mcp__wrapper_8c.xhtml#a1d60ebcd695bbdefb917a6b96ee1805f" title="mcpw_module_reset" alt="" coords="207,137,348,163"/>
+<area shape="rect" id="node5" href="$task_8h.xhtml#a3fc5adc340b17cb07c12ffa90d7bb8f3" title="vTaskDelay" alt="" coords="445,191,533,218"/>
+<area shape="rect" id="node6" href="$mcp__wrapper_8c.xhtml#a7dc80c2a02be5f2dc7cb7492ad781acf" title="mcpw_load_profile" alt="" coords="425,254,553,281"/>
+<area shape="rect" id="node7" href="$mcp__wrapper_8c.xhtml#a5aad9b9bddaa60f6c860fd64477041eb" title="mcpw_set_detection_zone" alt="" coords="401,330,577,357"/>
+<area shape="rect" id="node8" href="$mcp__wrapper_8c.xhtml#a83d34d3ac389507fb3f13e1ea86cdecb" title="mcpw_set_sensitivity" alt="" coords="417,387,562,414"/>
+<area shape="rect" id="node9" href="$mcp__wrapper_8c.xhtml#a5e888a3d354deed869020ce46851615c" title="mcpw_set_led_control" alt="" coords="414,441,565,467"/>
+<area shape="rect" id="node10" href="$mcp__wrapper_8c.xhtml#a536f04f2d9c7db14ffe361620d4d158a" title="mcpw_set_sensor_mode" alt="" coords="406,491,573,518"/>
+<area shape="rect" id="node11" href="$task__xethru_8c.xhtml#a54c65348b306e1067cb83cfd0b41cfe6" title="mcpw_demo_x4m300" alt="" coords="203,339,351,366"/>
+</map>

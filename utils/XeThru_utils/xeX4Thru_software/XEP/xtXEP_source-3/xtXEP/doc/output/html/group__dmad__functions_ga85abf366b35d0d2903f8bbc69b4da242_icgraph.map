@@ -1,0 +1,4 @@
+<map id="XDMAD_IsTransferDone" name="XDMAD_IsTransferDone">
+<area shape="rect" id="node2" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="224,5,347,32"/>
+<area shape="rect" id="node3" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="224,56,347,83"/>
+</map>

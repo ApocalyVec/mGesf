@@ -1,0 +1,7 @@
+<map id="flexcom_enable" name="flexcom_enable">
+<area shape="rect" id="node2" href="$group__sleepmgr__group.xhtml#gac1a7002fd7879c57cc22ccab48be7114" title="Increase lock count for a sleep mode. " alt="" coords="177,5,323,32"/>
+<area shape="rect" id="node3" href="$group__sysclk__group.xhtml#ga97354113454b658bf76596b3580cf195" title="Enable a peripheral&#39;s clock. " alt="" coords="166,57,334,98"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__pmc__group.xhtml#ga1e708501aef19f46552e20ee28c1efc9" title="Disable the specified programmable clock. " alt="" coords="189,123,311,149"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__pmc__group.xhtml#gaa8c77b73e5ab3a77009cfbbd0a2b92ec" title="Switch programmable clock source selection to mck. " alt="" coords="165,173,335,200"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__pmc__group.xhtml#ga1c092ebde01d9748165bf3f556d82a57" title="Enable the specified programmable clock. " alt="" coords="190,224,310,251"/>
+</map>

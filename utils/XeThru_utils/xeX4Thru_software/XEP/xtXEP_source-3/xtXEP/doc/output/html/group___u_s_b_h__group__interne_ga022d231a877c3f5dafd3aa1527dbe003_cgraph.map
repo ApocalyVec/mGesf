@@ -1,0 +1,4 @@
+<map id="USBH_enumeration_step8" name="USBH_enumeration_step8">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#gaaeb6a2996975d8fe4a245e6ff0ec66f2" title="Enable a internal timeout on SOF events. " alt="" coords="258,5,425,47"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga4216b2f5091c5b72a41b6092029ad8a4" title="Device enumeration step 9 Send a Set address setup request. " alt="" coords="245,71,437,98"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="CDCDSerialPort_RequestHandler" name="CDCDSerialPort_RequestHandler">
+<area shape="rect" id="node2" href="$group__usb__request.xhtml#ga5c2f01b3ad2dbd22cce9b97aa27ca975" title="Returns the type of the given request. " alt="" coords="295,5,503,32"/>
+<area shape="rect" id="node3" href="$group__usb__request.xhtml#gace388a4d862a1a39dfce506fe4189e82" title="Returns the request code of the given request. " alt="" coords="284,56,515,83"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#ga1f9eb98ba0cfc1cbc1b4ea0559ee0c7e" title="Receives new line coding information from the USB host. " alt="" coords="339,107,460,133"/>
+<area shape="rect" id="node5" href="$group__usbd__cdc.xhtml#ga46f8e4f16c17c08438269d88056ba461" title="Sends the current line coding information to the host through Control endpoint 0. ..." alt="" coords="338,157,461,184"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc.xhtml#gaf48d12a12e146987d9c2c5b7554d7a60" title="Changes the state of the serial driver according to the information sent by the host via a SetControl..." alt="" coords="320,208,479,235"/>
+</map>

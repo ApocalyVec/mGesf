@@ -1,0 +1,6 @@
+<map id="process_dispatch_message_hostcom_send" name="process_dispatch_message_hostcom_send">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="335,5,374,32"/>
+<area shape="rect" id="node3" href="$task__hostcom_8c.xhtml#a45145b193d3a80b8fc5902a948790a39" title="mcp_protocol_messagebuild\l_callback" alt="" coords="252,57,457,98"/>
+<area shape="rect" id="node4" href="$task__hostcom_8c.xhtml#a1b390553e42793c6f34ca014db23f922" title="message_send_completed\l_callback" alt="" coords="257,122,452,163"/>
+<area shape="rect" id="node5" href="$xep__dispatch_8h.xhtml#af230fbcbf78ff22c13ca92625a50216d" title="Release message. " alt="" coords="257,188,453,215"/>
+</map>

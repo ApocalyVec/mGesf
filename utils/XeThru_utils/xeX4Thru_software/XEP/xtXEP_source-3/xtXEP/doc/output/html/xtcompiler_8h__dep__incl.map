@@ -1,0 +1,7 @@
+<map id="src/xtcompiler.h" name="src/xtcompiler.h">
+<area shape="rect" id="node2" href="$board__x4m0x__s70_8h.xhtml" title="src/hal/x4m0x_s70/board\l_x4m0x_s70.h" alt="" coords="5,80,188,121"/>
+<area shape="rect" id="node3" href="$task__hostcom_8c.xhtml" title="src/HostCom/task_hostcom.c" alt="" coords="213,87,423,114"/>
+<area shape="rect" id="node4" href="$task__radar_8c.xhtml" title="src/Radar/task_radar.c" alt="" coords="448,87,612,114"/>
+<area shape="rect" id="node5" href="$task__monitor_8c.xhtml" title="src/System/task_monitor.c" alt="" coords="637,87,829,114"/>
+<area shape="rect" id="node6" href="$xep__application_8c.xhtml" title="src/XEPA/xep_application.c" alt="" coords="853,87,1044,114"/>
+</map>

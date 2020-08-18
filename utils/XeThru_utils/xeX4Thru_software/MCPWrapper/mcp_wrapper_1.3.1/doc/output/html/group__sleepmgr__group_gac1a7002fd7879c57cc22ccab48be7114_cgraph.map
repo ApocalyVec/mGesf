@@ -1,0 +1,4 @@
+<map id="sleepmgr_lock_mode" name="sleepmgr_lock_mode">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga5992cb015c55a0f4ed563e66a8793771" title="Get and clear the global interrupt flags. " alt="" coords="205,5,303,32"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#ga428178bc346431936fddf52ad1ebd6fa" title="Restore global interrupt flags. " alt="" coords="199,56,309,83"/>
+</map>

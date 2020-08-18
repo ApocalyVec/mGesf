@@ -1,0 +1,49 @@
+<map id="USBD_Write" name="USBD_Write">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga1452577f1640fb13310e25c3f89d451e" title="Callback triggered after the new mute status of a channel has been read by AUDDSpeakerPhoneDriver_Set..." alt="" coords="152,5,401,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga26ee739e084b33db49fdc25819529f10" title="Handle the GET_CUR request. " alt="" coords="171,56,382,83"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga29cac99748de8021bda0ee58a75b9682" title="Callback triggered after the new mute status of a channel has been read. " alt="" coords="199,107,355,133"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speakerphone.xhtml#ga02a614d5e8ed4bd5c73537b37eef89a9" title="Callback triggered after the new volume status of a channel has been read. " alt="" coords="191,157,363,184"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__speakerphone.xhtml#gaa2c1c8f41b4dbb0494310c2bd60aafaf" title="Handle the GET_CUR request. " alt="" coords="217,208,336,235"/>
+<area shape="rect" id="node7" href="$group__usbd__ccid.xhtml#gac2dc022d17e7ee45b236ddd80c612c32" title="Sent CCID response on USB. " alt="" coords="199,259,354,285"/>
+<area shape="rect" id="node8" href="$group__usbd__ccid.xhtml#gac82dcf258e0e5efe2dc426faeda07247" title="Sends data through the Data IN endpoint. " alt="" coords="231,309,322,336"/>
+<area shape="rect" id="node9" href="$group__usbd__ccid.xhtml#ga3bd277c7f62e5669d769701cc3c8d944" title="Sends data through the interrupt endpoint, ICC insertion event RDR_to_PC_NotifySlotChange. " alt="" coords="219,360,334,387"/>
+<area shape="rect" id="node10" href="$group__usbd__ccid.xhtml#gaccdfcd750222510375dd290e4b39dfa3" title="Sends data through the interrupt endpoint, ICC removal event RDR_to_PC_NotifySlotChange. " alt="" coords="219,411,334,437"/>
+<area shape="rect" id="node11" href="$group__usbd__ccid.xhtml#ga38d2f5e47c5777ac3fffbeea989178d5" title="Interrupt&#45;IN Messages This message is sent when any bit in the bHardwareErrorCode field is set..." alt="" coords="191,461,362,488"/>
+<area shape="rect" id="node12" href="$group__usbd__cdc.xhtml#gadfeadaa787932fc6f8ef50a53fdb2ed0" title="_FlushUsbTxBuffers" alt="" coords="203,512,350,539"/>
+<area shape="rect" id="node13" href="$group__usbd__cdc.xhtml#ga1df488de43fb255ae5191c98b3724576" title="Callback function which should be invoked after the data of a SetLineCoding request has been retrieve..." alt="" coords="189,563,364,589"/>
+<area shape="rect" id="node14" href="$group__usbd__cdc.xhtml#ga46f8e4f16c17c08438269d88056ba461" title="Sends the current line coding information to the host through Control endpoint 0. ..." alt="" coords="215,613,338,640"/>
+<area shape="rect" id="node15" href="$group__usbd__cdc.xhtml#gaf48d12a12e146987d9c2c5b7554d7a60" title="Changes the state of the serial driver according to the information sent by the host via a SetControl..." alt="" coords="197,664,356,691"/>
+<area shape="rect" id="node16" href="$group__usbd__cdc.xhtml#ga5ed7e9a484cc297f7a1462a6beeebe9c" title="Callback function for USBD_Write to send a zero&#45;length packet. " alt="" coords="203,765,350,792"/>
+<area shape="rect" id="node17" href="$group__usbd__cdc.xhtml#gabd42b94ec8ef5a8e65f051ce30cb449a" title="Sends a data buffer through the virtual COM port created by the CDC device serial driver..." alt="" coords="477,740,637,767"/>
+<area shape="rect" id="node18" href="$group__usbd__cdc.xhtml#gaa1e0cdbb71cdbb6615f5e150c054c6ab" title="Sets the current serial state of the device to the given value. " alt="" coords="183,817,370,858"/>
+<area shape="rect" id="node19" href="$group__usbd__interface.xhtml#ga343ea3516192c9f6c6b92ef258c811c3" title="Send a NULL packet. " alt="" coords="192,1237,361,1264"/>
+<area shape="rect" id="node20" href="$group__usbd__interface.xhtml#gadbb4c8a840d3ff539be6fa5fa9f4a4e0" title="Sends the requested USB descriptor to the host if available, or STALLs the request. " alt="" coords="502,1237,613,1264"/>
+<area shape="rect" id="node21" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="713,1111,920,1137"/>
+<area shape="rect" id="node22" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="1003,1534,1146,1575"/>
+<area shape="rect" id="node23" href="$group__usbd__msd.xhtml#gaa87efba32c907fa095c6f8797d2580db" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="968,997,1181,1024"/>
+<area shape="rect" id="node24" href="$group__usbd__interface.xhtml#ga9a20011d336dec2bd5feb197f0da1c80" title="Configures the device by setting it into the Configured state and initializing all endpoints..." alt="" coords="493,984,622,1011"/>
+<area shape="rect" id="node25" href="$group__usbd__interface.xhtml#ga9d470d7bee3682fff6c69b1a758eba21" title="Sends the current configuration number to the host. " alt="" coords="492,1035,623,1061"/>
+<area shape="rect" id="node26" href="$group__usbd__interface.xhtml#ga962288f78a55bd84652a388023b53dca" title="Sends the current status of the device to the host. " alt="" coords="492,1085,623,1112"/>
+<area shape="rect" id="node27" href="$group__usbd__interface.xhtml#gaa52d41127f737b06cc6991626de366b9" title="Sends the current status of an endpoints to the USB host. " alt="" coords="486,1136,629,1163"/>
+<area shape="rect" id="node28" href="$group__usbd__interface.xhtml#ga69728b150794285ecaf38b5383471965" title="Sets the active setting of the given interface if the configuration supports it; otherwise, the control pipe is STALLed. " alt="" coords="507,1187,607,1213"/>
+<area shape="rect" id="node29" href="$group__usbd__interface.xhtml#gaf933d8614b19b074895685836de44361" title="Sends the currently active setting of the given interface to the USB host. " alt="" coords="507,933,608,960"/>
+<area shape="rect" id="node30" href="$group__usbd__hid__key.xhtml#gaec6511e36f4ccb41c6dc7dff87e18ffa" title="Reports a change in which keys are currently pressed or release to the host. " alt="" coords="177,1440,376,1467"/>
+<area shape="rect" id="node31" href="$group__usbd__hid__mouse.xhtml#ga6dc1b035fe3fca57165718c40236800f" title="Update the Mouse button status and location changes via input report to host. " alt="" coords="161,1491,392,1517"/>
+<area shape="rect" id="node32" href="$group__usbd__hid.xhtml#ga25b7cf7cc6f10bc8359b9c8c6422c2c9" title="Parse data extension for HID descriptor. " alt="" coords="175,1947,379,1973"/>
+<area shape="rect" id="node33" href="$group__usbd__hid.xhtml#ga6a3177814ff14ce51040bd58817d4064" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="449,1820,665,1847"/>
+<area shape="rect" id="node34" href="$group__usbd__hid.xhtml#gaced6adae7bca323f6d8a63964092dc22" title="Sends the current Idle rate of the input report to the host. " alt="" coords="197,1744,357,1771"/>
+<area shape="rect" id="node35" href="$group__usbd__hid.xhtml#gaaaa136d5e3db25540b4353f95a237f23" title="Retrieves the new idle rate of the input report from the USB host. " alt="" coords="197,1795,356,1821"/>
+<area shape="rect" id="node36" href="$group__usbd__hid.xhtml#gac1f005d3d16586bde74d82ca21c06654" title="Sends the requested report to the host. " alt="" coords="187,1845,366,1872"/>
+<area shape="rect" id="node37" href="$group__usbd__hid.xhtml#ga60b335dc503af45617b01905dd2d1512" title="Callback function when interrupt IN data sent to host. " alt="" coords="183,1592,370,1619"/>
+<area shape="rect" id="node38" href="$group__usbd__hid.xhtml#ga4884aaf59deee76c488998813811e12e" title="Start sending reports via interrupt IN pipe (input report, device to host) if there is..." alt="" coords="458,1610,657,1651"/>
+<area shape="rect" id="node39" href="$group__usbd__hid.xhtml#ga160e491eb548ce2526a2c5e940dc73bd" title="Write raw data through USB interrupt IN EP. " alt="" coords="203,1896,350,1923"/>
+<area shape="rect" id="node40" href="$group__usbd__hid__tran.xhtml#ga495fd4a8918a0c0725382a6165fb6da5" title="Returns the descriptor requested by the host. " alt="" coords="745,1534,888,1575"/>
+<area shape="rect" id="node41" href="$group__usbd__hid__tran.xhtml#ga44e123607c57ba599eda6bf94c030b7e" title="Callback function when SetReport request data received from host. " alt="" coords="745,1631,888,1673"/>
+<area shape="rect" id="node42" href="$group__usbd__hid__tran.xhtml#ga310a6f527923cab45a3325d3426f3b9e" title="Write data through USB interrupt IN EP. " alt="" coords="205,2049,348,2090"/>
+<area shape="rect" id="node43" href="$group__usbd__msd.xhtml#gac202c092099685d21ac19320311b1d0f" title="State machine for the MSD device driver. " alt="" coords="198,2115,355,2141"/>
+<area shape="rect" id="node44" href="$group__usbd__msd.xhtml#gabc88802a5167eed1f5955df898b6c6bb" title="Performs a READ (10) command on specified LUN. " alt="" coords="225,2165,328,2192"/>
+<area shape="rect" id="node45" href="$group__usbd__msd.xhtml#ga3a83a973dc2e5ef692d4ad611e133d9b" title="Performs a READ CAPACITY (10) command. " alt="" coords="197,2216,356,2243"/>
+<area shape="rect" id="node46" href="$group__usbd__msd.xhtml#ga534e8d604ba59b34433ff12882051b5b" title="Handles an INQUIRY command. " alt="" coords="227,2267,326,2293"/>
+<area shape="rect" id="node47" href="$group__usbd__msd.xhtml#gae808f0750c1ee2fb84d96304b19a3a3a" title="Performs a REQUEST SENSE command. " alt="" coords="203,2317,350,2344"/>
+<area shape="rect" id="node48" href="$group__usbd__msd.xhtml#ga114a8851b201e26f5cda18ee7077d6ef" title="Performs a MODE SENSE (6) command. " alt="" coords="207,2368,346,2395"/>
+</map>

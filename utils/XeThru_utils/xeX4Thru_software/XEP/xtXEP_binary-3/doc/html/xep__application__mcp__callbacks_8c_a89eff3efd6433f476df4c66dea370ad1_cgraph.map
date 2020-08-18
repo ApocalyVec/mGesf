@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverSetFrameAreaOffset" name="onMcpX4DriverSetFrameAreaOffset">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a6c801c9a8b3010ebe47eb1ee881c9503" title="Calibrated frame offset in meters. " alt="" coords="294,5,439,47"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="264,71,469,112"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="264,136,469,177"/>
+</map>

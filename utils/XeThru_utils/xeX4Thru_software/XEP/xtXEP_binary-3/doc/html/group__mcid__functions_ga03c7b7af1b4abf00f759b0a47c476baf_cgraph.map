@@ -1,0 +1,8 @@
+<map id="MCID_Reset" name="MCID_Reset">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#gaa42ae91258675d685937a68c69b2afdf" title="Cancel pending SD/MMC command. " alt="" coords="175,39,309,66"/>
+<area shape="rect" id="node3" href="$group__mcid__functions.xhtml#gad71f8cb0fb812e37b9c99915fe6f1e7e" title="Reset MCI HW interface and disable it. " alt="" coords="385,14,472,41"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#ga22c80115063dbf7641105608fb74b8e4" title="_FinishCmd" alt="" coords="381,77,476,103"/>
+<area shape="rect" id="node5" href="$group__hsmci__functions.xhtml#gaf51e5a4c668bd49302fbab8329215445" title="Configures a MCI peripheral as specified. " alt="" coords="159,141,325,167"/>
+<area shape="rect" id="node6" href="$group__hsmci__functions.xhtml#ga016a1f6f3a075807c55a2ad2cf23255a" title="Return mode register. " alt="" coords="177,191,307,218"/>
+<area shape="rect" id="node7" href="$group__hsmci__functions.xhtml#gab17151fd3e0b1a81b78067b7f07b0424" title="Set block len &amp; count for transfer. " alt="" coords="151,242,333,269"/>
+</map>

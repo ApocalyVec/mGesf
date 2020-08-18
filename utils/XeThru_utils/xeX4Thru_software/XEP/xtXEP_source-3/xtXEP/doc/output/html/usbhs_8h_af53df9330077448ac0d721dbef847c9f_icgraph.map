@@ -1,0 +1,7 @@
+<map id="USBHS_ISUsableClock" name="USBHS_ISUsableClock">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga3699059b9b9b52b7e55af6d070a7fe61" title="Initializes the USB HW Access driver. " alt="" coords="260,5,379,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="256,56,383,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="220,107,419,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga9b45418a37c193dbcff7ef17040cfa30" title="Disables the USB host mode. " alt="" coords="233,157,405,184"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#gac9fdf87a0d813bf3717f1440e60c41d8" title="Enables the IDLE state on the USB line. " alt="" coords="244,208,395,235"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="usart_init_iso7816" name="usart_init_iso7816">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#ga6cb84f0297ddca62d4077f616efa5c5b" title="Reset the USART and disable TX and RX. " alt="" coords="220,5,307,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__usart__group.xhtml#ga70edd599706d258d5a263181930619ae" title="Calculate a clock divider (CD) for the USART ISO7816 mode to generate an ISO7816 clock as close as po..." alt="" coords="180,56,347,83"/>
+</map>

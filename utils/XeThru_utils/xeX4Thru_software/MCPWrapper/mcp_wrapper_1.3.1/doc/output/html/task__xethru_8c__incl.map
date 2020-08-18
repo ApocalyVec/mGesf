@@ -1,0 +1,9 @@
+<map id="examples/atmel_samg55/src/task_xethru.c" name="examples/atmel_samg55/src/task_xethru.c">
+<area shape="rect" id="node2" href="$task__xethru_8h.xhtml" title="task_xethru.h" alt="" coords="5,95,107,121"/>
+<area shape="rect" id="node5" href="$_free_r_t_o_s_8h.xhtml" title="FreeRTOS.h" alt="" coords="187,169,282,196"/>
+<area shape="rect" id="node6" href="$task_8h.xhtml" title="task.h" alt="" coords="369,169,428,196"/>
+<area shape="rect" id="node7" href="$queue_8h.xhtml" title="queue.h" alt="" coords="494,95,562,121"/>
+<area shape="rect" id="node8" href="$freertos__usart__serial_8h.xhtml" title="FreeRTOS Peripheral Control API For the USART. " alt="" coords="267,95,418,121"/>
+<area shape="rect" id="node10" href="$xtid_8h.xhtml" title="xtid.h" alt="" coords="773,95,827,121"/>
+<area shape="rect" id="node11" href="$arm__math_8h.xhtml" title="arm_math.h" alt="" coords="852,95,943,121"/>
+</map>

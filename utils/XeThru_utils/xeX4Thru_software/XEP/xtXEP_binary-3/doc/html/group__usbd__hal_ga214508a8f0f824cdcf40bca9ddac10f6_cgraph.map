@@ -1,0 +1,9 @@
+<map id="USBD_HAL_Connect" name="USBD_HAL_Connect">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a78d27724945f587c54cba1d9617979c8" title="Freeze or unfreeze USB clock. " alt="" coords="210,5,381,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#ad50e0487f36c3b575f0a509be89a103c" title="Attach or detach USB. " alt="" coords="222,56,369,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#gaf17d4fe67932fa6a5dcc05f4c6d611ff" title="Configures an endpoint according to its endpoint Descriptor. " alt="" coords="207,107,384,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#a792065de6dd29d4153426526555d4d07" title="Enables Interrupt. " alt="" coords="228,157,363,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#abe473ec759ec7837e7105d001df93c88" title="Acknowledge interrupt for endpoint. " alt="" coords="238,208,353,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a6d60c6a4b9400dfc62fd64fad75543c2" title="Raise interrupt for endpoint. " alt="" coords="232,259,359,285"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#a07183fee11fbf4c00401b455bdfed9dd" title=" USBHS_CTRL " alt="" coords="219,309,371,336"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="usart_write" name="usart_write">
+<area shape="rect" id="node2" href="$uart__serial_8h.xhtml#a0d680ac290784fa93f42838262bd072f" title="Sends a character with the USART. " alt="" coords="139,5,277,32"/>
+<area shape="rect" id="node3" href="$group__group__sam__drivers__usart.xhtml#ga55533226a26ce5279457601bc995b9c5" title="In Multidrop mode only, the next character written to the US_THR is sent with the address bit set..." alt="" coords="139,56,277,83"/>
+</map>

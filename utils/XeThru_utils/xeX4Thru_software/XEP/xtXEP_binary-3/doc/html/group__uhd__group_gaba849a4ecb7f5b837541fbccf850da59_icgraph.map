@@ -1,0 +1,6 @@
+<map id="USBH_HAL_PipeAbort" name="USBH_HAL_PipeAbort">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="234,5,389,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga410423649d19fc0282fe5012f3455b31" title="Aborts an on&#45;going transfer on an endpoint. " alt="" coords="216,56,407,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga12b21dabf5465ef92208084d4f336186" title="USBH_HAL_ManageSof" alt="" coords="225,107,397,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#gaa29c0122543b5f5faf600eee68474615" title="USBH_HAL_PipeInterrupt" alt="" coords="220,157,403,184"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="MPU_UpdateRegions" name="MPU_UpdateRegions">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga092b96b23f27f6b4258ce84add3b1528" title="Disable IRQ Interrupts. " alt="" coords="233,5,337,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="253,56,317,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8f5af376adcfaea7f2ddb3ef9b6b2544" title="Instruction Synchronization Barrier. " alt="" coords="256,107,313,133"/>
+<area shape="rect" id="node5" href="$mpu_8c.xhtml#a7962790150d8399f91306ea1551d8783" title="Set active memory region. " alt="" coords="208,157,361,184"/>
+<area shape="rect" id="node6" href="$mpu_8c.xhtml#adce5d5bd104ef885cfc8692921b6fdc2" title="Disable the current active region. " alt="" coords="211,208,358,235"/>
+<area shape="rect" id="node7" href="$mpu_8c.xhtml#a5b599da2790baa9affb17efe20e758a1" title="Setup a memory region. " alt="" coords="223,259,346,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga6fea83fe11c9a07924fb1ef316a9c76c" title="Enable IRQ Interrupts. " alt="" coords="233,309,336,336"/>
+</map>

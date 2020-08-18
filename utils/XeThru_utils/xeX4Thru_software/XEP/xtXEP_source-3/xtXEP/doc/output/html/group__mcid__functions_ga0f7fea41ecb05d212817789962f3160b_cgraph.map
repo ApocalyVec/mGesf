@@ -1,0 +1,9 @@
+<map id="MCID_SendCmd" name="MCID_SendCmd">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#gae956aa6961d961be8d3791413d81497f" title="Check if the command is finished. " alt="" coords="184,5,356,32"/>
+<area shape="rect" id="node3" href="$group__hsmci__functions.xhtml#ga016a1f6f3a075807c55a2ad2cf23255a" title="Return mode register. " alt="" coords="205,56,335,83"/>
+<area shape="rect" id="node4" href="$group__hsmci__functions.xhtml#gaf51e5a4c668bd49302fbab8329215445" title="Configures a MCI peripheral as specified. " alt="" coords="187,107,353,133"/>
+<area shape="rect" id="node5" href="$group__hsmci__functions.xhtml#gab17151fd3e0b1a81b78067b7f07b0424" title="Set block len &amp; count for transfer. " alt="" coords="179,157,361,184"/>
+<area shape="rect" id="node6" href="$group__mcid__functions.xhtml#ga3e3c19251f4a60f507d557f19348c461" title="HSMCI DMA R/W prepare. " alt="" coords="205,208,335,235"/>
+<area shape="rect" id="node7" href="$group__mcid__functions.xhtml#ga22c80115063dbf7641105608fb74b8e4" title="_FinishCmd" alt="" coords="223,259,317,285"/>
+<area shape="rect" id="node8" href="$group__hsmci__functions.xhtml#ga9b3811aee4fc3cef7fcc8b38ab0fa7f2" title="Enables one or more interrupt sources of MCI peripheral. " alt="" coords="209,309,331,336"/>
+</map>

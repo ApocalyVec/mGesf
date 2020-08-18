@@ -1,0 +1,4 @@
+<map id="PCtoRDRGetParameters" name="PCtoRDRGetParameters">
+<area shape="rect" id="node2" href="$iso7816__4_8h.xhtml#a4a8b6c9d05988008790a55f6eec2ea8f" title="Pin status for ISO7816 RESET. " alt="" coords="228,5,388,32"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#gabde533172fda80b2a46c415a834925a2" title="Response Pipe, Bulk&#45;IN Messages Answer to: PC_to_RDR_GetParameters PC_to_RDR_ResetParameters PC_to_RD..." alt="" coords="232,56,384,83"/>
+</map>

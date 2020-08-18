@@ -1,0 +1,4 @@
+<map id="uhi_hid_mouse_start_trans_report" name="uhi_hid_mouse_start_trans_report">
+<area shape="rect" id="node2" href="$group__uhi__hid__mouse__group__uhc.xhtml#ga08f7adbb1aede340666d0b2e8a004d18" title="uhi_hid_mouse_enable" alt="" coords="208,5,376,32"/>
+<area shape="rect" id="node3" href="$group__uhi__hid__mouse__group__internal.xhtml#ga081c50ae2f10f92ecdc77627c9093a36" title="Decodes the HID mouse report received. " alt="" coords="210,57,374,98"/>
+</map>

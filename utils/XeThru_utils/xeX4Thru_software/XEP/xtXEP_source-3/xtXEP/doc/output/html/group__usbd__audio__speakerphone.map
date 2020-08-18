@@ -1,0 +1,10 @@
+<map id="Usbd_audio_speakerphone" name="Usbd_audio_speakerphone">
+<area shape="rect" id="node1" href="$group__usbd__audio__speakerphone__channel__num.xhtml" title="This page lists codes for USB Audio Speakerphone channel numbers. " alt="" coords="475,5,629,47"/>
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker__interface__ids.xhtml" title="This page lists the interface numbers for USB Audio Speakerphone device. " alt="" coords="475,71,629,112"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__chs.xhtml" title="Audio Device Channels" alt="" coords="468,137,636,163"/>
+<area shape="rect" id="node5" href="$group__usbd__composite__hidaud.xhtml" title="Usbd_composite_hidaud" alt="" coords="463,187,641,214"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__speaker.xhtml" title="Usbd_audio_speaker" alt="" coords="475,246,629,273"/>
+<area shape="rect" id="node7" href="$group__usbd__composite__cdcaud.xhtml" title="Usbd_composite_cdcaud" alt="" coords="461,313,643,339"/>
+<area shape="rect" id="node8" href="$group__usbd__audio__speaker__entity__ids.xhtml" title="This page lists the entity IDs for USB Audio Speaker device. " alt="" coords="475,364,629,405"/>
+<area shape="rect" id="node9" href="$group__usbd__audio__ids.xhtml" title="The driver uses following fixed entity IDs, use them to define your descriptor. " alt="" coords="459,429,645,471"/>
+</map>

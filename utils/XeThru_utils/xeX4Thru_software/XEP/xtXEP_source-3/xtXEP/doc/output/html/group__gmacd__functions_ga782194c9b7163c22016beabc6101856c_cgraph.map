@@ -1,0 +1,11 @@
+<map id="GMACD_Handler" name="GMACD_Handler">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#ga9e845a27fa9a4f30f4f53684ca5934c5" title="Return interrupt status. " alt="" coords="224,5,365,32"/>
+<area shape="rect" id="node3" href="$group__gmac__defines.xhtml#gacf2a7803b8177d1ec6837d76de5c5e7a" title="Return receive status. " alt="" coords="221,56,369,83"/>
+<area shape="rect" id="node4" href="$group__gmac__defines.xhtml#ga409a1719b06569ad5f4efe03d21ab1dd" title="Clear receive status. " alt="" coords="215,107,374,133"/>
+<area shape="rect" id="node5" href="$group__gmacd__defines.xhtml#ga1d32bdcf010875dfcaea4817d8086b82" title="Reset TX queue when errors are detected. " alt="" coords="208,157,381,184"/>
+<area shape="rect" id="node6" href="$group__gmac__defines.xhtml#ga49e622ab5d904407da962f3270722b95" title="GMAC_GetTxEvtFrameSec" alt="" coords="200,208,389,235"/>
+<area shape="rect" id="node7" href="$group__gmac__defines.xhtml#ga382a180c428aa86860e67422d22b70ff" title="GMAC_GetTxEvtFrameNsec" alt="" coords="196,259,393,285"/>
+<area shape="rect" id="node8" href="$group__gmac__defines.xhtml#ga3318b6baa3969ec8e0bcaec0f316f5d7" title="GMAC_GetTxPeerEvtFrameSec" alt="" coords="185,309,404,336"/>
+<area shape="rect" id="node9" href="$group__gmac__defines.xhtml#gac462bc38443ca28a1b9bfea2257ccd11" title="GMAC_GetTxPeerEvtFrameNsec" alt="" coords="181,360,408,387"/>
+<area shape="rect" id="node10" href="$group__gmacd__defines.xhtml#gab6c25629834229269058fc2ae0381ce8" title="Process successfully sent packets. " alt="" coords="193,411,397,437"/>
+</map>

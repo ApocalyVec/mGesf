@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/xtio_usb.c" name="src/hal/x4m0x_s70/xtio_usb.c">
+<area shape="rect" id="node2" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml" title="pio.h" alt="" coords="101,95,154,121"/>
+<area shape="rect" id="node4" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="178,95,250,121"/>
+<area shape="rect" id="node5" href="$_c_d_c_d_serial_driver_8h.xhtml" title="CDCDSerialDriver.h" alt="" coords="275,95,420,121"/>
+<area shape="rect" id="node6" href="$xtio__usb_8h.xhtml" title="xtio USB API " alt="" coords="444,95,531,121"/>
+<area shape="rect" id="node7" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="555,95,638,121"/>
+</map>

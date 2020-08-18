@@ -1,0 +1,5 @@
+<map id="GMACD_Reset" name="GMACD_Reset">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga0f4f9a29244618764ca63fb4c2ca058c" title="Disable RX &amp; reset registers and descriptor list. " alt="" coords="186,5,314,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#gaa4fcf5f239a30ef23cc9ba6b40054117" title="Disable TX &amp; reset registers and descriptor list. " alt="" coords="187,56,313,83"/>
+<area shape="rect" id="node4" href="$group__gmac__defines.xhtml#ga4dfdc785358f1239d80a46dc2108a15c" title="Write control value. " alt="" coords="167,107,333,133"/>
+</map>

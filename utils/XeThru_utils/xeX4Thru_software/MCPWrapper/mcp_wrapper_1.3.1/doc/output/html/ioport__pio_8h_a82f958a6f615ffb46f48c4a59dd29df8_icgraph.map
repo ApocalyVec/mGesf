@@ -1,0 +1,3 @@
+<map id="arch_ioport_disable_pin" name="arch_ioport_disable_pin">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#ga71ffb860475938ae5c465ae8a536b6fd" title="Disable IOPORT pin, based on a pin created with IOPORT_CREATE_PIN(). " alt="" coords="212,5,339,32"/>
+</map>

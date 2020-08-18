@@ -1,0 +1,5 @@
+<map id="CDCDSerialDriver_RequestHandler" name="CDCDSerialDriver_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="285,5,413,32"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#gae9ba93a4fe6bb97098e92d54e3aff6a2" title="Handles CDC&#45;specific SETUP requests. " alt="" coords="247,56,451,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="245,107,452,133"/>
+</map>

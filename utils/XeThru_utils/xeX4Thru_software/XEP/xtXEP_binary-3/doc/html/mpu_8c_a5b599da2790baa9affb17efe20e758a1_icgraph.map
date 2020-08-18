@@ -1,0 +1,4 @@
+<map id="MPU_SetRegion" name="MPU_SetRegion">
+<area shape="rect" id="node2" href="$board__lowlevel_8h.xhtml#a9744d00e2d0a1292c99875113204bcfc" title="Set up a memory region. " alt="" coords="176,5,337,32"/>
+<area shape="rect" id="node3" href="$mpu_8c.xhtml#aaa88b8f32a6a4c83d2ddc9a287d82ef2" title="Update MPU regions. " alt="" coords="179,56,334,83"/>
+</map>

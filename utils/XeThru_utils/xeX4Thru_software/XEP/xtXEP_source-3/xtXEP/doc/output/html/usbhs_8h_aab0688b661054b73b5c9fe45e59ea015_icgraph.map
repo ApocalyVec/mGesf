@@ -1,0 +1,5 @@
+<map id="USBHS_ClearHostStatus" name="USBHS_ClearHostStatus">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="275,5,402,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="239,56,438,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga170d8082df4bb77da27db090827145ec" title="USBH_HAL_DelayedSuspend" alt="" coords="235,107,443,133"/>
+</map>

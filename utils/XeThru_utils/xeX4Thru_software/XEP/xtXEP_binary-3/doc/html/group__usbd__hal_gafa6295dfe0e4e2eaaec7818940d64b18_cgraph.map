@@ -1,0 +1,11 @@
+<map id="UDP_EndpointHandler" name="UDP_EndpointHandler">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga5d8e51486d26751c22c5e4e23f67e8cd" title="Handles a completed transfer on the given endpoint, invoking the configured callback if any..." alt="" coords="262,5,407,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga57e97248d68838ee318ebeb26a85edaa" title="Transfers a data payload from the current tranfer buffer to the endpoint FIFO. " alt="" coords="269,56,400,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#ga4096b052093ba2cdd9b19dc11fd086a2" title="Checks if an ongoing transfer on an endpoint has been completed. " alt="" coords="251,107,419,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hal.xhtml#ga4722799f8987177bdfb273007447089f" title="Transfers a data payload from the current tranfer buffer to the endpoint FIFO. " alt="" coords="266,157,403,184"/>
+<area shape="rect" id="node6" href="$group__usbd__hal.xhtml#ga74e4196d75983a88c070f786a0247a69" title="Clears the correct reception flag (bank 0 or bank 1) of an endpoint. " alt="" coords="269,208,400,235"/>
+<area shape="rect" id="node7" href="$group__usbd__hal.xhtml#ga37b785d1e538172549f05f51f5bfa7b9" title="Transfers a data payload from an endpoint FIFO to the current transfer buffer. " alt="" coords="266,259,403,285"/>
+<area shape="rect" id="node8" href="$group__usbd__hal.xhtml#gaab8b038b4d329d70d2db1b0a75bca99c" title="Received SETUP packet from endpoint 0 FIFO. " alt="" coords="265,309,404,336"/>
+<area shape="rect" id="node9" href="$group__usb__request.xhtml#gaf235b5ea91b5da77005e9652efb55220" title="Returns the direction of the data transfer following the given request. " alt="" coords="216,360,453,387"/>
+<area shape="rect" id="node10" href="$group__usbd__interface.xhtml#gab76f94b99aa061efe700867fc400738c" title="Handle the USB setup package received, should be invoked when an endpoint got a setup package as requ..." alt="" coords="251,411,419,437"/>
+</map>

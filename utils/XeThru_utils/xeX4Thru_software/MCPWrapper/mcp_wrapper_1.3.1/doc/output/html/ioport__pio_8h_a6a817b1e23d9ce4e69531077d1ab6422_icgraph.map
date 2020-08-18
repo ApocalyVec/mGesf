@@ -1,0 +1,3 @@
+<map id="arch_ioport_get_port_level" name="arch_ioport_get_port_level">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#gabfbacd2521a91923bbd44f0c14246b8d" title="Get current value of several IOPORT pins in a single port, which have been configured as an inputs..." alt="" coords="193,13,333,39"/>
+</map>

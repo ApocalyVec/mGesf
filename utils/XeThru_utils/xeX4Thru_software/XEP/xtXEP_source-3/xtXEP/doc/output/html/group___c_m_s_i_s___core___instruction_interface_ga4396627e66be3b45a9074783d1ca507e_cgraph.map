@@ -1,0 +1,5 @@
+<map id="__REV" name="__REV">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#gaf2c5bef14a2884d08cace0c784654db6" title="Reverse byte order (16 bit) " alt="" coords="116,5,193,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#gadf722e3df4586108e43cce4b757e195b" title="Reverse byte order in signed short value. " alt="" coords="115,56,195,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#gab766d910fae775ead451aa4bafbe682d" title="Rotate Right in unsigned value (32 bit) " alt="" coords="123,107,186,133"/>
+</map>

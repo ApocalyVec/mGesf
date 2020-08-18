@@ -1,0 +1,6 @@
+<map id="_HIDDTransferDriverConfigurationDescriptors" name="_HIDDTransferDriverConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___h_i_d_descriptor1.xhtml" title="_HIDDescriptor1" alt="" coords="46,5,173,32"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="20,63,199,89"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="5,113,213,140"/>
+<area shape="rect" id="node5" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="20,164,199,191"/>
+</map>

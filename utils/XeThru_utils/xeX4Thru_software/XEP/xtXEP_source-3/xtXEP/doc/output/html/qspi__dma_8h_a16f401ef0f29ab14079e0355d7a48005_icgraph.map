@@ -1,0 +1,4 @@
+<map id="QSPID_ReadWriteQSPI" name="QSPID_ReadWriteQSPI">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a8be9db10e4e0f291c0cb537fcc7e3d68" title="Start S25FL1D Memory access with/without data write/read. " alt="" coords="215,5,397,32"/>
+<area shape="rect" id="node3" href="$xtio__spi_8c.xhtml#a64a60847a947e7e747f90424e2e7fff7" title="xtio_spi_write_read" alt="" coords="235,56,377,83"/>
+</map>

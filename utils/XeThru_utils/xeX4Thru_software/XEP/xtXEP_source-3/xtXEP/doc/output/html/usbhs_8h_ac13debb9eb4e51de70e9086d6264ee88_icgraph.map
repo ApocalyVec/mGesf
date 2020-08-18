@@ -1,0 +1,6 @@
+<map id="USBHS_HostGetSize" name="USBHS_HostGetSize">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gadc3093c163c3229d9343cb5f2f6ef8dd" title="USBH_HAL_PhaseDataIn" alt="" coords="216,5,397,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga74ceb21eb2c7ef68d5fe6f02ea7beb58" title="USBH_HAL_PhaseDataOut" alt="" coords="210,56,403,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#gafba473f1b723cdb9500b91ec7fad0207" title="USBH_HAL_PipeInReceived" alt="" coords="209,107,404,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga39a6506d44760a518b49d004574bc9c9" title="USBH_HAL_PipeOutReady" alt="" coords="213,157,401,184"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="xtio_led_toggle_state" name="xtio_led_toggle_state">
+<area shape="rect" id="node2" href="$xtio__led_8c.xhtml#a995cb92de692758ac4878c775210658b" title="xtio_decode_led_id" alt="" coords="212,5,355,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1de94d9c6a29f9fa44e498e97edde1cc" title="Returns 1 if one or more PIO of the given Pin instance currently have a high level; otherwise returns..." alt="" coords="247,56,320,83"/>
+<area shape="rect" id="node4" href="$pio_8h.xhtml#aac9a3cac1a51b45f82b30bd7a29826a6" title="Sets a high output level on all the PIOs defined in the given Pin instance. " alt="" coords="247,107,319,133"/>
+<area shape="rect" id="node5" href="$pio_8h.xhtml#a2d4d88110e7ab4fc0732df6d35289e06" title="Sets a low output level on all the PIOs defined in the given Pin instance. " alt="" coords="242,157,325,184"/>
+</map>

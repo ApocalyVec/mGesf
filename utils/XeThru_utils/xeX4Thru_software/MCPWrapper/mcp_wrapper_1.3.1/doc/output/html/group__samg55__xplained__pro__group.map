@@ -1,0 +1,5 @@
+<map id="SAMG55 Xplained Pro board" name="SAMG55 Xplained Pro board">
+<area shape="rect" id="node3" href="$group__samg55__xplained__pro__features__group.xhtml" title="Symbols that describe features and capabilities of the board. " alt="" coords="415,5,488,32"/>
+<area shape="rect" id="node4" href="$group__samg55__config__group.xhtml" title="Symbols to use for configuring the board and its initialization. " alt="" coords="403,56,500,83"/>
+<area shape="rect" id="node2" href="$group__group__common__boards.xhtml" title="The generic board support module includes board&#45;specific definitions and function prototypes..." alt="" coords="5,31,156,57"/>
+</map>

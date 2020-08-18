@@ -1,0 +1,8 @@
+<map id="uhi_cdc_tx_update" name="uhi_cdc_tx_update">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="483,39,588,66"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="475,90,596,116"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#gae32ed29203116712f786dbc913d96327" title="Returns the current micro start of frame number. " alt="" coords="421,166,649,192"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#gaee8af62530aefb6025ad2391361e8895" title="Returns the current Start Of Frame (SOF) number. " alt="" coords="438,216,633,243"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#ga1d4a9f98194cb255b2fcb6cdf8d83fb8" title="Allows to receive or send data on an endpoint. " alt="" coords="195,39,373,66"/>
+<area shape="rect" id="node7" href="$group__uhi__cdc__group__internal.xhtml#ga2d752930f3947081262a5ac64f05ac41" title="Manage the end of TX transfer. " alt="" coords="221,140,347,167"/>
+</map>

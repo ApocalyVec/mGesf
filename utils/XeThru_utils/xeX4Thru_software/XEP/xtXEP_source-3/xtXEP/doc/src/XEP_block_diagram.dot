@@ -1,0 +1,150 @@
+digraph XEP_BlockDiagram {
+  fontname="Helvetica";
+  fontcolor="white";
+  fontsize="12";
+  compound=true;
+  labeljust="l";
+  style=filled;
+  fillcolor="#707070";
+  penwidth=2;
+  color="#555555";
+  node [shape=box, style=filled, fillcolor="#F2F2F2", width=2, fontname="Helvetica", fontsize="12"];
+  edge [color="#3D57A8", dir=both];
+
+
+  subgraph cluster_Dispatch{
+    Dispatch [URL="\ref xep_dispatch"];
+    label="Dispatch";
+  }
+
+  subgraph cluster_HostCom{
+    HostCom [URL="\ref xep_hostcom"];
+    label="Host communication";
+  }
+
+
+  subgraph cluster_RadarHAL{
+    radar_hal [URL="\ref xep_radar_hal_api"];
+    label="Radar Abstraction Layer";
+  }
+
+  subgraph cluster_HAL{
+    hal [URL="\ref xep_hal_api"];
+    label="Hardware Abstraction Layer";
+  }
+
+  subgraph cluster_RadarCommunication{
+    X4Driver [URL="\ref xep_x4driver"];
+    label="Radar Communication";
+  }
+
+  subgraph cluster_board{
+    board_MCU [label="<board>_<MCU>", style="dotted, filled", fillcolor="#E1E1E1"];
+    x4m0x_s70 [URL="\ref hal_x4m0x_s70"];
+    /*x4m0x_s55;*/
+    IO_Drivers_1 [label="IO drivers"];
+    IO_Drivers_2 [label="IO drivers", style="dotted, filled", fillcolor="#E1E1E1"];
+    /*IO_Drivers_3 [label="IO drivers"];*/
+    hal -> board_MCU;
+    hal -> x4m0x_s70;
+    /*hal -> x4m0x_s55;*/
+    x4m0x_s70 -> IO_Drivers_1;
+    /*x4m0x_s55 -> IO_Drivers_2;*/
+    board_MCU -> IO_Drivers_2;
+    label="Board/MCU IO drivers";
+    width=6;
+  }
+
+  subgraph cluster_XEPAI{
+    XEPA [shape=box, URL="\ref xep_application"];
+    label="XEP Application Interface";
+  }
+
+  subgraph cluster_Appl{
+    style="dotted, filled";
+    node [fillcolor="#E1E1E1", style="dotted, filled"];
+    Application;
+    DSP;
+    Application -> DSP;
+    label="Application logic and DSP";
+    fillcolor="#A0A0A0";
+  }
+
+  {
+    node [fillcolor="#E1E1E1", width=0.8];
+    rankdir=TB;
+    subgraph cluster_HWboard{
+      node [fillcolor="#E1E1E1", width=0.8];
+      subgraph cluster_USB{
+        node [fillcolor="#E1E1E1"];
+        USB;
+        fillcolor="#A0A0A0";
+      }
+
+      subgraph cluster_IO_pins{
+        IO_pins [shape=box];
+        fillcolor="#A0A0A0";
+      }
+
+/*
+      subgraph cluster_UART{
+        UART;
+        fillcolor="#A0A0A0";
+      }
+*/
+
+      subgraph cluster_LEDs{
+        LEDs;
+        fillcolor="#A0A0A0";
+      }
+
+      subgraph cluster_SPI{
+        SPI;
+        fillcolor="#A0A0A0";
+      }
+
+      subgraph cluster_X4{
+        node [fillcolor="#E1E1E1", weight=500];
+        subgraph cluster_X4FW{
+          X4_FW [label="X4 FW"];
+          X4_SPI [label="X4 SPI"];
+          X4_SPI -> X4_FW;
+          fillcolor="#A0A0A0";
+        }
+        label="X4 Radar IC";
+        fillcolor="#A0A0A0";
+      }
+      label="Xehtru Radar HW Module";
+      fillcolor="#A0A0A0";
+    }
+
+
+    subgraph cluster_Host{
+      node [fillcolor="#E1E1E1", width=2];
+      HostMC [label="Xehtru Module Connector", weight=1000];
+      HostAppl [label="XeThru Application", weight=1001];
+      HostMC -> HostAppl;
+      label="Host computer";
+      fillcolor="#A0A0A0";
+    }
+  }
+
+  HostCom -> hal;
+  Dispatch -> HostCom;
+  Dispatch -> hal;
+  Dispatch -> X4Driver;
+  Dispatch -> XEPA;
+  X4Driver -> radar_hal;
+  X4Driver -> hal;
+  radar_hal -> hal;
+  XEPA -> hal;
+  IO_Drivers_1 -> USB [ltail=cluster_board];
+  IO_Drivers_1 -> IO_pins [ltail=cluster_board];
+  /*IO_Drivers_1 -> UART [ltail=cluster_board];*/
+  IO_Drivers_1 -> LEDs [ltail=cluster_board, dir=forward];
+  IO_Drivers_1 -> SPI [ltail=cluster_board];
+  SPI -> X4_SPI;
+  USB -> HostMC;
+  /*UART -> HostMC;*/
+  XEPA -> Application;
+}

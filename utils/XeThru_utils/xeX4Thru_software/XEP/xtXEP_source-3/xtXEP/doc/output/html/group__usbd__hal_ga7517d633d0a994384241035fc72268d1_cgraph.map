@@ -1,0 +1,3 @@
+<map id="UDP_Write" name="UDP_Write">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga4722799f8987177bdfb273007447089f" title="Transfers a data payload from the current tranfer buffer to the endpoint FIFO. " alt="" coords="141,5,279,32"/>
+</map>

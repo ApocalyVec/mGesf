@@ -1,0 +1,14 @@
+<map id="HostParser" name="HostParser">
+<area shape="rect" id="node2" href="$struct_sleep_data.xhtml" title="SleepData" alt="" coords="59,16,142,43"/>
+<area shape="rect" id="node3" href="$struct_system_status.xhtml" title="SystemStatus" alt="" coords="48,67,153,93"/>
+<area shape="rect" id="node4" href="$struct_baseband_ap_data.xhtml" title="BasebandApData" alt="" coords="39,117,162,144"/>
+<area shape="rect" id="node5" href="$struct_reply.xhtml" title="Reply" alt="" coords="73,168,128,195"/>
+<area shape="rect" id="node6" href="$struct_presence_moving_list_data.xhtml" title="PresenceMovingListData" alt="" coords="18,219,183,245"/>
+<area shape="rect" id="node7" href="$struct_ack.xhtml" title="Ack" alt="" coords="78,269,123,296"/>
+<area shape="rect" id="node8" href="$struct_respiration_detection_list_data.xhtml" title="RespirationDetectionListData" alt="" coords="5,320,196,347"/>
+<area shape="rect" id="node9" href="$struct_respiration_moving_list_data.xhtml" title="RespirationMovingListData" alt="" coords="13,371,188,397"/>
+<area shape="rect" id="node10" href="$struct_presence_single_data.xhtml" title="PresenceSingleData" alt="" coords="31,421,171,448"/>
+<area shape="rect" id="node11" href="$struct_baseband_iq_data.xhtml" title="BasebandIqData" alt="" coords="42,472,159,499"/>
+<area shape="rect" id="node12" href="$struct_respiration_data.xhtml" title="RespirationData" alt="" coords="43,523,158,549"/>
+<area shape="rect" id="node13" href="$struct_float_data__.xhtml" title="FloatData_" alt="" coords="58,573,143,600"/>
+</map>

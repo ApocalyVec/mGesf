@@ -1,0 +1,5 @@
+<map id="xethru_usart_rx_task" name="xethru_usart_rx_task">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga9f4de374d2019244881290bf4943cb81" title="Initiate a completely multi&#45;byte read operation on a USART peripheral. " alt="" coords="207,5,346,47"/>
+<area shape="rect" id="node3" href="$mcp__wrapper_8c.xhtml#a8ecdd9878728971613009da765f48cd7" title="mcpw_process_rx_data" alt="" coords="197,71,356,98"/>
+<area shape="rect" id="node4" href="$task__xethru_8c.xhtml#ae9875b2314666b540f1ce5e410710129" title="mcpw_demo_x2m200" alt="" coords="203,122,351,149"/>
+</map>

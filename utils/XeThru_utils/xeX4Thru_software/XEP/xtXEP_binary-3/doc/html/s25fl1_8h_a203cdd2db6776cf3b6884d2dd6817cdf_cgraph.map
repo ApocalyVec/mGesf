@@ -1,0 +1,6 @@
+<map id="S25FL1D_Unprotect" name="S25FL1D_Unprotect">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a8cc596fd1f6b1026b0c40922c1dc30b7" title="Reads and returns the status register of the serial flash. " alt="" coords="208,5,367,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a9b0aa9019b14539aff1e68cc10576d19" title="Reads and returns the status register of the serial flash. " alt="" coords="204,56,371,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#aad42fe1199e1d1cb5b1c3d509dbe9801" title="Reads and returns the status register of the serial flash. " alt="" coords="204,107,371,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a0a4a002ffca545ddb295efab00a4ab53" title="Writes the given value in the status register of the serial flash device. " alt="" coords="208,157,367,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="SDRAMC_Configure" name="SDRAMC_Configure">
+<area shape="rect" id="node2" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="220,5,384,32"/>
+<area shape="rect" id="node3" href="$sdramc_8c.xhtml#a32ad00451ce35ea7e521056ace336667" title="Calculate the sdram controller config register value. " alt="" coords="199,56,405,83"/>
+</map>

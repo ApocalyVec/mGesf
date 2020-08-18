@@ -1,0 +1,14 @@
+<map id="SCB_InvalidateDCache_by_Addr" name="SCB_InvalidateDCache_by_Addr">
+<area shape="rect" id="node2" href="$afe__dma_8c.xhtml#a68dbdec846e3b92a818ded06727529bd" title="AFE xDMA Rx callback Invoked on AFE DMA reception done. " alt="" coords="286,5,375,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#gaa45b1118c5a1147bde4e3026194bc965" title="Receive a packet with GMAC. " alt="" coords="281,56,381,83"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#ga1385fba752fa1979cd553e33c91115d7" title="hsmci_callback" alt="" coords="271,107,390,133"/>
+<area shape="rect" id="node5" href="$qspi__dma_8c.xhtml#a63083abbd1516f582a6fce26cc454c79" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="274,157,387,184"/>
+<area shape="rect" id="node6" href="$qspi__dma_8c.xhtml#a9175c4c6f74204330090dfc3d1bfdc6a" title="QSPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="263,208,398,235"/>
+<area shape="rect" id="node7" href="$spi__dma_8c.xhtml#ac612542f98d1fbf87bbf0e3ea7870cb1" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="281,259,380,285"/>
+<area shape="rect" id="node8" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="269,309,392,336"/>
+<area shape="rect" id="node9" href="$uart__dma_8c.xhtml#a1f704a5ba38b30b508eaf3f6df28d31f" title="UART xDMA Rx callback Invoked on UART DMA reception done. " alt="" coords="275,360,386,387"/>
+<area shape="rect" id="node10" href="$usart__dma_8c.xhtml#a2c942c9e172c4b51eb87fbdefa14c8ad" title="USART xDMA Rx callback Invoked on USART DMA reception done. " alt="" coords="271,411,391,437"/>
+<area shape="rect" id="node11" href="$group__usbd__hal.xhtml#ga5e6f054068ed99c861c50f2eeeb30216" title="Endpoint DMA interrupt handler. " alt="" coords="252,461,409,488"/>
+<area shape="rect" id="node12" href="$group__uhd__group.xhtml#ga27e6e1c865c634f55e0ac75a6b3a81b4" title="USBHS_SCB_InvalidateDCache\l_by_Addr" alt="" coords="220,513,441,554"/>
+<area shape="rect" id="node13" href="$group__uhi__hid__mouse__group__internal.xhtml#ga081c50ae2f10f92ecdc77627c9093a36" title="Decodes the HID mouse report received. " alt="" coords="249,578,413,619"/>
+</map>

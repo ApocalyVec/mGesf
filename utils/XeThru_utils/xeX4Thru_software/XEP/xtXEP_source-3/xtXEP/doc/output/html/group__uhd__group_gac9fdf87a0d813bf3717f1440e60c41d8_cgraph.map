@@ -1,0 +1,8 @@
+<map id="USBH_HAL_Resume" name="USBH_HAL_Resume">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a00c26cb8e5bbda68e2ab8a379a7bd001" title="Sets USB host Enable the Generation of Start of Frame. " alt="" coords="212,5,367,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#af53df9330077448ac0d721dbef847c9f" title="Check if clock is usable or not. " alt="" coords="206,56,373,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a78d27724945f587c54cba1d9617979c8" title="Freeze or unfreeze USB clock. " alt="" coords="204,107,375,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#ac783c1af3755deab237694ce7b4579bf" title="Sets USB host Enable the Generation of Start of Frame. " alt="" coords="217,157,362,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#abe1074ea76550225e959d5628d6b38a4" title="Sets USB host send Resume on USB bus. " alt="" coords="226,208,353,235"/>
+<area shape="rect" id="node7" href="$group__uhd__group.xhtml#ga5d9360ec239feb3ede5e4a0223d3c6e2" title="Manages the sleep mode following the USBHS state. " alt="" coords="224,259,355,285"/>
+</map>

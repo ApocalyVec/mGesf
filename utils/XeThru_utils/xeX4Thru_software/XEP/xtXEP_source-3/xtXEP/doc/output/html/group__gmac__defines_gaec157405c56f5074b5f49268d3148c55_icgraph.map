@@ -1,0 +1,3 @@
+<map id="GMAC_TransmissionHalt" name="GMAC_TransmissionHalt">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga1d32bdcf010875dfcaea4817d8086b82" title="Reset TX queue when errors are detected. " alt="" coords="229,5,403,32"/>
+</map>

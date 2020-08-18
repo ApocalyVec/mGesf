@@ -1,0 +1,6 @@
+<map id="SMC_ECC_VerifyHsiao" name="SMC_ECC_VerifyHsiao">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#a262b7a457a7f95e8403744c0c47d8fc2" title="Get ECC correction type. " alt="" coords="227,5,435,32"/>
+<area shape="rect" id="node3" href="$smc_8c.xhtml#a37e65f5e7c65e85ee841c5c779018ad0" title="verifies 4&#45;bytes hsiao codes for a data block whose size is a page Size word. " alt="" coords="235,57,427,98"/>
+<area shape="rect" id="node4" href="$smc_8c.xhtml#a2c2e22ec4cdc2f388025919b7a2f96fc" title="verifies 3&#45;bytes hsiao codes for a data block whose size is a page Size word. " alt="" coords="216,123,447,149"/>
+<area shape="rect" id="node5" href="$smc_8c.xhtml#a70038d38d74adfa40c8126f3f0035eed" title="3&#45;bytes hsiao codes for a data block whose size is multiple of 512 bytes. " alt="" coords="216,173,447,200"/>
+</map>

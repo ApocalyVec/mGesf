@@ -1,0 +1,10 @@
+<map id="USBD_HAL_Init" name="USBD_HAL_Init">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a271a9d7a4f68db5bfab4401f8e67d347" title="Enables or disables USB. " alt="" coords="195,5,339,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a636f49939838c8348470310e71e1cd70" title="Device or Host Mode. " alt="" coords="199,56,335,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a78d27724945f587c54cba1d9617979c8" title="Freeze or unfreeze USB clock. " alt="" coords="181,107,352,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#a46ba14559a5a635598a47d24943769ba" title="Disable/Enables High Speed mode. " alt="" coords="172,157,361,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#af53df9330077448ac0d721dbef847c9f" title="Check if clock is usable or not. " alt="" coords="183,208,350,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a07183fee11fbf4c00401b455bdfed9dd" title=" USBHS_CTRL " alt="" coords="191,259,343,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="184,309,349,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="205,360,329,387"/>
+</map>

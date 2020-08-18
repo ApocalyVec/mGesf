@@ -1,0 +1,6 @@
+<map id="_usb_task_init" name="_usb_task_init">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="165,5,340,32"/>
+<area shape="rect" id="node3" href="$xtio__usb_8c.xhtml#abf3075f0b4513b7a321a7d359a37d4b4" title="xtio_usb_init" alt="" coords="202,56,303,83"/>
+<area shape="rect" id="node4" href="$xtio__serial__com_8c.xhtml#afdbe66e3a8423057af6855132b1965ee" title="_usb_task_rx" alt="" coords="200,107,305,133"/>
+<area shape="rect" id="node5" href="$xtio__serial__com_8c.xhtml#a18a89b2e10b293c135602a32bb07cbba" title="_usb_task_tx" alt="" coords="200,157,305,184"/>
+</map>

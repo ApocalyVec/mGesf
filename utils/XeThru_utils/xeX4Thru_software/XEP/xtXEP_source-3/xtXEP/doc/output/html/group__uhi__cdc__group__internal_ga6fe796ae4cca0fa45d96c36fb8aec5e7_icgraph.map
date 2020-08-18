@@ -1,0 +1,13 @@
+<map id="uhi_cdc_get_port" name="uhi_cdc_get_port">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__uhc.xhtml#gadbcfeecd8daa9af05daafe35d2835e18" title="uhi_cdc_sof" alt="" coords="227,5,323,32"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group__internal.xhtml#ga1e2a4888266cef7dfe80c8e2b801a3d2" title="Changes the port configuration. " alt="" coords="210,56,341,83"/>
+<area shape="rect" id="node4" href="$group__uhi__cdc__group__internal.xhtml#ga6514d4bd06546b5ad90822cddd70e92a" title="Sends a control line command on the port. " alt="" coords="199,107,352,133"/>
+<area shape="rect" id="node5" href="$group__uhi__cdc__group__internal.xhtml#ga5bfc8e7c676500af3faadcf847e13c81" title="Manage the end of RX transfer. " alt="" coords="200,157,351,184"/>
+<area shape="rect" id="node6" href="$group__uhi__cdc__group__internal.xhtml#ga2d752930f3947081262a5ac64f05ac41" title="Manage the end of TX transfer. " alt="" coords="212,208,339,235"/>
+<area shape="rect" id="node7" href="$group__uhi__cdc__group.xhtml#ga0a2032fe0ac6fe72d753182b9e1f7f6e" title="This function returns the number of character available on the CDC line. " alt="" coords="184,259,367,285"/>
+<area shape="rect" id="node8" href="$group__uhi__cdc__group.xhtml#ga858b00699362740d4510094a6b937290" title="Waits and gets a value on CDC line. " alt="" coords="223,309,328,336"/>
+<area shape="rect" id="node9" href="$group__uhi__cdc__group.xhtml#ga87e4110efd9fa4385db14a08bb03e0cc" title="Reads a RAM buffer on CDC line. " alt="" coords="209,360,342,387"/>
+<area shape="rect" id="node10" href="$group__uhi__cdc__group.xhtml#gab4859cc34c89b2bca680156ed566e87e" title="This function checks if a new character sent is possible The type int is used to support scanf redire..." alt="" coords="201,411,350,437"/>
+<area shape="rect" id="node11" href="$group__uhi__cdc__group.xhtml#ga46844aa62368cdc348bc1a7f79f4d240" title="Puts a byte on CDC line The type int is used to support printf redirection from compiler LIB..." alt="" coords="223,461,328,488"/>
+<area shape="rect" id="node12" href="$group__uhi__cdc__group.xhtml#gab52b161c804210312659742b4138c9f9" title="Writes a RAM buffer on CDC line. " alt="" coords="208,512,343,539"/>
+</map>

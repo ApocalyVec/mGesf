@@ -1,0 +1,4 @@
+<map id="USBH_device_t" name="USBH_device_t">
+<area shape="rect" id="node2" href="$struct___u_s_b_device_descriptor.xhtml" title="_USBDeviceDescriptor" alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="197,5,405,32"/>
+</map>

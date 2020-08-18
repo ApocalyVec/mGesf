@@ -1,0 +1,21 @@
+<map id="task_radar_init" name="task_radar_init">
+<area shape="rect" id="node2" href="$xtmemory_8h.xhtml#ac094f55ba76fe2ae6e6b584f62ede7e0" title="Allocate memory from default location. " alt="" coords="177,5,365,32"/>
+<area shape="rect" id="node3" href="$radar__hal_8c.xhtml#a92728c8f2a3bc96e31edab3fcb921dd3" title="Calculate necessary memory for radar_hal_init. " alt="" coords="169,56,372,83"/>
+<area shape="rect" id="node4" href="$radar__hal_8c.xhtml#ad63d969948a6bec2a0c98d02c6296446" title="Initiate Radar HAL. " alt="" coords="217,107,325,133"/>
+<area shape="rect" id="node5" href="$task__radar_8c.xhtml#aff4b9d0838128b37cbe6cbca67f3c2d8" title="x4driver_callback_take_sem" alt="" coords="170,157,371,184"/>
+<area shape="rect" id="node6" href="$task__radar_8c.xhtml#a8452a91801c0e7213eba56c0986d7303" title="x4driver_callback_give_sem" alt="" coords="171,208,370,235"/>
+<area shape="rect" id="node7" href="$task__radar_8c.xhtml#a88b56fb0b5f851081e2019ebcd39c16d" title="x4driver_timer_sweep\l_timeout" alt="" coords="190,259,351,301"/>
+<area shape="rect" id="node8" href="$task__radar_8c.xhtml#a816fc4fa062c45ec3e681f58b3499cbc" title="x4driver_timer_set\l_timer_timeout_frequency" alt="" coords="175,325,366,366"/>
+<area shape="rect" id="node9" href="$task__radar_8c.xhtml#afccac1c7313b53fb1e7554dc1fa48e9e" title="x4driver_timer_action\l_timeout" alt="" coords="191,390,351,431"/>
+<area shape="rect" id="node10" href="$task__radar_8c.xhtml#ac435da96b3f4e5737f4c74ceae0d768f" title="x4driver_callback_pin\l_set_enable" alt="" coords="192,455,349,497"/>
+<area shape="rect" id="node11" href="$task__radar_8c.xhtml#a4fee3ee4025e6d4e8dc667598f8bc27f" title="x4driver_enable_ISR" alt="" coords="420,492,571,519"/>
+<area shape="rect" id="node12" href="$task__radar_8c.xhtml#a1da830412d2139fcff036c9ed19d3353" title="x4driver_callback_spi_read" alt="" coords="175,572,367,599"/>
+<area shape="rect" id="node13" href="$task__radar_8c.xhtml#ae4c33e41c848443aa7dcddda26f9cc25" title="x4driver_callback_spi\l_write" alt="" coords="193,623,349,665"/>
+<area shape="rect" id="node14" href="$task__radar_8c.xhtml#aa8b3c8912f612a62ff7fa141dfabd13b" title="x4driver_callback_spi\l_write_read" alt="" coords="193,689,349,730"/>
+<area shape="rect" id="node15" href="$task__radar_8c.xhtml#a3daa8e1e64e92bf7c33923c8b5c69db9" title="x4driver_callback_wait_us" alt="" coords="178,755,363,781"/>
+<area shape="rect" id="node16" href="$task__radar_8c.xhtml#a6457a77ea4d90d4174deca8f8b772360" title="x4driver_notify_data\l_ready" alt="" coords="195,806,346,847"/>
+<area shape="rect" id="node17" href="$task__radar_8c.xhtml#a5b304d710c485763ad4596454b7a4636" title="x4driver_trigger_sweep_pin" alt="" coords="173,872,368,899"/>
+<area shape="rect" id="node18" href="$x4driver_8h.xhtml#ad7587a7ae9fcd26441eb6c765b9fda8f" title="Gets size of X4Driver struct. " alt="" coords="173,923,368,949"/>
+<area shape="rect" id="node19" href="$x4driver_8h.xhtml#a2e248dc4b2feab14c20a2b5fbfe2b1db" title="Creates x4driver instance. " alt="" coords="210,973,331,1000"/>
+<area shape="rect" id="node20" href="$task__radar_8c.xhtml#ab45564b4bfe2b9814424a084ab9a9859" title="task_radar" alt="" coords="225,1024,316,1051"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="sysclk_get_peripheral_hz" name="sysclk_get_peripheral_hz">
+<area shape="rect" id="node2" href="$group__sysclk__group.xhtml#gae7ac107dcdb3b01de4af539cab17a93d" title="Retrieves the current rate in Hz of the Peripheral Bus clock attached to the specified peripheral..." alt="" coords="223,5,371,47"/>
+<area shape="rect" id="node3" href="$uart__serial_8h.xhtml#a9b7530c23e7cf03a4542e50d276f677f" title="Initializes the Usart in master mode. " alt="" coords="419,42,532,69"/>
+</map>

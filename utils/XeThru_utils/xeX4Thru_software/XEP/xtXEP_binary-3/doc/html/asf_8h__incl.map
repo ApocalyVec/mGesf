@@ -1,0 +1,15 @@
+<map id="src/hal/x4m0x_s70/asf.h" name="src/hal/x4m0x_s70/asf.h">
+<area shape="rect" id="node2" href="$compiler_8h.xhtml" title="compiler.h" alt="" coords="5,80,93,107"/>
+<area shape="rect" id="node4" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="261,80,331,107"/>
+<area shape="rect" id="node6" href="$efc_8h.xhtml" title="efc.h" alt="" coords="447,80,500,107"/>
+<area shape="rect" id="node22" href="$xdmac_8h.xhtml" title="include/xdmac.h" alt="" coords="2143,80,2270,107"/>
+<area shape="rect" id="node23" href="$pio_8h.xhtml" title="pio.h" alt="" coords="2295,80,2348,107"/>
+<area shape="rect" id="node24" href="$pmc_8h.xhtml" title="include/pmc.h" alt="" coords="2373,80,2483,107"/>
+<area shape="rect" id="node27" href="$rstc_8h.xhtml" title="include/rstc.h" alt="" coords="2691,80,2797,107"/>
+<area shape="rect" id="node29" href="$smc_8h.xhtml" title="Definitions and function prototype for SMC module. " alt="" coords="2901,80,2963,107"/>
+<area shape="rect" id="node30" href="$qspi_8h.xhtml" title="Interface for Serial Peripheral Interface (SPI) controller. " alt="" coords="2987,80,3096,107"/>
+<area shape="rect" id="node31" href="$supc_8h.xhtml" title="include/supc.h" alt="" coords="3121,80,3234,107"/>
+<area shape="rect" id="node37" href="$uart_8h.xhtml" title="uart.h" alt="" coords="4045,80,4105,107"/>
+<area shape="rect" id="node39" href="$usart_8h.xhtml" title="include/usart.h" alt="" coords="4221,80,4337,107"/>
+<area shape="rect" id="node40" href="$wdt_8h.xhtml" title="include/wdt.h" alt="" coords="4361,80,4466,107"/>
+</map>

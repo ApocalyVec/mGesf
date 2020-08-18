@@ -1,0 +1,6 @@
+<map id="_AUDDSpeakerPhoneDriverAudioControlDescriptors" name="_AUDDSpeakerPhoneDriverAudioControlDescriptors">
+<area shape="rect" id="node2" href="$struct___a_u_d_feature_unit_descriptor3.xhtml" title="Feature unit descriptor with 3 channel controls (master, right, left). " alt="" coords="13,5,219,32"/>
+<area shape="rect" id="node3" href="$struct___a_u_d_header_descriptor2.xhtml" title="Audio header descriptor with 2 interface. " alt="" coords="27,56,205,83"/>
+<area shape="rect" id="node4" href="$struct___a_u_d_output_terminal_descriptor.xhtml" title="_AUDOutputTerminalDescriptor" alt="" coords="5,116,227,143"/>
+<area shape="rect" id="node5" href="$struct___a_u_d_input_terminal_descriptor.xhtml" title="_AUDInputTerminalDescriptor" alt="" coords="11,176,221,203"/>
+</map>

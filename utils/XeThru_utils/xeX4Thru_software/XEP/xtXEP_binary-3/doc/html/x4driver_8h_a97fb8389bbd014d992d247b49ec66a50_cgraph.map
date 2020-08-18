@@ -1,0 +1,6 @@
+<map id="x4driver_ldo_enable" name="x4driver_ldo_enable">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#abde766e0d1366c610923ac6df6aff591" title="Enable dvdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="203,5,389,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a2ed5d880184cddb6899a3ee5789ae282" title="Enable dvdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="203,56,389,83"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a6cf76ee14b0f9d6d942771a01b4bc6ab" title="Enable avdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="203,107,389,133"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#ac1bde9631df9f305637fd490f6d6034e" title="Enable avdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="203,157,389,184"/>
+</map>

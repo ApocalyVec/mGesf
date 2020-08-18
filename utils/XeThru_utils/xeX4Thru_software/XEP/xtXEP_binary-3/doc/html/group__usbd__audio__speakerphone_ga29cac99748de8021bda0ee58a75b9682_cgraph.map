@@ -1,0 +1,4 @@
+<map id="AUDD_MuteReceived" name="AUDD_MuteReceived">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga23998bf8c9947db7fe50d3f3b7cba59d" title="Change Stream Mute status. " alt="" coords="209,5,407,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="259,56,357,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="x4driver_set_sweep_trigger_control" name="x4driver_set_sweep_trigger_control">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="375,25,473,51"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a3ae283684d1a23d89a56d93971139bb6" title="x4driver_get_fps" alt="" coords="200,25,327,51"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="376,75,472,102"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#af6c32021e202b0dfe0a8b104ebd7a0b6" title="Sets frame rate for frame streaming. " alt="" coords="200,75,327,102"/>
+</map>

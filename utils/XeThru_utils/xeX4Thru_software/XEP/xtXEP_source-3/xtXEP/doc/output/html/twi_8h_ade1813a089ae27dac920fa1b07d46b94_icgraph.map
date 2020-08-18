@@ -1,0 +1,4 @@
+<map id="TWI_SendSTOPCondition" name="TWI_SendSTOPCondition">
+<area shape="rect" id="node2" href="$twid_8c.xhtml#a1bc4824729ea7fce14e514036ee38490" title="Interrupt handler for a TWI peripheral. " alt="" coords="231,5,341,32"/>
+<area shape="rect" id="node3" href="$twid_8c.xhtml#a67c6f278372fcb213e7848929db89d3f" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="241,56,331,83"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Atmel part identification macros" name="Atmel part identification macros">
+<area shape="rect" id="node1" href="$group__sam__part__macros__group.xhtml" title="SAM parts" alt="" coords="236,5,320,32"/>
+<area shape="rect" id="node2" href="$group__tiny__part__macros__group.xhtml" title="tinyAVR parts" alt="" coords="227,56,329,83"/>
+<area shape="rect" id="node3" href="$group__uc3__part__macros__group.xhtml" title="AVR UC3 parts" alt="" coords="223,107,333,133"/>
+<area shape="rect" id="node4" href="$group__xmega__part__macros__group.xhtml" title="AVR XMEGA parts" alt="" coords="212,157,344,184"/>
+<area shape="rect" id="node5" href="$group__mega__part__macros__group.xhtml" title="megaAVR parts" alt="" coords="221,208,335,235"/>
+</map>

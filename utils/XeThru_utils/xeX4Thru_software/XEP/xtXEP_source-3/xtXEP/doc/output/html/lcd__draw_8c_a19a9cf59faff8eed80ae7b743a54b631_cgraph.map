@@ -1,0 +1,4 @@
+<map id="LCDD_DrawLine" name="LCDD_DrawLine">
+<area shape="rect" id="node2" href="$lcd__draw_8c.xhtml#a4748c46fe4b10f01e49106c9fd2d22da" title="LCDD_DrawStraightLine" alt="" coords="187,5,362,32"/>
+<area shape="rect" id="node3" href="$lcd__draw_8c.xhtml#a2ae2f58d2a7bb12afa7a6510dd94a0a6" title="LCDD_DrawLineBresenham" alt="" coords="176,56,373,83"/>
+</map>

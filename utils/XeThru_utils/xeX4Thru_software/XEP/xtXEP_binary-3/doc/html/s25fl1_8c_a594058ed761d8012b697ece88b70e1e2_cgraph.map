@@ -1,0 +1,4 @@
+<map id="S25FL1D_WriteVolatileStatus" name="S25FL1D_WriteVolatileStatus">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a1a915b35968bc2e31ab4fe5e38a76708" title="Start S25FL1D Send command with/without data write/read. " alt="" coords="471,5,657,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#af7afb850fd4743dd16ae1e500ae11e8e" title="S25FL1D_DisableWrite" alt="" coords="259,31,423,57"/>
+</map>

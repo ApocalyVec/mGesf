@@ -1,0 +1,5 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/common/massstorage/USBDDriverDescriptors.c" name="src/hal/x4m0x_s70/libraries/libusb/common/massstorage/USBDDriverDescriptors.c">
+<area shape="rect" id="node2" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="5,109,76,136"/>
+<area shape="rect" id="node3" href="$_m_s_d_driver_8h.xhtml" title="MSDDriver.h" alt="" coords="101,109,202,136"/>
+<area shape="rect" id="node4" href="$_m_s_descriptors_8h.xhtml" title="MSDescriptors.h" alt="" coords="227,109,353,136"/>
+</map>

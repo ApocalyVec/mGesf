@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/board_x4m0x_s70.h" name="src/hal/x4m0x_s70/board_x4m0x_s70.h">
+<area shape="rect" id="node2" href="$chip_8h.xhtml" title="chip.h" alt="" coords="5,95,65,121"/>
+<area shape="rect" id="node3" href="$board__lowlevel_8h.xhtml" title="Interface for the low&#45;level initialization function. " alt="" coords="89,95,216,121"/>
+<area shape="rect" id="node4" href="$board__memories_8h.xhtml" title="Interface for memories configuration on board. " alt="" coords="240,95,383,121"/>
+<area shape="rect" id="node5" href="$xtcompiler_8h.xhtml" title="xtcompiler.h" alt="" coords="407,95,507,121"/>
+<area shape="rect" id="node6" href="$led_8h.xhtml" title="include/led.h" alt="" coords="531,95,633,121"/>
+<area shape="rect" id="node7" href="$_free_r_t_o_s_config_8h.xhtml" title="Generic FreeRTOS peripheral control functions. " alt="" coords="657,95,792,121"/>
+</map>

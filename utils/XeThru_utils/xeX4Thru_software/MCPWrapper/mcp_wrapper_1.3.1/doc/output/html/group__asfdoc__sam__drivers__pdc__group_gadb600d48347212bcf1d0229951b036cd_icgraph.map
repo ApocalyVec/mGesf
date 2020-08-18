@@ -1,0 +1,5 @@
+<map id="pdc_enable_transfer" name="pdc_enable_transfer">
+<area shape="rect" id="node2" href="$freertos__peripheral__control__private_8h.xhtml#ae9d7f15bbb38d058598cf29ee45c5b2a" title="freertos_start_pdc\l_transfer" alt="" coords="210,5,337,47"/>
+<area shape="rect" id="node3" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="192,71,355,98"/>
+<area shape="rect" id="node4" href="$freertos__usart__serial_8c.xhtml#a53cee58d461e19378a8453e89d52424f" title="configure_rx_dma" alt="" coords="211,122,335,149"/>
+</map>

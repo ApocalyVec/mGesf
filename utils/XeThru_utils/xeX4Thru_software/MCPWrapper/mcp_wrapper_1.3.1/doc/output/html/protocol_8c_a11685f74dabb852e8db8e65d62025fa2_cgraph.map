@@ -1,0 +1,5 @@
+<map id="handleSingleByte" name="handleSingleByte">
+<area shape="rect" id="node2" href="$protocol_8c.xhtml#a64b47d91aee81cf83bb4141a3ee9e367" title="_packet_reset" alt="" coords="361,23,465,50"/>
+<area shape="rect" id="node3" href="$protocol_8c.xhtml#a2e6e17c97c8aa31ba75d15a531d79a3c" title="isSpecialByte" alt="" coords="193,23,296,50"/>
+<area shape="rect" id="node4" href="$protocol_8c.xhtml#ab570602030dd7447a8b6fef15d6e044b" title="handleSpecialBytes" alt="" coords="176,74,313,100"/>
+</map>

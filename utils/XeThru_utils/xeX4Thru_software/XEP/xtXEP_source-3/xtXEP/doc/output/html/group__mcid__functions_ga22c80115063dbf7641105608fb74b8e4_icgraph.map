@@ -1,0 +1,6 @@
+<map id="_FinishCmd" name="_FinishCmd">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#ga0f7fea41ecb05d212817789962f3160b" title="SD/MMC command. " alt="" coords="153,5,278,32"/>
+<area shape="rect" id="node3" href="$group__mcid__functions.xhtml#ga8b24d6b7cbfd7240dc23dbd4c6759975" title="Process pending events on the given MCI driver. " alt="" coords="159,56,271,83"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#gaa42ae91258675d685937a68c69b2afdf" title="Cancel pending SD/MMC command. " alt="" coords="148,107,283,133"/>
+<area shape="rect" id="node5" href="$group__mcid__functions.xhtml#ga03c7b7af1b4abf00f759b0a47c476baf" title="Reset MCID and disable HW. " alt="" coords="331,132,428,159"/>
+</map>

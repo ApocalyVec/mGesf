@@ -1,0 +1,5 @@
+<map id="USBH_dev_get_string" name="USBH_dev_get_string">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group.xhtml#ga6816405ed8d888b761c711dfb13ccf89" title="Gets the USB string manufacturer from a USB device. " alt="" coords="215,5,376,47"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group.xhtml#ga7db12c142853d4dc27bfc38845617b74" title="Gets the USB string product from a USB device. " alt="" coords="215,71,376,112"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group.xhtml#ga26f644d2fffebc9f6b8d84f9af9c9fe8" title="Gets the USB string serial from a USB device. " alt="" coords="215,136,376,177"/>
+</map>

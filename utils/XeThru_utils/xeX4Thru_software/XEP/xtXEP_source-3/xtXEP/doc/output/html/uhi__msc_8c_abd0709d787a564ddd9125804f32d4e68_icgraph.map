@@ -1,0 +1,4 @@
+<map id="uhi_msc_data_csw_rst_stall" name="uhi_msc_data_csw_rst_stall">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a5bde639d16169cbf29a09a0ea37b8765" title="Checks the DATA phase transfer and launch the next step The next step can be a CSW packet or a endpoi..." alt="" coords="219,5,403,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a19a9a79cd89aacd88ca76ea2e27eaecf" title="Checks the CSW packet transfer. " alt="" coords="227,56,394,83"/>
+</map>

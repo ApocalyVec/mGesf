@@ -1,0 +1,5 @@
+<map id="xtio_set_level" name="xtio_set_level">
+<area shape="rect" id="node2" href="$radar__hal_8h.xhtml#a8da7b99f6f9103ecd9ccfd1deab1378b" title="Set Radar IC enable pin to specified level. " alt="" coords="166,5,351,32"/>
+<area shape="rect" id="node3" href="$task__radar_8c.xhtml#a5b304d710c485763ad4596454b7a4636" title="x4driver_trigger_sweep_pin" alt="" coords="161,56,356,83"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#a8e7d3bc0aacfe4f2fd3e8313afc11321" title="onMcpSetIOPinValue" alt="" coords="182,107,335,133"/>
+</map>

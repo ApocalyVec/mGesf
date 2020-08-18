@@ -13,13 +13,13 @@ from mGesf.sound import *
 import config
 import pyqtgraph as pg
 
-
 # TODO ISSUE: there's a perceptible glitch in the runtime graphs when the metronome refreshes, will this go away if
 #  the frame rate is lower when the sensors are connected (at 30FPS)?
 
 class IdpRecording(QWidget):
-    def __init__(self):
+    def __init__(self, record_signal):
         super().__init__()
+        self.record_signal = record_signal
         # -------------------- First class --------------------
         self.main_page = QHBoxLayout(self)
         self.setLayout(self.main_page)
@@ -192,9 +192,17 @@ class IdpRecording(QWidget):
             if 'idle' in self.state:  # start the test mode
                 self.idle_to_pending()
                 self.state = ['testing', 'pending']
-            else:  # back to idle
+            elif 'recording' in self.state:  # back to idle
+                print('IndexPen: already recording')
+            else:
                 self.update_state('interrupt')  # this is equivalent to issuing an interrupt action
         # break pending state and start count down
+        elif action == 'record_pressed':
+            if 'idle' in self.state:  # start the test mode
+                self.idle_to_pending()
+                self.state = ['recording', 'pending']
+            else:
+                print('IndexPen: already recording')
         elif action == 'enter_pressed':
             if 'pending' in self.state:
                 self.state.remove('pending')
@@ -209,10 +217,14 @@ class IdpRecording(QWidget):
             self.state.remove('writing')
             if 'testing' in self.state:  # restart writing if in test mode
                 self.update_state('countdown_over')
-            elif '':
-                pass  # TODO implement writing over when in recording mode
+            elif 'recording' in self.state:
+                self.update_state('record_over')
             else:
                 raise Exception('Unknown State change')
+        elif action == 'record_over':
+            self.finish_recording()
+            self.working_to_idle()  # working includes that
+            self.state = ['idle']
         elif action == 'interrupt':
             self.working_to_idle()  # working includes that
             self.state = ['idle']
@@ -233,6 +245,9 @@ class IdpRecording(QWidget):
         self.char_set = generate_char_set(self.classes, self.repeat_times)
         init_preparation_block(parent=self.ist_text_block, text=self.char_set)
 
+    def finish_recording(self):
+        self.record_signal.emit({'cmd': 'end', 'label': self.char_set})
+
     def working_to_idle(self):
         self.reset_instruction()
 
@@ -249,6 +264,8 @@ class IdpRecording(QWidget):
         clear_layout(self.ist_text_block)
         self.reset_instruction()
         self.lb_char_to_write, self.lb_char_next = init_instruction_text_block(self.ist_text_block)
+        if 'recording' in self.state:
+            self.record_signal.emit({'cmd': 'start', 'label': None})  # send start signal to gesture tab, where the sensor data are located
 
     def keyPressEvent(self, key_event):
         print(key_event)
@@ -421,8 +438,7 @@ class IdpRecording(QWidget):
         self.update_state('test_pressed')
 
     def recording_btn_action(self):
-        # TODO implement this action
-        pass
+        self.update_state('record_pressed')
         # if self.is_recording:
         #     self.reset()
         #
@@ -466,6 +482,8 @@ class IdpRecording(QWidget):
         self.lb_char_next, self.lb_char_to_write = None, None
         self.cur_countdown, self.tempo_counter = 0, 0
 
+    def get_data_path(self):
+        return self.training_dir_textbox.text()
 
 def is_enter_key_event(key_event):
     return key_event.key() == QtCore.Qt.Key_Return or key_event.key() == QtCore.Qt.Key_Enter

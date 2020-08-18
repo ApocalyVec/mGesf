@@ -1,0 +1,5 @@
+<map id="uhi_msc_enable_step3" name="uhi_msc_enable_step3">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a291983a87ab06a4d4aa77896e5cd9fd3" title="Step 2 of the initialization of a USB MSC device Decode the setup request GET_MAX_LUN and allocs LUN ..." alt="" coords="221,5,389,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#ac95ce59659e65907d582bccbabe47522" title="Step 4 of the initialization of a USB MSC device Sends the SCSI READ CAPACITY request on the current ..." alt="" coords="437,68,605,95"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#a0920da8c6f19a6a5fc403687174cd525" title="Step 5 of the initialization of a USB MSC device Go to the initialization of the next LUN..." alt="" coords="221,131,389,157"/>
+</map>

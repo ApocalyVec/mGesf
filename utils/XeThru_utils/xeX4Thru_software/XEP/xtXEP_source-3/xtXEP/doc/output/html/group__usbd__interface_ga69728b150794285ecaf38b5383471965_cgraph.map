@@ -1,0 +1,5 @@
+<map id="SetInterface" name="SetInterface">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="200,5,295,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga50bd417ce66ea649094dc9a927d08e81" title="Notifies of a change in the currently active setting of an interface. " alt="" coords="153,57,341,98"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="198,123,297,149"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="onMcpX4DriverReadFromSpiRegister" name="onMcpX4DriverReadFromSpiRegister">
+<area shape="rect" id="node2" href="$xtmemory_8h.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="272,5,443,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="255,57,460,98"/>
+<area shape="rect" id="node4" href="$x4driver_8h.xhtml#a47f8598fd42ad86659d0a59d9b360ab4" title="Reads data from SPI register on radar chip. " alt="" coords="284,122,431,163"/>
+<area shape="rect" id="node5" href="$xep__dispatch__messages_8h.xhtml#a22a2633c98e35bd1a0e5fd8687de3adf" title="Dispatch message to hostcom asking to reply with byte array to host. " alt="" coords="255,187,460,229"/>
+<area shape="rect" id="node6" href="$xtmemory_8h.xhtml#a1b0d147f3ba8bc658585e26e12c46a76" title="Free memory allocated by xtmemory_malloc_slow. " alt="" coords="280,253,435,280"/>
+</map>

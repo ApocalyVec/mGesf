@@ -1,0 +1,5 @@
+<map id="x4driver_get_dac_step" name="x4driver_get_dac_step">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="455,5,553,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a7e06b27153667442dbc559ce2cf3d21e" title="Gets a register segment. " alt="" coords="220,31,407,57"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="456,68,552,95"/>
+</map>

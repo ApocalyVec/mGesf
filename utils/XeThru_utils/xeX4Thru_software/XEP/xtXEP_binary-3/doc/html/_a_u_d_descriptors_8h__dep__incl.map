@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/AUDDescriptors.h" name="src/hal/x4m0x_s70/libraries/libusb/include/AUDDescriptors.h">
+<area shape="rect" id="node2" href="$_a_u_d_d_stream_8c.xhtml" title="USB Audio Device Streaming interface with controls. " alt="" coords="5,95,248,151"/>
+<area shape="rect" id="node3" href="$_a_u_d_d_speaker_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/AUDDSpeakerDriver.h" alt="" coords="273,102,530,143"/>
+<area shape="rect" id="node4" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="632,199,827,240"/>
+<area shape="rect" id="node5" href="$_a_u_d_d_speaker_phone_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/AUDDSpeakerPhone\lDriver.h" alt="" coords="605,95,853,151"/>
+<area shape="rect" id="node6" href="$_c_d_c_a_u_d_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCAUDDDriver.h" alt="" coords="877,102,1109,143"/>
+<area shape="rect" id="node7" href="$_h_i_d_a_u_d_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDAUDDDriver.h" alt="" coords="1133,102,1360,143"/>
+</map>

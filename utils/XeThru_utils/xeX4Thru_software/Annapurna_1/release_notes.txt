@@ -1,0 +1,143 @@
+Annapurna release notes
+""""""""""""""""""""
+
+Annapurna firmware release notes describes changes made from one release to the next. The firmware comprises several components, with their separate changelog. Which version of components is described in the X4M300 changelog. The components are XEP (XeThru Embedded Platform) and DSP (signal processing library).
+
+
+Annapurna changelog
+----------------
+
+1.6.8
+- Fixed wrong trx_dac_step setting; thereby increased sensor signal-to-noise ratio by 3dB
+- Added IO pin for No Presence indication
+
+1.6.6
+- Support for default noisemap
+- Protocol commands: delete_noisemap
+- RESPIRATION_4 and RESPIRATION_5 profiles
+- NormalizedMovementList output for respiration profiles
+- Fixed reset_to_factory_preset command did not clear all settings
+- Fixed UART receive crash after 1024B
+- Fixed sporadic communication issues
+- Fixed store noisemap frame glitch
+
+1.5.10
+- Adding support for high band frequency
+- Protocol commands: get_output_control, get_led_control, get_iopin_control, get_sensitivity
+- Fixed USB enumeration issues
+- Fixed X4M200 pin settings not stored
+
+1.4.7
+- GPIO functions
+- USRT communication mode
+- SW API for Certification mode
+- Fixed safe mode reset counting
+- Fixed idle/run mode toggling
+
+1.3.1
+- Breathing pattern of closest breathing target
+- Fixed memory leaks
+- Changed firmware ID from "X4M300" to "Annapurna"
+
+1.2.1
+- Change: Noise map will not initiate at reset if this is not selected in User Settings
+- Initialize Noise Map at Reset 
+- Store Noise Map to sensor 
+- Delete Stored Noise Map in sensor 
+- Pulse-Doppler data output
+
+1.1.4
+- Slow Pulse-Doppler matrix changed from 15 to 20 seconds, which improves sensitivity to detect people that are still.
+- MovementSlow data shows movements for the previous 20 seconds.Previous FW version showed movements for the previous 15 seconds.
+- Improved breathing detection, which leads to less adaption of noise map, which improves sensitivity to detect people that are still.
+- Support for 2MB MCU (from X4M02 HW rev.6).
+- Stability improvement. Previous FW version could reset unexpectedly.
+- Changed enter bootloader command key to avoid unintentional downgrades of X4M02 with 2 MB MCU to FW version 1.0.7.
+- Acknowledge stop command even when no profile is loaded
+- Using XEP 1.1.3 and DSP library 1.1.1
+
+1.0.7
+- Using XEP 1.0.5 and DSP library 1.0.1
+- Fixed bug with LED control in simple mode
+
+1.0.5-rc.2
+- Using XEP 1.0.3-rc.2 and DSP library 0.9.10
+- Fixed bug with parameter changes being acknowledged in run mode. Returning failure response on failed attempts.
+- Load profile command will force running profiles to stop before attempting to load profile.
+
+1.0.5-rc.1
+- Using XEP 1.0.3-rc.1 and DSP library 0.9.9
+
+1.0.1-beta
+- Using XEP 1.0.1-beta and DSP library 0.9.6
+
+1.0.0-beta
+- Using XEP 1.0.0-beta and DSP library 0.9.5
+
+
+XEP changelog
+-------------
+1.1.3
+- Support for multiple MCU flash sizes
+- Crash dump mechanism improvements
+
+1.0.5
+- Added mechanism to reset in case of system failure
+
+1.0.3-rc.2
+- Improvements on X4 internal firmware
+
+1.0.3-rc.1
+- Changed set and get FPS function parameter to floating point
+- Improved X4driver limits
+- Fixed bug with memory alignment and DMA operation
+
+1.0.1-beta
+- Fixed bug that could cause corruption of response in case of busy communication
+
+1.0.0-beta
+- First release
+
+
+DSP changelog
+-------------
+
+1.1.1
+- See X4M300
+
+1.0.1
+- Parameter file system extended for RW-parameters 
+- Bug fixes in state machine
+
+0.9.12
+- Startup time of presence profile changed from 10secs to 0 secs
+
+0.9.11
+- Get system info call implemented
+
+0.9.10
+- Added protection of parameters in run modes
+
+0.9.9
+- Phase noise correction algorithm implemented
+- Known issue: Missing protection of parameters in run modes
+
+0.9.8
+- Breath detector now prefer closest target
+- When in presence state with no detections, last distance is rememberered
+- Range interpolation is enabled to get improved output distance accuracy
+
+0.9.7
+- When presence profile is running, stop, followed by start gave system hang. In this version, a false is returned
+- Known issue: Breath detector legacy still preferring strongest instead of closest detector 
+
+0.9.6
+- Changed FPS from 20 to 17 to reduce the CPU load
+- Statechange from presence to no presence fixed
+- Known issue: Breath detector legacy still preferring strongest instead of closest detector
+- Known issue: If presence profile is running, a sequence of stop, then start will give a system hang. Quickfix is to ensure loadProfile before calling start.
+
+0.9.5
+- This is the first release of the DSP-library
+- Known issue: Breath detector legacy still preferring strongest instead of closest detector
+- Known issue: State changing too fast from presence to no presence

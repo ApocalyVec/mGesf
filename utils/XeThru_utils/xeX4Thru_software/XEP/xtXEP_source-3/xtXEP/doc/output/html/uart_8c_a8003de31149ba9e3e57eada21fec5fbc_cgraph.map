@@ -1,0 +1,3 @@
+<map id="UART_GetChar" name="UART_GetChar">
+<area shape="rect" id="node2" href="$uart_8c.xhtml#a00e60c418f3031062060215af67aa3e1" title="Return 1 if a character can be read in UART. " alt="" coords="168,5,293,32"/>
+</map>

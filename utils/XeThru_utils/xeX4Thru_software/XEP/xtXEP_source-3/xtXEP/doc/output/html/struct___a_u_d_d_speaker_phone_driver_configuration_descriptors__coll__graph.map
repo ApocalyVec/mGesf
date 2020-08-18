@@ -1,0 +1,9 @@
+<map id="_AUDDSpeakerPhoneDriverConfigurationDescriptors" name="_AUDDSpeakerPhoneDriverConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___a_u_d_d_speaker_phone_driver_audio_control_descriptors.xhtml" title="_AUDDSpeakerPhoneDriverAudio\lControlDescriptors" alt="" coords="11,5,246,47"/>
+<area shape="rect" id="node3" href="$struct___a_u_d_format_type_one_descriptor1.xhtml" title="Format type I descriptor with one discrete sampling frequency. " alt="" coords="13,73,245,99"/>
+<area shape="rect" id="node4" href="$struct___a_u_d_streaming_interface_descriptor.xhtml" title="_AUDStreamingInterfaceDescriptor" alt="" coords="5,133,252,159"/>
+<area shape="rect" id="node5" href="$struct___a_u_d_endpoint_descriptor.xhtml" title="_AUDEndpointDescriptor" alt="" coords="39,190,219,217"/>
+<area shape="rect" id="node6" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="25,241,233,267"/>
+<area shape="rect" id="node7" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="39,342,218,369"/>
+<area shape="rect" id="node8" href="$struct___a_u_d_data_endpoint_descriptor.xhtml" title="_AUDDataEndpointDescriptor" alt="" coords="23,402,234,429"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="S25FL1D_SendCommand" name="S25FL1D_SendCommand">
+<area shape="rect" id="node2" href="$qspi_8h.xhtml#aa6b5d392d35016bb59ad1b3b9cdb72d9" title="Send an instruction over QSPI (oly a flash command no data) " alt="" coords="269,5,428,32"/>
+<area shape="rect" id="node3" href="$qspi_8h.xhtml#a6d28b23fbb2385d5e3a8479b02c10bb8" title="Send instruction over QSPI with data. " alt="" coords="240,56,457,83"/>
+<area shape="rect" id="node4" href="$qspi_8h.xhtml#a8b59ff979a47404bc86c60118ec3d30d" title="Send instruction over QSPI to read data. " alt="" coords="270,107,427,133"/>
+<area shape="rect" id="node5" href="$qspi_8h.xhtml#ade81d33cb14e6aa8701d4824de0656a2" title="Sends multiple data through a SPI peripheral. " alt="" coords="279,157,419,184"/>
+<area shape="rect" id="node6" href="$qspi_8h.xhtml#a2e91dc0a09fbf99a27f36836807b1a60" title="Sends a single data through a SPI peripheral. " alt="" coords="274,208,423,235"/>
+<area shape="rect" id="node7" href="$qspi_8h.xhtml#aa8e703416d8faf7e6ca68d18c1da6115" title="Reads multiple data received by a SPI peripheral. " alt="" coords="279,259,419,285"/>
+<area shape="rect" id="node8" href="$qspi_8h.xhtml#a0cee5ee97a2b6575ccf9d56d3c5fce64" title="Ends ongoing transfer by releasing CS of QSPI peripheral. " alt="" coords="282,309,415,336"/>
+</map>

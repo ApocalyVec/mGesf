@@ -1,0 +1,7 @@
+<map id="usart_reset" name="usart_reset">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#gabdf1b8bf1b4da95d3a314c4916799e88" title="Disable write protect of USART registers. " alt="" coords="140,5,313,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__usart__group.xhtml#ga123b84a0d5be1cbf1a3c5bac4af3d27d" title="Immediately stop and disable USART transmitter. " alt="" coords="174,56,279,83"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__usart__group.xhtml#ga86ad3a57b19fb497ef2271d6dc87c359" title="Immediately stop and disable USART receiver. " alt="" coords="174,107,279,133"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__usart__group.xhtml#ga4e19efeb524c1fba4b962e72283dcc11" title="Reset status bits (PARE, OVER, MANERR, UNRE and PXBRK in US_CSR). " alt="" coords="161,157,292,184"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__usart__group.xhtml#ga930438dce6fbe82394c706b775cf2f0a" title="Drive the pin RTS to 1. " alt="" coords="141,208,312,235"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="S25FL1D_InitFlashInterface" name="S25FL1D_InitFlashInterface">
+<area shape="rect" id="node2" href="$qspi__dma_8h.xhtml#a4b35fe7901e8a7d1bbb8769e761f0e3e" title="Initializes the pQspidma structure and the corresponding QSPI &amp; DMA . " alt="" coords="260,5,391,32"/>
+<area shape="rect" id="node3" href="$qspi_8h.xhtml#a97e1476d765491527f175aaf80b74fd3" title="Configures peripheral clock of a QSPI/SPI peripheral. " alt="" coords="248,56,403,83"/>
+<area shape="rect" id="node4" href="$qspi_8h.xhtml#a481f9cf7a40eb4de632cfef883abbafd" title="Enables a QSPI peripheral. " alt="" coords="274,107,377,133"/>
+</map>

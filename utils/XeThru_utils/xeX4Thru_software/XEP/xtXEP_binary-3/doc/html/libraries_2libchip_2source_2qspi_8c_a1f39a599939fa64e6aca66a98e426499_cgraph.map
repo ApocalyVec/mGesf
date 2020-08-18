@@ -1,0 +1,6 @@
+<map id="QSPI_ReadCommand" name="QSPI_ReadCommand">
+<area shape="rect" id="node2" href="$libraries_2libchip_2source_2qspi_8c.xhtml#afde5ea34d85fcecb4a538250325d3c6c" title="Configures instruction register with a given command for QSPI. " alt="" coords="231,5,335,32"/>
+<area shape="rect" id="node3" href="$libraries_2libchip_2source_2qspi_8c.xhtml#ab6228d04866fe8947d7fafd5d04b65cf" title="Configures instruction frame register of QSPI. " alt="" coords="211,56,355,83"/>
+<area shape="rect" id="node4" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a15a99043cebbb701093d11a15f78a419" title="Reads the Instruction frame of QSPI. " alt="" coords="211,107,356,133"/>
+<area shape="rect" id="node5" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a0cee5ee97a2b6575ccf9d56d3c5fce64" title="Ends ongoing transfer by releasing CS of QSPI peripheral. " alt="" coords="217,157,350,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PCtoRDRIccPowerOff" name="PCtoRDRIccPowerOff">
+<area shape="rect" id="node2" href="$iso7816__4_8h.xhtml#af4e4648dfca0ef0ed81f36ea040b5586" title="Iso 7816 ICC power off. " alt="" coords="204,5,360,32"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#ga3a42473fac7f1432de5358e5dc39e42c" title="Response Pipe, Bulk&#45;IN Messages Return the Slot Status to the host Answer to: PC_to_RDR_IccPowerOff P..." alt="" coords="209,56,355,83"/>
+</map>

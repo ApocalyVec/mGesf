@@ -1,0 +1,7 @@
+<map id="S25FL1D_QuadMode" name="S25FL1D_QuadMode">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a300f42045ccdeb44839f77a260052bcb" title="Reads and returns the status register of the serial flash. " alt="" coords="208,5,375,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a9b0aa9019b14539aff1e68cc10576d19" title="Reads and returns the status register of the serial flash. " alt="" coords="208,56,375,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#aad42fe1199e1d1cb5b1c3d509dbe9801" title="Reads and returns the status register of the serial flash. " alt="" coords="208,107,375,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#a0a4a002ffca545ddb295efab00a4ab53" title="Writes the given value in the status register of the serial flash device. " alt="" coords="212,157,371,184"/>
+<area shape="rect" id="node6" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="267,208,315,235"/>
+</map>

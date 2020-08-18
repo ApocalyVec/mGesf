@@ -1,0 +1,7 @@
+<map id="xt_run_selftest" name="xt_run_selftest">
+<area shape="rect" id="node2" href="$xt__selftest_8c.xhtml#a1af0f34e67651b37e7b30f741cfce623" title="xt_selftest_ext_ram" alt="" coords="200,5,348,32"/>
+<area shape="rect" id="node3" href="$xt__selftest_8c.xhtml#a41d0ad3dacbf971ccdc2c0c1f7cb3bc6" title="xt_selftest_x4_connectivity" alt="" coords="177,56,371,83"/>
+<area shape="rect" id="node4" href="$xt__selftest_8c.xhtml#aec0f2a19f48773ef1f87400fe6838389" title="xt_selftest_io_connector" alt="" coords="185,107,363,133"/>
+<area shape="rect" id="node5" href="$xt__system_8c.xhtml#a9b11107e926aa1fb774e745fb5fcc624" title="Enables or disables certification mode. " alt="" coords="169,157,379,184"/>
+<area shape="rect" id="node6" href="$xt__selftest_8c.xhtml#a104dcebeb73788d9b8f7733ab672eb14" title="xt_selftest_hw_config" alt="" coords="195,208,353,235"/>
+</map>

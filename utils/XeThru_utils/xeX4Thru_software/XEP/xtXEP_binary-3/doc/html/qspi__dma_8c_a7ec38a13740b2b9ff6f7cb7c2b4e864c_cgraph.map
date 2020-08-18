@@ -1,0 +1,4 @@
+<map id="QSPID_qspiTx_Cb" name="QSPID_qspiTx_Cb">
+<area shape="rect" id="node2" href="$qspi_8h.xhtml#a0cee5ee97a2b6575ccf9d56d3c5fce64" title="Ends ongoing transfer by releasing CS of QSPI peripheral. " alt="" coords="187,5,320,32"/>
+<area shape="rect" id="node3" href="$qspi_8h.xhtml#a84307d724b3e124e1d4cced163d3074d" title="Get the current status register of the given QSPI peripheral. " alt="" coords="191,56,315,83"/>
+</map>

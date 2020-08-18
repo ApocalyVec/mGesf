@@ -1,0 +1,7 @@
+<map id="_UsbDataSent" name="_UsbDataSent">
+<area shape="rect" id="node2" href="$group__usbd__cdc.xhtml#ga36a77ddede1ea66a616d1a1ad86a5a39" title="_UsbTxBufferPop" alt="" coords="176,5,307,32"/>
+<area shape="rect" id="node3" href="$timetick_8h.xhtml#ae626fb68b4503701534936d10ec97067" title="Get Delayed number of tick. " alt="" coords="377,69,453,96"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga092b96b23f27f6b4258ce84add3b1528" title="Disable IRQ Interrupts. " alt="" coords="363,132,467,159"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga6fea83fe11c9a07924fb1ef316a9c76c" title="Enable IRQ Interrupts. " alt="" coords="363,195,466,221"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc.xhtml#gadfeadaa787932fc6f8ef50a53fdb2ed0" title="_FlushUsbTxBuffers" alt="" coords="168,157,315,184"/>
+</map>

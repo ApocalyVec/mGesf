@@ -1,0 +1,7 @@
+<map id="USBHS_HostSetToken" name="USBHS_HostSetToken">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga1ddb6a33201674d513c4ad9c5de79e93" title="USBH_HAL_PhaseControlSetup" alt="" coords="217,5,440,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gad1f5aedd5277d055c4c23a9a185fb7e6" title="USBH_HAL_PhaseDataInStart" alt="" coords="222,56,435,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga9fcd1bf925a9ad0692672d08f3da3427" title="USBH_HAL_InZLP" alt="" coords="261,107,397,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga74ceb21eb2c7ef68d5fe6f02ea7beb58" title="USBH_HAL_PhaseDataOut" alt="" coords="488,132,681,159"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#ga5d07dff59bfb3f4de2343ae894fdac03" title="USBH_HAL_OutZLP" alt="" coords="255,208,403,235"/>
+</map>

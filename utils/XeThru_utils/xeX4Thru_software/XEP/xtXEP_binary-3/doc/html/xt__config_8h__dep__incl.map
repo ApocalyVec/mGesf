@@ -1,0 +1,11 @@
+<map id="src/hal/x4m0x_s70/xt_config.h" name="src/hal/x4m0x_s70/xt_config.h">
+<area shape="rect" id="node2" href="$board__lowlevel_8c.xhtml" title="Provides the low&#45;level initialization function that called on chip startup. " alt="" coords="5,95,188,136"/>
+<area shape="rect" id="node3" href="$board__memories_8c.xhtml" title="Implementation of memories configuration on board. " alt="" coords="212,95,395,136"/>
+<area shape="rect" id="node4" href="$system__sams70_8c.xhtml" title="src/hal/x4m0x_s70/system\l_sams70.c" alt="" coords="419,95,611,136"/>
+<area shape="rect" id="node5" href="$xt__config_8c.xhtml" title="src/hal/x4m0x_s70/xt\l_config.c" alt="" coords="635,95,793,136"/>
+<area shape="rect" id="node6" href="$xt__selftest_8c.xhtml" title="src/hal/x4m0x_s70/xt\l_selftest.c" alt="" coords="817,95,974,136"/>
+<area shape="rect" id="node7" href="$xt__system_8c.xhtml" title="System level hardware functionality. " alt="" coords="998,95,1155,136"/>
+<area shape="rect" id="node8" href="$x4m0x__s70_2xtio__gpio_8c.xhtml" title="Implementation of GPIO functions for X4M0x boards with Atmel SAM S70 MCU. " alt="" coords="1179,95,1347,136"/>
+<area shape="rect" id="node9" href="$xtio__led_8c.xhtml" title="Implementation of GPIO functions for X4M0x boards with Atmel SAM S70 MCU. " alt="" coords="1371,95,1539,136"/>
+<area shape="rect" id="node10" href="$xtio__serial__com_8c.xhtml" title="Implement USB serial communication. " alt="" coords="1563,95,1731,136"/>
+</map>

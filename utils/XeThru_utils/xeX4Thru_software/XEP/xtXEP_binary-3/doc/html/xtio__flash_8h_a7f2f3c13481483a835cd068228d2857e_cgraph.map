@@ -1,0 +1,5 @@
+<map id="xtio_flash_read_hw_data" name="xtio_flash_read_hw_data">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="265,5,370,32"/>
+<area shape="rect" id="node3" href="$efc_8h.xhtml#a89ced3586649e7455882295657f7c11a" title="Performs the given command and wait until its completion (or an error). " alt="" coords="232,56,403,83"/>
+<area shape="rect" id="node4" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="257,107,378,133"/>
+</map>

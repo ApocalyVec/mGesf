@@ -1,0 +1,4 @@
+<map id="uhi_msc_scsi_mode_sense6" name="uhi_msc_scsi_mode_sense6">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ae40b333993e7c9aba64dc65f41ede8c4" title="Sends the CBW packet. " alt="" coords="324,5,431,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a3764f3446d9775702f9702d3eb751133" title="Decodes the result of scsi MODE SENSE 6 command. " alt="" coords="256,56,499,83"/>
+</map>

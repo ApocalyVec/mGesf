@@ -1,0 +1,4 @@
+<map id="PIO_InitializeInterrupts" name="PIO_InitializeInterrupts">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8h.xhtml#a1566a8e0975122b9e8f51bdbe5a70582" title="xtio_irq_init" alt="" coords="218,5,313,32"/>
+<area shape="rect" id="node3" href="$startup__sams70_8c.xhtml#a7cecd108fd88dec10ce2e97ad905e4ef" title="Performs the low&#45;level initialization of the chip. " alt="" coords="216,56,315,83"/>
+</map>

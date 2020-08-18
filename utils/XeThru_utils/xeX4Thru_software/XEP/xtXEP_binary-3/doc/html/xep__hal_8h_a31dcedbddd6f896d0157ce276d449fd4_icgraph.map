@@ -1,0 +1,20 @@
+<map id="xt_external_memory_enabled" name="xt_external_memory_enabled">
+<area shape="rect" id="node2" href="$group___s_a_m_e70_j19__cmsis.xhtml#gae7ee340978f5c25f52f0cad1457c6616" title="This is the code that gets called on processor reset. " alt="" coords="269,5,383,32"/>
+<area shape="rect" id="node3" href="$xt__system_8c.xhtml#a368ae5b6898f4745b8ccf4d3d15b38ac" title="Controls whether or not to use external memory. " alt="" coords="234,56,418,83"/>
+<area shape="rect" id="node4" href="$xtio__flash_8c.xhtml#a69a3f02de1c4e206640015c8d19af4f9" title="stores data in flash. " alt="" coords="265,107,387,133"/>
+<area shape="rect" id="node5" href="$task__hostcom_8h.xhtml#a6c9b12d865c55daa244e191b2efb7ca1" title="task_hostcom_init" alt="" coords="718,233,857,260"/>
+<area shape="rect" id="node6" href="$task__hostcom_8c.xhtml#abac971969d3f568fc6db3b8205cc9992" title="task_hostcom" alt="" coords="522,309,634,336"/>
+<area shape="rect" id="node7" href="$xtfile_8c.xhtml#a9b3de70a5a8926b3903335feecd3713c" title="Initialize the file system. " alt="" coords="539,500,617,527"/>
+<area shape="rect" id="node8" href="$xep__application_8h.xhtml#a6b62d4598b48167a0a9ca6e6896b2fff" title="Initialize Application task. " alt="" coords="712,360,863,387"/>
+<area shape="rect" id="node9" href="$xthousekeeping_8c.xhtml#a483c7c81860a3c5388e09f21ba1c5749" title="xthousekeeping_init" alt="" coords="713,563,862,589"/>
+<area shape="rect" id="node10" href="$xthousekeeping_8c.xhtml#ad5a7723fb96e5789fa7ecb2554da3b04" title="xthousekeeping_trigger\l_crashdump" alt="" coords="492,657,664,698"/>
+<area shape="rect" id="node11" href="$task__monitor_8h.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register a task to the monitor system. " alt="" coords="245,309,407,336"/>
+<area shape="rect" id="node12" href="$xep__application_8c.xhtml#a0ba95989f534a0adaa0e258fce6d3a0a" title="task_application" alt="" coords="515,360,641,387"/>
+<area shape="rect" id="node13" href="$task__monitor_8h.xhtml#a32facc560d3b2b978208dd26df5a5524" title="Get information of a task registered in the monitor system. " alt="" coords="244,765,408,792"/>
+<area shape="rect" id="node14" href="$task__monitor_8h.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Signal &quot;alive&quot; to the monitor task. " alt="" coords="255,360,397,387"/>
+<area shape="rect" id="node15" href="$task__monitor_8h.xhtml#a9b1e92bacf4f83ac7cd6b9e1d70d77d9" title="Initialize Monitor task. " alt="" coords="260,816,392,843"/>
+<area shape="rect" id="node16" href="$xtmemory__xep_8c.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="241,411,411,437"/>
+<area shape="rect" id="node17" href="$xtmemory__xep_8c.xhtml#a1b0d147f3ba8bc658585e26e12c46a76" title="Free memory allocated by xtmemory_malloc_slow. " alt="" coords="249,867,403,893"/>
+<area shape="rect" id="node18" href="$xtmemory__xep_8c.xhtml#a45a4c8bf7fca2d2cc41ac41e8877bee6" title="Get the slow memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="208,613,444,640"/>
+<area shape="rect" id="node19" href="$xtmemory__xep_8c.xhtml#a120dae9f612ca07248261a387247721c" title="Get amount of slow heap memory available. " alt="" coords="214,664,438,691"/>
+</map>

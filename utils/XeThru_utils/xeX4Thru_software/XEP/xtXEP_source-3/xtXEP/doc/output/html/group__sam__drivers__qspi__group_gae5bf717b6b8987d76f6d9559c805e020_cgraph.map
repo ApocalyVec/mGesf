@@ -1,0 +1,7 @@
+<map id="qspi_flash_access_memory" name="qspi_flash_access_memory">
+<area shape="rect" id="node2" href="$group__sam__drivers__qspi__group.xhtml#gac539f14d0b3c4b2671b0dee85ae5c7b4" title="Set qspi instruction frame. " alt="" coords="251,5,400,47"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__qspi__group.xhtml#gaa1e46687caeb3e1674c912bd0cbbed5c" title="Memory copy function. " alt="" coords="266,71,385,98"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="293,122,357,149"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8f5af376adcfaea7f2ddb3ef9b6b2544" title="Instruction Synchronization Barrier. " alt="" coords="297,173,354,199"/>
+<area shape="rect" id="node6" href="$group__sam__drivers__qspi__group.xhtml#ga692ff2eb50eb23c638a2ca9f5e60bf19" title="Ends ongoing transfer by releasing CS of QSPI peripheral. " alt="" coords="257,223,393,250"/>
+</map>

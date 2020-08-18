@@ -1,0 +1,5 @@
+<map id="x4driver_get_fps" name="x4driver_get_fps">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a3d4fbcf15fcf3736ef68613007caca8e" title="x4driver_set_sweep\l_trigger_control" alt="" coords="188,5,335,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a6d30c9bc074d42ab983535463b8a7a28" title="x4driver_set_dac_auto" alt="" coords="391,42,557,69"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#a517a6a5e38e78fe052aee8b47822d6ed" title="onMcpX4DriverGetFps" alt="" coords="180,122,343,149"/>
+</map>

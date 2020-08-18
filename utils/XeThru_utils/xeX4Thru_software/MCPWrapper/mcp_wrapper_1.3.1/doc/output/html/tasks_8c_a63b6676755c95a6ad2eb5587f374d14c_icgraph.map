@@ -1,0 +1,4 @@
+<map id="prvAddCurrentTaskToDelayedList" name="prvAddCurrentTaskToDelayedList">
+<area shape="rect" id="node2" href="$tasks_8c.xhtml#a1ceb56c5c7ff2581a5ea837db4f721c1" title="prvInitialiseTaskLists" alt="" coords="275,5,417,32"/>
+<area shape="rect" id="node3" href="$tasks_8c.xhtml#a2d5845c73b2a52b45aadd74a7b539bc8" title="vTaskPlaceOnEventList" alt="" coords="267,56,425,83"/>
+</map>

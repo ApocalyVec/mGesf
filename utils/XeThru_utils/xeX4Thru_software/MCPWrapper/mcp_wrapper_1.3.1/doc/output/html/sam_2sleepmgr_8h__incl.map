@@ -1,0 +1,6 @@
+<map id="examples/atmel_samg55/src/ASF/common/services/sleepmgr/sam/sleepmgr.h" name="examples/atmel_samg55/src/ASF/common/services/sleepmgr/sam/sleepmgr.h">
+<area shape="rect" id="node2" href="$compiler_8h.xhtml" title="Commonly used includes, types and macros. " alt="" coords="44,184,127,211"/>
+<area shape="rect" id="node3" href="$interrupt_8h.xhtml" title="Global interrupt management for 8&#45; and 32&#45;bit AVR. " alt="" coords="5,259,85,285"/>
+<area shape="rect" id="node4" href="$conf__sleepmgr_8h.xhtml" title="Sleep manager configuration. " alt="" coords="95,109,212,136"/>
+<area shape="rect" id="node5" href="$sleep_8h.xhtml" title="Sleep mode access. " alt="" coords="236,109,300,136"/>
+</map>

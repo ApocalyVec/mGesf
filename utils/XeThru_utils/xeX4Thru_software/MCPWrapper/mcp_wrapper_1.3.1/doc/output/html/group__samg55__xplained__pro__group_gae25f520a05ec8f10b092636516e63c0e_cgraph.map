@@ -1,0 +1,6 @@
+<map id="system_board_init" name="system_board_init">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#ga514c0fcce7d55e3211eaa67481103adc" title="Initializes the IOPORT service, ready for use. " alt="" coords="213,5,292,32"/>
+<area shape="rect" id="node3" href="$group__ioport__group.xhtml#ga2d3cad38c936cf010569927289262350" title="Set direction for a single IOPORT pin. " alt="" coords="191,56,315,83"/>
+<area shape="rect" id="node4" href="$group__ioport__group.xhtml#ga4a68c82ba7e071467418ced856559035" title="Set an IOPORT pin to a specified logical value. " alt="" coords="185,107,320,133"/>
+<area shape="rect" id="node5" href="$group__ioport__group.xhtml#ga09df7897a4e2401204c84211a29aa67a" title="Set pin mode for one single IOPORT pin. " alt="" coords="181,157,324,184"/>
+</map>

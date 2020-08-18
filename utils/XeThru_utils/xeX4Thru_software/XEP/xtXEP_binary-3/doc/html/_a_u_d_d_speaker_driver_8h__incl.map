@@ -1,0 +1,9 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/AUDDSpeakerDriver.h" name="src/hal/x4m0x_s70/libraries/libusb/include/AUDDSpeakerDriver.h">
+<area shape="rect" id="node2" href="$_u_s_b_lib___types_8h.xhtml" title="Definitions for USB Lib compiling. " alt="" coords="5,244,128,271"/>
+<area shape="rect" id="node3" href="$_u_s_b_requests_8h.xhtml" title="USBRequests.h" alt="" coords="152,244,272,271"/>
+<area shape="rect" id="node4" href="$_u_s_b_descriptors_8h.xhtml" title="USBDescriptors.h" alt="" coords="297,244,431,271"/>
+<area shape="rect" id="node5" href="$_a_u_d_descriptors_8h.xhtml" title="Definitions and classes for USB Audio class descriptors. " alt="" coords="499,95,635,121"/>
+<area shape="rect" id="node6" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="289,169,361,196"/>
+<area shape="rect" id="node7" href="$_u_s_b_d_driver_8h.xhtml" title="USBDDriver.h" alt="" coords="156,169,265,196"/>
+<area shape="rect" id="node8" href="$_a_u_d_d_speaker_phone_8h.xhtml" title="USB Audio Speaker &amp; Microphone Function. " alt="" coords="206,95,373,121"/>
+</map>

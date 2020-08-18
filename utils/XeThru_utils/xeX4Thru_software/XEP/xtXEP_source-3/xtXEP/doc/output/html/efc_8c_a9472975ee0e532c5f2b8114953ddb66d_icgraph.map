@@ -1,0 +1,6 @@
+<map id="EFC_WriteFMR" name="EFC_WriteFMR">
+<area shape="rect" id="node2" href="$efc_8c.xhtml#a3f6311b4fcbc57fe4079b1ef05b3fc14" title="Enables the flash ready interrupt source on the EEFC peripheral. " alt="" coords="193,5,323,32"/>
+<area shape="rect" id="node3" href="$efc_8c.xhtml#a47e9d8bbb518d8c528cf7317b9080aa3" title="Disables the flash ready interrupt source on the EEFC peripheral. " alt="" coords="191,56,325,83"/>
+<area shape="rect" id="node4" href="$efc_8c.xhtml#a845ff031ad09aaca87a20bd14b10cd84" title="Set read/write wait state on the EEFC peripheral. " alt="" coords="190,107,326,133"/>
+<area shape="rect" id="node5" href="$efc_8c.xhtml#a20b13ad67a18cb8408da8d0693620d96" title="Set flash access mode. " alt="" coords="164,157,352,184"/>
+</map>

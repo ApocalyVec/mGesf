@@ -1,0 +1,4 @@
+<map id="GMACB_WritePhy" name="GMACB_WritePhy">
+<area shape="rect" id="node2" href="$gmacb__phy_8c.xhtml#a9ba3ad1335880787330bf3c859c5b32e" title="Issue a SW reset to reset all registers of the PHY. " alt="" coords="202,5,337,32"/>
+<area shape="rect" id="node3" href="$gmacb__phy_8c.xhtml#aa2c6c693eb5de616072181df0ae32374" title="Issue a Auto Negotiation of the PHY. " alt="" coords="184,56,355,83"/>
+</map>

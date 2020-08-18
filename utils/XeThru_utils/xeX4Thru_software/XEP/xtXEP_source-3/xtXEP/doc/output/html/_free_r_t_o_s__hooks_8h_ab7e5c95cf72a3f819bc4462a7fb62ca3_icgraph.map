@@ -1,0 +1,5 @@
+<map id="vApplicationMallocFailedHook" name="vApplicationMallocFailedHook">
+<area shape="rect" id="node2" href="$heap__4__default_8c.xhtml#a0379669d07d76cc81e3028123113b271" title="pvPortMalloc" alt="" coords="279,5,381,32"/>
+<area shape="rect" id="node3" href="$heap__4__fast_8c.xhtml#a0c2b14b67ead837339e5d2b2b37f472a" title="pvPortMalloc_fast" alt="" coords="263,56,397,83"/>
+<area shape="rect" id="node4" href="$heap__4__slow_8c.xhtml#a973c45b036208d00c837bf455b34d7f2" title="pvPortMalloc_slow" alt="" coords="261,107,399,133"/>
+</map>

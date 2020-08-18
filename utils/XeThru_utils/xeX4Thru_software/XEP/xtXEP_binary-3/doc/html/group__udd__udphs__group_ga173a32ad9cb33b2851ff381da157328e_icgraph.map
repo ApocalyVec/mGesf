@@ -1,0 +1,5 @@
+<map id="udd_ctrl_endofrequest" name="udd_ctrl_endofrequest">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#ga80494c67ce9cbd4ee8eb5e7fa5c19cd6" title="Managed reception of SETUP packet on control endpoint. " alt="" coords="429,5,607,32"/>
+<area shape="rect" id="node3" href="$group__udd__udphs__group.xhtml#ga181ffd0cddf5130f55df6df8ca3f916c" title="Managed reception of IN packet on control endpoint. " alt="" coords="237,31,363,57"/>
+<area shape="rect" id="node4" href="$group__udd__udphs__group.xhtml#ga0a56388130817f0cd070dba04842740f" title="Managed reception of OUT packet on control endpoint. " alt="" coords="219,81,381,108"/>
+</map>

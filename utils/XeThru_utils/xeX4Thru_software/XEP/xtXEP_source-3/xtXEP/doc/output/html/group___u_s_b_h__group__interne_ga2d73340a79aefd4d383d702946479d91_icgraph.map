@@ -1,0 +1,4 @@
+<map id="USBH_setup_request_callback" name="USBH_setup_request_callback">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group.xhtml#gad0c84025bd918d3312e746c8e9c3c7f2" title="Gets a USB string from a USB device. " alt="" coords="225,5,386,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group.xhtml#ga616e65ce94318050363cf1c955d556f8" title="Tests if the device supports the USB high speed This function can wait the end of a setup request and..." alt="" coords="212,57,399,98"/>
+</map>

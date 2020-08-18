@@ -1,0 +1,5 @@
+<map id="stdio_serial_init" name="stdio_serial_init">
+<area shape="rect" id="node2" href="$uart__serial_8h.xhtml#a0d680ac290784fa93f42838262bd072f" title="Sends a character with the USART. " alt="" coords="165,5,304,32"/>
+<area shape="rect" id="node3" href="$uart__serial_8h.xhtml#ac3d539ff8bb9e9d795a6ac83cf697092" title="Waits until a character is received, and returns it. " alt="" coords="165,56,304,83"/>
+<area shape="rect" id="node4" href="$uart__serial_8h.xhtml#a9b7530c23e7cf03a4542e50d276f677f" title="Initializes the Usart in master mode. " alt="" coords="178,107,291,133"/>
+</map>

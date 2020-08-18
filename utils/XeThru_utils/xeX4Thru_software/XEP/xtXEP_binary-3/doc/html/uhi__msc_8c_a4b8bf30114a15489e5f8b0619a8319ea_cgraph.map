@@ -1,0 +1,7 @@
+<map id="uhi_msc_cbw_sent" name="uhi_msc_cbw_sent">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ab13f8cd96a83d67c31c5e772ae23d358" title="Sends a setup request RESET ENDPOINT Used after a STALL received during a scsi command. " alt="" coords="427,31,605,58"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a7883768fe0fe416a96892397f06ee968" title="Manages the end of setup request RESET ENDPOINT after a CBW packet. " alt="" coords="205,31,368,58"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#ad0e3a3e50fb04240291caac060b32828" title="Start the transfer of the CSW packet. " alt="" coords="447,132,585,159"/>
+<area shape="rect" id="node5" href="$uhi__msc_8c.xhtml#a5881034b17cf48e25997e6ad271f5720" title="Start a transfer on an endpoint of current USB MSC device Used to send a CBW packet, DATA packet, or a CSW packet. " alt="" coords="653,158,785,184"/>
+<area shape="rect" id="node6" href="$uhi__msc_8c.xhtml#a5bde639d16169cbf29a09a0ea37b8765" title="Checks the DATA phase transfer and launch the next step The next step can be a CSW packet or a endpoi..." alt="" coords="195,82,379,108"/>
+</map>

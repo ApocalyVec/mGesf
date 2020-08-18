@@ -1,0 +1,8 @@
+<map id="_FlushUsbTxBuffers" name="_FlushUsbTxBuffers">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga092b96b23f27f6b4258ce84add3b1528" title="Disable IRQ Interrupts. " alt="" coords="385,5,489,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___reg_acc_functions.xhtml#ga6fea83fe11c9a07924fb1ef316a9c76c" title="Enable IRQ Interrupts. " alt="" coords="386,81,489,108"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#ga127cc185c908343e2c059c61cf6f20b6" title="_UsbTxBufferPeek" alt="" coords="200,195,337,221"/>
+<area shape="rect" id="node5" href="$timetick_8h.xhtml#ae626fb68b4503701534936d10ec97067" title="Get Delayed number of tick. " alt="" coords="399,132,475,159"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="219,245,318,272"/>
+<area shape="rect" id="node7" href="$group__usbd__cdc.xhtml#gab841b1a9dc617afc102ab5badd8ee656" title="_UsbDataSent" alt="" coords="211,43,326,69"/>
+</map>

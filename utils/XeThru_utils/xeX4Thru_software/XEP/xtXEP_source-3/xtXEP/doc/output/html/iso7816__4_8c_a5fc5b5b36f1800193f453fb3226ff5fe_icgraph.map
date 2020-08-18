@@ -1,0 +1,4 @@
+<map id="ISO7816_IccPowerOn" name="ISO7816_IccPowerOn">
+<area shape="rect" id="node2" href="$iso7816__4_8c.xhtml#ac91cd7113997202c06dbe16b51f7984b" title="cold reset " alt="" coords="214,5,363,32"/>
+<area shape="rect" id="node3" href="$iso7816__4_8c.xhtml#ada6073c5627d625b66efa790414051ec" title="Warm reset. " alt="" coords="209,56,368,83"/>
+</map>

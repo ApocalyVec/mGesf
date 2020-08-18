@@ -1,0 +1,6 @@
+<map id="examples/atmel_samg55/src/ASF/common/services/freertos/sam/freertos_peripheral_control.c" name="examples/atmel_samg55/src/ASF/common/services/freertos/sam/freertos_peripheral_control.c">
+<area shape="rect" id="node3" href="$_free_r_t_o_s_8h.xhtml" title="FreeRTOS.h" alt="" coords="153,213,248,240"/>
+<area shape="rect" id="node4" href="$task_8h.xhtml" title="task.h" alt="" coords="146,131,205,158"/>
+<area shape="rect" id="node5" href="$freertos__peripheral__control_8h.xhtml" title="FreeRTOS Peripheral Control API Functions. " alt="" coords="229,124,357,165"/>
+<area shape="rect" id="node6" href="$freertos__peripheral__control__private_8h.xhtml" title="Generic FreeRTOS peripheral control functions. " alt="" coords="381,124,509,165"/>
+</map>

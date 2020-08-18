@@ -1,0 +1,39 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/USBDDriver.h" name="src/hal/x4m0x_s70/libraries/libusb/include/USBDDriver.h">
+<area shape="rect" id="node2" href="$_a_u_d_d_speaker_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/audio&#45;speaker\l/AUDDSpeakerDriver.c" alt="" coords="102,407,305,463"/>
+<area shape="rect" id="node3" href="$cciddriver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/ccid/cciddriver.c" alt="" coords="3006,102,3218,143"/>
+<area shape="rect" id="node4" href="$_c_d_c_d_e_e_m_8c.xhtml" title="Implementation of a single CDC EEM port function for USB device. " alt="" coords="3245,310,3493,351"/>
+<area shape="rect" id="node5" href="$_c_d_c_d_e_e_m_driver_8c.xhtml" title="Title: CDCDEEMDriver implementation. " alt="" coords="3585,102,3870,143"/>
+<area shape="rect" id="node6" href="$_c_d_c_d_serial_8c.xhtml" title="Implementation of a single CDC serial port function for USB device. " alt="" coords="2569,303,2764,359"/>
+<area shape="rect" id="node7" href="$_c_d_c_d_serial_driver_8c.xhtml" title="Title: CDCDSerialDriver implementation. " alt="" coords="3894,95,4089,151"/>
+<area shape="rect" id="node8" href="$_a_u_d_d_function_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/AUDDFunction.c" alt="" coords="329,407,524,463"/>
+<area shape="rect" id="node9" href="$_d_u_a_l_c_d_c_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/DUALCDCDDriver.c" alt="" coords="4113,95,4308,151"/>
+<area shape="rect" id="node10" href="$_u_s_b_d_callbacks_8c.xhtml" title="Definitions of callbacks used by the USBD API to notify the user application of incoming events..." alt="" coords="4332,102,4585,143"/>
+<area shape="rect" id="node11" href="$_u_s_b_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/core/USBDDriver.c" alt="" coords="4610,102,4840,143"/>
+<area shape="rect" id="node12" href="$_u_s_b_d_driver_callbacks_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/core/USBDDriverCallbacks.c" alt="" coords="4865,102,5156,143"/>
+<area shape="rect" id="node13" href="$_h_i_d_d_keyboard_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboard.c" alt="" coords="1757,199,1952,255"/>
+<area shape="rect" id="node14" href="$_h_i_d_d_keyboard_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboardDriver.c" alt="" coords="2026,303,2221,359"/>
+<area shape="rect" id="node15" href="$_h_i_d_d_mouse_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;mouse\l/HIDDMouseDriver.c" alt="" coords="2128,199,2322,255"/>
+<area shape="rect" id="node16" href="$_m_s_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/massstorage\l/MSDDriver.c" alt="" coords="5180,95,5376,151"/>
+<area shape="rect" id="node17" href="$_m_s_d_function_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/massstorage\l/MSDFunction.c" alt="" coords="5400,95,5596,151"/>
+<area shape="rect" id="node18" href="$_a_u_d_d_function_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/AUDDFunction.h" alt="" coords="512,310,732,351"/>
+<area shape="rect" id="node19" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="1405,414,1600,455"/>
+<area shape="rect" id="node20" href="$_a_u_d_d_speaker_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/AUDDSpeakerDriver.h" alt="" coords="78,310,335,351"/>
+<area shape="rect" id="node21" href="$_a_u_d_d_speaker_phone_8h.xhtml" title="USB Audio Speaker &amp; Microphone Function. " alt="" coords="284,206,544,247"/>
+<area shape="rect" id="node22" href="$_a_u_d_d_speaker_phone_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/AUDDSpeakerPhone\lDriver.h" alt="" coords="1704,303,1952,359"/>
+<area shape="rect" id="node23" href="$_a_u_d_d_stream_8h.xhtml" title="USB Audio Device Streaming interface with controls. " alt="" coords="379,102,594,143"/>
+<area shape="rect" id="node24" href="$_c_d_c_a_u_d_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCAUDDDriver.h" alt="" coords="2397,206,2629,247"/>
+<area shape="rect" id="node25" href="$_c_d_c_d_e_e_m_8h.xhtml" title="Single CDC EEM Function for USB device &amp; composite driver. " alt="" coords="3328,206,3522,247"/>
+<area shape="rect" id="node26" href="$_c_d_c_d_e_e_m_port_8h.xhtml" title="Definition of a class for implementing a USB device CDC EEM function. " alt="" coords="3292,102,3510,143"/>
+<area shape="rect" id="node27" href="$_c_d_c_d_serial_8h.xhtml" title="Single CDC Serial Port Function for USB device &amp; composite driver. " alt="" coords="2704,206,2906,247"/>
+<area shape="rect" id="node28" href="$_c_d_c_d_serial_port_8h.xhtml" title="Definition of a class for implementing a USB device CDC serial port function. " alt="" coords="2652,102,2880,143"/>
+<area shape="rect" id="node29" href="$_c_d_c_h_i_d_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCHIDDDriver.h" alt="" coords="2889,310,3116,351"/>
+<area shape="rect" id="node30" href="$_c_d_c_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCMSDDriver.h" alt="" coords="3031,206,3254,247"/>
+<area shape="rect" id="node31" href="$_h_i_d_a_u_d_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDAUDDDriver.h" alt="" coords="808,310,1034,351"/>
+<area shape="rect" id="node32" href="$_h_i_d_d_function_8h.xhtml" title="Definitions used for general HID support. " alt="" coords="1890,102,2104,143"/>
+<area shape="rect" id="node33" href="$_h_i_d_d_keyboard_8h.xhtml" title="Definition of methods for using a HID keyboard function. " alt="" coords="1540,102,1760,143"/>
+<area shape="rect" id="node34" href="$_h_i_d_d_keyboard_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDDKeyboardDriver.h" alt="" coords="1374,206,1631,247"/>
+<area shape="rect" id="node35" href="$_h_i_d_d_mouse_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDDMouseDriver.h" alt="" coords="2236,102,2476,143"/>
+<area shape="rect" id="node36" href="$_h_i_d_d_transfer_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDDTransferDriver.h" alt="" coords="720,206,968,247"/>
+<area shape="rect" id="node37" href="$_h_i_d_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDMSDDriver.h" alt="" coords="1109,310,1328,351"/>
+<area shape="rect" id="node38" href="$_m_s_d_d_state_machine_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/MSDDStateMachine.h" alt="" coords="1042,206,1298,247"/>
+</map>

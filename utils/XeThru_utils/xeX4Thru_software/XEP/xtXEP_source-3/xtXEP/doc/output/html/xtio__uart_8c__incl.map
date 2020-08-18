@@ -1,0 +1,9 @@
+<map id="src/hal/x4m0x_s70/xtio_uart.c" name="src/hal/x4m0x_s70/xtio_uart.c">
+<area shape="rect" id="node2" href="$chip_8h.xhtml" title="chip.h" alt="" coords="173,95,233,121"/>
+<area shape="rect" id="node3" href="$pmc_8h.xhtml" title="include/pmc.h" alt="" coords="5,169,116,196"/>
+<area shape="rect" id="node4" href="$xdmad_8h.xhtml" title="include/xdmad.h" alt="" coords="140,169,267,196"/>
+<area shape="rect" id="node5" href="$xtio__uart_8h.xhtml" title="Local header file for xtio UART functions. " alt="" coords="421,95,511,121"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="291,169,374,196"/>
+<area shape="rect" id="node10" href="$xtmemory_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="637,95,735,121"/>
+<area shape="rect" id="node11" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="760,95,831,121"/>
+</map>

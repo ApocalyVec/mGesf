@@ -1,0 +1,4 @@
+<map id="QSPID_configureQpsiDma" name="QSPID_configureQpsiDma">
+<area shape="rect" id="node2" href="$qspi__dma_8c.xhtml#a16f401ef0f29ab14079e0355d7a48005" title="Starts a QSPI read or write operation. " alt="" coords="240,5,401,32"/>
+<area shape="rect" id="node3" href="$qspi__dma_8c.xhtml#ad1458b726cb714996c845b482425a10d" title="Starts a SPI master transfer. " alt="" coords="245,56,396,83"/>
+</map>

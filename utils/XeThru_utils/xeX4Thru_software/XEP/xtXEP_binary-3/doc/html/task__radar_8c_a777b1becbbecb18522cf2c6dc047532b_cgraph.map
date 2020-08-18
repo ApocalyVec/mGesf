@@ -1,0 +1,11 @@
+<map id="radar_certification_handler" name="radar_certification_handler">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a8d576cef4eead3e26b3adf733cd487c2" title="Gets the submode of the module for certification. " alt="" coords="208,5,351,47"/>
+<area shape="rect" id="node3" href="$task__radar_8c.xhtml#a8f5a25ff5bf1da89fd00ffdc10c73151" title="Enter TX only mode. " alt="" coords="211,173,348,215"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#ab0d28c0bbd203c3d66b4e46cf4e7fb5f" title="Gets default radar configuration. " alt="" coords="422,89,577,131"/>
+<area shape="rect" id="node5" href="$x4driver_8h.xhtml#a041e81b6d75f97dbf29f1e9a29353425" title="Will setup x4 in default configuration. " alt="" coords="416,181,583,207"/>
+<area shape="rect" id="node6" href="$x4driver_8h.xhtml#aaa39bc07728273218162fc63a0bcb864" title="x4driver_set_tx_power" alt="" coords="417,246,581,273"/>
+<area shape="rect" id="node7" href="$task__radar_8c.xhtml#a43f10133b8707768c4b3a4c15526093a" title="Enter TX only mode, with TX off. " alt="" coords="201,239,358,280"/>
+<area shape="rect" id="node8" href="$x4driver_8h.xhtml#af6c32021e202b0dfe0a8b104ebd7a0b6" title="Sets frame rate for frame streaming. " alt="" coords="216,355,343,382"/>
+<area shape="rect" id="node9" href="$x4driver_8h.xhtml#a6c801c9a8b3010ebe47eb1ee881c9503" title="Calibrated frame offset in meters. " alt="" coords="207,407,352,448"/>
+<area shape="rect" id="node10" href="$x4driver_8h.xhtml#ab8fa9b7aaf1038fabf6faae517258a1a" title="Sets XIF register value. " alt="" coords="191,473,368,499"/>
+</map>

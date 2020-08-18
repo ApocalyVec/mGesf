@@ -1,0 +1,5 @@
+<map id="GMACD_ResetTx" name="GMACD_ResetTx">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga1d32bdcf010875dfcaea4817d8086b82" title="Reset TX queue when errors are detected. " alt="" coords="180,5,353,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga418589cbbef19de6084670d572b6ae27" title="Initialize necessary allocated buffer lists for GMAC Driver to transfer data. " alt="" coords="193,56,340,83"/>
+<area shape="rect" id="node4" href="$group__gmacd__defines.xhtml#gaede5219eb9101a760ecb266722825318" title="Reset TX &amp; RX queue &amp; statistics. " alt="" coords="210,107,323,133"/>
+</map>

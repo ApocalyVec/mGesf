@@ -1,0 +1,3 @@
+<map id="usart_serial_read_packet" name="usart_serial_read_packet">
+<area shape="rect" id="node2" href="$uart__serial_8h.xhtml#ac3d539ff8bb9e9d795a6ac83cf697092" title="Waits until a character is received, and returns it. " alt="" coords="220,5,359,32"/>
+</map>

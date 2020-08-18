@@ -1,0 +1,7 @@
+<map id="USB Endpoint definitions" name="USB Endpoint definitions">
+<area shape="rect" id="node1" href="$group__usb__ep__dir.xhtml" title="This section lists definitions of USB endpoint directions. " alt="" coords="408,5,584,32"/>
+<area shape="rect" id="node2" href="$group__usb__ep__type.xhtml" title="This section lists definitions of USB endpoint types. " alt="" coords="421,56,571,83"/>
+<area shape="rect" id="node4" href="$group__usb__ep__size.xhtml" title="This section lists definitions of USB endpoint maximum sizes. " alt="" coords="407,107,585,149"/>
+<area shape="rect" id="node6" href="$group__usb__ep__addr.xhtml" title="This section lists macro for USB endpoint address definition. " alt="" coords="413,173,579,214"/>
+<area shape="rect" id="node5" href="$group__usb__descriptor.xhtml" title="USB Descriptors" alt="" coords="5,85,132,112"/>
+</map>

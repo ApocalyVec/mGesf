@@ -1,0 +1,4 @@
+<map id="TWI_TransferComplete" name="TWI_TransferComplete">
+<area shape="rect" id="node2" href="$twid_8c.xhtml#a13f06b4cc25a29302d3c932e82136599" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="216,5,307,32"/>
+<area shape="rect" id="node3" href="$twid_8c.xhtml#a67c6f278372fcb213e7848929db89d3f" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="216,56,307,83"/>
+</map>

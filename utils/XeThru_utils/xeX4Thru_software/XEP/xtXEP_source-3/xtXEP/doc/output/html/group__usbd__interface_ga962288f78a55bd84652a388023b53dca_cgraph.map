@@ -1,0 +1,5 @@
+<map id="GetDeviceStatus" name="GetDeviceStatus">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga02b4d22818a9e99025383bbc5a2507d7" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="211,5,358,32"/>
+<area shape="rect" id="node3" href="$group__usb__descriptor.xhtml#ga1e211ce38eeaf1d092795edd875a03b3" title="Indicates if the device is self&#45;powered when in a given configuration. " alt="" coords="184,57,385,98"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="235,123,334,149"/>
+</map>

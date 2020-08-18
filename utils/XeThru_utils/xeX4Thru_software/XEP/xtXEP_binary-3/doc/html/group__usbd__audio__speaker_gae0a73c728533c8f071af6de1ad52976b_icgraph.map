@@ -1,0 +1,3 @@
+<map id="AUDDSpeakerDriver_StreamSettingChanged" name="AUDDSpeakerDriver_StreamSettingChanged">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#ga6461e7ed3092bbace3c03a5bd3a2e21f" title="Invoked whenever the active setting of an interface is changed by the host. " alt="" coords="260,5,475,47"/>
+</map>

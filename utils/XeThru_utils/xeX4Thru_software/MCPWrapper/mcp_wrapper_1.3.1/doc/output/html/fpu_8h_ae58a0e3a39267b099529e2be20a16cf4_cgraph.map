@@ -1,0 +1,4 @@
+<map id="fpu_disable" name="fpu_disable">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga5992cb015c55a0f4ed563e66a8793771" title="Get and clear the global interrupt flags. " alt="" coords="147,5,244,32"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#ga428178bc346431936fddf52ad1ebd6fa" title="Restore global interrupt flags. " alt="" coords="140,56,251,83"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="AUDD_GetCUR" name="AUDD_GetCUR">
+<area shape="rect" id="node2" href="$group__usb__audio.xhtml#ga863624d52f113876d03aff007a9aa513" title="Returns the ID of the interface targeted by an USB audio request. " alt="" coords="172,5,409,32"/>
+<area shape="rect" id="node3" href="$group__usb__audio.xhtml#ga545a0d7559049a5ac86b37a9d47943dc" title="Returns the ID of the unit or terminal targeted by an USB audio request. " alt="" coords="182,56,399,83"/>
+<area shape="rect" id="node4" href="$group__usb__request.xhtml#ga047e240a92a39eed9b3174d397498123" title="Returns the expected length of the data phase following a request. " alt="" coords="179,107,403,133"/>
+<area shape="rect" id="node5" href="$group__usb__audio.xhtml#ga47557d2c62372574f370291ed4526b12" title="Returns the channel number of a Feature unit which should be altered by the given request..." alt="" coords="203,158,379,199"/>
+<area shape="rect" id="node6" href="$group__usb__audio.xhtml#gab4526a49dffcbfd21863db0da8793572" title="Returns the control selector value indicating the target of a Feature Unit request. " alt="" coords="203,223,379,265"/>
+<area shape="rect" id="node7" href="$group__usbd__audio__speakerphone.xhtml#ga31da0fddaba60d293dce19739b6f001d" title="Get Target AUDDStream for control. " alt="" coords="213,289,369,316"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="241,340,340,367"/>
+<area shape="rect" id="node9" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="243,391,338,417"/>
+</map>

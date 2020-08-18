@@ -1,0 +1,4 @@
+<map id="xtio_set_direction" name="xtio_set_direction">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a58dee74fbb4ad804b56f971e48fc1e9c" title="xtio_decode_pin_id" alt="" coords="188,5,331,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="204,56,315,83"/>
+</map>

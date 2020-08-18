@@ -1,0 +1,4 @@
+<map id="flexcom_enable" name="flexcom_enable">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="165,5,328,32"/>
+<area shape="rect" id="node3" href="$uart__serial_8h.xhtml#a9b7530c23e7cf03a4542e50d276f677f" title="Initializes the Usart in master mode. " alt="" coords="190,56,303,83"/>
+</map>

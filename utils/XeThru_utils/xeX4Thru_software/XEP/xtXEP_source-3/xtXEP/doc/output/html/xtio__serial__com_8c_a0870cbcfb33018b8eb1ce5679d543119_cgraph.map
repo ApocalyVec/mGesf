@@ -1,0 +1,5 @@
+<map id="_uart_task_tx" name="_uart_task_tx">
+<area shape="rect" id="node2" href="$task__monitor_8c.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register task to monitor. " alt="" coords="161,5,324,32"/>
+<area shape="rect" id="node3" href="$task__monitor_8c.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Reset counter to indicate that task is alive. " alt="" coords="171,56,314,83"/>
+<area shape="rect" id="node4" href="$xtio__uart_8c.xhtml#abc32e25b3ec0e0d57a0339907d39866b" title="xtio_uart_send" alt="" coords="185,107,301,133"/>
+</map>

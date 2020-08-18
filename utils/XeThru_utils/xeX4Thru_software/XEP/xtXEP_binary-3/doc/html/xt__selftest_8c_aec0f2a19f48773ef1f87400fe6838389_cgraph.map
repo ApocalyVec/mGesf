@@ -1,0 +1,5 @@
+<map id="xt_selftest_io_connector" name="xt_selftest_io_connector">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a4f087fae5e8098b3b9c8f9df124b7f4e" title="Set direction of specified IO pin. " alt="" coords="235,5,369,32"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a9c169f60838175920c2f9ab467d020c1" title="Set mode for specified IO pin. " alt="" coords="231,56,373,83"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a984c6d05372bfd34dc338a85d21dc81a" title="Get level of specified IO pin. " alt="" coords="247,107,357,133"/>
+</map>

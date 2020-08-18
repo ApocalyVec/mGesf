@@ -1,0 +1,8 @@
+<map id="parse" name="parse">
+<area shape="rect" id="node2" href="$protocol__host__parser_8c.xhtml#ad59e98cae0d618bc2fc96ba296bf1446" title="parse_error" alt="" coords="263,56,349,82"/>
+<area shape="rect" id="node3" href="$protocol__host__parser_8c.xhtml#a43fb337a2c9e42d468cad5597546bb8b" title="parse_ack" alt="" coords="120,30,203,57"/>
+<area shape="rect" id="node4" href="$protocol__host__parser_8c.xhtml#a83f756678f447cc05bf25b980ad960e9" title="parse_pong" alt="" coords="117,81,206,108"/>
+<area shape="rect" id="node5" href="$protocol__host__parser_8c.xhtml#ab0449ccfb97711fa6182fbbe9b973c9c" title="parse_data" alt="" coords="118,132,205,158"/>
+<area shape="rect" id="node6" href="$protocol__host__parser_8c.xhtml#ae1069e0e69c8a639885df03a22a8ee0f" title="parse_appdata" alt="" coords="108,182,215,209"/>
+<area shape="rect" id="node7" href="$protocol__host__parser_8c.xhtml#a4dc0786463a2d56827181aa2df7eb5cd" title="parse_reply" alt="" coords="117,233,206,260"/>
+</map>

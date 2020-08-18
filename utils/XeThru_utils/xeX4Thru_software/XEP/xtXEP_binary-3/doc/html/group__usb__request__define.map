@@ -1,0 +1,7 @@
+<map id="USB Generic Request definitions" name="USB Generic Request definitions">
+<area shape="rect" id="node1" href="$group__usb__request__type.xhtml" title="This section lists codes of USB request types. " alt="" coords="387,5,531,32"/>
+<area shape="rect" id="node2" href="$group__usb__request.xhtml" title="USB Requests" alt="" coords="5,81,117,108"/>
+<area shape="rect" id="node4" href="$group__usb__request__code.xhtml" title="This section lists the USB generic request codes. " alt="" coords="385,56,532,83"/>
+<area shape="rect" id="node5" href="$group__usb__request__dir.xhtml" title="This section lists codes of USB request directions. " alt="" coords="372,107,545,133"/>
+<area shape="rect" id="node6" href="$group__usb__request__recipient.xhtml" title="This section lists codes of USB request recipients. " alt="" coords="372,157,545,184"/>
+</map>

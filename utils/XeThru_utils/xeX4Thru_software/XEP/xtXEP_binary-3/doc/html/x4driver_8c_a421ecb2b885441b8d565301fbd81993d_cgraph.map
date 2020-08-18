@@ -1,0 +1,7 @@
+<map id="x4driver_upload_firmware_default" name="x4driver_upload_firmware_default">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="701,58,800,85"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a0b4d051505ed04b077d126758967318f" title="Uploads custom 8051 firmware to X4. " alt="" coords="239,160,424,202"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a972399a44ab859c55b7a108af64015d3" title="Set SPI register on radar chip. " alt="" coords="472,109,653,136"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="703,160,799,186"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a0d9b975a093cd210bda1b58fca408c42" title="Read back embedded 8051 firmware. " alt="" coords="243,58,419,85"/>
+</map>

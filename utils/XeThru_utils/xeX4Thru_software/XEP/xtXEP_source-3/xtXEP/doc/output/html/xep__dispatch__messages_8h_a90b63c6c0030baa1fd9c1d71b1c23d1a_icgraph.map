@@ -1,0 +1,12 @@
+<map id="dispatch_message_hostcom_send_reply_int" name="dispatch_message_hostcom_send_reply_int">
+<area shape="rect" id="node2" href="$xep__application__mcp__callbacks_8h.xhtml#a9f3f6d1643bbdc67d1bbe3a5f31034c4" title="onMcpGetCrashDumpLength" alt="" coords="272,5,479,32"/>
+<area shape="rect" id="node3" href="$xep__application__mcp__callbacks_8h.xhtml#a3ac908170c5a22a9499b126e8a711ef0" title="onMcpX4DriverGetIterations" alt="" coords="275,56,476,83"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#af6c24240badeb437319c15e2eefe1d56" title="onMcpX4DriverGetPulsesPerStep" alt="" coords="259,107,492,133"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#a4c2a9862bbc990f4ee126ba67c8def72" title="onMcpX4DriverGetFrameBin\lCount" alt="" coords="275,158,476,199"/>
+<area shape="rect" id="node6" href="$xep__application__mcp__callbacks_8h.xhtml#a6e7efdfd93517db7141d8f2df208988b" title="onMcpX4DriverGetDacMin" alt="" coords="281,224,469,251"/>
+<area shape="rect" id="node7" href="$xep__application__mcp__callbacks_8h.xhtml#a61d8daae8fb4fa427251d81323f5ff0c" title="onMcpX4DriverGetDacMax" alt="" coords="279,275,471,301"/>
+<area shape="rect" id="node8" href="$xep__application__mcp__callbacks_8h.xhtml#ab45991b5af535952ce2020e56a1f23ca" title="onMcpGetIOPinValue" alt="" coords="298,325,453,352"/>
+<area shape="rect" id="node9" href="$xep__application__mcp__callbacks_8h.xhtml#a86518795c7a79b1894ded0a047fed37f" title="onMcpFindAllFiles" alt="" coords="310,376,441,403"/>
+<area shape="rect" id="node10" href="$xep__application__mcp__callbacks_8h.xhtml#ab03363a7a7539098cf2201c934f01440" title="onMcpGetFileLength" alt="" coords="300,427,451,453"/>
+<area shape="rect" id="node11" href="$xep__application__mcp__callbacks_8h.xhtml#a907d1122616e0a8f107b2c24a83d7e33" title="onMcpSearchFileType" alt="" coords="297,477,454,504"/>
+</map>

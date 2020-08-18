@@ -1,0 +1,5 @@
+<map id="vTaskPriorityInherit" name="vTaskPriorityInherit">
+<area shape="rect" id="node2" href="$queue_8c.xhtml#a1ff8f61508bc9c0fa0abc44750fc1981" title="xQueueGenericSend" alt="" coords="196,5,339,32"/>
+<area shape="rect" id="node3" href="$queue_8c.xhtml#a0424dce690a6a65558f16cc229b767bf" title="xQueueGenericReceive" alt="" coords="189,56,346,83"/>
+<area shape="rect" id="node4" href="$tasks_8c.xhtml#ad9f111cb55638c317ba63e83bfd416ec" title="prvAllocateTCBAndStack" alt="" coords="184,107,351,133"/>
+</map>

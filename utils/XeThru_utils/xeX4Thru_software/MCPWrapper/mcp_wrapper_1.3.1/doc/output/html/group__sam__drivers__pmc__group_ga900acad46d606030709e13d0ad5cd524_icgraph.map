@@ -1,0 +1,6 @@
+<map id="pmc_disable_pllack" name="pmc_disable_pllack">
+<area shape="rect" id="node2" href="$group__pll__group.xhtml#ga81461ccaed08369e2c35d4796f4a8917" title="pll_config_write" alt="" coords="201,5,311,32"/>
+<area shape="rect" id="node3" href="$group__pll__group.xhtml#gac963cb7ae2da65162dc3955129ff846c" title="pll_enable" alt="" coords="216,56,296,83"/>
+<area shape="rect" id="node4" href="$group__pll__group.xhtml#ga0c855b2707f0d562c2054dda627e40d8" title="pll_disable" alt="" coords="215,107,297,133"/>
+<area shape="rect" id="node5" href="$group__sam__drivers__pmc__group.xhtml#ga3528f3a4d76b718543a0b4154c56d263" title="Enable PLLA clock. " alt="" coords="189,157,323,184"/>
+</map>

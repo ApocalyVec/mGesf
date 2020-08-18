@@ -1,0 +1,7 @@
+<map id="GMACD_TxErrorHandler" name="GMACD_TxErrorHandler">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#ga43e952eb0a8ec8d8131ac69b6a30842d" title="Enable/Disable GMAC transmit. " alt="" coords="451,56,616,83"/>
+<area shape="rect" id="node3" href="$group__gmac__defines.xhtml#gaec157405c56f5074b5f49268d3148c55" title="Halt transmission. " alt="" coords="227,31,403,57"/>
+<area shape="rect" id="node4" href="$group__gmac__defines.xhtml#gafba1535fac70522c3101326e020ca1d6" title="Return transmit status. " alt="" coords="241,81,388,108"/>
+<area shape="rect" id="node5" href="$group__gmacd__defines.xhtml#gaa4fcf5f239a30ef23cc9ba6b40054117" title="Disable TX &amp; reset registers and descriptor list. " alt="" coords="251,132,378,159"/>
+<area shape="rect" id="node6" href="$group__gmac__defines.xhtml#ga620df07c4598d12a88be4e3715eafe7e" title="Clear transmit status. " alt="" coords="236,183,393,209"/>
+</map>

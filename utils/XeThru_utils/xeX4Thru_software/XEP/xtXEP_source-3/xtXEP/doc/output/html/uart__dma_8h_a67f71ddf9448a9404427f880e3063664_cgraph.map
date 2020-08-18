@@ -1,0 +1,10 @@
+<map id="UARTD_EnableRxChannels" name="UARTD_EnableRxChannels">
+<area shape="rect" id="node2" href="$uart_8h.xhtml#ab9b2807951dac51cbe4faeb7fd762222" title="Enables or disables the receiver of an UART peripheral. " alt="" coords="243,5,431,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="247,56,427,83"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="261,107,413,133"/>
+<area shape="rect" id="node5" href="$uart__dma_8c.xhtml#a1f704a5ba38b30b508eaf3f6df28d31f" title="UART xDMA Rx callback Invoked on UART DMA reception done. " alt="" coords="281,157,392,184"/>
+<area shape="rect" id="node6" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="247,208,426,235"/>
+<area shape="rect" id="node7" href="$uart__dma_8c.xhtml#a4b0eba333355f3b94f077336b2488a1b" title="Configure the UART Rx DMA mode. " alt="" coords="255,259,418,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga47a0f52794068d076c9147aa3cb8d8a6" title="Get Active Interrupt. " alt="" coords="275,309,398,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="275,360,399,387"/>
+</map>

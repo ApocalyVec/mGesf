@@ -1,0 +1,4 @@
+<map id="GMAC_GetItStatus" name="GMAC_GetItStatus">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga782194c9b7163c22016beabc6101856c" title="GMAC Interrupt handler. " alt="" coords="195,5,323,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga8706caf686e1d073851111db1ba2663c" title="Initialize the GMAC with the Gmac controller address. " alt="" coords="210,56,307,83"/>
+</map>

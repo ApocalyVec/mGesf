@@ -1,0 +1,6 @@
+<map id="onMcpDeleteFile" name="onMcpDeleteFile">
+<area shape="rect" id="node2" href="$xtfile_8h.xhtml#a9ea9a4d241077c7c7d3982bc1159f9ac" title="Deletes the file with the specified type and identifier. " alt="" coords="433,45,532,72"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="180,34,385,75"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8c.xhtml#a7f8cc9c9173f6cd4a55f1679d3c55e8f" title="wait_and_confirm_file\l_delete" alt="" coords="203,99,362,141"/>
+<area shape="rect" id="node5" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="180,165,385,206"/>
+</map>

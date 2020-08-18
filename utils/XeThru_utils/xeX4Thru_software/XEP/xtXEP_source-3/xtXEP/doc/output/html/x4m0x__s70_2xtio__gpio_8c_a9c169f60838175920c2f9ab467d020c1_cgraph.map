@@ -1,0 +1,4 @@
+<map id="xtio_set_pin_mode" name="xtio_set_pin_mode">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a58dee74fbb4ad804b56f971e48fc1e9c" title="xtio_decode_pin_id" alt="" coords="196,5,339,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="212,56,323,83"/>
+</map>

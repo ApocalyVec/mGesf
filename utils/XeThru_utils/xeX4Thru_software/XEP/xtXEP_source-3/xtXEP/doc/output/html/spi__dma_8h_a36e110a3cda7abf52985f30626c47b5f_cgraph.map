@@ -1,0 +1,5 @@
+<map id="SPID_ConfigureCS" name="SPID_ConfigureCS">
+<area shape="rect" id="node2" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="194,5,358,32"/>
+<area shape="rect" id="node3" href="$spi_8h.xhtml#a3f06d5a5d0d4475c4a2a46657235ac92" title="Configures a chip select of a SPI peripheral. " alt="" coords="203,56,349,83"/>
+<area shape="rect" id="node4" href="$pmc_8h.xhtml#a2bb6755e2bf15a75e193cb6510064fa4" title="Disables the clock of a peripheral. " alt="" coords="192,107,360,133"/>
+</map>

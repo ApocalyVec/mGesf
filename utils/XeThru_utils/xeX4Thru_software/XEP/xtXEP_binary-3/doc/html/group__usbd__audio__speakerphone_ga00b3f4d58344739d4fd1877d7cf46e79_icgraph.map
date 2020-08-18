@@ -1,0 +1,4 @@
+<map id="AUDDSpeakerPhone_Initialize" name="AUDDSpeakerPhone_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#gafa5432b98a55735fdd034c32343743d9" title="Initializes an USB audio speaker device driver, as well as the underlying USB controller. " alt="" coords="265,5,476,32"/>
+<area shape="rect" id="node3" href="$group__usbd__aud__fun.xhtml#gafe0d2176139fc21ee46d2b87c9269b96" title="Initializes an USB audio speaker device driver, as well as the underlying USB controller. " alt="" coords="285,56,457,83"/>
+</map>

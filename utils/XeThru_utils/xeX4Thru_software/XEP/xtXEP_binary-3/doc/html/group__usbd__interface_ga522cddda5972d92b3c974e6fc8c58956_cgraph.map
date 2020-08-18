@@ -1,0 +1,4 @@
+<map id="USBD_SuspendHandler" name="USBD_SuspendHandler">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gab80a4355417d88e290c88c233d5d435b" title="Suspend USB Device HW Interface. " alt="" coords="248,5,404,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gaf30332628067d1dd8cd1a177f5dc66ac" title="Invoked when the USB device gets suspended. " alt="" coords="227,56,425,83"/>
+</map>

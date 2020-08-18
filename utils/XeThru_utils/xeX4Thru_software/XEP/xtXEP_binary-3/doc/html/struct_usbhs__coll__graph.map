@@ -1,0 +1,4 @@
+<map id="Usbhs" name="Usbhs">
+<area shape="rect" id="node2" href="$struct_usbhs_hstdma.xhtml" title="UsbhsHstdma hardware registers. " alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node3" href="$struct_usbhs_devdma.xhtml" title="UsbhsDevdma hardware registers. " alt="" coords="149,5,265,32"/>
+</map>

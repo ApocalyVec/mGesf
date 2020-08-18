@@ -1,0 +1,6 @@
+<map id="x4driver_set_frame_area" name="x4driver_set_frame_area">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a6c801c9a8b3010ebe47eb1ee881c9503" title="Sets frame offset in meters. " alt="" coords="267,5,413,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a86dbadcb2e415d23600ef1bb31c9dbde" title="Inits x4driver. " alt="" coords="493,97,592,123"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#aca2f2487a46b5debe6656dd21a816e97" title="x4driver_set_downconversion" alt="" coords="235,122,445,149"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#a6c985a2ef7e19c267f3e94a7bf908735" title="onMcpX4DriverSetFrameArea" alt="" coords="235,173,445,199"/>
+</map>

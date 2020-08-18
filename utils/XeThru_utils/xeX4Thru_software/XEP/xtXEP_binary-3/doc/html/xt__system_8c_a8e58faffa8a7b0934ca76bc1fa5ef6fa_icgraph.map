@@ -1,0 +1,8 @@
+<map id="xt_wait" name="xt_wait">
+<area shape="rect" id="node2" href="$xt__selftest_8c.xhtml#a41d0ad3dacbf971ccdc2c0c1f7cb3bc6" title="xt_selftest_x4_connectivity" alt="" coords="120,5,313,32"/>
+<area shape="rect" id="node3" href="$xep__application__mcp__callbacks_8h.xhtml#a8a66a26f3081dd2c2e037353a8de8fc8" title="onMcpSetBaudrate" alt="" coords="144,56,289,83"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#af7cff88ca2e2e7bf89b8616a868e2cda" title="onMcpModuleReset" alt="" coords="144,107,289,133"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#ade8de22b982f74c728af66c33bcf42e2" title="onMcpSystemRunTest" alt="" coords="136,157,297,184"/>
+<area shape="rect" id="node6" href="$xep__application__mcp__callbacks_8h.xhtml#a8f52f6e72bd93b3a11b2c922730ee484" title="onMcpStartBootloader" alt="" coords="133,208,300,235"/>
+<area shape="rect" id="node7" href="$xep__application__mcp__callbacks_8c.xhtml#a7f8cc9c9173f6cd4a55f1679d3c55e8f" title="wait_and_confirm_file\l_delete" alt="" coords="137,259,296,301"/>
+</map>

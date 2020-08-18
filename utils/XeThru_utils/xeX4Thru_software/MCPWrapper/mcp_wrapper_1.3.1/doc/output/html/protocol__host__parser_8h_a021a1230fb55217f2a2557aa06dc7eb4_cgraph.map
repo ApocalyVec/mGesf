@@ -1,0 +1,16 @@
+<map id="init_host_parser" name="init_host_parser">
+<area shape="rect" id="node2" href="$protocol__host__parser_8c.xhtml#a95b8fe0c7d5d433b1d4dd392342703d4" title="default_pong_callback" alt="" coords="185,5,335,32"/>
+<area shape="rect" id="node3" href="$protocol__host__parser_8c.xhtml#a68c39f99c8dd77773023da6ad625fedb" title="default_ack_callback" alt="" coords="189,56,331,83"/>
+<area shape="rect" id="node4" href="$protocol__host__parser_8c.xhtml#ac0908549ddecadb228d750237d69cdb8" title="default_error_callback" alt="" coords="186,107,334,133"/>
+<area shape="rect" id="node5" href="$protocol__host__parser_8c.xhtml#a359d11c6211a636cf6592204651cf015" title="default_reply_callback" alt="" coords="185,157,335,184"/>
+<area shape="rect" id="node6" href="$protocol__host__parser_8c.xhtml#a51c09fff801d1f08f9481c49dcd99300" title="default_datafloat_callback" alt="" coords="175,208,345,235"/>
+<area shape="rect" id="node7" href="$protocol__host__parser_8c.xhtml#a39d84845b5e2cc7ed3919d52bf1f2020" title="default_respiration\l_callback" alt="" coords="197,259,323,301"/>
+<area shape="rect" id="node8" href="$protocol__host__parser_8c.xhtml#a17518843d73b1e2abde1056b0e45c041" title="default_sleep_callback" alt="" coords="183,325,337,352"/>
+<area shape="rect" id="node9" href="$protocol__host__parser_8c.xhtml#a4df232a57ac01a37e78eb78cb3485054" title="default_baseband_ap\l_callback" alt="" coords="188,377,332,418"/>
+<area shape="rect" id="node10" href="$protocol__host__parser_8c.xhtml#ac73b589b2e49d92a61fd2791b4ce0651" title="default_baseband_iq\l_callback" alt="" coords="190,442,330,483"/>
+<area shape="rect" id="node11" href="$protocol__host__parser_8c.xhtml#a031a8b5e5d74b67b3dc323f1f3de4cdc" title="default_presence_single" alt="" coords="179,508,341,535"/>
+<area shape="rect" id="node12" href="$protocol__host__parser_8c.xhtml#aada535cb09a4b2858e4d79423e0922eb" title="default_presence_movinglist" alt="" coords="168,559,352,585"/>
+<area shape="rect" id="node13" href="$protocol__host__parser_8c.xhtml#a4f8eb112a4454194eec1a68e81d4eb62" title="default_system_status" alt="" coords="183,609,337,636"/>
+<area shape="rect" id="node14" href="$protocol__host__parser_8c.xhtml#a3010f642ab9bc2b3bc84d3a32557a444" title="default_respiration\l_movinglist" alt="" coords="197,661,323,702"/>
+<area shape="rect" id="node15" href="$protocol__host__parser_8c.xhtml#ad0fe38ff95896dbe297840e22be29ed5" title="default_respiration\l_detectionlist" alt="" coords="197,726,323,767"/>
+</map>

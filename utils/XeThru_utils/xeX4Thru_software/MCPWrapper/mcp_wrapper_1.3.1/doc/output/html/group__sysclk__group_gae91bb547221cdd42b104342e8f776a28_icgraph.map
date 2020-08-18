@@ -1,0 +1,6 @@
+<map id="sysclk_get_cpu_hz" name="sysclk_get_cpu_hz">
+<area shape="rect" id="node2" href="$group__sysclk__group.xhtml#ga242399e48a97739c88b4d0c00f6101de" title="Initialize the synchronous clock system. " alt="" coords="227,5,311,32"/>
+<area shape="rect" id="node3" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="188,56,351,83"/>
+<area shape="rect" id="node4" href="$task__xethru_8c.xhtml#a54c65348b306e1067cb83cfd0b41cfe6" title="mcpw_demo_x4m300" alt="" coords="399,132,547,159"/>
+<area shape="rect" id="node5" href="$task__xethru_8c.xhtml#a4d700c7ee4beaac0a8a4c95c11e5c673" title="mcpw_demo_x4m200" alt="" coords="195,157,343,184"/>
+</map>

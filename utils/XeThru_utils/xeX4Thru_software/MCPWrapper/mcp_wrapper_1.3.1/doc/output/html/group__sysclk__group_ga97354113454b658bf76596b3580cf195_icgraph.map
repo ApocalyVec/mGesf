@@ -1,0 +1,5 @@
+<map id="sysclk_enable_peripheral_clock" name="sysclk_enable_peripheral_clock">
+<area shape="rect" id="node2" href="$ioport__pio_8h.xhtml#a292d649a807b515c69d02c6fcb0dd2e9" title="arch_ioport_init" alt="" coords="222,5,333,32"/>
+<area shape="rect" id="node3" href="$uart__serial_8h.xhtml#a9b7530c23e7cf03a4542e50d276f677f" title="Initializes the Usart in master mode. " alt="" coords="381,81,495,108"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__flexcom__group.xhtml#gad2900fd33f36b75e9ff5e5b833ba9943" title="Enable the FLEXCOM module. " alt="" coords="221,107,333,133"/>
+</map>

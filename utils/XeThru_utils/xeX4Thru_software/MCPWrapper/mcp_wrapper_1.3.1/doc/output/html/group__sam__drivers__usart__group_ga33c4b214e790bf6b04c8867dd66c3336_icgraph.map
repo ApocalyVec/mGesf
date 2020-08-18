@@ -1,0 +1,5 @@
+<map id="usart_enable_interrupt" name="usart_enable_interrupt">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="204,5,367,32"/>
+<area shape="rect" id="node3" href="$group__freertos__usart__peripheral__control__group.xhtml#ga4f47ec231efeccf8f159c5a14124d0ff" title="Initiate a completely asynchronous multi&#45;byte write operation on a USART peripheral. " alt="" coords="218,57,353,98"/>
+<area shape="rect" id="node4" href="$freertos__usart__serial_8c.xhtml#a53cee58d461e19378a8453e89d52424f" title="configure_rx_dma" alt="" coords="223,123,347,149"/>
+</map>

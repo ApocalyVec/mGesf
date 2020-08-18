@@ -1,0 +1,7 @@
+<map id="_usb_task_rx" name="_usb_task_rx">
+<area shape="rect" id="node2" href="$task__monitor_8c.xhtml#ad3bca8672de4a4773999e28299cdc195" title="Register task to monitor. " alt="" coords="163,5,326,32"/>
+<area shape="rect" id="node3" href="$task__monitor_8c.xhtml#a0c7f7f8017a34d24de6b5c6fd90fbfe3" title="Reset counter to indicate that task is alive. " alt="" coords="173,56,316,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#ga804bf63efb2d4420a3bf42984e807e72" title="Returns the current state of the USB device. " alt="" coords="182,107,307,133"/>
+<area shape="rect" id="node5" href="$group__usbd__cdc.xhtml#ga523c240680a3b0f4bc2fb3499c2aae0f" title="Receives data from the host through the virtual COM port created by the CDC device serial driver..." alt="" coords="159,157,331,184"/>
+<area shape="rect" id="node6" href="$xtio__serial__com_8c.xhtml#a239394d0d396fc8bd1685303b7a74e57" title="_UsbDataReceived" alt="" coords="174,208,315,235"/>
+</map>

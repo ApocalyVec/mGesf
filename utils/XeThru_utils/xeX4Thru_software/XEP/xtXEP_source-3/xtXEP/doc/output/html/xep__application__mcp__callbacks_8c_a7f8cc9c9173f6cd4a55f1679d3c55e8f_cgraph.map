@@ -1,0 +1,4 @@
+<map id="wait_and_confirm_file_delete" name="wait_and_confirm_file_delete">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a8e58faffa8a7b0934ca76bc1fa5ef6fa" title="Causes the calling task to wait and yields to another task. " alt="" coords="228,5,295,32"/>
+<area shape="rect" id="node3" href="$xtfile_8h.xhtml#a9ea9a4d241077c7c7d3982bc1159f9ac" title="Deletes the file with the specified type and identifier. " alt="" coords="212,56,311,83"/>
+</map>

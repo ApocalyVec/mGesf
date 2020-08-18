@@ -1,0 +1,10 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/HIDDKeyboard.h" name="src/hal/x4m0x_s70/libraries/libusb/include/HIDDKeyboard.h">
+<area shape="rect" id="node2" href="$_c_d_c_h_i_d_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/CDCHIDDDriver.c" alt="" coords="5,95,200,151"/>
+<area shape="rect" id="node3" href="$_h_i_d_a_u_d_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/HIDAUDDDriver.c" alt="" coords="224,95,419,151"/>
+<area shape="rect" id="node4" href="$_h_i_d_m_s_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/HIDMSDDriver.c" alt="" coords="443,95,637,151"/>
+<area shape="rect" id="node5" href="$_h_i_d_d_keyboard_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboard.c" alt="" coords="661,95,856,151"/>
+<area shape="rect" id="node6" href="$_h_i_d_d_keyboard_input_report_8c.xhtml" title="Implementation of the HIDDKeyboardInputReport class. " alt="" coords="880,95,1083,151"/>
+<area shape="rect" id="node7" href="$_h_i_d_d_keyboard_output_report_8c.xhtml" title="Implementation of the HIDDKeyboardOutputReport class. " alt="" coords="1107,95,1322,151"/>
+<area shape="rect" id="node8" href="$_h_i_d_d_keyboard_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDDKeyboardDriver.h" alt="" coords="1346,102,1603,143"/>
+<area shape="rect" id="node9" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="1460,199,1655,240"/>
+</map>

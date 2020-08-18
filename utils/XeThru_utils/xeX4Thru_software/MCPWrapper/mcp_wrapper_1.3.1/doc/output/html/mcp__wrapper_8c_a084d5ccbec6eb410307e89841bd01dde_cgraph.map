@@ -1,0 +1,11 @@
+<map id="mcpw_init" name="mcpw_init">
+<area shape="rect" id="node2" href="$protocol_8c.xhtml#a3ea77837b164a1a80694f8fab8ba2e4f" title="getInstanceSize" alt="" coords="174,5,289,32"/>
+<area shape="rect" id="node3" href="$protocol_8c.xhtml#a6c6fe154c2ddbc64d2598be358d97dda" title="createApplicationProtocol" alt="" coords="146,56,317,83"/>
+<area shape="rect" id="node4" href="$mcp__wrapper_8c.xhtml#a7aedc3af35d4a8435188e11072f0b24f" title="mcpw_mcp_handle_protocol\l_packet" alt="" coords="138,107,325,149"/>
+<area shape="rect" id="node5" href="$mcp__wrapper_8c.xhtml#a95869adbfdeb776b4111ba96d99b4aa4" title="mcpw_mcp_handle_protocol\l_error" alt="" coords="138,173,325,214"/>
+<area shape="rect" id="node6" href="$mcp__wrapper_8c.xhtml#a0e72eb3753c8df743f3d822017ecbf07" title="mcpw_on_mcp_messagebuild" alt="" coords="133,239,329,265"/>
+<area shape="rect" id="node7" href="$protocol__host__parser_8c.xhtml#a021a1230fb55217f2a2557aa06dc7eb4" title="init_host_parser" alt="" coords="174,289,289,316"/>
+<area shape="rect" id="node8" href="$mcp__wrapper_8c.xhtml#ad46bc5e21f53f926d586526154aa72fe" title="mcpw_on_host_parser_ack" alt="" coords="141,340,321,367"/>
+<area shape="rect" id="node9" href="$mcp__wrapper_8c.xhtml#a068519ab6fd7d227095945bf4f14d645" title="mcpw_on_host_parser\l_error" alt="" coords="155,391,307,433"/>
+<area shape="rect" id="node10" href="$mcp__wrapper_8c.xhtml#a813ff0712f9444819ffd47d2b346bdad" title="mcpw_on_host_parser\l_reply" alt="" coords="155,457,307,498"/>
+</map>

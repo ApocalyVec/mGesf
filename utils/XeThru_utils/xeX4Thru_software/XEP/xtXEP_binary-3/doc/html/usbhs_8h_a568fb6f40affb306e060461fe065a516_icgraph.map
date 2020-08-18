@@ -1,0 +1,5 @@
+<map id="USBHS_HostGetPipeType" name="USBHS_HostGetPipeType">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga1d4a9f98194cb255b2fcb6cdf8d83fb8" title="Allows to receive or send data on an endpoint. " alt="" coords="242,5,421,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga39a6506d44760a518b49d004574bc9c9" title="USBH_HAL_PipeOutReady" alt="" coords="237,56,425,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#gaa29c0122543b5f5faf600eee68474615" title="USBH_HAL_PipeInterrupt" alt="" coords="473,81,656,108"/>
+</map>

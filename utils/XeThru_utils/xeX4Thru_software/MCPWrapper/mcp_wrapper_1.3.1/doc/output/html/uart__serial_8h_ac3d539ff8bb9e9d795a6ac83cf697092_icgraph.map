@@ -1,0 +1,4 @@
+<map id="usart_serial_getchar" name="usart_serial_getchar">
+<area shape="rect" id="node2" href="$usart__serial_8c.xhtml#a87b33461b725f80263a8628b6e852e9e" title="Receive a sequence of bytes from USART device. " alt="" coords="192,5,359,32"/>
+<area shape="rect" id="node3" href="$group__group__common__utils__stdio__stdio__serial.xhtml#ga69a6d76cd00643343f3839b6c3e68cd9" title="Initializes the stdio in Serial Mode. " alt="" coords="219,56,331,83"/>
+</map>

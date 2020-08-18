@@ -1,0 +1,40 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/device" name="src/hal/x4m0x_s70/libraries/libusb/device">
+<area shape="rect" id="node2" href="dir_ef75c6204c2a2c95c5ea4e325414a557.xhtml" title="audio&#45;speaker" alt="" coords="578,63,691,111"/>
+<area shape="rect" id="node15" href="dir_c46a29a3f6521c422d3477bfa11d561d.xhtml" title="include" alt="" coords="769,159,841,207"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000039_000060.xhtml" title="8" alt="" coords="752,142,761,157"/>
+<area shape="rect" id="node3" href="dir_02e568266cc2dfcd321185c0d344906d.xhtml" title="audio&#45;speakerphone" alt="" coords="401,63,554,111"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000040_000060.xhtml" title="11" alt="" coords="744,155,762,170"/>
+<area shape="rect" id="node4" href="dir_3ce8cf7b8cb31a3153862abb132e64d5.xhtml" title="ccid" alt="" coords="1193,63,1265,111"/>
+<area shape="rect" id="node14" href="dir_a75a6fe80fd9120ba7dd67a0b33a7bc9.xhtml" title="libchip" alt="" coords="769,255,841,303"/>
+<area shape="rect" id="edge11-headlabel" href="dir_000041_000013.xhtml" title="1" alt="" coords="857,264,866,279"/>
+<area shape="rect" id="edge12-headlabel" href="dir_000041_000060.xhtml" title="5" alt="" coords="856,177,865,192"/>
+<area shape="rect" id="node5" href="dir_dfe27435bcfd151e7ed4283bed0cb4f8.xhtml" title="cdc&#45;eem" alt="" coords="1397,63,1475,111"/>
+<area shape="rect" id="edge13-headlabel" href="dir_000042_000060.xhtml" title="11" alt="" coords="851,182,868,197"/>
+<area shape="rect" id="node16" href="dir_b1319e8f428daa0564aada829adff08d.xhtml" title="utils" alt="" coords="769,351,841,399"/>
+<area shape="rect" id="edge14-headlabel" href="dir_000042_000061.xhtml" title="1" alt="" coords="857,358,866,373"/>
+<area shape="rect" id="node6" href="dir_3c28fac45ab8d8da920ac7aca51a5f68.xhtml" title="cdc&#45;serial" alt="" coords="1289,63,1372,111"/>
+<area shape="rect" id="edge19-headlabel" href="dir_000043_000013.xhtml" title="1" alt="" coords="856,271,865,285"/>
+<area shape="rect" id="edge20-headlabel" href="dir_000043_000060.xhtml" title="13" alt="" coords="851,181,869,195"/>
+<area shape="rect" id="node7" href="dir_f4862fdaf6e04616b4d4384aa0d93e1d.xhtml" title="composite" alt="" coords="715,63,805,111"/>
+<area shape="rect" id="edge15-headlabel" href="dir_000044_000060.xhtml" title="32" alt="" coords="785,131,803,146"/>
+<area shape="rect" id="node8" href="dir_4b25f89b83ffd9aa26365769afe19ee6.xhtml" title="core" alt="" coords="37,63,109,111"/>
+<area shape="rect" id="edge16-headlabel" href="dir_000045_000013.xhtml" title="1" alt="" coords="747,257,757,272"/>
+<area shape="rect" id="edge17-headlabel" href="dir_000045_000060.xhtml" title="16" alt="" coords="742,166,760,181"/>
+<area shape="rect" id="node9" href="dir_c98808c63876b0bdc8f8c5660747733a.xhtml" title="hal_examples" alt="" coords="134,63,245,111"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000046_000013.xhtml" title="2" alt="" coords="748,254,757,268"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000046_000060.xhtml" title="2" alt="" coords="747,161,756,176"/>
+<area shape="rect" id="node10" href="dir_169dccb72b6ddbf7b5b07a16f85e4db3.xhtml" title="hid&#45;keyboard" alt="" coords="829,63,934,111"/>
+<area shape="rect" id="edge18-headlabel" href="dir_000047_000060.xhtml" title="27" alt="" coords="833,142,851,157"/>
+<area shape="rect" id="node11" href="dir_044185350c296386d65f5cc89f66f3f7.xhtml" title="hid&#45;mouse" alt="" coords="1079,63,1169,111"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000048_000060.xhtml" title="6" alt="" coords="856,180,865,194"/>
+<area shape="rect" id="node12" href="dir_e8200aaa678b2e1090fb0e8bdd074e2a.xhtml" title="hid&#45;transfer" alt="" coords="959,63,1055,111"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000049_000060.xhtml" title="10" alt="" coords="853,168,870,182"/>
+<area shape="rect" id="node13" href="dir_2702c2fb8a9d52ab2ce5363fbdffec02.xhtml" title="massstorage" alt="" coords="269,63,376,111"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000050_000013.xhtml" title="1" alt="" coords="751,238,761,253"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000050_000060.xhtml" title="23" alt="" coords="744,154,762,169"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000013_000061.xhtml" title="2" alt="" coords="800,325,809,339"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000060_000013.xhtml" title="1" alt="" coords="809,229,818,244"/>
+<area shape="rect" id="edge21-headlabel" href="dir_000061_000013.xhtml" title="2" alt="" coords="801,314,811,329"/>
+<area shape="rect" id="clust2" href="dir_d2da8e13eb5c48e27ac81e92e0b056f1.xhtml" alt="" coords="27,52,1583,121"/>
+<area shape="rect" id="clust1" href="dir_608da0ca01c56cd314839049683ac68c.xhtml" title="libusb" alt="" coords="16,16,1593,132"/>
+</map>

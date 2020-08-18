@@ -1,0 +1,5 @@
+<map id="_i2c_task_init" name="_i2c_task_init">
+<area shape="rect" id="node2" href="$xtio__i2c_8c.xhtml#a7b0e666ddfaac918eb931d278b66559c" title="xtio_i2c_init" alt="" coords="162,5,258,32"/>
+<area shape="rect" id="node3" href="$xtio__serial__com_8c.xhtml#aaf5c23358f10ebd26276f2328441d350" title="_i2c_task_rx" alt="" coords="160,56,260,83"/>
+<area shape="rect" id="node4" href="$xtio__serial__com_8c.xhtml#a80336c26c2d516ea5c2e6a50988561be" title="_i2c_task_tx" alt="" coords="160,107,260,133"/>
+</map>

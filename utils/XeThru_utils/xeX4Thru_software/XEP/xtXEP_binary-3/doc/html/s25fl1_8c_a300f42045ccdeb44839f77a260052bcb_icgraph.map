@@ -1,0 +1,10 @@
+<map id="S25FL1D_ReadStatus1" name="S25FL1D_ReadStatus1">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#acae5393b56a4415eb9a29f9b53df8bf9" title="Wait for transfer to finish calling the SPI driver ISR. " alt="" coords="239,5,365,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#aee7639f2487a57e818d095f9aa7a2775" title="Erases the specified block of the serial firmware dataflash. " alt="" coords="432,56,596,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#ac688485752eaf90e9d91d99d362d52b9" title="S25FL1D_EnableWrite" alt="" coords="222,107,382,133"/>
+<area shape="rect" id="node5" href="$s25fl1_8c.xhtml#afb88d105142c2a47764cc9fba6012d60" title="Erases all the content of the memory chip. " alt="" coords="439,132,589,159"/>
+<area shape="rect" id="node6" href="$s25fl1_8c.xhtml#af7afb850fd4743dd16ae1e500ae11e8e" title="S25FL1D_DisableWrite" alt="" coords="220,208,384,235"/>
+<area shape="rect" id="node7" href="$s25fl1_8c.xhtml#a844d03d4455661877b4cd85d753cc03a" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="225,259,379,285"/>
+<area shape="rect" id="node8" href="$s25fl1_8c.xhtml#a3d08b0e2a530933edbff8459c7d3559a" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="222,309,382,336"/>
+<area shape="rect" id="node9" href="$s25fl1_8c.xhtml#ae1170240dc2ab7b96831e4bc91359f22" title="Unprotected the contents of the serial flash device. " alt="" coords="236,360,368,387"/>
+</map>

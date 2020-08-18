@@ -1,0 +1,5 @@
+<map id="xtio_uart_configure" name="xtio_uart_configure">
+<area shape="rect" id="node2" href="$xtio__serial__com_8c.xhtml#a5e9056b9bb65d42367ec290aea738768" title="_uart_task_rx" alt="" coords="416,24,524,51"/>
+<area shape="rect" id="node3" href="$xtio__uart_8h.xhtml#ab26f4e038cc21215960e4e8957c041be" title="xtio_uart_init" alt="" coords="231,24,335,51"/>
+<area shape="rect" id="node4" href="$xtio__uart_8c.xhtml#a75257f6264fe4bb32722e8eccd519680" title="Configures UART module with the specified baudrate. " alt="" coords="197,75,368,101"/>
+</map>

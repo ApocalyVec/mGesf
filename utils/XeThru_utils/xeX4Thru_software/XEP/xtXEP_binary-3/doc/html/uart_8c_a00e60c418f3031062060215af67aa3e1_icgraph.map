@@ -1,0 +1,4 @@
+<map id="UART_IsRxReady" name="UART_IsRxReady">
+<area shape="rect" id="node2" href="$uart_8c.xhtml#a8003de31149ba9e3e57eada21fec5fbc" title="Reads and returns a character from the UART. " alt="" coords="179,5,293,32"/>
+<area shape="rect" id="node3" href="$uart_8c.xhtml#a3c87a55c11e78561fcc351c0ecc6489c" title="Sends one packet of data through the specified UART peripheral. " alt="" coords="179,56,293,83"/>
+</map>

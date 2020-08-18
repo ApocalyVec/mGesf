@@ -1,0 +1,6 @@
+<map id="xt_set_reset_reason" name="xt_set_reset_reason">
+<area shape="rect" id="node2" href="$_free_r_t_o_s__hooks_8h.xhtml#a95466c46b87dabee6ba956ad42d61fe3" title="vApplicationStackOverflowHook" alt="" coords="205,5,428,32"/>
+<area shape="rect" id="node3" href="$group___s_a_m_e70_j19__cmsis.xhtml#gae7ee340978f5c25f52f0cad1457c6616" title="This is the code that gets called on processor reset. " alt="" coords="259,56,374,83"/>
+<area shape="rect" id="node4" href="$xt__system_8c.xhtml#ace2af126089abe1d676edfc1400d0bf7" title="Triggers a software reset of MCU. " alt="" coords="249,107,384,133"/>
+<area shape="rect" id="node5" href="$xt__system_8c.xhtml#a5e62effeb5c5323c3d423225a6a3dbf3" title="Gets the cause of the previous software reset. " alt="" coords="240,157,393,184"/>
+</map>

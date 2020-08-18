@@ -1,0 +1,8 @@
+<map id="xtfile_delete" name="xtfile_delete">
+<area shape="rect" id="node2" href="$xtfile_8c.xhtml#ab6502b729403c595b606e92bf005bd09" title="xtfile_lock" alt="" coords="191,5,275,32"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#a615248bef74b3021de95c188fcc6504c" title="xtfile_is_open" alt="" coords="361,132,469,159"/>
+<area shape="rect" id="node4" href="$xtfile_8c.xhtml#a5f00b9d0119e29899a5acf83033147e4" title="xtfile_unlock" alt="" coords="183,107,283,133"/>
+<area shape="rect" id="node5" href="$xfs_8c.xhtml#a51fef9f1383012edd34a7ad0608f90eb" title="Checks if a file with given type and identifier exists. " alt="" coords="178,157,287,184"/>
+<area shape="rect" id="node6" href="$xtfile_8c.xhtml#a3664f1f9f0c2893e041970d9a758cd48" title="xtfile_create_instance" alt="" coords="152,208,313,235"/>
+<area shape="rect" id="node7" href="$xfs_8c.xhtml#a846fd4b556aae87a84be2435336e17ca" title="Deletes the file with the given type and identifier. " alt="" coords="177,259,289,285"/>
+</map>

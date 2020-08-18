@@ -1,0 +1,19 @@
+<map id="HIDDFunction_RequestHandler" name="HIDDFunction_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga25b7cf7cc6f10bc8359b9c8c6422c2c9" title="Parse data extension for HID descriptor. " alt="" coords="285,5,489,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="553,107,652,133"/>
+<area shape="rect" id="node4" href="$group__usb__request.xhtml#ga56cc8072ee61b86e52620841df171c56" title="Returns the type of the descriptor requested by the host given the corresponding GET_DESCRIPTOR reque..." alt="" coords="292,361,483,402"/>
+<area shape="rect" id="node5" href="$group__usb__request.xhtml#ga047e240a92a39eed9b3174d397498123" title="Returns the expected length of the data phase following a request. " alt="" coords="275,427,499,453"/>
+<area shape="rect" id="node6" href="$group__usb__request.xhtml#ga45fc2dc20e20b098a487d3cdc7f1b35e" title="Returns the feature selector of a given CLEAR_FEATURE or SET_FEATURE request. " alt="" coords="274,478,501,519"/>
+<area shape="rect" id="node7" href="$group__usb__request.xhtml#ga59f22fd9b4390d6c080bf95c39d0f8a9" title="Returns the endpoint number targeted by a given request. " alt="" coords="269,543,505,585"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#gaf469bcfbab3b7f7e211d550e79e0b3c8" title="Returns the current Halt status of an endpoint. " alt="" coords="328,609,447,636"/>
+<area shape="rect" id="node9" href="$group__usbd__interface.xhtml#gae0ae896eb63155735b328c157fdc80a9" title="Clears the Halt feature on the given endpoint. " alt="" coords="333,660,442,687"/>
+<area shape="rect" id="node10" href="$group__usbd__hid.xhtml#ga18ed1d60f54db7c0dd38b3db4fcccfa8" title="Start polling interrupt OUT pipe (output report, host to device) if there is. " alt="" coords="293,711,481,753"/>
+<area shape="rect" id="node11" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="555,208,650,235"/>
+<area shape="rect" id="node12" href="$group__usbd__hid.xhtml#gaced6adae7bca323f6d8a63964092dc22" title="Sends the current Idle rate of the input report to the host. " alt="" coords="307,107,467,133"/>
+<area shape="rect" id="node13" href="$group__usb__hid.xhtml#ga821535cae13981aa9d15d87f0d52fbd1" title="Indicates the ID of the report targeted by a SET_REPORT or GET_REPORT request. " alt="" coords="278,777,497,804"/>
+<area shape="rect" id="node14" href="$group__usbd__hid.xhtml#gaaaa136d5e3db25540b4353f95a237f23" title="Retrieves the new idle rate of the input report from the USB host. " alt="" coords="308,157,467,184"/>
+<area shape="rect" id="node15" href="$group__usb__hid.xhtml#gadda4a9db20a64f37fefd3e3893171b4a" title="Retrieves the Idle rate (in milliseconds) indicated by a SET_IDLE request. " alt="" coords="288,828,487,855"/>
+<area shape="rect" id="node16" href="$group__usbd__hid.xhtml#gac1f005d3d16586bde74d82ca21c06654" title="Sends the requested report to the host. " alt="" coords="298,208,477,235"/>
+<area shape="rect" id="node17" href="$group__usb__hid.xhtml#ga7838b70a03055712db33a1d04f89f15f" title="Indicates the type of report targeted by a SET_REPORT or GET_REPORT request. " alt="" coords="269,879,505,905"/>
+<area shape="rect" id="node18" href="$group__usbd__hid.xhtml#ga285bfa90562d385afb6ec10421f54de0" title="Reads the requested report from the host. " alt="" coords="298,259,477,285"/>
+</map>

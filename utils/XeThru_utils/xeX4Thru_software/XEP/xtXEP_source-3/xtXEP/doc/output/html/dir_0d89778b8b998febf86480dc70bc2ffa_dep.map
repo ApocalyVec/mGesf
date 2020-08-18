@@ -1,0 +1,12 @@
+<map id="src/hal/x4m0x_s70/libraries/libchip/include/samv71" name="src/hal/x4m0x_s70/libraries/libchip/include/samv71">
+<area shape="rect" id="node2" href="dir_85508a0f5de9fdbb39b464471694e3eb.xhtml" title="component" alt="" coords="38,159,133,207"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000022_000023.xhtml" title="312" alt="" coords="131,149,156,164"/>
+<area shape="rect" id="node3" href="dir_d22541a70a8d2d4e4b4c043ec4961df3.xhtml" title="instance" alt="" coords="157,159,233,207"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000022_000026.xhtml" title="456" alt="" coords="210,139,235,154"/>
+<area shape="rect" id="node4" href="dir_3ecd46ea772adfa2007bb311a4909068.xhtml" title="pio" alt="" coords="257,159,329,207"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000022_000029.xhtml" title="9" alt="" coords="275,131,284,146"/>
+<area shape="rect" id="node5" href="dir_74e208acb2b5db593baf5455224ab674.xhtml" title="cmsis" alt="" coords="361,159,433,207"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000022_000015.xhtml" title="9" alt="" coords="345,136,355,150"/>
+<area shape="rect" id="clust2" href="dir_0d89778b8b998febf86480dc70bc2ffa.xhtml" alt="" coords="27,52,340,217"/>
+<area shape="rect" id="clust1" href="dir_66d505d01f5149f3674faaa78d4997d4.xhtml" title="include" alt="" coords="16,16,351,228"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/xt_system.c" name="src/hal/x4m0x_s70/xt_system.c">
+<area shape="rect" id="node2" href="$chip_8h.xhtml" title="chip.h" alt="" coords="5,95,65,121"/>
+<area shape="rect" id="node3" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="89,95,160,121"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="418,169,501,196"/>
+<area shape="rect" id="node7" href="$sams70_8h.xhtml" title="sams70.h" alt="" coords="441,95,526,121"/>
+<area shape="rect" id="node8" href="$xt__system_8h.xhtml" title="xt_system.h" alt="" coords="551,95,651,121"/>
+<area shape="rect" id="node9" href="$xt__config_8h.xhtml" title="xt_config.h" alt="" coords="675,95,766,121"/>
+</map>

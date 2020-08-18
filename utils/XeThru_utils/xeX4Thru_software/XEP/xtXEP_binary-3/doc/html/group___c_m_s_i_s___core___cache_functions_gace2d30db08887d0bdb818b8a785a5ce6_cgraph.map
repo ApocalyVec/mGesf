@@ -1,0 +1,4 @@
+<map id="SCB_InvalidateDCache" name="SCB_InvalidateDCache">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga5c7a006f5ba5778972ac9516733a0cc4" title="Data Synchronization Barrier. " alt="" coords="220,5,284,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___instruction_interface.xhtml#ga8f5af376adcfaea7f2ddb3ef9b6b2544" title="Instruction Synchronization Barrier. " alt="" coords="223,56,281,83"/>
+</map>

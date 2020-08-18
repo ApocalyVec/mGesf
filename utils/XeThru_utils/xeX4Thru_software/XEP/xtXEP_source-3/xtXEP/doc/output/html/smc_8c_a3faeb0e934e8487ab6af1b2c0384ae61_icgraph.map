@@ -1,0 +1,6 @@
+<map id="SMC_Handler" name="SMC_Handler">
+<area shape="rect" id="node2" href="$smc_8c.xhtml#aa44b0a4952cd572d0d0ede329e91ecc6" title="Wait for NFC command has done. " alt="" coords="161,5,387,32"/>
+<area shape="rect" id="node3" href="$smc_8c.xhtml#a77b44da0d1691dbfafbfeb1a35c0b2fd" title="Wait for NFC Data Transfer Terminated. " alt="" coords="187,56,361,83"/>
+<area shape="rect" id="node4" href="$smc_8c.xhtml#ab0354bfe334bbfc40665ac79cfb35fc4" title="Wait for NFC Data Transfer Terminated. " alt="" coords="161,107,387,133"/>
+<area shape="rect" id="node5" href="$smc_8c.xhtml#ab2e00388d4f4ddf72329e7b5a961f1da" title="Wait for NFC Ready/Busy Line 3 Edge Detected. " alt="" coords="189,157,359,184"/>
+</map>

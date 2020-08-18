@@ -1,0 +1,7 @@
+<map id="UDPHS_AddWr" name="UDPHS_AddWr">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="239,5,278,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga5295f6d8b5a54cbe6b365e4ae1bb9633" title="Transfers a data payload from the current transfer buffer to the endpoint FIFO. " alt="" coords="183,56,334,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a7e969e0c7fb49b1d25dd4e97afe3b0f7" title="Sets/Raise register for a given endpoint. " alt="" coords="187,107,330,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#aaefdcd5f8be021f6ebffcbb4e7630079" title="Enables interrupt for a given endpoint. " alt="" coords="183,157,334,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a6e9251af935e4867afa52cd306e8c699" title="Enables an interrupt type for a given endpoint. " alt="" coords="169,208,348,235"/>
+</map>

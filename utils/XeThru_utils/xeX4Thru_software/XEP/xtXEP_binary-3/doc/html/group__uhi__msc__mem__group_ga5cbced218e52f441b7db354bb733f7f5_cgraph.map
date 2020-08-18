@@ -1,0 +1,5 @@
+<map id="uhi_msc_mem_wr_protect" name="uhi_msc_mem_wr_protect">
+<area shape="rect" id="node2" href="$group__uhi__msc__group.xhtml#ga2e7cf8daaa331de6b805e644955f0045" title="Tests if the interface UHI Mass Storage is available The UHI Mass Storage can be busy during the enum..." alt="" coords="250,5,405,32"/>
+<area shape="rect" id="node3" href="$group__uhi__msc__group.xhtml#gae6006f5e44ec6833a9da65d1ede96bfc" title="Gives information about a LUN. " alt="" coords="244,56,411,83"/>
+<area shape="rect" id="node4" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="308,107,347,133"/>
+</map>

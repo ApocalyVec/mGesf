@@ -1,0 +1,3 @@
+<map id="AUDDSpeakerPhone_Read" name="AUDDSpeakerPhone_Read">
+<area shape="rect" id="node2" href="$group__usbd__aud__fun.xhtml#ga5812f39713699ab88f15243d2e2bf143" title="Reads incoming audio data sent by the USB host into the provided buffer. " alt="" coords="245,5,397,32"/>
+</map>

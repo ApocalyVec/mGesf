@@ -1,0 +1,6 @@
+<map id="HIDAUDDDriver_ConfigurationChangedHandler" name="HIDAUDDDriver_ConfigurationChangedHandler">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="321,5,449,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gadfce99fba013d30648e7a058c7fa6799" title="Returns configuration descriptor list. " alt="" coords="274,56,497,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid__key.xhtml#ga8756ebb1a6a51b48a6e331ea28808e4b" title="Configure function with expected descriptors and start functionality. " alt="" coords="268,107,503,133"/>
+<area shape="rect" id="node5" href="$group__usbd__aud__fun.xhtml#ga702017449448c2a930ef05e9e48e7fe7" title="Configure function with expected descriptors and start functionality. " alt="" coords="294,157,477,184"/>
+</map>

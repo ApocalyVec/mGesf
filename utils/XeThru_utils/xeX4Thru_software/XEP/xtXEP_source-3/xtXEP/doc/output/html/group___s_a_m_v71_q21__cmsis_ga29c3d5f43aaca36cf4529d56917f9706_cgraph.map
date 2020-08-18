@@ -1,0 +1,7 @@
+<map id="TWIHS2_Handler" name="TWIHS2_Handler">
+<area shape="rect" id="node2" href="$twi_8h.xhtml#a316b5d5ffbfa49a8d6517a061b92a4a6" title="Get the current status register of the given TWI peripheral. " alt="" coords="180,5,295,32"/>
+<area shape="rect" id="node3" href="$twi_8h.xhtml#ac976e61b9b9d4488753f960d3df80c63" title="Disables the selected interrupts sources on a TWI peripheral. " alt="" coords="185,56,290,83"/>
+<area shape="rect" id="node4" href="$twi_8h.xhtml#ab3bf1b5df694229af5fae34ca569ab7b" title="Enables the selected interrupts sources on a TWI peripheral. " alt="" coords="187,107,288,133"/>
+<area shape="rect" id="node5" href="$twi_8h.xhtml#ad728b448499f0b4d4633dfe0cc4a5ee7" title="Sends a byte of data to one of the TWI slaves on the bus. " alt="" coords="182,157,293,184"/>
+<area shape="rect" id="node6" href="$twi_8h.xhtml#a8b4e96e6ce1126921517147b048fde51" title="Reads a byte from the TWI bus. " alt="" coords="182,208,293,235"/>
+</map>

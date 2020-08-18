@@ -1,0 +1,8 @@
+<map id="uhi_cdc_tx_send" name="uhi_cdc_tx_send">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="431,5,536,32"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group__internal.xhtml#ga6fe796ae4cca0fa45d96c36fb8aec5e7" title="Returns a port structure information. " alt="" coords="185,252,316,279"/>
+<area shape="rect" id="node4" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="423,68,544,95"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#gae32ed29203116712f786dbc913d96327" title="Returns the current micro start of frame number. " alt="" coords="369,144,597,171"/>
+<area shape="rect" id="node6" href="$group__uhd__group.xhtml#gaee8af62530aefb6025ad2391361e8895" title="Returns the current Start Of Frame (SOF) number. " alt="" coords="386,195,581,221"/>
+<area shape="rect" id="node7" href="$group__uhi__cdc__group__internal.xhtml#ga19464aec764d1d849bd81da0a1f70a0e" title="Update the transfer endpoint OUT (TX) Start a new transfer on endpoint OUT, if a data must be send an..." alt="" coords="180,100,321,127"/>
+</map>

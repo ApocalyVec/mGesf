@@ -1,0 +1,4 @@
+<map id="HIDDKeyboard_ConfigureFunction" name="HIDDKeyboard_ConfigureFunction">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga82ccc86124b2cd8918810b69c0afec13" title="Parse the USB HID Function Interface. " alt="" coords="288,5,495,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid.xhtml#ga18ed1d60f54db7c0dd38b3db4fcccfa8" title="Start polling interrupt OUT pipe (output report, host to device) if there is. " alt="" coords="297,57,485,98"/>
+</map>

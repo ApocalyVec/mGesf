@@ -1,0 +1,33 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/USBLib_Trace.h" name="src/hal/x4m0x_s70/libraries/libusb/include/USBLib_Trace.h">
+<area shape="rect" id="node2" href="$_a_u_d_d_speaker_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/audio&#45;speaker\l/AUDDSpeakerDriver.c" alt="" coords="5,95,208,151"/>
+<area shape="rect" id="node3" href="$_a_u_d_d_speaker_phone_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/audio&#45;speakerphone\l/AUDDSpeakerPhoneDriver.c" alt="" coords="232,95,475,151"/>
+<area shape="rect" id="node4" href="$_a_u_d_d_stream_8c.xhtml" title="USB Audio Device Streaming interface with controls. " alt="" coords="499,95,741,151"/>
+<area shape="rect" id="node5" href="$cciddriver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/ccid/cciddriver.c" alt="" coords="766,102,978,143"/>
+<area shape="rect" id="node6" href="$_c_d_c_d_e_e_m_8c.xhtml" title="Implementation of a single CDC EEM port function for USB device. " alt="" coords="1001,102,1249,143"/>
+<area shape="rect" id="node7" href="$_c_d_c_d_e_e_m_driver_8c.xhtml" title="Title: CDCDEEMDriver implementation. " alt="" coords="1273,102,1559,143"/>
+<area shape="rect" id="node8" href="$_c_d_c_d_e_e_m_port_8c.xhtml" title="Implementation of the CDCDEEMPort class methods. " alt="" coords="1583,102,1857,143"/>
+<area shape="rect" id="node9" href="$_c_d_c_d_serial_8c.xhtml" title="Implementation of a single CDC serial port function for USB device. " alt="" coords="1881,95,2076,151"/>
+<area shape="rect" id="node10" href="$_c_d_c_d_serial_driver_8c.xhtml" title="Title: CDCDSerialDriver implementation. " alt="" coords="2100,95,2295,151"/>
+<area shape="rect" id="node11" href="$_c_d_c_d_serial_port_8c.xhtml" title="Implementation of the CDCDSerialPort class methods. " alt="" coords="2319,95,2513,151"/>
+<area shape="rect" id="node12" href="$_a_u_d_d_function_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/AUDDFunction.c" alt="" coords="2537,95,2732,151"/>
+<area shape="rect" id="node13" href="$_c_d_c_a_u_d_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/CDCAUDDDriver.c" alt="" coords="2756,95,2951,151"/>
+<area shape="rect" id="node14" href="$_c_d_c_h_i_d_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/CDCHIDDDriver.c" alt="" coords="2975,95,3169,151"/>
+<area shape="rect" id="node15" href="$_c_d_c_m_s_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/CDCMSDDriver.c" alt="" coords="3193,95,3388,151"/>
+<area shape="rect" id="node16" href="$_d_u_a_l_c_d_c_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/DUALCDCDDriver.c" alt="" coords="3412,95,3607,151"/>
+<area shape="rect" id="node17" href="$_h_i_d_a_u_d_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/HIDAUDDDriver.c" alt="" coords="3631,95,3825,151"/>
+<area shape="rect" id="node18" href="$_h_i_d_m_s_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/HIDMSDDriver.c" alt="" coords="3849,95,4044,151"/>
+<area shape="rect" id="node19" href="$_u_s_b_d_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/core/USBD.c" alt="" coords="4068,102,4263,143"/>
+<area shape="rect" id="node20" href="$_u_s_b_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/core/USBDDriver.c" alt="" coords="4287,102,4518,143"/>
+<area shape="rect" id="node21" href="$_u_s_b_d_driver_callbacks_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/core/USBDDriverCallbacks.c" alt="" coords="4543,102,4833,143"/>
+<area shape="rect" id="node22" href="$_h_i_d_d_keyboard_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboard.c" alt="" coords="4857,95,5052,151"/>
+<area shape="rect" id="node23" href="$_h_i_d_d_keyboard_callbacks___leds_changed_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboardCallbacks_LedsChanged.c" alt="" coords="5076,95,5359,151"/>
+<area shape="rect" id="node24" href="$_h_i_d_d_keyboard_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;keyboard\l/HIDDKeyboardDriver.c" alt="" coords="5383,95,5577,151"/>
+<area shape="rect" id="node25" href="$_h_i_d_d_keyboard_input_report_8c.xhtml" title="Implementation of the HIDDKeyboardInputReport class. " alt="" coords="5601,95,5804,151"/>
+<area shape="rect" id="node26" href="$_h_i_d_d_mouse_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;mouse\l/HIDDMouseDriver.c" alt="" coords="5828,95,6023,151"/>
+<area shape="rect" id="node27" href="$_h_i_d_d_function_8c.xhtml" title="Implementation of the HIDDFunction class methods. " alt="" coords="6047,95,6241,151"/>
+<area shape="rect" id="node28" href="$_h_i_d_d_transfer_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/hid&#45;transfer\l/HIDDTransferDriver.c" alt="" coords="6265,95,6460,151"/>
+<area shape="rect" id="node29" href="$_m_s_d_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/massstorage\l/MSDDriver.c" alt="" coords="6485,95,6681,151"/>
+<area shape="rect" id="node30" href="$_m_s_d_function_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/massstorage\l/MSDFunction.c" alt="" coords="6705,95,6901,151"/>
+<area shape="rect" id="node31" href="$_m_s_d_lun_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/massstorage\l/MSDLun.c" alt="" coords="6925,95,7121,151"/>
+<area shape="rect" id="node32" href="$_m_s_d_d_state_machine_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/MSDDStateMachine.h" alt="" coords="7145,102,7401,143"/>
+</map>

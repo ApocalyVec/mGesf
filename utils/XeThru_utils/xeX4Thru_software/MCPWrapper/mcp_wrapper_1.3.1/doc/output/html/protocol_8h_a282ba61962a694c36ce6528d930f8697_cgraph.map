@@ -1,0 +1,6 @@
+<map id="parseData" name="parseData">
+<area shape="rect" id="node2" href="$protocol_8c.xhtml#a967130a2ebab048c556cea7c7b279f8a" title="outOfBuffer" alt="" coords="210,5,297,32"/>
+<area shape="rect" id="node3" href="$protocol_8c.xhtml#ae088f2e804ac292efe61baf2cb4580be" title="reset" alt="" coords="228,56,279,83"/>
+<area shape="rect" id="node4" href="$protocol_8c.xhtml#ab5cef0c2218eb99ca5d525df036d4ad6" title="DEPRECATEDhandleFastSingleByte" alt="" coords="135,107,372,133"/>
+<area shape="rect" id="node5" href="$protocol_8c.xhtml#a11685f74dabb852e8db8e65d62025fa2" title="handleSingleByte" alt="" coords="192,157,315,184"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="examples/atmel_samg55/src/ASF/common/services/freertos/sam" name="examples/atmel_samg55/src/ASF/common/services/freertos/sam">
+<area shape="rect" id="node1" href="dir_4d83dcb694b04bfefa9917b553af711b.xhtml" title="sam" alt="" coords="79,52,151,100"/>
+<area shape="rect" id="node2" href="dir_338254fd8cde27c304cd79c881d84fe8.xhtml" title="serial" alt="" coords="5,148,77,196"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000010_000013.xhtml" title="1" alt="" coords="73,131,81,146"/>
+<area shape="rect" id="node3" href="dir_2ebaa83b9a80a062a45c97b62e911ab2.xhtml" title="thirdparty" alt="" coords="90,340,166,388"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000010_000048.xhtml" title="7" alt="" coords="140,316,148,331"/>
+<area shape="rect" id="node4" href="dir_48be2503ae6ae6de0698f11fb632640c.xhtml" title="sam" alt="" coords="56,244,128,292"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000010_000021.xhtml" title="1" alt="" coords="101,219,109,234"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000013_000021.xhtml" title="2" alt="" coords="74,217,82,231"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000021_000048.xhtml" title="5" alt="" coords="117,313,125,327"/>
+<area shape="rect" id="clust1" href="dir_a66d6071e53f0480f91b7a193124ab22.xhtml" title="freertos" alt="" coords="68,16,161,111"/>
+</map>

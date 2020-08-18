@@ -1,0 +1,4 @@
+<map id="TWID_DmaInitializeWrite" name="TWID_DmaInitializeWrite">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga0b94c48d2200e3be27ea16cfd1207912" title="Allocate a XDMA channel for upper layer. " alt="" coords="227,5,407,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="227,56,406,83"/>
+</map>

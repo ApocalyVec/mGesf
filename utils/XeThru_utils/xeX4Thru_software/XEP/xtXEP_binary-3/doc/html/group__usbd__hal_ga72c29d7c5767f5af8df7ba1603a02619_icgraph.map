@@ -1,0 +1,7 @@
+<map id="USBD_HAL_Activate" name="USBD_HAL_Activate">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga5931e8b51cc0a708c654a2ede474722a" title="Handle the USB resume event, should be invoked whenever HW reports a resume signal. " alt="" coords="205,5,373,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="421,56,555,83"/>
+<area shape="rect" id="node4" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="603,81,709,108"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#gad1bf93dee935f232cc0acae8cac8f264" title="Handle the USB reset event, should be invoked whenever HW found USB reset signal on bus..." alt="" coords="213,107,365,133"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#gacfd4fed846cba74af43e668e47b6dc10" title="Starts a remote wake&#45;up procedure. " alt="" coords="206,208,373,235"/>
+</map>

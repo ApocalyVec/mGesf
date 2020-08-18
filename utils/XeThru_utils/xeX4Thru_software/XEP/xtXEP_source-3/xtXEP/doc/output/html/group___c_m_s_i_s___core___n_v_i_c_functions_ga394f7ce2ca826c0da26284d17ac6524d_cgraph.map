@@ -1,0 +1,7 @@
+<map id="NVIC_GetPriorityGrouping" name="NVIC_GetPriorityGrouping">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="259,5,383,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga260fba04ac8346855c57f091d4ee1e71" title="Disable External Interrupt. " alt="" coords="257,56,385,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#gafec8042db64c0f8ed432b6c8386a05d8" title="Get Pending Interrupt. " alt="" coords="244,107,399,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3ecf446519da33e1690deffbf5be505f" title="Set Pending Interrupt. " alt="" coords="244,157,399,184"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="239,208,404,235"/>
+</map>

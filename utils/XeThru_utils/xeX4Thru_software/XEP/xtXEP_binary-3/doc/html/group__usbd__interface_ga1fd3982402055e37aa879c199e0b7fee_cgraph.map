@@ -1,0 +1,4 @@
+<map id="USBD_Init" name="USBD_Init">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga3699059b9b9b52b7e55af6d070a7fe61" title="Initializes the USB HW Access driver. " alt="" coords="174,5,293,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga5579e02a71a8f510005e873fc50a0f4a" title="Invoked after the USB driver has been initialized. " alt="" coords="140,56,327,83"/>
+</map>

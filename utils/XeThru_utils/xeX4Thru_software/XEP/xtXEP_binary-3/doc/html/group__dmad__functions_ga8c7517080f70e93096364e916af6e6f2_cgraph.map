@@ -1,0 +1,6 @@
+<map id="XDMAD_Initialize" name="XDMAD_Initialize">
+<area shape="rect" id="node2" href="$group__dmac__functions.xhtml#ga601f8b23ff2c1b632f4a905c5bbed8ce" title="Get XDMAC global type. " alt="" coords="201,5,327,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="181,56,347,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga2305cbd44aaad792e3a4e538bdaf14f9" title="Set Interrupt Priority. " alt="" coords="201,107,327,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3349f2e3580d7ce22d6530b7294e5921" title="Enable External Interrupt. " alt="" coords="202,157,326,184"/>
+</map>

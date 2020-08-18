@@ -1,0 +1,6 @@
+<map id="S25FL1D_EraseChip" name="S25FL1D_EraseChip">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a300f42045ccdeb44839f77a260052bcb" title="Reads and returns the status register of the serial flash. " alt="" coords="412,26,579,52"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a1a915b35968bc2e31ab4fe5e38a76708" title="Start S25FL1D Send command with/without data write/read. " alt="" coords="627,26,813,52"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#ac688485752eaf90e9d91d99d362d52b9" title="S25FL1D_EnableWrite" alt="" coords="204,76,364,103"/>
+<area shape="rect" id="node5" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="260,127,308,154"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="examples/atmel_samg55/src/config/conf_clock.h" name="examples/atmel_samg55/src/config/conf_clock.h">
+<area shape="rect" id="node2" href="$osc_8h.xhtml" title="Oscillator management. " alt="" coords="5,95,184,151"/>
+<area shape="rect" id="node3" href="$pll_8h.xhtml" title="PLL management. " alt="" coords="208,95,387,151"/>
+<area shape="rect" id="node4" href="$sysclk_8h.xhtml" title="System clock management. " alt="" coords="411,95,589,151"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverGetIterations" name="onMcpX4DriverGetIterations">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a3340bd88f713c61192fed4ba6be4789d" title="Gets Iterations. " alt="" coords="273,5,441,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a90b63c6c0030baa1fd9c1d71b1c23d1a" title="Dispatch message to hostcom asking to reply with int array to host. " alt="" coords="255,57,460,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="255,122,460,163"/>
+</map>

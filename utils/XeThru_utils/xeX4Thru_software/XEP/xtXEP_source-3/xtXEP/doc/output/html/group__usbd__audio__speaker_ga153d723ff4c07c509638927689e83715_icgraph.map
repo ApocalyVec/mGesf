@@ -1,0 +1,3 @@
+<map id="AUDDSpeakerDriver_MuteChanged" name="AUDDSpeakerDriver_MuteChanged">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#ga859ba8c5d460fb9546b7125d921f7c02" title="Callback triggerred after the mute or volume status of the channel has been changed. " alt="" coords="301,5,512,32"/>
+</map>

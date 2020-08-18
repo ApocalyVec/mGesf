@@ -1,0 +1,4 @@
+<map id="uhi_msc_scsi" name="uhi_msc_scsi">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a5881034b17cf48e25997e6ad271f5720" title="Start a transfer on an endpoint of current USB MSC device Used to send a CBW packet, DATA packet, or a CSW packet. " alt="" coords="349,5,481,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#a4b8bf30114a15489e5f8b0619a8319ea" title="Checks the CBW packet transfer and launch the next step The next step can be a DATA phase or a CSW pa..." alt="" coords="160,31,301,57"/>
+</map>

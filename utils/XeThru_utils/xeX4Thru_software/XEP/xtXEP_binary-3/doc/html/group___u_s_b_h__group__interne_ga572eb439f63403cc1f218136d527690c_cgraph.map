@@ -1,0 +1,4 @@
+<map id="USBH_enumeration_step1" name="USBH_enumeration_step1">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#gae28d773417820bebf571b538b86de4e1" title="Sends the USB Reset signal on the USB line of a device. " alt="" coords="247,5,436,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga5549a3d37f8742e4651f62b4bc0c674b" title="Device enumeration step 2 Lets USB line in IDLE state during 20ms. " alt="" coords="245,56,437,83"/>
+</map>

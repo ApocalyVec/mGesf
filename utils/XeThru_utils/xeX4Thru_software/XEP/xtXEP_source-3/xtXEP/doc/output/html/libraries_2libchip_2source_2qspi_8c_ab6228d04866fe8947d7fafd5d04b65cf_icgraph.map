@@ -1,0 +1,6 @@
+<map id="QSPI_SetInstFrame" name="QSPI_SetInstFrame">
+<area shape="rect" id="node2" href="$libraries_2libchip_2source_2qspi_8c.xhtml#ae9aace4e908d62c706f269d52ae9ed1e" title="Send an instruction over QSPI (oly a flash command no data) " alt="" coords="227,5,385,32"/>
+<area shape="rect" id="node3" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a8308475d5d101aa49fc1442d33f01107" title="Send instruction over QSPI with data. " alt="" coords="197,56,415,83"/>
+<area shape="rect" id="node4" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a1f39a599939fa64e6aca66a98e426499" title="Send instruction over QSPI to read data. " alt="" coords="227,107,385,133"/>
+<area shape="rect" id="node5" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a4427f3ba40c01107f0279447813757b4" title="Sends an instruction over QSPI and configures other related address like Addr , Frame and synchronise..." alt="" coords="217,157,395,184"/>
+</map>

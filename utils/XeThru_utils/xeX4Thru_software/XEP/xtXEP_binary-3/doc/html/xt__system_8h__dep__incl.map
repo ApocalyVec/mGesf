@@ -1,0 +1,7 @@
+<map id="src/hal/x4m0x_s70/xt_system.h" name="src/hal/x4m0x_s70/xt_system.h">
+<area shape="rect" id="node2" href="$_free_r_t_o_s__hooks_8c.xhtml" title="Callback functions used by FreeRTOS. " alt="" coords="5,102,167,129"/>
+<area shape="rect" id="node3" href="$xt__selftest_8c.xhtml" title="src/hal/x4m0x_s70/xt\l_selftest.c" alt="" coords="191,95,349,136"/>
+<area shape="rect" id="node4" href="$xt__system_8c.xhtml" title="System level hardware functionality. " alt="" coords="373,95,530,136"/>
+<area shape="rect" id="node5" href="$task__radar_8c.xhtml" title="src/Radar/task_radar.c" alt="" coords="555,102,719,129"/>
+<area shape="rect" id="node6" href="$xthousekeeping_8c.xhtml" title="src/System/Housekeeping\l/xthousekeeping.c" alt="" coords="743,95,933,136"/>
+</map>

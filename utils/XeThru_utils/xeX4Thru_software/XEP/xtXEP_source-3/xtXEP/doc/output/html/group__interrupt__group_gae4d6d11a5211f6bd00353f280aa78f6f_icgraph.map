@@ -1,0 +1,30 @@
+<map id="cpu_irq_restore" name="cpu_irq_restore">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga3a715175934fb8bf3c918f04ef0dae2b" title="Enables the USB host mode Start the ID pin management if the ID pin is available. ..." alt="" coords="175,5,373,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga9b45418a37c193dbcff7ef17040cfa30" title="Disables the USB host mode. " alt="" coords="188,56,360,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="193,107,355,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga1d4a9f98194cb255b2fcb6cdf8d83fb8" title="Allows to receive or send data on an endpoint. " alt="" coords="185,259,363,285"/>
+<area shape="rect" id="node6" href="$group__uhi__cdc__group__internal.xhtml#gab2e5918509ca2fa9edf6ef88a8dc62ce" title="Update the transfer endpoint IN (RX) Valid the reception of the previous transfer. " alt="" coords="432,208,573,235"/>
+<area shape="rect" id="node7" href="$group__uhi__cdc__group__internal.xhtml#ga19464aec764d1d849bd81da0a1f70a0e" title="Update the transfer endpoint OUT (TX) Start a new transfer on endpoint OUT, if a data must be send an..." alt="" coords="432,259,573,285"/>
+<area shape="rect" id="node8" href="$group__uhi__cdc__group__internal.xhtml#ga2d752930f3947081262a5ac64f05ac41" title="Manage the end of TX transfer. " alt="" coords="657,259,784,285"/>
+<area shape="rect" id="node9" href="$group__uhd__group.xhtml#gafb1043e05189c04ded956208eea3e2b5" title="USBH_HAL_ControlReqEnd" alt="" coords="177,360,371,387"/>
+<area shape="rect" id="node10" href="$group__uhd__group.xhtml#ga39a6506d44760a518b49d004574bc9c9" title="USBH_HAL_PipeOutReady" alt="" coords="180,411,368,437"/>
+<area shape="rect" id="node11" href="$group__uhi__cdc__group.xhtml#ga46844aa62368cdc348bc1a7f79f4d240" title="Puts a byte on CDC line The type int is used to support printf redirection from compiler LIB..." alt="" coords="221,461,327,488"/>
+<area shape="rect" id="node12" href="$group__uhi__cdc__group.xhtml#gab52b161c804210312659742b4138c9f9" title="Writes a RAM buffer on CDC line. " alt="" coords="207,512,341,539"/>
+<area shape="rect" id="node13" href="$group__udd__udphs__group.xhtml#ga9792d1899ae058e3984d6a622fe2ad42" title="udd_enable" alt="" coords="455,588,551,615"/>
+<area shape="rect" id="node14" href="$group__udd__udphs__group.xhtml#gab283432057b934e9d73ac9282d9b0f11" title="udd_disable" alt="" coords="225,664,323,691"/>
+<area shape="rect" id="node15" href="$group__udd__udphs__group.xhtml#ga7a7c0d9236c922c2af33c6702565a99f" title="udd_attach" alt="" coords="227,613,321,640"/>
+<area shape="rect" id="node16" href="$group__udd__udphs__group.xhtml#ga017ef5ea7626be258c24d345218976f9" title="udd_set_setup_payload" alt="" coords="187,715,361,741"/>
+<area shape="rect" id="node17" href="$group__udd__udphs__group.xhtml#ga09635ae8f24ffa6ea1dfa99a15b53e12" title="Reset control endpoint. " alt="" coords="206,765,342,792"/>
+<area shape="rect" id="node18" href="$group__udd__udphs__group.xhtml#gab1a4a5ecb3cd996de2d94d5e78d9ea9e" title="Reset control endpoint management. " alt="" coords="225,968,323,995"/>
+<area shape="rect" id="node19" href="$group__udd__udphs__group.xhtml#ga80494c67ce9cbd4ee8eb5e7fa5c19cd6" title="Managed reception of SETUP packet on control endpoint. " alt="" coords="632,968,809,995"/>
+<area shape="rect" id="node20" href="$group__udd__udphs__group.xhtml#gafdbf46264851b8d76cd12d68ca8188d3" title="Main interrupt routine for control endpoint. " alt="" coords="857,1007,992,1033"/>
+<area shape="rect" id="node21" href="$group__udd__udphs__group.xhtml#ga181ffd0cddf5130f55df6df8ca3f916c" title="Managed reception of IN packet on control endpoint. " alt="" coords="439,867,566,893"/>
+<area shape="rect" id="node22" href="$group__udd__udphs__group.xhtml#ga0a56388130817f0cd070dba04842740f" title="Managed reception of OUT packet on control endpoint. " alt="" coords="421,1069,584,1096"/>
+<area shape="rect" id="node23" href="$group__udd__udphs__group.xhtml#gab6a8abd5db8a94d6becc73b2b70dc748" title="Send a ZLP IN on control endpoint. " alt="" coords="197,1019,351,1045"/>
+<area shape="rect" id="node24" href="$group__udd__udphs__group.xhtml#ga3831d9da6e90060fc68e7a0b98e27591" title="Send a ZLP OUT on control endpoint. " alt="" coords="192,867,356,893"/>
+<area shape="rect" id="node25" href="$xtio__flash_8h.xhtml#af0f72b62a3aad8055338aa7512145281" title="xtio_flash_store_hw_data" alt="" coords="183,1171,365,1197"/>
+<area shape="rect" id="node26" href="$xtio__flash_8h.xhtml#a7f2f3c13481483a835cd068228d2857e" title="xtio_flash_read_hw_data" alt="" coords="185,1221,363,1248"/>
+<area shape="rect" id="node27" href="$xtio__flash_8c.xhtml#a2d0b9f16d57df52e21d6f8d08b8c7d48" title="Returns an ascii string of a cpu unique identifyer. " alt="" coords="185,1272,363,1299"/>
+<area shape="rect" id="node28" href="$xtio__uart_8h.xhtml#a3811371738f4f0a683fdfa3c0c9eac25" title="xtio_uart_receive" alt="" coords="209,1323,339,1349"/>
+<area shape="rect" id="node29" href="$xtio__usb_8h.xhtml#ac942f9c78a8f96aa6681c98966ce019c" title="xtio_usb_init" alt="" coords="223,1373,325,1400"/>
+</map>

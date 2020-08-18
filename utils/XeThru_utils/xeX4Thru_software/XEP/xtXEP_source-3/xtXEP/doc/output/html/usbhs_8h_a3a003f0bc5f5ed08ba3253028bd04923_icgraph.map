@@ -1,0 +1,5 @@
+<map id="USBHS_IsUsbHighSpeed" name="USBHS_IsUsbHighSpeed">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga946b2d10dfc497b6b24e602be6f3bd05" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="235,5,415,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="463,81,589,108"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga12b21dabf5465ef92208084d4f336186" title="USBH_HAL_ManageSof" alt="" coords="239,107,411,133"/>
+</map>

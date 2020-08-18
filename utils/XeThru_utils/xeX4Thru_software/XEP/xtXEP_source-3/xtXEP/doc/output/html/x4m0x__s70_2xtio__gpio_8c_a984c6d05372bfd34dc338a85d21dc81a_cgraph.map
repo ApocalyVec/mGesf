@@ -1,0 +1,4 @@
+<map id="xtio_get_level" name="xtio_get_level">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a58dee74fbb4ad804b56f971e48fc1e9c" title="xtio_decode_pin_id" alt="" coords="163,5,305,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1de94d9c6a29f9fa44e498e97edde1cc" title="Returns 1 if one or more PIO of the given Pin instance currently have a high level; otherwise returns..." alt="" coords="197,56,271,83"/>
+</map>

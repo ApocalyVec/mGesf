@@ -1,0 +1,8 @@
+<map id="SetConfiguration" name="SetConfiguration">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga946b2d10dfc497b6b24e602be6f3bd05" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="193,5,373,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gae148078e201da24b737306d7559bb967" title="Sets the current device configuration. " alt="" coords="196,56,371,83"/>
+<area shape="rect" id="node4" href="$group__usb__descriptor.xhtml#gab2cf48af0ca19522832310e3eed00490" title="Parses the given Configuration descriptor (followed by relevant interface, endpoint and class&#45;specifi..." alt="" coords="183,107,384,149"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#ga026b2622df8f7dfc8b8b510e76a05365" title="Configures an endpoint according to its Endpoint Descriptor. " alt="" coords="191,173,375,200"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga327985494ab08999fd60e046bfeffdf9" title="Indicates that the current configuration of the device has changed. " alt="" coords="198,225,369,266"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="234,291,333,317"/>
+</map>

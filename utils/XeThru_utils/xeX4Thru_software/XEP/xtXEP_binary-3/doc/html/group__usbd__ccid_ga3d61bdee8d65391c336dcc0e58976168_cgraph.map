@@ -1,0 +1,5 @@
+<map id="PCtoRDRICCClock" name="PCtoRDRICCClock">
+<area shape="rect" id="node2" href="$iso7816__4_8h.xhtml#a8f0798746d318dfcf228d85a315a4696" title="Restart clock ISO7816. " alt="" coords="187,5,349,32"/>
+<area shape="rect" id="node3" href="$iso7816__4_8h.xhtml#a154bd57425ad392e29ed0c05a7f659f4" title="Stop clock ISO7816. " alt="" coords="195,56,341,83"/>
+<area shape="rect" id="node4" href="$group__usbd__ccid.xhtml#ga3a42473fac7f1432de5358e5dc39e42c" title="Response Pipe, Bulk&#45;IN Messages Return the Slot Status to the host Answer to: PC_to_RDR_IccPowerOff P..." alt="" coords="195,107,341,133"/>
+</map>

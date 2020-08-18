@@ -1,0 +1,4 @@
+<map id="USBH_notify_connection" name="USBH_notify_connection">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="255,5,381,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga9b45418a37c193dbcff7ef17040cfa30" title="Disables the USB host mode. " alt="" coords="232,56,404,83"/>
+</map>

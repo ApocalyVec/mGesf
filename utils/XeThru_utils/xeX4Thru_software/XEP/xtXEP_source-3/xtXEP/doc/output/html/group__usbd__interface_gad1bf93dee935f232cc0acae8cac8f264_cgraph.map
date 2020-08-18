@@ -1,0 +1,6 @@
+<map id="USBD_ResetHandler" name="USBD_ResetHandler">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga72c29d7c5767f5af8df7ba1603a02619" title="Activate USB Device HW InterfaceEnable USB PeripheralEnable USB ClockEnable transceiver. " alt="" coords="221,5,373,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#gaa9aba8ccdad2272b61db48b43466043b" title="Reset endpoints and disable them. " alt="" coords="218,56,377,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#ga026b2622df8f7dfc8b8b510e76a05365" title="Configures an endpoint according to its Endpoint Descriptor. " alt="" coords="205,107,389,133"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#ga9e41562d2721787dbca41dd5bd574fb3" title="Invoked when the USB driver is reset. " alt="" coords="216,157,379,184"/>
+</map>

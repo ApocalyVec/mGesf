@@ -1,0 +1,6 @@
+<map id="xtio_irq_register_callback" name="xtio_irq_register_callback">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a58dee74fbb4ad804b56f971e48fc1e9c" title="xtio_decode_pin_id" alt="" coords="239,5,382,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="255,56,366,83"/>
+<area shape="rect" id="node4" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a9ebce9d081d4647c66519ba35ea64678" title="enable_io_irq" alt="" coords="257,107,364,133"/>
+<area shape="rect" id="node5" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#ac36e8f62d5db23e906da5111ef6c9bb7" title="xtio_pio_irq_handler" alt="" coords="236,157,385,184"/>
+</map>

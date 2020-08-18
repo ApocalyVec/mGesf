@@ -1,0 +1,16 @@
+<map id="Usb_audio" name="Usb_audio">
+<area shape="rect" id="node1" href="$group__usb__audio__ch__loc.xhtml" title="This section lists the possible spatial locations for audio channels. " alt="" coords="147,5,339,47"/>
+<area shape="rect" id="node2" href="$group__usb__audio__lock__delay.xhtml" title="This section lists the valid lock delay unit types. " alt="" coords="163,71,324,112"/>
+<area shape="rect" id="node3" href="$group__usb__audio__ctrl__sel.xhtml" title="This section lists the available control selectors for a Feature Unit request. " alt="" coords="146,136,341,177"/>
+<area shape="rect" id="node4" href="$group__usb__audio__stream__if.xhtml" title="This section lists the class, subclass and protocol codes that an Audio Streaming interface should di..." alt="" coords="164,201,323,243"/>
+<area shape="rect" id="node5" href="$group__usb__audio__desc__subtype.xhtml" title="This section lists the possible subtypes for USB audio&#45;specific descriptors. " alt="" coords="164,267,323,308"/>
+<area shape="rect" id="node6" href="$group__usb__audio__desc.xhtml" title="USB Audio device descriptor values. " alt="" coords="160,333,327,359"/>
+<area shape="rect" id="node7" href="$group__usb__audio__in__term.xhtml" title="This section lists the available types for an Input terminal. " alt="" coords="152,384,335,425"/>
+<area shape="rect" id="node8" href="$group__usb__audio__ch__ctrl.xhtml" title="This section lists the available controls for each channel of the audio interface. " alt="" coords="143,450,344,477"/>
+<area shape="rect" id="node9" href="$group__usb__audio__out__term.xhtml" title="This section lists the available types for an output terminal. " alt="" coords="146,501,341,543"/>
+<area shape="rect" id="node10" href="$group__usb__audio__request.xhtml" title="This section lists the codes of the existing Audio requests. " alt="" coords="151,567,336,594"/>
+<area shape="rect" id="node11" href="$group__usb__audio__class__ver.xhtml" title="This section lists the existing versions of the Audio class specification. " alt="" coords="151,618,335,645"/>
+<area shape="rect" id="node13" href="$group__usb__audio__ctrl__if.xhtml" title="This section lists the class, subclass and protocol codes that a USB Audio Control interface descript..." alt="" coords="143,669,343,695"/>
+<area shape="rect" id="node14" href="$group__usb__audio__desc__type.xhtml" title="This section lists the available types for USB audio&#45;specific descriptors. " alt="" coords="164,720,323,761"/>
+<area shape="rect" id="node15" href="$group__usb__audio__stream__subtype.xhtml" title="This section lists the possible subtypes for audio&#45;specific descriptor appended to an Audio Streaming..." alt="" coords="164,785,323,827"/>
+</map>

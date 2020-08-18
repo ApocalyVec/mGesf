@@ -1,0 +1,7 @@
+<map id="QSPID_DisableQspiRxChannel" name="QSPID_DisableQspiRxChannel">
+<area shape="rect" id="node2" href="$group__dmac__functions.xhtml#ga9538d464942bd9a66aa3a0c1a5146190" title="Disables XDMAC global interrupt. " alt="" coords="287,5,429,32"/>
+<area shape="rect" id="node3" href="$group__dmac__functions.xhtml#ga4139b3ae17620cc1d27afe86a7b6d7fe" title="Set software flush request on the relevant channel. " alt="" coords="264,56,452,83"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#ga6be5cec75618250adb227d7588ae7078" title="Stop DMA transfer. " alt="" coords="279,107,437,133"/>
+<area shape="rect" id="node5" href="$group__dmad__functions.xhtml#gaa0af49f87c84aaa20bee1f055d31ad2d" title="Set the callback function for xDMA channel transfer. " alt="" coords="282,157,434,184"/>
+<area shape="rect" id="node6" href="$group__dmad__functions.xhtml#ga2a3178c1d2615b7a4d7a0005662cdd89" title="Free the specified xDMA channel. " alt="" coords="280,208,436,235"/>
+</map>

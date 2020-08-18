@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverGetTxCenterFrequency" name="onMcpX4DriverGetTxCenterFrequency">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#ae7c3785d7b727134740f350df73ac1c6" title="x4driver_get_tx_center\l_frequency" alt="" coords="271,5,439,47"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a22a2633c98e35bd1a0e5fd8687de3adf" title="Dispatch message to hostcom asking to reply with byte array to host. " alt="" coords="252,71,457,112"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="252,136,457,177"/>
+</map>

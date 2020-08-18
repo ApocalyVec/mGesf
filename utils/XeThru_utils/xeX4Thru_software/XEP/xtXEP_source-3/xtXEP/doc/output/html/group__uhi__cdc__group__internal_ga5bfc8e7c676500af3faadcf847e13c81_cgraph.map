@@ -1,0 +1,7 @@
+<map id="uhi_cdc_rx_received" name="uhi_cdc_rx_received">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__internal.xhtml#ga6fe796ae4cca0fa45d96c36fb8aec5e7" title="Returns a port structure information. " alt="" coords="249,5,380,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gae32ed29203116712f786dbc913d96327" title="Returns the current micro start of frame number. " alt="" coords="473,81,701,108"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#gaee8af62530aefb6025ad2391361e8895" title="Returns the current Start Of Frame (SOF) number. " alt="" coords="490,165,685,192"/>
+<area shape="rect" id="node5" href="$group___u_s_b_h__group__interne.xhtml#ga27e6e1c865c634f55e0ac75a6b3a81b4" title="USBHS_SCB_InvalidateDCache\l_by_Addr" alt="" coords="204,158,425,199"/>
+<area shape="rect" id="node6" href="$group__uhi__cdc__group__internal.xhtml#gab2e5918509ca2fa9edf6ef88a8dc62ce" title="Update the transfer endpoint IN (RX) Valid the reception of the previous transfer. " alt="" coords="244,107,385,133"/>
+</map>

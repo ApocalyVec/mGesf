@@ -1,0 +1,4 @@
+<map id="xt_software_reset" name="xt_software_reset">
+<area shape="rect" id="node2" href="$xt__system_8c.xhtml#a389bc6b896aa270d8a1e473dd9c32ffc" title="Sets the cause of the coming software reset. " alt="" coords="191,5,343,32"/>
+<area shape="rect" id="node3" href="$rstc_8h.xhtml#a00dbcf459aed53f5f826d4b3a867018e" title="Resets the processor. " alt="" coords="188,56,347,83"/>
+</map>

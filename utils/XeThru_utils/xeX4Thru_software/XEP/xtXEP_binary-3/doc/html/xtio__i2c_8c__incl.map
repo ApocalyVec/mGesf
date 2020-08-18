@@ -1,0 +1,6 @@
+<map id="src/hal/x4m0x_s70/xtio_i2c.c" name="src/hal/x4m0x_s70/xtio_i2c.c">
+<area shape="rect" id="node2" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node3" href="$xtio__i2c_8h.xhtml" title="Local header file for xtio I2C functions. " alt="" coords="101,95,183,121"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="207,95,290,121"/>
+<area shape="rect" id="node7" href="$xtmemory_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="519,95,618,121"/>
+</map>

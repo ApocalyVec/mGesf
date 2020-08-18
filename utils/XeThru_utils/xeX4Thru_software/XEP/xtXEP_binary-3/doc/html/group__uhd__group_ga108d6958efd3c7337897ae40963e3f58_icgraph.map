@@ -1,0 +1,5 @@
+<map id="USBH_HAL_Suspend" name="USBH_HAL_Suspend">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gafb1043e05189c04ded956208eea3e2b5" title="USBH_HAL_ControlReqEnd" alt="" coords="218,5,411,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga85036d02a8ba359ad946070bbc8a4080" title="Enters a specific device in USB suspend mode Suspend the USB line or a port on USB hub..." alt="" coords="209,56,420,83"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group.xhtml#gaa8954a787d685fc5e64a46fe2bd23631" title="Suspends a USB line. " alt="" coords="254,107,375,133"/>
+</map>

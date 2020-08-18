@@ -1,0 +1,8 @@
+<map id="xfs_get_file_entry" name="xfs_get_file_entry">
+<area shape="rect" id="node2" href="$xfs_8h.xhtml#a7b8e251b6d5e10731cd7a9379e67b8be" title="Gets the size of file with given type and identifier. " alt="" coords="209,5,309,32"/>
+<area shape="rect" id="node3" href="$xfs_8h.xhtml#a1944fe2fe57fccee85079970b8f38432" title="Clears the flash area used to store file data. " alt="" coords="208,56,311,83"/>
+<area shape="rect" id="node4" href="$xfs_8h.xhtml#a31395d7a15d30dbd0e24e0f6800dccf2" title="Commits the file allocation and file contents to flash. " alt="" coords="380,107,501,133"/>
+<area shape="rect" id="node5" href="$xfs_8h.xhtml#a9fadb27c69014a6f606f00781d0c24e5" title="Writes the file data to flash at given offset. " alt="" coords="208,157,311,184"/>
+<area shape="rect" id="node6" href="$xfs_8h.xhtml#afcbd27cc31bf59c4ecf4520a56c871a6" title="Gets a pointer to the file data in flash. " alt="" coords="187,208,332,235"/>
+<area shape="rect" id="node7" href="$xfs_8h.xhtml#ad8bf4b21f48539701e1cbeb7a4001912" title="Copies the data from the file into the given buffer. " alt="" coords="195,259,324,285"/>
+</map>

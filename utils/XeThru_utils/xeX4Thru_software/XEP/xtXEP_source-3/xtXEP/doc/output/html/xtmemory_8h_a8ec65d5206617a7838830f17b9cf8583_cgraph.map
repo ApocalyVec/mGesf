@@ -1,0 +1,5 @@
+<map id="xtmemory_free_fast" name="xtmemory_free_fast">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#acf93e159c610831f349d07c00962f80d" title="Checks if fast memory is enabled. " alt="" coords="204,5,388,32"/>
+<area shape="rect" id="node3" href="$heap__4__fast_8h.xhtml#af8e545211df248353c6755b579b34b5b" title="vPortFree_fast" alt="" coords="239,56,353,83"/>
+<area shape="rect" id="node4" href="$xtmemory__xep_8c.xhtml#a7e516b79f5a147905446ff71d1fc98fb" title="Free memory allocated by xtmemory_malloc_default. " alt="" coords="211,107,381,133"/>
+</map>

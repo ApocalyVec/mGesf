@@ -1,0 +1,3 @@
+<map id="uhi_msc_scsi_read_capacity_sense" name="uhi_msc_scsi_read_capacity_sense">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a92c046c6e68ca0de12edffbb8313c8da" title="Decodes the result of scsi READ CAPACITY command Launches MODE SENSE 6 command. " alt="" coords="256,13,497,39"/>
+</map>

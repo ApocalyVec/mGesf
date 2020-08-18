@@ -1,0 +1,6 @@
+<map id="DBG_Configure" name="DBG_Configure">
+<area shape="rect" id="node2" href="$dbg__console_8c.xhtml#a7f949ce5c762badb554572a41e19e3fb" title="Outputs a character on the UART line. " alt="" coords="189,5,299,32"/>
+<area shape="rect" id="node3" href="$dbg__console_8c.xhtml#a2eef99b5de5b33158b69f38c0bdfd655" title="Input a character from the UART line. " alt="" coords="189,56,299,83"/>
+<area shape="rect" id="node4" href="$dbg__console_8c.xhtml#a7585af50e201cf7f0d6bb1fba96b3915" title="Check if there is Input from UART line. " alt="" coords="183,107,305,133"/>
+<area shape="rect" id="node5" href="$trace_8h.xhtml#a4b7f867e8654d23d7f3a1c9a83e19cf5" title="Trace level can be set at applet initialization. " alt="" coords="172,157,316,184"/>
+</map>

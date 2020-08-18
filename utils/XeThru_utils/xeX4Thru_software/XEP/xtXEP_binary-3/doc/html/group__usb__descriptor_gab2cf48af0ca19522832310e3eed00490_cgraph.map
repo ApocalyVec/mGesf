@@ -1,0 +1,6 @@
+<map id="USBConfigurationDescriptor_Parse" name="USBConfigurationDescriptor_Parse">
+<area shape="rect" id="node2" href="$group__usb__descriptor.xhtml#ga7d438a7ea40c7d7c62111d5a0aa1a7c2" title="Returns the total length of a configuration, i.e. " alt="" coords="255,5,456,47"/>
+<area shape="rect" id="node3" href="$group__usb__descriptor.xhtml#ga0679b0b034bd64c70d048279c6058a48" title="Returns a pointer to the descriptor right after the given one, when parsing a Configuration descripto..." alt="" coords="273,71,438,112"/>
+<area shape="rect" id="node4" href="$group__usb__descriptor.xhtml#ga1b77498ff50ea3c78ee7aae9e6c60bcc" title="Returns the length of a descriptor. " alt="" coords="504,100,669,141"/>
+<area shape="rect" id="node5" href="$group__usb__descriptor.xhtml#ga64ae6d39178b20742ae885f9e93b056c" title="Returns the type of a descriptor. " alt="" coords="273,188,438,229"/>
+</map>

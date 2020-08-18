@@ -1,0 +1,12 @@
+<map id="USBH_HAL_ConfigureControlPipe" name="USBH_HAL_ConfigureControlPipe">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#aca1a73918c77f0aaa82395b55d760ae8" title="Gets USB host interrupt status. " alt="" coords="305,5,491,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a10f00de072a1cbb4c14e9d125368f3ff" title="Gets USB host interrupt status. " alt="" coords="310,56,486,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#ad7321df66563d27e92e3eee190f5f328" title="Gets USB host interrupt status. " alt="" coords="315,107,481,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#af33de4a77714a4669ec1d6c52847ce36" title="Gets USB host interrupt status. " alt="" coords="297,157,499,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#aedf0c19282a4ab894880c582f9cc4706" title="Gets USB host interrupt status. " alt="" coords="314,208,482,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a80888f7cf448edbebfc2cb99264e0642" title="Gets USB host interrupt status. " alt="" coords="311,259,485,285"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#a4aabd40a9718b4bab7036aa5439a266f" title="Gets USB host interrupt status. " alt="" coords="308,309,488,336"/>
+<area shape="rect" id="node9" href="$usbhs_8h.xhtml#a2d1339dc3607194872a33cffce18e305" title="USBHS_HostSetAddr" alt="" coords="319,360,477,387"/>
+<area shape="rect" id="node10" href="$usbhs_8h.xhtml#acd60bcdb7e5420ac4cfb8b457838f9ba" title="Gets USB host interrupt status. " alt="" coords="288,411,508,437"/>
+<area shape="rect" id="node11" href="$usbhs_8h.xhtml#abe033170285572938d1ed3fbb01e9c3e" title="Gets USB host interrupt status. " alt="" coords="302,461,494,488"/>
+</map>

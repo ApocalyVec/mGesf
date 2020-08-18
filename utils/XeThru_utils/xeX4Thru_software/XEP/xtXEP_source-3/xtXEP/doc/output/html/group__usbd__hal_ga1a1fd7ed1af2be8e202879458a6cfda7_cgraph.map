@@ -1,0 +1,12 @@
+<map id="USBD_HAL_Halt" name="USBD_HAL_Halt">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga5e6b01495743675aae106e51aee3d1e3" title="Handles a completed transfer on the given endpoint, invoking the configured callback if any..." alt="" coords="209,5,373,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#aa8d5c4b9a4a142b1c587fcfaa7532596" title="Check if given endpoint&#39;s bank is free. " alt="" coords="219,56,364,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#ae9bf1bccb73956ec13630d2e60a8c5ad" title="Enables an interrupt type for a given endpoint. " alt="" coords="229,107,354,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#a5e6709db254f3275a10b9725847c95a3" title="Enables an interrupt type for a given endpoint. " alt="" coords="216,157,367,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#af318fefb03c995978a740a8b1733aaa0" title="Enable or disable Auto switch of banks. " alt="" coords="180,208,403,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a6e9251af935e4867afa52cd306e8c699" title="Enables an interrupt type for a given endpoint. " alt="" coords="202,259,381,285"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#ad1cea33281f84fba93b0b4ecd554ce3a" title="Enables DMA interrupt for a given endpoint. " alt="" coords="201,309,382,336"/>
+<area shape="rect" id="node9" href="$usbhs_8h.xhtml#aaefdcd5f8be021f6ebffcbb4e7630079" title="Enables interrupt for a given endpoint. " alt="" coords="216,360,367,387"/>
+<area shape="rect" id="node10" href="$usbhs_8h.xhtml#a53c55fa48fbb95b2e0f67b58ca4cde49" title="Check for interrupt types enabled for a given endpoint. " alt="" coords="211,411,372,437"/>
+<area shape="rect" id="node11" href="$usbhs_8h.xhtml#aed77f2f7b0383514691381d53de5605f" title="Disables an interrupt type for a given endpoint. " alt="" coords="200,461,383,488"/>
+</map>

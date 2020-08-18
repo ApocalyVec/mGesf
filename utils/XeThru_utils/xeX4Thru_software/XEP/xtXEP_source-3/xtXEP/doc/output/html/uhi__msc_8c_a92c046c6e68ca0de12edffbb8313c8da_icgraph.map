@@ -1,0 +1,3 @@
+<map id="uhi_msc_scsi_read_capacity_done" name="uhi_msc_scsi_read_capacity_done">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ac2339d091ff134f06cf5f9cbb0185cb3" title="Sends the CBW packet of the scsi READ CAPACITY command. " alt="" coords="295,5,497,32"/>
+</map>

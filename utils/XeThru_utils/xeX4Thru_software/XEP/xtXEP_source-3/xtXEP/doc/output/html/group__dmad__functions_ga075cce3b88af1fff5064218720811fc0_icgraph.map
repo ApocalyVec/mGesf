@@ -1,0 +1,13 @@
+<map id="XDMAD_ConfigureTransfer" name="XDMAD_ConfigureTransfer">
+<area shape="rect" id="node2" href="$afe__dma_8c.xhtml#a32e626b4b8424ca6836f3bb0b49b58af" title="Configure the DMA source and destination with Linker List mode. " alt="" coords="255,5,417,32"/>
+<area shape="rect" id="node3" href="$dac__dma_8c.xhtml#aab4d2b353eabefb15284025801bfa654" title="Configure the DMA source and destination with Linker List mode. " alt="" coords="253,56,419,83"/>
+<area shape="rect" id="node4" href="$group__mcid__functions.xhtml#ga745dbddddd85ddbe2c71a9df4c3e38af" title="HSMCI DMA R/W. " alt="" coords="261,107,411,133"/>
+<area shape="rect" id="node5" href="$qspi__dma_8c.xhtml#acb08044877face91ecbeb7e562e15260" title="Configures the DMA for QSPI. " alt="" coords="243,157,429,184"/>
+<area shape="rect" id="node6" href="$spi__dma_8c.xhtml#a493ba599c88332870f21f381a5193055" title="Configure the DMA source and destination with Linker List mode. " alt="" coords="252,208,420,235"/>
+<area shape="rect" id="node7" href="$twid_8c.xhtml#a7ca5a6b66d98ca3e870492fe9d2dc5eb" title="Configure xDMA write linker list for TWI transfer. " alt="" coords="241,259,431,285"/>
+<area shape="rect" id="node8" href="$twid_8c.xhtml#a0125a71c25953d95a1e0382402a40ad8" title="Configure xDMA read linker list for TWI transfer. " alt="" coords="241,309,431,336"/>
+<area shape="rect" id="node9" href="$uart__dma_8c.xhtml#a4b0eba333355f3b94f077336b2488a1b" title="Configure the UART Rx DMA mode. " alt="" coords="255,360,417,387"/>
+<area shape="rect" id="node10" href="$uart__dma_8c.xhtml#af00fa029eee33daf8645cedf2d8ef930" title="Configure the UART Tx DMA mode. " alt="" coords="255,411,417,437"/>
+<area shape="rect" id="node11" href="$usart__dma_8c.xhtml#a850d3378fd0a34d99a0ce5888a83a8eb" title="Configure the USART Rx DMA Destination with Linker List mode. " alt="" coords="269,461,403,488"/>
+<area shape="rect" id="node12" href="$usart__dma_8c.xhtml#a9c980b56e34d2c15f6b0f179b0086313" title="Configure the USART tx DMA source with Linker List mode. " alt="" coords="269,512,403,539"/>
+</map>

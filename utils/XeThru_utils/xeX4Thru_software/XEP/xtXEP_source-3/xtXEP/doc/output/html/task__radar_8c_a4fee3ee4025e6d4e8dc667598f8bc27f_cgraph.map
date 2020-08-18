@@ -1,0 +1,7 @@
+<map id="x4driver_enable_ISR" name="x4driver_enable_ISR">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a90b22ca935e03d989e5572a9aa8bf29c" title="Register interrupt callback function. " alt="" coords="204,5,387,32"/>
+<area shape="rect" id="node3" href="$task__radar_8c.xhtml#add6504b76a7644bf25db4e111843fe7a" title="x4driver_X4_interrupt\l_notify_data_ready" alt="" coords="216,57,375,98"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a8f8214e214e26de85a41a1b0af1fc6d7" title="Unregister interrupt handler. " alt="" coords="225,122,365,163"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml#a9c169f60838175920c2f9ab467d020c1" title="Set mode for specified IO pin. " alt="" coords="224,188,367,215"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml#a4f087fae5e8098b3b9c8f9df124b7f4e" title="Set direction of specified IO pin. " alt="" coords="228,239,363,265"/>
+</map>

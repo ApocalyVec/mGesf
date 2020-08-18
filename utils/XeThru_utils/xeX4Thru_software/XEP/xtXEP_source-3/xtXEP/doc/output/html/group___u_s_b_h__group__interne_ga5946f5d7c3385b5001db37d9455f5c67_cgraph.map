@@ -1,0 +1,7 @@
+<map id="USBH_enumeration_step5" name="USBH_enumeration_step5">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga83779ae5393f2318b1eb0856f583b637" title="Disables an endpoint or all endpoint of a device. " alt="" coords="763,41,917,67"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gad9e15307f67bf17a172ce88dc52ff6a3" title="Configures and enables a control endpoint 0. " alt="" coords="245,41,480,67"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga2b5b29e1ddaf4c35509ac444fa69a157" title="Manage error during device enumeration. " alt="" coords="528,91,715,118"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga11038bdbac3a23c70a7b7f5abcecc8ba" title="Add a setup request in the control endpoint setup queue. " alt="" coords="282,142,443,169"/>
+<area shape="rect" id="node6" href="$group___u_s_b_h__group__interne.xhtml#gac4b4282cf6ff893f72b0f3eec04e5f88" title="Device enumeration step 6 End of Get device descriptor request. " alt="" coords="267,193,459,219"/>
+</map>

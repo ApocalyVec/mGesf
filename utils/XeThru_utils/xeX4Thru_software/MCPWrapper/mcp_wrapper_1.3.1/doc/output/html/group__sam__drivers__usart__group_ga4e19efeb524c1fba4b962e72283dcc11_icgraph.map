@@ -1,0 +1,4 @@
+<map id="usart_reset_status" name="usart_reset_status">
+<area shape="rect" id="node2" href="$freertos__usart__serial_8c.xhtml#ad44530befbc1c8c93942c53ef729557a" title="local_usart_handler" alt="" coords="184,5,319,32"/>
+<area shape="rect" id="node3" href="$group__group__sam__drivers__usart.xhtml#ga6cb84f0297ddca62d4077f616efa5c5b" title="Reset the USART and disable TX and RX. " alt="" coords="208,56,295,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GMACB_FindValidPhy" name="GMACB_FindValidPhy">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#gabf89fc2e0cb8e9ec7e0b99a5a14cae50" title="Enable MDI with PHY. " alt="" coords="210,5,351,32"/>
+<area shape="rect" id="node3" href="$gmacb__phy_8c.xhtml#add851348aa8e6c519d4efda3e53d025d" title="Read PHY register. " alt="" coords="215,56,346,83"/>
+<area shape="rect" id="node4" href="$group__gmac__defines.xhtml#ga6013c7006f83c59d4895a92e3f473804" title="Enable MDI with PHY. " alt="" coords="208,107,353,133"/>
+</map>

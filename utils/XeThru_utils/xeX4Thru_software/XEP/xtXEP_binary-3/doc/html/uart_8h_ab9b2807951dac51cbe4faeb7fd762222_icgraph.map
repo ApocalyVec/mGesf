@@ -1,0 +1,4 @@
+<map id="UART_SetReceiverEnabled" name="UART_SetReceiverEnabled">
+<area shape="rect" id="node2" href="$uart__dma_8c.xhtml#a67f71ddf9448a9404427f880e3063664" title="This function initialize the appropriate DMA channel for Rx channel of UART. " alt="" coords="243,5,433,32"/>
+<area shape="rect" id="node3" href="$uart__dma_8c.xhtml#a2e608c15e9d2dff4ca4e98f8ee417ed4" title="This function disables the appropriate DMA channel for Rx channel of USART. " alt="" coords="241,56,435,83"/>
+</map>

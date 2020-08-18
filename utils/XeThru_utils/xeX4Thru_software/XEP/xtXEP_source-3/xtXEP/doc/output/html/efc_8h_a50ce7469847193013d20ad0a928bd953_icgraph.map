@@ -1,0 +1,4 @@
+<map id="EFC_ComputeAddress" name="EFC_ComputeAddress">
+<area shape="rect" id="node2" href="$flashd_8c.xhtml#a8c573fa8b3e1dfcf111bd50440353d5f" title="Computes the lock range associated with the given address range. " alt="" coords="217,5,368,32"/>
+<area shape="rect" id="node3" href="$flashd_8c.xhtml#aaf0c7fb937ecf006c011ab50928ef921" title="Writes a data buffer in the internal flash. " alt="" coords="237,56,349,83"/>
+</map>

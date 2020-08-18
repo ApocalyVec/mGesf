@@ -1,0 +1,5 @@
+<map id="X4Driver_t" name="X4Driver_t">
+<area shape="rect" id="node2" href="$struct_x4_driver_lock__t.xhtml" title="Abstract lock struct to allow for platform independent configuration of Locks. " alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node3" href="$struct_x4_driver_timer__t.xhtml" title="Abstract timer struct to allow for platform independent configuration of Timers. " alt="" coords="146,5,270,32"/>
+<area shape="rect" id="node4" href="$struct_x4_driver_callbacks__t.xhtml" title="Collection of callbacks, used to configure interact with the X4 chip. " alt="" coords="294,5,442,32"/>
+</map>

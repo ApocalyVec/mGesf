@@ -1,0 +1,7 @@
+<map id="task_xethru_init" name="task_xethru_init">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="168,5,331,32"/>
+<area shape="rect" id="node3" href="$queue_8h.xhtml#ab3b70d2ace0dea373bc8057dc2718046" title="xQueueCreate" alt="" coords="197,56,302,83"/>
+<area shape="rect" id="node4" href="$task__xethru_8c.xhtml#a06f1ac139b4394bb6f267fdcbec56add" title="xethru_usart_tx_task" alt="" coords="177,107,321,133"/>
+<area shape="rect" id="node5" href="$task__xethru_8c.xhtml#a90fd04986fde4c34053b332424000bca" title="xethru_usart_rx_task" alt="" coords="177,157,321,184"/>
+<area shape="rect" id="node6" href="$task__xethru_8c.xhtml#ab838415e708ffc71189fcdceb057dac5" title="xethru_task" alt="" coords="204,208,295,235"/>
+</map>

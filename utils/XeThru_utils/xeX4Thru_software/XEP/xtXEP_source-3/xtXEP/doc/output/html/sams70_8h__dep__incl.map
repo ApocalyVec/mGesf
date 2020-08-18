@@ -1,0 +1,6 @@
+<map id="src/hal/x4m0x_s70/libraries/libchip/include/sams70/sams70.h" name="src/hal/x4m0x_s70/libraries/libchip/include/sams70/sams70.h">
+<area shape="rect" id="node2" href="$libraries_2libboard_2resources___x4_m0x_2system__sams70_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libboard/resources_X4M0x\l/system_sams70.c" alt="" coords="5,109,200,165"/>
+<area shape="rect" id="node3" href="$startup__sams70_8c.xhtml" title="Interrupt handler definitions and start up code. " alt="" coords="225,117,415,158"/>
+<area shape="rect" id="node4" href="$system__sams70_8c.xhtml" title="src/hal/x4m0x_s70/system\l_sams70.c" alt="" coords="440,117,632,158"/>
+<area shape="rect" id="node5" href="$xt__system_8c.xhtml" title="System level hardware functionality. " alt="" coords="656,117,813,158"/>
+</map>

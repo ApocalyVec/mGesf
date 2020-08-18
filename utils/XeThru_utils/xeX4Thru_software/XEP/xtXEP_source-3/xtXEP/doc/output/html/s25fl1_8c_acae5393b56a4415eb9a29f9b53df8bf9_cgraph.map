@@ -1,0 +1,5 @@
+<map id="S25FL1D_IsBusy" name="S25FL1D_IsBusy">
+<area shape="rect" id="node2" href="$qspi__dma_8h.xhtml#a4dd4aa5fce406ddb2b215df6397142b8" title="Check if the QSPI driver is busy. " alt="" coords="208,5,319,32"/>
+<area shape="rect" id="node3" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="239,56,287,83"/>
+<area shape="rect" id="node4" href="$s25fl1_8c.xhtml#a300f42045ccdeb44839f77a260052bcb" title="Reads and returns the status register of the serial flash. " alt="" coords="180,107,347,133"/>
+</map>

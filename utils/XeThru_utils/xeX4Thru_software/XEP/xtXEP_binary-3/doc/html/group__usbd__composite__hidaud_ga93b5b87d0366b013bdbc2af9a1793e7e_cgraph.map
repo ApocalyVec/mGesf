@@ -1,0 +1,7 @@
+<map id="HIDAUDDDriver_Initialize" name="HIDAUDDDriver_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="255,5,383,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#ga11868145aba27b8ca63ab6395439cb0d" title="Initializes a USBDDriver instance with a list of descriptors. " alt="" coords="241,56,397,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid__key.xhtml#ga56ad6774014b879f9a4828e528508cbf" title="Initializes the HID keyboard device driver SW. " alt="" coords="233,107,405,133"/>
+<area shape="rect" id="node5" href="$group__usbd__aud__fun.xhtml#gafe0d2176139fc21ee46d2b87c9269b96" title="Initializes an USB audio speaker device driver, as well as the underlying USB controller. " alt="" coords="233,157,405,184"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga1fd3982402055e37aa879c199e0b7fee" title="Initializes the USB driver. " alt="" coords="276,208,363,235"/>
+</map>

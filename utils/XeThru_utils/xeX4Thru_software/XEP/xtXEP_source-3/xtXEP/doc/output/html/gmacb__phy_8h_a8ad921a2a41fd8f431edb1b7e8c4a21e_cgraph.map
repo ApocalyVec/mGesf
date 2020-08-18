@@ -1,0 +1,9 @@
+<map id="GMACB_InitPhy" name="GMACB_InitPhy">
+<area shape="rect" id="node2" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="194,5,305,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a2d4d88110e7ab4fc0732df6d35289e06" title="Sets a low output level on all the PIOs defined in the given Pin instance. " alt="" coords="208,56,291,83"/>
+<area shape="rect" id="node4" href="$timetick_8h.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="225,107,273,133"/>
+<area shape="rect" id="node5" href="$pio_8h.xhtml#aac9a3cac1a51b45f82b30bd7a29826a6" title="Sets a high output level on all the PIOs defined in the given Pin instance. " alt="" coords="213,157,285,184"/>
+<area shape="rect" id="node6" href="$group__gmac__defines.xhtml#ga56d0b7353ef8be740202f6e5a902ca6a" title="Set MDC clock according to current board clock. " alt="" coords="174,208,325,235"/>
+<area shape="rect" id="node7" href="$gmacb__phy_8c.xhtml#ae51ab44e9f86bac91bc556a27ce6ffd0" title="Find a valid PHY Address (from 0 to 31). " alt="" coords="172,259,327,285"/>
+<area shape="rect" id="node8" href="$gmacb__phy_8c.xhtml#a9ba3ad1335880787330bf3c859c5b32e" title="Issue a SW reset to reset all registers of the PHY. " alt="" coords="182,309,317,336"/>
+</map>

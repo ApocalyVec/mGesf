@@ -1,0 +1,219 @@
+% Latex header for doxygen 1.8.7
+%\documentclass[twoside]{book}
+\documentclass{book}
+
+% Packages required by doxygen
+\usepackage[a4paper,top=2.0cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fixltx2e}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+\usepackage{novelda_user_guide}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+%\usepackage{courier}
+% Use helvetica font instead of times roman
+\usepackage{helvet}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2cm}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+
+% Variables from Doxygen config file
+\newcommand{\dateGenerated}{$date}
+%\newcommand{\projectName}{{\StrSubstitute{$projectname}{_}{\_}}}
+\newcommand{\projectName}{$projectname}
+\newcommand{\projectBrief}{$projectbrief}
+%\newcommand{\projectRevision}{{\StrSubstitute{$projectnumber}{.}{\.}}}
+\newcommand{\projectRevision}{{$projectnumber}}
+
+\definecolor{lightcyan}{cmyk}{0.2,0,0,0}
+% Redefine lightgrey to be light cyan
+\definecolor{lightgray}{cmyk}{0.2,0,0,0}
+
+
+\definecolor{xethru_violet}{HTML}{7D47B2}
+
+% Setup fancy headings
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+
+%\newcommand{\clearemptydoublepage}{%
+%  \newpage{\pagestyle{empty}\cleardoublepage}%
+%}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+%\fancyhead[LE]{\fancyplain{}{\bfseries\textcolor{xethru_violet}{\thepage}}}
+%\fancyhead[CE]{\fancyplain{}{}}
+%\fancyhead[RE]{\fancyplain{}{\bfseries\textcolor{xethru_violet}{\leftmark}}}
+%\fancyhead[LO]{\fancyplain{}{\bfseries\textcolor{xethru_violet}{\rightmark}}}
+%\fancyhead[CO]{\fancyplain{}{}}
+%\fancyhead[RO]{\fancyplain{}{\bfseries\textcolor{xethru_violet}{\thepage}}}
+%\fancyfoot[LE]{\fancyplain{}{\bfseries\scriptsize \textcolor{xethru_violet}{\dateGenerated{}} }}
+%\fancyfoot[CE]{\fancyplain{}{}}
+%\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize \textcolor{xethru_violet}{\projectName{}} }}
+%\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize \textcolor{xethru_violet}{\projectName{}} }}
+%\fancyfoot[CO]{\fancyplain{}{}}
+%\fancyfoot[RO]{\fancyplain{}{\bfseries\scriptsize \textcolor{xethru_violet}{\dateGenerated{}} }}
+
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt} % Remove horisontal line in header
+%\fancyhead[LE,LO]{\fancyplain{}{\textcolor{xethru_violet}{\includegraphics[height=23pt, trim=0pt 0pt 241.8pt 0pt,keepaspectratio,clip]{novelda_logo_with_line.pdf}\vspace{-4.0pt}}}}
+\fancyhead[LE,LO]{\fancyplain{}{\textcolor{xethru_violet}{\includegraphics[height=23pt, trim=0pt 0pt 241.8pt 0pt,keepaspectratio,clip]{novelda_logo_with_line.pdf}}}}
+\fancyhead[CE,CO]{\fancyplain{}{\textcolor{xethru_violet}{ }}}
+\fancyhead[RE,RO]{\fancyplain{}{\textcolor{xethru_violet}{\projectName{}\\ \vspace{3pt}\leftmark}}}
+\fancyfoot[LE,LO]{\fancyplain{}{\textcolor{xethru_violet}{Novelda Restricted\\www.novelda.no} }}
+\fancyfoot[CE,CO]{\fancyplain{}{\textcolor{xethru_violet}{Rev. \projectRevision{}\\ \ Copyright\ \copyright\ \the\year\ Novelda AS}}}
+%\fancyfoot[RE,RO]{\fancyplain{}{s\textcolor{xethru_violet}{\dateGenerated{}\\ Page \thepage\ of \lastpageref{LastPage}} }}
+\fancyfoot[RE,RO]{\fancyplain{}{\textcolor{xethru_violet}{\dateGenerated{}\\ Page \thepage\ of \pageref{LastPage}} }}
+
+\fancypagestyle{plain}{%
+ \fancyhf{} % clear all header and footer fields
+ \renewcommand{\headrulewidth}{0pt} % Remove horisontal line in header
+% \fancyhead[LE,LO]{\fancyplain{}{\textcolor{xethru_violet}{\includegraphics[height=23pt, trim=0pt 0pt 241.8pt 0pt,keepaspectratio,clip]{novelda_logo_with_line.pdf}\vspace{-4.0pt}}}}
+ \fancyhead[LE,LO]{\fancyplain{}{\textcolor{xethru_violet}{\includegraphics[height=23pt, trim=0pt 0pt 241.8pt 0pt,keepaspectratio,clip]{novelda_logo_with_line.pdf}}}}
+ \fancyhead[CE,CO]{\fancyplain{}{\textcolor{xethru_violet}{ }}}
+ \fancyhead[RE,RO]{\fancyplain{}{\textcolor{xethru_violet}{\projectName{}\\ \vspace{1mm}\leftmark}}}
+ \fancyfoot[LE,LO]{\fancyplain{}{\textcolor{xethru_violet}{Novelda Restricted\\www.novelda.no} }}
+ \fancyfoot[CE,CO]{\fancyplain{}{\textcolor{xethru_violet}{Rev. \projectRevision{}\\ \ Copyright\ \copyright\ \the\year\ Novelda AS}}}
+ %%\fancyfoot[RE,RO]{\fancyplain{}{s\textcolor{xethru_violet}{\dateGenerated{}\\ Page \thepage\ of \lastpageref{LastPage}} }}
+ \fancyfoot[RE,RO]{\fancyplain{}{\textcolor{xethru_violet}{\dateGenerated{}\\ Page \thepage\ of \pageref{LastPage}} }}
+}
+
+%\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+%\fancyhead[CE]{\fancyplain{}{}}
+%\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+%\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+%\fancyhead[CO]{\fancyplain{}{}}
+%\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+%\fancyfoot[LE]{\fancyplain{}{}}
+%\fancyfoot[CE]{\fancyplain{}{}}
+%\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generated on Fri Jul 4 2014 12\+:45\+:21 for My Project by Doxygen }}
+%\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generated on Fri Jul 4 2014 12\+:45\+:21 for My Project by Doxygen }}
+%\fancyfoot[CO]{\fancyplain{}{}}
+%\fancyfoot[RO]{\fancyplain{}{}}
+%\renewcommand{\footrulewidth}{0.4pt}
+%\renewcommand{\chaptermark}[1]{%
+  %\markboth{#1}{}%
+%}
+%\renewcommand{\sectionmark}[1]{%
+  %\markright{\thesection\ #1}%
+%}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{arabic}
+\begin{titlepage}
+\includegraphics[width=70mm]{novelda_logo_negative.pdf}
+\vspace*{4cm}
+\begin{center}
+\vspace*{1cm}
+\vspace*{1cm}
+{\Large \projectName{}}\\
+\vspace*{1cm}
+{\Large \projectBrief{}}\\
+\vspace*{1cm}
+{\Large Revision \projectRevision{}}\\
+\vspace*{1cm}
+Copyright \copyright \ $year Novelda AS\\
+\vspace*{2cm}
+{\small Generated by Doxygen $doxygenversion}\\
+\vspace*{0.5cm}
+{\small $date}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\setlength{\headheight}{28pt}
+\hypersetup{pageanchor=true,citecolor=xethru_violet,linkcolor=xethru_violet}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---

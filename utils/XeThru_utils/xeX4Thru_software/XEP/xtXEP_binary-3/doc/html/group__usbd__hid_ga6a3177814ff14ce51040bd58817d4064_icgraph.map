@@ -1,0 +1,5 @@
+<map id="HIDDFunction_RequestHandler" name="HIDDFunction_RequestHandler">
+<area shape="rect" id="node2" href="$group__usbd__hid__key.xhtml#gae283b3485bee22fa5b4baeea5209b570" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="279,5,502,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid__mouse.xhtml#gafd3d4a6e915457a651d2badf26a7920f" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="269,56,512,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="319,107,462,149"/>
+</map>

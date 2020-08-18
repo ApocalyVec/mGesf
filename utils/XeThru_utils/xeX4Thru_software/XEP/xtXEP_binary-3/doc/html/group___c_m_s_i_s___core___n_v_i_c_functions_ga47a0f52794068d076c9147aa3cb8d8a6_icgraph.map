@@ -1,0 +1,8 @@
+<map id="NVIC_GetActive" name="NVIC_GetActive">
+<area shape="rect" id="node2" href="$uart__dma_8c.xhtml#a8b463d15a44a1b7058c8d1f259c84fcf" title="Initializes the UartDma structure and the corresponding UART &amp; DMA . " alt="" coords="209,5,342,32"/>
+<area shape="rect" id="node3" href="$uart__dma_8c.xhtml#a67f71ddf9448a9404427f880e3063664" title="This function initialize the appropriate DMA channel for Rx channel of UART. " alt="" coords="181,56,370,83"/>
+<area shape="rect" id="node4" href="$uart__dma_8c.xhtml#a88e980ec7908f8ac5ca57b1d0028a987" title="This function initialize the appropriate DMA channel for Tx channel of UART. " alt="" coords="181,107,369,133"/>
+<area shape="rect" id="node5" href="$usart__dma_8c.xhtml#a0f760ac1d4ebf29b670399b45ba1ee33" title="Initializes the USARTDma structure and the corresponding USART &amp; DMA . " alt="" coords="204,157,347,184"/>
+<area shape="rect" id="node6" href="$usart__dma_8c.xhtml#a7714e0765368904f8f43f1fc0ccb63fd" title="This function initialize the appropriate DMA channel for Rx channel of USART. " alt="" coords="176,208,375,235"/>
+<area shape="rect" id="node7" href="$usart__dma_8c.xhtml#add65a720aa37b5f7d95df156b3fb06e7" title="This function initialize the appropriate DMA channel for Tx channel of USART. " alt="" coords="177,259,374,285"/>
+</map>

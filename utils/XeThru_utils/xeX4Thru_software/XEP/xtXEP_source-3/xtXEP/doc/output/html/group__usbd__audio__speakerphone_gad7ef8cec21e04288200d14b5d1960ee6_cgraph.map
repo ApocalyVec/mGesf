@@ -1,0 +1,6 @@
+<map id="AUDDSpeakerPhone_RequestHandler" name="AUDDSpeakerPhone_RequestHandler">
+<area shape="rect" id="node2" href="$group__usb__request.xhtml#ga5c2f01b3ad2dbd22cce9b97aa27ca975" title="Returns the type of the given request. " alt="" coords="277,5,485,32"/>
+<area shape="rect" id="node3" href="$group__usb__request.xhtml#gace388a4d862a1a39dfce506fe4189e82" title="Returns the request code of the given request. " alt="" coords="265,56,496,83"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga489f97d62376e824385055765a31e17b" title="Handle the SET_CUR request. " alt="" coords="322,107,439,133"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speakerphone.xhtml#gaa2c1c8f41b4dbb0494310c2bd60aafaf" title="Handle the GET_CUR request. " alt="" coords="321,157,440,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="UartDma" name="UartDma">
+<area shape="rect" id="node2" href="$struct_uart_channel.xhtml" title="usart Transfer Request prepared by the application upper layer. " alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node3" href="$struct___xdmad.xhtml" title="DMA driver instance. " alt="" coords="133,5,207,32"/>
+<area shape="rect" id="node4" href="$struct_uart.xhtml" title="Uart hardware registers. " alt="" coords="233,5,283,32"/>
+</map>

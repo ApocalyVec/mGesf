@@ -1,0 +1,9 @@
+<map id="process_float" name="process_float">
+<area shape="rect" id="node2" href="$protocol__helpers_8h.xhtml#aeb519daf7106b2a3d9e5edde3c0a3e2c" title="process_floats" alt="" coords="209,5,315,32"/>
+<area shape="rect" id="node3" href="$protocol_8h.xhtml#a01fa3e6aef81d73733f628e00eccf283" title="createSetDetectionZoneCommand" alt="" coords="152,56,372,83"/>
+<area shape="rect" id="node4" href="$protocol_8h.xhtml#ad414c193855f5a1769a83a9f45c4cbed" title="createConfigSetFloatCommand" alt="" coords="161,107,363,133"/>
+<area shape="rect" id="node5" href="$protocol_8h.xhtml#af9cc82164eec358fe7abb70af530b782" title="createSetFloatCommand" alt="" coords="179,157,345,184"/>
+<area shape="rect" id="node6" href="$protocol_8h.xhtml#aea8afa156cc70e9907027e10991b774f" title="createX4DriverSetFpsCommand" alt="" coords="159,208,365,235"/>
+<area shape="rect" id="node7" href="$protocol_8h.xhtml#a39dd3772d100ef1c87f980a69c718310" title="createX4DriverSetFrameArea\lCommand" alt="" coords="168,259,356,301"/>
+<area shape="rect" id="node8" href="$protocol_8h.xhtml#abfd42fe1bb1d13946eb04064aa95211d" title="createX4DriverSetFrameArea\lOffsetCommand" alt="" coords="168,325,356,366"/>
+</map>

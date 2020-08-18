@@ -1,0 +1,23 @@
+<map id="__DSB" name="__DSB">
+<area shape="rect" id="node2" href="$startup__sams70_8c.xhtml#a7cecd108fd88dec10ce2e97ad905e4ef" title="Performs the low&#45;level initialization of the chip. " alt="" coords="169,5,268,32"/>
+<area shape="rect" id="node3" href="$startup__same70_8c.xhtml#a11967f52e54564f4e39b12755f00d2fd" title="TCM memory Disable. " alt="" coords="167,56,270,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga1143dec48d60a3d6f238c4798a87759c" title="System Reset. " alt="" coords="147,107,291,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga3387607fd8a1a32cccd77d2ac672dd96" title="Decode Priority. " alt="" coords="368,132,521,159"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___cache_functions.xhtml#gaf9e7c6c8e16ada1f95e5bf5a03505b68" title="Enable I&#45;Cache. " alt="" coords="147,208,290,235"/>
+<area shape="rect" id="node7" href="$group___c_m_s_i_s___core___cache_functions.xhtml#gaba757390852f95b3ac2d8638c717d8d8" title="Disable I&#45;Cache. " alt="" coords="145,259,292,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga50d373a785edd782c5de5a3b55e30ff3" title="Invalidate I&#45;Cache. " alt="" coords="139,309,299,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga63aa640d9006021a796a5dcf9c7180b6" title="Enable D&#45;Cache. " alt="" coords="144,360,293,387"/>
+<area shape="rect" id="node10" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga6468170f90d270caab8116e7a4f0b5fe" title="Disable D&#45;Cache. " alt="" coords="142,411,295,437"/>
+<area shape="rect" id="node11" href="$group___c_m_s_i_s___core___cache_functions.xhtml#gace2d30db08887d0bdb818b8a785a5ce6" title="Invalidate D&#45;Cache. " alt="" coords="135,461,302,488"/>
+<area shape="rect" id="node12" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga55583e3065c6eabca204b8b89b121c4c" title="Clean D&#45;Cache. " alt="" coords="147,512,290,539"/>
+<area shape="rect" id="node13" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga1b741def9e3b2ca97dc9ea49b8ce505c" title="Clean &amp; Invalidate D&#45;Cache. " alt="" coords="117,563,320,589"/>
+<area shape="rect" id="node14" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga503ef7ef58c0773defd15a82f6336c09" title="SCB_InvalidateDCache\l_by_Addr" alt="" coords="135,614,302,655"/>
+<area shape="rect" id="node15" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga696fadbf7b9cc71dad42fab61873a40d" title="SCB_CleanDCache_by_Addr" alt="" coords="118,680,319,707"/>
+<area shape="rect" id="node16" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga630131b2572eaa16b569ed364dfc895e" title="SCB_CleanInvalidateDCache\l_by_Addr" alt="" coords="117,731,320,773"/>
+<area shape="rect" id="node17" href="$group__can__module.xhtml#ga9b35cd79fb5eeec8cf1ba7247b25a646" title="Initializes the MCAN hardware for giving peripheral. " alt="" coords="175,797,262,824"/>
+<area shape="rect" id="node18" href="$mpu_8c.xhtml#aaa88b8f32a6a4c83d2ddc9a287d82ef2" title="Update MPU regions. " alt="" coords="141,848,296,875"/>
+<area shape="rect" id="node19" href="$group__sam__drivers__qspi__group.xhtml#ga7b134660d53e8e550db5e98d21706e56" title="Send instruction over QSPI with data. " alt="" coords="147,899,290,941"/>
+<area shape="rect" id="node20" href="$group__sam__drivers__qspi__group.xhtml#gae5bf717b6b8987d76f6d9559c805e020" title="Writes or reads the QSPI memory (0x80000000) to trasmit or receive data from Flash memory..." alt="" coords="120,965,317,992"/>
+<area shape="rect" id="node21" href="$utility_8h.xhtml#ae51c4a64a384b422b0aee263de9e73d1" title="free_lock" alt="" coords="179,1016,258,1043"/>
+<area shape="rect" id="node22" href="$xt__system_8h.xhtml#a2eae6ea89e4a10f1b4406019ff8fc8ce" title="Sets the processor in an idle state waiting for interrupt. " alt="" coords="167,1067,271,1093"/>
+</map>

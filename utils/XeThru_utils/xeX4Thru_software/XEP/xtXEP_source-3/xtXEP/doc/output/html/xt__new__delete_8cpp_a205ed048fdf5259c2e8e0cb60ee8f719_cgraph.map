@@ -1,0 +1,6 @@
+<map id="operator new" name="operator new">
+<area shape="rect" id="node2" href="$xtmemory_8h.xhtml#a6883bf301c27551d455167da49e2d1af" title="Get which memory store is used for C++ new operator. " alt="" coords="160,5,404,32"/>
+<area shape="rect" id="node3" href="$xtmemory_8h.xhtml#ac094f55ba76fe2ae6e6b584f62ede7e0" title="Allocate memory from default location. " alt="" coords="188,56,376,83"/>
+<area shape="rect" id="node4" href="$xtmemory_8h.xhtml#a074cb46fba954fb164b67e59ea69efb2" title="Allocate memory from fast location. " alt="" coords="198,107,366,133"/>
+<area shape="rect" id="node5" href="$xtmemory_8h.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="197,157,367,184"/>
+</map>

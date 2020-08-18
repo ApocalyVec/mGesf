@@ -1,0 +1,4 @@
+<map id="FLASHD_Erase" name="FLASHD_Erase">
+<area shape="rect" id="node2" href="$efc_8h.xhtml#a170fa534d132c75b2851f0a42f7b71b0" title="Translates the given address page and offset values. " alt="" coords="175,5,337,32"/>
+<area shape="rect" id="node3" href="$efc_8h.xhtml#a89ced3586649e7455882295657f7c11a" title="Performs the given command and wait until its completion (or an error). " alt="" coords="171,56,341,83"/>
+</map>

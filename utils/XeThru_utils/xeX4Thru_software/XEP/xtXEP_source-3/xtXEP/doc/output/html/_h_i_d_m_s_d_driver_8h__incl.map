@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/HIDMSDDriver.h" name="src/hal/x4m0x_s70/libraries/libusb/include/HIDMSDDriver.h">
+<area shape="rect" id="node2" href="$_u_s_b_requests_8h.xhtml" title="USBRequests.h" alt="" coords="322,244,442,271"/>
+<area shape="rect" id="node3" href="$_h_i_d_descriptors_8h.xhtml" title="HIDDescriptors.h" alt="" coords="29,95,160,121"/>
+<area shape="rect" id="node4" href="$_m_s_descriptors_8h.xhtml" title="MSDescriptors.h" alt="" coords="184,95,311,121"/>
+<area shape="rect" id="node5" href="$_m_s_d_lun_8h.xhtml" title="MSDLun.h" alt="" coords="335,95,422,121"/>
+<area shape="rect" id="node6" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="346,169,418,196"/>
+<area shape="rect" id="node7" href="$_u_s_b_d_driver_8h.xhtml" title="USBDDriver.h" alt="" coords="450,169,560,196"/>
+</map>

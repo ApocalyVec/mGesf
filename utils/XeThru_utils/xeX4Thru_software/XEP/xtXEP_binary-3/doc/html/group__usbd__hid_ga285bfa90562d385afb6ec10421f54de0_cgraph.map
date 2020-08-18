@@ -1,0 +1,6 @@
+<map id="HIDDFunction_SetReport" name="HIDDFunction_SetReport">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga7d389e7ee9a599c1eabe2714b683b4ff" title="Return expected report header pointer. " alt="" coords="232,5,413,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="275,56,370,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gaa786fa9bbfd3c2f64b5f486e537ffebb" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="273,107,372,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hid.xhtml#ga95d42b4f9fe8b9a8e3151cd24827bdd8" title="Callback function when GetReport request data sent to host. " alt="" coords="250,157,395,184"/>
+</map>

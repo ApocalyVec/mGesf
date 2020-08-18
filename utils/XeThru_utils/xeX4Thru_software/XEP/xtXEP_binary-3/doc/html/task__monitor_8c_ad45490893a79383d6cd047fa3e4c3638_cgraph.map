@@ -1,0 +1,17 @@
+<map id="task_monitor" name="task_monitor">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a5e62effeb5c5323c3d423225a6a3dbf3" title="Gets the cause of the previous software reset. " alt="" coords="455,5,608,32"/>
+<area shape="rect" id="node3" href="$xthousekeeping_8h.xhtml#ad5a7723fb96e5789fa7ecb2554da3b04" title="xthousekeeping_trigger\l_crashdump" alt="" coords="177,206,349,247"/>
+<area shape="rect" id="node4" href="$xtmemory_8h.xhtml#a2dad555618641e748aaefde24f170e94" title="Get amount of default heap memory available. " alt="" coords="436,61,627,102"/>
+<area shape="rect" id="node5" href="$xtmemory_8h.xhtml#af78fb7d15faa1f15a6fe9c7649c40e7a" title="Get the default memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="430,133,633,174"/>
+<area shape="rect" id="node6" href="$xtmemory_8h.xhtml#a120dae9f612ca07248261a387247721c" title="Get amount of slow heap memory available. " alt="" coords="419,212,643,239"/>
+<area shape="rect" id="node7" href="$xtmemory_8h.xhtml#a45a4c8bf7fca2d2cc41ac41e8877bee6" title="Get the slow memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="413,267,649,293"/>
+<area shape="rect" id="node8" href="$xtmemory_8h.xhtml#af215d1f4153a20b4fae548227681035b" title="Get amount of fast heap memory available. " alt="" coords="421,320,642,347"/>
+<area shape="rect" id="node9" href="$xtmemory_8h.xhtml#ac619e2caa7125b6211f53d680a9f03fb" title="Get the fast memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="415,371,648,397"/>
+<area shape="rect" id="node10" href="$xep__hal_8h.xhtml#ace2af126089abe1d676edfc1400d0bf7" title="Triggers a software reset of MCU. " alt="" coords="195,424,330,451"/>
+<area shape="rect" id="node11" href="$xttoolbox_8h.xhtml#adfa8238f924a2d17957bdefcbab51490" title="Get accurate timer in microseconds. " alt="" coords="197,475,328,501"/>
+<area shape="rect" id="node12" href="$xep__hal_8h.xhtml#ac1edd0aeeab16f7278315403bcd6a29b" title="Resets crash count. " alt="" coords="183,525,342,552"/>
+<area shape="rect" id="node13" href="$xep__hal_8h.xhtml#aea9d8137a0fddb8ed22f14f318dfec4f" title="Set LED state. " alt="" coords="193,576,332,603"/>
+<area shape="rect" id="node14" href="$memorypoolset_8h.xhtml#a1f5eb8784837c0fbfb21095e8187dfd9" title="Prints statistics about available memoryblocks. " alt="" coords="183,627,342,669"/>
+<area shape="rect" id="node15" href="$xep__dispatch__messages_8h.xhtml#a05513f5a1f6b2c25d000d0c4b9bd9af8" title="Dispatch message to hostcom asking to send string to host. " alt="" coords="160,693,365,734"/>
+<area shape="rect" id="node16" href="$xep__hal_8h.xhtml#aba84ec695575730f2fd3b4f75eefe28a" title="Reset the watchdog timer. " alt="" coords="194,759,331,785"/>
+</map>

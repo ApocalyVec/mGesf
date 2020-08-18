@@ -1,0 +1,4 @@
+<map id="xtmemory_heap_available_fast" name="xtmemory_heap_available_fast">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#acf93e159c610831f349d07c00962f80d" title="Checks if fast memory is enabled. " alt="" coords="281,5,465,32"/>
+<area shape="rect" id="node3" href="$heap__4__fast_8h.xhtml#aa4027733dbb2443490b54337ce203042" title="xPortGetFreeHeapSize_fast" alt="" coords="275,56,472,83"/>
+</map>

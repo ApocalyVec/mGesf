@@ -1,0 +1,3 @@
+<map id="_configureUartRxDma" name="_configureUartRxDma">
+<area shape="rect" id="node2" href="$uart__dma_8c.xhtml#a67f71ddf9448a9404427f880e3063664" title="This function initialize the appropriate DMA channel for Rx channel of UART. " alt="" coords="216,5,405,32"/>
+</map>

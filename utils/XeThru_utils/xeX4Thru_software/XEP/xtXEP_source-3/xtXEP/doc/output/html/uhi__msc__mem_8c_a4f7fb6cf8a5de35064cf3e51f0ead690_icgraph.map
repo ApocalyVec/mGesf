@@ -1,0 +1,6 @@
+<map id="uhi_msc_mem_translate_status" name="uhi_msc_mem_translate_status">
+<area shape="rect" id="node2" href="$group__uhi__msc__mem__group.xhtml#ga79d9bf4b3d74a04367138617d8056b95" title="Checks and update the status of the LUN. " alt="" coords="250,5,429,47"/>
+<area shape="rect" id="node3" href="$group__uhi__msc__mem__group.xhtml#gafbc0e818125cffa188b4d6fcfa9af019" title="Returns the capacity of the LUN. " alt="" coords="233,71,445,98"/>
+<area shape="rect" id="node4" href="$group__uhi__msc__mem__group.xhtml#gac50e80d8db5c32870c6a86a62bde0da2" title="Reads 512 bytes from the current LUN. " alt="" coords="235,122,443,149"/>
+<area shape="rect" id="node5" href="$group__uhi__msc__mem__group.xhtml#ga319d1a6388e17afd55955abe50898990" title="Writes 512 bytes to the current LUN. " alt="" coords="235,173,444,199"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="x4driver_get_iterations" name="x4driver_get_iterations">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a3493035f2d30f78e30586a7a4eccb481" title="Updates normalization variables and calculates new constants. " alt="" coords="241,5,409,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#ad4eae703d43b3d9800fd5174ce8ff222" title="x4driver_get_sweep_time" alt="" coords="233,71,417,98"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a8bc96b0db173f49cfe59027d9e95f600" title="x4driver_check_configuration" alt="" coords="221,122,428,149"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#a3ac908170c5a22a9499b126e8a711ef0" title="onMcpX4DriverGetIterations" alt="" coords="224,173,425,199"/>
+</map>

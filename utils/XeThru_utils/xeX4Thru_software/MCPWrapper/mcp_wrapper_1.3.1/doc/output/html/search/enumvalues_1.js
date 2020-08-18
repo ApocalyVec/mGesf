@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['busfault_5firqn',['BusFault_IRQn',['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083a8693500eff174f16119e96234fee73af',1,'BusFault_IRQn():&#160;samg55g18.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083a8693500eff174f16119e96234fee73af',1,'BusFault_IRQn():&#160;samg55g19.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083a8693500eff174f16119e96234fee73af',1,'BusFault_IRQn():&#160;samg55j18.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083a8693500eff174f16119e96234fee73af',1,'BusFault_IRQn():&#160;samg55j19.h'],['../group___s_a_m_g55_n19__cmsis.xhtml#gga666eb0caeb12ec0e281415592ae89083a8693500eff174f16119e96234fee73af',1,'BusFault_IRQn():&#160;samg55n19.h']]]
+];

@@ -1,0 +1,5 @@
+<map id="xtio_flash_erase" name="xtio_flash_erase">
+<area shape="rect" id="node2" href="$xfs_8c.xhtml#a7b9303aef25ff6fcc0ac8087eca101d4" title="xfs_commit_allocation\l_table" alt="" coords="179,5,343,47"/>
+<area shape="rect" id="node3" href="$xfs_8h.xhtml#a1944fe2fe57fccee85079970b8f38432" title="Clears the flash area used to store file data. " alt="" coords="209,71,312,98"/>
+<area shape="rect" id="node4" href="$xfs_8h.xhtml#a975b6f2d064a2205832dfc2b7e0b7799" title="Formats the file system to an empty state. " alt="" coords="215,122,306,149"/>
+</map>

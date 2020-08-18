@@ -1,0 +1,5 @@
+<map id="usart_serial_is_rx_ready" name="usart_serial_is_rx_ready">
+<area shape="rect" id="node2" href="$group__sam__drivers__usart__group.xhtml#ga9f88f9b3e78b92b53016420c3594fcf6" title="Check if the received data are ready. " alt="" coords="198,5,323,32"/>
+<area shape="rect" id="node3" href="$uart__serial_8h.xhtml#af9393f1fa29d87970159fabd511b7de1" title="Send a sequence of bytes to a USART device. " alt="" coords="199,57,322,98"/>
+<area shape="rect" id="node4" href="$uart__serial_8h.xhtml#a87b33461b725f80263a8628b6e852e9e" title="Receive a sequence of bytes to a USART device. " alt="" coords="177,123,344,149"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="xtio_toggle_level" name="xtio_toggle_level">
+<area shape="rect" id="node2" href="$x4m0x__s70_2xtio__gpio_8c.xhtml#a58dee74fbb4ad804b56f971e48fc1e9c" title="xtio_decode_pin_id" alt="" coords="181,5,324,32"/>
+<area shape="rect" id="node3" href="$pio_8h.xhtml#a1de94d9c6a29f9fa44e498e97edde1cc" title="Returns 1 if one or more PIO of the given Pin instance currently have a high level; otherwise returns..." alt="" coords="216,56,289,83"/>
+<area shape="rect" id="node4" href="$pio_8h.xhtml#aac9a3cac1a51b45f82b30bd7a29826a6" title="Sets a high output level on all the PIOs defined in the given Pin instance. " alt="" coords="217,107,289,133"/>
+<area shape="rect" id="node5" href="$pio_8h.xhtml#a2d4d88110e7ab4fc0732df6d35289e06" title="Sets a low output level on all the PIOs defined in the given Pin instance. " alt="" coords="211,157,294,184"/>
+</map>

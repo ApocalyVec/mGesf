@@ -1,0 +1,6 @@
+<map id="xfs_delete_file" name="xfs_delete_file">
+<area shape="rect" id="node2" href="$xfs_8c.xhtml#a538f8868287ede7b1e971f0ee38e001d" title="xfs_lock" alt="" coords="213,5,285,32"/>
+<area shape="rect" id="node3" href="$xfs_8c.xhtml#a1e825941a6afe462460b459fb677b070" title="xfs_delete_file_entry\l_from_allocation_table" alt="" coords="165,57,332,98"/>
+<area shape="rect" id="node4" href="$xfs_8c.xhtml#adc902d397994654027ba6a892ba72360" title="xfs_unlock" alt="" coords="205,123,293,149"/>
+<area shape="rect" id="node5" href="$xfs_8c.xhtml#a7b9303aef25ff6fcc0ac8087eca101d4" title="xfs_commit_allocation\l_table" alt="" coords="167,174,331,215"/>
+</map>

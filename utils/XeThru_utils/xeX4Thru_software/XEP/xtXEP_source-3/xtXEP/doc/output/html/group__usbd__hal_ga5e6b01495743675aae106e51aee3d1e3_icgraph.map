@@ -1,0 +1,9 @@
+<map id="UDPHS_EndOfTransfer" name="UDPHS_EndOfTransfer">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga4daf62d090af26b8e55aaf9549926622" title="Endpoint interrupt handler. " alt="" coords="217,5,400,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga5e6f054068ed99c861c50f2eeeb30216" title="Endpoint DMA interrupt handler. " alt="" coords="230,56,387,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hal.xhtml#gaa9aba8ccdad2272b61db48b43466043b" title="Reset endpoints and disable them. " alt="" coords="229,107,388,133"/>
+<area shape="rect" id="node5" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="448,208,555,235"/>
+<area shape="rect" id="node6" href="$group__usbd__hal.xhtml#gaac15d66e72d7daa9d05116370a36aa91" title="Cancel pending READ/WRITE. " alt="" coords="231,208,386,235"/>
+<area shape="rect" id="node7" href="$group__usbd__hal.xhtml#gaf17d4fe67932fa6a5dcc05f4c6d611ff" title="Configures an endpoint according to its endpoint Descriptor. " alt="" coords="220,259,397,285"/>
+<area shape="rect" id="node8" href="$group__usbd__hal.xhtml#ga1a1fd7ed1af2be8e202879458a6cfda7" title="Sets/Clear/Get the HALT state on the endpoint. " alt="" coords="245,309,372,336"/>
+</map>

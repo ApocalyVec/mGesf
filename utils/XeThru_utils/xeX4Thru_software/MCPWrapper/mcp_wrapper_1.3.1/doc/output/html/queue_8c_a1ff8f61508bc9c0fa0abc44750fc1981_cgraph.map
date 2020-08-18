@@ -1,0 +1,17 @@
+<map id="xQueueGenericSend" name="xQueueGenericSend">
+<area shape="rect" id="node2" href="$queue_8c.xhtml#a51ac2510836d3242086a4ae206cfa277" title="prvCopyDataToQueue" alt="" coords="217,5,363,32"/>
+<area shape="rect" id="node3" href="$task_8h.xhtml#a0e7e66debaa8878d449d658a37d4b322" title="xTaskRemoveFromEventList" alt="" coords="432,208,619,235"/>
+<area shape="rect" id="node4" href="$task_8h.xhtml#a85df14f56902e5eadee1b20789aa272d" title="vTaskSetTimeOutState" alt="" coords="213,107,367,133"/>
+<area shape="rect" id="node5" href="$task_8h.xhtml#a366b302eba79d10b5ee2a3756f0fcc43" title="vTaskSuspendAll" alt="" coords="229,157,351,184"/>
+<area shape="rect" id="node6" href="$task_8h.xhtml#a0f786f440ae1a3f491a3b1f44a580cf7" title="xTaskCheckForTimeOut" alt="" coords="209,208,371,235"/>
+<area shape="rect" id="node7" href="$queue_8c.xhtml#a9297c23fd9b292999ecd39478a15dbdd" title="prvIsQueueFull" alt="" coords="237,259,343,285"/>
+<area shape="rect" id="node8" href="$task_8h.xhtml#a77790806f66f114dc628f321e005e357" title="vTaskPlaceOnEventList" alt="" coords="211,309,369,336"/>
+<area shape="rect" id="node9" href="$queue_8c.xhtml#a3975057ee08e7c83269a256422ea9b38" title="prvUnlockQueue" alt="" coords="232,360,348,387"/>
+<area shape="rect" id="node10" href="$task_8h.xhtml#afba2c0b51534051cef7f5f5c3fa804d0" title="xTaskResumeAll" alt="" coords="230,411,350,437"/>
+<area shape="rect" id="node11" href="$queue_8h.xhtml#aa9bff76f92251533d45348165c082de7" title="xQueueAltGenericSend" alt="" coords="211,461,369,488"/>
+<area shape="rect" id="node12" href="$queue_8h.xhtml#adf2034938c08ce4ac68edf290e2d6971" title="xQueueAltGenericReceive" alt="" coords="203,512,377,539"/>
+<area shape="rect" id="node13" href="$queue_8c.xhtml#a6fbe564255b2cdc870f581a2f1aadfbf" title="prvCopyDataFromQueue" alt="" coords="209,563,371,589"/>
+<area shape="rect" id="node14" href="$task_8h.xhtml#a6661c782f8eef65c1edc0ae6a47c5a0d" title="xTaskGetCurrentTaskHandle" alt="" coords="196,613,384,640"/>
+<area shape="rect" id="node15" href="$queue_8c.xhtml#a99857402f1050166b8c977df918b7948" title="prvIsQueueEmpty" alt="" coords="228,664,352,691"/>
+<area shape="rect" id="node16" href="$task_8h.xhtml#a7a7ce24a330c32b4b904e1ef43ebde2c" title="vTaskPriorityInherit" alt="" coords="225,715,355,741"/>
+</map>

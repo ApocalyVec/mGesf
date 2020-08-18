@@ -1,0 +1,9 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/device/audio&#45;speaker/AUDDSpeakerDriver.c" name="src/hal/x4m0x_s70/libraries/libusb/device/audio&#45;speaker/AUDDSpeakerDriver.c">
+<area shape="rect" id="node2" href="$_a_u_d_d_speaker_driver_8h.xhtml" title="AUDDSpeakerDriver.h" alt="" coords="186,109,349,136"/>
+<area shape="rect" id="node3" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="138,259,210,285"/>
+<area shape="rect" id="node4" href="$_u_s_b_d_driver_8h.xhtml" title="USBDDriver.h" alt="" coords="317,259,426,285"/>
+<area shape="rect" id="node5" href="$_a_u_d_d_speaker_phone_8h.xhtml" title="USB Audio Speaker &amp; Microphone Function. " alt="" coords="288,184,455,211"/>
+<area shape="rect" id="node6" href="$_u_s_b_lib___trace_8h.xhtml" title="USBLib_Trace.h" alt="" coords="530,109,650,136"/>
+<area shape="rect" id="node7" href="$_a_u_d_requests_8h.xhtml" title="Definitions and classes for USB Audio class requests. " alt="" coords="675,109,796,136"/>
+<area shape="rect" id="node8" href="$_u_s_b_d___h_a_l_8h.xhtml" title="This file defines functions for USB Device Hardware Access Level. " alt="" coords="5,184,111,211"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/MSDLun.h" name="src/hal/x4m0x_s70/libraries/libusb/include/MSDLun.h">
+<area shape="rect" id="node2" href="$_m_s_d_lun_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/massstorage\l/MSDLun.c" alt="" coords="5,95,201,151"/>
+<area shape="rect" id="node3" href="$_c_d_c_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/CDCMSDDriver.h" alt="" coords="292,288,515,329"/>
+<area shape="rect" id="node4" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="553,377,747,419"/>
+<area shape="rect" id="node5" href="$_h_i_d_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/HIDMSDDriver.h" alt="" coords="327,199,546,240"/>
+<area shape="rect" id="node6" href="$_m_s_d_driver_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/MSDDriver.h" alt="" coords="687,288,882,329"/>
+<area shape="rect" id="node7" href="$_m_s_d_d_state_machine_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/MSDDStateMachine.h" alt="" coords="779,102,1035,143"/>
+<area shape="rect" id="node8" href="$_m_s_d_function_8h.xhtml" title="Mass storage function driver definitions. " alt="" coords="570,199,781,240"/>
+<area shape="rect" id="node9" href="$_s_b_c_methods_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/include/SBCMethods.h" alt="" coords="957,199,1167,240"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="x4driver_check_configuration" name="x4driver_check_configuration">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a3340bd88f713c61192fed4ba6be4789d" title="Gets Iterations. " alt="" coords="484,5,652,32"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="709,208,888,235"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a7e06b27153667442dbc559ce2cf3d21e" title="Gets a register segment. " alt="" coords="475,157,661,184"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#a7e9fbe4e6bb6059b98b2f57efb92f34b" title="x4driver_get_prf_div" alt="" coords="493,208,643,235"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a032203e8f9460b3b693a5b81fbf1f633" title="x4driver_get_dac_min" alt="" coords="487,259,649,285"/>
+<area shape="rect" id="node7" href="$x4driver_8c.xhtml#ad622f2683a8e728043a68fe0b09c2f07" title="x4driver_get_dac_max" alt="" coords="260,309,427,336"/>
+<area shape="rect" id="node8" href="$x4driver_8c.xhtml#ac36f9ada592d89010c9ebf3f581a7eff" title="x4driver_get_dac_step" alt="" coords="260,157,427,184"/>
+<area shape="rect" id="node9" href="$x4driver_8c.xhtml#a4d5fed456eb330474905ef190733f3a6" title="Gets pulses per step. " alt="" coords="269,361,418,402"/>
+</map>

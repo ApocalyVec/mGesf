@@ -1,0 +1,4 @@
+<map id="GetInterface" name="GetInterface">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="157,5,251,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="155,56,253,83"/>
+</map>

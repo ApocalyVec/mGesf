@@ -1,0 +1,6 @@
+<map id="GMACB_ResetPhy" name="GMACB_ResetPhy">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#gabf89fc2e0cb8e9ec7e0b99a5a14cae50" title="Enable MDI with PHY. " alt="" coords="190,5,331,32"/>
+<area shape="rect" id="node3" href="$gmacb__phy_8c.xhtml#aba0c6004ff96312d6cd98d4948ec0014" title="Write PHY register Return 1 if successfully, 0 if timeout. " alt="" coords="195,56,326,83"/>
+<area shape="rect" id="node4" href="$gmacb__phy_8c.xhtml#add851348aa8e6c519d4efda3e53d025d" title="Read PHY register. " alt="" coords="195,107,326,133"/>
+<area shape="rect" id="node5" href="$group__gmac__defines.xhtml#ga6013c7006f83c59d4895a92e3f473804" title="Enable MDI with PHY. " alt="" coords="188,157,333,184"/>
+</map>

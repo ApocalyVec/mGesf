@@ -1,0 +1,4 @@
+<map id="UDP_AddWr" name="UDP_AddWr">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="197,5,235,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga57e97248d68838ee318ebeb26a85edaa" title="Transfers a data payload from the current tranfer buffer to the endpoint FIFO. " alt="" coords="151,56,281,83"/>
+</map>

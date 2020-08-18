@@ -1,0 +1,10 @@
+<map id="USBH_HAL_PhaseDataIn" name="USBH_HAL_PhaseDataIn">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a917ce318855654bd4d1ff18a24248899" title="Gets USB host interrupt status. " alt="" coords="235,5,457,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#ac13debb9eb4e51de70e9086d6264ee88" title="Gets USB host interrupt status. " alt="" coords="268,56,424,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#a97e601451758556ee0591fae627974d8" title="Gets USB host interrupt status. " alt="" coords="517,120,717,147"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#ae752afec4dfecc9565eaa4242ce9233f" title="Gets USB host interrupt status. " alt="" coords="239,309,453,336"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a963fd2f0eab05393ff85e14bfd909021" title="USBHS_HostGetAddr" alt="" coords="267,360,425,387"/>
+<area shape="rect" id="node7" href="$group__uhd__group.xhtml#ga5d07dff59bfb3f4de2343ae894fdac03" title="USBH_HAL_OutZLP" alt="" coords="272,157,420,184"/>
+<area shape="rect" id="node8" href="$usbhs_8h.xhtml#acd60bcdb7e5420ac4cfb8b457838f9ba" title="Gets USB host interrupt status. " alt="" coords="507,196,727,223"/>
+<area shape="rect" id="node9" href="$usbhs_8h.xhtml#a32c56acaace52b440a308d9bce8cafff" title="Gets USB host interrupt status. " alt="" coords="505,247,729,273"/>
+</map>

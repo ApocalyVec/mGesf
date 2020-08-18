@@ -1,0 +1,3 @@
+<map id="HIDDKeyboard_RemoteWakeUp" name="HIDDKeyboard_RemoteWakeUp">
+<area shape="rect" id="node2" href="$group__usbd__hid__key.xhtml#gafaf17e45360604dc376b2c8a390bced0" title="Starts a remote wake&#45;up sequence if the host has explicitly enabled it by sending the appropriate SET..." alt="" coords="275,5,427,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="USART_Configure" name="USART_Configure">
+<area shape="rect" id="node2" href="$iso7816__4_8c.xhtml#a31fe7825ff1becdc1db5069d4236b75c" title="Initializes a ISO driver. " alt="" coords="205,5,308,32"/>
+<area shape="rect" id="node3" href="$usart__dma_8c.xhtml#a0f760ac1d4ebf29b670399b45ba1ee33" title="Initializes the USARTDma structure and the corresponding USART &amp; DMA . " alt="" coords="185,56,328,83"/>
+</map>

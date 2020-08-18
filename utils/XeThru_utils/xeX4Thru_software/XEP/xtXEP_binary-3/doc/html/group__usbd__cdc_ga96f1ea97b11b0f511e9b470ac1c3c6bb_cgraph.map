@@ -1,0 +1,4 @@
+<map id="CDCDEEMPort_Read" name="CDCDEEMPort_Read">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gaa786fa9bbfd3c2f64b5f486e537ffebb" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="221,5,319,32"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc.xhtml#ga28acc08820659f041668dd2edf6284da" title="_TransferCallback" alt="" coords="204,56,336,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="arch_ioport_enable_pin" name="arch_ioport_enable_pin">
+<area shape="rect" id="node2" href="$ioport__pio_8h.xhtml#aa6472a0ec5f81577b9cde2d59bc1fd24" title="arch_ioport_enable_port" alt="" coords="211,5,371,32"/>
+<area shape="rect" id="node3" href="$ioport__pio_8h.xhtml#a17ab9c7be3b9b2674e7668b6a083d191" title="arch_ioport_pin_to\l_port_id" alt="" coords="227,57,355,98"/>
+<area shape="rect" id="node4" href="$ioport__pio_8h.xhtml#a69fd7bdfb41664b749080e509798165e" title="arch_ioport_pin_to_mask" alt="" coords="208,123,375,149"/>
+</map>

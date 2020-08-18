@@ -1,0 +1,4 @@
+<map id="USBHS_Resume" name="USBHS_Resume">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="192,5,319,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#gac9fdf87a0d813bf3717f1440e60c41d8" title="Enables the IDLE state on the USB line. " alt="" coords="180,56,331,83"/>
+</map>

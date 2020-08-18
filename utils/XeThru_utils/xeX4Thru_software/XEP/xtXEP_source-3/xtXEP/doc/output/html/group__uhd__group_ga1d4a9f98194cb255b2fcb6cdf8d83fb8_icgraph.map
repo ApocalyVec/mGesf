@@ -1,0 +1,6 @@
+<map id="USBH_HAL_RunEndpoint" name="USBH_HAL_RunEndpoint">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__internal.xhtml#gab2e5918509ca2fa9edf6ef88a8dc62ce" title="Update the transfer endpoint IN (RX) Valid the reception of the previous transfer. " alt="" coords="239,5,380,32"/>
+<area shape="rect" id="node3" href="$group__uhi__cdc__group__internal.xhtml#ga19464aec764d1d849bd81da0a1f70a0e" title="Update the transfer endpoint OUT (TX) Start a new transfer on endpoint OUT, if a data must be send an..." alt="" coords="239,56,380,83"/>
+<area shape="rect" id="node4" href="$group__uhi__hid__mouse__group__internal.xhtml#ga4c227d4f8c1542d28b0610bce62a62a7" title="Starts the reception of the HID mouse report. " alt="" coords="232,107,387,149"/>
+<area shape="rect" id="node5" href="$uhi__msc_8c.xhtml#a5881034b17cf48e25997e6ad271f5720" title="Start a transfer on an endpoint of current USB MSC device Used to send a CBW packet, DATA packet, or a CSW packet. " alt="" coords="243,173,375,200"/>
+</map>

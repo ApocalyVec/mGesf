@@ -1,0 +1,5 @@
+<map id="QSPI_SingleReadSPI" name="QSPI_SingleReadSPI">
+<area shape="rect" id="node2" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a84307d724b3e124e1d4cced163d3074d" title="Get the current status register of the given QSPI peripheral. " alt="" coords="361,21,485,48"/>
+<area shape="rect" id="node3" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a4788c3a05bb9fd76eb60f37331d8441c" title="Read QSPI RDR register for SPI mode. " alt="" coords="203,21,313,48"/>
+<area shape="rect" id="node4" href="$libraries_2libchip_2source_2qspi_8c.xhtml#af19b4cbed1aa41039bb632daf84a515e" title="Write to QSPI Tx register in SPI mode. " alt="" coords="203,72,313,99"/>
+</map>

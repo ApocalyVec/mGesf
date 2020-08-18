@@ -1,0 +1,6 @@
+<map id="HIDDKeyboard_Initialize" name="HIDDKeyboard_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdchid.xhtml#ga694d3e24a8bf7913671fb0d9a777b1eb" title="Initializes the USB device composite device driver. " alt="" coords="226,5,405,32"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidaud.xhtml#ga93b5b87d0366b013bdbc2af9a1793e7e" title="Initializes the USB device composite device driver. " alt="" coords="225,56,405,83"/>
+<area shape="rect" id="node4" href="$group__usbd__composite__hidmsd.xhtml#ga353527333aa384f7ffaa105ace23fcad" title="Initializes the USB device HIDMSD device driver. " alt="" coords="230,107,401,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hid__key.xhtml#ga1f58303d60b968bd70c374dfa106df45" title="Initializes the HID keyboard device driver. " alt="" coords="239,158,391,199"/>
+</map>

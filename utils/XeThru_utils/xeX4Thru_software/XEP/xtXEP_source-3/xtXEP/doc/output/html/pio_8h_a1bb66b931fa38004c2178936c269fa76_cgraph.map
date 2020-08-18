@@ -1,0 +1,9 @@
+<map id="PIO_Configure" name="PIO_Configure">
+<area shape="rect" id="node2" href="$pio_8c.xhtml#abbd0526087925e25b3405fe0f42903ac" title="Configures one or more pin(s) of a PIO controller as being controlled by peripheral A..." alt="" coords="173,5,319,32"/>
+<area shape="rect" id="node3" href="$pio_8c.xhtml#aaf185f78fe190d798d8047ab3d789602" title="Configures one or more pin(s) of a PIO controller as being controlled by peripheral B..." alt="" coords="173,56,319,83"/>
+<area shape="rect" id="node4" href="$pio_8c.xhtml#a7ab81830d6b33018d561d4dae33b0a80" title="Configures one or more pin(s) of a PIO controller as being controlled by peripheral C..." alt="" coords="173,107,319,133"/>
+<area shape="rect" id="node5" href="$pio_8c.xhtml#a6e2b1d4224c6075a497ddddd648aeaa5" title="Configures one or more pin(s) of a PIO controller as being controlled by peripheral D..." alt="" coords="173,157,319,184"/>
+<area shape="rect" id="node6" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="164,208,328,235"/>
+<area shape="rect" id="node7" href="$pio_8c.xhtml#a06dc8e6adc89a7772b49109453d68f15" title="Configures one or more pin(s) or a PIO controller as inputs. " alt="" coords="194,259,298,285"/>
+<area shape="rect" id="node8" href="$pio_8c.xhtml#ac672f322c97c7ccf1158464f2abbe24b" title="Configures one or more pin(s) of a PIO controller as outputs, with the given default value..." alt="" coords="188,309,304,336"/>
+</map>

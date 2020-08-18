@@ -1,0 +1,6 @@
+<map id="module_ui_led_set_color" name="module_ui_led_set_color">
+<area shape="rect" id="node2" href="$xep__application_8c.xhtml#a0ba95989f534a0adaa0e258fce6d3a0a" title="task_application" alt="" coords="443,67,568,94"/>
+<area shape="rect" id="node3" href="$xep__application_8c.xhtml#a2855354af889b8285b4f8e50e36e06c4" title="xep_app_init_default" alt="" coords="237,30,390,56"/>
+<area shape="rect" id="node4" href="$xep__application_8c.xhtml#aba3ad9baa6dc36fdc124a66def11900f" title="xep_app_100ms_tick\l_default" alt="" coords="235,81,391,122"/>
+<area shape="rect" id="node5" href="$xep__application_8c.xhtml#a038116ea60c2b708d4ab52b0eff00379" title="Process dispatch messages. " alt="" coords="232,146,395,188"/>
+</map>

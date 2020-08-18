@@ -1,0 +1,5 @@
+<map id="UHI for Communication Device Class" name="UHI for Communication Device Class">
+<area shape="rect" id="node1" href="$group__uhi__cdc__group__internal.xhtml" title="Class internal implementation. " alt="" coords="416,5,628,47"/>
+<area shape="rect" id="node2" href="$group__uhi__group.xhtml" title="The UHI provides a common API for all classes, and this is used by UHC for the main control of USB ho..." alt="" coords="5,39,149,80"/>
+<area shape="rect" id="node4" href="$group__uhi__cdc__group__uhc.xhtml" title="Define and functions required by UHC. " alt="" coords="453,71,591,112"/>
+</map>

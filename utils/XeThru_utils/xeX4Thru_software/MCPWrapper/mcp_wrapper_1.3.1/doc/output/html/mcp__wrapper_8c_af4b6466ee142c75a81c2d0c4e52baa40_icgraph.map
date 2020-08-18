@@ -1,0 +1,27 @@
+<map id="mcpw_start_send" name="mcpw_start_send">
+<area shape="rect" id="node2" href="$mcp__wrapper_8c.xhtml#af11a9d41535f06277d526defc7f21dcc" title="mcpw_start_bootloader" alt="" coords="215,5,371,32"/>
+<area shape="rect" id="node3" href="$mcp__wrapper_8c.xhtml#a80114de78998ac7e9f4101fe7a541f26" title="mcpw_bl_write_page" alt="" coords="221,56,364,83"/>
+<area shape="rect" id="node4" href="$mcp__wrapper_8c.xhtml#a7a67d8596665562a0013fc4295f6fcb6" title="mcpw_bl_start_application" alt="" coords="205,107,380,133"/>
+<area shape="rect" id="node5" href="$mcp__wrapper_8c.xhtml#a04242ee7eaacb1ae39c506f839eb5ae2" title="mcpw_ping" alt="" coords="249,157,336,184"/>
+<area shape="rect" id="node6" href="$mcp__wrapper_8c.xhtml#a1d60ebcd695bbdefb917a6b96ee1805f" title="mcpw_module_reset" alt="" coords="222,208,363,235"/>
+<area shape="rect" id="node7" href="$mcp__wrapper_8c.xhtml#a7dc80c2a02be5f2dc7cb7492ad781acf" title="mcpw_load_profile" alt="" coords="229,259,357,285"/>
+<area shape="rect" id="node8" href="$mcp__wrapper_8c.xhtml#a536f04f2d9c7db14ffe361620d4d158a" title="mcpw_set_sensor_mode" alt="" coords="209,309,376,336"/>
+<area shape="rect" id="node9" href="$mcp__wrapper_8c.xhtml#a83d34d3ac389507fb3f13e1ea86cdecb" title="mcpw_set_sensitivity" alt="" coords="220,360,365,387"/>
+<area shape="rect" id="node10" href="$mcp__wrapper_8c.xhtml#a5aad9b9bddaa60f6c860fd64477041eb" title="mcpw_set_detection_zone" alt="" coords="205,411,381,437"/>
+<area shape="rect" id="node11" href="$mcp__wrapper_8c.xhtml#a5e888a3d354deed869020ce46851615c" title="mcpw_set_led_control" alt="" coords="217,461,368,488"/>
+<area shape="rect" id="node12" href="$mcp__wrapper_8c.xhtml#a10b8c43d839e93605d5718c84e48d0e3" title="mcpw_set_output_control" alt="" coords="207,512,378,539"/>
+<area shape="rect" id="node13" href="$mcp__wrapper_8c.xhtml#a8384fa8abd6e18da9c3c4d8ecde84f64" title="mcpw_set_parameter_file" alt="" coords="208,563,377,589"/>
+<area shape="rect" id="node14" href="$mcp__wrapper_8c.xhtml#a801e1df2def7e7aff114711ac09c16be" title="mcpw_get_systeminfo" alt="" coords="217,613,368,640"/>
+<area shape="rect" id="node15" href="$mcp__wrapper_8c.xhtml#acbebfcb65738078d87fce211e76fd4a9" title="mcpw_store_noisemap" alt="" coords="215,664,370,691"/>
+<area shape="rect" id="node16" href="$mcp__wrapper_8c.xhtml#a56b031524072e973d7b42cfcacb0c7e3" title="mcpw_set_noisemap_control" alt="" coords="197,715,388,741"/>
+<area shape="rect" id="node17" href="$mcp__wrapper_8c.xhtml#ab3c91f1235afafa553e9fa1d00c615ba" title="mcpw_set_baudrate" alt="" coords="223,765,362,792"/>
+<area shape="rect" id="node18" href="$mcp__wrapper_8c.xhtml#a095d95e3738d0d2bf85c6bfa418b0bb8" title="mcpw_reset_to_factory\l_preset" alt="" coords="215,817,371,858"/>
+<area shape="rect" id="node19" href="$mcp__wrapper_8c.xhtml#a5dfecbad4108349f6cb1c6f998bec262" title="mcpw_x4driver_set_pif\l_register" alt="" coords="217,882,369,923"/>
+<area shape="rect" id="node20" href="$mcp__wrapper_8c.xhtml#a0d8072ba118593eb306e4e6025fe1d6f" title="mcpw_x4driver_set_dac_min" alt="" coords="199,948,387,975"/>
+<area shape="rect" id="node21" href="$mcp__wrapper_8c.xhtml#ad7fa459692e0bc853371b769ea96cb61" title="mcpw_x4driver_set_dac_max" alt="" coords="197,999,389,1025"/>
+<area shape="rect" id="node22" href="$mcp__wrapper_8c.xhtml#ae4bd4df9e4b638793da4561fea437df4" title="mcpw_x4driver_set_pulses\l_per_step" alt="" coords="204,1050,381,1091"/>
+<area shape="rect" id="node23" href="$mcp__wrapper_8c.xhtml#a8d6f59d231c25fcc91597f3f4bcb3010" title="mcpw_x4driver_set_iterations" alt="" coords="197,1116,389,1143"/>
+<area shape="rect" id="node24" href="$mcp__wrapper_8c.xhtml#a3769201f496f0f23d9fe39637e7eb375" title="mcpw_x4driver_set_downconversion" alt="" coords="177,1167,408,1193"/>
+<area shape="rect" id="node25" href="$mcp__wrapper_8c.xhtml#a4ab63d2406bcfe0488ea1bd25a71981f" title="mcpw_x4driver_set_fps" alt="" coords="215,1217,371,1244"/>
+<area shape="rect" id="node26" href="$mcp__wrapper_8c.xhtml#a8fd262540c52dd86832a748e4e48d2fb" title="mcpw_x4driver_set_frame_area" alt="" coords="191,1268,394,1295"/>
+</map>

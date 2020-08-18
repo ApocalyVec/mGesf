@@ -1,0 +1,10 @@
+<map id="SBC_Read10" name="SBC_Read10">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga6f8ad39249cd0f7dc9992a7ff44ba164" title="Check if the LUN is ready. " alt="" coords="198,5,318,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga6259d674a30286b49d79ffa89b44e809" title="Updates the sense data of a LUN with the given key and codes. " alt="" coords="408,31,583,57"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#ga5944997ebb6926907d5c9d86e63b9fcf" title="MED_GetBlockSize" alt="" coords="187,107,329,133"/>
+<area shape="rect" id="node5" href="$group__usbd__msd.xhtml#gad18555120a738777ca87a6c6a45fc43b" title="MED_IsMappedRDSupported" alt="" coords="156,157,360,184"/>
+<area shape="rect" id="node6" href="$_s_b_c_methods_8c.xhtml#ga65e2aa51e755428df116ecc89b7aa996" title="This function is to be used as a callback for USB or LUN transfers. " alt="" coords="183,208,333,235"/>
+<area shape="rect" id="node7" href="$group__usbd__msd.xhtml#ga1e7757d9187b0f6cc8ea8d503928b909" title="Reads data from a LUN, starting at the specified block address. " alt="" coords="215,259,301,285"/>
+<area shape="rect" id="node8" href="$group__usbd__msd.xhtml#gafeb7ba2e26fafad5775d2016bb16859b" title="MED_GetMappedAddress" alt="" coords="166,309,350,336"/>
+<area shape="rect" id="node9" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="209,360,307,387"/>
+</map>

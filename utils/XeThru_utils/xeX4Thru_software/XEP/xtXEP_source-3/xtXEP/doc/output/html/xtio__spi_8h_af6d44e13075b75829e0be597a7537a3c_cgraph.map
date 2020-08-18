@@ -1,0 +1,11 @@
+<map id="xtio_spi_init" name="xtio_spi_init">
+<area shape="rect" id="node2" href="$xtio__spi_8c.xhtml#a118933f1e12fede0c1fdb33224bfe867" title="xtio_set_spi_mode" alt="" coords="156,5,297,32"/>
+<area shape="rect" id="node3" href="$xtio__spi_8c.xhtml#ab79cff6b91bff8a6f4f249a0bcb639e8" title="xtio_get_spi_mode" alt="" coords="155,56,298,83"/>
+<area shape="rect" id="node4" href="$xtio__spi_8c.xhtml#a8713e3dadd876e844883fe44a657a4bb" title="xtio_spi_write" alt="" coords="173,107,280,133"/>
+<area shape="rect" id="node5" href="$xtio__spi_8c.xhtml#ac34e9895f91b7cb2b828a0bf5fd6e957" title="xtio_spi_read" alt="" coords="173,157,280,184"/>
+<area shape="rect" id="node6" href="$xtio__spi_8c.xhtml#a64a60847a947e7e747f90424e2e7fff7" title="xtio_spi_write_read" alt="" coords="155,208,298,235"/>
+<area shape="rect" id="node7" href="$pio_8h.xhtml#a1bb66b931fa38004c2178936c269fa76" title="Configures a list of Pin instances, each of which can either hold a single pin or a group of pins..." alt="" coords="171,259,282,285"/>
+<area shape="rect" id="node8" href="$qspi__dma_8h.xhtml#a4b35fe7901e8a7d1bbb8769e761f0e3e" title="Initializes the pQspidma structure and the corresponding QSPI &amp; DMA . " alt="" coords="161,309,292,336"/>
+<area shape="rect" id="node9" href="$qspi_8h.xhtml#a97e1476d765491527f175aaf80b74fd3" title="Configures peripheral clock of a QSPI/SPI peripheral. " alt="" coords="149,360,304,387"/>
+<area shape="rect" id="node10" href="$qspi_8h.xhtml#a481f9cf7a40eb4de632cfef883abbafd" title="Enables a QSPI peripheral. " alt="" coords="175,411,278,437"/>
+</map>

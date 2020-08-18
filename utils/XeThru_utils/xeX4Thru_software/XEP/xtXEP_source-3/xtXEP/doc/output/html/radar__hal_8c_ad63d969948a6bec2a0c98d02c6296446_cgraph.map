@@ -1,0 +1,5 @@
+<map id="radar_hal_init" name="radar_hal_init">
+<area shape="rect" id="node2" href="$xtio__spi_8c.xhtml#a018ae31f2548c72ebc1eef81cdcb3cc5" title="Initialize the SPI system. " alt="" coords="185,5,281,32"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a4f087fae5e8098b3b9c8f9df124b7f4e" title="Set direction of specified IO pin. " alt="" coords="165,56,300,83"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#a9c169f60838175920c2f9ab467d020c1" title="Set mode for specified IO pin. " alt="" coords="161,107,304,133"/>
+</map>

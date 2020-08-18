@@ -1,0 +1,3 @@
+<map id="usart_drive_RTS_pin_high" name="usart_drive_RTS_pin_high">
+<area shape="rect" id="node2" href="$group__group__sam__drivers__usart.xhtml#ga6cb84f0297ddca62d4077f616efa5c5b" title="Reset the USART and disable TX and RX. " alt="" coords="224,5,311,32"/>
+</map>

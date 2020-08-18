@@ -1,0 +1,5 @@
+<map id="xep_app_init_default" name="xep_app_init_default">
+<area shape="rect" id="node2" href="$xep__application_8c.xhtml#a74b3579b46539191c66b915956c19b8c" title="Append XEP components version list to destination. " alt="" coords="221,5,371,47"/>
+<area shape="rect" id="node3" href="$xthousekeeping_8h.xhtml#a483c7c81860a3c5388e09f21ba1c5749" title="xthousekeeping_init" alt="" coords="221,71,371,98"/>
+<area shape="rect" id="node4" href="$module__ui_8h.xhtml#a54f86bf93a9a46ab61ff08b7e535e9a0" title="Set the module LED color. " alt="" coords="207,122,385,149"/>
+</map>

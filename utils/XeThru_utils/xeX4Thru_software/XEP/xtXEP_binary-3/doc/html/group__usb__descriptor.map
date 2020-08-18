@@ -1,0 +1,8 @@
+<map id="USB Descriptors" name="USB Descriptors">
+<area shape="rect" id="node1" href="$group__usb__general.xhtml" title="Usb_general" alt="" coords="5,107,108,133"/>
+<area shape="rect" id="node2" href="$group__usb__desc__type.xhtml" title="This section lists the codes of the usb descriptor types. " alt="" coords="341,5,499,32"/>
+<area shape="rect" id="node3" href="$group__usb__release__number.xhtml" title="This section lists the codes of USB release numbers. " alt="" coords="339,56,501,83"/>
+<area shape="rect" id="node4" href="$group__usb__ep__define.xhtml" title="This section lists definitions and macro for endpoint descriptors. " alt="" coords="331,107,509,133"/>
+<area shape="rect" id="node5" href="$group__usb__attributes.xhtml" title="This section lists the codes of the usb attributes. " alt="" coords="338,157,502,184"/>
+<area shape="rect" id="node6" href="$group__usb__string__descriptor.xhtml" title="This section lists the codes and macros for USB string descriptor definition. " alt="" coords="339,209,501,250"/>
+</map>

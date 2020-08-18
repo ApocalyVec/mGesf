@@ -1,0 +1,5 @@
+<map id="XDMAC_GetType" name="XDMAC_GetType">
+<area shape="rect" id="node2" href="$xdma__hardware__interface_8c.xhtml#a1c7e741165685b3e072aa75e4cfb1034" title="Get peripheral identifier coded for hardware handshaking interface. " alt="" coords="180,5,391,32"/>
+<area shape="rect" id="node3" href="$xdma__hardware__interface_8c.xhtml#a3a7151b5d5eceb843fa293a85e72651b" title="Check if the given DMAC has associated peripheral identifier coded by the given peripheral. " alt="" coords="186,57,385,98"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#ga8c7517080f70e93096364e916af6e6f2" title="Initialize xDMA driver instance. " alt="" coords="221,123,349,149"/>
+</map>

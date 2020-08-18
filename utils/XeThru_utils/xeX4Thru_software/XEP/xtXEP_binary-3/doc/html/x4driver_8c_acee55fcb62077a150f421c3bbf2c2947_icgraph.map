@@ -1,0 +1,50 @@
+<map id="mutex_take" name="mutex_take">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a7adc63aa5a9f25cdb5f613388d816f82" title="Updates downconversion coefficients. " alt="" coords="409,583,591,624"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a3493035f2d30f78e30586a7a4eccb481" title="Updates normalization variables and calculates new constants. " alt="" coords="658,405,826,447"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a86dbadcb2e415d23600ef1bb31c9dbde" title="Inits x4driver. " alt="" coords="1140,413,1239,439"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#aca2f2487a46b5debe6656dd21a816e97" title="x4driver_set_downconversion" alt="" coords="883,650,1092,677"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#a85fef427a42cff60e7bf267da9fd4766" title="_upload_downconversion\l_coeffs" alt="" coords="161,579,342,620"/>
+<area shape="rect" id="node7" href="$x4driver_8c.xhtml#a0b4d051505ed04b077d126758967318f" title="Uploads custom 8051 firmware to X4. " alt="" coords="407,1087,593,1128"/>
+<area shape="rect" id="node8" href="$x4driver_8c.xhtml#a421ecb2b885441b8d565301fbd81993d" title="Upload default 8051 firmware to X4. " alt="" coords="649,1087,835,1128"/>
+<area shape="rect" id="node9" href="$x4driver_8c.xhtml#af07f7d2f1758a60257ab9df3426c9a37" title="Action timer callback. " alt="" coords="429,1597,571,1639"/>
+<area shape="rect" id="node10" href="$x4driver_8c.xhtml#a02de1339e43f6681abc757225552a0bb" title="Will check if frame is ready from X4 and return when the frame is ready. " alt="" coords="162,1607,341,1634"/>
+<area shape="rect" id="node11" href="$x4driver_8c.xhtml#a03652f4897873d46d0534336df7f29fe" title="Will trigger a radar sweep. " alt="" coords="173,1658,330,1685"/>
+<area shape="rect" id="node12" href="$x4driver_8c.xhtml#a041e81b6d75f97dbf29f1e9a29353425" title="Will setup x4 in default configuration. " alt="" coords="417,71,583,98"/>
+<area shape="rect" id="node13" href="$x4driver_8c.xhtml#a0d9b975a093cd210bda1b58fca408c42" title="Read back embedded 8051 firmware. " alt="" coords="412,1335,588,1362"/>
+<area shape="rect" id="node14" href="$x4driver_8c.xhtml#a59bb6ec7d08888223c01bffa2aedcf50" title="Set frame area start and end in meters. " alt="" coords="651,843,833,870"/>
+<area shape="rect" id="node15" href="$x4driver_8c.xhtml#a3d75a7209fa2ea65ab2acc5297751c99" title="Reads frame and normalizes that frame. " alt="" coords="910,1501,1065,1543"/>
+<area shape="rect" id="node16" href="$x4driver_8c.xhtml#ab008a9d8a7ab0744ceb00fb2116ad850" title="Reads raw bytes from x4. " alt="" coords="665,1472,819,1513"/>
+<area shape="rect" id="node17" href="$x4driver_8c.xhtml#a972399a44ab859c55b7a108af64015d3" title="Set SPI register on radar chip. " alt="" coords="161,1202,342,1229"/>
+<area shape="rect" id="node18" href="$x4driver_8c.xhtml#ac410a664bdf7c4a27e6b26fe27bf9801" title="Sets internal register value. " alt="" coords="419,1269,581,1311"/>
+<area shape="rect" id="node19" href="$x4driver_8c.xhtml#af984a0703695b6ef27a2c76a30e8c992" title="Gets internal register value. " alt="" coords="407,1204,593,1245"/>
+<area shape="rect" id="node20" href="$x4driver_8c.xhtml#a696a63c5fe7e11fab1b8864faf6e296c" title="Get SPI register on radar chip. " alt="" coords="160,1303,343,1330"/>
+<area shape="rect" id="node21" href="$x4driver_8c.xhtml#a33cc21cd8eeda4680c7ee2c47cf6e09b" title="Gets reads frame counter from 8051 mailbox requires enable to be set and 8051 SRAM to be program..." alt="" coords="399,1437,601,1463"/>
+<area shape="rect" id="node22" href="$x4driver_8c.xhtml#a28df2e755e78e579b2560da1c834f24f" title="Writes data to SPI register on radar chip. " alt="" coords="174,1709,329,1751"/>
+<area shape="rect" id="node23" href="$x4driver_8c.xhtml#a47f8598fd42ad86659d0a59d9b360ab4" title="Reads data from SPI register on radar chip. " alt="" coords="178,1775,325,1816"/>
+<area shape="rect" id="node24" href="$x4driver_8c.xhtml#a56631da6259f3784165d78d00e5b0f80" title="Set enable for X4. " alt="" coords="912,122,1063,149"/>
+<area shape="rect" id="node25" href="$x4driver_8c.xhtml#aad4194e43df4304e629fc595d582d408" title="Setup external osc on X4. " alt="" coords="918,173,1057,199"/>
+<area shape="rect" id="node26" href="$x4driver_8c.xhtml#abde766e0d1366c610923ac6df6aff591" title="Enable dvdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="158,1841,345,1867"/>
+<area shape="rect" id="node27" href="$x4driver_8c.xhtml#a2ed5d880184cddb6899a3ee5789ae282" title="Enable dvdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="158,1891,345,1918"/>
+<area shape="rect" id="node28" href="$x4driver_8c.xhtml#ac1bde9631df9f305637fd490f6d6034e" title="Enable avdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="158,1942,345,1969"/>
+<area shape="rect" id="node29" href="$x4driver_8c.xhtml#a6cf76ee14b0f9d6d942771a01b4bc6ab" title="Enable avdd ldo on X4 NOTE: Implements workaround to kick start LDO. " alt="" coords="158,1993,345,2019"/>
+<area shape="rect" id="node30" href="$x4driver_8c.xhtml#a5db8c4a69efec11c5d537c13e4a94f6f" title="Set frame length in cycles. " alt="" coords="179,5,324,47"/>
+<area shape="rect" id="node31" href="$x4driver_8c.xhtml#a4d5fed456eb330474905ef190733f3a6" title="Gets pulses per step. " alt="" coords="425,376,575,417"/>
+<area shape="rect" id="node32" href="$x4driver_8c.xhtml#a7ac1a5f45b02284571e297c672ca61de" title="Sets pulses per step. " alt="" coords="177,2044,325,2085"/>
+<area shape="rect" id="node33" href="$x4driver_8c.xhtml#a14e3623f55953194c1660b4fcc5814cf" title="Sets a register segment. " alt="" coords="158,797,345,823"/>
+<area shape="rect" id="node34" href="$x4driver_8c.xhtml#a636ce8e277a30e9a8d24a5f05a034782" title="x4driver_set_dac_step" alt="" coords="417,701,583,727"/>
+<area shape="rect" id="node35" href="$x4driver_8c.xhtml#afdda0b27e8cfa0aa286f1cca02524b1a" title="_x4driver_set_rx_ram\l_first_line" alt="" coords="421,868,579,909"/>
+<area shape="rect" id="node36" href="$x4driver_8c.xhtml#ac12013d8875e5974fd3b4703aeeee12f" title="_x4driver_set_rx_ram\l_last_line" alt="" coords="421,803,579,844"/>
+<area shape="rect" id="node37" href="$x4driver_8c.xhtml#a7e06b27153667442dbc559ce2cf3d21e" title="Gets a register segment. " alt="" coords="158,426,345,453"/>
+<area shape="rect" id="node38" href="$x4driver_8c.xhtml#ac36f9ada592d89010c9ebf3f581a7eff" title="x4driver_get_dac_step" alt="" coords="417,442,583,469"/>
+<area shape="rect" id="node39" href="$x4driver_8c.xhtml#a032203e8f9460b3b693a5b81fbf1f633" title="x4driver_get_dac_min" alt="" coords="419,510,581,537"/>
+<area shape="rect" id="node40" href="$x4driver_8c.xhtml#a5b607d8c62783dfffb46c688ec90781e" title="x4driver_set_dac_min" alt="" coords="171,2110,332,2137"/>
+<area shape="rect" id="node41" href="$x4driver_8c.xhtml#ad622f2683a8e728043a68fe0b09c2f07" title="x4driver_get_dac_max" alt="" coords="417,274,583,301"/>
+<area shape="rect" id="node42" href="$x4driver_8c.xhtml#aef1600f41584063c096ca246aafdee40" title="x4driver_set_dac_max" alt="" coords="169,2161,334,2187"/>
+<area shape="rect" id="node43" href="$x4driver_8c.xhtml#a2b1b3fe4dd7b5d5b5a8d3517cc696169" title="x4driver_get_rx_wait" alt="" coords="175,2211,327,2238"/>
+<area shape="rect" id="node44" href="$x4driver_8c.xhtml#ac9237ca48bd407ee0efdd38db91a9b4e" title="x4driver_set_rx_wait" alt="" coords="425,985,575,1011"/>
+<area shape="rect" id="node45" href="$x4driver_8c.xhtml#af6c32021e202b0dfe0a8b104ebd7a0b6" title="Sets frame rate for frame streaming. " alt="" coords="188,2313,315,2339"/>
+<area shape="rect" id="node46" href="$x4driver_8c.xhtml#a3d4fbcf15fcf3736ef68613007caca8e" title="x4driver_set_sweep\l_trigger_control" alt="" coords="427,2305,573,2347"/>
+<area shape="rect" id="node47" href="$x4driver_8c.xhtml#a3ae283684d1a23d89a56d93971139bb6" title="x4driver_get_fps" alt="" coords="188,2363,315,2390"/>
+<area shape="rect" id="node48" href="$x4driver_8c.xhtml#a84d12bd28947e0343ba3b9ebe8233775" title="x4driver_get_calculated_fps" alt="" coords="152,2414,351,2441"/>
+<area shape="rect" id="node49" href="$x4driver_8c.xhtml#a67278d41c995150400eb611c28a135d0" title="x4driver_set_frame\l_trigger_period" alt="" coords="179,2465,324,2507"/>
+</map>

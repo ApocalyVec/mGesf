@@ -1,0 +1,17 @@
+<map id="USBGenericRequest_GetValue" name="USBGenericRequest_GetValue">
+<area shape="rect" id="node2" href="$group__usb__audio.xhtml#gab4526a49dffcbfd21863db0da8793572" title="Returns the control selector value indicating the target of a Feature Unit request. " alt="" coords="298,5,474,47"/>
+<area shape="rect" id="node3" href="$group__usb__audio.xhtml#ga47557d2c62372574f370291ed4526b12" title="Returns the channel number of a Feature unit which should be altered by the given request..." alt="" coords="298,71,474,112"/>
+<area shape="rect" id="node4" href="$group__usb__cdc.xhtml#gacd1bd8a721514d20fa9bde6003e2d0e7" title="Notifies if the given request indicates that the DTE signal is present. " alt="" coords="271,136,501,177"/>
+<area shape="rect" id="node5" href="$group__usb__cdc.xhtml#ga92da23b772c65ed7d84d5ca066d21ec3" title="Notifies if the given request indicates that the device carrier should be activated. " alt="" coords="271,201,501,243"/>
+<area shape="rect" id="node6" href="$group__usb__request.xhtml#ga56cc8072ee61b86e52620841df171c56" title="Returns the type of the descriptor requested by the host given the corresponding GET_DESCRIPTOR reque..." alt="" coords="291,267,481,308"/>
+<area shape="rect" id="node7" href="$group__usb__request.xhtml#ga09bca9ff4fe941ee4688851a15a2190c" title="Returns the index of the requested descriptor, given the corresponding GET_DESCRIPTOR request..." alt="" coords="291,332,481,373"/>
+<area shape="rect" id="node8" href="$group__usb__request.xhtml#ga974088e16e3a8f33425a4a90ce5f1a03" title="Returns the address that the device must take in response to a SET_ADDRESS request. " alt="" coords="299,397,473,439"/>
+<area shape="rect" id="node9" href="$group__usb__request.xhtml#ga82573aa1de13dfe6d86308cc46a52277" title="Returns the number of the configuration that should be set in response to the given SET_CONFIGURATION..." alt="" coords="282,463,490,504"/>
+<area shape="rect" id="node10" href="$group__usb__request.xhtml#ga12a0abaf7f42b626adaf62b7efc5c6de" title="Indicates the new alternate setting that the interface targeted by a SET_INTERFACE request should use..." alt="" coords="307,528,465,569"/>
+<area shape="rect" id="node11" href="$group__usb__request.xhtml#ga45fc2dc20e20b098a487d3cdc7f1b35e" title="Returns the feature selector of a given CLEAR_FEATURE or SET_FEATURE request. " alt="" coords="273,593,499,635"/>
+<area shape="rect" id="node12" href="$group__usb__hid__protocol__types.xhtml#ga6834fb90cfe01b6f8ec868e3ade677c3" title="Indicates the ID of the report targeted by a SET_IDLE or GET_IDLE request. " alt="" coords="286,659,486,686"/>
+<area shape="rect" id="node13" href="$group__usb__hid__protocol__types.xhtml#ga6809221451d2c5d5b2f6acf6fa643b9f" title="HIDProtocolRequest\l_GetProtocol" alt="" coords="552,703,700,744"/>
+<area shape="rect" id="node14" href="$group__usb__hid__protocol__types.xhtml#gadda4a9db20a64f37fefd3e3893171b4a" title="Retrieves the Idle rate (in milliseconds) indicated by a SET_IDLE request. " alt="" coords="287,761,485,787"/>
+<area shape="rect" id="node15" href="$group__usb__hid__protocol__types.xhtml#ga7838b70a03055712db33a1d04f89f15f" title="Indicates the type of report targeted by a SET_REPORT or GET_REPORT request. " alt="" coords="268,811,504,838"/>
+<area shape="rect" id="node16" href="$group__usb__hid__protocol__types.xhtml#ga821535cae13981aa9d15d87f0d52fbd1" title="Indicates the ID of the report targeted by a SET_REPORT or GET_REPORT request. " alt="" coords="277,862,495,889"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="arch_ioport_set_pin_mode" name="arch_ioport_set_pin_mode">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#ga09df7897a4e2401204c84211a29aa67a" title="Set pin mode for one single IOPORT pin. " alt="" coords="233,5,376,32"/>
+<area shape="rect" id="node3" href="$group__ioport__group.xhtml#gafaa3ce764c4ae3c0c3f16df8872d15e8" title="Reset pin mode configuration for a single IOPORT pin. " alt="" coords="228,56,381,83"/>
+</map>

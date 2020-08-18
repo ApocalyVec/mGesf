@@ -1,0 +1,3 @@
+<map id="uhi_msc_scsi_mode_sense6_done" name="uhi_msc_scsi_mode_sense6_done">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ac2d95d78563f49c06a2b31e6e2c2f9b6" title="Sends the CBW packet of the scsi MODE SENSE 6 command This function returns the write&#45;protected mode..." alt="" coords="296,5,499,32"/>
+</map>

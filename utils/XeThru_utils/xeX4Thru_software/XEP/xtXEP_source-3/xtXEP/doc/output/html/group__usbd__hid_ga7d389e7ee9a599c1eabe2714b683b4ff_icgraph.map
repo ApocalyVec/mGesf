@@ -1,0 +1,6 @@
+<map id="HIDDFunction_FindReport" name="HIDDFunction_FindReport">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#gaced6adae7bca323f6d8a63964092dc22" title="Sends the current Idle rate of the input report to the host. " alt="" coords="244,5,404,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid.xhtml#gaaaa136d5e3db25540b4353f95a237f23" title="Retrieves the new idle rate of the input report from the USB host. " alt="" coords="245,56,403,83"/>
+<area shape="rect" id="node4" href="$group__usbd__hid.xhtml#gac1f005d3d16586bde74d82ca21c06654" title="Sends the requested report to the host. " alt="" coords="235,107,413,133"/>
+<area shape="rect" id="node5" href="$group__usbd__hid.xhtml#ga285bfa90562d385afb6ec10421f54de0" title="Reads the requested report from the host. " alt="" coords="235,157,413,184"/>
+</map>

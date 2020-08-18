@@ -1,0 +1,5 @@
+<map id="prvIsQueueEmpty" name="prvIsQueueEmpty">
+<area shape="rect" id="node2" href="$queue_8c.xhtml#a637daee588a12cec8db050f7ef3f7fa3" title="xQueueCreateMutex" alt="" coords="383,23,524,50"/>
+<area shape="rect" id="node3" href="$queue_8c.xhtml#a1ff8f61508bc9c0fa0abc44750fc1981" title="xQueueGenericSend" alt="" coords="185,23,327,50"/>
+<area shape="rect" id="node4" href="$queue_8c.xhtml#a0424dce690a6a65558f16cc229b767bf" title="xQueueGenericReceive" alt="" coords="177,74,335,101"/>
+</map>

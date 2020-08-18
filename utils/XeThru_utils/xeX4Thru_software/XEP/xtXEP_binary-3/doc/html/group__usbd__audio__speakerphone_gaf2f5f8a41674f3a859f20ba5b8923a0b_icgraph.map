@@ -1,0 +1,3 @@
+<map id="AUDDStream_SetVolume" name="AUDDStream_SetVolume">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga02a614d5e8ed4bd5c73537b37eef89a9" title="Callback triggered after the new volume status of a channel has been read. " alt="" coords="240,5,412,32"/>
+</map>

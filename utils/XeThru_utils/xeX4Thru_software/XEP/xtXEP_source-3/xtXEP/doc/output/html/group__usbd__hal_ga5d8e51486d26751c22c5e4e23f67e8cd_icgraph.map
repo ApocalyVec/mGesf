@@ -1,0 +1,4 @@
+<map id="UDP_EndOfTransfer" name="UDP_EndOfTransfer">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gafa6295dfe0e4e2eaaec7818940d64b18" title="Endpoint interrupt handler. " alt="" coords="199,5,361,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="409,31,543,57"/>
+</map>

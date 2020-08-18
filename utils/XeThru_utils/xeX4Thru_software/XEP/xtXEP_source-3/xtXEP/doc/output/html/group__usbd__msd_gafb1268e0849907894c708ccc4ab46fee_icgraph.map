@@ -1,0 +1,5 @@
+<map id="MSDFunction_Configure" name="MSDFunction_Configure">
+<area shape="rect" id="node2" href="$group__usbd__composite__cdcmsd.xhtml#gaa7ae001e3db16158a74b9d29c1918ac9" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="237,5,447,47"/>
+<area shape="rect" id="node3" href="$group__usbd__composite__hidmsd.xhtml#gac20bb28b9da0825ad63d42398b530e0d" title="Invoked whenever the configuration value of a device is changed by the host. " alt="" coords="239,71,445,112"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#gabfb0d71b88e4e5606d3de432127e9d01" title="Invoked when the configuration of the device changes. " alt="" coords="227,136,457,177"/>
+</map>

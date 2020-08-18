@@ -1,0 +1,10 @@
+<map id="MSDFunction_RequestHandler" name="MSDFunction_RequestHandler">
+<area shape="rect" id="node2" href="$group__usb__request.xhtml#ga5c2f01b3ad2dbd22cce9b97aa27ca975" title="Returns the type of the given request. " alt="" coords="267,5,475,32"/>
+<area shape="rect" id="node3" href="$group__usb__request.xhtml#gace388a4d862a1a39dfce506fe4189e82" title="Returns the request code of the given request. " alt="" coords="523,61,753,88"/>
+<area shape="rect" id="node4" href="$group__usb__request.xhtml#ga45fc2dc20e20b098a487d3cdc7f1b35e" title="Returns the feature selector of a given CLEAR_FEATURE or SET_FEATURE request. " alt="" coords="525,121,751,162"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="267,157,474,184"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="589,204,687,231"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="591,255,685,281"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="307,309,435,336"/>
+<area shape="rect" id="node9" href="$group__usbd__msd.xhtml#ga63d1031361c1e8a4db44d5bb9e0c309c" title="Resets the state of the MSD driver. " alt="" coords="297,360,444,387"/>
+</map>

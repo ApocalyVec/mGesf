@@ -1,0 +1,5 @@
+<map id="src/hal/x4m0x_s70/libraries/libchip/source/mcan.c" name="src/hal/x4m0x_s70/libraries/libchip/source/mcan.c">
+<area shape="rect" id="node2" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node3" href="$chip_8h.xhtml" title="chip.h" alt="" coords="100,95,160,121"/>
+<area shape="rect" id="node4" href="$mcan__config_8h.xhtml" title="mcan_config.h" alt="" coords="185,95,299,121"/>
+</map>

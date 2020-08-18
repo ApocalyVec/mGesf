@@ -1,0 +1,10 @@
+<map id="_DualCdcDriverConfigurationDescriptors" name="_DualCdcDriverConfigurationDescriptors">
+<area shape="rect" id="node2" href="$struct___c_d_c_union_descriptor.xhtml" title="_CDCUnionDescriptor" alt="" coords="47,40,207,67"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_interface_association_descriptor.xhtml" title="_USBInterfaceAssociation\lDescriptor" alt="" coords="33,93,220,134"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_endpoint_descriptor.xhtml" title="_USBEndpointDescriptor" alt="" coords="37,219,216,245"/>
+<area shape="rect" id="node5" href="$struct___c_d_c_call_management_descriptor.xhtml" title="_CDCCallManagementDescriptor" alt="" coords="11,279,242,305"/>
+<area shape="rect" id="node6" href="$struct___c_d_c_header_descriptor.xhtml" title="_CDCHeaderDescriptor" alt="" coords="41,336,212,363"/>
+<area shape="rect" id="node7" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="23,387,231,413"/>
+<area shape="rect" id="node8" href="$struct___u_s_b_interface_descriptor.xhtml" title="_USBInterfaceDescriptor" alt="" coords="37,473,216,500"/>
+<area shape="rect" id="node9" href="$struct___c_d_c_abstract_control_management_descriptor.xhtml" title="_CDCAbstractControlManagement\lDescriptor" alt="" coords="5,526,248,567"/>
+</map>

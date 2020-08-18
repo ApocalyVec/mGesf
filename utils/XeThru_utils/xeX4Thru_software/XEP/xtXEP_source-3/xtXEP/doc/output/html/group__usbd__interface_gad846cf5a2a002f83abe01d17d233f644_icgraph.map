@@ -1,0 +1,24 @@
+<map id="USBD_Stall" name="USBD_Stall">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#ga2b7fde84b4a6cc4bfe50ca02a01c5bb5" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="655,289,865,331"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#gab8e4cd12ef0615be5ff405457db9e104" title="Handle the SET_CUR request. " alt="" coords="377,15,588,42"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga17c8f0de49847c1c6fcd8f2ca0ffad64" title="Handles audio&#45;specific USB requests sent by the host, and forwards standard ones to the USB device dr..." alt="" coords="664,84,856,125"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speakerphone.xhtml#ga26ee739e084b33db49fdc25819529f10" title="Handle the GET_CUR request. " alt="" coords="377,117,588,143"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__speakerphone.xhtml#ga489f97d62376e824385055765a31e17b" title="Handle the SET_CUR request. " alt="" coords="179,218,296,245"/>
+<area shape="rect" id="node7" href="$group__usbd__audio__speakerphone.xhtml#gaa2c1c8f41b4dbb0494310c2bd60aafaf" title="Handle the GET_CUR request. " alt="" coords="178,269,297,295"/>
+<area shape="rect" id="node8" href="$group__usbd__ccid.xhtml#gaa3679fa7dec59d63fc8951434967b5b8" title="SETUP request handler for a CCID device. " alt="" coords="679,503,841,530"/>
+<area shape="rect" id="node9" href="$group__usbd__cdc.xhtml#ga1df488de43fb255ae5191c98b3724576" title="Callback function which should be invoked after the data of a SetLineCoding request has been retrieve..." alt="" coords="150,370,325,397"/>
+<area shape="rect" id="node10" href="$group__usbd__composite__cdccdc.xhtml#ga9ba1f9929b5a8da6905543152693e5a4" title="Handles composite&#45;specific USB requests sent by the host, and forwards standard ones to the USB devic..." alt="" coords="639,591,881,618"/>
+<area shape="rect" id="node11" href="$group__usbd__interface.xhtml#gaa52d41127f737b06cc6991626de366b9" title="Sends the current status of an endpoints to the USB host. " alt="" coords="166,421,309,447"/>
+<area shape="rect" id="node12" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="379,547,586,574"/>
+<area shape="rect" id="node13" href="$group__usbd__hid__tran.xhtml#ga7339bf87c3b8556a76557ac341318265" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="689,920,831,961"/>
+<area shape="rect" id="node14" href="$group__usbd__msd.xhtml#gaa87efba32c907fa095c6f8797d2580db" title="Handler for incoming SETUP requests on default Control endpoint 0. " alt="" coords="653,718,867,745"/>
+<area shape="rect" id="node15" href="$group__usbd__interface.xhtml#gadbb4c8a840d3ff539be6fa5fa9f4a4e0" title="Sends the requested USB descriptor to the host if available, or STALLs the request. " alt="" coords="182,522,293,549"/>
+<area shape="rect" id="node16" href="$group__usbd__interface.xhtml#ga69728b150794285ecaf38b5383471965" title="Sets the active setting of the given interface if the configuration supports it; otherwise, the control pipe is STALLed. " alt="" coords="187,573,287,599"/>
+<area shape="rect" id="node17" href="$group__usbd__interface.xhtml#gaf933d8614b19b074895685836de44361" title="Sends the currently active setting of the given interface to the USB host. " alt="" coords="187,623,288,650"/>
+<area shape="rect" id="node18" href="$group__usbd__interface.xhtml#ga001b34862324f5ba4a65ad3195e4896f" title="Performs the selected test on the USB device (high&#45;speed only). " alt="" coords="172,674,303,701"/>
+<area shape="rect" id="node19" href="$group__usbd__hid.xhtml#gaced6adae7bca323f6d8a63964092dc22" title="Sends the current Idle rate of the input report to the host. " alt="" coords="157,877,317,903"/>
+<area shape="rect" id="node20" href="$group__usbd__hid.xhtml#ga6a3177814ff14ce51040bd58817d4064" title="Handles HID&#45;specific SETUP request sent by the host. " alt="" coords="375,927,591,954"/>
+<area shape="rect" id="node21" href="$group__usbd__hid.xhtml#gaaaa136d5e3db25540b4353f95a237f23" title="Retrieves the new idle rate of the input report from the USB host. " alt="" coords="158,978,317,1005"/>
+<area shape="rect" id="node22" href="$group__usbd__hid.xhtml#gac1f005d3d16586bde74d82ca21c06654" title="Sends the requested report to the host. " alt="" coords="148,1029,327,1055"/>
+<area shape="rect" id="node23" href="$group__usbd__hid.xhtml#ga285bfa90562d385afb6ec10421f54de0" title="Reads the requested report from the host. " alt="" coords="148,826,327,853"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="TEST_F" name="TEST_F">
+<area shape="rect" id="node2" href="$x4driver__unittest_8cpp.xhtml#aed0d42e77dd6bc7411a086aed6eed8d4" title="test_lock" alt="" coords="170,5,249,32"/>
+<area shape="rect" id="node3" href="$x4driver__unittest_8cpp.xhtml#a567d5572537c4401078364d2ff4f8ca2" title="test_unlock" alt="" coords="162,56,257,83"/>
+<area shape="rect" id="node4" href="$x4driver__unittest_8cpp.xhtml#aca74c5603b9441a1329a142f6aa0e2b9" title="test_enable_set" alt="" coords="147,107,271,133"/>
+<area shape="rect" id="node5" href="$x4driver__unittest_8cpp.xhtml#ae2f624d73c2aef14f37123142ded7bc6" title="test_spi_write" alt="" coords="155,157,264,184"/>
+<area shape="rect" id="node6" href="$x4driver__unittest_8cpp.xhtml#a964c40367fd09ff3477146d28ab46768" title="test_spi_write_read" alt="" coords="137,208,282,235"/>
+<area shape="rect" id="node7" href="$class_spi_registers.xhtml#a61d0294e72dd6a26d0de29525155e1af" title="SpiRegisters::reset" alt="" coords="139,259,280,285"/>
+<area shape="rect" id="node8" href="$x4driver_8h.xhtml#a2e248dc4b2feab14c20a2b5fbfe2b1db" title="Creates x4driver instance. " alt="" coords="149,309,270,336"/>
+<area shape="rect" id="node9" href="$x4driver_8h.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="120,360,299,387"/>
+<area shape="rect" id="node10" href="$x4driver__unittest_8cpp.xhtml#a1bc050f646470f9b1119b4fa564ec224" title="push_pif_read" alt="" coords="154,411,265,437"/>
+<area shape="rect" id="node11" href="$x4driver__unittest_8cpp.xhtml#a170b8cd8b79babc9e97102e007844290" title="push_pif_write" alt="" coords="153,461,265,488"/>
+<area shape="rect" id="node12" href="$x4driver_8h.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="120,512,299,539"/>
+</map>

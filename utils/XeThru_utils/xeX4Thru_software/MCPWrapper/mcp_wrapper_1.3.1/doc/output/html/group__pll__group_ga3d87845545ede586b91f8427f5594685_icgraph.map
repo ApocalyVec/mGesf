@@ -1,0 +1,4 @@
+<map id="pll_is_locked" name="pll_is_locked">
+<area shape="rect" id="node2" href="$group__pll__group.xhtml#gaa10c871c499867b1db87f9cd1d37ef0f" title="Wait for PLL pll_id to become locked. " alt="" coords="179,5,296,32"/>
+<area shape="rect" id="node3" href="$group__pll__group.xhtml#ga6d2b476e97cb089063cb947f9337e647" title="Enable the pll with the default configuration. " alt="" coords="151,56,324,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="HIDDMouseDriver_RemoteWakeUp" name="HIDDMouseDriver_RemoteWakeUp">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga0907be664b7193af543d1032c6de8606" title="Test if RemoteWakeUP feature is enabled. " alt="" coords="296,5,511,47"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gacfd4fed846cba74af43e668e47b6dc10" title="Starts a remote wake&#45;up procedure. " alt="" coords="320,71,487,98"/>
+</map>

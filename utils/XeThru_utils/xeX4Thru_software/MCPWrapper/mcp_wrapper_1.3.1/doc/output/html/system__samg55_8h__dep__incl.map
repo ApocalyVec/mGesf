@@ -1,0 +1,8 @@
+<map id="examples/atmel_samg55/src/ASF/sam/utils/cmsis/samg/samg55/include/system_samg55.h" name="examples/atmel_samg55/src/ASF/sam/utils/cmsis/samg/samg55/include/system_samg55.h">
+<area shape="rect" id="node2" href="$samg55g18_8h.xhtml" title="Copyright (c) 2014&#45;2015 Atmel Corporation. " alt="" coords="5,131,240,187"/>
+<area shape="rect" id="node3" href="$samg55g19_8h.xhtml" title="Copyright (c) 2014&#45;2015 Atmel Corporation. " alt="" coords="264,131,499,187"/>
+<area shape="rect" id="node4" href="$samg55j18_8h.xhtml" title="Copyright (c) 2014&#45;2015 Atmel Corporation. " alt="" coords="523,131,754,187"/>
+<area shape="rect" id="node5" href="$samg55j19_8h.xhtml" title="Copyright (c) 2014&#45;2015 Atmel Corporation. " alt="" coords="778,131,1009,187"/>
+<area shape="rect" id="node6" href="$samg55n19_8h.xhtml" title="Copyright (c) 2014&#45;2015 Atmel Corporation. " alt="" coords="1033,131,1268,187"/>
+<area shape="rect" id="node7" href="$system__samg55_8c.xhtml" title="Provides the low&#45;level initialization functions that called on chip startup. " alt="" coords="1293,124,1505,195"/>
+</map>

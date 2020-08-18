@@ -1,0 +1,7 @@
+<map id="onMcpGetSystemInfo" name="onMcpGetSystemInfo">
+<area shape="rect" id="node2" href="$xep__dispatch__messages_8h.xhtml#aebf2a8f6295790de9ad633d9df24a6a8" title="Dispatch message to hostcom asking to reply with string to host. " alt="" coords="212,5,417,47"/>
+<area shape="rect" id="node3" href="$xep_8h.xhtml#a74b3579b46539191c66b915956c19b8c" title="Append XEP components version list to destination. " alt="" coords="239,71,390,112"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="212,136,417,177"/>
+<area shape="rect" id="node5" href="$xep__hal_8h.xhtml#a8bd9bef2216392003bffa6c552e0779b" title="Return a string identifying what type of bootloader we have, or &quot;&quot; if we don&#39;t. " alt="" coords="238,202,391,229"/>
+<area shape="rect" id="node6" href="$xep__hal_8h.xhtml#a2d0b9f16d57df52e21d6f8d08b8c7d48" title="Returns an ascii string of a cpu unique identifyer. " alt="" coords="225,253,404,279"/>
+</map>

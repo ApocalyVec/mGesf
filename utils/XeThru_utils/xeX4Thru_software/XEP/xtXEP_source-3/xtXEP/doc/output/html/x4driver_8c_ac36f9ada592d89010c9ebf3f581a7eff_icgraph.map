@@ -1,0 +1,6 @@
+<map id="x4driver_get_dac_step" name="x4driver_get_dac_step">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#a3493035f2d30f78e30586a7a4eccb481" title="Updates normalization variables and calculates new constants. " alt="" coords="239,5,407,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#ad4eae703d43b3d9800fd5174ce8ff222" title="x4driver_get_sweep_time" alt="" coords="231,71,415,98"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a8bc96b0db173f49cfe59027d9e95f600" title="x4driver_check_configuration" alt="" coords="220,122,427,149"/>
+<area shape="rect" id="node5" href="$xep__application__mcp__callbacks_8h.xhtml#a22153db6d48ea306686350021163d9b1" title="onMcpX4DriverGetDacStep" alt="" coords="225,173,421,199"/>
+</map>

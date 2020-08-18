@@ -1,0 +1,4 @@
+<map id="XDMAC_DisableChannel" name="XDMAC_DisableChannel">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="228,5,407,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga6be5cec75618250adb227d7588ae7078" title="Stop DMA transfer. " alt="" coords="239,56,396,83"/>
+</map>

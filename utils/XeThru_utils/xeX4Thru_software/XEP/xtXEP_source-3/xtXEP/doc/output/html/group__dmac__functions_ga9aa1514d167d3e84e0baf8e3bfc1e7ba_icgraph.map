@@ -1,0 +1,4 @@
+<map id="XDMAC_SetDescriptorAddr" name="XDMAC_SetDescriptorAddr">
+<area shape="rect" id="node2" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="253,5,431,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga075cce3b88af1fff5064218720811fc0" title="Configure DMA for a single transfer. " alt="" coords="248,56,436,83"/>
+</map>

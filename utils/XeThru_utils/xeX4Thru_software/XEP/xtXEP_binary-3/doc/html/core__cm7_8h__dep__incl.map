@@ -1,0 +1,29 @@
+<map id="src/hal/x4m0x_s70/libraries/libchip/include/cmsis/CMSIS/Include/core_cm7.h" name="src/hal/x4m0x_s70/libraries/libchip/include/cmsis/CMSIS/Include/core_cm7.h">
+<area shape="rect" id="node2" href="$same70j19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70j19.h" alt="" coords="5,109,200,165"/>
+<area shape="rect" id="node3" href="$same70j20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70j20.h" alt="" coords="224,109,419,165"/>
+<area shape="rect" id="node4" href="$same70j21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70j21.h" alt="" coords="443,109,637,165"/>
+<area shape="rect" id="node5" href="$same70n19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70n19.h" alt="" coords="661,109,856,165"/>
+<area shape="rect" id="node6" href="$same70n20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70n20.h" alt="" coords="880,109,1075,165"/>
+<area shape="rect" id="node7" href="$same70n21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70n21.h" alt="" coords="1099,109,1293,165"/>
+<area shape="rect" id="node8" href="$same70q19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70q19.h" alt="" coords="1317,109,1512,165"/>
+<area shape="rect" id="node9" href="$same70q20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70q20.h" alt="" coords="1536,109,1731,165"/>
+<area shape="rect" id="node10" href="$same70q21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/same70\l/same70q21.h" alt="" coords="1755,109,1949,165"/>
+<area shape="rect" id="node11" href="$sams70j19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70j19.h" alt="" coords="1973,109,2168,165"/>
+<area shape="rect" id="node12" href="$sams70j20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70j20.h" alt="" coords="2192,109,2387,165"/>
+<area shape="rect" id="node13" href="$sams70j21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70j21.h" alt="" coords="2411,109,2605,165"/>
+<area shape="rect" id="node14" href="$sams70n19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70n19.h" alt="" coords="2629,109,2824,165"/>
+<area shape="rect" id="node15" href="$sams70n20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70n20.h" alt="" coords="2848,109,3043,165"/>
+<area shape="rect" id="node16" href="$sams70n21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70n21.h" alt="" coords="3067,109,3261,165"/>
+<area shape="rect" id="node17" href="$sams70q19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70q19.h" alt="" coords="3285,109,3480,165"/>
+<area shape="rect" id="node18" href="$sams70q20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70q20.h" alt="" coords="3504,109,3699,165"/>
+<area shape="rect" id="node19" href="$sams70q21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/sams70\l/sams70q21.h" alt="" coords="3723,109,3917,165"/>
+<area shape="rect" id="node20" href="$samv71j19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71j19.h" alt="" coords="3941,109,4136,165"/>
+<area shape="rect" id="node21" href="$samv71j20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71j20.h" alt="" coords="4160,109,4355,165"/>
+<area shape="rect" id="node22" href="$samv71j21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71j21.h" alt="" coords="4379,109,4573,165"/>
+<area shape="rect" id="node23" href="$samv71n19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71n19.h" alt="" coords="4597,109,4792,165"/>
+<area shape="rect" id="node24" href="$samv71n20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71n20.h" alt="" coords="4816,109,5011,165"/>
+<area shape="rect" id="node25" href="$samv71n21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71n21.h" alt="" coords="5035,109,5229,165"/>
+<area shape="rect" id="node26" href="$samv71q19_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71q19.h" alt="" coords="5253,109,5448,165"/>
+<area shape="rect" id="node27" href="$samv71q20_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71q20.h" alt="" coords="5472,109,5667,165"/>
+<area shape="rect" id="node28" href="$samv71q21_8h.xhtml" title="src/hal/x4m0x_s70/libraries\l/libchip/include/samv71\l/samv71q21.h" alt="" coords="5691,109,5885,165"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="LUN_Init" name="LUN_Init">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga5944997ebb6926907d5c9d86e63b9fcf" title="MED_GetBlockSize" alt="" coords="128,5,271,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga48387b2d0f9f8c461b9ba339639ac406" title="MED_GetSize" alt="" coords="145,56,253,83"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#ga761b94f274dc5a85acd20c0b33089d17" title="MED_IsProtected" alt="" coords="134,107,265,133"/>
+<area shape="rect" id="node5" href="$group__usbd__msd.xhtml#ga1481efe325e7d17ab334bd283fd24aa6" title="Initializes a MSDIOFifo instance. " alt="" coords="143,157,255,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="HIDDFunction_StartSendingInputs" name="HIDDFunction_StartSendingInputs">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="487,13,585,39"/>
+<area shape="rect" id="node3" href="$group__usbd__hid.xhtml#ga60b335dc503af45617b01905dd2d1512" title="Callback function when interrupt IN data sent to host. " alt="" coords="252,38,439,65"/>
+</map>

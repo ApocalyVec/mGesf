@@ -1,0 +1,4 @@
+<map id="sensor_twi_read_reg" name="sensor_twi_read_reg">
+<area shape="rect" id="node2" href="$twid_8h.xhtml#a67c6f278372fcb213e7848929db89d3f" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="207,5,297,32"/>
+<area shape="rect" id="node3" href="$twid_8h.xhtml#a13f06b4cc25a29302d3c932e82136599" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="207,56,297,83"/>
+</map>

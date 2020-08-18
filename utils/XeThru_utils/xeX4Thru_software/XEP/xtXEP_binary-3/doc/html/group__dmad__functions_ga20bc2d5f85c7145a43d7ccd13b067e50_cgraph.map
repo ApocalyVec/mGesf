@@ -1,0 +1,4 @@
+<map id="XDMAD_StartTransfer" name="XDMAD_StartTransfer">
+<area shape="rect" id="node2" href="$group__dmac__functions.xhtml#ga8eb1fcad768f58e147dbfada28379f0b" title="enables the relevant channel of given XDMAC. " alt="" coords="212,5,383,32"/>
+<area shape="rect" id="node3" href="$group__dmac__functions.xhtml#gadb74809f07d54268d7366c6354f4226a" title="Enables XDMAC global interrupt. " alt="" coords="229,56,366,83"/>
+</map>

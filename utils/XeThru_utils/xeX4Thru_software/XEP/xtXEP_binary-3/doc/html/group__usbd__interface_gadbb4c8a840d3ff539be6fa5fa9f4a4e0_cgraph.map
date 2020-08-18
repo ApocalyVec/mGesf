@@ -1,0 +1,9 @@
+<map id="GetDescriptor" name="GetDescriptor">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="245,5,284,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga946b2d10dfc497b6b24e602be6f3bd05" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="175,56,355,83"/>
+<area shape="rect" id="node4" href="$group__usb__descriptor.xhtml#ga1b77498ff50ea3c78ee7aae9e6c60bcc" title="Returns the length of a descriptor. " alt="" coords="182,107,347,149"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="413,232,512,259"/>
+<area shape="rect" id="node6" href="$group__usb__descriptor.xhtml#ga7d438a7ea40c7d7c62111d5a0aa1a7c2" title="Returns the total length of a configuration, i.e. " alt="" coords="164,225,365,266"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#ga343ea3516192c9f6c6b92ef258c811c3" title="Send a NULL packet. " alt="" coords="180,291,349,317"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="217,341,312,368"/>
+</map>

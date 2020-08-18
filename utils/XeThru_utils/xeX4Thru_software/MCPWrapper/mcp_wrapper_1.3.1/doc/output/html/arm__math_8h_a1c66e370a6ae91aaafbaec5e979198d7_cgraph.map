@@ -1,0 +1,4 @@
+<map id="arm_recip_q15" name="arm_recip_q15">
+<area shape="rect" id="node2" href="$arm__math_8h.xhtml#a4af3ca330e14587289518e6565fd04bd" title="Clips Q31 to Q15 values. " alt="" coords="160,5,276,32"/>
+<area shape="rect" id="node3" href="$arm__math_8h.xhtml#ad7373e53d3c2e1adfeafc8c2e9720b5c" title="Clips Q63 to Q31 values. " alt="" coords="160,56,276,83"/>
+</map>

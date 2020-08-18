@@ -1,0 +1,5 @@
+<map id="stream_mem_to_mem" name="stream_mem_to_mem">
+<area shape="rect" id="node2" href="$lcd__draw_8c.xhtml#a745dbddddd85ddbe2c71a9df4c3e38af" title="COMPILER_ALIGNED" alt="" coords="224,5,375,32"/>
+<area shape="rect" id="node3" href="$group__group__common__services__storage__ctrl__access.xhtml#ga3615a6178f931aca9c7aab6989c56c46" title="Copies 1 data sector from the memory to RAM. " alt="" coords="237,56,361,83"/>
+<area shape="rect" id="node4" href="$group__group__common__services__storage__ctrl__access.xhtml#gac0d8580f2311dea22003b5f6c5e602df" title="Copies 1 data sector from RAM to the memory. " alt="" coords="237,107,361,133"/>
+</map>

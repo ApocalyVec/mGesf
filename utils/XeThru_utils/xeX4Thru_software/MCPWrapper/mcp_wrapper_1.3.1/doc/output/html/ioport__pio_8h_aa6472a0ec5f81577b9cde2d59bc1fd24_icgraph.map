@@ -1,0 +1,4 @@
+<map id="arch_ioport_enable_port" name="arch_ioport_enable_port">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#gaa36631f8401a7a81ba0164da75fe45e9" title="Enable multiple pins in a single IOPORT port. " alt="" coords="227,5,355,32"/>
+<area shape="rect" id="node3" href="$ioport__pio_8h.xhtml#a3c14757dd8d1faed9b958d5380e583c1" title="arch_ioport_enable_pin" alt="" coords="213,56,368,83"/>
+</map>

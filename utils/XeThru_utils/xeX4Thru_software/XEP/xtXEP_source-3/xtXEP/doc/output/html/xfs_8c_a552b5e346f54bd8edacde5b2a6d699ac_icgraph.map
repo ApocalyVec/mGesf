@@ -1,0 +1,5 @@
+<map id="xfs_update_allocation_table_crc" name="xfs_update_allocation_table_crc">
+<area shape="rect" id="node2" href="$xfs_8c.xhtml#a06b271b8c14d9ef5dd3e28fb9885f5f6" title="xfs_store_file_entry\l_in_allocation_table" alt="" coords="223,5,370,47"/>
+<area shape="rect" id="node3" href="$xfs_8c.xhtml#a1e825941a6afe462460b459fb677b070" title="xfs_delete_file_entry\l_from_allocation_table" alt="" coords="213,71,380,112"/>
+<area shape="rect" id="node4" href="$xfs_8h.xhtml#a975b6f2d064a2205832dfc2b7e0b7799" title="Formats the file system to an empty state. " alt="" coords="251,137,342,163"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="xtio_uart_init" name="xtio_uart_init">
+<area shape="rect" id="node2" href="$xtmemory_8h.xhtml#ac094f55ba76fe2ae6e6b584f62ede7e0" title="Allocate memory from default location. " alt="" coords="165,5,353,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga630131b2572eaa16b569ed364dfc895e" title="SCB_CleanInvalidateDCache\l_by_Addr" alt="" coords="157,57,360,98"/>
+<area shape="rect" id="node4" href="$xtio__uart_8c.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="187,123,331,149"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="Usbd_config" name="Usbd_config">
+<area shape="rect" id="node1" href="$group__usbd__cdc__eem__config.xhtml" title="This page lists the defines used by the CDC EEM Device Driver. " alt="" coords="172,5,351,32"/>
+<area shape="rect" id="node2" href="$group__usbd__hid__keyboard__config.xhtml" title="This page lists the defines used by the HID Keyboard Device Driver. " alt="" coords="168,57,355,98"/>
+<area shape="rect" id="node3" href="$group__usbd__cdc__serial__config.xhtml" title="This page lists the defines used by the CDC Serial Device Driver. " alt="" coords="168,123,355,149"/>
+<area shape="rect" id="node4" href="$group__usbd__composite__config.xhtml" title="USB Composite Device\l Configure" alt="" coords="176,174,347,215"/>
+<area shape="rect" id="node5" href="$group__usbd__hid__mouse__config.xhtml" title="This page lists the defines used by the HID Mouse Device Driver. " alt="" coords="176,239,347,281"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__speakerphone__config.xhtml" title="This page lists the definitions for USB Audio Speaker Phone Device Driver. " alt="" coords="153,305,369,332"/>
+<area shape="rect" id="node8" href="$group__usbd__general__config.xhtml" title="This page lists general configurations for all USB device drivers. " alt="" coords="172,356,351,383"/>
+<area shape="rect" id="node9" href="$group__usbd__msdd__config.xhtml" title="This page lists the defines used by the Mass Storage driver. " alt="" coords="160,407,363,433"/>
+<area shape="rect" id="node10" href="$group__usbd__audio__speaker__config.xhtml" title="This page lists the definitions for USB Audio Speaker Device Driver. " alt="" coords="175,457,347,484"/>
+<area shape="rect" id="node11" href="$group__usbd__ids.xhtml" title="USBD Device IDs" alt="" coords="196,508,327,535"/>
+<area shape="rect" id="node12" href="$group__usbd__hid__xfr__config.xhtml" title="This page lists the defines used by the HID Transfer Device Driver. " alt="" coords="172,559,351,601"/>
+<area shape="rect" id="node13" href="$group__usbd__audio__config.xhtml" title="This page lists definitions for USB Audio Devices Drivers. " alt="" coords="157,625,366,652"/>
+</map>

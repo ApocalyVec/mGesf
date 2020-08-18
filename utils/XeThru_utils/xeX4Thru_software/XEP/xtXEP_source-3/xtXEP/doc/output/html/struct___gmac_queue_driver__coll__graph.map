@@ -1,0 +1,4 @@
+<map id="_GmacQueueDriver" name="_GmacQueueDriver">
+<area shape="rect" id="node2" href="$struct___gmac_rx_descriptor.xhtml" title="Receive buffer descriptor struct. " alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node3" href="$struct___gmac_tx_descriptor.xhtml" title="Transmit buffer descriptor struct. " alt="" coords="178,5,325,32"/>
+</map>

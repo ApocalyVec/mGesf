@@ -1,0 +1,5 @@
+<map id="examples/atmel_samg55/src/ASF/common/services/clock/samg/osc.h" name="examples/atmel_samg55/src/ASF/common/services/clock/samg/osc.h">
+<area shape="rect" id="node2" href="$samg_2genclk_8h.xhtml" title="Chip&#45;specific generic clock management. " alt="" coords="5,213,184,269"/>
+<area shape="rect" id="node3" href="$samg_2pll_8h.xhtml" title="Chip&#45;specific PLL definitions. " alt="" coords="120,109,299,165"/>
+<area shape="rect" id="node4" href="$samg_2sysclk_8h.xhtml" title="Chip&#45;specific system clock management functions. " alt="" coords="233,213,412,269"/>
+</map>

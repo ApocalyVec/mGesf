@@ -1,0 +1,4 @@
+<map id="GMAC_ReceiveEnable" name="GMAC_ReceiveEnable">
+<area shape="rect" id="node2" href="$group__gmacd__defines.xhtml#ga0f4f9a29244618764ca63fb4c2ca058c" title="Disable RX &amp; reset registers and descriptor list. " alt="" coords="212,5,340,32"/>
+<area shape="rect" id="node3" href="$group__gmacd__defines.xhtml#ga418589cbbef19de6084670d572b6ae27" title="Initialize necessary allocated buffer lists for GMAC Driver to transfer data. " alt="" coords="388,31,535,57"/>
+</map>

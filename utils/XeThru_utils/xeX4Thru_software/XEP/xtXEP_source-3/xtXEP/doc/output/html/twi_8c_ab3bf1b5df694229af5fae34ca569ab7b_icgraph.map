@@ -1,0 +1,9 @@
+<map id="TWI_EnableIt" name="TWI_EnableIt">
+<area shape="rect" id="node2" href="$twid_8c.xhtml#a1bc4824729ea7fce14e514036ee38490" title="Interrupt handler for a TWI peripheral. " alt="" coords="163,5,273,32"/>
+<area shape="rect" id="node3" href="$twid_8c.xhtml#a13f06b4cc25a29302d3c932e82136599" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="173,56,263,83"/>
+<area shape="rect" id="node4" href="$twid_8c.xhtml#a67c6f278372fcb213e7848929db89d3f" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="173,107,263,133"/>
+<area shape="rect" id="node5" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="157,157,279,184"/>
+<area shape="rect" id="node6" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="157,208,279,235"/>
+<area shape="rect" id="node7" href="$xtio__i2c_8h.xhtml#a7b0e666ddfaac918eb931d278b66559c" title="xtio_i2c_init" alt="" coords="170,259,266,285"/>
+<area shape="rect" id="node8" href="$group___s_a_m_e70_n19__cmsis.xhtml#ga29c3d5f43aaca36cf4529d56917f9706" title="TWIHS2_Handler" alt="" coords="155,309,281,336"/>
+</map>

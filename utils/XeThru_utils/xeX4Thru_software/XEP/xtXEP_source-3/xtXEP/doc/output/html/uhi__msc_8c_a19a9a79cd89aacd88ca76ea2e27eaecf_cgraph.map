@@ -1,0 +1,4 @@
+<map id="uhi_msc_csw_received" name="uhi_msc_csw_received">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#ab13f8cd96a83d67c31c5e772ae23d358" title="Sends a setup request RESET ENDPOINT Used after a STALL received during a scsi command. " alt="" coords="220,5,399,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#abd0709d787a564ddd9125804f32d4e68" title="Manages the end of RESET ENDPOINT request after a DATA or CSW packet. " alt="" coords="227,57,392,98"/>
+</map>

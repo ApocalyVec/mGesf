@@ -1,0 +1,5 @@
+<map id="_USBDDriverDescriptors" name="_USBDDriverDescriptors">
+<area shape="rect" id="node2" href="$struct___u_s_b_device_descriptor.xhtml" title="_USBDeviceDescriptor" alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node3" href="$struct___u_s_b_device_qualifier_descriptor.xhtml" title="_USBDeviceQualifierDescriptor" alt="" coords="197,5,415,32"/>
+<area shape="rect" id="node4" href="$struct___u_s_b_configuration_descriptor.xhtml" title="_USBConfigurationDescriptor" alt="" coords="439,5,647,32"/>
+</map>

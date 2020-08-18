@@ -1,0 +1,9 @@
+<map id="USBH_HAL_ManageSof" name="USBH_HAL_ManageSof">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#a3a003f0bc5f5ed08ba3253028bd04923" title="Enable or disable USB address. " alt="" coords="239,5,420,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#gac60ed6b8615775ae9b773432d4ee8828" title="Notify each start of frame sent by driver. " alt="" coords="265,56,393,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga170d8082df4bb77da27db090827145ec" title="USBH_HAL_DelayedSuspend" alt="" coords="225,107,433,133"/>
+<area shape="rect" id="node5" href="$group__uhd__group.xhtml#ga879e4d4476c528ed4cfac77d41bb1a06" title="USBH_HAL_DelayedResume" alt="" coords="228,157,431,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a32c56acaace52b440a308d9bce8cafff" title="Gets USB host interrupt status. " alt="" coords="481,208,705,235"/>
+<area shape="rect" id="node7" href="$group__uhd__group.xhtml#ga0e9c1f691d695f4c878712831d38e9c0" title="USBH_HAL_ControlTimeout" alt="" coords="230,259,429,285"/>
+<area shape="rect" id="node8" href="$group__uhd__group.xhtml#gaba849a4ecb7f5b837541fbccf850da59" title="USBH_HAL_PipeAbort" alt="" coords="248,309,411,336"/>
+</map>

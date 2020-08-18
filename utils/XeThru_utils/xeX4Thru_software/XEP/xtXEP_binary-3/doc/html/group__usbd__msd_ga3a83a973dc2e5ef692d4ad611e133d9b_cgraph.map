@@ -1,0 +1,5 @@
+<map id="SBC_ReadCapacity10" name="SBC_ReadCapacity10">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#ga6f8ad39249cd0f7dc9992a7ff44ba164" title="Check if the LUN is ready. " alt="" coords="227,5,347,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="238,56,337,83"/>
+<area shape="rect" id="node4" href="$_s_b_c_methods_8c.xhtml#ga65e2aa51e755428df116ecc89b7aa996" title="This function is to be used as a callback for USB or LUN transfers. " alt="" coords="212,107,363,133"/>
+</map>

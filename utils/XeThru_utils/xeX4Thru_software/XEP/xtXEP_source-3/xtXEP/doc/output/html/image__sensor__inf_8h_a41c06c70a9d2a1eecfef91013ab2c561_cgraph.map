@@ -1,0 +1,4 @@
+<map id="sensor_setup" name="sensor_setup">
+<area shape="rect" id="node2" href="$image__sensor__inf_8c.xhtml#ab51df110598942aefc1c5569465ce27e" title="Read and check sensor product ID. " alt="" coords="175,5,309,32"/>
+<area shape="rect" id="node3" href="$image__sensor__inf_8c.xhtml#ae34cdbca96ed78b3de7af406ad77e02a" title="Initialize a list of registers. " alt="" coords="161,56,323,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="AUDDSpeakerPhoneDriver_InterfaceSettingChangedHandler" name="AUDDSpeakerPhoneDriver_InterfaceSettingChangedHandler">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gaa9aba8ccdad2272b61db48b43466043b" title="Reset endpoints and disable them. " alt="" coords="309,5,467,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga785149c2dbe1cea42ec15c21b36b16f3" title="Invoked when an audio streaming interface setting changed. " alt="" coords="292,57,484,98"/>
+</map>

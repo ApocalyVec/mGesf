@@ -1,0 +1,6 @@
+<map id="uhi_msc_select_lun" name="uhi_msc_select_lun">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a26a2e9dd16de03b452df7484700d6754" title="Step 3 of the initialization of a USB MSC device Selects the next LUN. " alt="" coords="201,5,369,32"/>
+<area shape="rect" id="node3" href="$group__uhi__msc__group.xhtml#ga703657479fce9a8a4086f98f8f0fab28" title="Checks and update the status of the LUN. " alt="" coords="200,57,369,98"/>
+<area shape="rect" id="node4" href="$group__uhi__msc__group.xhtml#ga9a204242b01d7ee34b9ee6e89308af7c" title="Reads a LUN data section to RAM buffer Note: The sector size used to define the data section is the s..." alt="" coords="202,123,367,149"/>
+<area shape="rect" id="node5" href="$group__uhi__msc__group.xhtml#ga75da7088270a7c90424b0530acda9001" title="Writes a RAM buffer in a LUN data section Note: The sector size used to define the data section is th..." alt="" coords="201,173,368,200"/>
+</map>

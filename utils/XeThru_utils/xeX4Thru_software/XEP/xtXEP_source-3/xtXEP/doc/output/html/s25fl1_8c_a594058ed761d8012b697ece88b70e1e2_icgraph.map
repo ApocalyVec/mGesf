@@ -1,0 +1,4 @@
+<map id="S25FL1D_WriteVolatileStatus" name="S25FL1D_WriteVolatileStatus">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a3d08b0e2a530933edbff8459c7d3559a" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="296,5,456,32"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a4c6fd4ef041626a21913d696dc98b2e0" title="Enables critical writes operation on a serial flash device, such as sector protection, status register, etc. " alt="" coords="259,56,493,83"/>
+</map>

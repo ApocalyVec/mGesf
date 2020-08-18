@@ -1,0 +1,8 @@
+<map id="USBGenericRequest_GetIndex" name="USBGenericRequest_GetIndex">
+<area shape="rect" id="node2" href="$group__usb__audio.xhtml#ga545a0d7559049a5ac86b37a9d47943dc" title="Returns the ID of the unit or terminal targeted by an USB audio request. " alt="" coords="278,5,495,32"/>
+<area shape="rect" id="node3" href="$group__usb__audio.xhtml#ga863624d52f113876d03aff007a9aa513" title="Returns the ID of the interface targeted by an USB audio request. " alt="" coords="268,56,505,83"/>
+<area shape="rect" id="node4" href="$group__usb__request.xhtml#ga59f22fd9b4390d6c080bf95c39d0f8a9" title="Returns the endpoint number targeted by a given request. " alt="" coords="269,107,505,149"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#gaae0893893739fb365d088ea946cb2c89" title="Handles the given request if it is standard, otherwise STALLs it. " alt="" coords="553,203,760,229"/>
+<area shape="rect" id="node6" href="$group__usb__request.xhtml#ga42adc38e0a97eaf355962d6d53a2be97" title="Indicates which interface is targeted by a GET_INTERFACE or SET_INTERFACE request. " alt="" coords="308,225,465,266"/>
+<area shape="rect" id="node7" href="$group__usb__request.xhtml#ga3cc91f919947b0ecf2359c5e8fdad8b9" title="Indicates the test that the device must undertake following a SET_FEATURE request. " alt="" coords="285,290,489,331"/>
+</map>

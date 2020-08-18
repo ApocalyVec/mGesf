@@ -1,0 +1,8 @@
+<map id="xtio_get_level" name="xtio_get_level">
+<area shape="rect" id="node2" href="$xt__selftest_8c.xhtml#aec0f2a19f48773ef1f87400fe6838389" title="xt_selftest_io_connector" alt="" coords="181,5,358,32"/>
+<area shape="rect" id="node3" href="$xt__system_8c.xhtml#a8d576cef4eead3e26b3adf733cd487c2" title="Gets the submode of the module for certification. " alt="" coords="198,57,341,98"/>
+<area shape="rect" id="node4" href="$xt__system_8c.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="182,123,357,149"/>
+<area shape="rect" id="node5" href="$xtio__serial__com_8c.xhtml#ac8f411a660584db9578fa744183ed83c" title="_usb_available" alt="" coords="424,148,539,175"/>
+<area shape="rect" id="node6" href="$task__radar_8c.xhtml#aaf9dce020103065a449faffb7bfdded2" title="_x4driver_test_io_connectivity" alt="" coords="163,224,376,251"/>
+<area shape="rect" id="node7" href="$xep__application__mcp__callbacks_8h.xhtml#ab45991b5af535952ce2020e56a1f23ca" title="onMcpGetIOPinValue" alt="" coords="192,275,347,301"/>
+</map>

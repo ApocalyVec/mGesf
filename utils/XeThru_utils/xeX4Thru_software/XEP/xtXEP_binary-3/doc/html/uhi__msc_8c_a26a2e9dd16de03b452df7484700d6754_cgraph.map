@@ -1,0 +1,5 @@
+<map id="uhi_msc_enable_step3" name="uhi_msc_enable_step3">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a8be1505361ded3e52f05ea51b17bc334" title="Selects a LUN. " alt="" coords="232,5,379,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#afcb2ce185f82a18e44f7c3b42340c496" title="Sends the CBW packet of the scsi INQUIRY command. " alt="" coords="228,56,383,83"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#ac95ce59659e65907d582bccbabe47522" title="Step 4 of the initialization of a USB MSC device Sends the SCSI READ CAPACITY request on the current ..." alt="" coords="221,107,389,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="AUDDStream_SetupWrite" name="AUDDStream_SetupWrite">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga62263446ee46cfc2ca48856e446f1a79" title="Configure an endpoint to use multi&#45;buffer&#45;list transfer mode. " alt="" coords="246,5,457,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#gafcb94bdd4c0ea327621a187814ab4f9f" title="Set callback for a USB endpoint for transfer (read/write). " alt="" coords="239,56,464,83"/>
+</map>

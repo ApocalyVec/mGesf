@@ -1,0 +1,5 @@
+<map id="USBHS_HostGetToken" name="USBHS_HostGetToken">
+<area shape="rect" id="node2" href="$usbhs_8h.xhtml#afc5b9450b58a00b6b0080285a6296595" title="USBHS_GetPipeEpAddr" alt="" coords="227,5,399,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga1d4a9f98194cb255b2fcb6cdf8d83fb8" title="Allows to receive or send data on an endpoint. " alt="" coords="223,56,402,83"/>
+<area shape="rect" id="node4" href="$group__uhd__group.xhtml#ga39a6506d44760a518b49d004574bc9c9" title="USBH_HAL_PipeOutReady" alt="" coords="219,107,407,133"/>
+</map>

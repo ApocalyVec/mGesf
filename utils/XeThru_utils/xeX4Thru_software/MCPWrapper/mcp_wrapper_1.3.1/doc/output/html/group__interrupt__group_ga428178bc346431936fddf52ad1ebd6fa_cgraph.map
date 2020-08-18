@@ -1,0 +1,5 @@
+<map id="cpu_irq_restore" name="cpu_irq_restore">
+<area shape="rect" id="node2" href="$group__interrupt__group.xhtml#ga4dffd77dae2b3b3c5bce2612db656e48" title="Check if interrupts are globally enabled in supplied flags. " alt="" coords="170,5,303,47"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#ga2b5f1a58b98aea52fbe094636054d910" title="cpu_irq_enter_critical" alt="" coords="164,71,309,98"/>
+<area shape="rect" id="node4" href="$group__interrupt__group.xhtml#gad9a7e953e4e3eb6bde58eb1c81092b43" title="cpu_irq_leave_critical" alt="" coords="164,122,309,149"/>
+</map>

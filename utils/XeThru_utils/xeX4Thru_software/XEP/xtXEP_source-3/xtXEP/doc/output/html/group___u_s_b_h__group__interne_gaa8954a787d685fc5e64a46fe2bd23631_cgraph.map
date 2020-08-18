@@ -1,0 +1,4 @@
+<map id="USBH_suspend" name="USBH_suspend">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga0cdbdeca42fcc7e8a21be55261ac0b7c" title="Enables or disables the remote wakeup feature of all devices connected. " alt="" coords="175,5,337,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga108d6958efd3c7337897ae40963e3f58" title="Enables the suspend state on the USB line. " alt="" coords="178,56,334,83"/>
+</map>

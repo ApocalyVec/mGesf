@@ -1,0 +1,10 @@
+<map id="src/System/task_monitor.c" name="src/System/task_monitor.c">
+<area shape="rect" id="node2" href="$task__monitor_8h.xhtml" title="System monitor task. " alt="" coords="5,80,123,107"/>
+<area shape="rect" id="node8" href="$xtcompiler_8h.xhtml" title="xtcompiler.h" alt="" coords="634,80,734,107"/>
+<area shape="rect" id="node9" href="$xtmemory_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="759,80,857,107"/>
+<area shape="rect" id="node10" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="905,155,988,181"/>
+<area shape="rect" id="node11" href="$xthousekeeping_8h.xhtml" title="xthousekeeping.h" alt="" coords="933,80,1067,107"/>
+<area shape="rect" id="node12" href="$xttoolbox_8h.xhtml" title="Misc tools. " alt="" coords="1092,80,1185,107"/>
+<area shape="rect" id="node13" href="$xep__dispatch__messages_8h.xhtml" title="xep_dispatch_messages.h" alt="" coords="1210,80,1401,107"/>
+<area shape="rect" id="node14" href="$board_8h.xhtml" title="Definition of SAM E70 Xplained board characteristics, PIOs and external components interface..." alt="" coords="1425,80,1495,107"/>
+</map>

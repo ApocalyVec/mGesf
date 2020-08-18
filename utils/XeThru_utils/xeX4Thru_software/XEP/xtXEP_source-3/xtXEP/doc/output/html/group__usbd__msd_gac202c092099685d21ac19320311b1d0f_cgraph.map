@@ -1,0 +1,10 @@
+<map id="MSDD_StateMachine" name="MSDD_StateMachine">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga42391c0d642db3869248a8fa3f167ec7" title="Wait for data to read and then return. " alt="" coords="224,5,412,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gaa786fa9bbfd3c2f64b5f486e537ffebb" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="269,56,367,83"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#ga65e2aa51e755428df116ecc89b7aa996" title="This function is to be used as a callback for USB or LUN transfers. " alt="" coords="243,107,393,133"/>
+<area shape="rect" id="node5" href="$group__usbd__msd.xhtml#gae1fed7a9b3c1308ca161df14f9740718" title="Pre&#45;processes a command by checking the differences between the host and device expectations in term ..." alt="" coords="215,157,421,184"/>
+<area shape="rect" id="node6" href="$group__usbd__msd.xhtml#ga205b122769aa196e2bfe7eadf30b2519" title="Processes the latest command received by the device. " alt="" coords="225,208,411,235"/>
+<area shape="rect" id="node7" href="$group__usbd__msd.xhtml#ga1ef15a39c9d18bb5b326548c04711108" title="Post&#45;processes a command given the case identified during the pre&#45;processing step. " alt="" coords="211,259,425,285"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="269,309,367,336"/>
+<area shape="rect" id="node9" href="$group__usbd__interface.xhtml#gaf469bcfbab3b7f7e211d550e79e0b3c8" title="Returns the current Halt status of an endpoint. " alt="" coords="259,360,377,387"/>
+</map>

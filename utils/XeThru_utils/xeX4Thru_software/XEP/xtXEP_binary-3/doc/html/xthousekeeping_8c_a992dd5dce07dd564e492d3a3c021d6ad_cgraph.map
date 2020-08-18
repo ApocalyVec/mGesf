@@ -1,0 +1,5 @@
+<map id="xthousekeeping_in_safe_mode" name="xthousekeeping_in_safe_mode">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a5e62effeb5c5323c3d423225a6a3dbf3" title="Gets the cause of the previous software reset. " alt="" coords="272,5,425,32"/>
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml#a88a96f708160bd3ccf8a8f0986f51d88" title="Get crash count. " alt="" coords="275,56,422,83"/>
+<area shape="rect" id="node4" href="$xep__hal_8h.xhtml#ace2af126089abe1d676edfc1400d0bf7" title="Triggers a software reset of MCU. " alt="" coords="281,107,416,133"/>
+</map>

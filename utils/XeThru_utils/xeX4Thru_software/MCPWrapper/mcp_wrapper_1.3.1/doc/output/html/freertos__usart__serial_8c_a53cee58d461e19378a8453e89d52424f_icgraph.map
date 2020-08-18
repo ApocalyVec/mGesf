@@ -1,0 +1,4 @@
+<map id="configure_rx_dma" name="configure_rx_dma">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga9f4de374d2019244881290bf4943cb81" title="Initiate a completely multi&#45;byte read operation on a USART peripheral. " alt="" coords="177,5,316,47"/>
+<area shape="rect" id="node3" href="$freertos__usart__serial_8c.xhtml#ad44530befbc1c8c93942c53ef729557a" title="local_usart_handler" alt="" coords="179,71,314,98"/>
+</map>

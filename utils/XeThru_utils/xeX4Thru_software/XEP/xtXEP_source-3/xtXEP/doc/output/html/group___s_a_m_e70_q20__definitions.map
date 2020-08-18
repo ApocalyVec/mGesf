@@ -1,0 +1,8 @@
+<map id="SAME70Q20 definitions" name="SAME70Q20 definitions">
+<area shape="rect" id="node1" href="$group___s_a_m_e70_q20__id.xhtml" title="Peripheral Ids Definitions" alt="" coords="235,5,413,32"/>
+<area shape="rect" id="node2" href="$group___s_a_m_e70_q20__pio.xhtml" title="Peripheral Pio Definitions" alt="" coords="234,56,414,83"/>
+<area shape="rect" id="node3" href="$group___s_a_m_e70_q20__base.xhtml" title="Peripheral Base Address\l Definitions" alt="" coords="235,107,413,149"/>
+<area shape="rect" id="node4" href="$group___s_a_m_e70_q20__api.xhtml" title="SOFTWARE PERIPHERAL API DEFINITION FOR SAME70Q20. " alt="" coords="239,173,409,200"/>
+<area shape="rect" id="node5" href="$group___s_a_m_e70_q20__cmsis.xhtml" title="CMSIS Definitions" alt="" coords="257,224,391,251"/>
+<area shape="rect" id="node6" href="$group___s_a_m_e70_q20__reg.xhtml" title="Registers Access Definitions" alt="" coords="224,275,424,301"/>
+</map>

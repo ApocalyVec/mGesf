@@ -1,0 +1,5 @@
+<map id="xtio_uart_set_baudrate" name="xtio_uart_set_baudrate">
+<area shape="rect" id="node2" href="$xtio__serial__com_8c.xhtml#a8904ed52c6457d6e9fc7d87adf2d78af" title="_uart_task_init" alt="" coords="417,5,532,32"/>
+<area shape="rect" id="node3" href="$xtio__serial__com_8c.xhtml#a5e9056b9bb65d42367ec290aea738768" title="_uart_task_rx" alt="" coords="243,31,351,57"/>
+<area shape="rect" id="node4" href="$xep__application__mcp__callbacks_8h.xhtml#a8a66a26f3081dd2c2e037353a8de8fc8" title="onMcpSetBaudrate" alt="" coords="224,81,369,108"/>
+</map>

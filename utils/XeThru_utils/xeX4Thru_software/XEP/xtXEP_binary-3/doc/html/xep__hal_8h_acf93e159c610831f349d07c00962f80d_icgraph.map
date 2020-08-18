@@ -1,0 +1,6 @@
+<map id="xt_fast_memory_enabled" name="xt_fast_memory_enabled">
+<area shape="rect" id="node2" href="$xtmemory__xep_8c.xhtml#a074cb46fba954fb164b67e59ea69efb2" title="Allocate memory from fast location. " alt="" coords="270,5,438,32"/>
+<area shape="rect" id="node3" href="$xtmemory__xep_8c.xhtml#a8ec65d5206617a7838830f17b9cf8583" title="Free memory allocated by xtmemory_malloc_fast. " alt="" coords="279,56,429,83"/>
+<area shape="rect" id="node4" href="$xtmemory__xep_8c.xhtml#ac619e2caa7125b6211f53d680a9f03fb" title="Get the fast memory usage watermark indicated by historically lowest amount of available memory..." alt="" coords="237,107,471,133"/>
+<area shape="rect" id="node5" href="$xtmemory__xep_8c.xhtml#af215d1f4153a20b4fae548227681035b" title="Get amount of fast heap memory available. " alt="" coords="243,157,465,184"/>
+</map>

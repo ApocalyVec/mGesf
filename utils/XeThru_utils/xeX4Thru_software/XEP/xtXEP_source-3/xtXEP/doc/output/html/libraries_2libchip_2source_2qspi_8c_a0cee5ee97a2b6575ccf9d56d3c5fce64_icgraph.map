@@ -1,0 +1,10 @@
+<map id="QSPI_EndTransfer" name="QSPI_EndTransfer">
+<area shape="rect" id="node2" href="$s25fl1_8c.xhtml#a1a915b35968bc2e31ab4fe5e38a76708" title="Start S25FL1D Send command with/without data write/read. " alt="" coords="452,44,639,71"/>
+<area shape="rect" id="node3" href="$s25fl1_8c.xhtml#a8be9db10e4e0f291c0cb537fcc7e3d68" title="Start S25FL1D Memory access with/without data write/read. " alt="" coords="454,171,637,197"/>
+<area shape="rect" id="node4" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a8308475d5d101aa49fc1442d33f01107" title="Send instruction over QSPI with data. " alt="" coords="187,44,404,71"/>
+<area shape="rect" id="node5" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a1f39a599939fa64e6aca66a98e426499" title="Send instruction over QSPI to read data. " alt="" coords="217,95,374,121"/>
+<area shape="rect" id="node6" href="$libraries_2libchip_2source_2qspi_8c.xhtml#a61a250e1df8fc3d9823aa8d0af159cff" title="Writes or reads the QSPI memory (0x80000000) to transmit or receive data from Flash memory..." alt="" coords="219,196,372,223"/>
+<area shape="rect" id="node7" href="$qspi__dma_8c.xhtml#a63083abbd1516f582a6fce26cc454c79" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="239,247,352,273"/>
+<area shape="rect" id="node8" href="$qspi__dma_8c.xhtml#a7ec38a13740b2b9ff6f7cb7c2b4e864c" title="QSPI xDMA Tx callback Invoked on QSPi DMA Write done. " alt="" coords="229,297,362,324"/>
+<area shape="rect" id="node9" href="$qspi__dma_8c.xhtml#a9175c4c6f74204330090dfc3d1bfdc6a" title="QSPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="228,348,363,375"/>
+</map>

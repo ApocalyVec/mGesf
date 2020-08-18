@@ -1,0 +1,6 @@
+<map id="xep_process_dispatch_message_default" name="xep_process_dispatch_message_default">
+<area shape="rect" id="node2" href="$xep__dispatch_8h.xhtml#af230fbcbf78ff22c13ca92625a50216d" title="Release message. " alt="" coords="239,5,435,32"/>
+<area shape="rect" id="node3" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="317,56,356,83"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a7d4889c801b25b77cfdf4958087ac5c6" title="Dispatch message to hostcom asking to send radar frame data to host. " alt="" coords="216,107,457,149"/>
+<area shape="rect" id="node5" href="$module__ui_8h.xhtml#a54f86bf93a9a46ab61ff08b7e535e9a0" title="Set the module LED color. " alt="" coords="247,173,426,200"/>
+</map>

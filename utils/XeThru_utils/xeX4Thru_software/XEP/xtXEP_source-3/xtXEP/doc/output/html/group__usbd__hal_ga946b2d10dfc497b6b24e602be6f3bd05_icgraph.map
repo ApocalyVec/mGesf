@@ -1,0 +1,13 @@
+<map id="USBD_HAL_IsHighSpeed" name="USBD_HAL_IsHighSpeed">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#gafcd12a00544aac7645deb694ec611e7a" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="292,5,419,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speaker.xhtml#gacdc1729fd19bf2030d6dc5a8dcc9bfde" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="233,57,477,98"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga44871402f8ef778c0f87249bcc18dca4" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="249,122,462,163"/>
+<area shape="rect" id="node5" href="$group__usbd__interface.xhtml#ga02b4d22818a9e99025383bbc5a2507d7" title="Indicates if the device is running in high or full&#45;speed. " alt="" coords="282,188,429,215"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#ga9a20011d336dec2bd5feb197f0da1c80" title="Configures the device by setting it into the Configured state and initializing all endpoints..." alt="" coords="291,239,420,265"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gadbb4c8a840d3ff539be6fa5fa9f4a4e0" title="Sends the requested USB descriptor to the host if available, or STALLs the request. " alt="" coords="300,289,411,316"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#gadfce99fba013d30648e7a058c7fa6799" title="Returns configuration descriptor list. " alt="" coords="244,340,467,367"/>
+<area shape="rect" id="node9" href="$group__usbd__hal.xhtml#ga571a674fe9f9a1bba6ad08b3b0b28a80" title="USBD (UDP) interrupt handler Manages device resume, suspend, end of bus reset. " alt="" coords="289,391,422,417"/>
+<area shape="rect" id="node10" href="$hal__udphs_8c.xhtml#gadf1deb2219e27bcf29d2598d4aa04c1d" title="Reads incoming data on an USB endpoint This methods sets the transfer descriptor and activate the end..." alt="" coords="525,416,632,443"/>
+<area shape="rect" id="node11" href="$group__usbd__hid__key.xhtml#ga7147c21b165fd52ac5769ac948cf659a" title="Handles configureation changed event. " alt="" coords="245,493,466,534"/>
+<area shape="rect" id="node12" href="$group__usbd__hid__tran.xhtml#gaa42cac9f13dfb2f99d409b11e84050e6" title="Handles configureation changed event. " alt="" coords="245,558,466,599"/>
+</map>

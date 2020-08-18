@@ -1,0 +1,6 @@
+<map id="SBCLunIsReady" name="SBCLunIsReady">
+<area shape="rect" id="node2" href="$group__usbd__msd.xhtml#gaedd02c4c2e4224d76f3b5dc363abd546" title="Check if the LUN can write. " alt="" coords="173,5,332,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#gabc88802a5167eed1f5955df898b6c6bb" title="Performs a READ (10) command on specified LUN. " alt="" coords="201,56,304,83"/>
+<area shape="rect" id="node4" href="$group__usbd__msd.xhtml#ga3a83a973dc2e5ef692d4ad611e133d9b" title="Performs a READ CAPACITY (10) command. " alt="" coords="173,107,332,133"/>
+<area shape="rect" id="node5" href="$group__usbd__msd.xhtml#ga114a8851b201e26f5cda18ee7077d6ef" title="Performs a MODE SENSE (6) command. " alt="" coords="183,157,322,184"/>
+</map>

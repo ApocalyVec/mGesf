@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['eefc_5ffcr',['EEFC_FCR',['../struct_efc.xhtml#a38dbb840f7e6d6d6636470906c77d2dd',1,'Efc']]],
+  ['eefc_5ffmr',['EEFC_FMR',['../struct_efc.xhtml#a0267dc569c60c29fd05b2cc8b7ee112c',1,'Efc']]],
+  ['eefc_5ffrr',['EEFC_FRR',['../struct_efc.xhtml#a82c4cb433e72e8bbd32412d06a09beb8',1,'Efc']]],
+  ['eefc_5ffsr',['EEFC_FSR',['../struct_efc.xhtml#aaf6b92c6ac0bdc78197ca0a16d37fdb0',1,'Efc']]],
+  ['eefc_5fwpmr',['EEFC_WPMR',['../struct_efc.xhtml#a84e499108c143fc119dc46fab3ebae5f',1,'Efc']]],
+  ['energy',['energy',['../structarm__lms__norm__instance__f32.xhtml#a6a4119e4f39447bbee31b066deafa16f',1,'arm_lms_norm_instance_f32::energy()'],['../structarm__lms__norm__instance__q31.xhtml#a3c0ae42869afec8555dc8e3a7ef9b386',1,'arm_lms_norm_instance_q31::energy()'],['../structarm__lms__norm__instance__q15.xhtml#a1c81ded399919d8181026bc1c8602e7b',1,'arm_lms_norm_instance_q15::energy()']]],
+  ['errno',['errno',['../syscalls_8c.xhtml#ad65a8842cc674e3ddf69355898c0ecbf',1,'syscalls.c']]],
+  ['error',['error',['../struct_host_parser.xhtml#ab7c6d3a0e4d622c2047a94bf7b3fe6f3',1,'HostParser::error()'],['../protocol__host__parser_8h.xhtml#a70a0ab50a6441399ec3240c81a97a9b8',1,'ERROR():&#160;protocol_host_parser.h']]],
+  ['error_5fcode',['error_code',['../struct_error.xhtml#a0832eb158486daacb41dd18228662d0d',1,'Error']]],
+  ['error_5fno_5fdata',['ERROR_NO_DATA',['../protocol__host__parser_8h.xhtml#a1eb904d7bb08a08310828d953f505b0d',1,'protocol_host_parser.h']]],
+  ['error_5fshort_5fdata',['ERROR_SHORT_DATA',['../protocol__host__parser_8h.xhtml#a8e9fbf2426b2475632a8a1341d431ac3',1,'protocol_host_parser.h']]],
+  ['error_5funknown_5fpacket',['ERROR_UNKNOWN_PACKET',['../protocol__host__parser_8h.xhtml#aa22b1e0ab9b47187c9f1fd64c8283c22',1,'protocol_host_parser.h']]],
+  ['error_5fwrong_5fcontent',['ERROR_WRONG_CONTENT',['../protocol__host__parser_8h.xhtml#a2bfad4ac1f790406b0689f3acdbf0714',1,'protocol_host_parser.h']]],
+  ['errorhandler',['errorHandler',['../structxt_protocol.xhtml#a52313f5b42417db5a4b7790e9a8dc1a4',1,'xtProtocol']]],
+  ['escape_5fbyte',['ESCAPE_BYTE',['../protocol__helpers_8h.xhtml#a7648837697db6ac30023b4d4e02a257d',1,'protocol_helpers.h']]],
+  ['escaped',['escaped',['../structxt_protocol.xhtml#a61a5ce1821e69f10e93fc28a660ac6e2',1,'xtProtocol']]],
+  ['exccnt',['EXCCNT',['../struct_d_w_t___type.xhtml#ac0801a2328f3431e4706fed91c828f82',1,'DWT_Type']]],
+  ['exception_5ftable',['exception_table',['../startup__samg55_8c.xhtml#a4889407218b3ebcbb20e578911912524',1,'startup_samg55.c']]]
+];

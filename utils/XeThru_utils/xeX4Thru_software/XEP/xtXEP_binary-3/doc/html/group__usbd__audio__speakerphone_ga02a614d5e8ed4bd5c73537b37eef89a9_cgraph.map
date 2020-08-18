@@ -1,0 +1,4 @@
+<map id="AUDD_VolumeReceived" name="AUDD_VolumeReceived">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#gaf2f5f8a41674f3a859f20ba5b8923a0b" title="Set Stream Volume status. " alt="" coords="225,5,412,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="269,56,368,83"/>
+</map>

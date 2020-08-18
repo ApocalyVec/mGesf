@@ -1,0 +1,4 @@
+<map id="GMACD_ResetRx" name="GMACD_ResetRx">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#ga3caa9d3dc5ec1e3e32e9e017702ef51e" title="Enable/Disable GMAC receive. " alt="" coords="181,5,340,32"/>
+<area shape="rect" id="node3" href="$group__gmac__defines.xhtml#gab6728c6253143037bbc9c30befe81c19" title="Set Rx Queue. " alt="" coords="187,56,334,83"/>
+</map>

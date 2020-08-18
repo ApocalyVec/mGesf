@@ -1,0 +1,5 @@
+<map id="TWI_GetStatus" name="TWI_GetStatus">
+<area shape="rect" id="node2" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="170,5,293,32"/>
+<area shape="rect" id="node3" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="170,56,293,83"/>
+<area shape="rect" id="node4" href="$group___s_a_m_e70_n19__cmsis.xhtml#ga29c3d5f43aaca36cf4529d56917f9706" title="TWIHS2_Handler" alt="" coords="168,107,295,133"/>
+</map>

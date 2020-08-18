@@ -1,0 +1,5 @@
+<map id="uhi_msc_scsi_test_unit_ready" name="uhi_msc_scsi_test_unit_ready">
+<area shape="rect" id="node2" href="$uhi__msc_8c.xhtml#a8be1505361ded3e52f05ea51b17bc334" title="Selects a LUN. " alt="" coords="234,5,381,32"/>
+<area shape="rect" id="node3" href="$uhi__msc_8c.xhtml#ae40b333993e7c9aba64dc65f41ede8c4" title="Sends the CBW packet. " alt="" coords="254,56,361,83"/>
+<area shape="rect" id="node4" href="$uhi__msc_8c.xhtml#acdfb46388d2b6e842e93d193a169440f" title="Decodes the result of scsi TEST UNIT READY command Launches READ CAPACITY command, if a new LUN has been detected. " alt="" coords="223,107,392,149"/>
+</map>

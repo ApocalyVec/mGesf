@@ -1,0 +1,5 @@
+<map id="xtio_serial_com_debug_init" name="xtio_serial_com_debug_init">
+<area shape="rect" id="node2" href="$xtio__serial__com_8c.xhtml#ac8f411a660584db9578fa744183ed83c" title="_usb_available" alt="" coords="248,5,363,32"/>
+<area shape="rect" id="node3" href="$xtio__serial__com_8c.xhtml#a8904ed52c6457d6e9fc7d87adf2d78af" title="_uart_task_init" alt="" coords="248,56,363,83"/>
+<area shape="rect" id="node4" href="$xtio__serial__com_8c.xhtml#ae7ac43c7ce3999faa8c92e43bf0f8fb7" title="_i2c_available" alt="" coords="250,107,361,133"/>
+</map>

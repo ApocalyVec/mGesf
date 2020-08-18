@@ -1,0 +1,5 @@
+<map id="createGetSystemInfoCommand" name="createGetSystemInfoCommand">
+<area shape="rect" id="node2" href="$protocol_8c.xhtml#a3de1158ac59e288305dd2a83c23c8bcf" title="packet_start" alt="" coords="259,5,353,32"/>
+<area shape="rect" id="node3" href="$protocol_8c.xhtml#aefcdbf5141d1639e3d6aea7a577b09a5" title="process_byte" alt="" coords="256,56,356,83"/>
+<area shape="rect" id="node4" href="$protocol_8c.xhtml#aa411de769b16d0e990fed401be284798" title="packet_end" alt="" coords="261,107,351,133"/>
+</map>

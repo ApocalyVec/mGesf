@@ -1,0 +1,5 @@
+<map id="FLASHD_Unlock" name="FLASHD_Unlock">
+<area shape="rect" id="node2" href="$flashd_8c.xhtml#a8c573fa8b3e1dfcf111bd50440353d5f" title="Computes the lock range associated with the given address range. " alt="" coords="187,5,338,32"/>
+<area shape="rect" id="node3" href="$efc_8h.xhtml#a170fa534d132c75b2851f0a42f7b71b0" title="Translates the given address page and offset values. " alt="" coords="396,31,559,57"/>
+<area shape="rect" id="node4" href="$efc_8h.xhtml#a89ced3586649e7455882295657f7c11a" title="Performs the given command and wait until its completion (or an error). " alt="" coords="177,107,348,133"/>
+</map>

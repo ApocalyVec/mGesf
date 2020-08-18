@@ -1,0 +1,5 @@
+<map id="bit_is_set" name="bit_is_set">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#ac410a664bdf7c4a27e6b26fe27bf9801" title="Sets internal register value. " alt="" coords="156,5,319,47"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a33cc21cd8eeda4680c7ee2c47cf6e09b" title="Gets reads frame counter from 8051 mailbox requires enable to be set and 8051 SRAM to be program..." alt="" coords="136,71,339,98"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#af984a0703695b6ef27a2c76a30e8c992" title="Gets internal register value. " alt="" coords="145,123,330,164"/>
+</map>

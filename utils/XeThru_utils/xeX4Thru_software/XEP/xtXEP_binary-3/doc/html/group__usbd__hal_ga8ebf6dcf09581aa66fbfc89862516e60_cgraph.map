@@ -1,0 +1,7 @@
+<map id="USBD_HAL_WrWithHdr" name="USBD_HAL_WrWithHdr">
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___cache_functions.xhtml#ga696fadbf7b9cc71dad42fab61873a40d" title="SCB_CleanDCache_by_Addr" alt="" coords="219,5,420,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a4e3485ec2d4cc77a04795d2047ccb7d5" title="Get Endpoint configuration. " alt="" coords="228,56,411,83"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#ad1cea33281f84fba93b0b4ecd554ce3a" title="Enables DMA interrupt for a given endpoint. " alt="" coords="229,107,410,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#aaefdcd5f8be021f6ebffcbb4e7630079" title="Enables interrupt for a given endpoint. " alt="" coords="244,157,395,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a6e9251af935e4867afa52cd306e8c699" title="Enables an interrupt type for a given endpoint. " alt="" coords="230,208,409,235"/>
+</map>

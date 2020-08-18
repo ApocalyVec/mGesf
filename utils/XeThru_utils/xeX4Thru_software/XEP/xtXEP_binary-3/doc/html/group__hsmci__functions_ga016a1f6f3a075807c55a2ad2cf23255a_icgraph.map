@@ -1,0 +1,4 @@
+<map id="HSMCI_GetMode" name="HSMCI_GetMode">
+<area shape="rect" id="node2" href="$group__mcid__functions.xhtml#ga0f7fea41ecb05d212817789962f3160b" title="SD/MMC command. " alt="" coords="183,5,308,32"/>
+<area shape="rect" id="node3" href="$group__mcid__functions.xhtml#ga03c7b7af1b4abf00f759b0a47c476baf" title="Reset MCID and disable HW. " alt="" coords="197,56,294,83"/>
+</map>

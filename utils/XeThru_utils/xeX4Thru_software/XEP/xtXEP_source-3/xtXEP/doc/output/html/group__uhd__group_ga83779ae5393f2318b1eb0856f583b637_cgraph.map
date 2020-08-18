@@ -1,0 +1,9 @@
+<map id="USBH_HAL_FreePipe" name="USBH_HAL_FreePipe">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#gafb1043e05189c04ded956208eea3e2b5" title="USBH_HAL_ControlReqEnd" alt="" coords="208,5,401,32"/>
+<area shape="rect" id="node3" href="$usbhs_8h.xhtml#a963fd2f0eab05393ff85e14bfd909021" title="USBHS_HostGetAddr" alt="" coords="449,31,608,57"/>
+<area shape="rect" id="node4" href="$usbhs_8h.xhtml#aca1a73918c77f0aaa82395b55d760ae8" title="Gets USB host interrupt status. " alt="" coords="211,107,398,133"/>
+<area shape="rect" id="node5" href="$usbhs_8h.xhtml#afc5b9450b58a00b6b0080285a6296595" title="USBHS_GetPipeEpAddr" alt="" coords="219,157,391,184"/>
+<area shape="rect" id="node6" href="$usbhs_8h.xhtml#a4aabd40a9718b4bab7036aa5439a266f" title="Gets USB host interrupt status. " alt="" coords="215,208,395,235"/>
+<area shape="rect" id="node7" href="$usbhs_8h.xhtml#a5af3c325c4029dd2830a88dcf6d8d360" title="Gets USB host interrupt status. " alt="" coords="222,259,387,285"/>
+<area shape="rect" id="node8" href="$group__uhd__group.xhtml#gaba849a4ecb7f5b837541fbccf850da59" title="USBH_HAL_PipeAbort" alt="" coords="223,309,386,336"/>
+</map>

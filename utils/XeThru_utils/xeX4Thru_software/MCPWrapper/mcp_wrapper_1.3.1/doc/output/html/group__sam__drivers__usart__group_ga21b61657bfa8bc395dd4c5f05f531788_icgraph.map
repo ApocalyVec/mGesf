@@ -1,0 +1,4 @@
+<map id="usart_start_rx_timeout" name="usart_start_rx_timeout">
+<area shape="rect" id="node2" href="$group__freertos__usart__peripheral__control__group.xhtml#ga09bccd303f0eafa482a0ffb56d0438b8" title="Initializes the FreeRTOS ASF USART driver for the specified USART port. " alt="" coords="205,5,368,32"/>
+<area shape="rect" id="node3" href="$freertos__usart__serial_8c.xhtml#ad44530befbc1c8c93942c53ef729557a" title="local_usart_handler" alt="" coords="219,56,354,83"/>
+</map>

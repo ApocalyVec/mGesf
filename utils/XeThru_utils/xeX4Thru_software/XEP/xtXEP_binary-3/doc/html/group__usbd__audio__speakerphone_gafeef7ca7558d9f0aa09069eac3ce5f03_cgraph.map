@@ -1,0 +1,5 @@
+<map id="AUDDStream_IsRequestAccepted" name="AUDDStream_IsRequestAccepted">
+<area shape="rect" id="node2" href="$group__usb__audio.xhtml#ga863624d52f113876d03aff007a9aa513" title="Returns the ID of the interface targeted by an USB audio request. " alt="" coords="291,5,528,32"/>
+<area shape="rect" id="node3" href="$group__usb__audio.xhtml#ga545a0d7559049a5ac86b37a9d47943dc" title="Returns the ID of the unit or terminal targeted by an USB audio request. " alt="" coords="301,56,518,83"/>
+<area shape="rect" id="node4" href="$group__usb__audio.xhtml#ga47557d2c62372574f370291ed4526b12" title="Returns the channel number of a Feature unit which should be altered by the given request..." alt="" coords="321,107,497,149"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="osc_enable" name="osc_enable">
+<area shape="rect" id="node2" href="$group__genclk__group.xhtml#gab3fb066ffd9812df1915794fc27216fb" title="Enable the source clock src used by a generic clock. " alt="" coords="141,5,292,32"/>
+<area shape="rect" id="node3" href="$group__pll__group.xhtml#gaf4808844971419dcc305ad41a2104d0a" title="Enable the source of the pll. " alt="" coords="153,56,280,83"/>
+<area shape="rect" id="node4" href="$group__sysclk__group.xhtml#ga242399e48a97739c88b4d0c00f6101de" title="Initialize the synchronous clock system. " alt="" coords="340,81,424,108"/>
+</map>

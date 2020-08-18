@@ -1,0 +1,3 @@
+<map id="sensor_twi_write_regs" name="sensor_twi_write_regs">
+<area shape="rect" id="node2" href="$image__sensor__inf_8c.xhtml#af63cabe901fd13bc5e111d80884f9421" title="Write a value to a register in an dedicated sensor device. " alt="" coords="215,5,369,32"/>
+</map>

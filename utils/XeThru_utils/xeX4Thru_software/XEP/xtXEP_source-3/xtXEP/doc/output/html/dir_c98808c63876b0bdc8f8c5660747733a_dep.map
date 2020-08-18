@@ -1,0 +1,9 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/device/hal_examples" name="src/hal/x4m0x_s70/libraries/libusb/device/hal_examples">
+<area shape="rect" id="node1" href="dir_c98808c63876b0bdc8f8c5660747733a.xhtml" title="hal_examples" alt="" coords="27,52,138,100"/>
+<area shape="rect" id="node2" href="dir_a75a6fe80fd9120ba7dd67a0b33a7bc9.xhtml" title="libchip" alt="" coords="47,244,119,292"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000046_000013.xhtml" title="2" alt="" coords="79,217,88,232"/>
+<area shape="rect" id="node3" href="dir_c46a29a3f6521c422d3477bfa11d561d.xhtml" title="include" alt="" coords="84,148,156,196"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000046_000060.xhtml" title="2" alt="" coords="107,121,117,135"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000060_000013.xhtml" title="1" alt="" coords="102,223,111,238"/>
+<area shape="rect" id="clust1" href="dir_d2da8e13eb5c48e27ac81e92e0b056f1.xhtml" title="device" alt="" coords="16,16,149,111"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Qspid_t" name="Qspid_t">
+<area shape="rect" id="node2" href="$struct_qspi_inst_frame__t.xhtml" title="qspi frame structure for QSPI mode " alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node3" href="$struct_qspi_buffer__t.xhtml" title="qspi buffer structure " alt="" coords="155,5,255,32"/>
+<area shape="rect" id="node4" href="$struct_qspi.xhtml" title="Qspi hardware registers. " alt="" coords="280,5,331,32"/>
+<area shape="rect" id="node5" href="$struct_qspi_mem_cmd__t.xhtml" title="qspi command structure " alt="" coords="355,5,479,32"/>
+</map>

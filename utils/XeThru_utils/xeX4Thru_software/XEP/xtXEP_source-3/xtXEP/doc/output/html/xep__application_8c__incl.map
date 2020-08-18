@@ -1,0 +1,15 @@
+<map id="src/XEPA/xep_application.c" name="src/XEPA/xep_application.c">
+<area shape="rect" id="node2" href="$xep__application_8h.xhtml" title="XEP Module application interface. " alt="" coords="5,87,139,114"/>
+<area shape="rect" id="node7" href="$xtcompiler_8h.xhtml" title="xtcompiler.h" alt="" coords="555,87,655,114"/>
+<area shape="rect" id="node9" href="$xep__dispatch__messages_8h.xhtml" title="xep_dispatch_messages.h" alt="" coords="790,87,981,114"/>
+<area shape="rect" id="node10" href="$module__ui_8h.xhtml" title="module_ui.h" alt="" coords="1005,87,1105,114"/>
+<area shape="rect" id="node11" href="$xep_8h.xhtml" title="XEP interface. " alt="" coords="1129,87,1186,114"/>
+<area shape="rect" id="node13" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="1472,169,1555,196"/>
+<area shape="rect" id="node14" href="$xtmemory_8h.xhtml" title="Platform independent mutex mechanism. " alt="" coords="1312,87,1411,114"/>
+<area shape="rect" id="node15" href="$xep__application__mcp__callbacks_8h.xhtml" title="XEP Module application interface. " alt="" coords="1435,80,1591,121"/>
+<area shape="rect" id="node17" href="$xttoolbox_8h.xhtml" title="Misc tools. " alt="" coords="1711,87,1804,114"/>
+<area shape="rect" id="node18" href="$version_8h.xhtml" title="version.h" alt="" coords="1828,87,1908,114"/>
+<area shape="rect" id="node19" href="$task__monitor_8h.xhtml" title="System monitor task. " alt="" coords="1932,87,2049,114"/>
+<area shape="rect" id="node20" href="$xthousekeeping_8h.xhtml" title="xthousekeeping.h" alt="" coords="2074,87,2209,114"/>
+<area shape="rect" id="node21" href="$xtfile_8h.xhtml" title="xtfile.h" alt="" coords="2233,87,2297,114"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/include/AUDRequests.h" name="src/hal/x4m0x_s70/libraries/libusb/include/AUDRequests.h">
+<area shape="rect" id="node2" href="$_a_u_d_feature_unit_request_8c.xhtml" title="This file implements functions for USB AUDIO class feature unit requests. " alt="" coords="5,95,249,151"/>
+<area shape="rect" id="node3" href="$_a_u_d_generic_request_8c.xhtml" title="This file implements functions for USB AUDIO class requests. " alt="" coords="274,95,519,151"/>
+<area shape="rect" id="node4" href="$_a_u_d_d_speaker_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/audio&#45;speaker\l/AUDDSpeakerDriver.c" alt="" coords="543,95,746,151"/>
+<area shape="rect" id="node5" href="$_a_u_d_d_speaker_phone_driver_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/audio&#45;speakerphone\l/AUDDSpeakerPhoneDriver.c" alt="" coords="770,95,1013,151"/>
+<area shape="rect" id="node6" href="$_a_u_d_d_stream_8c.xhtml" title="USB Audio Device Streaming interface with controls. " alt="" coords="1037,95,1279,151"/>
+<area shape="rect" id="node7" href="$_a_u_d_d_function_8c.xhtml" title="src/hal/x4m0x_s70/libraries\l/libusb/device/composite\l/AUDDFunction.c" alt="" coords="1303,95,1498,151"/>
+<area shape="rect" id="node8" href="$usb_8h.xhtml" title="Definition of SAM9XX5&#45;EK usb library. " alt="" coords="1522,102,1717,143"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="src/hal/x4m0x_s70/xtio_serial_com.c" name="src/hal/x4m0x_s70/xtio_serial_com.c">
+<area shape="rect" id="node3" href="$xep__hal_8h.xhtml" title="Brief description. " alt="" coords="309,169,392,196"/>
+<area shape="rect" id="node9" href="$xtio__serial__com_8h.xhtml" title="User board configuration template. " alt="" coords="1003,95,1136,121"/>
+<area shape="rect" id="node10" href="$xtio__usb_8h.xhtml" title="xtio USB API " alt="" coords="1161,95,1247,121"/>
+<area shape="rect" id="node11" href="$xtio__uart_8h.xhtml" title="Local header file for xtio UART functions. " alt="" coords="576,95,667,121"/>
+<area shape="rect" id="node12" href="$xtio__i2c_8h.xhtml" title="Local header file for xtio I2C functions. " alt="" coords="416,169,499,196"/>
+<area shape="rect" id="node13" href="$compiler_8h.xhtml" title="compiler.h" alt="" coords="5,169,93,196"/>
+<area shape="rect" id="node14" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="1272,95,1344,121"/>
+<area shape="rect" id="node15" href="$_c_d_c_d_serial_driver_8h.xhtml" title="CDCDSerialDriver.h" alt="" coords="1369,95,1514,121"/>
+<area shape="rect" id="node16" href="$task__monitor_8h.xhtml" title="System monitor task. " alt="" coords="117,169,235,196"/>
+<area shape="rect" id="node17" href="$xt__config_8h.xhtml" title="xt_config.h" alt="" coords="360,95,451,121"/>
+</map>

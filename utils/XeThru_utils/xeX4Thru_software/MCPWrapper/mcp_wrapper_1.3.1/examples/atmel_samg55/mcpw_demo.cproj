@@ -1,0 +1,1192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>{c51637a5-c3e7-4056-af9e-7f979d52408d}</ProjectGuid>
+    <avrdevice>ATSAMG55J19</avrdevice>
+    <avrdeviceseries>samg</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>FREERTOS_SAM_EXAMPLE1</AssemblyName>
+    <Name>mcpw_demo</Name>
+    <RootNamespace>FREERTOS_SAM_EXAMPLE1</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options>
+          <option id="common.boards" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.services.basic.clock" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.services.ioport" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.utils.stdio.stdio_serial" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="thirdparty.os.freertos.version" value="Add" config="7.0.0" content-id="Atmel.ASF" />
+          <option id="common.services.layer.freertos.usart" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.services.freertos.sam_example" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="sam.utils.cmsis.samg55.source.template" value="Add" config="" content-id="Atmel.ASF" />
+        </options>
+        <configurations>
+          <configuration key="config.compiler.iarewarm.debugger.use_macro_file" value="no" default="no" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.armgcc.create_aux" value="no" default="no" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.armgcc.optimization" value="high" default="high" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.iarewarm.create_aux" value="no" default="no" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.iarewarm.debugger.driver" value="cmsisdap" default="cmsisdap" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.iarewarm.low_level_lib" value="semihosted" default="semihosted" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.iarewarm.heap_size" value="0x1000" default="0x1000" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.as5_arm.create_aux" value="no" default="no" content-id="Atmel.ASF" />
+          <configuration key="config.thirdparty.os.freertos.version" value="7.0.0" default="7.0.0" content-id="Atmel.ASF" />
+          <configuration key="config.thirdparty.os.freertos-8_0_1.memory_manager" value="3_use_libc_malloc_free" default="3_use_libc_malloc_free" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.armgcc.fpu_used" value="yes" default="yes" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.armgcc.printf" value="iprintf" default="iprintf" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.armgcc.scanf" value="iscanf" default="iscanf" content-id="Atmel.ASF" />
+        </configurations>
+        <files>
+          <file path="src/ASF/common/boards/board.h" framework="" version="" source="common/boards/board.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/genclk.h" framework="" version="" source="common/services/clock/genclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/osc.h" framework="" version="" source="common/services/clock/osc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/pll.h" framework="" version="" source="common/services/clock/pll.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/samg/genclk.h" framework="" version="" source="common/services/clock/samg/genclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/samg/osc.h" framework="" version="" source="common/services/clock/samg/osc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/samg/pll.h" framework="" version="" source="common/services/clock/samg/pll.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/samg/sysclk.c" framework="" version="" source="common/services/clock/samg/sysclk.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/samg/sysclk.h" framework="" version="" source="common/services/clock/samg/sysclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/sysclk.h" framework="" version="" source="common/services/clock/sysclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/ioport/ioport.h" framework="" version="" source="common/services/ioport/ioport.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/ioport/sam/ioport_pio.h" framework="" version="" source="common/services/ioport/sam/ioport_pio.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/serial/sam_uart/uart_serial.h" framework="" version="" source="common/services/serial/sam_uart/uart_serial.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/serial/serial.h" framework="" version="" source="common/services/serial/serial.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/serial/usart_serial.c" framework="" version="" source="common/services/serial/usart_serial.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/sleepmgr/sam/sleepmgr.c" framework="" version="" source="common/services/sleepmgr/sam/sleepmgr.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/sleepmgr/sam/sleepmgr.h" framework="" version="" source="common/services/sleepmgr/sam/sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/sleepmgr/sleepmgr.h" framework="" version="" source="common/services/sleepmgr/sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt.h" framework="" version="" source="common/utils/interrupt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt/interrupt_sam_nvic.c" framework="" version="" source="common/utils/interrupt/interrupt_sam_nvic.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt/interrupt_sam_nvic.h" framework="" version="" source="common/utils/interrupt/interrupt_sam_nvic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/parts.h" framework="" version="" source="common/utils/parts.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/stdio/read.c" framework="" version="" source="common/utils/stdio/read.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/stdio/stdio_serial/stdio_serial.h" framework="" version="" source="common/utils/stdio/stdio_serial/stdio_serial.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/stdio/write.c" framework="" version="" source="common/utils/stdio/write.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/boards/samg55_xplained_pro/board_init.c" framework="" version="" source="sam/boards/samg55_xplained_pro/board_init.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/boards/samg55_xplained_pro/led.h" framework="" version="" source="sam/boards/samg55_xplained_pro/led.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/boards/samg55_xplained_pro/samg55_xplained_pro.h" framework="" version="" source="sam/boards/samg55_xplained_pro/samg55_xplained_pro.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/efc/efc.c" framework="" version="" source="sam/drivers/efc/efc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/efc/efc.h" framework="" version="" source="sam/drivers/efc/efc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/flexcom/flexcom.c" framework="" version="" source="sam/drivers/flexcom/flexcom.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/flexcom/flexcom.h" framework="" version="" source="sam/drivers/flexcom/flexcom.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/pmc/pmc.c" framework="" version="" source="sam/drivers/pmc/pmc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/pmc/pmc.h" framework="" version="" source="sam/drivers/pmc/pmc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/pmc/sleep.c" framework="" version="" source="sam/drivers/pmc/sleep.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/pmc/sleep.h" framework="" version="" source="sam/drivers/pmc/sleep.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/supc/supc.c" framework="" version="" source="sam/drivers/supc/supc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/supc/supc.h" framework="" version="" source="sam/drivers/supc/supc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/usart/usart.c" framework="" version="" source="sam/drivers/usart/usart.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/usart/usart.h" framework="" version="" source="sam/drivers/usart/usart.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/adc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/adc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/chipid.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/chipid.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/cmcc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/cmcc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/crccu.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/crccu.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/efc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/efc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/flexcom.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/flexcom.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/gpbr.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/gpbr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/i2sc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/i2sc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/matrix.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/matrix.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/mem2mem.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/mem2mem.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/pdc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/pdc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/pdmic.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/pdmic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/pio.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/pio.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/pmc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/pmc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/rstc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/rstc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/rtc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/rtc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/rtt.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/rtt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/spi.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/spi.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/supc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/supc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/tc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/tc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/twi.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/twi.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/udp.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/udp.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/uhp.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/uhp.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/usart.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/usart.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/component/wdt.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/component/wdt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/adc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/adc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/chipid.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/chipid.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/cmcc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/cmcc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/crccu.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/crccu.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/efc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/efc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom0.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom1.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom2.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom2.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom3.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom3.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom4.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom4.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom5.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom5.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom6.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom6.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/flexcom7.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/flexcom7.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/gpbr.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/gpbr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/i2sc0.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/i2sc0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/i2sc1.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/i2sc1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/matrix.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/matrix.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/mem2mem.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/mem2mem.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/pdmic0.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/pdmic0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/pdmic1.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/pdmic1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/pioa.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/pioa.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/piob.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/piob.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/pmc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/pmc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/rstc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/rstc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/rtc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/rtc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/rtt.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/rtt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi0.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi1.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi2.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi2.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi3.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi3.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi4.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi4.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi5.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi5.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi6.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi6.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/spi7.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/spi7.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/supc.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/supc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/tc0.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/tc0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/tc1.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/tc1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi0.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi1.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi2.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi2.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi3.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi3.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi4.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi4.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi5.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi5.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi6.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi6.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/twi7.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/twi7.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/udp.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/udp.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/uhp.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/uhp.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart0.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart0.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart1.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart1.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart2.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart2.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart3.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart3.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart4.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart4.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart5.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart5.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart6.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart6.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/usart7.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/usart7.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/instance/wdt.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/instance/wdt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/pio/samg55g18.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/pio/samg55g18.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/pio/samg55g19.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/pio/samg55g19.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/pio/samg55j18.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/pio/samg55j18.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/pio/samg55j19.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/pio/samg55j19.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/pio/samg55n19.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/pio/samg55n19.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/samg55.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/samg55.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/samg55g18.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/samg55g18.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/samg55g19.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/samg55g19.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/samg55j18.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/samg55j18.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/samg55j19.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/samg55j19.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/samg55n19.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/samg55n19.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/include/system_samg55.h" framework="" version="" source="sam/utils/cmsis/samg/samg55/include/system_samg55.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/source/templates/gcc/startup_samg55.c" framework="" version="" source="sam/utils/cmsis/samg/samg55/source/templates/gcc/startup_samg55.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/cmsis/samg/samg55/source/templates/system_samg55.c" framework="" version="" source="sam/utils/cmsis/samg/samg55/source/templates/system_samg55.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/compiler.h" framework="" version="" source="sam/utils/compiler.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/fpu/fpu.h" framework="" version="" source="sam/utils/fpu/fpu.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/header_files/io.h" framework="" version="" source="sam/utils/header_files/io.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/linker_scripts/samg/samg55j19/gcc/flash.ld" framework="" version="" source="sam/utils/linker_scripts/samg/samg55j19/gcc/flash.ld" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/make/Makefile.sam.in" framework="" version="" source="sam/utils/make/Makefile.sam.in" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/preprocessor/mrepeat.h" framework="" version="" source="sam/utils/preprocessor/mrepeat.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/preprocessor/preprocessor.h" framework="" version="" source="sam/utils/preprocessor/preprocessor.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/preprocessor/stringz.h" framework="" version="" source="sam/utils/preprocessor/stringz.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/preprocessor/tpaste.h" framework="" version="" source="sam/utils/preprocessor/tpaste.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/status_codes.h" framework="" version="" source="sam/utils/status_codes.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/utils/syscalls/gcc/syscalls.c" framework="" version="" source="sam/utils/syscalls/gcc/syscalls.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt" framework="" version="" source="thirdparty/CMSIS/ATMEL-disclaimer.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf" framework="" version="" source="thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/arm_common_tables.h" framework="" version="" source="thirdparty/CMSIS/Include/arm_common_tables.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/arm_const_structs.h" framework="" version="" source="thirdparty/CMSIS/Include/arm_const_structs.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/arm_math.h" framework="" version="" source="thirdparty/CMSIS/Include/arm_math.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/core_cm4.h" framework="" version="" source="thirdparty/CMSIS/Include/core_cm4.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h" framework="" version="" source="thirdparty/CMSIS/Include/core_cmFunc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h" framework="" version="" source="thirdparty/CMSIS/Include/core_cmInstr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Include/core_cmSimd.h" framework="" version="" source="thirdparty/CMSIS/Include/core_cmSimd.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a" framework="" version="" source="thirdparty/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM4lf_math_softfp.a" framework="" version="" source="thirdparty/CMSIS/Lib/GCC/libarm_cortexM4lf_math_softfp.a" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/Lib/license.txt" framework="" version="" source="thirdparty/CMSIS/Lib/license.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/README.txt" framework="" version="" source="thirdparty/CMSIS/README.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/CMSIS/license.txt" framework="" version="" source="thirdparty/CMSIS/license.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/main.c" framework="" version="" source="thirdparty/freertos/demo/sam_example/main.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/config/FreeRTOSConfig.h" framework="" version="" source="thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro/FreeRTOSConfig.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/config/conf_board.h" framework="" version="" source="thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro/conf_board.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/config/conf_clock.h" framework="" version="" source="thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro/conf_clock.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/config/conf_sleepmgr.h" framework="" version="" source="thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro/conf_sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/config/conf_uart_serial.h" framework="" version="" source="thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro/conf_uart_serial.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/ATMEL-disclaimer.txt" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/ATMEL-disclaimer.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/license/license.txt" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/license/license.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/readme.txt" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/readme.txt" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/croutine.c" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/croutine.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/FreeRTOS.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/FreeRTOS.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/StackMacros.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/StackMacros.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/croutine.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/croutine.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/list.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/list.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/mpu_wrappers.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/mpu_wrappers.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/portable.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/portable.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/projdefs.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/projdefs.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/queue.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/queue.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/semphr.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/semphr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/task.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/task.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/include/timers.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/include/timers.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/list.c" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/list.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f/port.c" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f/port.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f/portmacro.h" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f/portmacro.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/portable/memmang/heap_3.c" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/portable/memmang/heap_3.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/queue.c" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/queue.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/tasks.c" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/tasks.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/thirdparty/freertos/freertos-7.0.0/source/timers.c" framework="" version="" source="thirdparty/freertos/freertos-7.0.0/source/timers.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/pdc/pdc.c" framework="" version="3.29.0" source="sam\drivers\pdc\pdc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/pdc/pdc.h" framework="" version="3.29.0" source="sam\drivers\pdc\pdc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam/drivers/pdc/pdc_uart_example/pdc_uart_example.h" framework="" version="3.29.0" source="sam\drivers\pdc\pdc_uart_example\pdc_uart_example.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/freertos/sam/freertos_peripheral_control.c" framework="" version="3.29.0" source="common\services\freertos\sam\freertos_peripheral_control.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/freertos/sam/freertos_peripheral_control_private.h" framework="" version="3.29.0" source="common\services\freertos\sam\freertos_peripheral_control_private.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/freertos/sam/freertos_peripheral_control.h" framework="" version="3.29.0" source="common\services\freertos\sam\freertos_peripheral_control.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/freertos/sam/freertos_usart_serial.c" framework="" version="3.29.0" source="common\services\freertos\sam\freertos_usart_serial.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/freertos/sam/freertos_usart_serial.h" framework="" version="3.29.0" source="common\services\freertos\sam\freertos_usart_serial.h" changed="False" content-id="Atmel.ASF" />
+        </files>
+        <documentation help="http://asf.atmel.com/docs/3.29.0/common.services.freertos.sam_example.samg55_xplained_pro/html/index.html" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.29.0" />
+        </dependencies>
+        <project id="common.services.freertos.sam_example.samg55_xplained_pro" value="Add" config="" content-id="Atmel.ASF" />
+        <board id="board.samg55_xplained_pro" value="Add" config="" content-id="Atmel.ASF" />
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.edbg</avrtool>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_edbg>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
+      <ToolNumber>ATML2393031800000249</ToolNumber>
+      <ToolName>EDBG</ToolName>
+    </com_atmel_avrdbg_tool_edbg>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+      <Value>__SAMG55J19__</Value>
+      <Value>ARM_MATH_CM4=true</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__FREERTOS__</Value>
+      <Value>scanf=iscanf</Value>
+      <Value>BOARD=SAMG55_XPLAINED_PRO</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro</Value>
+      <Value>../src/ASF/common/utils</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/sam/utils/fpu</Value>
+      <Value>../src/ASF/common/services/serial/sam_uart</Value>
+      <Value>../src/ASF/sam/boards/samg55_xplained_pro</Value>
+      <Value>../src/ASF/sam/drivers/pmc</Value>
+      <Value>../src/ASF/sam/boards</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/include</Value>
+      <Value>../src/ASF/common/boards</Value>
+      <Value>../src/ASF/sam/utils/header_files</Value>
+      <Value>../src/ASF/common/services/ioport</Value>
+      <Value>../src/ASF/sam/drivers/flexcom</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Include</Value>
+      <Value>../src/ASF/sam/drivers/efc</Value>
+      <Value>../src/config</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f</Value>
+      <Value>../src</Value>
+      <Value>../src/ASF/common/services/clock</Value>
+      <Value>../src/ASF/sam/drivers/supc</Value>
+      <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
+      <Value>../src/ASF/sam/utils</Value>
+      <Value>../src/ASF/sam/utils/preprocessor</Value>
+      <Value>../src/ASF/common/services/serial</Value>
+      <Value>../src/ASF/sam/drivers/usart</Value>
+      <Value>../src/ASF/sam/utils/cmsis/samg/samg55/include</Value>
+      <Value>../src/ASF/sam/drivers/pdc</Value>
+      <Value>../src/ASF/sam/drivers/pdc/pdc_uart_example</Value>
+      <Value>../src/ASF/common/services/freertos/sam</Value>
+      <Value>../../../include</Value>
+      <Value>../../../src/mcp</Value>
+      <Value>../../../src</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize most (-O3)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.OtherFlags>-fdata-sections</armgcc.compiler.optimization.OtherFlags>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.OtherFlags>-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500 -mfloat-abi=softfp -mfpu=fpv4-sp-d16</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libarm_cortexM4lf_math_softfp</Value>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../cmsis/linkerScripts</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
+  <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam/utils/linker_scripts/samg/samg55j19/gcc/flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM4=true -DBOARD=SAMG55_XPLAINED_PRO -D__FREERTOS__ -D__SAMG55J19__ -Dprintf=iprintf -Dscanf=iscanf</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.DefaultIncludePath>False</armgcc.preprocessingassembler.general.DefaultIncludePath>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro</Value>
+      <Value>../src/ASF/common/utils</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/sam/utils/fpu</Value>
+      <Value>../src/ASF/common/services/serial/sam_uart</Value>
+      <Value>../src/ASF/sam/boards/samg55_xplained_pro</Value>
+      <Value>../src/ASF/sam/drivers/pmc</Value>
+      <Value>../src/ASF/sam/boards</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/include</Value>
+      <Value>../src/ASF/common/boards</Value>
+      <Value>../src/ASF/sam/utils/header_files</Value>
+      <Value>../src/ASF/common/services/ioport</Value>
+      <Value>../src/ASF/sam/drivers/flexcom</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Include</Value>
+      <Value>../src/ASF/sam/drivers/efc</Value>
+      <Value>../src/config</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f</Value>
+      <Value>../src</Value>
+      <Value>../src/ASF/common/services/clock</Value>
+      <Value>../src/ASF/sam/drivers/supc</Value>
+      <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
+      <Value>../src/ASF/sam/utils</Value>
+      <Value>../src/ASF/sam/utils/preprocessor</Value>
+      <Value>../src/ASF/common/services/serial</Value>
+      <Value>../src/ASF/sam/drivers/usart</Value>
+      <Value>../src/ASF/sam/utils/cmsis/samg/samg55/include</Value>
+      <Value>../src/ASF/sam/drivers/pdc</Value>
+      <Value>../src/ASF/sam/drivers/pdc/pdc_uart_example</Value>
+      <Value>../src/ASF/common/services/freertos/sam</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>__SAMG55J19__</Value>
+      <Value>ARM_MATH_CM4=true</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__FREERTOS__</Value>
+      <Value>scanf=iscanf</Value>
+      <Value>BOARD=SAMG55_XPLAINED_PRO</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro</Value>
+      <Value>../src/ASF/common/utils</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/sam/utils/fpu</Value>
+      <Value>../src/ASF/common/services/serial/sam_uart</Value>
+      <Value>../src/ASF/sam/boards/samg55_xplained_pro</Value>
+      <Value>../src/ASF/sam/drivers/pmc</Value>
+      <Value>../src/ASF/sam/boards</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/include</Value>
+      <Value>../src/ASF/common/boards</Value>
+      <Value>../src/ASF/sam/utils/header_files</Value>
+      <Value>../src/ASF/common/services/ioport</Value>
+      <Value>../src/ASF/sam/drivers/flexcom</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Include</Value>
+      <Value>../src/ASF/sam/drivers/efc</Value>
+      <Value>../src/config</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f</Value>
+      <Value>../src</Value>
+      <Value>../src/ASF/common/services/clock</Value>
+      <Value>../src/ASF/sam/drivers/supc</Value>
+      <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
+      <Value>../src/ASF/sam/utils</Value>
+      <Value>../src/ASF/sam/utils/preprocessor</Value>
+      <Value>../src/ASF/common/services/serial</Value>
+      <Value>../src/ASF/sam/drivers/usart</Value>
+      <Value>../src/ASF/sam/utils/cmsis/samg/samg55/include</Value>
+      <Value>../src/ASF/sam/drivers/pdc</Value>
+      <Value>../src/ASF/sam/drivers/pdc/pdc_uart_example</Value>
+      <Value>../src/ASF/common/services/freertos/sam</Value>
+      <Value>../../../include</Value>
+      <Value>../../../src/mcp</Value>
+      <Value>../../../src</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.OtherFlags>-fdata-sections</armgcc.compiler.optimization.OtherFlags>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.OtherFlags>-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500 -mfloat-abi=softfp -mfpu=fpv4-sp-d16</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libarm_cortexM4lf_math_softfp</Value>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../cmsis/linkerScripts</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
+  <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam/utils/linker_scripts/samg/samg55j19/gcc/flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM4=true -DBOARD=SAMG55_XPLAINED_PRO -D__FREERTOS__ -D__SAMG55J19__ -Dprintf=iprintf -Dscanf=iscanf</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.DefaultIncludePath>False</armgcc.preprocessingassembler.general.DefaultIncludePath>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../thirdparty/freertos/demo/sam_example/samg55j19_samg_xplained_pro</Value>
+      <Value>../src/ASF/common/utils</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/sam/utils/fpu</Value>
+      <Value>../src/ASF/common/services/serial/sam_uart</Value>
+      <Value>../src/ASF/sam/boards/samg55_xplained_pro</Value>
+      <Value>../src/ASF/sam/drivers/pmc</Value>
+      <Value>../src/ASF/sam/boards</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/include</Value>
+      <Value>../src/ASF/common/boards</Value>
+      <Value>../src/ASF/sam/utils/header_files</Value>
+      <Value>../src/ASF/common/services/ioport</Value>
+      <Value>../src/ASF/sam/drivers/flexcom</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Include</Value>
+      <Value>../src/ASF/sam/drivers/efc</Value>
+      <Value>../src/config</Value>
+      <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+      <Value>../src/ASF/thirdparty/freertos/freertos-7.0.0/source/portable/gcc/sam_cm4f</Value>
+      <Value>../src</Value>
+      <Value>../src/ASF/common/services/clock</Value>
+      <Value>../src/ASF/sam/drivers/supc</Value>
+      <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
+      <Value>../src/ASF/sam/utils</Value>
+      <Value>../src/ASF/sam/utils/preprocessor</Value>
+      <Value>../src/ASF/common/services/serial</Value>
+      <Value>../src/ASF/sam/drivers/usart</Value>
+      <Value>../src/ASF/sam/utils/cmsis/samg/samg55/include</Value>
+      <Value>../src/ASF/sam/drivers/pdc</Value>
+      <Value>../src/ASF/sam/drivers/pdc/pdc_uart_example</Value>
+      <Value>../src/ASF/common/services/freertos/sam</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\ASF\" />
+    <Folder Include="src\ASF\common\" />
+    <Folder Include="src\ASF\common\boards\" />
+    <Folder Include="src\ASF\common\services\" />
+    <Folder Include="src\ASF\common\services\clock\" />
+    <Folder Include="src\ASF\common\services\clock\samg\" />
+    <Folder Include="src\ASF\common\services\freertos\" />
+    <Folder Include="src\ASF\common\services\freertos\sam\" />
+    <Folder Include="src\ASF\common\services\ioport\" />
+    <Folder Include="src\ASF\common\services\ioport\sam\" />
+    <Folder Include="src\ASF\common\services\serial\" />
+    <Folder Include="src\ASF\common\services\serial\sam_uart\" />
+    <Folder Include="src\ASF\common\services\sleepmgr\" />
+    <Folder Include="src\ASF\common\services\sleepmgr\sam\" />
+    <Folder Include="src\ASF\common\utils\" />
+    <Folder Include="src\ASF\common\utils\interrupt\" />
+    <Folder Include="src\ASF\common\utils\stdio\" />
+    <Folder Include="src\ASF\common\utils\stdio\stdio_serial\" />
+    <Folder Include="src\ASF\sam\" />
+    <Folder Include="src\ASF\sam\boards\" />
+    <Folder Include="src\ASF\sam\boards\samg55_xplained_pro\" />
+    <Folder Include="src\ASF\sam\drivers\" />
+    <Folder Include="src\ASF\sam\drivers\efc\" />
+    <Folder Include="src\ASF\sam\drivers\flexcom\" />
+    <Folder Include="src\ASF\sam\drivers\pdc\" />
+    <Folder Include="src\ASF\sam\drivers\pdc\pdc_uart_example\" />
+    <Folder Include="src\ASF\sam\drivers\pmc\" />
+    <Folder Include="src\ASF\sam\drivers\supc\" />
+    <Folder Include="src\ASF\sam\drivers\usart\" />
+    <Folder Include="src\ASF\sam\utils\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\include\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\include\pio\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\source\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\source\templates\" />
+    <Folder Include="src\ASF\sam\utils\cmsis\samg\samg55\source\templates\gcc\" />
+    <Folder Include="src\ASF\sam\utils\fpu\" />
+    <Folder Include="src\ASF\sam\utils\header_files\" />
+    <Folder Include="src\ASF\sam\utils\linker_scripts\" />
+    <Folder Include="src\ASF\sam\utils\linker_scripts\samg\" />
+    <Folder Include="src\ASF\sam\utils\linker_scripts\samg\samg55j19\" />
+    <Folder Include="src\ASF\sam\utils\linker_scripts\samg\samg55j19\gcc\" />
+    <Folder Include="src\ASF\sam\utils\make\" />
+    <Folder Include="src\ASF\sam\utils\preprocessor\" />
+    <Folder Include="src\ASF\sam\utils\syscalls\" />
+    <Folder Include="src\ASF\sam\utils\syscalls\gcc\" />
+    <Folder Include="src\ASF\thirdparty\" />
+    <Folder Include="src\ASF\thirdparty\CMSIS\" />
+    <Folder Include="src\ASF\thirdparty\CMSIS\Include\" />
+    <Folder Include="src\ASF\thirdparty\CMSIS\Lib\" />
+    <Folder Include="src\ASF\thirdparty\CMSIS\Lib\GCC\" />
+    <Folder Include="src\ASF\thirdparty\freertos\" />
+    <Folder Include="src\ASF\thirdparty\freertos\freertos-7.0.0\" />
+    <Folder Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\" />
+    <Folder Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\" />
+    <Folder Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\portable\" />
+    <Folder Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\portable\gcc\" />
+    <Folder Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\portable\gcc\sam_cm4f\" />
+    <Folder Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\portable\memmang\" />
+    <Folder Include="src\config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\include\mcp_wrapper.h">
+      <SubType>compile</SubType>
+      <Link>src\mcp_wrapper.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\mcp\protocol.c">
+      <SubType>compile</SubType>
+      <Link>src\protocol.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\mcp\protocol_host_parser.c">
+      <SubType>compile</SubType>
+      <Link>src\protocol_host_parser.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\mcp\protocol_parser.c">
+      <SubType>compile</SubType>
+      <Link>src\protocol_parser.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\mcp_wrapper.c">
+      <SubType>compile</SubType>
+      <Link>src\mcp_wrapper.c</Link>
+    </Compile>
+    <Compile Include="src\ASF\common\services\freertos\sam\freertos_peripheral_control.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\freertos\sam\freertos_peripheral_control_private.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\freertos\sam\freertos_peripheral_control.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\freertos\sam\freertos_usart_serial.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\freertos\sam\freertos_usart_serial.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam\drivers\pdc\pdc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam\drivers\pdc\pdc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\drivers\pdc\pdc_uart_example\pdc_uart_example.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\task_xethru.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\task_xethru.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\asf.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\FreeRTOSConfig.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_board.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_uart_serial.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_clock.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\pdmic1.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\linker_scripts\samg\samg55j19\gcc\flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\make\Makefile.sam.in">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\ATMEL-disclaimer.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\CMSIS_END_USER_LICENCE_AGREEMENT.pdf">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Lib\GCC\libarm_cortexM4lf_math_softfp.a">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Lib\license.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\README.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\ATMEL-disclaimer.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\readme.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\croutine.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\serial\sam_uart\uart_serial.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom2.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom3.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom0.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom1.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom6.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom7.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom4.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\flexcom5.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\serial\serial.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Include\arm_const_structs.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\mem2mem.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\gpbr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\rtt.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\usart.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\header_files\io.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\pio\samg55n19.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\pdmic0.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\samg55n19.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\supc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\wdt.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Include\core_cmInstr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\samg55.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\boards\samg55_xplained_pro\led.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\queue.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\drivers\usart\usart.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\semphr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart5.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\drivers\flexcom\flexcom.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\samg55j19.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\samg55j18.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\genclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\timers.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\i2sc0.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\pio.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi4.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi5.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi6.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi7.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi0.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi1.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi2.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\twi3.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\matrix.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\sleepmgr\sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart1.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\cmcc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\mem2mem.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart6.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\rtc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\efc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\flexcom.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\pio\samg55j19.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\pio\samg55j18.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\rtt.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\preprocessor\tpaste.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Include\core_cmSimd.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\pioa.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\piob.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\utils\interrupt\interrupt_sam_nvic.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\sleepmgr\sam\sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Include\arm_common_tables.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\pmc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\task.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi4.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi5.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart2.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi6.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi7.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi0.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi1.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi2.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\i2sc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\spi3.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\ioport\sam\ioport_pio.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\uhp.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\supc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\tc0.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Include\core_cmFunc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\sysclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart7.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\spi.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\boards\board.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\ioport\ioport.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Include\core_cm4.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\portable.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\adc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\twi.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\pll.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\utils\stdio\stdio_serial\stdio_serial.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\pdmic.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\boards\samg55_xplained_pro\samg55_xplained_pro.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\FreeRTOS.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart3.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\chipid.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\preprocessor\stringz.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\samg\sysclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\tc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\samg\osc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\drivers\pmc\sleep.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\pdc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\list.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\efc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\crccu.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\mpu_wrappers.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\cmcc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\rstc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\udp.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\drivers\pmc\pmc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart4.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\rstc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\gpbr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\samg\pll.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\matrix.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\tc1.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\portable\gcc\sam_cm4f\portmacro.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\compiler.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\utils\interrupt.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\usart0.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\drivers\supc\supc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\samg55g19.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\samg55g18.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\status_codes.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\udp.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\projdefs.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\wdt.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\thirdparty\CMSIS\Include\arm_math.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\fpu\fpu.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\utils\parts.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\pio\samg55g19.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\pio\samg55g18.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\preprocessor\preprocessor.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\chipid.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\drivers\efc\efc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\samg\genclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\adc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\preprocessor\mrepeat.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\osc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\clock\samg\sysclk.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\common\services\serial\usart_serial.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\common\services\sleepmgr\sam\sleepmgr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\common\utils\interrupt\interrupt_sam_nvic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\common\utils\stdio\read.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\common\utils\stdio\write.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\boards\samg55_xplained_pro\board_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\drivers\efc\efc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\drivers\flexcom\flexcom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\drivers\pmc\pmc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\drivers\pmc\sleep.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\drivers\supc\supc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\drivers\usart\usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\include\StackMacros.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\rtc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\pmc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\crccu.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\component\uhp.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\instance\i2sc1.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam\utils\cmsis\samg\samg55\include\system_samg55.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam\utils\cmsis\samg\samg55\source\templates\gcc\startup_samg55.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\utils\cmsis\samg\samg55\source\templates\system_samg55.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam\utils\syscalls\gcc\syscalls.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\portable\gcc\sam_cm4f\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\portable\memmang\heap_3.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\thirdparty\freertos\freertos-7.0.0\source\timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

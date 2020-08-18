@@ -1,0 +1,6 @@
+<map id="udd_disable" name="udd_disable">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#ga03e59eaa264f1dbe5a52559311d0520e" title="udd_detach" alt="" coords="175,5,272,32"/>
+<area shape="rect" id="node3" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="171,56,276,83"/>
+<area shape="rect" id="node4" href="$libraries_2libboard_2resources___x4_m0x_2system__sams70_8c.xhtml#ad110a0837c9e910d788b9b73fd3d92dd" title="Disables USB clock. " alt="" coords="152,107,295,133"/>
+<area shape="rect" id="node5" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="163,157,284,184"/>
+</map>

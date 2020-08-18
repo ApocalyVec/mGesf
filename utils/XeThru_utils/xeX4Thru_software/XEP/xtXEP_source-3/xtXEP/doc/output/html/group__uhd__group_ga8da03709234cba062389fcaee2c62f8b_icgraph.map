@@ -1,0 +1,5 @@
+<map id="USBH_HAL_ConfigurePipe" name="USBH_HAL_ConfigurePipe">
+<area shape="rect" id="node2" href="$group__uhi__cdc__group__uhc.xhtml#ga101428954997e5cee4ed2ffd7a7ac050" title="uhi_cdc_install" alt="" coords="265,5,380,32"/>
+<area shape="rect" id="node3" href="$group__uhi__hid__mouse__group__uhc.xhtml#ga1bd64c3515f5b8ae594d8426c43c6d86" title="uhi_hid_mouse_install" alt="" coords="241,56,404,83"/>
+<area shape="rect" id="node4" href="$group__uhi__msc__group__uhc.xhtml#gacae7acb745e4864452730cb679fdf09f" title="uhi_msc_install" alt="" coords="263,107,382,133"/>
+</map>

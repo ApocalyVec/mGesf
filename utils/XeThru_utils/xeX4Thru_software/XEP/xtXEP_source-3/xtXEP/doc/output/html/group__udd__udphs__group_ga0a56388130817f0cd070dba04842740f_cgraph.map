@@ -1,0 +1,8 @@
+<map id="udd_ctrl_out_received" name="udd_ctrl_out_received">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#ga173a32ad9cb33b2851ff381da157328e" title="Call callback associated to setup request. " alt="" coords="216,5,381,32"/>
+<area shape="rect" id="node3" href="$group__udd__udphs__group.xhtml#gabf919b71cee71a11e1ea4e64fb9891d1" title="Managed stall event of IN/OUT packet on control endpoint. " alt="" coords="227,56,370,83"/>
+<area shape="rect" id="node4" href="$group__udd__udphs__group.xhtml#gab1a4a5ecb3cd996de2d94d5e78d9ea9e" title="Reset control endpoint management. " alt="" coords="249,157,348,184"/>
+<area shape="rect" id="node5" href="$group__interrupt__group.xhtml#ga9931bf539005d3f12b461928823a0ae2" title="cpu_irq_save" alt="" coords="437,157,543,184"/>
+<area shape="rect" id="node6" href="$group__interrupt__group.xhtml#gae4d6d11a5211f6bd00353f280aa78f6f" title="cpu_irq_restore" alt="" coords="429,208,551,235"/>
+<area shape="rect" id="node7" href="$group__udd__udphs__group.xhtml#gab6a8abd5db8a94d6becc73b2b70dc748" title="Send a ZLP IN on control endpoint. " alt="" coords="221,208,376,235"/>
+</map>

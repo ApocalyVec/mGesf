@@ -1,0 +1,4 @@
+<map id="ISO7816_IccPowerOff" name="ISO7816_IccPowerOff">
+<area shape="rect" id="node2" href="$iso7816__4_8c.xhtml#ada6073c5627d625b66efa790414051ec" title="Warm reset. " alt="" coords="209,5,368,32"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#gaaa2098326671145c17cdaa260cf55b70" title="Command Pipe, Bulk&#45;OUT Messages Power Off Command &#45; Set the ICC in an inactive state Return the slot ..." alt="" coords="213,56,364,83"/>
+</map>

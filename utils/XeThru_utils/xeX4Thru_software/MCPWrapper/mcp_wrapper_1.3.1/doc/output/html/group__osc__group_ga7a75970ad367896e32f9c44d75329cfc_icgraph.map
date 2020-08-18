@@ -1,0 +1,4 @@
+<map id="osc_is_ready" name="osc_is_ready">
+<area shape="rect" id="node2" href="$group__genclk__group.xhtml#gab3fb066ffd9812df1915794fc27216fb" title="Enable the source clock src used by a generic clock. " alt="" coords="312,5,463,32"/>
+<area shape="rect" id="node3" href="$group__osc__group.xhtml#gace890435e962b82472d3f918ea7b4c52" title="Wait until the oscillator identified by id is ready. " alt="" coords="152,31,264,57"/>
+</map>

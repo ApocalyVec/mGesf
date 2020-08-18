@@ -1,0 +1,6 @@
+<map id="LCDD_Initialize" name="LCDD_Initialize">
+<area shape="rect" id="node2" href="$ili9488__spi_8h.xhtml#ac1b668603c0526f8fc04d14f075965fa" title="ILI9488_SpiInitialize" alt="" coords="212,5,357,32"/>
+<area shape="rect" id="node3" href="$ili9488__spi_8h.xhtml#a464522ed5e56d19b2c337931fad4faa9" title="ILI9488_SpiSetDisplayLandscape" alt="" coords="169,56,400,83"/>
+<area shape="rect" id="node4" href="$ili9488__ebi_8h.xhtml#a26b20d42c2e1d5b63df5c8883af3f2be" title="ILI9488_EbiInitialize" alt="" coords="213,107,357,133"/>
+<area shape="rect" id="node5" href="$ili9488__ebi_8h.xhtml#ab1494aab036e82b42e363521459b6a11" title="ILI9488_EbiSetDisplayLandscape" alt="" coords="169,157,400,184"/>
+</map>

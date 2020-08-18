@@ -1,0 +1,10 @@
+<map id="read_and_send_radar_frame" name="read_and_send_radar_frame">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a195e6ef022545ebaba1dbc492cac6244" title="x4driver_get_frame\l_bin_count" alt="" coords="247,5,394,47"/>
+<area shape="rect" id="node3" href="$x4driver_8h.xhtml#afe1979eb3433a5ede494a3bb89eacfaf" title="x4driver_get_downconversion" alt="" coords="215,71,426,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a6a21a4cf0441c4ef5a99170ec48b2c78" title="Prepare for sending radardata frame. " alt="" coords="215,123,427,164"/>
+<area shape="rect" id="node5" href="$x4driver_8h.xhtml#a3d75a7209fa2ea65ab2acc5297751c99" title="Reads frame and normalizes that frame. " alt="" coords="243,188,398,229"/>
+<area shape="rect" id="node6" href="$x4driver_8h.xhtml#aaa39bc07728273218162fc63a0bcb864" title="x4driver_set_tx_power" alt="" coords="239,254,403,281"/>
+<area shape="rect" id="node7" href="$x4driver_8h.xhtml#af6c32021e202b0dfe0a8b104ebd7a0b6" title="Sets frame rate for frame streaming. " alt="" coords="257,305,384,331"/>
+<area shape="rect" id="node8" href="$memorypool_8h.xhtml#a8afae8a96a7f4198bb89ace143868223" title="Free memory block. " alt="" coords="253,355,388,382"/>
+<area shape="rect" id="node9" href="$xep__dispatch_8h.xhtml#a7bad5694c10b470cac80025bd27f6fa9" title="Send message on dispatcher. " alt="" coords="231,406,411,433"/>
+</map>

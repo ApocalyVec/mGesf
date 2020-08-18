@@ -1,0 +1,5 @@
+<map id="CDCDEEMDriver_ConfigurationChangedHandler" name="CDCDEEMDriver_ConfigurationChangedHandler">
+<area shape="rect" id="node2" href="$group__usbd__interface.xhtml#ga01ba3ff549b968edc152cdb23c2027d1" title="Return USBDDriver instance pointer for global usage. " alt="" coords="318,5,446,32"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gadfce99fba013d30648e7a058c7fa6799" title="Returns configuration descriptor list. " alt="" coords="271,56,493,83"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#gaf1ed08b27219311a91054848030b7c5d" title="Invoked whenever the device is changed by the host. " alt="" coords="278,107,486,133"/>
+</map>

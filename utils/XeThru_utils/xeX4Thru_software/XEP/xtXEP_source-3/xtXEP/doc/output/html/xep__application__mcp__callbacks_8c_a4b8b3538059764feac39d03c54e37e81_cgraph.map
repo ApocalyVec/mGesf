@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverSetPifRegister" name="onMcpX4DriverSetPifRegister">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#a382b6e4ffa3658d409dfe855707dc16d" title="Sets PIF register value. " alt="" coords="273,5,452,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a057fe6f9f6b6da7a806aeaf591500b59" title="Dispatch message to hostcom asking to send ack to host. " alt="" coords="260,57,465,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="260,122,465,163"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="EFC_TranslateAddress" name="EFC_TranslateAddress">
+<area shape="rect" id="node2" href="$flashd_8c.xhtml#a8c573fa8b3e1dfcf111bd50440353d5f" title="Computes the lock range associated with the given address range. " alt="" coords="220,40,371,66"/>
+<area shape="rect" id="node3" href="$flashd_8c.xhtml#a29e89431146b26ca80a4926ad20e4b0a" title="Locks all the regions in the given address range. " alt="" coords="429,14,540,41"/>
+<area shape="rect" id="node4" href="$flashd_8c.xhtml#a964a05cff2bc8f9d6477f4cf70f253d9" title="Unlocks all the regions in the given address range. " alt="" coords="423,77,547,104"/>
+<area shape="rect" id="node5" href="$flashd_8c.xhtml#af5aa6cf7d990999403e5a74b0b35b04b" title="Erases the entire flash. " alt="" coords="237,141,354,168"/>
+<area shape="rect" id="node6" href="$flashd_8c.xhtml#a7b5d4ee5192faa436afed0475bf6a40c" title="Erases flash by sector. " alt="" coords="216,192,375,218"/>
+<area shape="rect" id="node7" href="$flashd_8c.xhtml#a34e9d4df1bed173204d4be83b720b24f" title="Erases flash by pages. " alt="" coords="218,242,373,269"/>
+<area shape="rect" id="node8" href="$flashd_8c.xhtml#aaf0c7fb937ecf006c011ab50928ef921" title="Writes a data buffer in the internal flash. " alt="" coords="239,293,351,320"/>
+<area shape="rect" id="node9" href="$flashd_8c.xhtml#a0e4b85a84bb516ced1e39bd110ebce7d" title="Returns the number of locked regions inside the given address range. " alt="" coords="227,344,363,370"/>
+</map>

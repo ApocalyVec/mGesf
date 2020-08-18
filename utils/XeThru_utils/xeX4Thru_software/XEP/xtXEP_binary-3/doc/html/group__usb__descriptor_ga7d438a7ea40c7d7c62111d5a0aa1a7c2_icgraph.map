@@ -1,0 +1,4 @@
+<map id="USBConfigurationDescriptor_GetTotalLength" name="USBConfigurationDescriptor_GetTotalLength">
+<area shape="rect" id="node2" href="$group__usb__descriptor.xhtml#gab2cf48af0ca19522832310e3eed00490" title="Parses the given Configuration descriptor (followed by relevant interface, endpoint and class&#45;specifi..." alt="" coords="255,5,456,47"/>
+<area shape="rect" id="node3" href="$group__usbd__interface.xhtml#gadbb4c8a840d3ff539be6fa5fa9f4a4e0" title="Sends the requested USB descriptor to the host if available, or STALLs the request. " alt="" coords="300,71,411,98"/>
+</map>

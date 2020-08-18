@@ -1,0 +1,6 @@
+<map id="XDMAD_StopTransfer" name="XDMAD_StopTransfer">
+<area shape="rect" id="node2" href="$group__dmac__functions.xhtml#ga0e8c1a293606c436f4ec8197faeae9c4" title="Disables the relevant channel of given XDMAC. " alt="" coords="223,5,397,32"/>
+<area shape="rect" id="node3" href="$group__dmac__functions.xhtml#ga78c4725b239a4bff988309fe0bf8034a" title="Enable interrupt with mask on the relevant channel of given XDMA. " alt="" coords="219,56,401,83"/>
+<area shape="rect" id="node4" href="$group__dmac__functions.xhtml#ga1f9c0fc1111b5f8917921091d69a0cad" title="Get interrupt status for the relevant channel of given XDMA. " alt="" coords="227,107,393,133"/>
+<area shape="rect" id="node5" href="$group__dmac__functions.xhtml#gad262380a3acfc2a2a7481bbecfef1d39" title="Get Global channel status of given XDMAC. " alt="" coords="211,157,409,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="pmc_disable_pck" name="pmc_disable_pck">
+<area shape="rect" id="node2" href="$group__genclk__group.xhtml#ga8e8ab59c91f60508e7b1b04326743d35" title="genclk_disable" alt="" coords="179,5,287,32"/>
+<area shape="rect" id="node3" href="$group__sam__drivers__flexcom__group.xhtml#gad2900fd33f36b75e9ff5e5b833ba9943" title="Enable the FLEXCOM module. " alt="" coords="177,56,289,83"/>
+<area shape="rect" id="node4" href="$group__sam__drivers__flexcom__group.xhtml#ga13a457382c499a80f900a90e536f2ba4" title="Disable the FLEXCOM module. " alt="" coords="176,107,291,133"/>
+</map>

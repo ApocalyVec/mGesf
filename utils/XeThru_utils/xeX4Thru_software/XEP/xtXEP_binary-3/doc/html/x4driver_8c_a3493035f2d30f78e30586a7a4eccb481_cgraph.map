@@ -1,0 +1,13 @@
+<map id="_update_normalization_variables" name="_update_normalization_variables">
+<area shape="rect" id="node2" href="$x4driver_8c.xhtml#acee55fcb62077a150f421c3bbf2c2947" title="Utility function to take mutex. " alt="" coords="492,124,591,150"/>
+<area shape="rect" id="node3" href="$x4driver_8c.xhtml#a3340bd88f713c61192fed4ba6be4789d" title="Gets Iterations. " alt="" coords="229,430,397,457"/>
+<area shape="rect" id="node4" href="$x4driver_8c.xhtml#a983024655a1dcd0ad2aa0ec6cb8eb3cb" title="Gets PIF register value. " alt="" coords="452,350,631,377"/>
+<area shape="rect" id="node5" href="$x4driver_8c.xhtml#a4d5fed456eb330474905ef190733f3a6" title="Gets pulses per step. " alt="" coords="238,314,387,355"/>
+<area shape="rect" id="node6" href="$x4driver_8c.xhtml#afb50fddff34b3e2ea353077619cb139e" title="Utility function to give mutex. " alt="" coords="493,200,589,226"/>
+<area shape="rect" id="node7" href="$x4driver_8c.xhtml#a032203e8f9460b3b693a5b81fbf1f633" title="x4driver_get_dac_min" alt="" coords="231,161,394,188"/>
+<area shape="rect" id="node8" href="$x4driver_8c.xhtml#ad622f2683a8e728043a68fe0b09c2f07" title="x4driver_get_dac_max" alt="" coords="229,212,396,238"/>
+<area shape="rect" id="node9" href="$x4driver_8c.xhtml#ac36f9ada592d89010c9ebf3f581a7eff" title="x4driver_get_dac_step" alt="" coords="229,110,396,137"/>
+<area shape="rect" id="node10" href="$x4driver_8c.xhtml#ae7c3785d7b727134740f350df73ac1c6" title="x4driver_get_tx_center\l_frequency" alt="" coords="229,482,397,523"/>
+<area shape="rect" id="node11" href="$x4driver_8c.xhtml#a7adc63aa5a9f25cdb5f613388d816f82" title="Updates downconversion coefficients. " alt="" coords="221,44,404,86"/>
+<area shape="rect" id="node12" href="$x4driver_8c.xhtml#a730b2e0db87e3f26370dbc5cf019cf82" title="Updates normalization constants. " alt="" coords="229,547,397,588"/>
+</map>

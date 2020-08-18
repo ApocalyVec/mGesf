@@ -1,0 +1,4 @@
+<map id="HIDDFunction_ReportReceived" name="HIDDFunction_ReportReceived">
+<area shape="rect" id="node2" href="$group__usbd__hid.xhtml#ga60b335dc503af45617b01905dd2d1512" title="Callback function when interrupt IN data sent to host. " alt="" coords="266,5,453,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hid.xhtml#ga18ed1d60f54db7c0dd38b3db4fcccfa8" title="Start polling interrupt OUT pipe (output report, host to device) if there is. " alt="" coords="265,57,453,98"/>
+</map>

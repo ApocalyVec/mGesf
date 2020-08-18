@@ -1,0 +1,4 @@
+<map id="udd_ctrl_in_sent" name="udd_ctrl_in_sent">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#ga80494c67ce9cbd4ee8eb5e7fa5c19cd6" title="Managed reception of SETUP packet on control endpoint. " alt="" coords="180,5,357,32"/>
+<area shape="rect" id="node3" href="$group__udd__udphs__group.xhtml#gafdbf46264851b8d76cd12d68ca8188d3" title="Main interrupt routine for control endpoint. " alt="" coords="405,31,540,57"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="XDMAD_FreeChannel" name="XDMAD_FreeChannel">
+<area shape="rect" id="node2" href="$afe__dma_8c.xhtml#a68dbdec846e3b92a818ded06727529bd" title="AFE xDMA Rx callback Invoked on AFE DMA reception done. " alt="" coords="270,5,359,32"/>
+<area shape="rect" id="node3" href="$afe__dma_8c.xhtml#accc7edd40048cf4c851c6b7d7680f008" title="Configure the DMA Channels: 0 RX. " alt="" coords="473,31,674,57"/>
+<area shape="rect" id="node4" href="$dac__dma_8c.xhtml#a099e74bad2749ffafa6f3861e5e57456" title="Configure the DMA Channels: 0 RX. " alt="" coords="212,107,417,133"/>
+<area shape="rect" id="node5" href="$group__mcid__functions.xhtml#ga22c80115063dbf7641105608fb74b8e4" title="_FinishCmd" alt="" coords="267,157,362,184"/>
+<area shape="rect" id="node6" href="$qspi__dma_8c.xhtml#a3f74a9c30f8d87121341efbe86f7b992" title="Disables a QSPI Rx channel. " alt="" coords="209,208,420,235"/>
+<area shape="rect" id="node7" href="$qspi__dma_8c.xhtml#a475ae8a5f6c8d35f9942611d5512144a" title="Disables a QSPI Tx channel. " alt="" coords="209,259,420,285"/>
+<area shape="rect" id="node8" href="$qspi__dma_8c.xhtml#a3bb12a4d22e8c71f840710b19c769067" title="Disables a QSPI SPI Rx and Tx channels. " alt="" coords="221,309,409,336"/>
+<area shape="rect" id="node9" href="$spi__dma_8c.xhtml#ac612542f98d1fbf87bbf0e3ea7870cb1" title="SPI xDMA Rx callback Invoked on SPi DMA reception done. " alt="" coords="265,360,364,387"/>
+<area shape="rect" id="node10" href="$spi__dma_8c.xhtml#abdde34d0acc2327d589c8fad97aa0e0f" title="Configure the DMA Channels: 0 RX, 1 TX. " alt="" coords="468,385,679,412"/>
+<area shape="rect" id="node11" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="253,461,376,488"/>
+<area shape="rect" id="node12" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="253,512,376,539"/>
+<area shape="rect" id="node13" href="$uart__dma_8c.xhtml#a1f704a5ba38b30b508eaf3f6df28d31f" title="UART xDMA Rx callback Invoked on UART DMA reception done. " alt="" coords="259,563,370,589"/>
+<area shape="rect" id="node14" href="$uart__dma_8c.xhtml#a99c827df23764c4f59f18ff666002190" title="USART xDMA Rx callback Invoked on USART DMA reception done. " alt="" coords="259,613,370,640"/>
+<area shape="rect" id="node15" href="$uart__dma_8c.xhtml#a2e608c15e9d2dff4ca4e98f8ee417ed4" title="This function disables the appropriate DMA channel for Rx channel of USART. " alt="" coords="218,664,411,691"/>
+<area shape="rect" id="node16" href="$uart__dma_8c.xhtml#a9b0fc44709de4abbf35be9aac35d689f" title="This function disables the appropriate DMA channel for Tx channel of USART. " alt="" coords="219,715,411,741"/>
+<area shape="rect" id="node17" href="$usart__dma_8c.xhtml#a2c942c9e172c4b51eb87fbdefa14c8ad" title="USART xDMA Rx callback Invoked on USART DMA reception done. " alt="" coords="255,765,375,792"/>
+<area shape="rect" id="node18" href="$usart__dma_8c.xhtml#a90f30409b8b9bd5cf2b4e7eea6d59fde" title="USART xDMA Rx callback Invoked on USART DMA reception done. " alt="" coords="255,816,374,843"/>
+<area shape="rect" id="node19" href="$usart__dma_8c.xhtml#a7e691f994b89f0457929df9639a3caea" title="This function disables the appropriate DMA channel for Rx channel of USART. " alt="" coords="213,867,416,893"/>
+<area shape="rect" id="node20" href="$usart__dma_8c.xhtml#a10da1227ede3bfae0413010a0c77975f" title="This function disables the appropriate DMA channel for Tx channel of USART. " alt="" coords="214,917,415,944"/>
+<area shape="rect" id="node21" href="$xtio__uart_8h.xhtml#a8ba86b040c6e35b8df3244e412f2e689" title="xtio_uart_configure" alt="" coords="243,968,387,995"/>
+</map>

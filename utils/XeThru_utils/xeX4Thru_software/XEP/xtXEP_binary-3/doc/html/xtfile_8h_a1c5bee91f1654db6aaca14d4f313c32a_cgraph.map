@@ -1,0 +1,5 @@
+<map id="xtfile_write" name="xtfile_write">
+<area shape="rect" id="node2" href="$xtfile_8c.xhtml#ab6502b729403c595b606e92bf005bd09" title="xtfile_lock" alt="" coords="152,5,236,32"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#a5f00b9d0119e29899a5acf83033147e4" title="xtfile_unlock" alt="" coords="144,56,244,83"/>
+<area shape="rect" id="node4" href="$xfs_8c.xhtml#a9fadb27c69014a6f606f00781d0c24e5" title="Writes the file data to flash at given offset. " alt="" coords="143,107,245,133"/>
+</map>

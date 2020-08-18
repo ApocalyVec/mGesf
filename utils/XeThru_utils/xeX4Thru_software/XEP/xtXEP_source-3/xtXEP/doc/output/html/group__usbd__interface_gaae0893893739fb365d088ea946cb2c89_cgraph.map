@@ -1,0 +1,28 @@
+<map id="USBDDriver_RequestHandler" name="USBDDriver_RequestHandler">
+<area shape="rect" id="node2" href="$group__usb__request.xhtml#gace388a4d862a1a39dfce506fe4189e82" title="Returns the request code of the given request. " alt="" coords="263,5,494,32"/>
+<area shape="rect" id="node3" href="$group__usb__request.xhtml#ga56cc8072ee61b86e52620841df171c56" title="Returns the type of the descriptor requested by the host given the corresponding GET_DESCRIPTOR reque..." alt="" coords="283,57,474,98"/>
+<area shape="rect" id="node4" href="$group__usb__request.xhtml#ga09bca9ff4fe941ee4688851a15a2190c" title="Returns the index of the requested descriptor, given the corresponding GET_DESCRIPTOR request..." alt="" coords="283,122,474,163"/>
+<area shape="rect" id="node5" href="$group__usb__request.xhtml#ga047e240a92a39eed9b3174d397498123" title="Returns the expected length of the data phase following a request. " alt="" coords="267,188,491,215"/>
+<area shape="rect" id="node6" href="$group__usbd__interface.xhtml#gadbb4c8a840d3ff539be6fa5fa9f4a4e0" title="Sends the requested USB descriptor to the host if available, or STALLs the request. " alt="" coords="323,441,434,468"/>
+<area shape="rect" id="node7" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="603,416,702,443"/>
+<area shape="rect" id="node8" href="$group__usbd__interface.xhtml#gad846cf5a2a002f83abe01d17d233f644" title="Causes the given endpoint to acknowledge the next packet it receives with a STALL handshake..." alt="" coords="605,568,700,595"/>
+<area shape="rect" id="node9" href="$group__usb__request.xhtml#ga974088e16e3a8f33425a4a90ce5f1a03" title="Returns the address that the device must take in response to a SET_ADDRESS request. " alt="" coords="291,746,466,787"/>
+<area shape="rect" id="node10" href="$group__usbd__interface.xhtml#ga4cb07ba7dff39ad8c9b331dfaf27e853" title="Sets the device address to the given value. " alt="" coords="308,812,449,839"/>
+<area shape="rect" id="node11" href="$group__usb__request.xhtml#ga82573aa1de13dfe6d86308cc46a52277" title="Returns the number of the configuration that should be set in response to the given SET_CONFIGURATION..." alt="" coords="275,863,483,905"/>
+<area shape="rect" id="node12" href="$group__usbd__interface.xhtml#ga9a20011d336dec2bd5feb197f0da1c80" title="Configures the device by setting it into the Configured state and initializing all endpoints..." alt="" coords="314,391,443,417"/>
+<area shape="rect" id="node13" href="$group__usbd__interface.xhtml#ga9d470d7bee3682fff6c69b1a758eba21" title="Sends the current configuration number to the host. " alt="" coords="313,239,444,265"/>
+<area shape="rect" id="node14" href="$group__usb__request.xhtml#ga3cb71ccdf6e30fe1836fea702fb85e3d" title="Returns the intended recipient of a given request. " alt="" coords="260,929,497,956"/>
+<area shape="rect" id="node15" href="$group__usbd__interface.xhtml#ga962288f78a55bd84652a388023b53dca" title="Sends the current status of the device to the host. " alt="" coords="313,289,444,316"/>
+<area shape="rect" id="node16" href="$group__usb__request.xhtml#ga59f22fd9b4390d6c080bf95c39d0f8a9" title="Returns the endpoint number targeted by a given request. " alt="" coords="261,1163,497,1205"/>
+<area shape="rect" id="node17" href="$group__usb__request.xhtml#ga8cb6a2299b31b844e7bcdd3d50df9f07" title="Returns the wIndex field of the given request. " alt="" coords="545,1083,760,1109"/>
+<area shape="rect" id="node18" href="$group__usbd__interface.xhtml#gaa52d41127f737b06cc6991626de366b9" title="Sends the current status of an endpoints to the USB host. " alt="" coords="307,492,450,519"/>
+<area shape="rect" id="node19" href="$group__usb__request.xhtml#ga45fc2dc20e20b098a487d3cdc7f1b35e" title="Returns the feature selector of a given CLEAR_FEATURE or SET_FEATURE request. " alt="" coords="265,1229,492,1270"/>
+<area shape="rect" id="node20" href="$group__usbd__interface.xhtml#gae0ae896eb63155735b328c157fdc80a9" title="Clears the Halt feature on the given endpoint. " alt="" coords="324,1295,433,1321"/>
+<area shape="rect" id="node21" href="$group__usbd__interface.xhtml#ga02adabcf042f350cc045fb2c798bb4e9" title="Sets the HALT feature on the given endpoint (if not already in this state). " alt="" coords="332,1345,425,1372"/>
+<area shape="rect" id="node22" href="$group__usbd__interface.xhtml#ga001b34862324f5ba4a65ad3195e4896f" title="Performs the selected test on the USB device (high&#45;speed only). " alt="" coords="313,695,444,721"/>
+<area shape="rect" id="node23" href="$group__usb__request.xhtml#ga3cc91f919947b0ecf2359c5e8fdad8b9" title="Indicates the test that the device must undertake following a SET_FEATURE request. " alt="" coords="277,981,481,1022"/>
+<area shape="rect" id="node24" href="$group__usb__request.xhtml#ga42adc38e0a97eaf355962d6d53a2be97" title="Indicates which interface is targeted by a GET_INTERFACE or SET_INTERFACE request. " alt="" coords="300,1046,457,1087"/>
+<area shape="rect" id="node25" href="$group__usb__request.xhtml#ga12a0abaf7f42b626adaf62b7efc5c6de" title="Indicates the new alternate setting that the interface targeted by a SET_INTERFACE request should use..." alt="" coords="300,1397,457,1438"/>
+<area shape="rect" id="node26" href="$group__usbd__interface.xhtml#ga69728b150794285ecaf38b5383471965" title="Sets the active setting of the given interface if the configuration supports it; otherwise, the control pipe is STALLed. " alt="" coords="329,543,429,569"/>
+<area shape="rect" id="node27" href="$group__usbd__interface.xhtml#gaf933d8614b19b074895685836de44361" title="Sends the currently active setting of the given interface to the USB host. " alt="" coords="328,593,429,620"/>
+</map>

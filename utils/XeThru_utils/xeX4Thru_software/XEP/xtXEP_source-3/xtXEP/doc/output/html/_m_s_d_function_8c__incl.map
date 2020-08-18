@@ -1,0 +1,8 @@
+<map id="src/hal/x4m0x_s70/libraries/libusb/device/massstorage/MSDFunction.c" name="src/hal/x4m0x_s70/libraries/libusb/device/massstorage/MSDFunction.c">
+<area shape="rect" id="node2" href="$_m_s_descriptors_8h.xhtml" title="MSDescriptors.h" alt="" coords="5,109,132,136"/>
+<area shape="rect" id="node3" href="$_m_s_d_driver_8h.xhtml" title="MSDDriver.h" alt="" coords="157,109,258,136"/>
+<area shape="rect" id="node4" href="$_u_s_b_lib___trace_8h.xhtml" title="USBLib_Trace.h" alt="" coords="282,109,402,136"/>
+<area shape="rect" id="node5" href="$_u_s_b_d_8h.xhtml" title="USBD.h" alt="" coords="449,184,521,211"/>
+<area shape="rect" id="node6" href="$_u_s_b_d___h_a_l_8h.xhtml" title="This file defines functions for USB Device Hardware Access Level. " alt="" coords="477,109,583,136"/>
+<area shape="rect" id="node7" href="$_u_s_b_d_driver_8h.xhtml" title="USBDDriver.h" alt="" coords="607,109,717,136"/>
+</map>

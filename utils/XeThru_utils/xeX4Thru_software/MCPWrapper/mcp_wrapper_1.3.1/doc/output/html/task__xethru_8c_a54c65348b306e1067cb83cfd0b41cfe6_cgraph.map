@@ -1,0 +1,19 @@
+<map id="mcpw_demo_x4m300" name="mcpw_demo_x4m300">
+<area shape="rect" id="node2" href="$task__xethru_8c.xhtml#a273665b1dc773da28ea33615af1ba57f" title="mcpw_on_host_parser\l_presence_single" alt="" coords="202,5,354,47"/>
+<area shape="rect" id="node3" href="$task__xethru_8c.xhtml#ae7ef98041a23d07c679201f09db94a81" title="mcpw_on_host_parser\l_presence_moving_list" alt="" coords="201,71,355,112"/>
+<area shape="rect" id="node4" href="$task__xethru_8c.xhtml#acb0abc99f3c7ab56eff1f77480d16d2c" title="mcpw_on_host_parser\l_baseband_ap" alt="" coords="422,131,574,172"/>
+<area shape="rect" id="node5" href="$mcp__wrapper_8c.xhtml#a536f04f2d9c7db14ffe361620d4d158a" title="mcpw_set_sensor_mode" alt="" coords="415,197,581,223"/>
+<area shape="rect" id="node6" href="$mcp__wrapper_8c.xhtml#ab3c91f1235afafa553e9fa1d00c615ba" title="mcpw_set_baudrate" alt="" coords="429,249,567,275"/>
+<area shape="rect" id="node7" href="$group__sam__drivers__usart__group.xhtml#gaafe097c01c082b270c1057722d524f5b" title="Calculate a clock divider(CD) and a fractional part (FP) for the USART asynchronous modes to generate..." alt="" coords="411,302,585,329"/>
+<area shape="rect" id="node8" href="$group__sysclk__group.xhtml#gae91bb547221cdd42b104342e8f776a28" title="Return the current rate in Hz of the CPU clock. " alt="" coords="431,358,565,385"/>
+<area shape="rect" id="node9" href="$mcp__wrapper_8c.xhtml#a801e1df2def7e7aff114711ac09c16be" title="mcpw_get_systeminfo" alt="" coords="423,419,573,446"/>
+<area shape="rect" id="node10" href="$mcp__wrapper_8c.xhtml#a7dc80c2a02be5f2dc7cb7492ad781acf" title="mcpw_load_profile" alt="" coords="434,491,562,518"/>
+<area shape="rect" id="node11" href="$mcp__wrapper_8c.xhtml#a56b031524072e973d7b42cfcacb0c7e3" title="mcpw_set_noisemap_control" alt="" coords="403,542,593,569"/>
+<area shape="rect" id="node12" href="$mcp__wrapper_8c.xhtml#a5aad9b9bddaa60f6c860fd64477041eb" title="mcpw_set_detection_zone" alt="" coords="410,593,586,619"/>
+<area shape="rect" id="node13" href="$mcp__wrapper_8c.xhtml#a83d34d3ac389507fb3f13e1ea86cdecb" title="mcpw_set_sensitivity" alt="" coords="425,643,571,670"/>
+<area shape="rect" id="node14" href="$mcp__wrapper_8c.xhtml#a5e888a3d354deed869020ce46851615c" title="mcpw_set_led_control" alt="" coords="423,694,573,721"/>
+<area shape="rect" id="node15" href="$mcp__wrapper_8c.xhtml#a10b8c43d839e93605d5718c84e48d0e3" title="mcpw_set_output_control" alt="" coords="413,745,583,771"/>
+<area shape="rect" id="node16" href="$task_8h.xhtml#a3fc5adc340b17cb07c12ffa90d7bb8f3" title="vTaskDelay" alt="" coords="454,795,542,822"/>
+<area shape="rect" id="node17" href="$mcp__wrapper_8c.xhtml#acbebfcb65738078d87fce211e76fd4a9" title="mcpw_store_noisemap" alt="" coords="421,846,575,873"/>
+<area shape="rect" id="node18" href="$task__xethru_8c.xhtml#a4d700c7ee4beaac0a8a4c95c11e5c673" title="mcpw_demo_x4m200" alt="" coords="204,491,352,518"/>
+</map>

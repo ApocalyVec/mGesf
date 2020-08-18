@@ -1,0 +1,6 @@
+<map id="xthousekeeping_init" name="xthousekeeping_init">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#a31dcedbddd6f896d0157ce276d449fd4" title="Checks if external memory is enabled. " alt="" coords="423,18,577,60"/>
+<area shape="rect" id="node3" href="$xtmemory_8h.xhtml#a6865e14d8f1f60f5c34807e4c1a990a7" title="Allocate memory from slow location. " alt="" coords="203,26,374,52"/>
+<area shape="rect" id="node4" href="$xt__system_8c.xhtml#a0abc6238971ef9384a4f3d73736651e1" title="Register callback for crash dump. " alt="" coords="204,77,373,118"/>
+<area shape="rect" id="node5" href="$xthousekeeping_8c.xhtml#ad5a7723fb96e5789fa7ecb2554da3b04" title="xthousekeeping_trigger\l_crashdump" alt="" coords="203,142,375,184"/>
+</map>

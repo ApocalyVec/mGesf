@@ -1,0 +1,6 @@
+<map id="SBC_ModeSense6" name="SBC_ModeSense6">
+<area shape="rect" id="node2" href="$group__udd__udphs__group.xhtml#gae90f972fe3687ee01b803027939cdb47" title="if" alt="" coords="248,5,287,32"/>
+<area shape="rect" id="node3" href="$group__usbd__msd.xhtml#ga6f8ad39249cd0f7dc9992a7ff44ba164" title="Check if the LUN is ready. " alt="" coords="207,56,327,83"/>
+<area shape="rect" id="node4" href="$group__usbd__interface.xhtml#gafc4728f4af70056b3a271f333b759592" title="Sends data through a USB endpoint. " alt="" coords="218,107,317,133"/>
+<area shape="rect" id="node5" href="$_s_b_c_methods_8c.xhtml#ga65e2aa51e755428df116ecc89b7aa996" title="This function is to be used as a callback for USB or LUN transfers. " alt="" coords="192,157,343,184"/>
+</map>

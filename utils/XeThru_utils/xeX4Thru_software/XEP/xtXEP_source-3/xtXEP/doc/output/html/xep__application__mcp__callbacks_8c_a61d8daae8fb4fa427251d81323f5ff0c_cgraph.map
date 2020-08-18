@@ -1,0 +1,5 @@
+<map id="onMcpX4DriverGetDacMax" name="onMcpX4DriverGetDacMax">
+<area shape="rect" id="node2" href="$x4driver_8h.xhtml#ad622f2683a8e728043a68fe0b09c2f07" title="x4driver_get_dac_max" alt="" coords="265,5,431,32"/>
+<area shape="rect" id="node3" href="$xep__dispatch__messages_8h.xhtml#a90b63c6c0030baa1fd9c1d71b1c23d1a" title="Dispatch message to hostcom asking to reply with int array to host. " alt="" coords="245,57,451,98"/>
+<area shape="rect" id="node4" href="$xep__dispatch__messages_8h.xhtml#a454af1ebc681b68eaf1995f56aa2e42c" title="Dispatch message to hostcom asking to send error to host. " alt="" coords="245,122,451,163"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Usb_general" name="Usb_general">
+<area shape="rect" id="node1" href="$group__usb__request.xhtml" title="USB Requests" alt="" coords="163,5,275,32"/>
+<area shape="rect" id="node3" href="$group__usb__descriptor.xhtml" title="USB Descriptors" alt="" coords="156,56,283,83"/>
+</map>

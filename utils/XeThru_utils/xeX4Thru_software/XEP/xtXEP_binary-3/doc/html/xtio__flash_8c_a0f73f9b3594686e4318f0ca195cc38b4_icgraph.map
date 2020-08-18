@@ -1,0 +1,5 @@
+<map id="xtio_flash_write" name="xtio_flash_write">
+<area shape="rect" id="node2" href="$xfs_8c.xhtml#a7b9303aef25ff6fcc0ac8087eca101d4" title="xfs_commit_allocation\l_table" alt="" coords="172,5,336,47"/>
+<area shape="rect" id="node3" href="$xfs_8h.xhtml#a9fadb27c69014a6f606f00781d0c24e5" title="Writes the file data to flash at given offset. " alt="" coords="203,71,305,98"/>
+<area shape="rect" id="node4" href="$xfs_8h.xhtml#a975b6f2d064a2205832dfc2b7e0b7799" title="Formats the file system to an empty state. " alt="" coords="209,122,299,149"/>
+</map>

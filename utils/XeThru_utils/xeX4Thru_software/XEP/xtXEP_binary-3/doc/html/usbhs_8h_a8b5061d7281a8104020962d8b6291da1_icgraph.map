@@ -1,0 +1,4 @@
+<map id="USBHS_DisableSOF" name="USBHS_DisableSOF">
+<area shape="rect" id="node2" href="$group__uhd__group.xhtml#ga9b45418a37c193dbcff7ef17040cfa30" title="Disables the USB host mode. " alt="" coords="221,5,393,32"/>
+<area shape="rect" id="node3" href="$group__uhd__group.xhtml#ga170d8082df4bb77da27db090827145ec" title="USBH_HAL_DelayedSuspend" alt="" coords="203,56,411,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="xtfile_is_open" name="xtfile_is_open">
+<area shape="rect" id="node2" href="$xtfile_8c.xhtml#a3664f1f9f0c2893e041970d9a758cd48" title="xtfile_create_instance" alt="" coords="161,31,323,57"/>
+<area shape="rect" id="node3" href="$xtfile_8c.xhtml#a9ea9a4d241077c7c7d3982bc1159f9ac" title="Deletes the file with the specified type and identifier. " alt="" coords="371,5,469,32"/>
+<area shape="rect" id="node4" href="$xtfile_8c.xhtml#ade819cbf4de9ee15f62317e3bf84fed6" title="Opens an existing file with given type and identifier. " alt="" coords="375,68,465,95"/>
+</map>

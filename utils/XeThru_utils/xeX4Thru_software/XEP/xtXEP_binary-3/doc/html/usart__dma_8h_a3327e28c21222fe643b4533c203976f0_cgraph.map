@@ -1,0 +1,7 @@
+<map id="USARTD_Configure" name="USARTD_Configure">
+<area shape="rect" id="node2" href="$pmc_8h.xhtml#a4154148b8d69545bca1b5c868c004d49" title="Enables the clock of a peripheral. " alt="" coords="196,5,360,32"/>
+<area shape="rect" id="node3" href="$usart_8h.xhtml#a6280c3578315c2a06e1857b7dca0c1be" title="Configures an USART peripheral with the specified parameters. " alt="" coords="212,56,344,83"/>
+<area shape="rect" id="node4" href="$group__dmad__functions.xhtml#ga8c7517080f70e93096364e916af6e6f2" title="Initialize xDMA driver instance. " alt="" coords="214,107,342,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga332e10ef9605dc6eb10b9e14511930f8" title="Clear Pending Interrupt. " alt="" coords="408,132,573,159"/>
+<area shape="rect" id="node6" href="$group___c_m_s_i_s___core___n_v_i_c_functions.xhtml#ga47a0f52794068d076c9147aa3cb8d8a6" title="Get Active Interrupt. " alt="" coords="217,208,339,235"/>
+</map>

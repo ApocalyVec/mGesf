@@ -1,0 +1,8 @@
+<map id="USBGenericDescriptor_Parse" name="USBGenericDescriptor_Parse">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#ga44871402f8ef778c0f87249bcc18dca4" title="Invoked whenever the active configuration of device is changed by the host. " alt="" coords="241,5,455,47"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#gaf91d732a990083d002a90e0efd29f6e5" title="Parse USB Audio streaming information for AUDDStream instance. " alt="" coords="219,71,477,98"/>
+<area shape="rect" id="node4" href="$group__usbd__cdc.xhtml#ga6c9e140e48ceaa47a7cc57cd4e144553" title="Parse CDC EEM Port information for CDCDEEMPort instance. " alt="" coords="239,122,457,149"/>
+<area shape="rect" id="node5" href="$group__usbd__cdc.xhtml#ga4935aee506e10a71e0f13aad3ab80896" title="Parse CDC Serial Port information for CDCDSerialPort instance. " alt="" coords="235,173,461,199"/>
+<area shape="rect" id="node6" href="$group__usbd__hid.xhtml#ga82ccc86124b2cd8918810b69c0afec13" title="Parse the USB HID Function Interface. " alt="" coords="245,223,451,250"/>
+<area shape="rect" id="node7" href="$group__usbd__msd.xhtml#gafb1268e0849907894c708ccc4ab46fee" title="Invoked when the configuration of the device changes. " alt="" coords="261,274,435,301"/>
+</map>

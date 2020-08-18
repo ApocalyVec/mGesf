@@ -1,0 +1,9 @@
+<map id="uhi_msc_scsi" name="uhi_msc_scsi">
+<area shape="rect" id="node2" href="$group__uhi__msc__group.xhtml#ga703657479fce9a8a4086f98f8f0fab28" title="Checks and update the status of the LUN. " alt="" coords="177,5,346,47"/>
+<area shape="rect" id="node3" href="$group__uhi__msc__group.xhtml#ga9a204242b01d7ee34b9ee6e89308af7c" title="Reads a LUN data section to RAM buffer Note: The sector size used to define the data section is the s..." alt="" coords="179,71,344,98"/>
+<area shape="rect" id="node4" href="$group__uhi__msc__group.xhtml#ga75da7088270a7c90424b0530acda9001" title="Writes a RAM buffer in a LUN data section Note: The sector size used to define the data section is th..." alt="" coords="178,122,345,149"/>
+<area shape="rect" id="node5" href="$uhi__msc_8c.xhtml#afcb2ce185f82a18e44f7c3b42340c496" title="Sends the CBW packet of the scsi INQUIRY command. " alt="" coords="184,173,339,199"/>
+<area shape="rect" id="node6" href="$uhi__msc_8c.xhtml#ac2339d091ff134f06cf5f9cbb0185cb3" title="Sends the CBW packet of the scsi READ CAPACITY command. " alt="" coords="160,223,363,250"/>
+<area shape="rect" id="node7" href="$uhi__msc_8c.xhtml#ac2d95d78563f49c06a2b31e6e2c2f9b6" title="Sends the CBW packet of the scsi MODE SENSE 6 command This function returns the write&#45;protected mode..." alt="" coords="160,274,363,301"/>
+<area shape="rect" id="node8" href="$uhi__msc_8c.xhtml#a5b7c8255c93b911718d79f7bd85e7de1" title="Sends the CBW packet of the scsi REQUESRT SENSE command Called by TEST UNIT READY and READ CAPACITY c..." alt="" coords="180,325,343,367"/>
+</map>

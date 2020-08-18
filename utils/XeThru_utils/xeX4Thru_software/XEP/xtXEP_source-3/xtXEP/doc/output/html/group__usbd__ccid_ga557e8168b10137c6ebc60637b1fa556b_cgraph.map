@@ -1,0 +1,4 @@
+<map id="PCtoRDRXfrBlock" name="PCtoRDRXfrBlock">
+<area shape="rect" id="node2" href="$iso7816__4_8h.xhtml#a4c353a89b74ac9fc8d3c91855330e32a" title="Transfer Block TPDU T=0. " alt="" coords="183,5,373,32"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#ga9540baee48001b10a17bda6af26f0189" title="Response Pipe, Bulk&#45;IN Messages In other cases, the response message has the following format: The re..." alt="" coords="207,56,349,83"/>
+</map>

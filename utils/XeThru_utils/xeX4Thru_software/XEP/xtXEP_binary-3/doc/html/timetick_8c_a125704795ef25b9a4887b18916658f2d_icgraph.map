@@ -1,0 +1,8 @@
+<map id="GetDelayInTicks" name="GetDelayInTicks">
+<area shape="rect" id="node2" href="$timetick_8c.xhtml#a2b6066c4eacf5089da661bd9e13bc9ed" title="Sync Wait for several ms. " alt="" coords="213,5,261,32"/>
+<area shape="rect" id="node3" href="$timetick_8c.xhtml#af275659c1e8514e6f3b61f0b32f09a79" title="Sync Sleep for several ms. " alt="" coords="208,56,267,83"/>
+<area shape="rect" id="node4" href="$twid_8c.xhtml#a13f06b4cc25a29302d3c932e82136599" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="192,107,283,133"/>
+<area shape="rect" id="node5" href="$twid_8c.xhtml#a67c6f278372fcb213e7848929db89d3f" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="192,157,283,184"/>
+<area shape="rect" id="node6" href="$twid_8c.xhtml#aa58a543bbbb8570c4136811e16d2be11" title="Asynchronously reads data from a slave on the TWI bus. " alt="" coords="176,208,299,235"/>
+<area shape="rect" id="node7" href="$twid_8c.xhtml#a610f1dadb4046085412fe8c2817e16b1" title="Asynchronously sends data to a slave on the TWI bus. " alt="" coords="176,259,299,285"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="USBDDriver_Initialize" name="USBDDriver_Initialize">
+<area shape="rect" id="node2" href="$group__usbd__audio__speaker.xhtml#gafa5432b98a55735fdd034c32343743d9" title="Initializes an USB audio speaker device driver, as well as the underlying USB controller. " alt="" coords="209,5,420,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga18c37c223b7436c8682fda3e570341d3" title="Initializes an USB audio SpeakerPhone device driver, as well as the underlying USB controller..." alt="" coords="219,57,411,98"/>
+<area shape="rect" id="node4" href="$group__usbd__ccid.xhtml#ga2329bfd79178d0e9854372f2044a531e" title="Initializes the CCID device driver. " alt="" coords="240,123,389,149"/>
+<area shape="rect" id="node5" href="$group__usbd__cdc.xhtml#ga474c6e12f50626640933b9400b89b03c" title="Initializes the USB Device CDC serial driver &amp; USBD Driver. " alt="" coords="223,173,406,200"/>
+<area shape="rect" id="node6" href="$group__usbd__cdc.xhtml#ga191a619ddb7cfdac13b7d8f04349e3ef" title="Initializes the USB Device CDC serial driver &amp; USBD Driver. " alt="" coords="219,224,411,251"/>
+<area shape="rect" id="node7" href="$group__usbd__composite__cdcaud.xhtml#ga2d915234404b63bf5439b3bef75bfaae" title="Initializes the USB device composite device driver. " alt="" coords="222,275,407,301"/>
+<area shape="rect" id="node8" href="$group__usbd__composite__cdchid.xhtml#ga694d3e24a8bf7913671fb0d9a777b1eb" title="Initializes the USB device composite device driver. " alt="" coords="225,325,404,352"/>
+<area shape="rect" id="node9" href="$group__usbd__composite__cdcmsd.xhtml#ga6c15e7caf5edeac9cbe9e2a4c858c7d0" title="Initializes the USB device CDCMSD device driver. " alt="" coords="227,376,403,403"/>
+<area shape="rect" id="node10" href="$group__usbd__composite__cdccdc.xhtml#ga2ff92f5d6611f4cc29bc6049b39b443c" title="Initializes the USB device composite device driver. " alt="" coords="219,427,411,453"/>
+<area shape="rect" id="node11" href="$group__usbd__composite__hidaud.xhtml#ga93b5b87d0366b013bdbc2af9a1793e7e" title="Initializes the USB device composite device driver. " alt="" coords="225,477,405,504"/>
+<area shape="rect" id="node12" href="$group__usbd__composite__hidmsd.xhtml#ga353527333aa384f7ffaa105ace23fcad" title="Initializes the USB device HIDMSD device driver. " alt="" coords="229,528,400,555"/>
+<area shape="rect" id="node13" href="$group__usbd__hid__key.xhtml#ga1f58303d60b968bd70c374dfa106df45" title="Initializes the HID keyboard device driver. " alt="" coords="239,579,391,621"/>
+<area shape="rect" id="node14" href="$group__usbd__hid__mouse.xhtml#gaa4210c7f880e7b9d4e52082dffbf09b1" title="Initializes the HID Mouse device driver. " alt="" coords="218,645,411,672"/>
+<area shape="rect" id="node15" href="$group__usbd__hid__tran.xhtml#gac936a4a8ed832ccd0dbfc4f752b3eb71" title="Initializes the HID Transfer device driver. " alt="" coords="243,697,386,738"/>
+<area shape="rect" id="node16" href="$group__usbd__msd.xhtml#ga77b4a730be820934b4e637afa14e6fef" title="Initializes the MSD driver and the associated USB driver. " alt="" coords="241,763,389,789"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="BOARD_ConfigureAndTestSdram" name="BOARD_ConfigureAndTestSdram">
+<area shape="rect" id="node2" href="$xep__hal_8h.xhtml#af1f57228b9448df87a3f5f30968b3fa8" title="Gets the operation mode of the module. " alt="" coords="285,5,459,32"/>
+<area shape="rect" id="node3" href="$xt__selftest_8c.xhtml#abc3c1300afe15432d14d378d288dbed5" title="xt_selftest_ext_ram\l_shorts" alt="" coords="298,57,446,98"/>
+<area shape="rect" id="node4" href="$board__memories_8c.xhtml#a0e0e3f4ee2328faeb9f45c5fc591f8de" title="Configures the EBI for SDRAM (IS42S16100E&#45;7B) access. " alt="" coords="283,123,461,149"/>
+<area shape="rect" id="node5" href="$xt__selftest_8c.xhtml#a0d0c415bbb59ac93d3d4bd7dd75934a0" title="xt_selftest_ext_ram\l_functionality" alt="" coords="298,174,446,215"/>
+</map>

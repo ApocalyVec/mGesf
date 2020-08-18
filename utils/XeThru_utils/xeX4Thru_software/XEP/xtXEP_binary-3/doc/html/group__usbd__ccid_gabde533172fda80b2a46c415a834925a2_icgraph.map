@@ -1,0 +1,5 @@
+<map id="RDRtoPCParameters" name="RDRtoPCParameters">
+<area shape="rect" id="node2" href="$group__usbd__ccid.xhtml#ga275842746ad738fa53a8c5eed0e5c71b" title="Command Pipe, Bulk&#45;OUT Messages return parameters by the command: RDR_to_PC_Parameters. " alt="" coords="211,5,386,32"/>
+<area shape="rect" id="node3" href="$group__usbd__ccid.xhtml#gaefe9127e288993b5f480f7450865d63f" title="Command Pipe, Bulk&#45;OUT Messages This command resets the slot parameters to their default values..." alt="" coords="205,56,392,83"/>
+<area shape="rect" id="node4" href="$group__usbd__ccid.xhtml#ga6bf47064194aafb37318516fa117abdb" title="Command Pipe, Bulk&#45;OUT Messages This command is used to change the parameters for a given slot..." alt="" coords="211,107,386,133"/>
+</map>

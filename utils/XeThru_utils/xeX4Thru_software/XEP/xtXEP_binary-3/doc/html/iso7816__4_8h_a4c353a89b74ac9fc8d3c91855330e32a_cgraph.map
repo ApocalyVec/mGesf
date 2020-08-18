@@ -1,0 +1,4 @@
+<map id="ISO7816_XfrBlockTPDU_T0" name="ISO7816_XfrBlockTPDU_T0">
+<area shape="rect" id="node2" href="$iso7816__4_8c.xhtml#a0a64f5d5605fb816b0b03dd54d60843f" title="Send a char to ISO7816. " alt="" coords="244,5,391,32"/>
+<area shape="rect" id="node3" href="$iso7816__4_8c.xhtml#ae1e2ea9766d45050099218a0912a719d" title="Get a character from ISO7816. " alt="" coords="249,56,385,83"/>
+</map>

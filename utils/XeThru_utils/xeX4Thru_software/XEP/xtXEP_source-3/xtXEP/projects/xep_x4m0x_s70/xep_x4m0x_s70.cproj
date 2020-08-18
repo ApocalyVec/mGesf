@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>{9fd334fb-8589-409f-b599-68503f55463f}</ProjectGuid>
+    <avrdevice>ATSAMS70Q20</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>xep_x4m0x_s70</AssemblyName>
+    <Name>xep_x4m0x_s70</Name>
+    <RootNamespace>xep_x4m0x_s70</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.29.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.samice</avrtool>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>10000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800018564</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <PercepioTrace>
+      <TargetOS />
+      <Frequency>300000000</Frequency>
+      <EnableTraceInterrupts>False</EnableTraceInterrupts>
+      <EnableNonintrusive>True</EnableNonintrusive>
+      <EnableTargetOS>False</EnableTargetOS>
+      <EnableApplicationOutput>False</EnableApplicationOutput>
+      <EnableDataWatchPoints>False</EnableDataWatchPoints>
+      <EnablePC>True</EnablePC>
+      <EnablePCPolled>True</EnablePCPolled>
+      <PolledFrequency>10</PolledFrequency>
+      <EnableMcu>False</EnableMcu>
+      <EnableOsAwareness>True</EnableOsAwareness>
+      <HWApplicationOutput>True</HWApplicationOutput>
+      <HWInterrupt>True</HWInterrupt>
+      <HWIntrusiveDataWatch>True</HWIntrusiveDataWatch>
+      <HWNonintrusiveDataWatch>True</HWNonintrusiveDataWatch>
+      <HWPolledDataWatch>True</HWPolledDataWatch>
+      <HWPolledProgramCounterSampling>True</HWPolledProgramCounterSampling>
+      <HWProfiling>True</HWProfiling>
+      <HWProgramCounterSampling>True</HWProgramCounterSampling>
+      <ApplicationOutput0>String</ApplicationOutput0>
+      <ApplicationOutput1>String</ApplicationOutput1>
+      <ApplicationOutput2>String</ApplicationOutput2>
+      <ApplicationOutput3>String</ApplicationOutput3>
+      <ApplicationOutput4>String</ApplicationOutput4>
+      <ApplicationOutput5>String</ApplicationOutput5>
+      <ApplicationOutput6>String</ApplicationOutput6>
+      <ApplicationOutput7>String</ApplicationOutput7>
+      <ApplicationOutput8>String</ApplicationOutput8>
+      <ApplicationOutput9>String</ApplicationOutput9>
+      <ApplicationOutput10>String</ApplicationOutput10>
+      <ApplicationOutput11>String</ApplicationOutput11>
+      <ApplicationOutput12>String</ApplicationOutput12>
+      <ApplicationOutput13>String</ApplicationOutput13>
+      <ApplicationOutput14>String</ApplicationOutput14>
+      <ApplicationOutput15>String</ApplicationOutput15>
+      <ApplicationOutput16>String</ApplicationOutput16>
+      <ApplicationOutput17>String</ApplicationOutput17>
+      <ApplicationOutput18>String</ApplicationOutput18>
+      <ApplicationOutput19>String</ApplicationOutput19>
+      <ApplicationOutput20>String</ApplicationOutput20>
+      <ApplicationOutput21>String</ApplicationOutput21>
+      <ApplicationOutput22>String</ApplicationOutput22>
+      <ApplicationOutput23>String</ApplicationOutput23>
+      <ApplicationOutput24>String</ApplicationOutput24>
+      <ApplicationOutput25>String</ApplicationOutput25>
+      <ApplicationOutput26>String</ApplicationOutput26>
+      <ApplicationOutput27>String</ApplicationOutput27>
+      <ApplicationOutput28>String</ApplicationOutput28>
+      <ApplicationOutput29>String</ApplicationOutput29>
+      <ApplicationOutput30>String</ApplicationOutput30>
+      <ApplicationOutput31>String</ApplicationOutput31>
+    </PercepioTrace>
+    <com_atmel_avrdbg_tool_samice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>4000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+        <JlinkConfigFile>D:\Work\Novelda\source\main\xtxep\build\x4m0x_X4M0x_SAMS70\jlink.config</JlinkConfigFile>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
+      <ToolNumber>600102752</ToolNumber>
+      <ToolName>J-Link</ToolName>
+    </com_atmel_avrdbg_tool_samice>
+    <avrtoolserialnumber>600102752</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0xA1120C00</avrdeviceexpectedsignature>
+    <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMS70_DFP\2.0.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsams70q20_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMS70_DFP\2.0.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMS70_DFP\2.0.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory>$(MSBuildProjectDirectory)\Release</OutputDirectory>
+    <BuildTarget>all</BuildTarget>
+    <CleanTarget>clean</CleanTarget>
+    <ExternalMakeFilePath>Release\Makefile</ExternalMakeFilePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMS70_DFP\2.0.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsams70q20_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMS70_DFP\2.0.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.assembler.general.IncludePaths>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\SAMS70_DFP\2.0.62\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory>$(MSBuildProjectDirectory)\Debug</OutputDirectory>
+    <BuildTarget>all</BuildTarget>
+    <CleanTarget>clean</CleanTarget>
+    <ExternalMakeFilePath>Debug\Makefile</ExternalMakeFilePath>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="xep_x4m0x_s70\" />
+    <Folder Include="xep_x4m0x_s70\src\" />
+    <Folder Include="xep_x4m0x_s70\xep_x4m0x_s70\" />
+    <Folder Include="xep_x4m0x_s70\xep_x4m0x_s70\src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\xtserial\src\protocol.h">
+      <SubType>compile</SubType>
+      <Link>src\protocol.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\xtserial\src\protocol_parser.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\protocol_parser.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\xtserial\src\protocol_parser.h">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\protocol_parser.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\xtserial\src\protocol_target.c">
+      <SubType>compile</SubType>
+      <Link>src\protocol_target.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\xtserial\src\protocol_target.h">
+      <SubType>compile</SubType>
+      <Link>src\protocol_target.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\xtserial\src\xtserial_definitions.h">
+      <SubType>compile</SubType>
+      <Link>src\xtserial_definitions.h</Link>
+    </Compile>
+    <Compile Include="..\..\include\memorypool.h">
+      <SubType>compile</SubType>
+      <Link>src\memorypool.h</Link>
+    </Compile>
+    <Compile Include="..\..\include\memorypoolset.h">
+      <SubType>compile</SubType>
+      <Link>src\memorypoolset.h</Link>
+    </Compile>
+    <Compile Include="..\..\include\module_ui.h">
+      <SubType>compile</SubType>
+      <Link>src\module_ui.h</Link>
+    </Compile>
+    <Compile Include="..\..\include\xep.h">
+      <SubType>compile</SubType>
+      <Link>src\xep.h</Link>
+    </Compile>
+    <Compile Include="..\..\include\xep_dispatch.h">
+      <SubType>compile</SubType>
+      <Link>src\xep_dispatch.h</Link>
+    </Compile>
+    <Compile Include="..\..\include\xep_dispatch_messages.h">
+      <SubType>compile</SubType>
+      <Link>src\xep_dispatch_messages.h</Link>
+    </Compile>
+    <Compile Include="..\..\include\xep_hal.h">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\xep_hal.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\Dispatch\memorypool.c">
+      <SubType>compile</SubType>
+      <Link>src\memorypool.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\Dispatch\memorypoolset.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\memorypoolset.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\Dispatch\xep_dispatch.c">
+      <SubType>compile</SubType>
+      <Link>src\xep_dispatch.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\Dispatch\xep_dispatch_messages.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\xep_x4m0x_s70\src\xep_dispatch_messages.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\FreeRTOS_hooks.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\FreeRTOS_hooks.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\FreeRTOS_hooks.h">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\FreeRTOS_hooks.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\hal\radar_hal.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\radar_hal.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\HAL\radar_hal.h">
+      <SubType>compile</SubType>
+      <Link>src\radar_hal.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\hal\x4m0x_s70\FreeRTOSConfig.h">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\xep_x4m0x_s70\src\FreeRTOSConfig.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\hal\x4m0x_s70\hal_board_init.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\hal_board_init.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\hal\x4m0x_s70\xtio_serial_com.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\xep_x4m0x_s70\src\xtio_serial_com.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\HostCom\task_hostcom.c">
+      <SubType>compile</SubType>
+      <Link>src\task_hostcom.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\HostCom\task_hostcom.h">
+      <SubType>compile</SubType>
+      <Link>src\task_hostcom.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\main.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\xep_x4m0x_s70\src\main.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\Radar\task_radar.c">
+      <SubType>compile</SubType>
+      <Link>src\task_radar.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\Radar\task_radar.h">
+      <SubType>compile</SubType>
+      <Link>src\task_radar.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\System\task_monitor.c">
+      <SubType>compile</SubType>
+      <Link>src\task_monitor.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\System\task_monitor.h">
+      <SubType>compile</SubType>
+      <Link>src\task_monitor.h</Link>
+    </Compile>
+    <Compile Include="..\..\src\Tools\xtmemory_xep.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\xtmemory_xep.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\Tools\xtsemaphore_xep.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\xtsemaphore_xep.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\XDriver\x4driver.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\src\x4driver.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\XEPA\module_ui.c">
+      <SubType>compile</SubType>
+      <Link>src\module_ui.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\XEPA\xep_application.c">
+      <SubType>compile</SubType>
+      <Link>src\xep_application.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\XEPA\xep_application_mcp_callbacks.c">
+      <SubType>compile</SubType>
+      <Link>xep_x4m0x_s70\xep_x4m0x_s70\src\xep_application_mcp_callbacks.c</Link>
+    </Compile>
+    <Compile Include="..\..\src\xtcompiler.h">
+      <SubType>compile</SubType>
+      <Link>src\xtcompiler.h</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\xep.make">
+      <SubType>compile</SubType>
+      <Link>xep.make</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

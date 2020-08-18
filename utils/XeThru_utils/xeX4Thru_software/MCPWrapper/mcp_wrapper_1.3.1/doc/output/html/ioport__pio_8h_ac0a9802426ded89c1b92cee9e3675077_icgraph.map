@@ -1,0 +1,3 @@
+<map id="arch_ioport_get_pin_level" name="arch_ioport_get_pin_level">
+<area shape="rect" id="node2" href="$group__ioport__group.xhtml#ga2d23ff7094fbf483c45f7c081ebd389b" title="Get current value of an IOPORT pin, which has been configured as an input. " alt="" coords="188,13,323,39"/>
+</map>

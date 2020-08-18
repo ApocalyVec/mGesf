@@ -1,0 +1,4 @@
+<map id="XDMAC_DisableGIt" name="XDMAC_DisableGIt">
+<area shape="rect" id="node2" href="$qspi__dma_8c.xhtml#a3f74a9c30f8d87121341efbe86f7b992" title="Disables a QSPI Rx channel. " alt="" coords="195,5,405,32"/>
+<area shape="rect" id="node3" href="$group__dmad__functions.xhtml#ga2a7947467c04eb39abee2471d846ee35" title="Enable clock of the xDMA peripheral, Enable the dma peripheral, configure configuration register for ..." alt="" coords="211,56,389,83"/>
+</map>

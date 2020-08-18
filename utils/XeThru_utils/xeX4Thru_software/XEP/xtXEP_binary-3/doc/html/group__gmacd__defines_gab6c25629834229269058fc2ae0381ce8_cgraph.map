@@ -1,0 +1,4 @@
+<map id="GMACD_TxCompleteHandler" name="GMACD_TxCompleteHandler">
+<area shape="rect" id="node2" href="$group__gmac__defines.xhtml#gafba1535fac70522c3101326e020ca1d6" title="Return transmit status. " alt="" coords="263,5,409,32"/>
+<area shape="rect" id="node3" href="$group__gmac__defines.xhtml#ga620df07c4598d12a88be4e3715eafe7e" title="Clear transmit status. " alt="" coords="257,56,415,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="USBH_HAL_ConfigureControlPipe" name="USBH_HAL_ConfigureControlPipe">
+<area shape="rect" id="node2" href="$group___u_s_b_h__group__interne.xhtml#ga5946f5d7c3385b5001db37d9455f5c67" title="Device enumeration step 5 Requests the USB device descriptor. " alt="" coords="292,5,484,32"/>
+<area shape="rect" id="node3" href="$group___u_s_b_h__group__interne.xhtml#ga4216b2f5091c5b72a41b6092029ad8a4" title="Device enumeration step 9 Send a Set address setup request. " alt="" coords="292,56,484,83"/>
+<area shape="rect" id="node4" href="$group___u_s_b_h__group__interne.xhtml#ga4d0656fe000b76d8a76804d09386f840" title="Device enumeration step 11 Updates USB host pipe with the new USB address. " alt="" coords="288,107,488,133"/>
+</map>

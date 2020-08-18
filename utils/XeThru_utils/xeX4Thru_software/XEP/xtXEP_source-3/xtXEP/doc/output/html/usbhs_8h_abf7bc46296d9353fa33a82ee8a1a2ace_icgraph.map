@@ -1,0 +1,4 @@
+<map id="USBHS_GetDmaStatus" name="USBHS_GetDmaStatus">
+<area shape="rect" id="node2" href="$group__usbd__hal.xhtml#ga3050097643684759b64beda54283f1e4" title="DMA Single transfer. " alt="" coords="225,5,372,32"/>
+<area shape="rect" id="node3" href="$group__usbd__hal.xhtml#ga5e6f054068ed99c861c50f2eeeb30216" title="Endpoint DMA interrupt handler. " alt="" coords="420,31,577,57"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="AUDFeatureUnitRequest_GetChannel" name="AUDFeatureUnitRequest_GetChannel">
+<area shape="rect" id="node2" href="$group__usbd__audio__speakerphone.xhtml#gab8e4cd12ef0615be5ff405457db9e104" title="Handle the SET_CUR request. " alt="" coords="243,5,453,32"/>
+<area shape="rect" id="node3" href="$group__usbd__audio__speakerphone.xhtml#ga26ee739e084b33db49fdc25819529f10" title="Handle the GET_CUR request. " alt="" coords="243,56,453,83"/>
+<area shape="rect" id="node4" href="$group__usbd__audio__speakerphone.xhtml#ga489f97d62376e824385055765a31e17b" title="Handle the SET_CUR request. " alt="" coords="289,107,407,133"/>
+<area shape="rect" id="node5" href="$group__usbd__audio__speakerphone.xhtml#gaa2c1c8f41b4dbb0494310c2bd60aafaf" title="Handle the GET_CUR request. " alt="" coords="289,157,407,184"/>
+<area shape="rect" id="node6" href="$group__usbd__audio__speakerphone.xhtml#gafeef7ca7558d9f0aa09069eac3ce5f03" title="Check if the request is accepted. " alt="" coords="229,208,467,235"/>
+</map>
