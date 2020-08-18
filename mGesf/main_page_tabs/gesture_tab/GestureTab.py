@@ -1,4 +1,7 @@
+import os
+import pickle
 import time
+from datetime import datetime
 
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtGui import QPixmap
@@ -201,6 +204,17 @@ class GestureTab(QWidget):
             print('GestureTab: recording STARTED')
         elif signal['cmd'] == 'end':
             self.is_recording = False
+            today = datetime.now()
+            data_path = os.path.join(self.tab_idp.get_record_data_path(),
+                                     today.strftime("%b-%d-%Y-%H-%M-%S") + '_data.mgesf')
+            label_path = os.path.join(self.tab_idp.get_record_data_path(),
+                                     today.strftime("%b-%d-%Y-%H-%M-%S") + '_label.mgesf')
+            try:
+                pickle.dump(self.buffer, open(data_path, 'wb'))
+                pickle.dump(signal['label'], open(label_path, 'wb'))
+            except FileNotFoundError:
+                print('GestureTab: data path does not exist')
+            self.clear_buffer()
             print('GestureTab: recording ENDED, data saved to ' + self.tab_idp.get_record_data_path())
         else:
             raise Exception('GestureTab: record_signal_action: unknown signal')
