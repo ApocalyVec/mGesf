@@ -18,6 +18,20 @@ from utils.transformation import translate, sphere_search, rotateZ, rotateY, rot
 volume_shape = [25, 25, 25]
 
 
+def prepare_x(data_stream, window_size, stride=1):
+    x = []
+    for i in range(0, len(data_stream) - window_size, stride):
+        input_ = data_stream[i:i + window_size]
+        x.append(np.expand_dims(input_, axis=-1))
+    return np.array(x)
+
+
+def moving_average(a, n=3):
+    ret = np.cumsum(a, dtype=float)
+    ret[n:] = ret[n:] - ret[:-n]
+    return ret[n - 1:] / n
+
+
 def plot_confusion_matrix(y_true, y_pred, classes,
                           normalize=False,
                           title=None,
