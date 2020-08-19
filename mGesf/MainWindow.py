@@ -93,7 +93,7 @@ class Tabs(QWidget):
         self.tab2 = RadarTab(self.workers['mmw'], refresh_interval, data_path)
         self.tab3 = LeapTab(self.workers['leap'], refresh_interval, data_path)
         self.tab4 = UWBTab(self.workers['uwb'], refresh_interval, data_path)
-        self.tab5 = XeThruX4Tab()
+        self.tab5 = XeThruX4Tab(self.workers['xe4thru'], refresh_interval, data_path)
         self.tab6 = GestureTab(self.workers['mmw'], self.workers['leap'], self.workers['xe4thru'])  # TODO add other sensors
 
         self.tabs.addTab(self.tab1, config.main_window_control_tab_label)

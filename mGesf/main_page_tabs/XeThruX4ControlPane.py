@@ -178,18 +178,6 @@ class XeThruX4ControlPane(QWidget):
     def baseband_checkbox_function(self):
         print('Baseband checked. Function not implemented...')
 
-    # def start_stop_btn_action(self):
-    #     print('start/stop button clicked. Function not implemented...')
-    #     # start testing
-    #     self.low_freq_checkbox.setDisabled(True)
-    #     self.high_freq_checkbox.setDisabled(True)
-    #
-    #     # check range value
-    #     if self.range_min >= self.range_max:
-    #         print("Range_min >= range_max. Can't start.")
-    #         return
-    #     else:
-    #        print('recording')
 
     def start_stop_btn_action(self):
 
@@ -279,11 +267,10 @@ class XeThruX4ControlPane(QWidget):
         if data_dict['frame'] is not None:
             xsamples = list(range(data_dict['frame'].shape[0]))
             rf_frame = data_dict['frame']
-            baseband = data_dict['baseband_frame']
-            # clutter_free = self.Xe4Thru_worker.xeThruX4Sensor_interface.read_clutter_removal_frame(rf_frame, 0.5)
-
+            baseband_frame = data_dict['baseband_frame']
             clutter_removal_rf_frame = data_dict['clutter_removal_frame']
             clutter_removal_baseband_frame = data_dict['clutter_removal_baseband_frame']
 
-            self.rf_curve.setData(xsamples, clutter_removal_rf_frame)
-            self.baseband_curve.setData(xsamples, clutter_removal_baseband_frame)
+            self.rf_curve.setData(xsamples, rf_frame)
+            self.baseband_curve.setData(xsamples, baseband_frame)
+
