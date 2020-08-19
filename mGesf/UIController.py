@@ -4,7 +4,7 @@ Date: 04/08/2019
 """
 
 import time
-from pynput .mouse import Button, Controller as MouseController
+from pynput.mouse import Button, Controller as MouseController
 
 
 class UIController:

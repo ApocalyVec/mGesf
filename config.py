@@ -9,7 +9,7 @@ test_btn_start_label = "Start testing"
 test_btn_end_label = "End testing"
 count_sample_btn_label = "Count Samples"
 train_btn_label = "Train"
-radar_connection_btn_label = "Connect"
+connection_btn_label = "Connect"
 record_btn_start_label = 'Start Recording'
 record_btn_end_label = 'End Recording'
 
@@ -35,6 +35,15 @@ control_tab_user_port_label = 'User Port (Enhanced): '
 control_tab_data_port_label = 'Data Port (Standard): '
 control_tab_output_path_label = 'Output path:'
 control_tab_config_path_label = 'Config path:'
+
+#uwb control tab
+uwb_anchor_port = 'Anchor port: '
+uwb_tag_port = 'Tag port: '
+uwb_tag_default_port = 'COM30'
+uwb_anchor_default_port = 'COM32'
+
+
+
 
 # gesture tab
 gesture_index_pen_label = "Index Pen"

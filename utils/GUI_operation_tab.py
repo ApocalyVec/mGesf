@@ -9,24 +9,28 @@ from PyQt5.QtWidgets import QLabel, QHBoxLayout, QSlider
 import config
 from mGesf.utils import camel_case_split
 from utils.GUI_main_window import init_container, init_view
-from utils.labeled_Slider import LabeledSlider
+from utils.Sliders import LabeledSlider
 from PyQt5.QtGui import QIcon, QPixmap
 import os
 import pyqtgraph as pg
 from random import randint
 
 
-def init_slider_bar_box(parent, label=None, interval=5):
-    line_container = init_container(parent=parent, vertical=False)
+def init_slider_bar_box(parent, label=None, vertical=False, label_bold=False, min_value=1,max_value=5):
+    line_container = init_container(parent=parent, vertical=vertical)
 
     if label:
         ql = QLabel()
-        ql.setStyleSheet("font: 14px;")
+        if label_bold:
+            ql.setStyleSheet("font: bold 14px;")
+        else:
+            ql.setStyleSheet("font: 14px;")
+
         ql.setText(label)
         line_container.addWidget(ql)
 
     # slider with interval
-    slider_view = LabeledSlider(minimum=1, maximum=interval)
+    slider_view = LabeledSlider(minimum=min_value, maximum=max_value)
     slider_view.setFocusPolicy(Qt.StrongFocus)
 
     line_container.addWidget(slider_view)

@@ -15,21 +15,31 @@ class UWBSensorInterface:
         self.data_buffer = b''
         self.uport = uport
         self.exe_file = None
+        self.connected = False
 
     def connect_virtual_port(self, virtual_port):
         try:
             self.uport = serial.Serial(port=virtual_port, baudrate=self.baud_rate, timeout=0)
+            self.uport.flushOutput()
+            self.connected = True
+
         except:
             print("port is in use or not open")
             return
 
     def generate_frame(self):
-        self.data_buffer += self.uport.read()
+        # bits =
+        # print(len(bits))
+        self.data_buffer += self.uport.readline()
+
         # print(len(self.data_buffer))
-        if len(self.data_buffer) > self.frame_size:
+        if len(self.data_buffer) >= self.frame_size:
             real_imag_pairs = np.reshape(unpack("i" * 130, self.data_buffer[0:self.frame_size]), (-1, 2))
-            print(real_imag_pairs)
-            self.data_buffer = self.data_buffer[self.frame_size:]
+            # print(real_imag_pairs)
+            # self.data_buffer = self.data_buffer[self.frame_size:]
+            self.data_buffer = b''
+            # print(1)
+
             return real_imag_pairs
         else:
             return None

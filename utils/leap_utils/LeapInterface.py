@@ -1,5 +1,6 @@
 import socket
 import time
+import select
 
 from mGesf.exceptions import LeapPortTimeoutError
 
@@ -28,6 +29,7 @@ class LeapInterface:
         # this function should return NONE WITHOUT blocking if a frame is not complete
         # return random.random()
         frame = self._get_frame_from_network_port()
+        print(frame)
         frame = [float(x) for x in frame.split(' ')]
         return frame, None  # TODO add the leap camera image
 
@@ -38,7 +40,6 @@ class LeapInterface:
         self.listensocket.bind(('', self.Port))
         self.listensocket.listen(self.maxConnections)
         print("Server started at " + self.IP + " on port " + str(self.Port))
-
         self.clientsocket = self.listensocket.accept()
 
         # need to get above working properly
@@ -48,8 +49,16 @@ class LeapInterface:
         self.running = True
 
     def _get_frame_from_network_port(self):
+        # if self.running:
+        #     return self.clientsocket[0].recv(1024).decode()  # Gets the incoming message
         if self.running:
-            return self.clientsocket[0].recv(1024).decode()  # Gets the incoming message
+            timeout = 0.001
+            self.clientsocket[0].setblocking(False)
+            ready = select.select([self.clientsocket[0]], [], [], timeout)
+            if ready[0]:
+                return self.clientsocket[0].recv(1024).decode()  # Gets the incoming message
+            else:
+                return '0.0 0.0 0.0 0.0 0.0'
 
     def _send_stop_command(self):
         self.running = False
