@@ -52,6 +52,7 @@ class ControlTab(QWidget):
     """
 
     def __init__(self, mmw_worker: workers.MmwWorker, uwb_worker: workers.UWBWorker, leap_worker: workers.LeapWorker,
+                 Xe4Thru_worker: workers.Xe4ThruWorker,
                  refresh_interval, *args, **kwargs):
         super().__init__()
 
@@ -66,6 +67,10 @@ class ControlTab(QWidget):
         # LeapMotion worker
         self.leap_worker = leap_worker
         self.leap_worker.signal_leap.connect(self.control_process_leap_data)
+
+        # Xe4Thru_worker worker
+        # self.Xe4Thru_worker = Xe4Thru_worker
+        # self.Xe4Thru_worker..connect(self.control_process_xethru_data)
 
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
@@ -122,7 +127,7 @@ class ControlTab(QWidget):
         self.XeThruX4_block.addWidget(self.device_number_box)
         #   - tabs
         tabs = QTabWidget()
-        tabs.addTab(XeThruX4ControlPane(), "UWB Radar 1")
+        tabs.addTab(XeThruX4ControlPane(Xe4Thru_worker), "UWB Radar 1")
         self.XeThruX4_block.addWidget(tabs)
         # TODO add uwb radar runtime view here
         self.XeThruX4_checkbox = init_checkBox(parent=self.XeThruX4_block, function=self.XeThruX4_clickBox)

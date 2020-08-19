@@ -36,19 +36,25 @@ control_tab_data_port_label = 'Data Port (Standard): '
 control_tab_output_path_label = 'Output path:'
 control_tab_config_path_label = 'Config path:'
 
-#uwb control tab
+# uwb control tab
 uwb_anchor_port = 'Anchor port: '
 uwb_tag_port = 'Tag port: '
 uwb_tag_default_port = 'COM30'
 uwb_anchor_default_port = 'COM32'
 
-
-
+# xeThruX4 control
+init_xeThruX4_data_dict = {'frame': None,
+                       'baseband_frame': None,
+                       'clutter_removal_frame': None,
+                       'clutter_removal_baseband_frame': None,
+                       'ir_spectrogram': None}
 
 # gesture tab
 gesture_index_pen_label = "Index Pen"
 gesture_thuMouse_label = "ThuMouse"
 gesture_desktop_fingertip_label = "Desktop at Fingertip"
+init_buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []},
+               'xethrux4': {'timestamps': [], 'ir': [], 'ir_baseband': [], 'ir_cr': [], 'ir_basedband_cr': []}}
 
 # operation tab
 unit_size = WINDOW_WIDTH / 6
@@ -69,7 +75,7 @@ operation_detection_label = "Detection"
 trainingDataPath_label = "Training Data Path"
 operation_model_path_label = "Model Path"
 
-operation_interval_label = "Interval lasts (sec)"
+operation_interval_label = "Interval lasts (sec) [NOT IMPLEMENTED]"
 operation_repeats_label = "Repeats (times)"
 operation_classes_label = "Classes"
 operation_subject_name_label = "Subject Name"

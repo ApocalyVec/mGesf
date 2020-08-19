@@ -4,6 +4,7 @@ import numpy as np
 
 range_bins = 256
 
+
 def simulateData():
     detObj = dict()
 
@@ -29,6 +30,7 @@ def sim_detected_points():
                                     np.random.uniform(low=0.0, high=1.0, size=(num_points,)),
                                     np.random.uniform(low=0.0, high=1.0, size=(num_points,))]))
 
+
 def sim_imp():
     return np.random.uniform(low=0.0, high=1.0, size=(range_bins,))
 
@@ -36,5 +38,10 @@ def sim_imp():
 def sim_uwb():
     return np.reshape(np.random.uniform(low=0.0, high=10000, size=(65 * 2)), newshape=(65, 2))
 
+
 def sim_leap():
     return '1.0 2.0 3.0 4.0 5.0', None
+
+
+def sim_xe4thru(length=100):
+    return np.random.uniform(low=0.0, high=1.0, size=(length,))

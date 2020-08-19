@@ -35,6 +35,7 @@ from utils.std_utils import Stream
 class MainWindow(QMainWindow):
     def __init__(self, mmw_interface: MmWaveSensorInterface, leap_interface,
                  uwb_interface_anchor, uwb_interface_tag,
+                 xeThruX4SensorInterface,
                  refresh_interval, data_path, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         uic.loadUi('mGesf/resource/ui/MainWindow.ui', self)
@@ -47,6 +48,7 @@ class MainWindow(QMainWindow):
         self.main_widget = self.findChild(QWidget, 'mainWidget')
         self.table_widget = Tabs(self.main_widget, mmw_interface, leap_interface,
                                  uwb_interface_anchor, uwb_interface_tag,
+                                 xeThruX4SensorInterface,
                                  refresh_interval, data_path)
         self.setCentralWidget(self.table_widget)
         # create the information black
@@ -59,29 +61,19 @@ class Tabs(QWidget):
 
     def __init__(self, parent, mmw_interface: MmWaveSensorInterface, leap_interface,
                  uwb_interface_anchor, uwb_interface_tag,
+                 xeThruX4Sensor_interface,
                  refresh_interval, data_path, *args, **kwargs):
         super(QWidget, self).__init__(parent)
 
         self.layout = QHBoxLayout(self)
 
         # create threading; create a QThread and start the thread that handles; worker for sensors
-        self.mmw_worker_thread = pg.QtCore.QThread(self)
-        self.mmw_worker_thread.start()
-        self.uwb_worker_thread = pg.QtCore.QThread(self)
-        self.uwb_worker_thread.start()
-        self.leap_worker_thread = pg.QtCore.QThread(self)
-        self.leap_worker_thread.start()
-
-        # worker
-        # mmwave worker
-        self.mmw_worker = workers.MmwWorker(mmw_interface)
-        self.mmw_worker.moveToThread(self.mmw_worker_thread)
-        # uwb worker
-        self.uwb_worker = workers.UWBWorker(uwb_interface_anchor, uwb_interface_tag)
-        self.uwb_worker.moveToThread(self.uwb_worker_thread)
-        # leap worker
-        self.leap_worker = workers.LeapWorker(leap_interface=leap_interface)
-        self.leap_worker.moveToThread(self.leap_worker_thread)
+        self.worker_threads = None
+        self.init_sensor_threads()  # create threads on which the sensor worker resides
+        self.workers = None
+        # create workers to be put on the threads that were just initialized with init_sensor_threads
+        self.init_sensor_workers(mmw_interface, uwb_interface_anchor, uwb_interface_tag,
+                                 leap_interface, xeThruX4Sensor_interface)
 
         # timer
         self.timer = QTimer()
@@ -92,12 +84,17 @@ class Tabs(QWidget):
         # Initialize tab screen
 
         self.tabs = QTabWidget()
-        self.tab1 = ControlTab(self.mmw_worker, self.uwb_worker, self.leap_worker, refresh_interval, data_path)
-        self.tab2 = RadarTab(self.mmw_worker, refresh_interval, data_path)
-        self.tab3 = LeapTab(self.leap_worker, refresh_interval, data_path)
-        self.tab4 = UWBTab(self.uwb_worker, refresh_interval, data_path)
+        self.tab1 = ControlTab(mmw_worker=self.workers['mmw'],
+                               uwb_worker=self.workers['uwb'],
+                               leap_worker=self.workers['leap'],
+                               Xe4Thru_worker=self.workers['xe4thru'],
+                               refresh_interval=refresh_interval)
+
+        self.tab2 = RadarTab(self.workers['mmw'], refresh_interval, data_path)
+        self.tab3 = LeapTab(self.workers['leap'], refresh_interval, data_path)
+        self.tab4 = UWBTab(self.workers['uwb'], refresh_interval, data_path)
         self.tab5 = XeThruX4Tab()
-        self.tab6 = GestureTab(self.mmw_worker)
+        self.tab6 = GestureTab(self.workers['mmw'], self.workers['leap'], self.workers['xe4thru'])  # TODO add other sensors
 
         self.tabs.addTab(self.tab1, config.main_window_control_tab_label)
         self.tabs.addTab(self.tab2, config.main_window_radar_tab_label)
@@ -113,6 +110,28 @@ class Tabs(QWidget):
         self.info_pane = InformationPane(parent=self.layout)
         sys.stdout = Stream(newText=self.on_print)
 
+    def init_sensor_threads(self):
+        self.worker_threads = {
+            'mmw': pg.QtCore.QThread(self),
+            'uwb': pg.QtCore.QThread(self),
+            'leap': pg.QtCore.QThread(self),
+            'xe4thru': pg.QtCore.QThread(self)
+        }
+        [w.start() for w in self.worker_threads.values()]  # start all the worker threads
+
+    def init_sensor_workers(self, mmw_interface, uwb_interface_anchor, uwb_interface_tag,
+                            leap_interface, xeThruX4Sensor_interface):
+        self.workers = {
+            'mmw': workers.MmwWorker(mmw_interface),
+            'uwb': workers.UWBWorker(uwb_interface_anchor, uwb_interface_tag),
+            'leap': workers.LeapWorker(leap_interface=leap_interface),
+            'xe4thru': workers.Xe4ThruWorker(xeThruX4Sensor_interface)
+        }
+        self.workers['mmw'].moveToThread(self.worker_threads['mmw'])
+        self.workers['uwb'].moveToThread(self.worker_threads['uwb'])
+        self.workers['leap'].moveToThread(self.worker_threads['leap'])
+        self.workers['xe4thru'].moveToThread(self.worker_threads['leap'])
+
     def on_print(self, msg):
         self.info_pane.push(msg)
 
@@ -124,6 +143,4 @@ class Tabs(QWidget):
         """
         ticks every 'refresh' milliseconds
         """
-        self.mmw_worker.tick_signal.emit()  # signals the worker to run process_on_tick
-        self.uwb_worker.tick_signal.emit()  # signals the worker to run process_on_tick for the UWB sensor
-        self.leap_worker.tick_signal.emit()
+        [w.tick_signal.emit() for w in self.workers.values()]

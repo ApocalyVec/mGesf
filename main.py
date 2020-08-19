@@ -41,54 +41,45 @@ if __name__ == '__main__':
     # userPortName = 'COM9'  # set this to your enhanced port (user)
 
     '''
-    # ports for ISK
+    Uncomment these lines if you have IWR6843 AoP
+    ports for ISK
     dataPortName = 'COM9'  # set this to your data port
     userPortName = 'COM8'  # set this to your user port
+    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     '''
-
-    '''
-    Start of the application script (do not change this part unless you know what you're doing)
-    '''
-    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
-    _leap_interface = LeapInterface()
     _mmw_interface = None
 
-
     '''
-    UWB demo interface
+    Uncomment these lines if you have DecaWave UWB device
+    ports for ISK
+    _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
+    _uwb_interface_tag = UWBSensorInterface('Tag', 520)
     '''
-    # _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
-    # _uwb_interface_tag = UWBSensorInterface('Tag', 520)
-
     _uwb_interface_anchor = None
     _uwb_interface_tag = None
 
-    _uwb_interface_anchor = UWBSensorInterface('Anchor', 520)
-    _uwb_interface_tag = UWBSensorInterface('Tag', 520)
-    # try:
-    #     _uwb_interface_anchor = UWBSensorInterface('Anchor',520)
-    #     _uwb_interface_tag = UWBSensorInterface('Tag', 520)
-    #
-    # except:
-    #     _uwb_interface_anchor = None
-    #     _uwb_interface_tag = None
+    _leap_interface = LeapInterface()
 
-    # _uwb_interface_anchor.connect_virtual_port('COM32')
-    # _uwb_interface_tag.connect_virtual_port('COM30')
-
-
-
-    #TODO _uwb_interface = DecaUWBInterface(framerate=, exe_path=, uport=)
-    # _uwb_interface_anchor = None
-    #_uwb_interface_tag = None
-
-    # setup system constants
-    # refresh_interval every x ms, use 33 when in simulation mode, use 1 when connected to sensors
+    '''
+    Uncomment these lines if you have xeThruX4 hardware
+    from utils.XeThru_utils.xeThruX4_interface import xeThruX4SensorInterface
+    _xeThruX4SensorInterface = xeThruX4SensorInterface()
+    '''
+    _xeThruX4SensorInterface = None
+    '''
+    Start of the application script (do not change this part unless you know what you're doing)
+    '''
+    # TODO _uwb_interface = DecaUWBInterface(framerate=, exe_path=, uport=)
+    '''
+    setup system constants
+    refresh_interval every x ms, use 33 when in simulation mode, use 1 when connected to sensors
+    '''
     refresh = 1
 
     app = QApplication(sys.argv)
     window = MainWindow(mmw_interface=_mmw_interface, leap_interface=_leap_interface,
                         uwb_interface_anchor=_uwb_interface_anchor, uwb_interface_tag=_uwb_interface_tag,
+                        xeThruX4SensorInterface=_xeThruX4SensorInterface,
                         refresh_interval=refresh, data_path=data_path)
     app.exec_()
     print('Resuming Console Interaction.')

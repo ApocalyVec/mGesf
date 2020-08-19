@@ -6,7 +6,7 @@ from mGesf.main_page_tabs.gesture_tab.thuMouse.thm_detection import Detection
 import config
 
 
-class ThuMouth(QWidget):
+class ThuMouse(QWidget):
     def __init__(self):
         super().__init__()
         self.main_page = QHBoxLayout(self)

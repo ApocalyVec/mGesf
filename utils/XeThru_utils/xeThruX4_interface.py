@@ -1,13 +1,17 @@
 import serial
 import time
 import numpy as np
+from collections import deque
+
 import pymoduleconnector
 import matplotlib.pyplot as plt
-try:
-    from pymoduleconnector.moduleconnectorwrapper import *
-except ImportError:
-    print('...')
 
+from sys import platform
+
+from utils.XeThru_utils.xeThruX4_algorithm import *
+
+if platform == "win32":  # only enable module connector is on windows system, with which the radar is only compatible
+    from pymoduleconnector.moduleconnectorwrapper import *
 
 class xeThruX4SensorInterface:
 
@@ -24,9 +28,14 @@ class xeThruX4SensorInterface:
         # sampling rate
         self.fs = 23.328e9
         # data buffer
-        self.frame_history = []
-        self.clutter_removal_frame_history = []
+        self.frame_history = deque(maxlen=200)
+        self.baseband_history = deque(maxlen=200)
+        self.clutter_removal_frame_history = deque(maxlen=200)
+        self.clutter_removal_baseband_history = deque(maxlen=200)
+
         self.clutter = None
+
+        self.connected = False
 
     def reset(self, device_name):
         try:
@@ -37,18 +46,14 @@ class xeThruX4SensorInterface:
             mc.close()
             time.sleep(3)
 
-            self.frame_history.clear()
             self.clutter = None
-
         except:
             print("Cannot find x4 device, please check connection or reconnect your device")
             raise
 
     def config_x4_sensor(self, device_name, min_range=-0.1, max_range=0.4, center_frequency=3, FPS=10, baseband=False):
-        try:
-            self.reset(device_name)
-        except:
-            return
+
+        self.reset_buffer()
 
         self.mc = pymoduleconnector.ModuleConnector(device_name)
 
@@ -77,12 +82,14 @@ class xeThruX4SensorInterface:
             self.xep.x4driver_set_dac_max(1200)
             # Set integration
             self.xep.x4driver_set_iterations(64)
-            self.xep.x4driver_set_pulses_per_step(20)
+            self.xep.x4driver_set_pulses_per_step(25)
             # baseband?
             self.xep.x4driver_set_downconversion(int(baseband))
             # Start streaming of data
             self.xep.x4driver_set_frame_area(min_range, max_range)
             self.xep.x4driver_set_fps(FPS)
+
+            self.connected = True
         except:
             print("error while config")
             return
@@ -94,21 +101,19 @@ class xeThruX4SensorInterface:
         self.max_range = max_range
         # boolean
         self.baseband = baseband
-
-
-
+        # self.display_xep_sys_info()
 
     def stop_sensor(self):
         if self.xep is not None:
             try:
-                self.reset(self.device_name)
+                self.xep.module_reset()
+                self.connected = False
             except:
                 print("please check the connection")
+                self.connected = False
         else:
             print("no connection history, please check usb")
-
-
-
+            self.connected = False
 
     def display_xep_sys_info(self):
         if self.xep is not None:
@@ -131,24 +136,39 @@ class xeThruX4SensorInterface:
     def read_frame(self):
         if self.xep.peek_message_data_float():
             d = self.xep.read_message_data_float()
+
+            #read rf; baseband; clutter free rf; clutter free baseband
             frame = np.array(d.data)
-            if self.baseband:
-                n = len(frame)
-                frame = frame[:n // 2] + 1j * frame[n // 2:]
+            baseband_frame = xep_rf_frame_downconversion(frame, self.center_frequency)
+            clutter_removal_frame = self.read_clutter_removal_frame(frame, 0.85)
+            clutter_removal_baseband_frame = xep_rf_frame_downconversion(clutter_removal_frame, self.center_frequency)
+
+            # if self.baseband:
+            #     n = len(frame)
+            #     frame = frame[:n // 2] + 1j * frame[n // 2:]
 
             self.frame_history.append(frame)
+            self.baseband_history.append(baseband_frame)
+            self.clutter_removal_frame_history.append(clutter_removal_frame)
+            self.clutter_removal_baseband_history.append(clutter_removal_baseband_frame)
 
-            return frame
-
+            return frame, baseband_frame, clutter_removal_frame, clutter_removal_baseband_frame
         else:
-            return None
+            return None, None, None, None
 
     def read_clutter_removal_frame(self, rf_frame, signal_clutter_ratio):
         if self.clutter is None:
             self.clutter = rf_frame
-            return rf_frame-self.clutter
+            return rf_frame - self.clutter
         else:
-            self.clutter = signal_clutter_ratio * self.clutter + (1-signal_clutter_ratio)*rf_frame
+            self.clutter = signal_clutter_ratio * self.clutter + (1 - signal_clutter_ratio) * rf_frame
             clutter_removal_rf_frame = rf_frame - self.clutter
             self.clutter_removal_frame_history.append(clutter_removal_rf_frame)
             return clutter_removal_rf_frame
+
+    def reset_buffer(self):
+        self.frame_history.clear()
+        self.baseband_history.clear()
+        self.clutter_removal_frame_history.clear()
+        self.clutter_removal_baseband_history.clear()
+        self.clutter = None

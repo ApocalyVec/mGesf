@@ -35,10 +35,19 @@ setuptools.setup(
 
 import os
 
-os.chdir('utils/XeThru_utils/pymoduleconnector')
-import subprocess
+from sys import platform
+if platform == "linux" or platform == "linux2":
+    # linux
+    os.chdir('utils/XeThru_utils/xeX4Thru_software/ModuleConnector/ModuleConnector-unix-1/python35-x86_64-linux-gnu')
+elif platform == "darwin":
+    # OS X  # TODO this is throwing segfault on OS X
+    os.chdir('utils/XeThru_utils/xeX4Thru_software/ModuleConnector/ModuleConnector-osx-1/python37-x86_64-apple-darwin')
+elif platform == "win32":
+    # Windows...
+    os.chdir('utils/XeThru_utils/xeX4Thru_software/ModuleConnector/ModuleConnector-win32_win64-1/python36-win64')
 
-subprocess.call(['python', 'utils/XeThru_utils/pymoduleconnector/setup.py', 'install'])
+import subprocess
+subprocess.call(['python', 'setup.py', 'install'])
 
 # from setuptools import sandbox
 # sandbox.run_setup('/Users/Leo/PycharmProjects/mGesf/utils/XeThru_utils/pymoduleconnector/setup.py', ['clean', 'bdist_wheel'])
