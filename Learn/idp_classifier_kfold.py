@@ -1,15 +1,6 @@
-from keras import Sequential, Model
 
 import datetime
 import pickle
-
-from keras import Sequential, optimizers
-from keras.callbacks import EarlyStopping, ModelCheckpoint
-from keras.layers import Conv3D, MaxPooling2D, Flatten, TimeDistributed, LSTM, Dropout, Dense, BatchNormalization, \
-    LeakyReLU, Conv2D, Reshape, concatenate
-import tensorflow as tf
-from keras.regularizers import l2
-from keras.engine.saving import load_model
 
 import numpy as np
 import os
@@ -19,6 +10,13 @@ import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
+from tensorflow.python.keras import Sequential, Model
+from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.python.keras.layers import TimeDistributed, Conv2D, BatchNormalization, MaxPooling2D, Flatten, \
+    concatenate, LSTM, Dropout, Dense
+from tensorflow.python.keras.models import load_model
+import tensorflow as tf
+
 from Learn.data_in import idp_preprocess, resolve_points_per_sample
 from config import rd_shape, ra_shape
 from utils.data_utils import plot_confusion_matrix
@@ -62,13 +60,13 @@ from sklearn.model_selection import KFold
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-PQRST-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-UVWXY-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-ZSpcBspcEnt-rpt10']
-idp_data_dir = ['data/idp-ABCDE-rpt10',
-                'data/idp-ABCDE-rpt2',
-                'data/idp-FGHIJ-rpt10',
-                'data/idp-KLMNO-rpt10',
-                'data/idp-PQRST-rpt10',
-                'data/idp-UVWXY-rpt10',
-                'data/idp-ZSpcBspcEnt-rpt10']
+idp_data_dir = ['../data/idp-ABCDE-rpt10',
+                '../data/idp-ABCDE-rpt2',
+                '../data/idp-FGHIJ-rpt10',
+                '../data/idp-KLMNO-rpt10',
+                '../data/idp-PQRST-rpt10',
+                '../data/idp-UVWXY-rpt10',
+                '../data/idp-ZSpcBspcEnt-rpt10']
 num_repeats = [10, 2, 10, 10, 10, 10, 10]
 sample_classes = [['A', 'B', 'C', 'D', 'E'],
                   ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice
@@ -203,7 +201,7 @@ for train, test in kfold.split(X_mmw_rD, Y):
     print(f'Training for fold {fold_no} ...')
     history = model.fit(([x_rD_train, x_rA_train]), y_train,
                         validation_data=([x_rD_test, x_rA_test], y_test),
-                        epochs=50000,
+                        epochs=1500,
                         batch_size=32, callbacks=[es, mc], verbose=1, )
     # Generate generalization metrics
     scores = model.evaluate([x_rD_train, x_rD_train], y_train[test], verbose=0)
