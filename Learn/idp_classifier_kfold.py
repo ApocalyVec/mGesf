@@ -1,15 +1,6 @@
-from keras import Sequential, Model
 
 import datetime
 import pickle
-
-from keras import Sequential, optimizers
-from keras.callbacks import EarlyStopping, ModelCheckpoint
-from keras.layers import Conv3D, MaxPooling2D, Flatten, TimeDistributed, LSTM, Dropout, Dense, BatchNormalization, \
-    LeakyReLU, Conv2D, Reshape, concatenate
-
-from keras.regularizers import l2
-from keras.engine.saving import load_model
 
 import numpy as np
 import os
@@ -19,6 +10,12 @@ import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
+from tensorflow.python.keras import Sequential, Model, optimizers
+from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.python.keras.layers import TimeDistributed, Conv2D, BatchNormalization, MaxPooling2D, Flatten, \
+    concatenate, LSTM, Dropout, Dense
+from tensorflow.python.keras.models import load_model
+
 from Learn.data_in import idp_preprocess, resolve_points_per_sample
 from config import rd_shape, ra_shape
 from utils.data_utils import plot_confusion_matrix
@@ -61,13 +58,13 @@ from utils.data_utils import plot_confusion_matrix
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-PQRST-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-UVWXY-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-ZSpcBspcEnt-rpt10']
-idp_data_dir = ['data/idp-ABCDE-rpt10',
-                'data/idp-ABCDE-rpt2',
-                'data/idp-FGHIJ-rpt10',
-                'data/idp-KLMNO-rpt10',
-                'data/idp-PQRST-rpt10',
-                'data/idp-UVWXY-rpt10',
-                'data/idp-ZSpcBspcEnt-rpt10']
+idp_data_dir = ['../data/idp-ABCDE-rpt10',
+                '../data/idp-ABCDE-rpt2',
+                '../data/idp-FGHIJ-rpt10',
+                '../data/idp-KLMNO-rpt10',
+                '../data/idp-PQRST-rpt10',
+                '../data/idp-UVWXY-rpt10',
+                '../data/idp-ZSpcBspcEnt-rpt10']
 num_repeats = [10, 2, 10, 10, 10, 10, 10]
 sample_classes = [['A', 'B', 'C', 'D', 'E'],
                   ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice
