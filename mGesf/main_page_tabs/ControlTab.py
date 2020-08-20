@@ -337,7 +337,7 @@ class ControlTab(QWidget):
                     self.record_btn.setText("Start Recording")
 
                     today = datetime.now()
-                    pickle.dump(self.buffer, open(os.path.join(config.data_path_default,
+                    pickle.dump(self.buffer, open(os.path.join(data_path,
                                                                today.strftime("%b-%d-%Y-%H-%M-%S") + '.mgesf'), 'wb'))
                     print('Data save to ' + config.data_path_default)
                     self.reset_buffer()
@@ -411,6 +411,7 @@ class ControlTab(QWidget):
             self.is_valid_config_path = True
             print(config.config_set_message + "\nCurrent path: " + config_path)
             self.mmw_worker.send_config(config_path=config_path)
+            self.start_sensor_ui_update()
         else:
             self.is_valid_config_path = False
             print(config.config_invalid_message + "\nCurrent path: " + config_path)
@@ -422,9 +423,12 @@ class ControlTab(QWidget):
             self.mmw_worker.stop_mmw()
             print(config.control_tab_stop_sensor_message)
         else:
-            self.sensor_start_stop_btn.setText('Stop Sensor')
+            self.start_sensor_ui_update()
             self.mmw_worker.start_mmw()
-            print(config.control_tab_start_sensor_message)
+
+    def start_sensor_ui_update(self):
+        self.sensor_start_stop_btn.setText('Stop Sensor')
+        print(config.control_tab_start_sensor_message)
 
     def control_process_mmw_data(self, data_dict):
         """

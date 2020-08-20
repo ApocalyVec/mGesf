@@ -246,7 +246,9 @@ class IdpRecording(QWidget):
         init_preparation_block(parent=self.ist_text_block, text=self.char_set)
 
     def finish_recording(self):
-        self.record_signal.emit({'cmd': 'end', 'label': self.char_set})
+        self.record_signal.emit({'cmd': 'end',
+                                 'label': self.char_set,
+                                 'subject_name': self.subject_names_textbox.text()})
 
     def working_to_idle(self):
         self.reset_instruction()
