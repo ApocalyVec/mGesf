@@ -119,35 +119,77 @@ encoder = OneHotEncoder(categories='auto')
 Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
 
 model_name = 'idp_29_2020-05-04_03-24-10.425555'
-idp_model = load_model('../models/idp/' + model_name + '.h5')
+idp_model = load_model('models/idp/' + model_name + '.h5')
 
 # make a contiuous temporal sequence A, B, C, D, E
 # TODO have this followed by a void character
-key_indices = [0, 160, 320, 480, 640]  # A, B, C, D, E
+# key_indices = [0, 160, 320, 480, 640]  # A, B, C, D, E
+
+sequence = np.reshape(np.array(['H', 'E', 'L', 'L', 'O', 'Spc', 'W', 'O', 'R', 'L', 'D', 'Ent']), newshape=(-1, 1))
+valid_indices = np.argmax(encoder.transform(sequence).toarray(), axis=1)
+index_class_dict = dict([(index, clss[0]) for index, clss in zip(valid_indices, sequence)])
+
+H_index = np.where(np.all(Y == encoder.transform([['H']]).toarray(), axis=1))[0][0]
+E_index = np.where(np.all(Y == encoder.transform([['E']]).toarray(), axis=1))[0][0]
+L_index = np.where(np.all(Y == encoder.transform([['L']]).toarray(), axis=1))[0][0]
+O_index = np.where(np.all(Y == encoder.transform([['O']]).toarray(), axis=1))[0][0]
+Spc_index = np.where(np.all(Y == encoder.transform([['Spc']]).toarray(), axis=1))[0][0]
+W_index = np.where(np.all(Y == encoder.transform([['W']]).toarray(), axis=1))[0][0]
+R_index = np.where(np.all(Y == encoder.transform([['R']]).toarray(), axis=1))[0][0]
+D_index = np.where(np.all(Y == encoder.transform([['D']]).toarray(), axis=1))[0][0]
+Ent_index = np.where(np.all(Y == encoder.transform([['Ent']]).toarray(), axis=1))[0][0]
+
+key_indices = np.array([H_index, H_index + 1, E_index, L_index, L_index + 1, O_index,
+                        Spc_index, W_index + 1, O_index + 1, R_index, L_index + 2, D_index, Ent_index, Ent_index + 1])  # H, E, L, L, O, spc, W, O, R, L, D
+ys = np.array([Y[ki] for ki in key_indices])
+print('Working with sequence: ' + str(encoder.inverse_transform(ys)))
+
 rA_seq = np.array([X_mmw_rA[i] for i in key_indices])
-rA_seq = np.reshape(rA_seq,  newshape=[-1] + list(rA_seq.shape[2:]))  # flatten the sample dimension to create temporal sequence
+rA_seq = np.reshape(rA_seq,
+                    newshape=[-1] + list(rA_seq.shape[2:]))  # flatten the sample dimension to create temporal sequence
 rD_seq = np.array([X_mmw_rD[i] for i in key_indices])
-rD_seq = np.reshape(rD_seq,  newshape=[-1] + list(rD_seq.shape[2:]))  # flatten the sample dimension to create temporal sequence
+rD_seq = np.reshape(rD_seq,
+                    newshape=[-1] + list(rD_seq.shape[2:]))  # flatten the sample dimension to create temporal sequence
 
 # sample from the temporal sequence
 rA_samples = prepare_x(rA_seq, window_size=121, stride=1)
 rD_samples = prepare_x(rD_seq, window_size=121, stride=1)
 
 y_pred = idp_model.predict([rD_samples, rA_samples], batch_size=32)
+y_pred = y_pred[60:len(y_pred) - 60]
 
+# plottings
 matplotlib.rcParams.update({'font.size': 14})
-plt.figure(figsize=(20,6))
-for i, col in enumerate(np.transpose(y_pred)[:5]):
-    plt.plot(moving_average(col, n=16), label='Predicted gesture: ' + classes[i], linewidth=3)
+plt.figure(figsize=(20, 6))
+is_plotted_others = False
 
-for i, col in enumerate(np.transpose(y_pred)[5:]):
-    plt.plot(moving_average(col, n=16), c='gray', label='Other than A, B, C, D, E') if i == 0 else plt.plot(col, c='gray')
+for i, col in enumerate(np.transpose(y_pred)):
+    if i in valid_indices:
+        plt.plot(moving_average(col, n=16), label='Predicted gesture: ' + index_class_dict[i], linewidth=3)
+    else:
+        plt.plot(moving_average(col, n=16), c='gray', label='Gestures for other chars') if not is_plotted_others else plt.plot(col,                                                                                                        c='gray')
+        is_plotted_others = True
 
-for i in range(1, 5):
-    plt.axvline(x=121 * i - 121/2, c='0.3', linewidth=5)
+# plot char separation lines
+# for i in range(1, len(key_indices) - 2):
+#     plt.axvline(x=121 * i, c='0.3', linewidth=5)
 
-plt.legend(loc=4)
-plt.xlabel('Frames')
+debouncer_frame_threshold = 60
+debouncer_prob_threshold = 0.9
+debouncer = [0] * len(classes)
+for i, frame_pred in enumerate(y_pred):
+    break_indices = np.argwhere(frame_pred > debouncer_prob_threshold)
+    for bi in break_indices:
+        bi = bi[0]
+        debouncer[bi] = debouncer[bi] + 1
+        if debouncer[bi] > debouncer_frame_threshold:
+            plt.plot([i], [0.9], 'bo')
+            plt.text(i, 0.95, index_class_dict[bi] + 'Detected ', fontsize=12, c='blue')
+            debouncer = [0] * len(classes)
+
+# plt.legend(loc=4)
+plt.xlabel('Frames (30 frames per second)')
 plt.ylabel('Probability of class prediction')
 plt.title('Temporal Probability cross a Continuous Seuqnce of "A, B, C, D, E"')
+plt.title('Temporal Probability cross a Continuous Seuqnce of "H, E, L, L, O, Space, W, O, R, L, D, Enter", with Debouncer Detection')
 plt.show()
