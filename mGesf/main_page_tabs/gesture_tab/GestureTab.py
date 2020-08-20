@@ -216,11 +216,12 @@ class GestureTab(QWidget):
                                       '_label.mgesf')
             try:
                 pickle.dump(self.buffer, open(data_path, 'wb'))
+                pickle.dump(self.buffer, open(data_path, 'wb'))
                 pickle.dump(signal['label'], open(label_path, 'wb'))
+                print('GestureTab: recording ENDED, data saved to ' + self.tab_idp.get_record_data_path())
             except FileNotFoundError:
-                print('GestureTab: data path does not exist')
+                print('GestureTab: data path does not exist')  # TODO check path exist before recording starts
             self.clear_buffer()
-            print('GestureTab: recording ENDED, data saved to ' + self.tab_idp.get_record_data_path())
         else:
             raise Exception('GestureTab: record_signal_action: unknown signal')
 
