@@ -443,7 +443,6 @@ class ControlTab(QWidget):
         self.doppler_display.setPixmap(doppler_qpixmap)
 
         # save the data is record is enabled
-        # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
         if 'radar' in self.is_recording:
             ts = time.time()
             try:
@@ -522,4 +521,4 @@ class ControlTab(QWidget):
             print(config.UWB_box_unchecked)
 
     def reset_buffer(self):
-        self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
+        self.buffer = config.init_buffer
