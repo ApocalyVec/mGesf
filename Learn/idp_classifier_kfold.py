@@ -10,11 +10,12 @@ import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-from tensorflow.python.keras import Sequential, Model, optimizers
+from tensorflow.python.keras import Sequential, Model
 from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.python.keras.layers import TimeDistributed, Conv2D, BatchNormalization, MaxPooling2D, Flatten, \
     concatenate, LSTM, Dropout, Dense
 from tensorflow.python.keras.models import load_model
+import tensorflow as tf
 
 from Learn.data_in import idp_preprocess, resolve_points_per_sample
 from config import rd_shape, ra_shape
@@ -148,7 +149,7 @@ def make_model():
     regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
 
     model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
-    adam = optimizers.Adam(lr=1e-4, decay=1e-7)
+    adam = tf.keras.optimizers.Adam(lr=1e-4, decay=1e-7)
     model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
@@ -200,7 +201,7 @@ for train, test in kfold.split(X_mmw_rD, Y):
     print(f'Training for fold {fold_no} ...')
     history = model.fit(([x_rD_train, x_rA_train]), y_train,
                         validation_data=([x_rD_test, x_rA_test], y_test),
-                        epochs=50000,
+                        epochs=1500,
                         batch_size=32, callbacks=[es, mc], verbose=1, )
     # Generate generalization metrics
     scores = model.evaluate([x_rD_train, x_rD_train], y_train[test], verbose=0)
