@@ -19,6 +19,7 @@ from tensorflow.python.keras.models import load_model
 from Learn.data_in import idp_preprocess, resolve_points_per_sample
 from config import rd_shape, ra_shape
 from utils.data_utils import plot_confusion_matrix
+from sklearn.model_selection import KFold
 
 ########################################################################################################################
 # idp_data_dir = ['../data/idp-ABCDE-rpt10', '../data/idp-ABCDE-rpt2']
@@ -99,56 +100,57 @@ The flattened output from the two branch meets and are concatenated together the
 the network is concluded by FC layers. 
 '''
 
-# creates the Time Distributed CNN for range Doppler heatmap ##########################
-mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
-mmw_rdpl_TDCNN = Sequential()
-mmw_rdpl_TDCNN.add(
-    TimeDistributed(
-        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-               # kernel_regularizer=l2(0.0005),
-               kernel_initializer='random_uniform'),
-        input_shape=mmw_rdpl_input))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_rdpl_TDCNN.add(TimeDistributed(
-    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
+def make_model():
+    # creates the Time Distributed CNN for range Doppler heatmap ##########################
+    mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
+    mmw_rdpl_TDCNN = Sequential()
+    mmw_rdpl_TDCNN.add(
+        TimeDistributed(
+            Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
+                   # kernel_regularizer=l2(0.0005),
+                   kernel_initializer='random_uniform'),
+            input_shape=mmw_rdpl_input))
+    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+    mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+    mmw_rdpl_TDCNN.add(TimeDistributed(
+        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+    mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
+    mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+    mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
 
-# creates the Time Distributed CNN for range Azimuth heatmap ###########################
-mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
-mmw_razi_TDCNN = Sequential()
-mmw_razi_TDCNN.add(
-    TimeDistributed(
-        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-               # kernel_regularizer=l2(0.0005),
-               kernel_initializer='random_uniform'),
-        input_shape=mmw_razi_input))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_razi_TDCNN.add(TimeDistributed(
-    Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-# mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
+    # creates the Time Distributed CNN for range Azimuth heatmap ###########################
+    mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
+    mmw_razi_TDCNN = Sequential()
+    mmw_razi_TDCNN.add(
+        TimeDistributed(
+            Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
+                   # kernel_regularizer=l2(0.0005),
+                   kernel_initializer='random_uniform'),
+            input_shape=mmw_razi_input))
+    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+    mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+    mmw_razi_TDCNN.add(TimeDistributed(
+        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
+    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
+    mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
+    mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
+    mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
 
-merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
-regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
-regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
-regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+    merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
+    regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
+    regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+    regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
+    regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
 
-regressive_tensor = Dense(units=128)(regressive_tensor)
-regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
+    regressive_tensor = Dense(units=128)(regressive_tensor)
+    regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
+    regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
 
-model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
-adam = optimizers.adam(lr=1e-4, decay=1e-7)
-
-model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
+    model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
+    adam = optimizers.Adam(lr=1e-4, decay=1e-7)
+    model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
+    return model
 
 # create input features
 Y = []
@@ -170,11 +172,6 @@ Y = np.asarray(Y)
 encoder = OneHotEncoder(categories='auto')
 Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
 
-X_mmw_rD_train, X_mmw_rD_test, Y_train, Y_test = train_test_split(X_mmw_rD, Y, test_size=0.20, random_state=3,
-                                                                  shuffle=True)
-X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, test_size=0.20, random_state=3,
-                                                                  shuffle=True)
-
 # add early stopping
 es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
 mc = ModelCheckpoint(
@@ -182,95 +179,50 @@ mc = ModelCheckpoint(
                                                                           '_') + '.h5',
     monitor='val_acc', mode='max', verbose=1, save_best_only=True)
 
+# Define per-fold score containers
+acc_per_fold = []
+loss_per_fold = []
+num_folds = 10
 
-# TODO keyfold cross validation
-history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
-                    validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
-                    epochs=50000,
-                    batch_size=32, callbacks=[es, mc], verbose=1, )
+kfold = KFold(n_splits=num_folds, shuffle=True)
+fold_no = 1
+for train, test in kfold.split(X_mmw_rD, Y):
+    model = make_model()
+    x_rD_train = X_mmw_rD[train]
+    x_rA_train = X_mmw_rA[train]
+    y_train = Y[train]
+
+    x_rD_test = X_mmw_rD[test]
+    x_rA_test = X_mmw_rA[test]
+    y_test = Y[test]
+
+    print('------------------------------------------------------------------------')
+    print(f'Training for fold {fold_no} ...')
+    history = model.fit(([x_rD_train, x_rA_train]), y_train,
+                        validation_data=([x_rD_test, x_rA_test], y_test),
+                        epochs=50000,
+                        batch_size=32, callbacks=[es, mc], verbose=1, )
+    # Generate generalization metrics
+    scores = model.evaluate([x_rD_train, x_rD_train], y_train[test], verbose=0)
+    print(
+        f'Score for fold {fold_no}: {model.metrics_names[0]} of {scores[0]}; {model.metrics_names[1]} of {scores[1] * 100}%')
+    acc_per_fold.append(scores[1] * 100)
+    loss_per_fold.append(scores[0])
+
+    # Increase fold number
+    fold_no = fold_no + 1
+
+# == Provide average scores ==
+print('------------------------------------------------------------------------')
+print('Score per fold')
+for i in range(0, len(acc_per_fold)):
+  print('------------------------------------------------------------------------')
+  print(f'> Fold {i+1} - Loss: {loss_per_fold[i]} - Accuracy: {acc_per_fold[i]}%')
+print('------------------------------------------------------------------------')
+print('Average scores for all folds:')
+print(f'> Accuracy: {np.mean(acc_per_fold)} (+- {np.std(acc_per_fold)})')
+print(f'> Loss: {np.mean(loss_per_fold)}')
+print('------------------------------------------------------------------------')
 
 
-'''
 
-'''
-plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
-
-# summarize history for loss
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('model loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
-
-# load the best model
-model_name = 'idp_29_2020-05-04_03-24-10.425555'
-idp_model = load_model('../models/idp/' + model_name + '.h5')
-# save the history
-# pickle.dump(history, open('../models/idp/' + model_name + '.hist', 'wb'))
-# plot the confusion matrix
-y_pred = idp_model.predict([X_mmw_rD_test, X_mmw_rA_test], batch_size=32)
-
-plot_confusion_matrix(Y_test.argmax(axis=1), y_pred.argmax(axis=1), classes=np.array(classes),
-                      normalize=True, title='IndexPen Confusion Matrix')
-plt.show()
-
-# make temporal probability evolution graph
-matching_label_prob_dict = {}
-temporal_prep_dict = {}
-
-for j, pack in enumerate(zip(X_mmw_rD_test, X_mmw_rA_test, encoder.inverse_transform(Y_test), Y_test)):
-    rD_sample, rA_sample, true_label, encoded_label = pack
-    temporal_samples_rD = []
-    temporal_samples_rA = []
-    # create sliced samples
-    print('Working on ' + str(j) + 'th sample')
-    for i in range(len(rD_sample)):
-        # create padding
-        rD_padding = X_mmw_rD_test[j-1][:points_per_sample - i]
-        rA_padding = X_mmw_rA_test[j-1][:points_per_sample - i]
-
-        rD_sample_padded = np.concatenate([rD_padding, rD_sample[:i]])
-        rA_sample_padded = np.concatenate([rA_padding, rA_sample[:i]])
-        # rD_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rD_sample.shape[1:]), rD_sample[:i]])
-        # rA_sample_padded = np.concatenate([np.zeros((points_per_sample - i, ) + rA_sample.shape[1:]), rA_sample[:i]])
-        temporal_samples_rD.append(rD_sample_padded)
-        temporal_samples_rA.append(rA_sample_padded)
-
-    temporal_samples_rD = np.array(temporal_samples_rD)
-    temporal_samples_rA = np.array(temporal_samples_rA)
-    temporal_pred = idp_model.predict([temporal_samples_rD, temporal_samples_rA], batch_size=121)
-
-    # get the correct label column
-    l_col = np.argmax(encoded_label)
-    matching_label_prob = temporal_pred[:, l_col]
-
-    if true_label[0] not in matching_label_prob_dict.keys():
-        matching_label_prob_dict[true_label[0]] = np.expand_dims(matching_label_prob, axis=0)
-        temporal_prep_dict[true_label[0]] = np.expand_dims(temporal_pred, axis=0)
-    else:
-        matching_label_prob_dict[true_label[0]] = np.concatenate([np.expand_dims(matching_label_prob, axis=0), matching_label_prob_dict[true_label[0]]], axis=0)
-        temporal_prep_dict[true_label[0]] = np.concatenate([np.expand_dims(temporal_pred, axis=0), temporal_prep_dict[true_label[0]]], axis=0)
-
-# plot the temporal evolution of each class
-font = {'family': 'DejaVu Sans',
-        'weight': 'bold',
-        'size': 14}
-matplotlib.rc('font', **font)
-for i, c in enumerate(classes):
-    matching_label_prob_temporal = np.array([v for k, v in matching_label_prob_dict.items() if k == c])[0]
-    matching_label_prob_temporal = np.mean(matching_label_prob_temporal, axis=0)
-    plt.plot(np.linspace(0, 4, 121), matching_label_prob_temporal,  label=c)
-    plt.xlabel('Time since gesture onset (sec)')
-    plt.ylabel('P')
-    plt.legend()
-    plt.ylim((0.0, 1.0))
-    if not i % 5:  # plot the figure for every 5 classes
-        plt.show()
