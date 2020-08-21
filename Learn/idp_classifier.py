@@ -186,7 +186,6 @@ mc = ModelCheckpoint(
     monitor='val_acc', mode='max', verbose=1, save_best_only=True)
 
 
-# TODO keyfold cross validation
 history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
                     validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
                     epochs=50000,
@@ -196,8 +195,8 @@ history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
 '''
 
 '''
-plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
