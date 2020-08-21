@@ -31,7 +31,8 @@ class GestureTab(QWidget):
         self.will_recording_UWB = False
         self.will_recording_xethrux4 = False
         self.is_recording = False
-        self.buffer = config.init_buffer
+        self.buffer = None
+        self.clear_buffer()
         # -------------------- First class --------------------
         # main page
         self.main_page = QtWidgets.QVBoxLayout(self)
@@ -215,15 +216,17 @@ class GestureTab(QWidget):
                                       '_' + signal['subject_name'] +
                                       '_label.mgesf')
             try:
-                pickle.dump(self.buffer, open(data_path, 'wb'))
+                print(len(self.buffer['mmw']['timestamps']))
                 pickle.dump(self.buffer, open(data_path, 'wb'))
                 pickle.dump(signal['label'], open(label_path, 'wb'))
                 print('GestureTab: recording ENDED, data saved to ' + self.tab_idp.get_record_data_path())
             except FileNotFoundError:
                 print('GestureTab: data path does not exist')  # TODO check path exist before recording starts
-            self.clear_buffer()
         else:
             raise Exception('GestureTab: record_signal_action: unknown signal')
+        self.clear_buffer()
+        print('record buffer cleared.')
 
     def clear_buffer(self):
-        self.buffer = config.init_buffer
+        self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []},
+                       'xethrux4': {'timestamps': [], 'ir': [], 'ir_baseband': [], 'ir_cr': [], 'ir_basedband_cr': []}}

@@ -35,6 +35,7 @@ class IdpRecording(QWidget):
                                                 vertical=False,
                                                 style="background-color: white;",
                                                 size=config.instruction_block_size)
+        # TODO add randomize check box
         # -------------------- third class --------------------
         #   1. Input block
         #       1-1. Interval last
@@ -243,7 +244,7 @@ class IdpRecording(QWidget):
     def idle_to_pending(self):
         self.get_experiment_config()
         self.char_set = generate_char_set(self.classes, self.repeat_times)
-        init_preparation_block(parent=self.ist_text_block, text=self.char_set)
+        init_preparation_block(parent=self.ist_text_block, text=''.join(self.char_set))
 
     def finish_recording(self):
         self.record_signal.emit({'cmd': 'end',
@@ -266,8 +267,6 @@ class IdpRecording(QWidget):
         clear_layout(self.ist_text_block)
         self.reset_instruction()
         self.lb_char_to_write, self.lb_char_next = init_instruction_text_block(self.ist_text_block)
-        if 'recording' in self.state:
-            self.record_signal.emit({'cmd': 'start', 'label': None})  # send start signal to gesture tab, where the sensor data are located
 
     def keyPressEvent(self, key_event):
         print(key_event)
@@ -305,6 +304,9 @@ class IdpRecording(QWidget):
 
     def metronome_tick(self):
         # tempo: dah, dih, dih,dih
+        if self.tempo_counter == 0 and 'recording' in self.state:
+            self.record_signal.emit({'cmd': 'start', 'label': None})  # send start signal to gesture tab, where the sensor data are located
+
         self.repaint(circle=self.tempo_counter % 4 + 1)
         if not self.tempo_counter % 4:
             dah()

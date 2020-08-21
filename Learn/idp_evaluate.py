@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-from Learn.data_in import idp_preprocess, resolve_points_per_sample
+from Learn.data_in import idp_preprocess_legacy, resolve_points_per_sample
 from config import rd_shape, ra_shape
 from utils.data_utils import plot_confusion_matrix, prepare_x, StreamingMovingAverage, moving_average
 
@@ -94,7 +94,7 @@ period = 33  # ms
 
 # classes = set([item for sublist in sample_classes for item in sublist])  # reduce to categorical classes
 ls_dicts = \
-    [idp_preprocess(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
+    [idp_preprocess_legacy(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
      for dr, nr, cs in zip(idp_data_dir, num_repeats, sample_classes)]
 points_per_sample = int(resolve_points_per_sample(period, interval_duration))
 
