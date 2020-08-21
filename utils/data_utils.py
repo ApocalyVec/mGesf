@@ -1,3 +1,4 @@
+import os
 import pickle
 
 import numpy as np
@@ -12,8 +13,8 @@ import time
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.utils.multiclass import unique_labels
 
+from Learn.data_in import idp_preprocess, flatten
 from utils.transformation import translate, sphere_search, rotateZ, rotateY, rotateX, scale
-
 
 volume_shape = [25, 25, 25]
 
@@ -30,6 +31,48 @@ def moving_average(a, n=3):
     ret = np.cumsum(a, dtype=float)
     ret[n:] = ret[n:] - ret[:-n]
     return ret[n - 1:] / n
+
+
+def split(word):
+    return [char for char in word]
+
+
+def load_idp(data_directory, sensor_feature_dict, complete_class, input_interval=4.0, period=33.45):
+    '''
+    load everything in the given path
+    :return:
+    '''
+    Y = []
+    X_dict = dict()
+    data_suffix = '_data.mgesf'
+    label_suffix = '_label.mgesf'
+    feature_names = flatten(list(sensor_feature_dict.values()))
+    labeled_sample_dict = dict([(char, dict([(ftn, []) for ftn in feature_names])) for char in complete_class])
+    for fn in os.listdir(data_directory):
+        if fn.endswith(data_suffix):
+            data_path = os.path.join(data_directory, fn)
+            label_path = os.path.join(data_directory, fn.replace(data_suffix, '') + label_suffix)
+            subject_name = fn.split('_')[-2]
+            data = pickle.load(open(data_path, 'rb'))
+            label = pickle.load(open(label_path, 'rb'))
+            labeled_sample_dict = idp_preprocess(data, char_set=label, input_interval=input_interval, period=period,
+                                                 sensor_features_dict=sensor_feature_dict,
+                                                 labeled_sample_dict=labeled_sample_dict)
+    # add to x and y
+    for char, feature_samples in labeled_sample_dict.items():
+        if len(flatten(feature_samples.values())) > 0:
+            for ft_name, ft_samples in feature_samples.items():
+                if ft_name in X_dict:
+                    X_dict[ft_name] += ft_samples
+                else:
+                    X_dict[ft_name] = ft_samples
+            Y += [char] * len(ft_samples)
+    # X_mmw_rD = np.asarray(X_mmw_rD)
+    # X_mmw_rA = np.asarray(X_mmw_rA)
+    # Y = np.asarray(Y)
+    #
+    # encoder = OneHotEncoder(categories='auto')
+    # Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
 
 
 def plot_confusion_matrix(y_true, y_pred, classes,
@@ -86,8 +129,11 @@ def plot_confusion_matrix(y_true, y_pred, classes,
     fig.tight_layout()
     return ax
 
+
 DBSCAN_esp = 0.2
 DBSCAN_minSamples = 3
+
+
 def produce_voxel(points, isCluster=True, isClipping=False):
     """
 
@@ -144,6 +190,7 @@ def produce_voxel(points, isCluster=True, isClipping=False):
 
     return np.expand_dims(frame_3D_volume, axis=0)
 
+
 xmin, xmax = -0.255, 0.255
 ymin, ymax = 0.0, 0.255
 zmin, zmax = -0.255, 0.255
@@ -153,6 +200,7 @@ xyzScaler = MinMaxScaler().fit(np.array([[xmin, ymin, zmin],
                                          [xmax, ymax, zmax]]))
 heatScaler = MinMaxScaler().fit(np.array([[heatMin],
                                           [heatMax]]))
+
 
 def snapPointsToVolume(points, volume_shape, isClipping=False, radius=3, decay=0.8):
     """
@@ -181,12 +229,13 @@ def snapPointsToVolume(points, volume_shape, isClipping=False, radius=3, decay=0
             try:
                 volume[axis[i][0], axis[i][1], axis[i][2]] = volume[axis[i][0], axis[i][1], axis[i][2]] + heat
             except IndexError:
-                print('Index Out of Bound!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                print(
+                    'Index Out of Bound!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
             if isClipping:
                 point_to_clip = sphere_search(shape=volume_shape, index=(axis[i][0], axis[i][1], axis[i][2]), r=radius)
                 for dist, ptc in point_to_clip:
                     if dist != 0.0:
-                        factor = (radius - dist + 1) * decay /radius
+                        factor = (radius - dist + 1) * decay / radius
                         volume[ptc[0], ptc[1], ptc[2]] = volume[ptc[0], ptc[1], ptc[2]] + heat * factor
 
     volume_mean = np.mean(volume)
@@ -247,8 +296,8 @@ def parse_deltalize_recording(file: str) -> dict:
             x, y, z = 0, 0, 0
         else:
             # process delta
-            prev_x, prev_y, prev_z = [float(x) for x in lines[i-1].split(',')][1:]
-            x, y, z = x - prev_x, y - prev_y, z-prev_z
+            prev_x, prev_y, prev_z = [float(x) for x in lines[i - 1].split(',')][1:]
+            x, y, z = x - prev_x, y - prev_y, z - prev_z
 
         xyz_array.append([x, y, z])
         recording_list.append([timestamp, (x, y, z)])

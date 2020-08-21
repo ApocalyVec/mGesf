@@ -85,14 +85,14 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "COM14"
-control_tab_u_port_default = "COM3"
+control_tab_d_port_default = "COM3"
+control_tab_u_port_default = "COM4"
 
 # operation tab
 indexPen_classes_default = "A B C D E"
 indexPen_subjectName_default = "god"
 indexPen_repeatTime_default = 10
-indexPen_trainingDataDir_default = "data/"
+indexPen_trainingDataDir_default = "data"
 indexPen_modelPath_default = "models/idp/idp_29_2020-05-04_03-24-10.425555.h5"
 indexPen_modelDir_default = "../model/"
 indexPen_constructorPath_default = "../learn/idp_classifier.py"

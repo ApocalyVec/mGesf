@@ -9,4 +9,5 @@ def help_btn_action():
 
 def generate_char_set(classes, repeat_times):
     """returns a full list of characters for the user to input"""
-    return ''.join([c for c in classes for i in range(repeat_times)])
+    return [c for c in classes for i in range(repeat_times)]
+
