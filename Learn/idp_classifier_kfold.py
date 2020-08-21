@@ -17,7 +17,7 @@ from tensorflow.python.keras.layers import TimeDistributed, Conv2D, BatchNormali
 from tensorflow.python.keras.models import load_model
 import tensorflow as tf
 
-from Learn.data_in import idp_preprocess, resolve_points_per_sample
+from Learn.data_in import idp_preprocess_legacy, resolve_points_per_sample
 from config import rd_shape, ra_shape
 from utils.data_utils import plot_confusion_matrix
 from sklearn.model_selection import KFold
@@ -91,7 +91,7 @@ period = 33  # ms
 
 # classes = set([item for sublist in sample_classes for item in sublist])  # reduce to categorical classes
 ls_dicts = \
-    [idp_preprocess(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
+    [idp_preprocess_legacy(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
      for dr, nr, cs in zip(idp_data_dir, num_repeats, sample_classes)]
 points_per_sample = int(resolve_points_per_sample(period, interval_duration))
 '''

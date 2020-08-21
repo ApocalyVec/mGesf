@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-from Learn.data_in import idp_preprocess, resolve_points_per_sample
+from Learn.data_in import idp_preprocess_legacy, resolve_points_per_sample
 from config import rd_shape, ra_shape
 from utils.data_utils import plot_confusion_matrix, prepare_x, StreamingMovingAverage, moving_average
 
@@ -94,7 +94,7 @@ period = 33  # ms
 
 # classes = set([item for sublist in sample_classes for item in sublist])  # reduce to categorical classes
 ls_dicts = \
-    [idp_preprocess(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
+    [idp_preprocess_legacy(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
      for dr, nr, cs in zip(idp_data_dir, num_repeats, sample_classes)]
 points_per_sample = int(resolve_points_per_sample(period, interval_duration))
 
@@ -118,9 +118,9 @@ Y = np.asarray(Y)
 encoder = OneHotEncoder(categories='auto')
 Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
 
-model_name = 'idp_29_2020-05-04_03-24-10.425555'
-idp_model = load_model('models/idp/' + model_name + '.h5')
-
+# model_name = 'idp_29_2020-05-04_03-24-10.425555'
+# idp_model = load_model('..models/idp/' + model_name + '.h5')
+idp_model = load_model('D:\PcProjects\mGesf\models\idp\idp_29_2020-05-04_03-24-10.425555.h5')
 # make a contiuous temporal sequence A, B, C, D, E
 # TODO have this followed by a void character
 # key_indices = [0, 160, 320, 480, 640]  # A, B, C, D, E
@@ -174,7 +174,7 @@ for i, col in enumerate(np.transpose(y_pred)):
 # for i in range(1, len(key_indices) - 2):
 #     plt.axvline(x=121 * i, c='0.3', linewidth=5)
 
-debouncer_frame_threshold = 60
+debouncer_frame_threshold = 30
 debouncer_prob_threshold = 0.9
 debouncer = [0] * len(classes)
 for i, frame_pred in enumerate(y_pred):
@@ -190,6 +190,6 @@ for i, frame_pred in enumerate(y_pred):
 # plt.legend(loc=4)
 plt.xlabel('Frames (30 frames per second)')
 plt.ylabel('Probability of class prediction')
-plt.title('Temporal Probability cross a Continuous Seuqnce of "A, B, C, D, E"')
-plt.title('Temporal Probability cross a Continuous Seuqnce of "H, E, L, L, O, Space, W, O, R, L, D, Enter", with Debouncer Detection')
+plt.title('Temporal Probability cross a Continuous Sequence of "A, B, C, D, E"')
+plt.title('Temporal Probability cross a Continuous Sequence of "H, E, L, L, O, Space, W, O, R, L, D, Enter", with Debouncer Detection')
 plt.show()
