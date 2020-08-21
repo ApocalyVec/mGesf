@@ -174,7 +174,7 @@ encoder = OneHotEncoder(categories='auto')
 Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
 
 # add early stopping
-es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
 mc = ModelCheckpoint(
     '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
                                                                           '_') + '.h5',
@@ -204,7 +204,7 @@ for train, test in kfold.split(X_mmw_rD, Y):
                         epochs=1500,
                         batch_size=32, callbacks=[es, mc], verbose=1, )
     # Generate generalization metrics
-    scores = model.evaluate([x_rD_train, x_rD_train], y_train[test], verbose=0)
+    scores = model.evaluate([x_rD_test, x_rA_test], y_test, verbose=0)
     print(
         f'Score for fold {fold_no}: {model.metrics_names[0]} of {scores[0]}; {model.metrics_names[1]} of {scores[1] * 100}%')
     acc_per_fold.append(scores[1] * 100)
@@ -212,6 +212,7 @@ for train, test in kfold.split(X_mmw_rD, Y):
 
     # Increase fold number
     fold_no = fold_no + 1
+    tf.keras.backend.clear_session()
 
 # == Provide average scores ==
 print('------------------------------------------------------------------------')
