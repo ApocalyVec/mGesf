@@ -1,4 +1,5 @@
 import os
+import random
 import time
 
 from PyQt5.QtWidgets import QGraphicsScene, \
@@ -63,6 +64,8 @@ class IdpRecording(QWidget):
                                                                             label_bold=False,
                                                                             default_input=
                                                                             config.indexPen_subjectName_default)
+        self.randomize_char_checkbox = init_checkBox(parent=self.input_block, label='Randomize Order of Characters', function=self.randomize_char_action)
+        self.is_randomize_char = False
 
         self.training_dir_block, self.training_dir_textbox = init_inputBox(self.input_block,
                                                                            label=config.trainingDataPath_label,
@@ -244,6 +247,9 @@ class IdpRecording(QWidget):
     def idle_to_pending(self):
         self.get_experiment_config()
         self.char_set = generate_char_set(self.classes, self.repeat_times)
+        if self.is_randomize_char:
+            print('randomize order of the characters.')
+            random.shuffle(self.char_set)
         init_preparation_block(parent=self.ist_text_block, text=''.join(self.char_set))
 
     def finish_recording(self):
@@ -269,7 +275,7 @@ class IdpRecording(QWidget):
         self.lb_char_to_write, self.lb_char_next = init_instruction_text_block(self.ist_text_block)
 
     def keyPressEvent(self, key_event):
-        print(key_event)
+        # print(key_event)
         if is_enter_key_event(key_event):
             self.update_state('enter_pressed')
 
@@ -488,6 +494,9 @@ class IdpRecording(QWidget):
 
     def get_data_path(self):
         return self.training_dir_textbox.text()
+
+    def randomize_char_action(self):
+        self.is_randomize_char = self.randomize_char_checkbox.isChecked()
 
 def is_enter_key_event(key_event):
     return key_event.key() == QtCore.Qt.Key_Return or key_event.key() == QtCore.Qt.Key_Enter
