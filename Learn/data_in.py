@@ -117,6 +117,7 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
     list_feature_samples = []
     for list_ts, list_sensor_data in sensor_ts_data:
         list_feature_samples = list_feature_samples + [(sd[0], slice_per(sd[1], step=points_per_sample)) for sd in list_sensor_data]  # discard the tail
+        list_feature_samples = [(featuren_name, samples[:len(char_set)])for featuren_name, samples in list_feature_samples]
         # test for interval time
         try:
             all(len(samples) == len(char_set) for feature_name, samples in list_feature_samples)
@@ -125,6 +126,7 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
             print('len(char_set) = ' + str(len(char_set)))
             raise Exception('number of samples does not match the number of characters in the given set')
         interval_ts = slice_per(list_ts, step=points_per_sample)
+        interval_ts = interval_ts[:len(char_set)]
         interval_durations = [(max(its) - min(its)) for its in interval_ts]
         interval_variance = np.array(interval_durations) - input_interval
         try:
