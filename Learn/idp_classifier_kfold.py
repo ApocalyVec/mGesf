@@ -60,6 +60,8 @@ from sklearn.model_selection import KFold
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-PQRST-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-UVWXY-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-ZSpcBspcEnt-rpt10']
+from utils.learn_utils import make_model
+
 idp_data_dir = ['../data/idp-ABCDE-rpt10',
                 '../data/idp-ABCDE-rpt2',
                 '../data/idp-FGHIJ-rpt10',
@@ -101,58 +103,6 @@ The flattened output from the two branch meets and are concatenated together the
 the network is concluded by FC layers. 
 '''
 
-def make_model():
-    # creates the Time Distributed CNN for range Doppler heatmap ##########################
-    mmw_rdpl_input = (points_per_sample, 1) + rd_shape  # range doppler shape here
-    mmw_rdpl_TDCNN = Sequential()
-    mmw_rdpl_TDCNN.add(
-        TimeDistributed(
-            Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-                   # kernel_regularizer=l2(0.0005),
-                   kernel_initializer='random_uniform'),
-            input_shape=mmw_rdpl_input))
-    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-    mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-    mmw_rdpl_TDCNN.add(TimeDistributed(
-        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-    mmw_rdpl_TDCNN.add(TimeDistributed(BatchNormalization()))
-    mmw_rdpl_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-    mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
-
-    # creates the Time Distributed CNN for range Azimuth heatmap ###########################
-    mmw_razi_input = (points_per_sample, 1) + ra_shape  # range azimuth shape here
-    mmw_razi_TDCNN = Sequential()
-    mmw_razi_TDCNN.add(
-        TimeDistributed(
-            Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first',
-                   # kernel_regularizer=l2(0.0005),
-                   kernel_initializer='random_uniform'),
-            input_shape=mmw_razi_input))
-    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-    mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-    mmw_razi_TDCNN.add(TimeDistributed(
-        Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_first')))
-    # mmw_rdpl_TDCNN.add(TimeDistributed(LeakyReLU(alpha=0.1)))
-    mmw_razi_TDCNN.add(TimeDistributed(BatchNormalization()))
-    mmw_razi_TDCNN.add(TimeDistributed(MaxPooling2D(pool_size=2)))
-    mmw_razi_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
-
-    merged = concatenate([mmw_rdpl_TDCNN.output, mmw_razi_TDCNN.output])  # concatenate two feature extractors
-    regressive_tensor = LSTM(units=32, return_sequences=True, kernel_initializer='random_uniform')(merged)
-    regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-    regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(regressive_tensor)
-    regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-
-    regressive_tensor = Dense(units=128)(regressive_tensor)
-    regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
-    regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
-
-    model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
-    adam = tf.keras.optimizers.Adam(lr=1e-4, decay=1e-7)
-    model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
-    return model
-
 # create input features
 Y = []
 X_mmw_rD = []
@@ -174,7 +124,7 @@ encoder = OneHotEncoder(categories='auto')
 Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
 
 # add early stopping
-es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=1000)
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
 mc = ModelCheckpoint(
     '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
                                                                           '_') + '.h5',
@@ -188,7 +138,7 @@ num_folds = 10
 kfold = KFold(n_splits=num_folds, shuffle=True)
 fold_no = 1
 for train, test in kfold.split(X_mmw_rD, Y):
-    model = make_model()
+    model = make_model(classes, points_per_sample)
     x_rD_train = X_mmw_rD[train]
     x_rA_train = X_mmw_rA[train]
     y_train = Y[train]
@@ -204,7 +154,7 @@ for train, test in kfold.split(X_mmw_rD, Y):
                         epochs=1500,
                         batch_size=32, callbacks=[es, mc], verbose=1, )
     # Generate generalization metrics
-    scores = model.evaluate([x_rD_train, x_rD_train], y_train[test], verbose=0)
+    scores = model.evaluate([x_rD_test, x_rA_test], y_test, verbose=0)
     print(
         f'Score for fold {fold_no}: {model.metrics_names[0]} of {scores[0]}; {model.metrics_names[1]} of {scores[1] * 100}%')
     acc_per_fold.append(scores[1] * 100)
@@ -212,6 +162,7 @@ for train, test in kfold.split(X_mmw_rD, Y):
 
     # Increase fold number
     fold_no = fold_no + 1
+    tf.keras.backend.clear_session()
 
 # == Provide average scores ==
 print('------------------------------------------------------------------------')

@@ -85,11 +85,13 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "COM3"
-control_tab_u_port_default = "COM4"
+control_tab_d_port_default = "COM14"
+control_tab_u_port_default = "COM13"
 
 # operation tab
-indexPen_classes_default = "A B C D E"
+# indexPen_classes_default = "A B C D E"
+indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
+
 indexPen_subjectName_default = "god"
 indexPen_repeatTime_default = 10
 indexPen_trainingDataDir_default = "data"
@@ -120,7 +122,7 @@ countdown_animation_text = ["Steady...", "..Ready,", "GO!"]
 instruction_next_text = "... next: "
 instruction_end_text = "NO NEXT"
 
-control_tab_config_file_path_default = 'mGesf/profiles/aop/30fps_azi_rd.cfg'
+control_tab_config_file_path_default = 'mGesf/profiles/aop/EV2/30fps_rdHeatmap_aziHeatmap.cfg'
 data_path_default = '../data'
 
 radar_box_checked = "Checked: Radar recording box"

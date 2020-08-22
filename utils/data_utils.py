@@ -37,7 +37,7 @@ def split(word):
     return [char for char in word]
 
 
-def load_idp(data_directory, sensor_feature_dict, complete_class, input_interval=4.0, period=33.45):
+def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, input_interval=4.0, period=33.45):
     '''
     load everything in the given path
     :return:
@@ -63,16 +63,11 @@ def load_idp(data_directory, sensor_feature_dict, complete_class, input_interval
         if len(flatten(feature_samples.values())) > 0:
             for ft_name, ft_samples in feature_samples.items():
                 if ft_name in X_dict:
-                    X_dict[ft_name] += ft_samples
+                    X_dict[ft_name] = np.concatenate([X_dict[ft_name], np.array(ft_samples)])
                 else:
-                    X_dict[ft_name] = ft_samples
+                    X_dict[ft_name] = np.array(ft_samples)
             Y += [char] * len(ft_samples)
-    # X_mmw_rD = np.asarray(X_mmw_rD)
-    # X_mmw_rA = np.asarray(X_mmw_rA)
-    # Y = np.asarray(Y)
-    #
-    # encoder = OneHotEncoder(categories='auto')
-    # Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
+    return X_dict, encoder.transform(np.reshape(Y, (-1, 1))).toarray()
 
 
 def plot_confusion_matrix(y_true, y_pred, classes,

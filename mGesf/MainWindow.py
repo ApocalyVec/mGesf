@@ -1,5 +1,8 @@
 import sys
-
+try:
+    from PyQt5 import sip
+except ImportError:
+    import sip
 from PyQt5 import uic
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
