@@ -10,4 +10,4 @@ from .moduleconnectorwrapper import DataRecord
 from .moduleconnectorwrapper import DataType
 from .moduleconnectorwrapper import PreferredSplitSize
 from .moduleconnectorwrapper import RecordingOptions
-from . import doc
+
