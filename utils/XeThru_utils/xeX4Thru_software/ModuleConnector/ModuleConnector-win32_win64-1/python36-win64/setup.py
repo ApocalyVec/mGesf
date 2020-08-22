@@ -43,8 +43,8 @@ setup(name='pymoduleconnector',
       #license='MIT',
       packages=[
           'pymoduleconnector', 'pymoduleconnector.moduleconnectorwrapper',
-          'pymoduleconnector.examples', 'pymoduleconnector.extras',
-          'pymoduleconnector.doc'
+           'pymoduleconnector.extras'
+
       ],
       install_requires=[
       ],
