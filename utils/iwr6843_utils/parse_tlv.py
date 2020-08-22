@@ -27,7 +27,7 @@ def parseRangeProfile(data, tlvLength):
     # an integer is 2 byte long
     range_bins = tlvLength / 2
     range_profile = struct.unpack(str(int(range_bins)) + 'H', data[:tlvLength])
-    return range_profile, range_bins
+    return range_profile
 
 
 def parseRDheatmap(data, tlvLength, range_bins, rm_clutter=True):
@@ -181,7 +181,7 @@ def decode_iwr_tlv(in_data):
                                                            tlvLength)  # if no detected points, tlvType won't have 1
                 elif tlvType == 2:
                     # the range bins is modified in the range profile is enabled
-                    range_profile, range_bins = parseRangeProfile(data, tlvLength)
+                    range_profile = parseRangeProfile(data, tlvLength)
 
                 elif tlvType == 4:
                     # resolving static azimuth heatmap
@@ -207,8 +207,10 @@ def decode_iwr_tlv(in_data):
                         print('bad azimuth')
                         azi_heatmap = None
                     pass
+                elif tlvType == 9:  # only for AoP EV2
+                    pass
                 else:
-                    print("Unidentified tlv type %d" % tlvType, '. Its len is ' + str(tlvLength))
+                    # print("Unidentified tlv type %d" % tlvType, '. Its len is ' + str(tlvLength))
                     n_offset = data.find(magic)
                     if n_offset != offset and n_offset != -1:
                         print('New magic found, discarding previous frame with unknown tlv')
