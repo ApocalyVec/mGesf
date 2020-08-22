@@ -4,6 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 requires = ['PyQt5',
+            'sip',
             'numpy',
             'pyqtgraph',
             'pyserial',
