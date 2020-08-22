@@ -49,6 +49,3 @@ elif platform == "win32":
 
 import subprocess
 subprocess.call(['python', 'setup.py', 'install'])
-
-# from setuptools import sandbox
-# sandbox.run_setup('/Users/Leo/PycharmProjects/mGesf/utils/XeThru_utils/pymoduleconnector/setup.py', ['clean', 'bdist_wheel'])
