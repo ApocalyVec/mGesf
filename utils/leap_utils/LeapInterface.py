@@ -30,6 +30,11 @@ class LeapInterface:
         # return random.random()
         frame = self._get_frame_from_network_port()
         print(frame)
+        if frame[0] == ' ':
+            frame = frame[1:]
+        if frame[len(frame)-1] == ' ':
+            frame = frame[:len(frame)-1]
+
         frame = [float(x) for x in frame.split(' ')]
         return frame, None  # TODO add the leap camera image
 
@@ -59,6 +64,7 @@ class LeapInterface:
                 return self.clientsocket[0].recv(1024).decode()  # Gets the incoming message
             else:
                 return '0.0 0.0 0.0 0.0 0.0'
+                # return ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' '
 
     def _send_stop_command(self):
         self.running = False
