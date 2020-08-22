@@ -14,7 +14,8 @@ requires = ['PyQt5',
             'ffmpeg',
             'pyautogui',
             'pandas',
-            'tensorflow'
+            'tensorflow',
+            'sklearn'
             ]
 
 setuptools.setup(
@@ -49,6 +50,3 @@ elif platform == "win32":
 
 import subprocess
 subprocess.call(['python', 'setup.py', 'install'])
-
-# from setuptools import sandbox
-# sandbox.run_setup('/Users/Leo/PycharmProjects/mGesf/utils/XeThru_utils/pymoduleconnector/setup.py', ['clean', 'bdist_wheel'])

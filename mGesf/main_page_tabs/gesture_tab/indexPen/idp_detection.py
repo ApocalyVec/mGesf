@@ -1,4 +1,3 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QSlider, QLabel
 
 from mGesf.main_page_tabs.gesture_tab import help_btn_action
 from mGesf.main_page_tabs.gesture_tab.indexPen.prob_view import ProbViewWindow
@@ -8,7 +7,6 @@ from utils.GUI_operation_tab import *
 import config
 import pyqtgraph as pg
 
-import tensorflow as tf
 
 class IdpDetection(QWidget):
     def __init__(self, mmw_signal):  # TODO add a slider for setting the detection interval
