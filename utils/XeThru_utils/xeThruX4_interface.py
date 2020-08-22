@@ -140,7 +140,7 @@ class xeThruX4SensorInterface:
             #read rf; baseband; clutter free rf; clutter free baseband
             frame = np.array(d.data)
             baseband_frame = xep_rf_frame_downconversion(frame, self.center_frequency)
-            clutter_removal_frame = self.read_clutter_removal_frame(frame, 0.85)
+            clutter_removal_frame = self.read_clutter_removal_frame(frame, 0.5)
             clutter_removal_baseband_frame = xep_rf_frame_downconversion(clutter_removal_frame, self.center_frequency)
 
             # if self.baseband:
