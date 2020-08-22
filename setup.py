@@ -14,7 +14,8 @@ requires = ['PyQt5',
             'ffmpeg',
             'pyautogui',
             'pandas',
-            'tensorflow'
+            'tensorflow',
+            'sklearn'
             ]
 
 setuptools.setup(
