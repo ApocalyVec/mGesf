@@ -89,7 +89,9 @@ control_tab_d_port_default = "COM14"
 control_tab_u_port_default = "COM13"
 
 # operation tab
-indexPen_classes_default = "A B C D E"
+# indexPen_classes_default = "A B C D E"
+indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
+
 indexPen_subjectName_default = "god"
 indexPen_repeatTime_default = 10
 indexPen_trainingDataDir_default = "data"
