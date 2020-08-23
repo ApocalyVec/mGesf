@@ -1,6 +1,7 @@
 import socket
 import time
 import select
+import base64
 
 from mGesf.exceptions import LeapPortTimeoutError
 
@@ -36,12 +37,15 @@ class LeapInterface:
             frame = frame[:len(frame)-1]
 
         # have this so that first 5 will be used to make info, and last 6 be image
-        #frame = [x for x in frame.split(' ')]
-        frame = [frame.split(' ')]
-        frame_info = frame[len(frame)-2]
+        frame = [x for x in frame.split(' ')]
+        frame_info = frame[:5]
+        #frame_info = frame[len(frame)-2]
         frame_info = [float(x) for x in frame_info]
-        frame_image = frame[len(frame)-1]
-        return frame_info, frame_image  # TODO add the leap camera image
+        #frame_image = frame[len(frame)-1]
+        frame_image = frame[-1]
+        print(frame_image)
+        frame_image_data = base64.b64decode(frame_image)
+        return frame_info, frame_image_data
 
     def stop_sensor(self):
         self._send_stop_command()
@@ -66,9 +70,12 @@ class LeapInterface:
             self.clientsocket[0].setblocking(False)
             ready = select.select([self.clientsocket[0]], [], [], timeout)
             if ready[0]:
-                return self.clientsocket[0].recv(1024).decode()  # Gets the incoming message
+                msg = self.clientsocket[0].recv(1024)
+                return msg.decode()  # Gets the incoming message
             else:
-                return '0.0 0.0 0.0 0.0 0.0'
+
+                return '0.0 0.0 0.0 0.0 0.0 iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9\
+                AAAAHElEQVQYGWP8z8AARIQBE2ElEBWjCvGGFNHBAwA9nAIS02wekwAAAABJRU5ErkJggg =='
                 # return ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' '
 
     def _send_stop_command(self):
