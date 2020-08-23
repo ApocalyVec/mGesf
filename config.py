@@ -42,12 +42,13 @@ uwb_tag_port = 'Tag port: '
 uwb_tag_default_port = 'COM30'
 uwb_anchor_default_port = 'COM32'
 
-# xeThruX4 control
+# xeThruX4 control tab
 init_xeThruX4_data_dict = {'frame': None,
-                       'baseband_frame': None,
-                       'clutter_removal_frame': None,
-                       'clutter_removal_baseband_frame': None,
-                       'ir_spectrogram': None}
+                           'baseband_frame': None,
+                           'clutter_removal_frame': None,
+                           'clutter_removal_baseband_frame': None,
+                           'ir_spectrogram': None}
+xethrux4_default_com_port = 'COM13'
 
 # gesture tab
 gesture_index_pen_label = "Index Pen"

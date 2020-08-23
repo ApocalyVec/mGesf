@@ -50,7 +50,7 @@ class XeThruX4ControlPane(QWidget):
         self.XeThruX4_port_block, self.XeThruX4_port_textbox = init_inputBox(parent=self.main_page,
                                                                              label="Port (device_name): ",
                                                                              label_bold=True,
-                                                                             default_input="COM8")
+                                                                             default_input=config.xethrux4_default_com_port)
 
         self.freq_block = init_container(parent=self.main_page,
                                          label="Frequency Band",
