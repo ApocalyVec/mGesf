@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 requires = ['PyQt5',
             'sip',
-            'numpy',
+            'numpy==1.18.5',
             'pyqtgraph',
             'pyserial',
             'matplotlib',
