@@ -20,7 +20,7 @@ requires = ['PyQt5',
 
 setuptools.setup(
     name="mGesf",  # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="ApocalyVec",
     author_email="s-vector.lee@hotmail.com",
     description="This package is a micro-gesture application that took on a sensor fusion approach/",
