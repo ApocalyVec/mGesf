@@ -73,7 +73,7 @@ class GestureTab(QWidget):
 
         self.leap_runtime_view = self.init_spec_view(parent=self.leap_runtime_block, label="Leap",
                                                      graph=None)
-        self.leap_record_checkbox = init_checkBox(parent=self.leap_runtime_block, function=self.radar_clickBox)
+        self.leap_record_checkbox = init_checkBox(parent=self.leap_runtime_block, function=self.leap_clickBox)
 
         # -------------------- fifth class -------------------
         #       1-1. UWB runtime block
@@ -91,7 +91,7 @@ class GestureTab(QWidget):
         self.xethrux4_ir_spectrogram_display = QGraphicsPixmapItem()
         self.xethrux4_runtime_view = self.init_spec_view(parent=self.xethrux4_runtime_block, label="XeThruX4",
                                                          graph=self.xethrux4_ir_spectrogram_display)
-        self.xethrux4_record_checkbox = init_checkBox(parent=self.xethrux4_runtime_block, function=self.UWB_clickBox)
+        self.xethrux4_record_checkbox = init_checkBox(parent=self.xethrux4_runtime_block, function=self.xethrux4_clickBox)
 
         # -------------------- third class --------------------
         #   1. ITD block
@@ -137,49 +137,25 @@ class GestureTab(QWidget):
         return scene
 
     def radar_clickBox(self, state):
-
-        if state == QtCore.Qt.Checked:
-            self.will_recording_mmw = True
-            # self.message.setText(config.radar_box_checked)
-        else:
-            self.will_recording_mmw = False
-            # self.message.setText(config.radar_box_unchecked)
+        self.will_recording_mmw = self.radar_record_checkbox.isChecked()
 
     def leap_clickBox(self, state):
 
-        if state == QtCore.Qt.Checked:
-            self.will_recording_leap = True
-            # self.message.setText(config.leap_box_checked)
-        else:
-            self.will_recording_leap = False
-            # self.message.setText(config.leap_box_unchecked)
+        self.will_recording_leap = self.leap_record_checkbox.isChecked()
 
     def UWB_clickBox(self, state):
-
-        if state == QtCore.Qt.Checked:
-            self.will_recording_UWB = True
-            # self.message.setText(config.UWB_box_checked)
-        else:
-            self.will_recording_UWB = False
-            # self.message.setText(config.UWB_box_unchecked)
+        self.will_recording_UWB = self.UWB_record_checkbox.isChecked()
 
     def xethrux4_clickBox(self, state):
-        if state == QtCore.Qt.Checked:
-            self.will_recording_xethrux4 = True
-            # self.message.setText(config.UWB_box_checked)
-        else:
-            self.will_recording_xethrux4 = False
-            # self.message.setText(config.UWB_box_unchecked)
+        self.will_recording_xethrux4 = self.xethrux4_record_checkbox.isChecked()
 
     def display_xethrux4_data(self, data_dict):
-        if data_dict['frame'] is not None:
-            ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
-            ir_qpixmap = QPixmap(ir_heatmap_qim)
-            ir_qpixmap = ir_qpixmap.scaled(128, 120, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-            self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
-        # todo add recording xethrux4data
-        # if self.is_recording and self.will_recording_xethrux4:
-        #     utils.record_mmw_frame(data_dict=data_dict, buffer=self.buffer)
+        ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
+        ir_qpixmap = QPixmap(ir_heatmap_qim)
+        ir_qpixmap = ir_qpixmap.scaled(128, 120, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
+        if self.is_recording and self.will_recording_xethrux4:
+            utils.record_xethrux4_frame(data_dict=data_dict, buffer=self.buffer)
 
     def display_mmw_data(self, data_dict):
         """
@@ -229,4 +205,4 @@ class GestureTab(QWidget):
 
     def clear_buffer(self):
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []},
-                       'xethrux4': {'timestamps': [], 'ir': [], 'ir_baseband': [], 'ir_cr': [], 'ir_basedband_cr': []}}
+                       'xethrux4': {'timestamps': [], 'frame': [], 'baseband_frame': [], 'clutter_removal_frame': [], 'clutter_removal_baseband_frame': []}}

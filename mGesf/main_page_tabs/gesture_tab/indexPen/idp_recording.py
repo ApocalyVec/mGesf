@@ -438,7 +438,7 @@ class IdpRecording(QWidget):
             _user_input = config.indexPen_classes_default
 
         # change to a list
-        classes = _user_input.split(" ")
+        classes = [x for x in _user_input.split(" ") if x != '']
         return classes
 
     def interrupt_btn_action(self):

@@ -282,7 +282,6 @@ class Xe4ThruWorker(QObject):
     @pg.QtCore.pyqtSlot()
     def xe4thru_process_on_tick(self):
         if self._is_running:
-            data_dict = config.init_xeThruX4_data_dict
             if self.xeThruX4Sensor_interface:
                 frame, baseband_frame, clutter_removal_frame, clutter_removal_baseband_frame = self.xeThruX4Sensor_interface.read_frame()
                 ir_spectrogram = self.xeThruX4Sensor_interface.clutter_removal_baseband_history
