@@ -35,8 +35,13 @@ class LeapInterface:
         if frame[len(frame)-1] == ' ':
             frame = frame[:len(frame)-1]
 
-        frame = [float(x) for x in frame.split(' ')]
-        return frame, None  # TODO add the leap camera image
+        # have this so that first 5 will be used to make info, and last 6 be image
+        #frame = [x for x in frame.split(' ')]
+        frame = [frame.split(' ')]
+        frame_info = frame[len(frame)-2]
+        frame_info = [float(x) for x in frame_info]
+        frame_image = frame[len(frame)-1]
+        return frame_info, frame_image  # TODO add the leap camera image
 
     def stop_sensor(self):
         self._send_stop_command()
