@@ -143,8 +143,7 @@ class LeapTab(QWidget):
 
     def leap_process_data(self, data_dict):
         if data_dict is not None:
-
-
+            data_dict['leapmouse'] = data_dict['leapmouse'].split(' ')
             self.v_data.append(data_dict['leapmouse'][0])
             self.h_data.append(data_dict['leapmouse'][1])
             self.z_data.append(data_dict['leapmouse'][2])

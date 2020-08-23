@@ -40,7 +40,7 @@ def sim_uwb():
 
 
 def sim_leap():
-    return '1.0 2.0 3.0 4.0 5.0', None
+    return '1.0 2.0 3.0 4.0 5.0', sim_heatmap((256, 256))
 
 
 def sim_xe4thru(length=100):
