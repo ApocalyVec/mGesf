@@ -128,6 +128,7 @@ class RadarTab(QWidget):
         curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
         return curve
 
+    @QtCore.pyqtSlot(dict)
     def radar_process_mmw_data(self, data_dict):
         """
         Process the emitted mmWave data

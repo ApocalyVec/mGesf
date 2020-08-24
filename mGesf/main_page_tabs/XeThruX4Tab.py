@@ -3,19 +3,17 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QWidget, QLabel, QGraphicsPixmapItem, QGraphicsView, QGraphicsScene
 import pyqtgraph as pg
 
-
 from mGesf import workers
 from utils.GUI_main_window import init_container
 from utils.img_utils import array_to_colormap_qim
 
 
 class XeThruX4Tab(QWidget):
-    def __init__(self, Xe4Thru_worker: workers.Xe4ThruWorker,*args, **kwargs):
+    def __init__(self, Xe4Thru_worker: workers.Xe4ThruWorker, *args, **kwargs):
         super().__init__()
 
         self.Xe4Thru_worker = Xe4Thru_worker
         self.Xe4Thru_worker.signal_data.connect(self.control_process_xethru_data)
-
 
         self.main_page = QtWidgets.QVBoxLayout(self)
         self.setLayout(self.main_page)
@@ -37,30 +35,16 @@ class XeThruX4Tab(QWidget):
                                                label_bold=True,
                                                label_position="lefttop")
 
-        #plots
-        self.rf_curve, self.baseband_curve = self.init_xethrux4_runtime_view(parent=self.graph_container1, label="Clutter frame")
-        self.clutter_free_rf_curve, self.clutter_free_baseband_curve = self.init_xethrux4_runtime_view(parent=self.graph_container2, label="Clutter free frame")
+        # plots
+        self.rf_curve, self.baseband_curve = self.init_xethrux4_runtime_view(parent=self.graph_container1,
+                                                                             label="Clutter frame")
+        self.clutter_free_rf_curve, self.clutter_free_baseband_curve = self.init_xethrux4_runtime_view(
+            parent=self.graph_container2, label="Clutter free frame")
 
         self.xethrux4_ir_spectrogram_display = QGraphicsPixmapItem()
         self.xethrux4_runtime_view = self.init_spec_view(parent=self.graph_container3, label="XeThruX4",
                                                          graph=self.xethrux4_ir_spectrogram_display)
-
-
-
-
         self.show()
-
-
-
-
-    def display_xethrux4_data(self, data_dict):
-        if data_dict['frame'] is not None:
-            ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
-            ir_qpixmap = QPixmap(ir_heatmap_qim)
-            ir_qpixmap = ir_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-            self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
-
-
 
     def init_xethrux4_runtime_view(self, parent, label):
         if label:
@@ -83,8 +67,7 @@ class XeThruX4Tab(QWidget):
 
         return rf_curve, baseband
 
-
-
+    @QtCore.pyqtSlot(dict)
     def control_process_xethru_data(self, data_dict):
         if data_dict['frame'] is not None:
             xsamples = list(range(data_dict['frame'].shape[0]))
@@ -103,9 +86,7 @@ class XeThruX4Tab(QWidget):
             ir_qpixmap = ir_qpixmap.scaled(500, 8000, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
             self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
 
-
     def init_spec_view(self, parent, label, graph=None):
-
         if label:
             ql = QLabel()
             ql.setAlignment(QtCore.Qt.AlignTop)

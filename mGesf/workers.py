@@ -295,6 +295,7 @@ class Xe4ThruWorker(QObject):
                     # notify the uwb data for the sensor tab; only emit when a frame is available
                     self.signal_data.emit(data_dict)
             else:
+
                 frame = sim_xe4thru()
                 self.frame_buffer.append(frame)
                 ir_spectrogram = self.frame_buffer
@@ -304,9 +305,6 @@ class Xe4ThruWorker(QObject):
                              'clutter_removal_baseband_frame': frame,
                              'ir_spectrogram': np.array(list(ir_spectrogram))}
                 self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
-
-
-
 
     def start_sensor(self, device_name, min_range, max_range, center_frequency, fps, baseband):
         if self.xeThruX4Sensor_interface:

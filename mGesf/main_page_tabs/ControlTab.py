@@ -430,6 +430,7 @@ class ControlTab(QWidget):
         self.sensor_start_stop_btn.setText('Stop Sensor')
         print(config.control_tab_start_sensor_message)
 
+    @QtCore.pyqtSlot(dict)
     def control_process_mmw_data(self, data_dict):
         """
         Process the emitted mmWave data

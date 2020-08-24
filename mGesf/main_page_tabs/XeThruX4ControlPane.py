@@ -233,7 +233,7 @@ class XeThruX4ControlPane(QWidget):
         self.low_freq_checkbox.setChecked(True)
         self.min_range_textbox.setText("-0.1")
         self.max_range_textbox.setText("0.4")
-        self.fps_slider_view.setValue(23)
+        self.fps_slider_view.setValue(config.xethrux4_default_fps)
 
 
         self.state.clear()
@@ -263,6 +263,7 @@ class XeThruX4ControlPane(QWidget):
 
         return rf_curve, baseband
 
+    @QtCore.pyqtSlot(dict)
     def control_process_xethru_data(self, data_dict):
         if data_dict['frame'] is not None:
             xsamples = list(range(data_dict['frame'].shape[0]))
