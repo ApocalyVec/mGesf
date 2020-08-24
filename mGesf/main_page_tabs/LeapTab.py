@@ -144,12 +144,12 @@ class LeapTab(QWidget):
     def leap_process_data(self, data_dict):
         if data_dict is not None:
             data_dict['leapmouse'] = data_dict['leapmouse'].split(' ')
+            data_dict['leapmouse'] = [float(value) for value in data_dict['leapmouse']]
             self.v_data.append(data_dict['leapmouse'][0])
             self.h_data.append(data_dict['leapmouse'][1])
             self.z_data.append(data_dict['leapmouse'][2])
-
             xsamples = list(range(len(self.v_data)))
-            self.V_curve.setData(xsamples, self.v_data)
+            self.V_curve.setData(xsamples, list(self.v_data))
             self.H_curve.setData(xsamples, self.h_data)
             self.Z_curve.setData(xsamples, self.z_data)
 

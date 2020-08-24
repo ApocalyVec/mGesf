@@ -1,7 +1,11 @@
+import base64
 import time
 from collections import deque
+from io import BytesIO
 
+import PIL
 import numpy as np
+from PIL import Image
 
 from PyQt5.QtCore import pyqtSignal, QObject
 import pyqtgraph as pg
@@ -10,6 +14,7 @@ import config
 from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
 from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb, sim_leap, sim_xe4thru
 
+import matplotlib.pyplot as plt
 import mGesf.exceptions as exceptions
 
 import numpy as np
@@ -235,12 +240,19 @@ class LeapWorker(QObject):
     def leap_process_on_tick(self):
         if self._is_running:
             if self._leap_interface:
-                leapMouse_data, image = self._leap_interface.process_frame()
+                leapMouse_data, image_bytes = self._leap_interface.process_frame()
+                image_array = self.png_bytes_to_array(image_bytes)
             else:
-                leapMouse_data, image = sim_leap()
+                leapMouse_data, image_array = sim_leap()
             data_dict = {'leapmouse': leapMouse_data,
-                         'image': image}
-            self.signal_leap.emit(data_dict)
+                         'image': image_array}
+            # self.signal_leap.emit(data_dict)
+
+    def png_bytes_to_array(self, bt):
+        bt_decoded = base64.b64decode(bt)
+        io = BytesIO(bt_decoded)
+        im = Image.open(io)
+        return np.array(im)
 
     def start_leap(self):
         if self._leap_interface:  # if the sensor interface is established
@@ -305,7 +317,6 @@ class Xe4ThruWorker(QObject):
 
             self.signal_data.emit(data_dict)  # notify the uwb data for the sensor tab
 
-
     def start_sensor(self, device_name, min_range, max_range, center_frequency, fps, baseband):
         if self.xeThruX4Sensor_interface:
             self.xeThruX4Sensor_interface.config_x4_sensor(device_name=device_name, min_range=min_range,
@@ -323,4 +334,3 @@ class Xe4ThruWorker(QObject):
     def stop_sensor(self):
         self._is_running = False
         self.xeThruX4Sensor_interface.stop_sensor() if self.xeThruX4Sensor_interface else print('Stopping simulating')
-

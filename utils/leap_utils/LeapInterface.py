@@ -2,6 +2,9 @@ import socket
 import time
 import select
 import base64
+from PIL import Image
+import matplotlib.pyplot as plt
+from io import BytesIO
 
 from mGesf.exceptions import LeapPortTimeoutError
 
@@ -30,22 +33,20 @@ class LeapInterface:
         # this function should return NONE WITHOUT blocking if a frame is not complete
         # return random.random()
         frame = self._get_frame_from_network_port()
-        print(frame)
         if frame[0] == ' ':
             frame = frame[1:]
         if frame[len(frame)-1] == ' ':
             frame = frame[:len(frame)-1]
 
         # have this so that first 5 will be used to make info, and last 6 be image
+        print(frame)
         frame = [x for x in frame.split(' ')]
         frame_info = frame[:5]
         #frame_info = frame[len(frame)-2]
         frame_info = [float(x) for x in frame_info]
         #frame_image = frame[len(frame)-1]
-        frame_image = frame[-1]
-        print(frame_image)
-        frame_image_data = base64.b64decode(frame_image)
-        return frame_info, frame_image_data
+        frame_image = frame[5]
+        return frame_info, frame_image
 
     def stop_sensor(self):
         self._send_stop_command()
@@ -73,9 +74,7 @@ class LeapInterface:
                 msg = self.clientsocket[0].recv(1024)
                 return msg.decode()  # Gets the incoming message
             else:
-
-                return '0.0 0.0 0.0 0.0 0.0 iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9\
-                AAAAHElEQVQYGWP8z8AARIQBE2ElEBWjCvGGFNHBAwA9nAIS02wekwAAAABJRU5ErkJggg =='
+                return '0.0 0.0 0.0 0.0 0.0 iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAHElEQVQYGWP8z8AARIQBE2ElEBWjCvGGFNHBAwA9nAIS02wekwAAAABJRU5ErkJggg=='
                 # return ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' '
 
     def _send_stop_command(self):
