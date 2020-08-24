@@ -47,10 +47,8 @@ if __name__ == '__main__':
     userPortName = 'COM8'  # set this to your num_range_bin port
     _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     '''
-    _mmw_interface = None
-    # dataPortName = 'COM3'  # set this to your standard port
-    # userPortName = 'COM4'  # set this to your enhanced port
-    # _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
+    # _mmw_interface = None
+    _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     '''
     Uncomment these lines if you have DecaWave UWB device
     ports for ISK
@@ -67,9 +65,9 @@ if __name__ == '__main__':
     from utils.XeThru_utils.xeThruX4_interface import xeThruX4SensorInterface
     _xeThruX4SensorInterface = xeThruX4SensorInterface()
     '''
-    _xeThruX4SensorInterface = None
-    # from utils.XeThru_utils.xeThruX4_interface import xeThruX4SensorInterface
-    # _xeThruX4SensorInterface = xeThruX4SensorInterface()
+    # _xeThruX4SensorInterface = None
+    from utils.XeThru_utils.xeThruX4_interface import xeThruX4SensorInterface
+    _xeThruX4SensorInterface = xeThruX4SensorInterface()
     '''
     Start of the application script (do not change this part unless you know what you're doing)
     '''

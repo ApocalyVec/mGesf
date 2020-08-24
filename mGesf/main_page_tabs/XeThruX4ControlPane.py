@@ -88,7 +88,7 @@ class XeThruX4ControlPane(QWidget):
                                                                    label_bold=True,
                                                                    min_value=10,
                                                                    max_value=25)
-        self.fps_slider_view.setValue(23)
+        self.fps_slider_view.setValue(config.xethrux4_default_fps)
 
         # #       - check box
         # self.baseband_block = init_container(parent=self.main_page,
