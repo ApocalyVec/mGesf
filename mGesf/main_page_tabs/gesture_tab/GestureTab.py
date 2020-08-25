@@ -156,15 +156,6 @@ class GestureTab(QWidget):
     def xethrux4_clickBox(self, state):
         self.will_recording_xethrux4 = self.xethrux4_record_checkbox.isChecked()
 
-    # @QtCore.pyqtSlot(dict)
-    # def display_xethrux4_data(self, data_dict):
-    #     ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
-    #     ir_qpixmap = QPixmap(ir_heatmap_qim)
-    #     ir_qpixmap = ir_qpixmap.scaled(128, 120, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-    #     self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
-    #     if self.is_recording and self.will_recording_xethrux4:
-    #         utils.record_xethrux4_frame(data_dict=data_dict, buffer=self.buffer)
-
     @QtCore.pyqtSlot(dict)
     def display_record_xethrux4_data(self, data_dict):
         if data_dict['frame'] is not None:
