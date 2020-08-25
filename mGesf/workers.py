@@ -67,8 +67,6 @@ class MmwWorker(QObject):
                          'pts': pts_array,
                          'range_amplitude': range_amplitude}
             self.signal_data.emit(data_dict)
-            self.signal_data.emit(data_dict)  # notify the mmw data for the control tab
-            self.signal_data.emit(data_dict)  # notify the mmw data for the gesture tab
 
     def start_mmw(self):
         if self._mmw_interface:  # if the sensor interface is established
