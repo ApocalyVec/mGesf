@@ -1,7 +1,7 @@
 WINDOW_HEIGHT = 720
 WINDOW_WIDTH = 720
 
-debug = True
+debug = False
 # ============== labels ==============
 # button labels
 

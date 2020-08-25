@@ -7,6 +7,7 @@ from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraphicsView, QTabWidget
 import pyqtgraph as pg
+from sklearn.externals._pilutil import imresize
 
 from mGesf import workers, utils
 from utils.GUI_main_window import *
@@ -186,6 +187,7 @@ class GestureTab(QWidget):
         :param data_dict:
         """
         # update range doppler spectrogram
+        # arr = imresize(data_dict['range_doppler'], 0.1)
         doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
         doppler_qpixmap = QPixmap(doppler_heatmap_qim)
         doppler_qpixmap = doppler_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram

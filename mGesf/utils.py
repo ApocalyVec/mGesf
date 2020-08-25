@@ -1,5 +1,8 @@
 import re
 import time
+
+from sklearn.externals._pilutil import imresize
+
 import config
 import numpy as np
 
@@ -31,4 +34,3 @@ def record_xethrux4_frame(data_dict, buffer):
     buffer['xethrux4']['clutter_removal_frame'].append(np.expand_dims(data_dict['clutter_removal_frame'], axis=0))
     buffer['xethrux4']['clutter_removal_baseband_frame'].append(np.expand_dims(data_dict['clutter_removal_baseband_frame'], axis=0))
     pass
-
