@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QMainWindow, QLabel, Q
 import pyqtgraph as pg
 from PyQt5 import QtCore
 
+import config
 from utils.img_utils import array_to_colormap_qim
 
 import numpy as np
@@ -162,3 +163,14 @@ class RadarTab(QWidget):
 
         # save the data is record is enabled
         # mmw buffer: {'timestamps': [], 'ra_profile': [], 'rd_heatmap': [], 'detected_points': []}
+
+    def set_fire_tab_signal(self, is_fire_signal):
+        if is_fire_signal:
+            print('enabled mmw signal') if config.debug else print()
+            self.mmw_worker.signal_data.connect(self.radar_process_mmw_data)
+        else:
+            try:
+                print('disable mmw signal') if config.debug else print()
+                self.mmw_worker.signal_data.disconnect(self.radar_process_mmw_data)
+            except TypeError:
+                pass

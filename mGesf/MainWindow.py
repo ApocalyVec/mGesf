@@ -9,6 +9,8 @@ from PyQt5.QtWidgets import QWidget, QMainWindow, QVBoxLayout, QTabWidget, \
     QHBoxLayout, QFormLayout, QScrollArea
 import pyqtgraph as pg
 import time
+from PyQt5 import QtWidgets, QtCore
+
 
 from mGesf.main_page_tabs.ControlTab import ControlTab
 from mGesf.main_page_tabs.RadarTab import RadarTab
@@ -95,16 +97,17 @@ class Tabs(QWidget):
 
         self.tab2 = RadarTab(self.workers['mmw'], refresh_interval, data_path)
         self.tab3 = LeapTab(self.workers['leap'], refresh_interval, data_path)
-        self.tab4 = UWBTab(self.workers['uwb'], refresh_interval, data_path)
+        # self.tab4 = UWBTab(self.workers['uwb'], refresh_interval, data_path)
         self.tab5 = XeThruX4Tab(self.workers['xe4thru'], refresh_interval, data_path)
         self.tab6 = GestureTab(self.workers['mmw'], self.workers['leap'], self.workers['xe4thru'])  # TODO add other sensors
 
         self.tabs.addTab(self.tab1, config.main_window_control_tab_label)
         self.tabs.addTab(self.tab2, config.main_window_radar_tab_label)
         self.tabs.addTab(self.tab3, config.main_window_leap_tab_label)
-        self.tabs.addTab(self.tab4, config.main_window_uwb_tab_label)
+        # self.tabs.addTab(self.tab4, config.main_window_uwb_tab_label)
         self.tabs.addTab(self.tab5, "XeThruX4")
         self.tabs.addTab(self.tab6, config.main_window_gesture_tab_label)
+        self.tabs.currentChanged.connect(self.on_tab_bar_change)
 
         # Add tabs to main_widget
         self.layout.addWidget(self.tabs)
@@ -112,6 +115,17 @@ class Tabs(QWidget):
 
         self.info_pane = InformationPane(parent=self.layout)
         sys.stdout = Stream(newText=self.on_print)
+
+        # only enable drawing signal in currently selected tab
+        [self.tabs.widget(i).set_fire_tab_signal(False) for i in range(self.tabs.count()) if i != self.tabs.currentIndex()]
+        self.tabs.currentWidget().set_fire_tab_signal(True)
+
+    @QtCore.pyqtSlot(int)
+    def on_tab_bar_change(self, index):
+        [print(str(i) + 'th tab is unfired: ' + str(self.tabs.widget(i))) for i in range(self.tabs.count()) if i != index]
+        # disable drawing signal in deselected tab
+        [self.tabs.widget(i).set_fire_tab_signal(False) for i in range(self.tabs.count()) if i != index]
+        self.tabs.widget(index).set_fire_tab_signal(True)  # enable drawing signal in selected tab
 
     def init_sensor_threads(self):
         self.worker_threads = {

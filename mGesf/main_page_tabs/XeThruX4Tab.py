@@ -44,7 +44,10 @@ class XeThruX4Tab(QWidget):
         self.xethrux4_ir_spectrogram_display = QGraphicsPixmapItem()
         self.xethrux4_runtime_view = self.init_spec_view(parent=self.graph_container3, label="XeThruX4",
                                                          graph=self.xethrux4_ir_spectrogram_display)
-        self.show()
+
+    # @QtCore.pyqtSlot(int)
+    # def on_tab_bar_clicked(self, int):
+    #     print('xethrux4 tab bar clicked')
 
     def init_xethrux4_runtime_view(self, parent, label):
         if label:
@@ -104,3 +107,16 @@ class XeThruX4Tab(QWidget):
             scene.addItem(graph)
         # spc_gv.setFixedSize(config.WINDOW_WIDTH/4, config.WINDOW_HEIGHT/4)
         return scene
+
+    def set_fire_tab_signal(self, is_fire_signal):
+        if is_fire_signal:
+            print('enabled xethrux4 signal')
+            self.Xe4Thru_worker.signal_data.connect(self.control_process_xethru_data)
+        else:
+            try:
+                print('disable xethrux4 signal')
+                self.Xe4Thru_worker.signal_data.disconnect(self.control_process_xethru_data)
+            except TypeError:
+                pass
+
+

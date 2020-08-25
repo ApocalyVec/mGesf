@@ -51,7 +51,7 @@ class GestureTab(QWidget):
         #       1-1. radar runtime block
         #       1-2. leap runtime block
         #       1-3. UWB runtime block
-        self.radar_runtime_block = init_container(parent=self.runtime_block, vertical=True)
+        self.mmw_runtime_block = init_container(parent=self.runtime_block, vertical=True)
         self.leap_runtime_block = init_container(parent=self.runtime_block, vertical=True)
         self.uwb_runtime_block = init_container(parent=self.runtime_block, vertical=True)
         self.xethrux4_runtime_block = init_container(parent=self.runtime_block, vertical=True)
@@ -61,11 +61,12 @@ class GestureTab(QWidget):
         #           1-1-1. radar runtime graph
         #           1-1-2. radar checkbox
         self.mmw_doppler_display = QGraphicsPixmapItem()
-        self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Radar",
-                                                      graph=self.mmw_doppler_display)
-        self.radar_record_checkbox = init_checkBox(parent=self.radar_runtime_block, function=self.radar_clickBox)
-        self.radar_record_checkbox.setChecked(True)
-        mmw_worker.signal_data.connect(self.display_mmw_data)
+        self.mmw_runtime_view = self.init_spec_view(parent=self.mmw_runtime_block, label="Radar",
+                                                    graph=self.mmw_doppler_display)
+        self.mmw_record_checkbox = init_checkBox(parent=self.mmw_runtime_block, function=self.radar_clickBox)
+        self.mmw_record_checkbox.setChecked(True)
+        self.mmw_worker = mmw_worker
+        self.mmw_worker.signal_data.connect(self.display_mmw_data)
 
         # -------------------- fourth class -------------------
         #       1-1. leap runtime block
@@ -88,12 +89,13 @@ class GestureTab(QWidget):
         #       1-1. xeThruX4 runtime block
         #           1-1-1. xeThruX4 runtime graph
         #           1-1-2. xeThruX4 checkbox
-        xethrux4_worker.signal_data.connect(self.display_xethrux4_data)
         self.xethrux4_ir_spectrogram_display = QGraphicsPixmapItem()
         self.xethrux4_runtime_view = self.init_spec_view(parent=self.xethrux4_runtime_block, label="XeThruX4",
                                                          graph=self.xethrux4_ir_spectrogram_display)
         self.xethrux4_record_checkbox = init_checkBox(parent=self.xethrux4_runtime_block, function=self.xethrux4_clickBox)
         self.xethrux4_record_checkbox.setChecked(True)
+        self.xethrux4_worker = xethrux4_worker
+        self.xethrux4_worker.signal_data.connect(self.display_xethrux4_data)
 
         # -------------------- third class --------------------
         #   1. ITD block
@@ -139,7 +141,7 @@ class GestureTab(QWidget):
         return scene
 
     def radar_clickBox(self, state):
-        self.will_recording_mmw = self.radar_record_checkbox.isChecked()
+        self.will_recording_mmw = self.mmw_record_checkbox.isChecked()
 
     def leap_clickBox(self, state):
 
@@ -213,8 +215,13 @@ class GestureTab(QWidget):
 
     def set_fire_tab_signal(self, is_fire_signal):
         if is_fire_signal:
-            print('enabled xethrux4 signal')
-            self.Xe4Thru_worker.signal_data.connect(self.control_process_xethru_data)
+            print('enabled gesture signal') if config.debug else print()
+            self.mmw_worker.signal_data.connect(self.display_mmw_data)
+            self.xethrux4_worker.signal_data.connect(self.display_xethrux4_data)
         else:
-            print('enabled xethrux4 signal')
-            self.Xe4Thru_worker.signal_data.disconnect(self.control_process_xethru_data)
+            try:
+                print('disable gesture signal') if config.debug else print()
+                self.mmw_worker.signal_data.disconnect(self.display_mmw_data)
+                self.xethrux4_worker.signal_data.disconnect(self.display_xethrux4_data)
+            except TypeError:
+                pass

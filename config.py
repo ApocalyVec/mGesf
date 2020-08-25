@@ -1,6 +1,7 @@
 WINDOW_HEIGHT = 720
 WINDOW_WIDTH = 720
 
+debug = True
 # ============== labels ==============
 # button labels
 
@@ -48,7 +49,7 @@ init_xeThruX4_data_dict = {'frame': None,
                            'clutter_removal_frame': None,
                            'clutter_removal_baseband_frame': None,
                            'ir_spectrogram': None}
-xethrux4_default_com_port = 'COM14'
+xethrux4_default_com_port = 'COM16'
 xethrux4_default_fps = 25
 
 # gesture tab
@@ -157,6 +158,7 @@ ra_shape = (8, 64)
 # # recording tab
 recording_interval = 4
 repeat_times = 10
+repeat_time_default = 2
 
 # ============== links ==============
 # recording tab

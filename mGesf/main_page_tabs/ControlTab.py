@@ -60,17 +60,13 @@ class ControlTab(QWidget):
         self.mmw_worker = mmw_worker
         self.mmw_worker.signal_data.connect(self.control_process_mmw_data)
 
-        # UWB worker
-        self.uwb_worker = uwb_worker
-        self.uwb_worker.signal_data.connect(self.control_process_uwb_data)
+        # # UWB worker
+        # self.uwb_worker = uwb_worker
+        # self.uwb_worker.signal_data.connect(self.control_process_uwb_data)
 
         # LeapMotion worker
         self.leap_worker = leap_worker
         self.leap_worker.signal_leap.connect(self.control_process_leap_data)
-
-        # Xe4Thru_worker worker
-        # self.Xe4Thru_worker = Xe4Thru_worker
-        # self.Xe4Thru_worker..connect(self.control_process_xethru_data)
 
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
@@ -126,9 +122,9 @@ class ControlTab(QWidget):
         self.device_number_box = QLabel("Device number: 1")
         self.XeThruX4_block.addWidget(self.device_number_box)
         #   - tabs
-        tabs = QTabWidget()
-        tabs.addTab(XeThruX4ControlPane(Xe4Thru_worker), "UWB Radar 1")
-        self.XeThruX4_block.addWidget(tabs)
+        self.XeThruX4tabs = QTabWidget()
+        self.XeThruX4tabs.addTab(XeThruX4ControlPane(Xe4Thru_worker), "UWB Radar 1")
+        self.XeThruX4_block.addWidget(self.XeThruX4tabs)
         # TODO add uwb radar runtime view here
         self.XeThruX4_checkbox = init_checkBox(parent=self.XeThruX4_block, function=self.XeThruX4_clickBox)
 
@@ -463,19 +459,19 @@ class ControlTab(QWidget):
                 self.buffer['mmw']['range_azi'].append(np.expand_dims(data_dict['range_azi'], axis=0))
                 self.buffer['mmw']['detected_points'].append(data_dict['pts'])
 
-    def control_process_uwb_data(self, data_dict):
-        if data_dict['a_frame'] is not None:
-            x_samples = list(range(data_dict['a_frame'].shape[0]))
-            a_real = data_dict['a_frame'][:, 0]
-            a_img = data_dict['a_frame'][:, 1]
-            # t_real = data_dict['t_frame'][:, 0]
-            # t_img = data_dict['t_frame'][:, 1]
-            # print('processing UWB data')
-
-            self.runtime_plot_1.setData(x_samples, a_real, )
-            self.runtime_plot_2.setData(x_samples, a_img, )
-            # self.runtime_plot_3.setData(x_samples, t_real,)
-            # self.runtime_plot_4.setData(x_samples, t_img,)
+    # def control_process_uwb_data(self, data_dict):
+    #     if data_dict['a_frame'] is not None:
+    #         x_samples = list(range(data_dict['a_frame'].shape[0]))
+    #         a_real = data_dict['a_frame'][:, 0]
+    #         a_img = data_dict['a_frame'][:, 1]
+    #         # t_real = data_dict['t_frame'][:, 0]
+    #         # t_img = data_dict['t_frame'][:, 1]
+    #         # print('processing UWB data')
+    #
+    #         self.runtime_plot_1.setData(x_samples, a_real, )
+    #         self.runtime_plot_2.setData(x_samples, a_img, )
+    #         # self.runtime_plot_3.setData(x_samples, t_real,)
+    #         # self.runtime_plot_4.setData(x_samples, t_img,)
 
         # runtime_plot_2, runtime_plot_3, runtime_plot_4
         # self.UWB_runtime_view.plot(x_samples, a_real)
@@ -527,3 +523,16 @@ class ControlTab(QWidget):
 
     def reset_buffer(self):
         self.buffer = config.init_buffer
+
+    def set_fire_tab_signal(self, is_fire_signal):
+        if is_fire_signal:
+            print('enabled control signal') if config.debug else print()
+            self.mmw_worker.signal_data.connect(self.control_process_mmw_data)
+            [self.XeThruX4tabs.widget(i).Xe4Thru_worker.signal_data.connect(self.XeThruX4tabs.widget(i).control_process_xethru_data) for i in range(self.XeThruX4tabs.count())]
+        else:
+            try:
+                print('disable control signal') if config.debug else print()
+                self.mmw_worker.signal_data.disconnect(self.control_process_mmw_data)
+                [self.XeThruX4tabs.widget(i).Xe4Thru_worker.signal_data.disconnect(self.XeThruX4tabs.widget(i).control_process_xethru_data) for i in range(self.XeThruX4tabs.count())]
+            except TypeError:
+                pass
