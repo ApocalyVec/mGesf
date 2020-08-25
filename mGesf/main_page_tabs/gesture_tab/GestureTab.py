@@ -68,7 +68,7 @@ class GestureTab(QWidget):
         self.mmw_record_checkbox = init_checkBox(parent=self.mmw_runtime_block, function=self.radar_clickBox)
         self.mmw_record_checkbox.setChecked(True)
         self.mmw_worker = mmw_worker
-        self.mmw_worker.signal_data.connect(self.display_mmw_data)
+        self.mmw_worker.signal_data.connect(self.display_record_mmw_data)
 
         # -------------------- fourth class -------------------
         #       1-1. leap runtime block
@@ -98,7 +98,7 @@ class GestureTab(QWidget):
         self.xethrux4_record_checkbox = init_checkBox(parent=self.xethrux4_runtime_block, function=self.xethrux4_clickBox)
         self.xethrux4_record_checkbox.setChecked(True)
         self.xethrux4_worker = xethrux4_worker
-        self.xethrux4_worker.signal_data.connect(self.display_xethrux4_data)
+        self.xethrux4_worker.signal_data.connect(self.display_record_xethrux4_data)
 
         # -------------------- third class --------------------
         #   1. ITD block
@@ -156,17 +156,8 @@ class GestureTab(QWidget):
     def xethrux4_clickBox(self, state):
         self.will_recording_xethrux4 = self.xethrux4_record_checkbox.isChecked()
 
-    # @QtCore.pyqtSlot(dict)
-    # def display_xethrux4_data(self, data_dict):
-    #     ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
-    #     ir_qpixmap = QPixmap(ir_heatmap_qim)
-    #     ir_qpixmap = ir_qpixmap.scaled(128, 120, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-    #     self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
-    #     if self.is_recording and self.will_recording_xethrux4:
-    #         utils.record_xethrux4_frame(data_dict=data_dict, buffer=self.buffer)
-
     @QtCore.pyqtSlot(dict)
-    def display_xethrux4_data(self, data_dict):
+    def display_record_xethrux4_data(self, data_dict):
         if data_dict['frame'] is not None:
             xsamples = list(range(data_dict['frame'].shape[0]))
             rf_frame = data_dict['frame']
@@ -175,8 +166,11 @@ class GestureTab(QWidget):
             self.rf_curve.setData(xsamples, rf_frame)
             self.baseband_curve.setData(xsamples, baseband_frame)
 
+            if self.is_recording and self.will_recording_xethrux4:
+                utils.record_xethrux4_frame(data_dict=data_dict, buffer=self.buffer)
+
     @QtCore.pyqtSlot(dict)
-    def display_mmw_data(self, data_dict):
+    def display_record_mmw_data(self, data_dict):
         """
         Process the emitted mmWave data
         This function is evoked when signaled by self.mmw_data_ready which is emitted by the mmw_worker thread.
@@ -230,12 +224,12 @@ class GestureTab(QWidget):
     def set_fire_tab_signal(self, is_fire_signal):
         if is_fire_signal:
             print('enabled gesture signal') if config.debug else print()
-            self.mmw_worker.signal_data.connect(self.display_mmw_data)
-            self.xethrux4_worker.signal_data.connect(self.display_xethrux4_data)
+            self.mmw_worker.signal_data.connect(self.display_record_mmw_data)
+            self.xethrux4_worker.signal_data.connect(self.display_record_xethrux4_data)
         else:
             try:
                 print('disable gesture signal') if config.debug else print()
-                self.mmw_worker.signal_data.disconnect(self.display_mmw_data)
-                self.xethrux4_worker.signal_data.disconnect(self.display_xethrux4_data)
+                self.mmw_worker.signal_data.disconnect(self.display_record_mmw_data)
+                self.xethrux4_worker.signal_data.disconnect(self.display_record_xethrux4_data)
             except TypeError:
                 pass

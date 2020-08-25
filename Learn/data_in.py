@@ -143,7 +143,10 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
         #     raise Exception('The tail interval is longer than one second.')
     for i, char in enumerate(char_set):
         for ft_name, samples in list_feature_samples:
-            labeled_sample_dict[char][ft_name].append(samples[i])
+            try:
+                labeled_sample_dict[char][ft_name].append(samples[i])
+            except KeyError:
+                pass
     return labeled_sample_dict
 
 
