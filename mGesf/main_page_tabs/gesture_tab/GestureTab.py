@@ -14,6 +14,7 @@ import config as config
 from mGesf.main_page_tabs.gesture_tab.desktopFingertip.DesktopFingertip import DesktopFingertip
 from mGesf.main_page_tabs.gesture_tab.indexPen.idp_main import IndexPen
 from mGesf.main_page_tabs.gesture_tab.thuMouse.thm_main import ThuMouse
+from utils.GUI_operation_tab import init_xethrux4_runtime_view
 from utils.img_utils import array_to_colormap_qim
 
 
@@ -89,9 +90,10 @@ class GestureTab(QWidget):
         #       1-1. xeThruX4 runtime block
         #           1-1-1. xeThruX4 runtime graph
         #           1-1-2. xeThruX4 checkbox
-        self.xethrux4_ir_spectrogram_display = QGraphicsPixmapItem()
-        self.xethrux4_runtime_view = self.init_spec_view(parent=self.xethrux4_runtime_block, label="XeThruX4",
-                                                         graph=self.xethrux4_ir_spectrogram_display)
+        # self.xethrux4_ir_spectrogram_display = QGraphicsPixmapItem()
+        self.rf_curve, self.baseband_curve = init_xethrux4_runtime_view(parent=self.xethrux4_runtime_block, label="RF frame")
+        # self.xethrux4_runtime_view = self.init_spec_view(parent=self.xethrux4_runtime_block, label="XeThruX4",
+        #                                                  graph=self.xethrux4_ir_spectrogram_display)
         self.xethrux4_record_checkbox = init_checkBox(parent=self.xethrux4_runtime_block, function=self.xethrux4_clickBox)
         self.xethrux4_record_checkbox.setChecked(True)
         self.xethrux4_worker = xethrux4_worker
@@ -153,14 +155,24 @@ class GestureTab(QWidget):
     def xethrux4_clickBox(self, state):
         self.will_recording_xethrux4 = self.xethrux4_record_checkbox.isChecked()
 
+    # @QtCore.pyqtSlot(dict)
+    # def display_xethrux4_data(self, data_dict):
+    #     ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
+    #     ir_qpixmap = QPixmap(ir_heatmap_qim)
+    #     ir_qpixmap = ir_qpixmap.scaled(128, 120, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+    #     self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
+    #     if self.is_recording and self.will_recording_xethrux4:
+    #         utils.record_xethrux4_frame(data_dict=data_dict, buffer=self.buffer)
+
     @QtCore.pyqtSlot(dict)
     def display_xethrux4_data(self, data_dict):
-        ir_heatmap_qim = array_to_colormap_qim(data_dict['ir_spectrogram'])
-        ir_qpixmap = QPixmap(ir_heatmap_qim)
-        ir_qpixmap = ir_qpixmap.scaled(128, 120, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
-        self.xethrux4_ir_spectrogram_display.setPixmap(ir_qpixmap)
-        if self.is_recording and self.will_recording_xethrux4:
-            utils.record_xethrux4_frame(data_dict=data_dict, buffer=self.buffer)
+        if data_dict['frame'] is not None:
+            xsamples = list(range(data_dict['frame'].shape[0]))
+            rf_frame = data_dict['frame']
+            baseband_frame = data_dict['baseband_frame']
+
+            self.rf_curve.setData(xsamples, rf_frame)
+            self.baseband_curve.setData(xsamples, baseband_frame)
 
     @QtCore.pyqtSlot(dict)
     def display_mmw_data(self, data_dict):

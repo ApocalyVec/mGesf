@@ -185,3 +185,25 @@ def create_plot_widget(x_lim=None, y_lim=None):
 def get_screen_size():
     sizeObject = QtWidgets.QDesktopWidget().screenGeometry(-1)
     return sizeObject.width(), sizeObject.height()
+
+
+def init_xethrux4_runtime_view(parent, label):
+    if label:
+        ql = QLabel()
+        ql.setAlignment(QtCore.Qt.AlignTop)
+        ql.setAlignment(QtCore.Qt.AlignCenter)
+        ql.setText(label)
+        parent.addWidget(ql)
+    rf_frame = pg.PlotWidget()
+    parent.addWidget(rf_frame)
+
+    # rf_frame.setXRange(*x_lim)
+    # rf_frame.setYRange(*y_lim)
+
+    pen = pg.mkPen(color=(0, 0, 255), width=1)
+    rf_curve = rf_frame.plot([], [], pen=pen, name="rf_curve")
+
+    pen = pg.mkPen(color=(255, 0, 0), width=2)
+    baseband = rf_frame.plot([], [], pen=pen, name="baseband_curve")
+
+    return rf_curve, baseband
