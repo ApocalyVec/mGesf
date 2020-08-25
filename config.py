@@ -125,7 +125,7 @@ countdown_animation_text = ["Steady...", "..Ready,", "GO!"]
 instruction_next_text = "... next: "
 instruction_end_text = "NO NEXT"
 
-control_tab_config_file_path_default = 'mGesf/profiles/aop/EV2/30fps_rdHeatmap_aziHeatmap.cfg'
+control_tab_config_file_path_default = 'mGesf/profiles/aop/EV2/30fps_rdHeatmap_aziHeatmap_scatteroff.cfg'
 data_path_default = '../data'
 
 radar_box_checked = "Checked: Radar recording box"
