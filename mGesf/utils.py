@@ -1,5 +1,8 @@
 import re
 import time
+
+from sklearn.externals._pilutil import imresize
+
 import config
 import numpy as np
 

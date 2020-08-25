@@ -57,7 +57,9 @@ class LeapTab(QWidget):
         curve_plt.setYRange(*y_lim)
         curve = curve_plt.plot([], [], pen=pg.mkPen(color=(0, 0, 255)))
         return curve
+
     def leap_process_data(self, data_dict):
         a = 1
 
-
+    def set_fire_tab_signal(self, is_fire_signal):
+        pass
