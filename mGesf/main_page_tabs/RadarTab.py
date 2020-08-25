@@ -61,7 +61,7 @@ class RadarTab(QWidget):
         self.info_vl.addWidget(self.info_label)
 
         # connect the mmWave frame signal to the function that processes the data
-        self.mmw_worker.signal_mmw_radar_tab.connect(self.radar_process_mmw_data)
+        self.mmw_worker.signal_data.connect(self.radar_process_mmw_data)
 
         # prepare the sensor interface
         # if mmw_interface:

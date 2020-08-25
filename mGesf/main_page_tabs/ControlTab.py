@@ -58,7 +58,7 @@ class ControlTab(QWidget):
 
         # mmW worker
         self.mmw_worker = mmw_worker
-        self.mmw_worker.signal_mmw_control_tab.connect(self.control_process_mmw_data)
+        self.mmw_worker.signal_data.connect(self.control_process_mmw_data)
 
         # UWB worker
         self.uwb_worker = uwb_worker

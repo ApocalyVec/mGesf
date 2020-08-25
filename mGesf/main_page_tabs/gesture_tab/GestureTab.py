@@ -65,7 +65,7 @@ class GestureTab(QWidget):
                                                       graph=self.mmw_doppler_display)
         self.radar_record_checkbox = init_checkBox(parent=self.radar_runtime_block, function=self.radar_clickBox)
         self.radar_record_checkbox.setChecked(True)
-        mmw_worker.signal_mmw_gesture_tab.connect(self.display_mmw_data)
+        mmw_worker.signal_data.connect(self.display_mmw_data)
 
         # -------------------- fourth class -------------------
         #       1-1. leap runtime block
@@ -104,7 +104,7 @@ class GestureTab(QWidget):
         # Initialize tab screen
         self.record_signal.connect(self.record_signal_action)
         self.tabs = QTabWidget()
-        self.tab_idp = IndexPen(self.record_signal, mmw_worker.signal_mmw_gesture_tab)
+        self.tab_idp = IndexPen(self.record_signal, mmw_worker.signal_data)
         self.tab_thm = ThuMouse()
         self.tab_dft = DesktopFingertip()
 
@@ -210,3 +210,11 @@ class GestureTab(QWidget):
     def clear_buffer(self):
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []},
                        'xethrux4': {'timestamps': [], 'frame': [], 'baseband_frame': [], 'clutter_removal_frame': [], 'clutter_removal_baseband_frame': []}}
+
+    def set_fire_tab_signal(self, is_fire_signal):
+        if is_fire_signal:
+            print('enabled xethrux4 signal')
+            self.Xe4Thru_worker.signal_data.connect(self.control_process_xethru_data)
+        else:
+            print('enabled xethrux4 signal')
+            self.Xe4Thru_worker.signal_data.disconnect(self.control_process_xethru_data)
