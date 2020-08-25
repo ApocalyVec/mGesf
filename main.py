@@ -47,7 +47,7 @@ if __name__ == '__main__':
     userPortName = 'COM8'  # set this to your num_range_bin port
     _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     '''
-    # _mmw_interface = None
+    # _mmw_interf                                                                                                                                                                                                                                                                                                                ace = None
     _mmw_interface = MmWaveSensorInterface(num_range_bin=num_range_bin)
     '''
     Uncomment these lines if you have DecaWave UWB device

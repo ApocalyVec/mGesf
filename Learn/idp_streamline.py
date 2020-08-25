@@ -24,7 +24,7 @@ input_interval = 4.0
 points_per_sample = round(resolve_points_per_sample(period, input_interval))
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
-X_dict, Y = load_idp('D:\ResearchProjects\mGesf\data',
+X_dict, Y = load_idp('D:\PcProjects\mGesf\data',
                      sensor_feature_dict=sensor_feature_dict,
                      complete_class=idp_complete_classes, encoder=encoder)
 

@@ -130,7 +130,7 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
         interval_durations = [(max(its) - min(its)) for its in interval_ts]
         interval_variance = np.array(interval_durations) - input_interval
         try:
-            assert np.std(interval_variance) < 33e-3 # disregard the last
+            assert np.std(interval_variance) < 0.085 # disregard the last
         except AssertionError:
             print('np.std(interval_variance) = ' + str(np.std(interval_variance)))
             raise Exception('Interval std is too high.')

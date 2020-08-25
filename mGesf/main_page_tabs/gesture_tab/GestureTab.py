@@ -64,6 +64,7 @@ class GestureTab(QWidget):
         self.radar_runtime_view = self.init_spec_view(parent=self.radar_runtime_block, label="Radar",
                                                       graph=self.mmw_doppler_display)
         self.radar_record_checkbox = init_checkBox(parent=self.radar_runtime_block, function=self.radar_clickBox)
+        self.radar_record_checkbox.setChecked(True)
         mmw_worker.signal_mmw_gesture_tab.connect(self.display_mmw_data)
 
         # -------------------- fourth class -------------------
@@ -92,6 +93,7 @@ class GestureTab(QWidget):
         self.xethrux4_runtime_view = self.init_spec_view(parent=self.xethrux4_runtime_block, label="XeThruX4",
                                                          graph=self.xethrux4_ir_spectrogram_display)
         self.xethrux4_record_checkbox = init_checkBox(parent=self.xethrux4_runtime_block, function=self.xethrux4_clickBox)
+        self.xethrux4_record_checkbox.setChecked(True)
 
         # -------------------- third class --------------------
         #   1. ITD block

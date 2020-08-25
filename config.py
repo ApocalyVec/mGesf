@@ -48,7 +48,7 @@ init_xeThruX4_data_dict = {'frame': None,
                            'clutter_removal_frame': None,
                            'clutter_removal_baseband_frame': None,
                            'ir_spectrogram': None}
-xethrux4_default_com_port = 'COM13'
+xethrux4_default_com_port = 'COM14'
 xethrux4_default_fps = 25
 
 # gesture tab
