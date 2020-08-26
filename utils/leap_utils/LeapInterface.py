@@ -1,6 +1,10 @@
 import socket
 import time
 import select
+import base64
+from PIL import Image
+import matplotlib.pyplot as plt
+from io import BytesIO
 
 from mGesf.exceptions import LeapPortTimeoutError
 
@@ -29,9 +33,20 @@ class LeapInterface:
         # this function should return NONE WITHOUT blocking if a frame is not complete
         # return random.random()
         frame = self._get_frame_from_network_port()
+        if frame[0] == ' ':
+            frame = frame[1:]
+        if frame[len(frame)-1] == ' ':
+            frame = frame[:len(frame)-1]
+
+        # have this so that first 5 will be used to make info, and last 6 be image
         print(frame)
-        frame = [float(x) for x in frame.split(' ')]
-        return frame, None  # TODO add the leap camera image
+        frame = [x for x in frame.split(' ')]
+        frame_info = frame[:5]
+        #frame_info = frame[len(frame)-2]
+        frame_info = [float(x) for x in frame_info]
+        #frame_image = frame[len(frame)-1]
+        frame_image = frame[5]
+        return frame_info, frame_image
 
     def stop_sensor(self):
         self._send_stop_command()
@@ -56,9 +71,15 @@ class LeapInterface:
             self.clientsocket[0].setblocking(False)
             ready = select.select([self.clientsocket[0]], [], [], timeout)
             if ready[0]:
-                return self.clientsocket[0].recv(1024).decode()  # Gets the incoming message
+                #msg = self.clientsocket[0].recv(1024)
+                msg = self.clientsocket[0].recv(65566)
+                #msg = self.clientsocket[0].recv(100000)
+                #msg = self.clientsocket[0].recv(200000)
+                #msg = self.clientsocket[0].recv(1000000)
+                return msg.decode()  # Gets the incoming message
             else:
-                return '0.0 0.0 0.0 0.0 0.0'
+                return '0.0 0.0 0.0 0.0 0.0 iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAHElEQVQYGWP8z8AARIQBE2ElEBWjCvGGFNHBAwA9nAIS02wekwAAAABJRU5ErkJggg=='
+                # return ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' ' + '0.0' + ' '
 
     def _send_stop_command(self):
         self.running = False

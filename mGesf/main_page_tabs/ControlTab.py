@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraph
 import pyqtgraph as pg
 
 from mGesf.main_page_tabs.XeThruX4ControlPane import XeThruX4ControlPane
-from utils.img_utils import array_to_colormap_qim
+from utils.img_utils import array_to_colormap_qim, array_to_colormap_qim_leap
 
 import mGesf.workers as workers
 from utils.GUI_main_window import *
@@ -67,6 +67,8 @@ class ControlTab(QWidget):
         # LeapMotion worker
         self.leap_worker = leap_worker
         self.leap_worker.signal_leap.connect(self.control_process_leap_data)
+        self.leap_display = QGraphicsPixmapItem()
+
 
         # create the data buffers
         self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []}}
@@ -173,9 +175,9 @@ class ControlTab(QWidget):
                                                label=config.sensor_btn_label,
                                                function=self.leap_connection_btn_action)
 
-        self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime")
+        self.leap_runtime_view = self.init_spec_view(parent=self.leap_block, label="Runtime", graph=self.leap_display)
         self.leap_record_checkbox = init_checkBox(parent=self.leap_block, function=self.leap_clickBox)
-        self.leap_scatter = self.init_leap_scatter(parent=self.leap_runtime_view, label="LeapMouse")
+        # self.leap_scatter = self.init_leap_scatter(parent=self.leap_runtime_view, label="LeapMouse")
 
         # -------------------- fifth class --------------------
         #           1-1-3. UWB block
@@ -482,8 +484,12 @@ class ControlTab(QWidget):
         # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
 
     def control_process_leap_data(self, data_dict):
-        new_x_pos, new_y_pos = data_dict['leapmouse'][3], data_dict['leapmouse'][4]
-        self.leap_scatter.setData([new_x_pos], [new_y_pos])
+        # new_x_pos, new_y_pos = data_dict['leapmouse'][3], data_dict['leapmouse'][4]
+        # self.leap_scatter.setData([new_x_pos], [new_y_pos])
+        leap_image_heatmap_qim = array_to_colormap_qim_leap(data_dict['image'])
+        leap_image_qpixmap = QPixmap(leap_image_heatmap_qim)
+        leap_image_qpixmap = leap_image_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        self.leap_display.setPixmap(leap_image_qpixmap)
 
     def radar_clickBox(self, state):
 

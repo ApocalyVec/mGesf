@@ -1,15 +1,21 @@
+import base64
 import time
 from collections import deque
+from io import BytesIO
 
+import PIL
 import numpy as np
+from PIL import Image
 
 from PyQt5.QtCore import pyqtSignal, QObject
 import pyqtgraph as pg
 
 import config
 from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
+from utils.img_utils import rgba2rgb
 from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb, sim_leap, sim_xe4thru
 
+import matplotlib.pyplot as plt
 import mGesf.exceptions as exceptions
 
 import numpy as np
@@ -229,12 +235,20 @@ class LeapWorker(QObject):
     def leap_process_on_tick(self):
         if self._is_running:
             if self._leap_interface:
-                leapMouse_data, image = self._leap_interface.process_frame()
+                leapMouse_data, image_bytes = self._leap_interface.process_frame()
+                image_array = self.png_bytes_to_array(image_bytes)
+                #print('image array looks like ', image_array)
             else:
-                leapMouse_data, image = sim_leap()
+                leapMouse_data, image_array = sim_leap()
             data_dict = {'leapmouse': leapMouse_data,
-                         'image': image}
+                         'image': image_array}
             self.signal_leap.emit(data_dict)
+
+    def png_bytes_to_array(self, bt):
+        bt_decoded = base64.b64decode(bt)
+        io = BytesIO(bt_decoded)
+        im = Image.open(io)
+        return np.array(im)
 
     def start_leap(self):
         if self._leap_interface:  # if the sensor interface is established
@@ -317,4 +331,3 @@ class Xe4ThruWorker(QObject):
     def stop_sensor(self):
         self._is_running = False
         self.xeThruX4Sensor_interface.stop_sensor() if self.xeThruX4Sensor_interface else print('Stopping simulating')
-
