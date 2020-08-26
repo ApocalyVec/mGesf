@@ -172,4 +172,7 @@ class LeapTab(QWidget):
         pts_plt.addItem(scatter)
         return scatter
 
+    def set_fire_tab_signal(self, is_fire_signal):
+        pass
+
 
