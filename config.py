@@ -1,6 +1,7 @@
 WINDOW_HEIGHT = 720
 WINDOW_WIDTH = 720
 
+debug = False
 # ============== labels ==============
 # button labels
 
@@ -42,12 +43,14 @@ uwb_tag_port = 'Tag port: '
 uwb_tag_default_port = 'COM30'
 uwb_anchor_default_port = 'COM32'
 
-# xeThruX4 control
+# xeThruX4 control tab
 init_xeThruX4_data_dict = {'frame': None,
-                       'baseband_frame': None,
-                       'clutter_removal_frame': None,
-                       'clutter_removal_baseband_frame': None,
-                       'ir_spectrogram': None}
+                           'baseband_frame': None,
+                           'clutter_removal_frame': None,
+                           'clutter_removal_baseband_frame': None,
+                           'ir_spectrogram': None}
+xethrux4_default_com_port = 'COM16'
+xethrux4_default_fps = 25
 
 # gesture tab
 gesture_index_pen_label = "Index Pen"
@@ -85,8 +88,8 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "COM14"
-control_tab_u_port_default = "COM13"
+control_tab_d_port_default = "COM10"
+control_tab_u_port_default = "COM11"
 
 # operation tab
 # indexPen_classes_default = "A B C D E"
@@ -122,7 +125,7 @@ countdown_animation_text = ["Steady...", "..Ready,", "GO!"]
 instruction_next_text = "... next: "
 instruction_end_text = "NO NEXT"
 
-control_tab_config_file_path_default = 'mGesf/profiles/aop/EV2/30fps_rdHeatmap_aziHeatmap.cfg'
+control_tab_config_file_path_default = 'mGesf/profiles/aop/EV2/30fps_rdHeatmap_aziHeatmap_scatteroff.cfg'
 data_path_default = '../data'
 
 radar_box_checked = "Checked: Radar recording box"
@@ -155,6 +158,7 @@ ra_shape = (8, 64)
 # # recording tab
 recording_interval = 4
 repeat_times = 10
+repeat_time_default = 2
 
 # ============== links ==============
 # recording tab

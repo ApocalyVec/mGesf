@@ -46,8 +46,8 @@ class MmWaveSensorInterface:
         print('mmw Interface: started!')
 
     def process_frame(self):
-        detected_points = None
-        while detected_points is None:
+        detected_points, range_profile, rd_heatmap, azi_heatmap = None, None, None, None
+        while detected_points is None and range_profile is None and rd_heatmap is None and azi_heatmap is None:
             try:
                 detected_points, range_profile, rd_heatmap, azi_heatmap = self.parse_stream()
             except (BufferOverFlowError, DataPortNotOpenError, GeneralMmWError) as e:

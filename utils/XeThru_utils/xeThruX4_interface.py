@@ -163,7 +163,7 @@ class xeThruX4SensorInterface:
         else:
             self.clutter = signal_clutter_ratio * self.clutter + (1 - signal_clutter_ratio) * rf_frame
             clutter_removal_rf_frame = rf_frame - self.clutter
-            self.clutter_removal_frame_history.append(clutter_removal_rf_frame)
+            # self.clutter_removal_frame_history.append(clutter_removal_rf_frame)
             return clutter_removal_rf_frame
 
     def reset_buffer(self):

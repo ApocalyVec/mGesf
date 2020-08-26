@@ -53,7 +53,7 @@ class IdpRecording(QWidget):
         self.repeats_block, self.repeat_slider_view = init_slider_bar_box(self.input_block,
                                                                           label=config.operation_repeats_label,
                                                                           max_value=config.repeat_times)
-
+        self.repeat_slider_view.setValue(config.repeat_time_default)
         self.classes_block, self.classes_textbox = init_inputBox(self.input_block,
                                                                  label=config.operation_classes_label,
                                                                  label_bold=False,
@@ -65,7 +65,8 @@ class IdpRecording(QWidget):
                                                                             default_input=
                                                                             config.indexPen_subjectName_default)
         self.randomize_char_checkbox = init_checkBox(parent=self.input_block, label='Randomize Order of Characters', function=self.randomize_char_action)
-        self.is_randomize_char = False
+        self.randomize_char_checkbox.setChecked(True)
+        self.is_randomize_char = self.randomize_char_checkbox.isChecked()
 
         self.training_dir_block, self.training_dir_textbox = init_inputBox(self.input_block,
                                                                            label=config.trainingDataPath_label,
@@ -438,7 +439,7 @@ class IdpRecording(QWidget):
             _user_input = config.indexPen_classes_default
 
         # change to a list
-        classes = _user_input.split(" ")
+        classes = [x for x in _user_input.split(" ") if x != '']
         return classes
 
     def interrupt_btn_action(self):

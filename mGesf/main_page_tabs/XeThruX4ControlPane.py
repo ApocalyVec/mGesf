@@ -5,7 +5,7 @@ from PyQt5 import QtWidgets, QtCore
 import config as config
 from mGesf import workers
 from utils.GUI_main_window import init_container, init_combo_box, init_inputBox, init_checkBox, init_button
-from utils.GUI_operation_tab import init_slider_bar_box
+from utils.GUI_operation_tab import init_slider_bar_box, init_xethrux4_runtime_view
 import pyqtgraph as pg
 from utils.XeThru_utils.xeThruX4_algorithm import *
 
@@ -50,7 +50,7 @@ class XeThruX4ControlPane(QWidget):
         self.XeThruX4_port_block, self.XeThruX4_port_textbox = init_inputBox(parent=self.main_page,
                                                                              label="Port (device_name): ",
                                                                              label_bold=True,
-                                                                             default_input="COM8")
+                                                                             default_input=config.xethrux4_default_com_port)
 
         self.freq_block = init_container(parent=self.main_page,
                                          label="Frequency Band",
@@ -88,7 +88,7 @@ class XeThruX4ControlPane(QWidget):
                                                                    label_bold=True,
                                                                    min_value=10,
                                                                    max_value=25)
-        self.fps_slider_view.setValue(23)
+        self.fps_slider_view.setValue(config.xethrux4_default_fps)
 
         # #       - check box
         # self.baseband_block = init_container(parent=self.main_page,
@@ -106,7 +106,7 @@ class XeThruX4ControlPane(QWidget):
                                      label="Reset to default",
                                      function=self.reset_btn_action)
 
-        self.rf_curve, self.baseband_curve = self.init_xethrux4_runtime_view(parent=self.main_page, label="RF frame")
+        self.rf_curve, self.baseband_curve = init_xethrux4_runtime_view(parent=self.main_page, label="RF frame")
 
         self.show()
 
@@ -233,7 +233,7 @@ class XeThruX4ControlPane(QWidget):
         self.low_freq_checkbox.setChecked(True)
         self.min_range_textbox.setText("-0.1")
         self.max_range_textbox.setText("0.4")
-        self.fps_slider_view.setValue(23)
+        self.fps_slider_view.setValue(config.xethrux4_default_fps)
 
 
         self.state.clear()
@@ -242,34 +242,12 @@ class XeThruX4ControlPane(QWidget):
     def device_onChanged(self):
         print("conbobox selection changed. Function not implemented..")
 
-    def init_xethrux4_runtime_view(self, parent, label):
-        if label:
-            ql = QLabel()
-            ql.setAlignment(QtCore.Qt.AlignTop)
-            ql.setAlignment(QtCore.Qt.AlignCenter)
-            ql.setText(label)
-            parent.addWidget(ql)
-        rf_frame = pg.PlotWidget()
-        parent.addWidget(rf_frame)
-
-        # rf_frame.setXRange(*x_lim)
-        # rf_frame.setYRange(*y_lim)
-
-        pen = pg.mkPen(color=(0, 0, 255), width=1)
-        rf_curve = rf_frame.plot([], [], pen=pen, name="rf_curve")
-
-        pen = pg.mkPen(color=(255, 0, 0), width=2)
-        baseband = rf_frame.plot([], [], pen=pen, name="baseband_curve")
-
-        return rf_curve, baseband
-
+    @QtCore.pyqtSlot(dict)
     def control_process_xethru_data(self, data_dict):
         if data_dict['frame'] is not None:
             xsamples = list(range(data_dict['frame'].shape[0]))
             rf_frame = data_dict['frame']
             baseband_frame = data_dict['baseband_frame']
-            clutter_removal_rf_frame = data_dict['clutter_removal_frame']
-            clutter_removal_baseband_frame = data_dict['clutter_removal_baseband_frame']
 
             self.rf_curve.setData(xsamples, rf_frame)
             self.baseband_curve.setData(xsamples, baseband_frame)
