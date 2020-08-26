@@ -6,7 +6,7 @@ import numpy as np
 
 from Learn.data_in import resolve_points_per_sample
 from utils.data_utils import load_idp
-from utils.learn_utils import make_model
+from utils.learn_utils import make_model, make_model_simple
 from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ input_interval = 4.0
 points_per_sample = round(resolve_points_per_sample(period, input_interval))
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
-X_dict, Y = load_idp('D:/PcProjects/mGesf/data/temp/ag',
+X_dict, Y = load_idp('D:/PcProjects/mGesf/data/temp/hw',
                      sensor_feature_dict=sensor_feature_dict,
                      complete_class=idp_complete_classes, encoder=encoder)
 
@@ -41,7 +41,7 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 #####################################################################################
-model = make_model(classes=idp_complete_classes, points_per_sample=points_per_sample)
+model = make_model_simple(classes=idp_complete_classes, points_per_sample=points_per_sample)
 
 es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
 mc = ModelCheckpoint(

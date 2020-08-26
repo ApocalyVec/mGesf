@@ -94,7 +94,7 @@ def idp_preprocess_legacy(path, input_interval, classes, num_repeat, period=33):
     return labeled_sample_dict
 
 
-def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict: dict, labeled_sample_dict:dict):
+def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict: dict, labeled_sample_dict: dict):
     """
     In this implementation, the tail of the data that does not make up an input_interval is automatically ignored.
     However, it is important to note that if the actual last sample does not expand a full input_interval, it also will
@@ -110,21 +110,34 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
     """
     sample_frame_durations = []
     points_per_sample = round(resolve_points_per_sample(period, input_interval))
-
+    num_frame = points_per_sample * len(char_set)
     # TODO change feature_data to a generator
     sensor_ts_data = [(data[sensor]['timestamps'], [(f, data[sensor][f]) for f in feature_list])
                       for sensor, feature_list in sensor_features_dict.items()]
     list_feature_samples = []
     for list_ts, list_sensor_data in sensor_ts_data:
-        if len(list_ts) > 7201:
+        if len(list_sensor_data[0][1]) == num_frame - 1:
+            list_sensor_data = [(feature_name,
+                                 frames + [frames[-1]])
+                                for feature_name, frames in list_sensor_data]
+        elif len(list_ts) > num_frame + 1 or len(list_ts) < num_frame - 1:
             raise Exception()
-        list_feature_samples = list_feature_samples + [(sd[0], slice_per(sd[1], step=points_per_sample)) for sd in list_sensor_data]  # discard the tail
-        list_feature_samples = [(featuren_name, samples[:len(char_set)])for featuren_name, samples in list_feature_samples]
+        list_feature_samples = list_feature_samples + [(sd[0], slice_per(sd[1], step=points_per_sample)) for sd in
+                                                       list_sensor_data]  # discard the tail
+        list_feature_samples = [(featuren_name, samples[:len(char_set)]) for featuren_name, samples in
+                                list_feature_samples]
+        # change to NHWC format to comply with GPU requirements
+        list_feature_samples = [(featuren_name,
+                                 [[np.rollaxis(frm, 0, 3) for frm in smp]
+                                  for smp in samples])
+                                for featuren_name, samples in list_feature_samples]
+
         # test for interval time
         try:
             all(len(samples) == len(char_set) for feature_name, samples in list_feature_samples)
         except AssertionError:
-            print('len(interval_sensor_data) = ' + str([len(samples) for feature_name, samples in list_feature_samples]))
+            print(
+                'len(interval_sensor_data) = ' + str([len(samples) for feature_name, samples in list_feature_samples]))
             print('len(char_set) = ' + str(len(char_set)))
             raise Exception('number of samples does not match the number of characters in the given set')
         interval_ts = slice_per(list_ts, step=points_per_sample)
@@ -132,7 +145,7 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
         interval_durations = [(max(its) - min(its)) for its in interval_ts]
         interval_variance = np.array(interval_durations) - input_interval
         try:
-            assert np.std(interval_variance) < 0.1 # disregard the last
+            assert np.std(interval_variance) < 0.1  # disregard the last
         except AssertionError:
             print('np.std(interval_variance) = ' + str(np.std(interval_variance)))
             raise Exception('Interval std is too high.')
