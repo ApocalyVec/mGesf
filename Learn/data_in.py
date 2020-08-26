@@ -120,7 +120,7 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
             list_sensor_data = [(feature_name,
                                  frames + [frames[-1]])
                                 for feature_name, frames in list_sensor_data]
-        elif len(list_ts) > num_frame + 1 or len(list_ts) < num_frame - 1:
+        elif len(list_ts) > num_frame + 30 or len(list_ts) < num_frame - 1:
             raise Exception()
         list_feature_samples = list_feature_samples + [(sd[0], slice_per(sd[1], step=points_per_sample)) for sd in
                                                        list_sensor_data]  # discard the tail
@@ -145,7 +145,7 @@ def idp_preprocess(data, char_set, input_interval, period, sensor_features_dict:
         interval_durations = [(max(its) - min(its)) for its in interval_ts]
         interval_variance = np.array(interval_durations) - input_interval
         try:
-            assert np.std(interval_variance) < 0.1  # disregard the last
+            assert np.std(interval_variance) < 0.3  # disregard the last
         except AssertionError:
             print('np.std(interval_variance) = ' + str(np.std(interval_variance)))
             raise Exception('Interval std is too high.')

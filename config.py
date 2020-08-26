@@ -92,8 +92,10 @@ control_tab_d_port_default = "COM10"
 control_tab_u_port_default = "COM11"
 
 # operation tab
-# indexPen_classes_default = "A B C D E"
-indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
+indexPen_classes_default = "A B C D E"
+# indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
+
+is_randomize_char_default = False
 
 indexPen_subjectName_default = "god"
 indexPen_repeatTime_default = 10
@@ -157,8 +159,8 @@ ra_shape = (8, 64)
 # operation tab
 # # recording tab
 recording_interval = 4
-repeat_times = 10
-repeat_time_default = 2
+repeat_times_max = 10
+repeat_time_default = 10
 
 # ============== links ==============
 # recording tab

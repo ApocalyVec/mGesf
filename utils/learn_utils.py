@@ -65,7 +65,7 @@ def make_model_simple(classes, points_per_sample):
     mmw_rdpl_TDCNN = Sequential()
     mmw_rdpl_TDCNN.add(
         TimeDistributed(
-            Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_last',
+            Conv2D(filters=4, kernel_size=(3, 3), data_format='channels_last',
                    # kernel_regularizer=l2(0.0005),
                    kernel_initializer='random_uniform'),
             input_shape=mmw_rdpl_input))
@@ -78,7 +78,7 @@ def make_model_simple(classes, points_per_sample):
     mmw_razi_TDCNN = Sequential()
     mmw_razi_TDCNN.add(
         TimeDistributed(
-            Conv2D(filters=8, kernel_size=(3, 3), data_format='channels_last',
+            Conv2D(filters=4, kernel_size=(3, 3), data_format='channels_last',
                    # kernel_regularizer=l2(0.0005),
                    kernel_initializer='random_uniform'),
             input_shape=mmw_razi_input))
@@ -90,7 +90,7 @@ def make_model_simple(classes, points_per_sample):
     regressive_tensor = LSTM(units=32, return_sequences=False, kernel_initializer='random_uniform')(merged)
     regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
 
-    regressive_tensor = Dense(units=64)(regressive_tensor)
+    regressive_tensor = Dense(units=32)(regressive_tensor)
     regressive_tensor = Dropout(rate=0.2)(regressive_tensor)
     regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
 
