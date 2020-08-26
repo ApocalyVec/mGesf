@@ -71,7 +71,11 @@ class LeapInterface:
             self.clientsocket[0].setblocking(False)
             ready = select.select([self.clientsocket[0]], [], [], timeout)
             if ready[0]:
-                msg = self.clientsocket[0].recv(1024)
+                #msg = self.clientsocket[0].recv(1024)
+                msg = self.clientsocket[0].recv(65566)
+                #msg = self.clientsocket[0].recv(100000)
+                #msg = self.clientsocket[0].recv(200000)
+                #msg = self.clientsocket[0].recv(1000000)
                 return msg.decode()  # Gets the incoming message
             else:
                 return '0.0 0.0 0.0 0.0 0.0 iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAHElEQVQYGWP8z8AARIQBE2ElEBWjCvGGFNHBAwA9nAIS02wekwAAAABJRU5ErkJggg=='

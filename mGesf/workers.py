@@ -12,6 +12,7 @@ import pyqtgraph as pg
 
 import config
 from utils.decaWave_utils.DecaUWB_interface import UWBSensorInterface
+from utils.img_utils import rgba2rgb
 from utils.simulation import sim_heatmap, sim_detected_points, sim_imp, sim_uwb, sim_leap, sim_xe4thru
 
 import matplotlib.pyplot as plt
@@ -242,11 +243,12 @@ class LeapWorker(QObject):
             if self._leap_interface:
                 leapMouse_data, image_bytes = self._leap_interface.process_frame()
                 image_array = self.png_bytes_to_array(image_bytes)
+                #print('image array looks like ', image_array)
             else:
                 leapMouse_data, image_array = sim_leap()
             data_dict = {'leapmouse': leapMouse_data,
                          'image': image_array}
-            # self.signal_leap.emit(data_dict)
+            self.signal_leap.emit(data_dict)
 
     def png_bytes_to_array(self, bt):
         bt_decoded = base64.b64decode(bt)

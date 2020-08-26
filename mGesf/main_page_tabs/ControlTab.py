@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraph
 import pyqtgraph as pg
 
 from mGesf.main_page_tabs.XeThruX4ControlPane import XeThruX4ControlPane
-from utils.img_utils import array_to_colormap_qim
+from utils.img_utils import array_to_colormap_qim, array_to_colormap_qim_leap
 
 import mGesf.workers as workers
 from utils.GUI_main_window import *
@@ -489,7 +489,7 @@ class ControlTab(QWidget):
     def control_process_leap_data(self, data_dict):
         # new_x_pos, new_y_pos = data_dict['leapmouse'][3], data_dict['leapmouse'][4]
         # self.leap_scatter.setData([new_x_pos], [new_y_pos])
-        leap_image_heatmap_qim = array_to_colormap_qim(data_dict['image'])
+        leap_image_heatmap_qim = array_to_colormap_qim_leap(data_dict['image'])
         leap_image_qpixmap = QPixmap(leap_image_heatmap_qim)
         leap_image_qpixmap = leap_image_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.leap_display.setPixmap(leap_image_qpixmap)
