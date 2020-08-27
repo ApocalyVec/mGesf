@@ -12,6 +12,7 @@ from mGesf.main_page_tabs.XeThruX4ControlPane import XeThruX4ControlPane
 from utils.GUI_operation_tab import init_slider_bar_box, init_smooth_slider
 from utils.data_utils import scale_rd_spectrogram
 from utils.img_utils import array_to_colormap_qim, process_clutter_removed_spectrogram, plot_spectrogram
+from utils.img_utils import array_to_colormap_qim, array_to_colormap_qim_leap
 
 import mGesf.workers as workers
 from utils.GUI_main_window import *
@@ -515,8 +516,12 @@ class ControlTab(QWidget):
     # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
 
     def control_process_leap_data(self, data_dict):
-        new_x_pos, new_y_pos = data_dict['leapmouse'][3], data_dict['leapmouse'][4]
-        self.leap_scatter.setData([new_x_pos], [new_y_pos])
+        # new_x_pos, new_y_pos = data_dict['leapmouse'][3], data_dict['leapmouse'][4]
+        # self.leap_scatter.setData([new_x_pos], [new_y_pos])
+        leap_image_heatmap_qim = array_to_colormap_qim_leap(data_dict['image'])
+        leap_image_qpixmap = QPixmap(leap_image_heatmap_qim)
+        leap_image_qpixmap = leap_image_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        self.leap_display.setPixmap(leap_image_qpixmap)
 
     def mmw_clickBox(self, state):
 
