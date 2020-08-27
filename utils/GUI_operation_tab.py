@@ -37,6 +37,28 @@ def init_slider_bar_box(parent, label=None, vertical=False, label_bold=False, mi
 
     return line_container, slider_view
 
+def init_smooth_slider(parent, slider_min, slider_max, slider_tick_interval, label=None, vertical=False, label_bold=False, onChange_func=None):
+    line_container = init_container(parent=parent, vertical=vertical)
+    if label:
+        ql = QLabel()
+        if label_bold:
+            ql.setStyleSheet("font: bold 14px;")
+        else:
+            ql.setStyleSheet("font: 14px;")
+
+        ql.setText(label)
+        line_container.addWidget(ql)
+
+    sl = QSlider(Qt.Horizontal)
+    sl.setMinimum(slider_min)
+    sl.setMaximum(slider_max)
+    sl.setTickPosition(QSlider.TicksBelow)
+    sl.setTickInterval(slider_tick_interval)
+    if onChange_func is not None:
+        sl.valueChanged.connect(onChange_func)
+    line_container.addWidget(sl)
+
+    return sl
 
 def init_countdown_block(parent, label=None, bold=False, font=14):
     vl = init_container(parent, style="background-color: white;")

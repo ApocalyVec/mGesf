@@ -88,12 +88,14 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "COM10"
-control_tab_u_port_default = "COM11"
+control_tab_d_port_default = "COM3"
+control_tab_u_port_default = "COM4 "
 
 # operation tab
-# indexPen_classes_default = "A B C D E"
-indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
+indexPen_classes_default = "F G H I J"
+# indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
+
+is_randomize_char_default = False
 
 indexPen_subjectName_default = "god"
 indexPen_repeatTime_default = 10
@@ -152,14 +154,22 @@ button_style_classic = "background-color: " + button_color + "; border-style: ou
 # ============== values ==============
 
 rd_shape = (8, 16)
+rd_vmax = 800
+rd_vmin = -800
 ra_shape = (8, 64)
+rd_controlGestureTab_display_dim = 128
+rd_mmwTab_display_dim = 512
+rd_rc_csr_default = ra_rc_csr_default = 50
 
 # operation tab
 # # recording tab
 recording_interval = 4
-repeat_times = 10
-repeat_time_default = 2
+repeat_times_max = 10
+repeat_time_default = 10
 
 # ============== links ==============
 # recording tab
 help_link = "https://docs.google.com/document/d/1KvSAkytYb9Xw-CEyHy4yt82QQG81bF1LhDo5BtfKlxM/edit?usp=sharing"
+
+# global switches
+is_plot_mmWave_rc = True

@@ -37,7 +37,8 @@ def split(word):
     return [char for char in word]
 
 
-def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, input_interval=4.0, period=33.45):
+def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, sensor_sample_points_dict,
+             input_interval=4.0):
     '''
     load everything in the given path
     :return:
@@ -55,7 +56,8 @@ def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, input
             subject_name = fn.split('_')[-2]
             data = pickle.load(open(data_path, 'rb'))
             label = pickle.load(open(label_path, 'rb'))
-            labeled_sample_dict = idp_preprocess(data, char_set=label, input_interval=input_interval, period=period,
+            labeled_sample_dict = idp_preprocess(data, char_set=label, input_interval=input_interval,
+                                                 sensor_sample_points_dict=sensor_sample_points_dict,
                                                  sensor_features_dict=sensor_feature_dict,
                                                  labeled_sample_dict=labeled_sample_dict)
     # add to x and y
@@ -331,3 +333,18 @@ class Queue:
             return temp
         else:
             return None
+
+
+rd_max, rd_min = 1500, -1500
+
+
+def scale_rd_spectrogram(spectrogram):
+    return 255 * (spectrogram - rd_min) / (rd_max - rd_min)
+
+
+def clutter_removal(cur_frame, clutter, signal_clutter_ratio):
+    if clutter is None:
+        clutter = cur_frame
+    else:
+        clutter = signal_clutter_ratio * clutter + (1 - signal_clutter_ratio) * cur_frame
+    return cur_frame - clutter, clutter

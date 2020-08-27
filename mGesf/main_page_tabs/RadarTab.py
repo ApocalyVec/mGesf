@@ -12,7 +12,7 @@ import pyqtgraph as pg
 from PyQt5 import QtCore
 
 import config
-from utils.img_utils import array_to_colormap_qim
+from utils.img_utils import array_to_colormap_qim, process_clutter_removed_spectrogram, plot_spectrogram
 
 import numpy as np
 import mGesf.workers as MMW_worker
@@ -142,16 +142,22 @@ class RadarTab(QWidget):
         """
         # update range doppler spectrogram
         if data_dict['range_doppler'] is not None:
-            doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
-            doppler_qpixmap = QPixmap(doppler_heatmap_qim)
-            doppler_qpixmap = doppler_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+            doppler_qpixmap = \
+                process_clutter_removed_spectrogram(data_dict['range_doppler_rc'], config.rd_vmax,
+                                                    config.rd_vmin, config.rd_shape[0],
+                                                    height=config.rd_mmwTab_display_dim,
+                                                    width=config.rd_mmwTab_display_dim) \
+                    if config.is_plot_mmWave_rc else plot_spectrogram(data_dict['range_doppler'], )
             self.doppler_display.setPixmap(doppler_qpixmap)
 
         # update range azimuth spectrogram
         if data_dict['range_azi'] is not None:
-            azi_heatmap_qim = array_to_colormap_qim(data_dict['range_azi'])
-            azi_qpixmap = QPixmap(azi_heatmap_qim)
-            azi_qpixmap = azi_qpixmap.scaled(512, 512, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+            azi_qpixmap = \
+                process_clutter_removed_spectrogram(data_dict['range_azi_rc'], config.rd_vmax,
+                                                    config.rd_vmin, config.ra_shape[0],
+                                                    height=config.rd_mmwTab_display_dim,
+                                                    width=config.rd_mmwTab_display_dim) \
+                    if config.is_plot_mmWave_rc else plot_spectrogram(data_dict['range_azi'], )
             self.azi_display.setPixmap(azi_qpixmap)
 
         # update the 2d scatter plot for the detected points

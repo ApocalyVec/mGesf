@@ -9,6 +9,10 @@ from PyQt5.QtWidgets import QGraphicsPixmapItem, QWidget, QGraphicsScene, QGraph
 import pyqtgraph as pg
 
 from mGesf.main_page_tabs.XeThruX4ControlPane import XeThruX4ControlPane
+from utils.GUI_operation_tab import init_slider_bar_box, init_smooth_slider
+from utils.data_utils import scale_rd_spectrogram
+from utils.img_utils import array_to_colormap_qim, process_clutter_removed_spectrogram, plot_spectrogram
+from utils.img_utils import array_to_colormap_qim, array_to_colormap_qim_leap
 from utils.img_utils import array_to_colormap_qim, array_to_colormap_qim_leap
 
 import mGesf.workers as workers
@@ -107,28 +111,29 @@ class ControlTab(QWidget):
         #           1-1-1. Radar block
         #           1-1-2. Leap block
         #           1-1-3. UWB block
-        self.radar_block = init_container(parent=self.RLU_block, label="mmWave Radar", label_position="center",
-                                          style="background-color: " + config.subcontainer_color + ";")
+        self.mmw_block = init_container(parent=self.RLU_block, label="mmWave Radar", label_position="center",
+                                        style="background-color: " + config.subcontainer_color + ";")
         self.leap_block = init_container(parent=self.RLU_block, label="LeapMotion Camera", label_position="center",
                                          style="background-color: " + config.subcontainer_color + ";")
-        self.UWB_block = init_container(parent=self.RLU_block, label="UWB Antenna",
-                                        label_position="center",
-                                        style="background-color: " + config.subcontainer_color + ";")
+        # self.UWB_block = init_container(parent=self.RLU_block, label="UWB Antenna",
+        #                                 label_position="center",
+        #                                 style="background-color: " + config.subcontainer_color + ";")
 
         # UWB radar block is newly added, so the whole block is here.
         # uwb container
-        self.XeThruX4_block = init_container(parent=self.RLU_block, label="UWB Radar",
-                                              label_position="center",
-                                              style="background-color: " + config.subcontainer_color + ";")
+        self.XeThruX4_block = init_container(parent=self.RLU_block, label="XeThruX4 Radar",
+                                             label_position="center",
+                                             style="background-color: " + config.subcontainer_color + ";")
         #   - device number: label
         self.device_number_box = QLabel("Device number: 1")
         self.XeThruX4_block.addWidget(self.device_number_box)
         #   - tabs
         self.XeThruX4tabs = QTabWidget()
-        self.XeThruX4tabs.addTab(XeThruX4ControlPane(Xe4Thru_worker), "UWB Radar 1")
+        self.XeThruX4tabs.addTab(XeThruX4ControlPane(Xe4Thru_worker), "XeThruX4 Radar 1")
         self.XeThruX4_block.addWidget(self.XeThruX4tabs)
         # TODO add uwb radar runtime view here
-        self.XeThruX4_checkbox = init_checkBox(parent=self.XeThruX4_block, function=self.XeThruX4_clickBox)
+        self.XeThruX4_checkbox = init_checkBox(parent=self.XeThruX4_block, label='record XeThruX4?',
+                                               function=self.XeThruX4_clickBox, )
 
         #   - runtime container
 
@@ -158,13 +163,28 @@ class ControlTab(QWidget):
         # self.radar_block_frame = draw_boarder(self.RLU_block, config.WINDOW_WIDTH / 3 * (4 / 5),
         #                                       config.WINDOW_HEIGHT * 4 / 5)
 
-        self.radar_connection_block = init_container(parent=self.radar_block, label="Connection",
-                                                     style="background-color: " + config.container_color + ";")
-        self.radar_sensor_block = init_container(parent=self.radar_block, label="Sensor",
-                                                 style="background-color: " + config.container_color + ";")
-        self.radar_runtime_view = self.init_spec_view(parent=self.radar_block, label="Runtime",
-                                                      graph=self.doppler_display)
-        self.radar_record_checkbox = init_checkBox(parent=self.radar_block, function=self.radar_clickBox)
+        self.mmw_connection_block = init_container(parent=self.mmw_block, label="Connection",
+                                                   style="background-color: " + config.container_color + ";")
+        self.mmw_sensor_block = init_container(parent=self.mmw_block, label="Sensor",
+                                               style="background-color: " + config.container_color + ";")
+        self.mmw_rc_block = init_container(parent=self.mmw_block, label="Clutter Removal",
+                                           style="background-color: " + config.container_color + ";")
+        self.rc_rd_csr_slider = init_smooth_slider(self.mmw_rc_block, 0, 100, 5,
+                                                   label='Doppler Signal Clutter Ratio', onChange_func=self.set_mmw_rc_rd_csr)
+        self.rc_rd_csr_slider.setValue(config.rd_rc_csr_default)
+        self.rc_ra_csr_slider = init_smooth_slider(self.mmw_rc_block, 0, 100, 5,
+                                                   label='Azimuth Signal Clutter Ratio', onChange_func=self.set_mmw_rc_ra_csr)
+        self.rc_ra_csr_slider.setValue(config.ra_rc_csr_default)
+
+        self.mmw_display_rc_checkbox = init_checkBox(parent=self.mmw_rc_block, label='Remove Doppler Clutter',
+                                                     function=self.mmw_rc_cb_clicked)
+        self.mmw_display_rc_checkbox.setChecked(config.is_plot_mmWave_rc)
+
+        self.mmw_runtime_view = self.init_spec_view(parent=self.mmw_block, label="Runtime",
+                                                    graph=self.doppler_display)
+
+        self.mmw_record_checkbox = init_checkBox(parent=self.mmw_block, label='record mmWave?',
+                                                 function=self.mmw_clickBox)
 
         # -------------------- fifth class --------------------
         #           1-1-2. Leap block
@@ -184,53 +204,53 @@ class ControlTab(QWidget):
         #               1-1-3-1. UWB connection button
         #               1-1-3-2. UWB runtime view
 
-        self.uwb_connection_block = init_container(parent=self.UWB_block, label="Connection: ",
-                                                   style="background-color: " + config.container_color + ";")
+        # self.uwb_connection_block = init_container(parent=self.UWB_block, label="Connection: ",
+        #                                            style="background-color: " + config.container_color + ";")
+        #
+        # self.uwb_anchor_block, self.tag_port_textbox = init_inputBox(parent=self.uwb_connection_block,
+        #                                                              label=config.uwb_tag_port,
+        #                                                              label_bold=True,
+        #                                                              default_input=config.uwb_tag_default_port)
+        #
+        # self.uwb_tag_block, self.anchor_port_textbox = init_inputBox(parent=self.uwb_connection_block,
+        #                                                              label=config.uwb_anchor_port,
+        #                                                              label_bold=True,
+        #                                                              default_input=config.uwb_anchor_default_port)
 
-        self.uwb_anchor_block, self.tag_port_textbox = init_inputBox(parent=self.uwb_connection_block,
-                                                                     label=config.uwb_tag_port,
-                                                                     label_bold=True,
-                                                                     default_input=config.uwb_tag_default_port)
+        # self.UWB_tag_connection_btn = init_button(parent=self.uwb_connection_block,
+        #                                           label="Connect uwb tag",
+        #                                           function=self.uwb_tag_connection_btn_action)
+        #
+        # self.UWB_anchor_connection_btn = init_button(parent=self.uwb_connection_block,
+        #                                              label="Connect uwb anchor",
+        #                                              function=self.uwb_anchor_connection_btn_action)
 
-        self.uwb_tag_block, self.anchor_port_textbox = init_inputBox(parent=self.uwb_connection_block,
-                                                                     label=config.uwb_anchor_port,
-                                                                     label_bold=True,
-                                                                     default_input=config.uwb_anchor_default_port)
-
-        self.UWB_tag_connection_btn = init_button(parent=self.uwb_connection_block,
-                                                  label="Connect uwb tag",
-                                                  function=self.uwb_tag_connection_btn_action)
-
-        self.UWB_anchor_connection_btn = init_button(parent=self.uwb_connection_block,
-                                                     label="Connect uwb anchor",
-                                                     function=self.uwb_anchor_connection_btn_action)
-
-        #     UWB sensor block
-        self.uwb_sensor_block = init_container(parent=self.UWB_block, label="Sensor",
-                                               style="background-color: " + config.container_color + ";")
-
-        self.UWB_sensor_start_btn = init_button(parent=self.uwb_sensor_block,
-                                                label=config.sensor_btn_label,
-                                                function=self.UWB_start_btn_action)
-
-        self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_uwb_line_view(
-            parent=self.UWB_block, label="UWB IR")
-        self.UWB_record_checkbox = init_checkBox(parent=self.UWB_block, function=self.UWB_clickBox)
+        # #     UWB sensor block
+        # self.uwb_sensor_block = init_container(parent=self.UWB_block, label="Sensor",
+        #                                        style="background-color: " + config.container_color + ";")
+        #
+        # self.UWB_sensor_start_btn = init_button(parent=self.uwb_sensor_block,
+        #                                         label=config.sensor_btn_label,
+        #                                         function=self.UWB_start_btn_action)
+        #
+        # self.runtime_plot_1, self.runtime_plot_2, self.runtime_plot_3, self.runtime_plot_4 = self.init_uwb_line_view(
+        #     parent=self.UWB_block, label="UWB IR")
+        # self.UWB_record_checkbox = init_checkBox(parent=self.UWB_block, function=self.UWB_clickBox)
 
         # -------------------- sixth class --------------------
 
         # ***** ports *****
 
-        self.data_port_block, self.dport_textbox = init_inputBox(parent=self.radar_connection_block,
+        self.data_port_block, self.dport_textbox = init_inputBox(parent=self.mmw_connection_block,
                                                                  label=config.control_tab_data_port_label,
                                                                  label_bold=True,
                                                                  default_input=config.control_tab_d_port_default)
-        self.user_port_block, self.uport_textbox = init_inputBox(parent=self.radar_connection_block,
+        self.user_port_block, self.uport_textbox = init_inputBox(parent=self.mmw_connection_block,
                                                                  label=config.control_tab_user_port_label,
                                                                  label_bold=True,
                                                                  default_input=config.control_tab_u_port_default)
         # ***** connect button *****
-        self.radar_connection_btn = init_button(parent=self.radar_connection_block,
+        self.radar_connection_btn = init_button(parent=self.mmw_connection_block,
                                                 label=config.connection_btn_label,
                                                 function=self.radar_connection_btn_action)
 
@@ -241,8 +261,8 @@ class ControlTab(QWidget):
         #                       1. Send_config Button
         #                       2. Start/Stop sensor button
 
-        self.is_valid_config_path, self.config_textbox = setup_configPath_block(parent=self.radar_sensor_block)
-        self.sensor_buttons_block = init_container(self.radar_sensor_block, vertical=False)
+        self.is_valid_config_path, self.config_textbox = setup_configPath_block(parent=self.mmw_sensor_block)
+        self.sensor_buttons_block = init_container(self.mmw_sensor_block, vertical=False)
 
         self.config_connection_btn = init_button(parent=self.sensor_buttons_block,
                                                  label=config.send_config_btn_label,
@@ -253,6 +273,15 @@ class ControlTab(QWidget):
                                                  function=self.start_stop_sensor_action)
 
         self.show()
+
+    def set_mmw_rc_rd_csr(self):
+        self.mmw_worker.set_rd_csr(self.rc_rd_csr_slider.value() / 100)
+
+    def set_mmw_rc_ra_csr(self):
+        self.mmw_worker.set_ra_csr(self.rc_ra_csr_slider.value() / 100)
+
+    def mmw_rc_cb_clicked(self):
+        config.is_plot_mmWave_rc = self.mmw_display_rc_checkbox.isChecked()
 
     def init_spec_view(self, parent, label, graph=None):
         if label:
@@ -440,9 +469,14 @@ class ControlTab(QWidget):
         :param data_dict:
         """
         # update range doppler spectrogram
-        doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
-        doppler_qpixmap = QPixmap(doppler_heatmap_qim)
-        doppler_qpixmap = doppler_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        # self.rd_maxes = np.append(self.rd_maxes, np.max(data_dict['range_doppler']))
+        # self.rd_mins = np.append(self.rd_mins, np.min(data_dict['range_doppler']))
+        doppler_qpixmap = \
+            process_clutter_removed_spectrogram(data_dict['range_doppler_rc'], config.rd_vmax,
+                                                config.rd_vmin, config.rd_shape[0],
+                                                height=config.rd_controlGestureTab_display_dim,
+                                                width=config.rd_controlGestureTab_display_dim) \
+                if config.is_plot_mmWave_rc else plot_spectrogram(data_dict['range_doppler'], )
         self.doppler_display.setPixmap(doppler_qpixmap)
 
         # save the data is record is enabled
@@ -475,13 +509,13 @@ class ControlTab(QWidget):
     #         # self.runtime_plot_3.setData(x_samples, t_real,)
     #         # self.runtime_plot_4.setData(x_samples, t_img,)
 
-        # runtime_plot_2, runtime_plot_3, runtime_plot_4
-        # self.UWB_runtime_view.plot(x_samples, a_real)
+    # runtime_plot_2, runtime_plot_3, runtime_plot_4
+    # self.UWB_runtime_view.plot(x_samples, a_real)
 
-        # self.UWB_runtime_view.plot(x_samples, a_real, "Anchor - Real", pen=pen)
-        # self.UWB_runtime_view.plot(x_samples, a_img, "Anchor - Imaginary", pen=pen)
-        # self.UWB_runtime_view.plot(x_samples, t_real, "Tag - Real", pen=pen)
-        # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
+    # self.UWB_runtime_view.plot(x_samples, a_real, "Anchor - Real", pen=pen)
+    # self.UWB_runtime_view.plot(x_samples, a_img, "Anchor - Imaginary", pen=pen)
+    # self.UWB_runtime_view.plot(x_samples, t_real, "Tag - Real", pen=pen)
+    # self.UWB_runtime_view.plot(x_samples, t_img, "Tag - Imaginary", pen=pen)
 
     def control_process_leap_data(self, data_dict):
         # new_x_pos, new_y_pos = data_dict['leapmouse'][3], data_dict['leapmouse'][4]
@@ -491,7 +525,7 @@ class ControlTab(QWidget):
         leap_image_qpixmap = leap_image_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
         self.leap_display.setPixmap(leap_image_qpixmap)
 
-    def radar_clickBox(self, state):
+    def mmw_clickBox(self, state):
 
         if state == QtCore.Qt.Checked:
             self.will_record.append("radar")
@@ -534,11 +568,13 @@ class ControlTab(QWidget):
         if is_fire_signal:
             print('enabled control signal') if config.debug else print()
             self.mmw_worker.signal_data.connect(self.control_process_mmw_data)
-            [self.XeThruX4tabs.widget(i).Xe4Thru_worker.signal_data.connect(self.XeThruX4tabs.widget(i).control_process_xethru_data) for i in range(self.XeThruX4tabs.count())]
+            [self.XeThruX4tabs.widget(i).Xe4Thru_worker.signal_data.connect(
+                self.XeThruX4tabs.widget(i).control_process_xethru_data) for i in range(self.XeThruX4tabs.count())]
         else:
             try:
                 print('disable control signal') if config.debug else print()
                 self.mmw_worker.signal_data.disconnect(self.control_process_mmw_data)
-                [self.XeThruX4tabs.widget(i).Xe4Thru_worker.signal_data.disconnect(self.XeThruX4tabs.widget(i).control_process_xethru_data) for i in range(self.XeThruX4tabs.count())]
+                [self.XeThruX4tabs.widget(i).Xe4Thru_worker.signal_data.disconnect(
+                    self.XeThruX4tabs.widget(i).control_process_xethru_data) for i in range(self.XeThruX4tabs.count())]
             except TypeError:
                 pass
