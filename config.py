@@ -89,10 +89,10 @@ operation_training_constructor_path_label = "Constructor Path"
 
 # control tab
 control_tab_d_port_default = "COM3"
-control_tab_u_port_default = "COM4"
+control_tab_u_port_default = "COM4 "
 
 # operation tab
-indexPen_classes_default = "A B C D E"
+indexPen_classes_default = "F G H I J"
 # indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
 
 is_randomize_char_default = False
