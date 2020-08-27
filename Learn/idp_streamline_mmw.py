@@ -18,9 +18,7 @@ import matplotlib.pyplot as plt
 #                         'U', 'V', 'W', 'X', 'Y',
 #                         'Z', 'Spc', 'Bspc', 'Ent', 'Act']
 
-idp_complete_classes = ['A', 'B', 'C', 'D', 'E']
-
-# idp_complete_classes = ['A', 'B', 'C', 'D', 'E']
+idp_complete_classes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 
 sensor_feature_dict = {'mmw': ('range_doppler', 'range_azi')}
 sensor_period_dict = {'mmw': 33.45}
@@ -29,7 +27,7 @@ sensor_sample_points_dict = dict([(key, (resolve_points_per_sample(value, input_
 
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
-X_dict, Y = load_idp('D:\PcProjects\mGesf\data\data_ev1',
+X_dict, Y = load_idp('D:\PcProjects\mGesf\data\data_ev1\hw_cr_ABCDEFGHIJ',
                      sensor_feature_dict=sensor_feature_dict,
                      complete_class=idp_complete_classes, encoder=encoder, sensor_sample_points_dict=sensor_sample_points_dict)
 
