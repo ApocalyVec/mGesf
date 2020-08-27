@@ -44,26 +44,28 @@ class MmwWorker(QObject):
             if self._mmw_interface:
                 try:
                     start = time.time()
-                    pts_array, range_amplitude, rd_heatmap, azi_heatmap = self._mmw_interface.process_frame()
+                    pts_array, range_amplitude, rd_heatmap, azi_heatmap, rd_heatmap_clutter_removed, azi_heatmap_clutter_removed = self._mmw_interface.process_frame()
                 except exceptions.DataPortNotOpenError:  # happens when the emitted signal accumulates
                     return
                 if range_amplitude is None:  # replace with simulated data if not enabled
                     range_amplitude = sim_imp()
                 if rd_heatmap is None:
-                    rd_heatmap = sim_heatmap(config.rd_shape)
+                    rd_heatmap = rd_heatmap_clutter_removed = sim_heatmap(config.rd_shape)
                 if azi_heatmap is None:
-                    azi_heatmap = sim_heatmap(config.ra_shape)
+                    azi_heatmap = azi_heatmap_clutter_removed = sim_heatmap(config.ra_shape)
                 self.timing_list.append(time.time() - start)  # TODO refactor timing calculation
 
             else:  # this is in simulation mode
                 pts_array = sim_detected_points()
                 range_amplitude = sim_imp()
-                rd_heatmap = sim_heatmap(config.rd_shape)
-                azi_heatmap = sim_heatmap(config.ra_shape)
+                rd_heatmap = rd_heatmap_clutter_removed = sim_heatmap(config.rd_shape)
+                azi_heatmap = azi_heatmap_clutter_removed = sim_heatmap(config.ra_shape)
 
             # notify the mmw data for the radar tab
             data_dict = {'range_doppler': rd_heatmap,
                          'range_azi': azi_heatmap,
+                         'range_doppler_rc': rd_heatmap_clutter_removed,
+                         'range_azi_rc': azi_heatmap_clutter_removed,
                          'pts': pts_array,
                          'range_amplitude': range_amplitude}
             self.signal_data.emit(data_dict)
@@ -98,6 +100,14 @@ class MmwWorker(QObject):
         else:
             print('No Radar Interface Connected, ignored.')
             # raise exceptions.InterfaceNotExistError
+
+    def set_rd_csr(self, value):
+        if self._mmw_interface:
+            self._mmw_interface.set_rd_csr(value)
+
+    def set_ra_csr(self, value):
+        if self._mmw_interface:
+            self._mmw_interface.set_ra_csr(value)
 
     def connect_mmw(self, uport_name, dport_name):
         """

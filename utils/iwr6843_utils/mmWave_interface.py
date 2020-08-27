@@ -3,6 +3,7 @@ import time
 import serial
 
 from mGesf.exceptions import BufferOverFlowError, DataPortNotOpenError, GeneralMmWError, PortsNotSetUpError
+from utils.data_utils import clutter_removal
 from utils.iwr6843_utils import serial_iwr6843
 from utils.iwr6843_utils.parse_tlv import decode_iwr_tlv
 
@@ -18,6 +19,13 @@ class MmWaveSensorInterface:
         self.num_range_bin = num_range_bin  # TODO parse this value down to the tlv decoder
         # data fields
         self.data_buffer = b''
+
+        # clutter removal paramters
+        self.rd_clutter = None
+        self.ra_clutter = None
+        self.rd_signal_clutter_ratio = 0.5
+        self.ra_signal_clutter_ratio = 0.5
+
 
     def send_config(self, config_path):
         try:
@@ -46,10 +54,17 @@ class MmWaveSensorInterface:
         print('mmw Interface: started!')
 
     def process_frame(self):
-        detected_points, range_profile, rd_heatmap, azi_heatmap = None, None, None, None
+        detected_points, range_profile, rd_heatmap, azi_heatmap, rd_heatmap_clutter_removed, azi_heatmap_clutter_removed = None, None, None, None, None, None
         while detected_points is None and range_profile is None and rd_heatmap is None and azi_heatmap is None:
             try:
                 detected_points, range_profile, rd_heatmap, azi_heatmap = self.parse_stream()
+                if rd_heatmap is not None and azi_heatmap is not None:
+                    rd_heatmap_clutter_removed, self.rd_clutter = clutter_removal(cur_frame=rd_heatmap,
+                                                                                  clutter=self.rd_clutter,
+                                                                                  signal_clutter_ratio=self.rd_signal_clutter_ratio)
+                    azi_heatmap_clutter_removed, self.ra_clutter = clutter_removal(cur_frame=azi_heatmap,
+                                                                                   clutter=self.ra_clutter,
+                                                                                   signal_clutter_ratio=self.ra_signal_clutter_ratio)
             except (BufferOverFlowError, DataPortNotOpenError, GeneralMmWError) as e:
                 print(str(e))
                 if type(e) == DataPortNotOpenError:
@@ -66,7 +81,7 @@ class MmWaveSensorInterface:
                 print('Sensor stopped, raising keyboardInterrupt, printing TLV buffer for debug')
                 print(self.data_buffer)
 
-        return detected_points, range_profile, rd_heatmap, azi_heatmap
+        return detected_points, range_profile, rd_heatmap, azi_heatmap, rd_heatmap_clutter_removed, azi_heatmap_clutter_removed
 
     def stop_sensor(self):
         print('mmw Interface: Stopping sensor ...')
@@ -125,3 +140,11 @@ class MmWaveSensorInterface:
                 raise DataPortNotOpenError
             else:
                 raise GeneralMmWError
+
+    def set_rd_csr(self, value):
+        self.rd_signal_clutter_ratio = value
+        self.rd_clutter = None
+
+    def set_ra_csr(self, value):
+        self.ra_signal_clutter_ratio = value
+        self.ra_clutter = None

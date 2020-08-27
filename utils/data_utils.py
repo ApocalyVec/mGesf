@@ -37,7 +37,8 @@ def split(word):
     return [char for char in word]
 
 
-def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, sensor_sample_points_dict, input_interval=4.0):
+def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, sensor_sample_points_dict,
+             input_interval=4.0):
     '''
     load everything in the given path
     :return:
@@ -332,3 +333,18 @@ class Queue:
             return temp
         else:
             return None
+
+
+rd_max, rd_min = 1500, -1500
+
+
+def scale_rd_spectrogram(spectrogram):
+    return 255 * (spectrogram - rd_min) / (rd_max - rd_min)
+
+
+def clutter_removal(cur_frame, clutter, signal_clutter_ratio):
+    if clutter is None:
+        clutter = cur_frame
+    else:
+        clutter = signal_clutter_ratio * clutter + (1 - signal_clutter_ratio) * cur_frame
+    return cur_frame - clutter, clutter

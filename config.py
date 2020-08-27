@@ -154,7 +154,12 @@ button_style_classic = "background-color: " + button_color + "; border-style: ou
 # ============== values ==============
 
 rd_shape = (8, 16)
+rd_vmax = 800
+rd_vmin = -800
 ra_shape = (8, 64)
+rd_controlGestureTab_display_dim = 128
+rd_mmwTab_display_dim = 512
+rd_rc_csr_default = ra_rc_csr_default = 50
 
 # operation tab
 # # recording tab
@@ -165,3 +170,6 @@ repeat_time_default = 10
 # ============== links ==============
 # recording tab
 help_link = "https://docs.google.com/document/d/1KvSAkytYb9Xw-CEyHy4yt82QQG81bF1LhDo5BtfKlxM/edit?usp=sharing"
+
+# global switches
+is_plot_mmWave_rc = True

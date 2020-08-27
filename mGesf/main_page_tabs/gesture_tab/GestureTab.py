@@ -16,7 +16,7 @@ from mGesf.main_page_tabs.gesture_tab.desktopFingertip.DesktopFingertip import D
 from mGesf.main_page_tabs.gesture_tab.indexPen.idp_main import IndexPen
 from mGesf.main_page_tabs.gesture_tab.thuMouse.thm_main import ThuMouse
 from utils.GUI_operation_tab import init_xethrux4_runtime_view
-from utils.img_utils import array_to_colormap_qim
+from utils.img_utils import array_to_colormap_qim, process_clutter_removed_spectrogram, plot_spectrogram
 
 
 class GestureTab(QWidget):
@@ -181,10 +181,12 @@ class GestureTab(QWidget):
         :param data_dict:
         """
         # update range doppler spectrogram
-        # arr = imresize(data_dict['range_doppler'], 0.1)
-        doppler_heatmap_qim = array_to_colormap_qim(data_dict['range_doppler'])
-        doppler_qpixmap = QPixmap(doppler_heatmap_qim)
-        doppler_qpixmap = doppler_qpixmap.scaled(128, 128, pg.QtCore.Qt.KeepAspectRatio)  # resize spectrogram
+        doppler_qpixmap = \
+            process_clutter_removed_spectrogram(data_dict['range_doppler_rc'], config.rd_vmax,
+                                                config.rd_vmin, config.rd_shape[0],
+                                                height=config.rd_controlGestureTab_display_dim,
+                                                width=config.rd_controlGestureTab_display_dim) \
+                if config.is_plot_mmWave_rc else plot_spectrogram(data_dict['range_doppler'], )
         self.mmw_doppler_display.setPixmap(doppler_qpixmap)
 
         if self.is_recording and self.will_recording_mmw:
