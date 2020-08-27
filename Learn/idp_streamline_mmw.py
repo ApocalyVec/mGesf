@@ -22,20 +22,28 @@ idp_complete_classes = ['A', 'B', 'C', 'D', 'E']
 
 # idp_complete_classes = ['A', 'B', 'C', 'D', 'E']
 
-sensor_feature_dict={'mmw': ('range_doppler', 'range_azi')}
-period = 33.45
+sensor_feature_dict = {'mmw': ('range_doppler', 'range_azi')}
+sensor_period_dict = {'mmw': 33.45}
 input_interval = 4.0
+sensor_sample_points_dict = dict([(key, (resolve_points_per_sample(value, input_interval))) for key, value in sensor_period_dict.items()])
 
-points_per_sample = round(resolve_points_per_sample(period, input_interval))
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
 X_dict, Y = load_idp('D:\PcProjects\mGesf\data\data_ev1',
                      sensor_feature_dict=sensor_feature_dict,
-                     complete_class=idp_complete_classes, encoder=encoder)
+                     complete_class=idp_complete_classes, encoder=encoder, sensor_sample_points_dict=sensor_sample_points_dict)
 
 #####################################################################################
 X_mmw_rD = X_dict['range_doppler']
 X_mmw_rA = X_dict['range_azi']
+
+# min-max normalize
+X_mmw_rD = (X_mmw_rD - np.min(X_mmw_rD)) / (np.max(X_mmw_rD) - np.min(X_mmw_rD))
+X_mmw_rA = (X_mmw_rA - np.min(X_mmw_rA)) / (np.max(X_mmw_rA) - np.min(X_mmw_rA))
+
+# z normalize
+# X_mmw_rD_zScore = (X_mmw_rD - np.mean(X_mmw_rD))/np.std(X_mmw_rD)
+# X_mmw_rA_zScore = (X_mmw_rA - np.mean(X_mmw_rA))/np.std(X_mmw_rA)
 
 X_mmw_rD_train, X_mmw_rD_test, Y_train, Y_test = train_test_split(X_mmw_rD, Y, test_size=0.20, random_state=3,
                                                                   shuffle=True)
@@ -43,7 +51,7 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 #####################################################################################
-model = make_model_simple(classes=idp_complete_classes, points_per_sample=points_per_sample)
+model = make_model_simple(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'])
 
 es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
 mc = ModelCheckpoint(
@@ -55,7 +63,6 @@ history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
                     validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
                     epochs=50000,
                     batch_size=32, callbacks=[es, mc], verbose=1, )
-
 
 '''
 

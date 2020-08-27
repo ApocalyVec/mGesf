@@ -61,7 +61,7 @@ def make_model(classes, points_per_sample):
 
 def make_model_simple(classes, points_per_sample, channel_mode='channels_last'):
     # creates the Time Distributed CNN for range Doppler heatmap ##########################
-    mmw_rdpl_input = (points_per_sample,) + rd_shape + (1,) if channel_mode == 'channels_last' else (points_per_sample, 1) + rd_shape
+    mmw_rdpl_input = (int(points_per_sample),) + rd_shape + (1,) if channel_mode == 'channels_last' else (points_per_sample, 1) + rd_shape
     # range doppler shape here
     mmw_rdpl_TDCNN = Sequential()
     mmw_rdpl_TDCNN.add(
@@ -75,7 +75,7 @@ def make_model_simple(classes, points_per_sample, channel_mode='channels_last'):
     mmw_rdpl_TDCNN.add(TimeDistributed(Flatten()))  # this should be where layers meets
 
     # creates the Time Distributed CNN for range Azimuth heatmap ###########################
-    mmw_razi_input = (points_per_sample,) + ra_shape + (1,)  if channel_mode == 'channels_last' else (points_per_sample, 1) + ra_shape
+    mmw_razi_input = (int(points_per_sample),) + ra_shape + (1,)  if channel_mode == 'channels_last' else (points_per_sample, 1) + ra_shape
     mmw_razi_TDCNN = Sequential()
     mmw_razi_TDCNN.add(
         TimeDistributed(
