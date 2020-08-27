@@ -18,8 +18,7 @@ import matplotlib.pyplot as plt
 #                         'U', 'V', 'W', 'X', 'Y',
 #                         'Z', 'Spc', 'Bspc', 'Ent', 'Act']
 
-idp_complete_classes = ['A', 'B', 'C', 'D', 'E',
-                        'F', 'G', 'H', 'I', 'J']
+idp_complete_classes = ['A', 'B', 'C', 'D', 'E']
 
 # idp_complete_classes = ['A', 'B', 'C', 'D', 'E']
 
@@ -30,7 +29,7 @@ input_interval = 4.0
 points_per_sample = round(resolve_points_per_sample(period, input_interval))
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
-X_dict, Y = load_idp('D:/PcProjects/mGesf/data/temp/hw_082620',
+X_dict, Y = load_idp('D:\PcProjects\mGesf\data\data_ev1',
                      sensor_feature_dict=sensor_feature_dict,
                      complete_class=idp_complete_classes, encoder=encoder)
 

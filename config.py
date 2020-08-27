@@ -88,8 +88,8 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "COM10"
-control_tab_u_port_default = "COM11"
+control_tab_d_port_default = "COM3"
+control_tab_u_port_default = "COM4"
 
 # operation tab
 indexPen_classes_default = "A B C D E"
