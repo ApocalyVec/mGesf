@@ -24,6 +24,8 @@ def record_mmw_frame(data_dict, buffer):
         # expand spectrogram dimension for channel_first
         buffer['mmw']['range_doppler'].append(np.expand_dims(data_dict['range_doppler'], axis=0))
         buffer['mmw']['range_azi'].append(np.expand_dims(data_dict['range_azi'], axis=0))
+        buffer['mmw']['range_doppler_rc'].append(np.expand_dims(data_dict['range_doppler_rc'], axis=0))
+        buffer['mmw']['range_azi_rc'].append(np.expand_dims(data_dict['range_azi_rc'], axis=0))
         buffer['mmw']['detected_points'].append(data_dict['pts'])
 
 def record_xethrux4_frame(data_dict, buffer):

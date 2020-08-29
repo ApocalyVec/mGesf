@@ -2,6 +2,7 @@ import time
 
 import serial
 
+import config
 from mGesf.exceptions import BufferOverFlowError, DataPortNotOpenError, GeneralMmWError, PortsNotSetUpError
 from utils.data_utils import clutter_removal
 from utils.iwr6843_utils import serial_iwr6843
@@ -23,8 +24,8 @@ class MmWaveSensorInterface:
         # clutter removal paramters
         self.rd_clutter = None
         self.ra_clutter = None
-        self.rd_signal_clutter_ratio = 0.5
-        self.ra_signal_clutter_ratio = 0.5
+        self.rd_signal_clutter_ratio = config.mmw_rd_rc_csr
+        self.ra_signal_clutter_ratio = config.mmw_razi_rc_csr
 
 
     def send_config(self, config_path):

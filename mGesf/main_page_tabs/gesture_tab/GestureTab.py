@@ -220,7 +220,7 @@ class GestureTab(QWidget):
         print('record buffer cleared.')
 
     def clear_buffer(self):
-        self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': []},
+        self.buffer = {'mmw': {'timestamps': [], 'range_doppler': [], 'range_azi': [], 'detected_points': [], 'range_doppler_rc': [], 'range_azi_rc': []},
                        'xethrux4': {'timestamps': [], 'frame': [], 'baseband_frame': [], 'clutter_removal_frame': [], 'clutter_removal_baseband_frame': []}}
 
     def set_fire_tab_signal(self, is_fire_signal):
