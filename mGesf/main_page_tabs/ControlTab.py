@@ -171,10 +171,10 @@ class ControlTab(QWidget):
                                            style="background-color: " + config.container_color + ";")
         self.rc_rd_csr_slider = init_smooth_slider(self.mmw_rc_block, 0, 100, 5,
                                                    label='Doppler Signal Clutter Ratio', onChange_func=self.set_mmw_rc_rd_csr)
-        self.rc_rd_csr_slider.setValue(config.rd_rc_csr_default)
+        self.rc_rd_csr_slider.setValue(config.gui_mmw_rd_rc_csr_default)
         self.rc_ra_csr_slider = init_smooth_slider(self.mmw_rc_block, 0, 100, 5,
                                                    label='Azimuth Signal Clutter Ratio', onChange_func=self.set_mmw_rc_ra_csr)
-        self.rc_ra_csr_slider.setValue(config.ra_rc_csr_default)
+        self.rc_ra_csr_slider.setValue(config.gui_mmw_ra_rc_csr_default)
 
         self.mmw_display_rc_checkbox = init_checkBox(parent=self.mmw_rc_block, label='Remove Doppler Clutter',
                                                      function=self.mmw_rc_cb_clicked)
