@@ -49,7 +49,7 @@ init_xeThruX4_data_dict = {'frame': None,
                            'clutter_removal_frame': None,
                            'clutter_removal_baseband_frame': None,
                            'ir_spectrogram': None}
-xethrux4_default_com_port = 'COM16'
+xethrux4_default_com_port = 'COM35'
 xethrux4_default_fps = 25
 
 # gesture tab
@@ -88,8 +88,8 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "COM3"
-control_tab_u_port_default = "COM4 "
+control_tab_d_port_default = "COM28"
+control_tab_u_port_default = "COM27"
 
 # operation tab
 indexPen_classes_default = "A B C D E"
@@ -159,9 +159,11 @@ rd_vmin = -800
 ra_shape = (8, 64)
 rd_controlGestureTab_display_dim = 128
 rd_mmwTab_display_dim = 512
-rd_rc_csr_default = ra_rc_csr_default = 50
 mmw_rd_rc_csr = 0.8
 mmw_razi_rc_csr = 0.8
+gui_mmw_rd_rc_csr_default = mmw_rd_rc_csr * 100
+gui_mmw_ra_rc_csr_default = mmw_razi_rc_csr * 100
+
 # operation tab
 # # recording tab
 recording_interval = 4
