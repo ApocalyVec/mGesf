@@ -160,7 +160,8 @@ ra_shape = (8, 64)
 rd_controlGestureTab_display_dim = 128
 rd_mmwTab_display_dim = 512
 rd_rc_csr_default = ra_rc_csr_default = 50
-
+mmw_rd_rc_csr = 0.8
+mmw_razi_rc_csr = 0.8
 # operation tab
 # # recording tab
 recording_interval = 4
