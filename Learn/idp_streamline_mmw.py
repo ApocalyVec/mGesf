@@ -13,9 +13,9 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 
 # Allow memory growth for the GPU
-physical_devices = tf.config.experimental.list_physical_devices('GPU')
-tf.config.experimental.set_memory_growth(physical_devices[0], True)
-tf.config.experimental.set_memory_growth(physical_devices[1], True)
+# physical_devices = tf.config.experimental.list_physical_devices('GPU')
+# tf.config.experimental.set_memory_growth(physical_devices[0], True)
+# tf.config.experimental.set_memory_growth(physical_devices[1], True)
 
 idp_complete_classes = [
                         'A', 'B', 'C', 'D', 'E',

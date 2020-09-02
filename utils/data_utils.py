@@ -118,14 +118,14 @@ def load_idp_new_and_legacy(data_directory, sensor_feature_dict, complete_class,
 
 
 def idp_legacy_xy():
-    idp_data_dir = ['F:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt10',
-                    'F:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt2',
+    idp_data_dir = ['E:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt10',
+                    'E:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt2',
 
-                    'F:/data/mGesf/050120_zl_legacy/idp-FGHIJ-rpt10',
-                    'F:/data/mGesf/050120_zl_legacy/idp-KLMNO-rpt10',
-                    'F:/data/mGesf/050120_zl_legacy/idp-PQRST-rpt10',
-                    'F:/data/mGesf/050120_zl_legacy/idp-UVWXY-rpt10',
-                    'F:/data/mGesf/050120_zl_legacy/idp-ZSpcBspcEnt-rpt10'
+                    'E:/data/mGesf/050120_zl_legacy/idp-FGHIJ-rpt10',
+                    'E:/data/mGesf/050120_zl_legacy/idp-KLMNO-rpt10',
+                    'E:/data/mGesf/050120_zl_legacy/idp-PQRST-rpt10',
+                    'E:/data/mGesf/050120_zl_legacy/idp-UVWXY-rpt10',
+                    'E:/data/mGesf/050120_zl_legacy/idp-ZSpcBspcEnt-rpt10'
                     ]
     num_repeats = [10, 2,
                    10, 10, 10, 10, 10

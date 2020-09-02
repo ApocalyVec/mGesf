@@ -53,7 +53,7 @@ from utils.data_utils import plot_confusion_matrix
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-PQRST-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-UVWXY-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-ZSpcBspcEnt-rpt10']
-from utils.learn_utils import make_model_simple, make_model
+from utils.learn_utils import make_model_simple, make_model, make_model_individual
 
 idp_data_dir = ['D:/PcProjects/mGesf/data/data_may/idp-ABCDE-rpt10',
                 'D:/PcProjects/mGesf/data/data_may/idp-ABCDE-rpt2',
@@ -102,7 +102,7 @@ the network is concluded by FC layers.
 '''
 
 # creates the Time Distributed CNN for range Doppler heatmap ##########################
-model = make_model(classes, points_per_sample, channel_mode='channels_first')
+model = make_model_individual(classes, points_per_sample, channel_mode='channels_first')
 # create input features
 Y = []
 X_mmw_rD = []

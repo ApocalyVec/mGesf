@@ -36,7 +36,7 @@ sensor_sample_points_dict = dict(
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
 
-X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('F:/data/mGesf/090120_hw_cr0.8',
+X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('E:/data/mGesf/090120_hw_cr0.8',
                                                 sensor_feature_dict=sensor_feature_dict,
                                                 complete_class=idp_complete_classes, encoder=encoder,
                                                 sensor_sample_points_dict=sensor_sample_points_dict)
