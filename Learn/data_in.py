@@ -112,7 +112,7 @@ def idp_preprocess_legacy(path, input_interval, classes, num_repeat, period=33):
     return labeled_sample_dict
 
 
-def idp_preprocess(data, char_set, input_interval, sensor_sample_points_dict, sensor_features_dict: dict, labeled_sample_dict: dict):
+def idp_preprocess(data, char_set, input_interval, sensor_sample_points_dict, sensor_features_dict: dict, labeled_sample_dict: dict, channel_mode='channels_last'):
     """
     In this implementation, the tail of the data that does not make up an input_interval is automatically ignored.
     However, it is important to note that if the actual last sample does not expand a full input_interval, it also will
@@ -146,7 +146,7 @@ def idp_preprocess(data, char_set, input_interval, sensor_sample_points_dict, se
         list_feature_samples = [(featuren_name,
                                  [[np.rollaxis(frm, 0, 3) for frm in smp]
                                   for smp in samples])
-                                for featuren_name, samples in list_feature_samples]
+                                for featuren_name, samples in list_feature_samples] if channel_mode == 'channels_last' else list_feature_samples
 
         # test for interval time
         try:
