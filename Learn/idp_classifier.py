@@ -57,29 +57,29 @@ from utils.learn_utils import make_model_simple
 
 idp_data_dir = ['D:/PcProjects/mGesf/data/data_may/idp-ABCDE-rpt10',
                 'D:/PcProjects/mGesf/data/data_may/idp-ABCDE-rpt2',
-                # 'data/idp-FGHIJ-rpt10',
-                # 'data/idp-KLMNO-rpt10',
-                # 'data/idp-PQRST-rpt10',
-                # 'data/idp-UVWXY-rpt10',
-                # 'data/idp-ZSpcBspcEnt-rpt10'
+                'D:/PcProjects/mGesf/data/data_may/idp-FGHIJ-rpt10',
+                'D:/PcProjects/mGesf/data/data_may/idp-KLMNO-rpt10',
+                'D:/PcProjects/mGesf/data/data_may/idp-PQRST-rpt10',
+                'D:/PcProjects/mGesf/data/data_may/idp-UVWXY-rpt10',
+                'D:/PcProjects/mGesf/data/data_may/idp-ZSpcBspcEnt-rpt10'
                 ]
 num_repeats = [10, 2,
-               # 10, 10, 10, 10, 10
+               10, 10, 10, 10, 10
                ]
 sample_classes = [['A', 'B', 'C', 'D', 'E'],
                   ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice
-                  # ['F', 'G', 'H', 'I', 'J'],
-                  # ['K', 'L', 'M', 'N', 'O'],
-                  # ['P', 'Q', 'R', 'S', 'T'],
-                  # ['U', 'V', 'W', 'X', 'Y'],
-                  # ['Z', 'Spc', 'Bspc', 'Ent']
+                  ['F', 'G', 'H', 'I', 'J'],
+                  ['K', 'L', 'M', 'N', 'O'],
+                  ['P', 'Q', 'R', 'S', 'T'],
+                  ['U', 'V', 'W', 'X', 'Y'],
+                  ['Z', 'Spc', 'Bspc', 'Ent']
                   ]
 classes = ['A', 'B', 'C', 'D', 'E',
-           # 'F', 'G', 'H', 'I', 'J',
-           # 'K', 'L', 'M', 'N', 'O',
-           # 'P', 'Q', 'R', 'S', 'T',
-           # 'U', 'V', 'W', 'X', 'Y',
-           # 'Z', 'Spc', 'Bspc', 'Ent'
+           'F', 'G', 'H', 'I', 'J',
+           'K', 'L', 'M', 'N', 'O',
+           'P', 'Q', 'R', 'S', 'T',
+           'U', 'V', 'W', 'X', 'Y',
+           'Z', 'Spc', 'Bspc', 'Ent'
            ]
 
 assert len(idp_data_dir) == len(num_repeats) == len(sample_classes)  # check the consistency of zip variables
@@ -102,7 +102,7 @@ the network is concluded by FC layers.
 '''
 
 # creates the Time Distributed CNN for range Doppler heatmap ##########################
-model = make_model_simple(classes, points_per_sample, channel_mode='channels_first')
+model = make_model(classes, points_per_sample)
 # create input features
 Y = []
 X_mmw_rD = []
