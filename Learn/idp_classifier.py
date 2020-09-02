@@ -53,33 +53,33 @@ from utils.data_utils import plot_confusion_matrix
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-PQRST-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-UVWXY-rpt10',
 #                 '/Users/Leo/Documents/data/idp_29/data/idp-ZSpcBspcEnt-rpt10']
-from utils.learn_utils import make_model_simple
+from utils.learn_utils import make_model_simple, make_model
 
-idp_data_dir = ['D:/PcProjects/mGesf/data/data_may/idp-ABCDE-rpt10',
-                'D:/PcProjects/mGesf/data/data_may/idp-ABCDE-rpt2',
-                # 'data/idp-FGHIJ-rpt10',
-                # 'data/idp-KLMNO-rpt10',
-                # 'data/idp-PQRST-rpt10',
-                # 'data/idp-UVWXY-rpt10',
-                # 'data/idp-ZSpcBspcEnt-rpt10'
+idp_data_dir = ['F:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt10',
+                'F:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt2',
+                'F:/data/mGesf/050120_zl_legacy/idp-FGHIJ-rpt10',
+                'F:/data/mGesf/050120_zl_legacy/idp-KLMNO-rpt10',
+                'F:/data/mGesf/050120_zl_legacy/idp-PQRST-rpt10',
+                'F:/data/mGesf/050120_zl_legacy/idp-UVWXY-rpt10',
+                'F:/data/mGesf/050120_zl_legacy/idp-ZSpcBspcEnt-rpt10'
                 ]
 num_repeats = [10, 2,
-               # 10, 10, 10, 10, 10
+               10, 10, 10, 10, 10
                ]
 sample_classes = [['A', 'B', 'C', 'D', 'E'],
                   ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice
-                  # ['F', 'G', 'H', 'I', 'J'],
-                  # ['K', 'L', 'M', 'N', 'O'],
-                  # ['P', 'Q', 'R', 'S', 'T'],
-                  # ['U', 'V', 'W', 'X', 'Y'],
-                  # ['Z', 'Spc', 'Bspc', 'Ent']
+                  ['F', 'G', 'H', 'I', 'J'],
+                  ['K', 'L', 'M', 'N', 'O'],
+                  ['P', 'Q', 'R', 'S', 'T'],
+                  ['U', 'V', 'W', 'X', 'Y'],
+                  ['Z', 'Spc', 'Bspc', 'Ent']
                   ]
 classes = ['A', 'B', 'C', 'D', 'E',
-           # 'F', 'G', 'H', 'I', 'J',
-           # 'K', 'L', 'M', 'N', 'O',
-           # 'P', 'Q', 'R', 'S', 'T',
-           # 'U', 'V', 'W', 'X', 'Y',
-           # 'Z', 'Spc', 'Bspc', 'Ent'
+           'F', 'G', 'H', 'I', 'J',
+           'K', 'L', 'M', 'N', 'O',
+           'P', 'Q', 'R', 'S', 'T',
+           'U', 'V', 'W', 'X', 'Y',
+           'Z', 'Spc', 'Bspc', 'Ent'
            ]
 
 assert len(idp_data_dir) == len(num_repeats) == len(sample_classes)  # check the consistency of zip variables
@@ -87,7 +87,7 @@ assert set(classes) == set([item for sublist in sample_classes for item in subli
 ########################################################################################################################
 
 interval_duration = 4.0  # how long does one writing take
-period = 33  # ms
+period = 33.45  # ms
 
 # classes = set([item for sublist in sample_classes for item in sublist])  # reduce to categorical classes
 ls_dicts = \
@@ -102,7 +102,7 @@ the network is concluded by FC layers.
 '''
 
 # creates the Time Distributed CNN for range Doppler heatmap ##########################
-model = make_model_simple(classes, points_per_sample, channel_mode='channels_first')
+model = make_model(classes, points_per_sample, channel_mode='channels_first')
 # create input features
 Y = []
 X_mmw_rD = []

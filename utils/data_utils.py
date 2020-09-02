@@ -13,7 +13,7 @@ import time
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.utils.multiclass import unique_labels
 
-from Learn.data_in import idp_preprocess, flatten
+from Learn.data_in import idp_preprocess, flatten, idp_preprocess_legacy
 from utils.transformation import translate, sphere_search, rotateZ, rotateY, rotateX, scale
 
 volume_shape = [25, 25, 25]
@@ -70,6 +70,65 @@ def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, senso
                     X_dict[ft_name] = np.array(ft_samples)
             Y += [char] * len(ft_samples)
     return X_dict, encoder.transform(np.reshape(Y, (-1, 1))).toarray()
+
+
+def idp_legacy_xy():
+    idp_data_dir = ['F:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt10',
+                    'F:/data/mGesf/050120_zl_legacy/idp-ABCDE-rpt2',
+                    'F:/data/mGesf/050120_zl_legacy/idp-FGHIJ-rpt10',
+                    'F:/data/mGesf/050120_zl_legacy/idp-KLMNO-rpt10',
+                    'F:/data/mGesf/050120_zl_legacy/idp-PQRST-rpt10',
+                    'F:/data/mGesf/050120_zl_legacy/idp-UVWXY-rpt10',
+                    'F:/data/mGesf/050120_zl_legacy/idp-ZSpcBspcEnt-rpt10'
+                    ]
+    num_repeats = [10, 2,
+                   10, 10, 10, 10, 10
+                   ]
+    sample_classes = [['A', 'B', 'C', 'D', 'E'],
+                      ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice
+                      ['F', 'G', 'H', 'I', 'J'],
+                      ['K', 'L', 'M', 'N', 'O'],
+                      ['P', 'Q', 'R', 'S', 'T'],
+                      ['U', 'V', 'W', 'X', 'Y'],
+                      ['Z', 'Spc', 'Bspc', 'Ent']
+                      ]
+    classes = ['A', 'B', 'C', 'D', 'E',
+               'F', 'G', 'H', 'I', 'J',
+               'K', 'L', 'M', 'N', 'O',
+               'P', 'Q', 'R', 'S', 'T',
+               'U', 'V', 'W', 'X', 'Y',
+               'Z', 'Spc', 'Bspc', 'Ent'
+               ]
+
+    assert len(idp_data_dir) == len(num_repeats) == len(sample_classes)  # check the consistency of zip variables
+    assert set(classes) == set(
+        [item for sublist in sample_classes for item in sublist])  # check categorical consistency
+
+    interval_duration = 4.0  # how long does one writing take
+    period = 33.45  # ms
+
+    # classes = set([item for sublist in sample_classes for item in sublist])  # reduce to categorical classes
+    ls_dicts = \
+        [idp_preprocess_legacy(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
+         for dr, nr, cs in zip(idp_data_dir, num_repeats, sample_classes)]
+
+    Y = []
+    X_mmw_rD = []
+    X_mmw_rA = []
+
+    # add to x and y
+    for lsd in ls_dicts:
+        for key, value in lsd.items():
+            X_mmw_rD += [d for d in value['mmw']['range_doppler']]
+            X_mmw_rA += [a for a in value['mmw']['range_azi']]
+            Y += [key for i in range(value['mmw']['range_doppler'].shape[0])]
+            pass
+
+    X_mmw_rD = np.asarray(X_mmw_rD)
+    X_mmw_rA = np.asarray(X_mmw_rA)
+    Y = np.asarray(Y)
+
+    return X_mmw_rD, X_mmw_rA, Y
 
 
 def plot_confusion_matrix(y_true, y_pred, classes,

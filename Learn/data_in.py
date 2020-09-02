@@ -19,7 +19,25 @@ def resolve_sample_feature(ls_dict, lb, f_dict, s_slice, sensor):
 
 
 def resolve_points_per_sample(period, input_interval):
-    return (1 / period) * input_interval * 1000
+    return round((1 / period) * input_interval * 1000)
+
+
+def idp_preprocess_convert_legacy(input_dir, output_dir, classes, num_repeat, subject_name, frame_per_sample=120):
+    mgesf_data_list = (pickle.load(open(os.path.join(input_dir, p), 'rb')) for p in os.listdir(input_dir))
+    for d, p in zip(mgesf_data_list, os.listdir(input_dir)):
+        labels = flatten([[c for i in range(num_repeat)] for c in classes])
+        expected_frame_num = frame_per_sample * len(labels)
+        d['mmw'] = dict([(feature_name, data_array[:expected_frame_num]) for feature_name, data_array in d['mmw'].items()])
+        output_data_path = os.path.join(output_dir, p.split('.')[0] + '_' + subject_name + '_' + 'data.mgesf')
+        output_label_path = os.path.join(output_dir, p.split('.')[0] + '_' + subject_name + '_' + 'label.mgesf')
+
+        print('processing ' + p + '; label is ' + str(labels))
+        print('Expected frame number is ' + str(expected_frame_num) + '; Real frame number is ' + str(len(list(d['mmw'].values())[0])))
+        print('Creating output ' + output_data_path)
+
+        pickle.dump(d, open(output_data_path, 'wb'))
+        pickle.dump(labels, open(output_label_path, 'wb'))
+        print()
 
 
 def idp_preprocess_legacy(path, input_interval, classes, num_repeat, period=33):
@@ -76,7 +94,7 @@ def idp_preprocess_legacy(path, input_interval, classes, num_repeat, period=33):
                         points_per_sample) else ts_index_last + int(points_per_sample))
                     sample_ts = ts_array[sample_slice]
                     lb = label_list[sample_index - 1]
-                    # lb = classes[(sample_index - 1) % len(classes)]  # sample_index decrement for class index offset
+                    # lb = classes[(samp le_index - 1) % len(classes)]  # sample_index decrement for class index offset
                     sample_frame_durations.append(max(sample_ts) - min(sample_ts))
                     sample_ts_list.append(sample_ts)
 
@@ -170,3 +188,5 @@ def transpose(l):
 
 def slice_per(l, step):
     return [l[index: index + step] for index in range(0, len(l), step)]
+
+
