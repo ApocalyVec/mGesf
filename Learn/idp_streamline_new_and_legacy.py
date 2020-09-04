@@ -14,10 +14,10 @@ from utils.learn_utils import make_model
 import tensorflow as tf
 
 # Allow memory growth for the GPU
-# gpu_devices = tf.config.experimental.list_physical_devices('GPU')
-# for device in gpu_devices: tf.config.experimental.set_memory_growth(device, True)
+gpu_devices = tf.config.experimental.list_physical_devices('GPU')
+for device in gpu_devices: tf.config.experimental.set_memory_growth(device, True)
 
-batch_size = 8
+batch_size = 16
 
 idp_complete_classes = [
     'A', 'B', 'C', 'D', 'E',
@@ -37,7 +37,7 @@ sensor_sample_points_dict = dict(
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
 
-X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('D:/data/mgesf/090120_hw_cr0.8',
+X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('D:/data/mgesf/090120',
                                                 sensor_feature_dict=sensor_feature_dict,
                                                 complete_class=idp_complete_classes, encoder=encoder,
                                                 sensor_sample_points_dict=sensor_sample_points_dict)
@@ -52,14 +52,14 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
 
 from pathlib import Path
 import os
-model_dir = 'D:/ResearchProjects/mGesf/models/'
+model_dir = 'D:/ResearchProjects/mGesf/models/idp_all/'
 train_completed = False
 load_existing = True
 
 while not train_completed:
     sorted_model_paths = sorted(Path(model_dir).iterdir(), key=os.path.getmtime)
-    model_path = sorted_model_paths[-1]  # load the latest model
     if load_existing:
+        model_path = sorted_model_paths[-1]  # load the latest model
         print('load model at ' + str(model_path))
         model = load_model(str(model_path))
     else:
@@ -68,7 +68,7 @@ while not train_completed:
 
     es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=500)
     mc = ModelCheckpoint(
-        'D:/ResearchProjects/mGesf/models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
+        model_dir + str(datetime.datetime.now()).replace(':', '-').replace(' ',
                                                                               '_') + '.h5',
         monitor='val_accuracy', mode='max', verbose=1, save_best_only=True)
 
