@@ -10,24 +10,32 @@ from utils.learn_utils import make_model, make_model_simple
 from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
-# idp_complete_classes = ['A', 'B', 'C', 'D', 'E',
-#                         'F', 'G', 'H', 'I', 'J',
-#                         'K', 'L', 'M', 'N', 'O',
-#                         'P', 'Q', 'R', 'S', 'T',
-#                         'U', 'V', 'W', 'X', 'Y',
-#                         'Z', 'Spc', 'Bspc', 'Ent', 'Act']
+# Allow memory growth for the GPU
+# physical_devices = tf.config.experimental.list_physical_devices('GPU')
+# tf.config.experimental.set_memory_growth(physical_devices[0], True)
+# tf.config.experimental.set_memory_growth(physical_devices[1], True)
 
-idp_complete_classes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+idp_complete_classes = [
+                        'A', 'B', 'C', 'D', 'E',
+                        'F', 'G', 'H', 'I', 'J',
+                        'K', 'L', 'M', 'N', 'O',  # accuracy regression
+                        'P', 'Q', 'R', 'S', 'T',
+                        'U', 'V', 'W', 'X', 'Y',  # accuracy regression
+                        'Z', 'Spc', 'Bspc', 'Ent', 'Act'
+]
+
+# idp_complete_classes = ['A', 'B', 'C', 'D', 'E']
 
 sensor_feature_dict = {'mmw': ('range_doppler', 'range_azi')}
-sensor_period_dict = {'mmw': 33.45}
+sensor_period_dict = {'mmw': 33.45}  # period in milliseconds
 input_interval = 4.0
 sensor_sample_points_dict = dict([(key, (resolve_points_per_sample(value, input_interval))) for key, value in sensor_period_dict.items()])
 
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
-X_dict, Y = load_idp('D:\PcProjects\mGesf\data\data_ev1\hw_cr_ABCDEFGHIJ',
+X_dict, Y = load_idp('F:/data/mGesf/090120_hw_cr0.8',
                      sensor_feature_dict=sensor_feature_dict,
                      complete_class=idp_complete_classes, encoder=encoder, sensor_sample_points_dict=sensor_sample_points_dict)
 
@@ -49,7 +57,7 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 #####################################################################################
-model = make_model_simple(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'])
+model = make_model(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'])
 
 es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
 mc = ModelCheckpoint(
