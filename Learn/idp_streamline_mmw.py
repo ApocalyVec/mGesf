@@ -3,6 +3,7 @@ import datetime
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 import numpy as np
+from tensorflow.python.keras.models import load_model
 
 from Learn.data_in import resolve_points_per_sample
 from utils.data_utils import load_idp
@@ -57,7 +58,8 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 #####################################################################################
-model = make_model(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'])
+model = load_model('D:/PcProjects/mGesf/models/2020-09-02_22-14-36.768957.h5')
+# model = make_model(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'])
 
 es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=500)
 mc = ModelCheckpoint(
