@@ -92,7 +92,7 @@ def make_model(classes, points_per_sample, channel_mode='channels_last', batch_s
     regressive_tensor = Dense(len(classes), activation='softmax', kernel_initializer='random_uniform')(regressive_tensor)
 
     model = Model(inputs=[mmw_rdpl_TDCNN.input, mmw_razi_TDCNN.input], outputs=regressive_tensor)
-    adam = tf.keras.optimizers.Adam(lr=5e-5, decay=1e-7)
+    adam = tf.keras.optimizers.Adam(lr=1e-4, decay=1e-7)
     model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
