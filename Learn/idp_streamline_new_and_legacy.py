@@ -37,7 +37,7 @@ sensor_sample_points_dict = dict(
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
 
-X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('D:/data/mgesf/090120',
+X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/090120_hw',
                                                 sensor_feature_dict=sensor_feature_dict,
                                                 complete_class=idp_complete_classes, encoder=encoder,
                                                 sensor_sample_points_dict=sensor_sample_points_dict)
@@ -52,9 +52,9 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
 
 from pathlib import Path
 import os
-model_dir = 'D:/ResearchProjects/mGesf/models/idp_all/'
+model_dir = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_hw_test/'
 train_completed = False
-load_existing = True
+load_existing = False
 
 while not train_completed:
     sorted_model_paths = sorted(Path(model_dir).iterdir(), key=os.path.getmtime)
@@ -66,9 +66,9 @@ while not train_completed:
         model = make_model(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'],
                            channel_mode='channels_first', batch_size=batch_size)
 
-    es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=500)
+    es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=250)
     mc = ModelCheckpoint(
-        model_dir + str(datetime.datetime.now()).replace(':', '-').replace(' ',
+        model_dir + 'with_reg' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
                                                                               '_') + '.h5',
         monitor='val_accuracy', mode='max', verbose=1, save_best_only=True)
 

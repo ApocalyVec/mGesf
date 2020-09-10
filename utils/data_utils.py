@@ -22,6 +22,7 @@ volume_shape = [25, 25, 25]
 def prepare_x(data_stream, window_size, stride=1):
     x = []
     for i in range(0, len(data_stream) - window_size, stride):
+        print('creating sample ' + str(i) + ' of ' + str((len(data_stream) - window_size) / stride))
         input_ = data_stream[i:i + window_size]
         x.append(np.expand_dims(input_, axis=-1))
     return np.array(x)
@@ -107,25 +108,26 @@ def load_idp_new_and_legacy(data_directory, sensor_feature_dict, complete_class,
 
     X_mmw_rD = X_dict['range_doppler']
     X_mmw_rA = X_dict['range_azi']
-    X_mmw_rD_legacy, X_mmw_rA_legacy, Y_legacy = idp_legacy_xy()
 
-    X_mmw_rD = np.concatenate((X_mmw_rD, X_mmw_rD_legacy))
-    X_mmw_rA = np.concatenate((X_mmw_rA, X_mmw_rA_legacy))
-
-    Y = Y + Y_legacy
+    # load legacy zl data
+    # print('loading legacy zl data')
+    # X_mmw_rD_legacy, X_mmw_rA_legacy, Y_legacy = idp_legacy_xy()
+    # X_mmw_rD = np.concatenate((X_mmw_rD, X_mmw_rD_legacy))
+    # X_mmw_rA = np.concatenate((X_mmw_rA, X_mmw_rA_legacy))
+    # Y = Y + Y_legacy
 
     return X_mmw_rD, X_mmw_rA, encoder.transform(np.reshape(Y, (-1, 1))).toarray()
 
 
 def idp_legacy_xy():
-    idp_data_dir = ['D:/ResearchProjects/mGesf/data/idp-ABCDE-rpt10',
-                    'D:/ResearchProjects/mGesf/data/idp-ABCDE-rpt2',
+    idp_data_dir = ['/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/idp-ABCDE-rpt10',
+                    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/idp-ABCDE-rpt2',
 
-                    'D:/ResearchProjects/mGesf/data/idp-FGHIJ-rpt10',
-                    'D:/ResearchProjects/mGesf/data/idp-KLMNO-rpt10',
-                    'D:/ResearchProjects/mGesf/data/idp-PQRST-rpt10',
-                    'D:/ResearchProjects/mGesf/data/idp-UVWXY-rpt10',
-                    'D:/ResearchProjects/mGesf/data/idp-ZSpcBspcEnt-rpt10'
+                    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/idp-FGHIJ-rpt10',
+                    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/idp-KLMNO-rpt10',
+                    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/idp-PQRST-rpt10',
+                    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/idp-UVWXY-rpt10',
+                    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/idp-ZSpcBspcEnt-rpt10'
                     ]
     num_repeats = [10, 2,
                    10, 10, 10, 10, 10
