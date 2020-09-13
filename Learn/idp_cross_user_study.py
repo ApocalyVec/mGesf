@@ -318,14 +318,14 @@ sensor_sample_points_dict = dict(
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
 
-X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/090120_hw',
+X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('E:/data/mGesf/090120_ag',
                                                 sensor_feature_dict=sensor_feature_dict,
                                                 complete_class=idp_complete_classes, encoder=encoder,
                                                 sensor_sample_points_dict=sensor_sample_points_dict,
-                                                legacy_root='/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy')
+                                                legacy_root='E:/data/mGesf/050120_zl_legacy')
 
 # load a leave-one-subject-out model
-model_path = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_hw_zl_almost_there_acc_098930/2020-09-03_01-51-11.289968.h5'
+model_path = 'D:/PcProjects/mGesf/models/leave_one_subject_out/leave_one_subject_out/idp_ag_zl.h5'
 model = load_model(model_path)
 
 rD_max, rD_min = np.max(X_mmw_rD), np.min(X_mmw_rD)
@@ -340,10 +340,11 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
 
 # sanity check on if the model loaded is correct by evaluating the model on its training data
 model.evaluate(x=[X_mmw_rD_test, X_mmw_rA_test], y=Y_test, batch_size=32)
-
+print('removing pretrain train test from memory')
+del X_mmw_rD_train, X_mmw_rD_test, X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test
 # load the left-out user's data
 X_mmw_rD_leftOut, X_mmw_rA_leftOut, Y_leftOut = load_idp_new_and_legacy(
-    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/090120_ag',
+    'E:/data/mGesf/090120_hw',
     sensor_feature_dict=sensor_feature_dict,
     complete_class=idp_complete_classes, encoder=encoder,
     sensor_sample_points_dict=sensor_sample_points_dict)
@@ -392,7 +393,7 @@ transfer_accuracy = []
 
 weighted = True
 calib_add_factor = 5
-model_dir = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_cross_user_left_ag/'
+model_dir = 'D:/PcProjects/mGesf/models/idp_cross_user_left_hw/'
 
 for i in range(num_calib):
     print('clearing session staring enw transfer step ---------------------------------------')
