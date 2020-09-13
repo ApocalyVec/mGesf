@@ -340,7 +340,8 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
 
 # sanity check on if the model loaded is correct by evaluating the model on its training data
 model.evaluate(x=[X_mmw_rD_test, X_mmw_rA_test], y=Y_test, batch_size=32)
-
+print('removing pretrain train test from memory')
+del X_mmw_rD_train, X_mmw_rD_test, X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test
 # load the left-out user's data
 X_mmw_rD_leftOut, X_mmw_rA_leftOut, Y_leftOut = load_idp_new_and_legacy(
     '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/090120_ag',
