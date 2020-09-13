@@ -74,7 +74,7 @@ def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, senso
 
 
 def load_idp_new_and_legacy(data_directory, sensor_feature_dict, complete_class, encoder, sensor_sample_points_dict,
-             input_interval=4.0):
+             input_interval=4.0, legacy_root=None):
     '''
     load everything in the given path
     :return:
@@ -85,7 +85,8 @@ def load_idp_new_and_legacy(data_directory, sensor_feature_dict, complete_class,
     label_suffix = '_label.mgesf'
     feature_names = flatten(list(sensor_feature_dict.values()))
     labeled_sample_dict = dict([(char, dict([(ftn, []) for ftn in feature_names])) for char in complete_class])
-    for fn in os.listdir(data_directory):
+    for i, fn in enumerate(os.listdir(data_directory)):
+        print('loading file ' + str(i) + ' of ' + str(len(os.listdir(data_directory))) + ', file name is ' + fn)
         if fn.endswith(data_suffix):
             data_path = os.path.join(data_directory, fn)
             label_path = os.path.join(data_directory, fn.replace(data_suffix, '') + label_suffix)
@@ -109,13 +110,12 @@ def load_idp_new_and_legacy(data_directory, sensor_feature_dict, complete_class,
     X_mmw_rD = X_dict['range_doppler']
     X_mmw_rA = X_dict['range_azi']
 
-    # load legacy zl data
-    # print('loading legacy zl data')
-    # X_mmw_rD_legacy, X_mmw_rA_legacy, Y_legacy = idp_legacy_xy()
-    # X_mmw_rD = np.concatenate((X_mmw_rD, X_mmw_rD_legacy))
-    # X_mmw_rA = np.concatenate((X_mmw_rA, X_mmw_rA_legacy))
-    # Y = Y + Y_legacy
-
+    if legacy_root is not None:
+        print('loading legacy zl data')
+        X_mmw_rD_legacy, X_mmw_rA_legacy, Y_legacy = idp_legacy_xy(legacy_root)
+        X_mmw_rD = np.concatenate((X_mmw_rD, X_mmw_rD_legacy))
+        X_mmw_rA = np.concatenate((X_mmw_rA, X_mmw_rA_legacy))
+        Y = Y + Y_legacy
     return X_mmw_rD, X_mmw_rA, encoder.transform(np.reshape(Y, (-1, 1))).toarray()
 
 

@@ -75,7 +75,7 @@ while not train_completed:
     try:
         history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
                             validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
-                            epochs=50000,
+                            epochs=1800,
                             batch_size=batch_size, callbacks=[es, mc], verbose=1, )
         train_completed = True
     except:
