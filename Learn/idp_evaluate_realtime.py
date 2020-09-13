@@ -49,18 +49,18 @@ for i, col in enumerate(np.transpose(y_pred)):
 # for i in range(1, len(key_indices) - 2):
 #     plt.axvline(x=121 * i, c='0.3', linewidth=5)
 
-# debouncer_frame_threshold = 30
-# debouncer_prob_threshold = 0.9
-# debouncer = [0] * len(classes)
-# for i, frame_pred in enumerate(y_pred):
-#     break_indices = np.argwhere(frame_pred > debouncer_prob_threshold)
-#     for bi in break_indices:
-#         bi = bi[0]
-#         debouncer[bi] = debouncer[bi] + 1
-#         if debouncer[bi] > debouncer_frame_threshold:
-#             plt.plot([i], [0.9], 'bo')
-#             plt.text(i, 0.95, index_class_dict[bi] + 'Detected ', fontsize=12, c='blue')
-#             debouncer = [0] * len(classes)
+debouncer_frame_threshold = 30
+debouncer_prob_threshold = 0.9
+debouncer = [0] * len(classes)
+for i, frame_pred in enumerate(y_pred):
+    break_indices = np.argwhere(frame_pred > debouncer_prob_threshold)
+    for bi in break_indices:
+        bi = bi[0]
+        debouncer[bi] = debouncer[bi] + 1
+        if debouncer[bi] > debouncer_frame_threshold:
+            plt.plot([i], [0.9], 'bo')
+            plt.text(i, 0.95, index_class_dict[bi] + 'Detected ', fontsize=12, c='blue')
+            debouncer = [0] * len(classes)
 
 plt.legend(loc=4)
 plt.xlabel('Frames (30 frames per second)')
