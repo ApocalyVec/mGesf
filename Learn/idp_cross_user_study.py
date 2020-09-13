@@ -367,11 +367,12 @@ X_mmw_rD_leftOut_per_class_samples = [(cls,
                                        ) for cls in idp_complete_classes]
 
 # create calibration sets
+calib_add_factor = 5
 num_calib = 20
 X_mmw_rD_leftOut_calib = []
 X_mmw_rA_leftOut_calib = []
 Y_leftOut_calid = []
-for i in range(num_calib):
+for i in range(num_calib * calib_add_factor):
     print('Creating calibration samples: ' + str(i) + ' of ' + str(num_calib))
     X_mmw_rD_leftOut_calib.append(np.array([cls_sample[i] for cls, cls_sample in X_mmw_rD_leftOut_per_class_samples]))
     X_mmw_rA_leftOut_calib.append(np.array([cls_sample[i] for cls, cls_sample in X_mmw_rA_leftOut_per_class_samples]))
@@ -391,7 +392,6 @@ transfer_loss = []
 transfer_accuracy = []
 
 weighted = True
-calib_add_factor = 5
 model_dir = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_cross_user_left_ag/'
 
 for i in range(num_calib):
