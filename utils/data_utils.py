@@ -181,7 +181,7 @@ def idp_legacy_xy(legacy_root):
 def plot_confusion_matrix(y_true, y_pred, classes,
                           normalize=False,
                           title=None,
-                          cmap=plt.cm.Blues):
+                          cmap=plt.cm.Blues, axis_font_size=12):
     """
     This function prints and plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
@@ -203,7 +203,10 @@ def plot_confusion_matrix(y_true, y_pred, classes,
         print('Confusion matrix, without normalization')
 
     print(cm)
-
+    plt.rcParams['xtick.labelsize'] = 20
+    plt.rcParams['ytick.labelsize'] = 20
+    plt.rcParams['axes.labelsize'] = axis_font_size
+    plt.rcParams['axes.titlesize'] = axis_font_size
     fig, ax = plt.subplots()
     fig.set_size_inches(15, 15)
     im = ax.imshow(cm, interpolation='nearest', cmap=cmap)
@@ -223,10 +226,11 @@ def plot_confusion_matrix(y_true, y_pred, classes,
 
     # Loop over data dimensions and create text annotations.
     fmt = '.2f' if normalize else 'd'
+    fmt_0 = '.0f'
     thresh = cm.max() / 2.
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
-            ax.text(j, i, format(cm[i, j], fmt),
+            ax.text(j, i, format(cm[i, j], fmt if cm[i, j] else fmt_0),
                     ha="center", va="center",
                     color="white" if cm[i, j] > thresh else "black")
     fig.tight_layout()
