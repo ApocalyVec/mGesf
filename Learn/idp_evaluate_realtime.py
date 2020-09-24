@@ -8,8 +8,8 @@ from keras.engine.saving import load_model
 
 from utils.data_utils import prepare_x, moving_average
 
-idp_model = load_model('D:\PcProjects\mGesf\models\idp\idp_29_2020-05-04_03-24-10.425555.h5')
-encoder = pickle.load(open('D:\PcProjects\mGesf\data\encoder_082020.p', 'rb'))
+idp_model = load_model('E:\mgesf_backup\models\idp\idp_29_2020-05-04_03-24-10.425555.h5')
+encoder = pickle.load(open('D:\PcProjects\mGesf\data\data_may\encoder_082020.p', 'rb'))
 classes = ['A', 'B', 'C', 'D', 'E',
            'F', 'G', 'H', 'I', 'J',
            'K', 'L', 'M', 'N', 'O',
@@ -22,7 +22,7 @@ sequence = np.reshape(np.array(['A', 'B', 'C', 'D', 'E']), newshape=(-1, 1))
 valid_indices = np.argmax(encoder.transform(sequence).toarray(), axis=1)
 index_class_dict = dict([(index, clss[0]) for index, clss in zip(valid_indices, sequence)])
 
-data_path = 'D:\PcProjects\mGesf\data\Aug-20-2020-15-48-29_data.mgesf'
+data_path = 'D:\PcProjects\mGesf\data\data_may\Aug-20-2020-15-48-29_data.mgesf'
 data = pickle.load(open(data_path, 'rb'))
 
 rA_seq = np.array(data['mmw']['range_azi'])
@@ -46,8 +46,8 @@ for i, col in enumerate(np.transpose(y_pred)):
         is_plotted_others = True
 
 # plot char separation lines
-# for i in range(1, len(key_indices) - 2):
-#     plt.axvline(x=121 * i, c='0.3', linewidth=5)
+for i in range(1, len(valid_indices) - 2):
+    plt.axvline(x=121 * i, c='0.3', linewidth=5)
 
 # debouncer_frame_threshold = 30
 # debouncer_prob_threshold = 0.9
@@ -65,6 +65,6 @@ for i, col in enumerate(np.transpose(y_pred)):
 plt.legend(loc=4)
 plt.xlabel('Frames (30 frames per second)')
 plt.ylabel('Probability of class prediction')
-plt.title('Temporal Probability cross a Continuous Sequence of "A, B, C, D, E"')
-plt.title('Temporal Probability cross a Continuous Sequence of "H, E, L, L, O, Space, W, O, R, L, D, Enter", with Debouncer Detection')
+plt.title('Temporal Probability cross a Continuous Sequence of "H, E, L, L, O, Space, W, O, R, L, D"')
+# plt.title('Temporal Probability cross a Continuous Sequence of "H, E, L, L, O, Space, W, O, R, L, D", with Debouncer Detection')
 plt.show()

@@ -13,7 +13,7 @@ import time
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.utils.multiclass import unique_labels
 
-from Learn.data_in import idp_preprocess, flatten
+from Learn.data_in import idp_preprocess, flatten, idp_preprocess_legacy
 from utils.transformation import translate, sphere_search, rotateZ, rotateY, rotateX, scale
 
 volume_shape = [25, 25, 25]
@@ -22,6 +22,7 @@ volume_shape = [25, 25, 25]
 def prepare_x(data_stream, window_size, stride=1):
     x = []
     for i in range(0, len(data_stream) - window_size, stride):
+        # print('creating sample ' + str(i) + ' of ' + str((len(data_stream) - window_size) / stride))
         input_ = data_stream[i:i + window_size]
         x.append(np.expand_dims(input_, axis=-1))
     return np.array(x)
@@ -72,10 +73,115 @@ def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, senso
     return X_dict, encoder.transform(np.reshape(Y, (-1, 1))).toarray()
 
 
+def load_idp_new_and_legacy(data_directory, sensor_feature_dict, complete_class, encoder, sensor_sample_points_dict,
+                            input_interval=4.0, legacy_root=None):
+    '''
+    load everything in the given path
+    :return:
+    '''
+    Y = []
+    X_dict = dict()
+    data_suffix = '_data.mgesf'
+    label_suffix = '_label.mgesf'
+    feature_names = flatten(list(sensor_feature_dict.values()))
+    labeled_sample_dict = dict([(char, dict([(ftn, []) for ftn in feature_names])) for char in complete_class])
+    for i, fn in enumerate(os.listdir(data_directory)):
+        print('loading file ' + str(i) + ' of ' + str(len(os.listdir(data_directory))) + ', file name is ' + fn)
+        if fn.endswith(data_suffix):
+            data_path = os.path.join(data_directory, fn)
+            label_path = os.path.join(data_directory, fn.replace(data_suffix, '') + label_suffix)
+            subject_name = fn.split('_')[-2]
+            data = pickle.load(open(data_path, 'rb'))
+            label = pickle.load(open(label_path, 'rb'))
+            labeled_sample_dict = idp_preprocess(data, char_set=label, input_interval=input_interval,
+                                                 sensor_sample_points_dict=sensor_sample_points_dict,
+                                                 sensor_features_dict=sensor_feature_dict,
+                                                 labeled_sample_dict=labeled_sample_dict, channel_mode='channels_first')
+    # add to x and y
+    for char, feature_samples in labeled_sample_dict.items():
+        if len(flatten(feature_samples.values())) > 0:
+            for ft_name, ft_samples in feature_samples.items():
+                if ft_name in X_dict:
+                    X_dict[ft_name] = np.concatenate([X_dict[ft_name], np.array(ft_samples)])
+                else:
+                    X_dict[ft_name] = np.array(ft_samples)
+            Y += [char] * len(ft_samples)
+
+    X_mmw_rD = X_dict['range_doppler']
+    X_mmw_rA = X_dict['range_azi']
+
+    if legacy_root is not None:
+        print('loading legacy zl data')
+        X_mmw_rD_legacy, X_mmw_rA_legacy, Y_legacy = idp_legacy_xy(legacy_root)
+        X_mmw_rD = np.concatenate((X_mmw_rD, X_mmw_rD_legacy))
+        X_mmw_rA = np.concatenate((X_mmw_rA, X_mmw_rA_legacy))
+        Y = Y + Y_legacy
+    return X_mmw_rD, X_mmw_rA, encoder.transform(np.reshape(Y, (-1, 1))).toarray()
+
+
+def idp_legacy_xy(legacy_root):
+    idp_data_dir = ['idp-ABCDE-rpt10',
+                    'idp-ABCDE-rpt2',
+                    'idp-FGHIJ-rpt10',
+                    'idp-KLMNO-rpt10',
+                    'idp-PQRST-rpt10',
+                    'idp-UVWXY-rpt10',
+                    'idp-ZSpcBspcEnt-rpt10'
+                    ]
+    idp_data_dir = [os.path.join(legacy_root, x) for x in idp_data_dir]
+    num_repeats = [10, 2,
+                   10, 10, 10, 10, 10
+                   ]
+    sample_classes = [['A', 'B', 'C', 'D', 'E'],
+                      ['A', 'B', 'C', 'D', 'E'],  # some of the ABCDE data are repeated twice
+                      ['F', 'G', 'H', 'I', 'J'],
+                      ['K', 'L', 'M', 'N', 'O'],
+                      ['P', 'Q', 'R', 'S', 'T'],
+                      ['U', 'V', 'W', 'X', 'Y'],
+                      ['Z', 'Spc', 'Bspc', 'Ent']
+                      ]
+    classes = ['A', 'B', 'C', 'D', 'E',
+               'F', 'G', 'H', 'I', 'J',
+               'K', 'L', 'M', 'N', 'O',
+               'P', 'Q', 'R', 'S', 'T',
+               'U', 'V', 'W', 'X', 'Y',
+               'Z', 'Spc', 'Bspc', 'Ent'
+               ]
+
+    assert len(idp_data_dir) == len(num_repeats) == len(sample_classes)  # check the consistency of zip variables
+    assert set(classes) == set(
+        [item for sublist in sample_classes for item in sublist])  # check categorical consistency
+
+    interval_duration = 4.0  # how long does one writing take
+    period = 33.45  # ms
+
+    # classes = set([item for sublist in sample_classes for item in sublist])  # reduce to categorical classes
+    ls_dicts = \
+        [idp_preprocess_legacy(dr, interval_duration, classes=cs, num_repeat=nr, period=period)
+         for dr, nr, cs in zip(idp_data_dir, num_repeats, sample_classes)]
+
+    Y = []
+    X_mmw_rD = []
+    X_mmw_rA = []
+
+    # add to x and y
+    for lsd in ls_dicts:
+        for key, value in lsd.items():
+            X_mmw_rD += [d for d in value['mmw']['range_doppler']]
+            X_mmw_rA += [a for a in value['mmw']['range_azi']]
+            Y += [key for i in range(value['mmw']['range_doppler'].shape[0])]
+            pass
+
+    X_mmw_rD = np.asarray(X_mmw_rD)
+    X_mmw_rA = np.asarray(X_mmw_rA)
+
+    return X_mmw_rD, X_mmw_rA, Y
+
+
 def plot_confusion_matrix(y_true, y_pred, classes,
                           normalize=False,
                           title=None,
-                          cmap=plt.cm.Blues):
+                          cmap=plt.cm.Blues, axis_font_size=12):
     """
     This function prints and plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
@@ -97,7 +203,10 @@ def plot_confusion_matrix(y_true, y_pred, classes,
         print('Confusion matrix, without normalization')
 
     print(cm)
-
+    plt.rcParams['xtick.labelsize'] = 20
+    plt.rcParams['ytick.labelsize'] = 20
+    plt.rcParams['axes.labelsize'] = axis_font_size
+    plt.rcParams['axes.titlesize'] = axis_font_size
     fig, ax = plt.subplots()
     fig.set_size_inches(15, 15)
     im = ax.imshow(cm, interpolation='nearest', cmap=cmap)
@@ -117,10 +226,11 @@ def plot_confusion_matrix(y_true, y_pred, classes,
 
     # Loop over data dimensions and create text annotations.
     fmt = '.2f' if normalize else 'd'
+    fmt_0 = '.0f'
     thresh = cm.max() / 2.
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
-            ax.text(j, i, format(cm[i, j], fmt),
+            ax.text(j, i, format(cm[i, j], fmt if cm[i, j] else fmt_0),
                     ha="center", va="center",
                     color="white" if cm[i, j] > thresh else "black")
     fig.tight_layout()
@@ -348,3 +458,78 @@ def clutter_removal(cur_frame, clutter, signal_clutter_ratio):
     else:
         clutter = signal_clutter_ratio * clutter + (1 - signal_clutter_ratio) * cur_frame
     return cur_frame - clutter, clutter
+
+
+def index_to_class(index, encoder):
+    rtn = [0.0] * len(encoder.categories_[0])
+    rtn[index] = 1.0
+    rtn = encoder.inverse_transform([rtn])
+    return rtn[0][0]
+
+
+def edit_distance(string1, string2):
+    """Ref: https://bit.ly/2Pf4a6Z"""
+
+    if len(string1) > len(string2):
+        difference = len(string1) - len(string2)
+        string1[:difference]
+
+    elif len(string2) > len(string1):
+        difference = len(string2) - len(string1)
+        string2[:difference]
+
+    else:
+        difference = 0
+
+    for i in range(len(string1)):
+        if string1[i] != string2[i]:
+            difference += 1
+
+    return difference
+
+
+
+def levenshtein_ratio_and_distance(s, t, ratio_calc = False):
+    """ levenshtein_ratio_and_distance:
+        Calculates levenshtein distance between two strings.
+        If ratio_calc = True, the function computes the
+        levenshtein distance ratio of similarity between two strings
+        For all i and j, distance[i,j] will contain the Levenshtein
+        distance between the first i characters of s and the
+        first j characters of t
+    """
+    # Initialize matrix of zeros
+    rows = len(s)+1
+    cols = len(t)+1
+    distance = np.zeros((rows,cols),dtype = int)
+
+    # Populate matrix of zeros with the indeces of each character of both strings
+    for i in range(1, rows):
+        for k in range(1,cols):
+            distance[i][0] = i
+            distance[0][k] = k
+
+    # Iterate over the matrix to compute the cost of deletions,insertions and/or substitutions
+    for col in range(1, cols):
+        for row in range(1, rows):
+            if s[row-1] == t[col-1]:
+                cost = 0 # If the characters are the same in the two strings in a given position [i,j] then the cost is 0
+            else:
+                # In order to align the results with those of the Python Levenshtein package, if we choose to calculate the ratio
+                # the cost of a substitution is 2. If we calculate just distance, then the cost of a substitution is 1.
+                if ratio_calc == True:
+                    cost = 2
+                else:
+                    cost = 1
+            distance[row][col] = min(distance[row-1][col] + 1,      # Cost of deletions
+                                 distance[row][col-1] + 1,          # Cost of insertions
+                                 distance[row-1][col-1] + cost)     # Cost of substitutions
+    if ratio_calc == True:
+        # Computation of the Levenshtein Distance Ratio
+        Ratio = ((len(s)+len(t)) - distance[row][col]) / (len(s)+len(t))
+        return Ratio
+    else:
+        # print(distance) # Uncomment if you want to see the matrix showing how the algorithm computes the cost of deletions,
+        # insertions and/or substitutions
+        # This is the minimum number of edits needed to convert string a to string b
+        return "The strings are {} edits away".format(distance[row][col])

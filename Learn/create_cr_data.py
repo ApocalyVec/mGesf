@@ -9,8 +9,8 @@ from skimage.transform import rescale, resize, downscale_local_mean
 import config
 from utils.data_utils import clutter_removal
 import matplotlib.pyplot as plt
-input_dir = 'D:\PcProjects\mGesf\data\data_ev1\hw_no_cr_ABCDEGHIJ'
-output_dir = 'D:\PcProjects\mGesf\data\data_ev1\hw_cr_ABCDEGHIJ_cr0.8'
+input_dir = 'F:/data/mGesf/090120_hw'
+output_dir = 'F:/data/mGesf/090120_hw_cr0.8'
 
 data_suffix = '_data.mgesf'
 label_suffix = '_label.mgesf'

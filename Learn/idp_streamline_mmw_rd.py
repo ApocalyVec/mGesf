@@ -7,7 +7,7 @@ from tensorflow.python.keras.models import load_model
 
 from Learn.data_in import resolve_points_per_sample
 from utils.data_utils import load_idp
-from utils.learn_utils import make_model, make_model_simple
+from utils.learn_utils import make_model, make_model_simple, make_model_rD
 from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 import matplotlib.pyplot as plt
@@ -36,7 +36,7 @@ sensor_sample_points_dict = dict([(key, (resolve_points_per_sample(value, input_
 
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
-X_dict, Y = load_idp('E:/data/mGesf/090120_ag',
+X_dict, Y = load_idp('E:/data/mGesf/090120_hw',
                      sensor_feature_dict=sensor_feature_dict,
                      complete_class=idp_complete_classes, encoder=encoder, sensor_sample_points_dict=sensor_sample_points_dict)
 
@@ -58,17 +58,17 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 #####################################################################################
-model = load_model('D:/PcProjects/mGesf/models/2020-09-02_22-14-36.768957.h5')
-# model = make_model(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'])
+# model = load_model('D:/PcProjects/mGesf/models/2020-09-02_22-14-36.768957.h5')
+model = make_model_rD(classes=idp_complete_classes, points_per_sample=sensor_sample_points_dict['mmw'])
 
-es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=500)
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=250)
 mc = ModelCheckpoint(
-    '../models/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
+    'D:/PcProjects/mGesf/models/idp_hw_simple/' + str(datetime.datetime.now()).replace(':', '-').replace(' ',
                                                                           '_') + '.h5',
     monitor='val_accuracy', mode='max', verbose=1, save_best_only=True)
 
-history = model.fit(([X_mmw_rD_train, X_mmw_rA_train]), Y_train,
-                    validation_data=([X_mmw_rD_test, X_mmw_rA_test], Y_test),
+history = model.fit(X_mmw_rD_train, Y_train,
+                    validation_data=(X_mmw_rD_test, Y_test),
                     epochs=50000,
                     batch_size=32, callbacks=[es, mc], verbose=1, )
 
