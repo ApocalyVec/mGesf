@@ -1,29 +1,13 @@
 # temporal probability
 
-from keras import Sequential, Model
-
-import datetime
-import pickle
-
-from keras import Sequential, optimizers
-from keras.callbacks import EarlyStopping, ModelCheckpoint
-from keras.layers import Conv3D, MaxPooling2D, Flatten, TimeDistributed, LSTM, Dropout, Dense, BatchNormalization, \
-    LeakyReLU, Conv2D, Reshape, concatenate
-
-from keras.regularizers import l2
-from keras.engine.saving import load_model
-
-import numpy as np
-import os
 import matplotlib
-
 import matplotlib.pyplot as plt
-
-from sklearn.model_selection import train_test_split
+import numpy as np
+from keras.engine.saving import load_model
 from sklearn.preprocessing import OneHotEncoder
+
 from Learn.data_in import idp_preprocess_legacy, resolve_points_per_sample
-from config import rd_shape, ra_shape
-from utils.data_utils import plot_confusion_matrix, prepare_x, StreamingMovingAverage, moving_average
+from utils.data_utils import prepare_x, moving_average
 
 ########################################################################################################################
 # idp_data_dir = ['../data/idp-ABCDE-rpt10', '../data/idp-ABCDE-rpt2']
@@ -118,13 +102,11 @@ Y = np.asarray(Y)
 encoder = OneHotEncoder(categories='auto')
 Y = encoder.fit_transform(np.expand_dims(Y, axis=1)).toarray()
 
-# model_name = 'idp_29_2020-05-04_03-24-10.425555'
-# idp_model = load_model('..models/idp/' + model_name + '.h5')
-idp_model = load_model('D:\PcProjects\mGesf\models\idp\idp_29_2020-05-04_03-24-10.425555.h5')
+idp_model = load_model('E:\mgesf_backup\models\idp\idp_29_2020-05-04_03-24-10.425555.h5')
+
 # make a contiuous temporal sequence A, B, C, D, E
 # TODO have this followed by a void character
 # key_indices = [0, 160, 320, 480, 640]  # A, B, C, D, E
-
 sequence = np.reshape(np.array(['H', 'E', 'L', 'L', 'O', 'Spc', 'W', 'O', 'R', 'L', 'D', 'Ent']), newshape=(-1, 1))
 valid_indices = np.argmax(encoder.transform(sequence).toarray(), axis=1)
 index_class_dict = dict([(index, clss[0]) for index, clss in zip(valid_indices, sequence)])
@@ -171,25 +153,26 @@ for i, col in enumerate(np.transpose(y_pred)):
         is_plotted_others = True
 
 # plot char separation lines
-# for i in range(1, len(key_indices) - 2):
-#     plt.axvline(x=121 * i, c='0.3', linewidth=5)
+for i in range(1, len(key_indices) - 2):
+    plt.axvline(x=121 * i, c='0.3', linewidth=5)
 
-debouncer_frame_threshold = 30
-debouncer_prob_threshold = 0.9
-debouncer = [0] * len(classes)
-for i, frame_pred in enumerate(y_pred):
-    break_indices = np.argwhere(frame_pred > debouncer_prob_threshold)
-    for bi in break_indices:
-        bi = bi[0]
-        debouncer[bi] = debouncer[bi] + 1
-        if debouncer[bi] > debouncer_frame_threshold:
-            plt.plot([i], [0.9], 'bo')
-            plt.text(i, 0.95, index_class_dict[bi] + 'Detected ', fontsize=12, c='blue')
-            debouncer = [0] * len(classes)
+# debouncer_frame_threshold = 30
+# debouncer_prob_threshold = 0.9
+# debouncer = [0] * len(classes)
+# for i, frame_pred in enumerate(y_pred):
+#     break_indices = np.argwhere(frame_pred > debouncer_prob_threshold)
+#     for bi in break_indices:
+#         bi = bi[0]
+#         debouncer[bi] = debouncer[bi] + 1
+#         if debouncer[bi] > debouncer_frame_threshold:
+#             plt.plot([i], [0.9], 'bo')
+#             plt.text(i, 0.95, index_class_dict[bi] + 'Detected ', fontsize=12, c='blue')
+#             debouncer = [0] * len(classes)
 
 # plt.legend(loc=4)
 plt.xlabel('Frames (30 frames per second)')
 plt.ylabel('Probability of class prediction')
-plt.title('Temporal Probability cross a Continuous Sequence of "A, B, C, D, E"')
-plt.title('Temporal Probability cross a Continuous Sequence of "H, E, L, L, O, Space, W, O, R, L, D, Enter", with Debouncer Detection')
+# plt.title('Temporal Probability cross a Continuous Sequence of "A, B, C, D, E"')
+plt.title('Temporal Probability cross a Continuous Sequence of "H, E, L, L, O, Space, W, O, R, L, D"')
+plt.title('Temporal Probability cross a Continuous Sequence of "H, E, L, L, O, Space, W, O, R, L, D", with Debouncer Detection')
 plt.show()
