@@ -204,31 +204,36 @@ def load_idp_new_and_legacy(data_directory, sensor_feature_dict, complete_class,
     label_suffix = '_label.mgesf'
     feature_names = flatten(list(sensor_feature_dict.values()))
     labeled_sample_dict = dict([(char, dict([(ftn, []) for ftn in feature_names])) for char in complete_class])
-    for i, fn in enumerate(os.listdir(data_directory)):
-        print('loading file ' + str(i) + ' of ' + str(len(os.listdir(data_directory))) + ', file name is ' + fn)
-        if fn.endswith(data_suffix):
-            data_path = os.path.join(data_directory, fn)
-            label_path = os.path.join(data_directory, fn.replace(data_suffix, '') + label_suffix)
-            subject_name = fn.split('_')[-2]
-            data = pickle.load(open(data_path, 'rb'))
-            label = pickle.load(open(label_path, 'rb'))
-            labeled_sample_dict = idp_preprocess(data, char_set=label, input_interval=input_interval,
-                                                 sensor_sample_points_dict=sensor_sample_points_dict,
-                                                 sensor_features_dict=sensor_feature_dict,
-                                                 labeled_sample_dict=labeled_sample_dict, channel_mode='channels_first')
-    # add to x and y
-    print('creating x, y samples')
-    for char, feature_samples in labeled_sample_dict.items():
-        if len(flatten(feature_samples.values())) > 0:
-            for ft_name, ft_samples in feature_samples.items():
-                if ft_name in X_dict:
-                    X_dict[ft_name] = np.concatenate([X_dict[ft_name], np.array(ft_samples)])
-                else:
-                    X_dict[ft_name] = np.array(ft_samples)
-            Y += [char] * len(ft_samples)
 
-    X_mmw_rD = X_dict['range_doppler']
-    X_mmw_rA = X_dict['range_azi']
+    X_mmw_rD = np.empty((0, 120, 1, 8, 16))
+    X_mmw_rA = np.empty((0, 120, 1, 8, 64))
+
+    if data_directory is not None:
+        for i, fn in enumerate(os.listdir(data_directory)):
+            print('loading file ' + str(i) + ' of ' + str(len(os.listdir(data_directory))) + ', file name is ' + fn)
+            if fn.endswith(data_suffix):
+                data_path = os.path.join(data_directory, fn)
+                label_path = os.path.join(data_directory, fn.replace(data_suffix, '') + label_suffix)
+                subject_name = fn.split('_')[-2]
+                data = pickle.load(open(data_path, 'rb'))
+                label = pickle.load(open(label_path, 'rb'))
+                labeled_sample_dict = idp_preprocess(data, char_set=label, input_interval=input_interval,
+                                                     sensor_sample_points_dict=sensor_sample_points_dict,
+                                                     sensor_features_dict=sensor_feature_dict,
+                                                     labeled_sample_dict=labeled_sample_dict, channel_mode='channels_first')
+        # add to x and y
+        print('creating x, y samples')
+        for char, feature_samples in labeled_sample_dict.items():
+            if len(flatten(feature_samples.values())) > 0:
+                for ft_name, ft_samples in feature_samples.items():
+                    if ft_name in X_dict:
+                        X_dict[ft_name] = np.concatenate([X_dict[ft_name], np.array(ft_samples)])
+                    else:
+                        X_dict[ft_name] = np.array(ft_samples)
+                Y += [char] * len(ft_samples)
+
+        X_mmw_rD = X_dict['range_doppler']
+        X_mmw_rA = X_dict['range_azi']
 
     if legacy_root is not None:
         print('loading legacy zl data')
@@ -318,14 +323,14 @@ sensor_sample_points_dict = dict(
 encoder = OneHotEncoder(categories='auto')
 encoder.fit(np.reshape(idp_complete_classes, (-1, 1)))
 
-X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/090120_hw',
+X_mmw_rD, X_mmw_rA, Y = load_idp_new_and_legacy('/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/090120',
                                                 sensor_feature_dict=sensor_feature_dict,
                                                 complete_class=idp_complete_classes, encoder=encoder,
                                                 sensor_sample_points_dict=sensor_sample_points_dict,
-                                                legacy_root='/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy')
+                                                legacy_root='/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy/')
 
 # load a leave-one-subject-out model
-model_path = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_hw_zl_almost_there_acc_098930/2020-09-03_01-51-11.289968.h5'
+model_path = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_all/2020-09-04_05-41-48.712257.h5'
 model = load_model(model_path)
 
 rD_max, rD_min = np.max(X_mmw_rD), np.min(X_mmw_rD)
@@ -339,15 +344,18 @@ X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test = train_test_split(X_mmw_rA, Y, t
                                                                   shuffle=True)
 
 # sanity check on if the model loaded is correct by evaluating the model on its training data
-model.evaluate(x=[X_mmw_rD_test, X_mmw_rA_test], y=Y_test, batch_size=32)
+print(model.evaluate(x=[X_mmw_rD_test, X_mmw_rA_test], y=Y_test, batch_size=32))
+exit()
+
 print('removing pretrain train test from memory')
 del X_mmw_rD_train, X_mmw_rD_test, X_mmw_rA_train, X_mmw_rA_test, Y_train, Y_test
 # load the left-out user's data
 X_mmw_rD_leftOut, X_mmw_rA_leftOut, Y_leftOut = load_idp_new_and_legacy(
-    '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/090120_ag',
+    None,
     sensor_feature_dict=sensor_feature_dict,
     complete_class=idp_complete_classes, encoder=encoder,
-    sensor_sample_points_dict=sensor_sample_points_dict)
+    sensor_sample_points_dict=sensor_sample_points_dict,
+    legacy_root='/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/data/050120_zl_legacy')
 
 # min max normalize on the same scale
 X_mmw_rD_leftOut = (X_mmw_rD_leftOut - rD_min) / (rD_max - rD_min)
@@ -358,6 +366,15 @@ model.evaluate(x=[X_mmw_rD_leftOut, X_mmw_rA_leftOut], y=Y_leftOut, batch_size=3
 
 # transfer learning
 # obtain per-class samples from the left-out user
+
+idp_complete_classes = ['A', 'B', 'C', 'D', 'E',
+           'F', 'G', 'H', 'I', 'J',
+           'K', 'L', 'M', 'N', 'O',
+           'P', 'Q', 'R', 'S', 'T',
+           'U', 'V', 'W', 'X', 'Y',
+           'Z', 'Spc', 'Bspc', 'Ent'
+           ]
+
 X_mmw_rA_leftOut_per_class_samples = [(cls,
                                        X_mmw_rA_leftOut[
                                            np.all(Y_leftOut == encoder.transform([[cls]]).toarray(), axis=1)]
@@ -368,13 +385,13 @@ X_mmw_rD_leftOut_per_class_samples = [(cls,
                                        ) for cls in idp_complete_classes]
 
 # create calibration sets
-calib_add_factor = 5
-num_calib = 20
+calib_add_factor = 10
+num_calib = 11
 X_mmw_rD_leftOut_calib = []
 X_mmw_rA_leftOut_calib = []
 Y_leftOut_calid = []
 for i in range(num_calib * calib_add_factor):
-    print('Creating calibration samples: ' + str(i) + ' of ' + str(num_calib))
+    print('Creating calibration samples: ' + str(i) + ' of ' + str(num_calib * calib_add_factor))
     X_mmw_rD_leftOut_calib.append(np.array([cls_sample[i] for cls, cls_sample in X_mmw_rD_leftOut_per_class_samples]))
     X_mmw_rA_leftOut_calib.append(np.array([cls_sample[i] for cls, cls_sample in X_mmw_rA_leftOut_per_class_samples]))
 
@@ -383,6 +400,8 @@ for i in range(num_calib * calib_add_factor):
 
     assert np.all(y_rD == y_rA)
     Y_leftOut_calid.append(np.array(y_rD))
+print('remove X_mmw_rA/rD_leftOut_per_class_samples from memory')
+del X_mmw_rD_leftOut_per_class_samples, X_mmw_rA_leftOut_per_class_samples
 
 # shuffle calib data
 from sklearn.utils import shuffle
@@ -393,16 +412,16 @@ transfer_loss = []
 transfer_accuracy = []
 
 weighted = True
-model_dir = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_cross_user_left_ag/'
+model_dir = '/media/apocalyvec/Seagate Backup Plus Drive/research/mgesf/results/models/idp_cross_user_left_zl/'
 
-for i in range(num_calib):
+for i in range(10, num_calib):
     print('clearing session staring enw transfer step ---------------------------------------')
     tf.keras.backend.clear_session()
     calib_sample_num = (i + 1) * calib_add_factor
     print('Training on ' + str(calib_sample_num) + ' calibration sets...')
-    x_rd = np.reshape(X_mmw_rD_leftOut_calib[:calib_sample_num], (calib_sample_num * 30,) + X_mmw_rD_leftOut_calib[0][0].shape)
-    x_ra = np.reshape(X_mmw_rA_leftOut_calib[:calib_sample_num], (calib_sample_num * 30,) + X_mmw_rA_leftOut_calib[0][0].shape)
-    y = np.reshape(Y_leftOut_calid[:calib_sample_num], (calib_sample_num * 30,) + Y_leftOut_calid[0][0][0].shape)
+    x_rd = np.reshape(X_mmw_rD_leftOut_calib[:calib_sample_num], (calib_sample_num * len(idp_complete_classes),) + X_mmw_rD_leftOut_calib[0][0].shape)
+    x_ra = np.reshape(X_mmw_rA_leftOut_calib[:calib_sample_num], (calib_sample_num * len(idp_complete_classes),) + X_mmw_rA_leftOut_calib[0][0].shape)
+    y = np.reshape(Y_leftOut_calid[:calib_sample_num], (calib_sample_num * len(idp_complete_classes),) + Y_leftOut_calid[0][0][0].shape)
 
     # append old data
     x_rd = np.concatenate([x_rd, X_mmw_rD])
@@ -414,26 +433,29 @@ for i in range(num_calib):
     # reload model
     model = load_model(model_path)
     # learn for 100 epochs
-    es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=250)
+    es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
     mc = ModelCheckpoint(
         model_dir + '/model.h5',
         monitor='val_accuracy', mode='max', verbose=1, save_best_only=True)
     if not weighted:
         history = model.fit(([x_rd, x_ra]), y_,
                             validation_data=([X_mmw_rD_leftOut, X_mmw_rA_leftOut], Y_leftOut),
-                            epochs=1000, shuffle=True, callbacks=[es, mc],
+                            epochs=750, shuffle=True, callbacks=[es, mc],
                             batch_size=32)
     else:
         sample_weight = np.ones(shape=(len(y_),))
-        sample_weight[:((calib_sample_num) * 30)] = np.array([(len(X_mmw_rD) / ((1) * 30 )) * 1e-2] * calib_sample_num * 30)
+        sample_weight[:((calib_sample_num) * len(idp_complete_classes))] = np.array([(len(X_mmw_rD) / ((1) * len(idp_complete_classes) )) * 1e-2] * calib_sample_num * len(idp_complete_classes))
         # sample_weight[:((calib_sample_num) * 30)] = np.array([len(X_mmw_rD) / (calib_sample_num) * 30 / 10000.] * calib_sample_num * 30)
-        print('Using weighted training, weight is ' + str(sample_weight[0]) + ' for the first ' + str(calib_sample_num * 30) + ' samples')
+        print('Using weighted training, weight is ' + str(sample_weight[0]) + ' for the first ' + str(calib_sample_num * len(idp_complete_classes)) + ' samples')
         history = model.fit(([x_rd, x_ra]), y_,
                             validation_data=([X_mmw_rD_leftOut, X_mmw_rA_leftOut], Y_leftOut),
-                            epochs=1200, shuffle=True, sample_weight=sample_weight, callbacks=[es, mc],
+                            epochs=750, shuffle=True, sample_weight=sample_weight, callbacks=[es, mc],
                             batch_size=32)
     # load the best performing model
     model = load_model(model_dir + 'model.h5')
     eval_result = model.evaluate(x=[X_mmw_rD_leftOut, X_mmw_rA_leftOut], y=Y_leftOut, batch_size=32)
     transfer_loss.append(eval_result[0])
     transfer_accuracy.append(eval_result[1])
+    pickle.dump(transfer_loss, open(model_dir + '/transfer_loss.p', 'wb'))
+    pickle.dump(transfer_accuracy, open(model_dir + '/transfer_accuracy.p', 'wb'))
+
