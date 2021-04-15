@@ -15,6 +15,7 @@ record_btn_start_label = 'Start Recording'
 record_btn_end_label = 'End Recording'
 
 help_btn_label = "Help"
+pop_label_btn_label = "Pop Up Label"
 send_config_btn_label = 'Send Config'
 sensor_btn_label = 'Start Sensor'
 detection_load_btn_label = 'Load Data-Model'
@@ -94,10 +95,10 @@ control_tab_u_port_default = "COM27"
 # operation tab, the Nois is the noise class
 # indexPen_classes_default = "Z Spc Bspc Ent Act"
 # indexPen_classes_default = "A B C D E"
-#indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
+indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
 #indexPen_classes_default = 'T H E Spc Q U I C K Spc B R O W N Spc F O X Spc J U M P S Spc O V E R Spc T H E Spc L A Z Y Spc D O G'
 #indexPen_classes_default = 'Act H E L L O Spc W O R L D Act'
-indexPen_classes_default = 'Nois Act H E L L O Spc W O R L D Act Nois'
+# indexPen_classes_default = 'Nois Act H E L L O Spc W O R L D Act Nois'
 #indexPen_classes_default = 'Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois ' \
 #                            'Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois ' \
 #                            'Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois ' \

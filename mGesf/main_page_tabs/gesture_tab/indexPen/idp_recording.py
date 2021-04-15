@@ -7,12 +7,15 @@ from PyQt5.QtWidgets import QGraphicsScene, \
 from PyQt5.QtGui import QBrush, QPen, QTransform
 from mGesf.main_page_tabs.gesture_tab import help_btn_action, generate_char_set
 from mGesf.main_page_tabs.gesture_tab.indexPen.key_detection import ReturnKeyDetectionWidget
+from mGesf.utils import AnotherWindow
 
 from utils.GUI_main_window import *
 from utils.GUI_operation_tab import *
 from mGesf.sound import *
 import config
 import pyqtgraph as pg
+from utils.img_utils import *
+import cv2
 
 # TODO ISSUE: there's a perceptible glitch in the runtime graphs when the metronome refreshes, will this go away if
 #  the frame rate is lower when the sensors are connected (at 30FPS)?
@@ -32,7 +35,7 @@ class IdpRecording(QWidget):
                                           vertical=True,
                                           style=None)
 
-        self.instruction_block = init_container(parent=self.main_page,
+        self.instruction_block, self.instruction_block_container = init_container_new(parent=self.main_page,
                                                 vertical=False,
                                                 style="background-color: white;",
                                                 size=config.instruction_block_size)
@@ -113,6 +116,12 @@ class IdpRecording(QWidget):
                                             size=config.counter_block_size)
         self.ist_text_block = init_container(parent=self.instruction_block, vertical=True,
                                              size=config.ist_text_block_size)
+
+        self.pop_window_btn = init_button(parent=self.counter_block,
+                                    label=config.pop_label_btn_label,
+                                    function=self.pop_window)
+
+
         # -------------------- fourth class --------------------
         #       1-1. circles block (vertical)
         #           1-1-1. circles_view
@@ -148,6 +157,7 @@ class IdpRecording(QWidget):
         # will be initialized when the forecast animation is over
         self.lb_char_to_write, self.lb_char_next = None, None
 
+        self.image_label_dict = self.init_label_img_dict('mGesf/resource/Gesture_img')
         self.show()
 
         # ============================= others ==========================
@@ -322,7 +332,9 @@ class IdpRecording(QWidget):
                 # draw a new one
                 cur_char = self.char_set[char_count]
                 next_char = 'no Next' if (char_count + 1) == len(self.char_set) else self.char_set[char_count + 1]
-                self.lb_char_to_write.setText(cur_char)
+                # self.lb_char_to_write.setText(cur_char)
+                self.lb_char_to_write.setPixmap(self.image_label_dict[cur_char+'.PNG'])
+                print(cur_char)
                 self.lb_char_next.setText(config.instruction_next_text + next_char)
             # finish a recording loop
             else:
@@ -498,6 +510,26 @@ class IdpRecording(QWidget):
 
     def randomize_char_action(self):
         self.is_randomize_char = self.randomize_char_checkbox.isChecked()
+
+    def init_label_img_dict(self, path):
+        img_dict = {}
+        for img_name in os.listdir(path):
+            img_path = os.path.join(path, img_name)
+            img = cv2.imread(img_path)
+            img = cv2.resize(img, (300, 350))
+            img = convert_cv_qt(img)
+            img_dict[img_name] = img
+
+        return img_dict
+
+    def pop_window(self):
+        self.w = AnotherWindow(self.instruction_block_container, self.interrupt_btn_action)
+        # self.pop_windows[lsl_stream_name] = w
+        self.w.setWindowTitle('Fig')
+        self.pop_window_btn.setText('Dock Window')
+        self.w.show()
+        self.pop_window_btn.clicked.disconnect()
+        # self.pop_window_btn.clicked.connect(dock_window)
 
 def is_enter_key_event(key_event):
     return key_event.key() == QtCore.Qt.Key_Return or key_event.key() == QtCore.Qt.Key_Enter

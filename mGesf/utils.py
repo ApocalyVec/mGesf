@@ -1,6 +1,7 @@
 import re
 import time
 
+from PyQt5.QtWidgets import QWidget, QVBoxLayout
 from sklearn.externals._pilutil import imresize
 
 import config
@@ -36,3 +37,24 @@ def record_xethrux4_frame(data_dict, buffer):
     buffer['xethrux4']['clutter_removal_frame'].append(np.expand_dims(data_dict['clutter_removal_frame'], axis=0))
     buffer['xethrux4']['clutter_removal_baseband_frame'].append(np.expand_dims(data_dict['clutter_removal_baseband_frame'], axis=0))
     pass
+
+class AnotherWindow(QWidget):
+    """
+    This "window" is a QWidget. If it has no parent, it
+    will appear as a free-floating window as we want.
+    """
+
+    def __init__(self, widget_to_add: QWidget, close_function):
+        super().__init__()
+        layout = QVBoxLayout()
+        layout.addWidget(widget_to_add)
+        self.close_function = close_function
+        self.setLayout(layout)
+
+    def closeEvent(self, event):
+        # do stuff
+        print('Window closed')
+        if self.close_function():
+            event.accept()  # let the window close
+        else:
+            event.ignore()
