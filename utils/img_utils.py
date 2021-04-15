@@ -1,3 +1,4 @@
+import cv2
 import matplotlib.pyplot as plt
 import qimage2ndarray
 from PyQt5.QtGui import QPixmap
@@ -9,6 +10,7 @@ import pyqtgraph as pg
 
 # fig = plt.figure()
 # ax = fig.add_subplot(111, projection='3d')
+from qimage2ndarray.dynqt import QtGui
 
 
 def array_to_colormap_qim(a, normalize=True):
@@ -112,3 +114,13 @@ def rgba2rgb(rgba, background=(255, 255, 255)):
     rgb[:, :, 2] = b * a + (1.0 - a) * B
 
     return np.asarray(rgb, dtype='uint8')
+
+
+def convert_cv_qt(cv_img):
+    """Convert from an opencv image to QPixmap"""
+    rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
+    h, w, ch = rgb_image.shape
+    bytes_per_line = ch * w
+    convert_to_Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)
+    # p = convert_to_Qt_format.scaled(config_ui.cam_display_width, config_ui.cam_display_height, Qt.KeepAspectRatio)
+    return QPixmap.fromImage(convert_to_Qt_format)

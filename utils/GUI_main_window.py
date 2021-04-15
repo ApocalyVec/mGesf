@@ -60,6 +60,22 @@ def init_container(parent, label=None, label_position=None, label_bold=True, ver
 
     return vl
 
+def init_container_new(parent, label=None, label_position=None, label_bold=True, vertical=True, style=None, size=None):
+    container = QtGui.QWidget()
+
+    if size:
+        container.setFixedWidth(size[0])
+        container.setFixedHeight(size[1])
+
+    if style:  # set the style of the container, which takes over the invisible layout
+        container.setStyleSheet(style)
+
+    parent.addWidget(container)
+
+    vl = init_view(label, container, label_bold, label_position, vertical)
+
+    return vl, container
+
 
 def init_button(parent, label=None, function=None, style=config.button_style_classic):
     btn = QtWidgets.QPushButton(text=label)

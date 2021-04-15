@@ -115,6 +115,7 @@ def init_instruction_text_block(parent, bold=False, font=14):
     vl.addWidget(lb_write)
 
     lb_char_to_write = QLabel()
+    lb_char_to_write.resize(300, 350)
     lb_char_to_write.setAlignment(QtCore.Qt.AlignCenter)
     lb_char_to_write.setStyleSheet("font: bold 56px;")
     lb_char_to_write.setText('...')
