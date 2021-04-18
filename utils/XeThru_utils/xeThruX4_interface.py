@@ -78,11 +78,11 @@ class xeThruX4SensorInterface:
 
             # print(xep.x4driver_get_tx_center_frequency())
 
-            self.xep.x4driver_set_dac_min(850)
-            self.xep.x4driver_set_dac_max(1200)
+            self.xep.x4driver_set_dac_min(950)
+            self.xep.x4driver_set_dac_max(1100)
             # Set integration
             self.xep.x4driver_set_iterations(64)
-            self.xep.x4driver_set_pulses_per_step(25)
+            self.xep.x4driver_set_pulses_per_step(32)
             # baseband?
             self.xep.x4driver_set_downconversion(int(baseband))
             # Start streaming of data
@@ -140,7 +140,7 @@ class xeThruX4SensorInterface:
             #read rf; baseband; clutter free rf; clutter free baseband
             frame = np.array(d.data)
             baseband_frame = xep_rf_frame_downconversion(frame, self.center_frequency)
-            clutter_removal_frame = self.read_clutter_removal_frame(frame, 0.5)
+            clutter_removal_frame = self.read_clutter_removal_frame(frame, 0.05)
             clutter_removal_baseband_frame = xep_rf_frame_downconversion(clutter_removal_frame, self.center_frequency)
 
             # if self.baseband:
