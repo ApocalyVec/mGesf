@@ -89,16 +89,24 @@ operation_training_constructor_path_label = "Constructor Path"
 # ============== default inputs ==============
 
 # control tab
-control_tab_d_port_default = "COM28"
-control_tab_u_port_default = "COM27"
+control_tab_d_port_default = "COM4"
+control_tab_u_port_default = "COM3"
 
 # operation tab, the Nois is the noise class
 # indexPen_classes_default = "Z Spc Bspc Ent Act"
 # indexPen_classes_default = "A B C D E"
+
 indexPen_classes_default = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spc Bspc Ent Act'
-#indexPen_classes_default = 'T H E Spc Q U I C K Spc B R O W N Spc F O X Spc J U M P S Spc O V E R Spc T H E Spc L A Z Y Spc D O G'
-#indexPen_classes_default = 'Act H E L L O Spc W O R L D Act'
+
+# indexPen_classes_default = 'Nois Act T H E Spc F I V E Spc B O X I N G Spc W I Z A R D S Spc J U M P Spc Q U I C K L Y Act Nois'
+# indexPen_classes_default = 'Nois Act A Spc L A R G E Spc F A W N Spc J U M P E D Spc Q U I C K L Y Spc O V E R Spc W H I T E Spc Z I N C Spc B O X E S Act Nois'
+# indexPen_classes_default = 'Nois Act J A Y Spc V I S I T E D Spc B A C K Spc H O M E Spc A N D Spc G A Z E D Spc U P O N Spc A Spc B R O W N Spc F O X Spc A N D Spc Q U A I L Act Nois'
+# indexPen_classes_default = 'Nois Act F I V E Spc O R Spc S I X Spc B I G Spc J E T Spc P L A N E S Spc Z O O M E D Spc Q U I C K L Y Spc B Y Spc T H E Spc T O W E R Act Nois'
+# indexPen_classes_default = 'Nois Act T H E Spc Q U I C K Spc B R O W N Spc F O X Spc J U M P S Spc O V E R Spc T H E Spc L A Z Y Spc D O G Act Nois'
+
+
 # indexPen_classes_default = 'Nois Act H E L L O Spc W O R L D Act Nois'
+#indexPen_classes_default = 'Act H E L L O Spc W O R L D Act'
 #indexPen_classes_default = 'Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois ' \
 #                            'Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois ' \
 #                            'Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois Nois ' \
