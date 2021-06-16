@@ -78,11 +78,11 @@ class xeThruX4SensorInterface:
 
             # print(xep.x4driver_get_tx_center_frequency())
 
-            self.xep.x4driver_set_dac_min(950)
-            self.xep.x4driver_set_dac_max(1100)
+            self.xep.x4driver_set_dac_min(850)
+            self.xep.x4driver_set_dac_max(1200)
             # Set integration
             self.xep.x4driver_set_iterations(64)
-            self.xep.x4driver_set_pulses_per_step(32)
+            self.xep.x4driver_set_pulses_per_step(48)
             # baseband?
             self.xep.x4driver_set_downconversion(int(baseband))
             # Start streaming of data
@@ -90,6 +90,8 @@ class xeThruX4SensorInterface:
             self.xep.x4driver_set_fps(FPS)
 
             self.connected = True
+
+            self.display_xep_sys_info()
         except:
             print("error while config")
             return
@@ -124,6 +126,10 @@ class xeThruX4SensorInterface:
             print("VersionList =", self.xep.get_system_info(7))
             frame_area = self.xep.x4driver_get_frame_area()
             print('x4driver_get_frame_area returned: [', frame_area.start, ', ', frame_area.end, ']')
+            start = frame_area.start
+            end = frame_area.end
+            range_resolution = (end-start)/155
+            print(range_resolution)
 
     def clear_xep_buffer(self):
         if self.xep is not None:

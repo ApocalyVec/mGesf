@@ -87,7 +87,7 @@ class XeThruX4ControlPane(QWidget):
                                                                    vertical=True,
                                                                    label_bold=True,
                                                                    min_value=10,
-                                                                   max_value=40)
+                                                                   max_value=35)
         self.fps_slider_view.setValue(config.xethrux4_default_fps)
 
         # #       - check box

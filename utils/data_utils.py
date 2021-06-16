@@ -56,6 +56,12 @@ def load_idp(data_directory, sensor_feature_dict, complete_class, encoder, senso
             label_path = os.path.join(data_directory, fn.replace(data_suffix, '') + label_suffix)
             subject_name = fn.split('_')[-2]
             data = pickle.load(open(data_path, 'rb'))
+
+            # remove_corrupt_frame
+            data['mmw']['range_doppler'] = corrupt_frame_padding(data['mmw']['range_doppler'], min_threshold=-1000.0, max_threshold=2500.0, frame_channel_first=True)
+            data['mmw']['range_azi'] = corrupt_frame_padding(data['mmw']['range_azi'], min_threshold=0, max_threshold=2500.0, frame_channel_first=True)
+            print('one file done')
+
             label = pickle.load(open(label_path, 'rb'))
             labeled_sample_dict = idp_preprocess(data, char_set=label, input_interval=input_interval,
                                                  sensor_sample_points_dict=sensor_sample_points_dict,
@@ -533,3 +539,41 @@ def levenshtein_ratio_and_distance(s, t, ratio_calc = False):
         # insertions and/or substitutions
         # This is the minimum number of edits needed to convert string a to string b
         return "The strings are {} edits away".format(distance[row][col])
+
+
+
+def corrupt_frame_padding(time_series_data, min_threshold=np.NINF, max_threshold=np.PINF, frame_channel_first=True):
+
+    if not frame_channel_first:
+        time_series_data = np.moveaxis(time_series_data, -1, 0)
+
+    if np.min(time_series_data[0]) < min_threshold or np.max(time_series_data[0]) > max_threshold:
+        print('error: first frame is broken')
+        return
+
+    if np.min(time_series_data[-1]) < min_threshold or np.max(time_series_data[-1]) > max_threshold:
+        print('error: last frame is broken')
+        return
+
+    broken_frame_counter = 0
+
+    # check first and last frame
+    for frame_index in range(1, len(time_series_data) - 1):
+        if np.min(time_series_data[frame_index]) < min_threshold or np.max(time_series_data[frame_index]) > max_threshold:
+            # find broken frame, padding with frame +1 and frame -1
+            # broken_frame_before = time_series_data[frame_index - 1]
+            # broken_frame = time_series_data[frame_index]
+            # broken_frame_next = time_series_data[frame_index+1]
+            if np.min(time_series_data[frame_index+1]) >= min_threshold and np.max(time_series_data[frame_index+1]) < max_threshold:
+                time_series_data[frame_index] = (time_series_data[frame_index - 1] + time_series_data[frame_index + 1]) * 0.5
+                broken_frame_counter+=1
+                print(frame_index)
+            else:
+                print('find two continues broken frames at index: ', frame_index)
+                return
+
+    if not frame_channel_first:
+        time_series_data = np.moveaxis(time_series_data, 0, -1)
+
+    print('pad broken frame: ', broken_frame_counter)
+    return time_series_data
