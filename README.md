@@ -2,8 +2,9 @@
 
 Check out our [video](https://drive.google.com/file/d/1wNtAK8W8OSPjI1Kx1LN0ByB2U8i-aJUJ/view?usp=sharing) 
 
-This repo extends the work in this paper: [ThuMouse: A Micro-gesture Cursor Input through mmWave Radar-based Interaction
-](https://ieeexplore.ieee.org/document/9043082).
+This repo extends the work in this two papers: [ThuMouse: A Micro-gesture Cursor Input through mmWave Radar-based Interaction
+](https://ieeexplore.ieee.org/document/9043082) and [IndexPen: Two-Finger Text Input with Millimeter-Wave Radar](https://dl.acm.org/doi/abs/10.1145/3534601?casa_token=WrCaOdiA2TEAAAAA:pVsCqW-sZAjfqxEPoi66yL3PIVf_JuCfGWPDklqONgGUjUDahJmrZ0SC4VudWOvGb1vjIRglK2wiZA). Cite us in your work if you find the code we shared help your project.
+
 
 This application supports a variety of sensors, including:
 * Texas Instrument mmWave Sensors: IWR6843ISK, IWR6843AoP
